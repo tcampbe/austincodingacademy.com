@@ -35,9 +35,9 @@ header:
 - weight: 1
   title: Courses
   links:
-    - title: Full-stack Web Development
+    - title: Full Stack Web Development
       url: /web-development
-- weight: 2
+- weight: 3
   title: About Us
   links:
     - weight: 1
@@ -55,7 +55,7 @@ header:
     - weight: 5
       title: Blog
       url: "/blog"
-- weight: 3
+- weight: 2
   title: Tuition
   links:
     - weight: 1
