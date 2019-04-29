@@ -31,31 +31,6 @@ footer:
   title: Student Grievance Policy
   url: "/student-grievances"
 
-courses:
-- weight: 2
-  title: C# .NET
-  url: "/csharp"
-- weight: 1
-  title: JavaScript
-  url: "/javascript"
-
-about:
-- weight: 1
-  title: FAQ
-  url: "/faq"
-- weight: 2
-  title: Instructors
-  url: "/instructors"
-- weight: 3
-  title: Our Team
-  url: "/team"
-- weight: 4
-  title: Contact Us
-  url: "/contact"
-- weight: 5
-  title: Blog
-  url: "/blog"
-
 header:
 - weight: 1
   title: Courses
@@ -64,8 +39,22 @@ header:
       url: /web-development
 - weight: 2
   title: About Us
-  url: "#"
-  identifier: about
+  links:
+    - weight: 1
+      title: FAQ
+      url: "/faq"
+    - weight: 2
+      title: Instructors
+      url: "/instructors"
+    - weight: 3
+      title: Our Team
+      url: "/team"
+    - weight: 4
+      title: Contact Us
+      url: "/contact"
+    - weight: 5
+      title: Blog
+      url: "/blog"
 - weight: 3
   title: Tuition
   links:
