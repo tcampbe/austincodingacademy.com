@@ -223,6 +223,10 @@ body, p {
 
 /* HERO IMAGES */
 
+#bg-404 {
+  background-image: url(https://austincodingacademy.github.io/front/assets/svg/illustrations/error-404.svg);
+}
+
 .hero {
   min-height: 95vh;
   background-position: 0 -1px;
