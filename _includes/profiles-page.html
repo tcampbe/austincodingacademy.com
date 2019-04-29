@@ -1,4 +1,4 @@
-<div class="container mt-90 py-5">
+<div class="container mt-90 pt-1 pb-5">
   <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-10">
     {{ page.heading }}
   </h2>
@@ -29,7 +29,7 @@
                   {% for link in profile.links %}
                     <a href="{{ link.link }}" target="_blank" rel="noopener">
                       <!-- htmllint preset="none" -->
-                      <i style="color: {{ link.hex }}" class="mx-1 {{ link.icon }}"></i>
+                      <i style="color: {{ link.hex }}" class="mx-1 {{ link.icon }}" aria-hidden="true"></i>
                       <!-- htmllint preset="$previous" -->
                     </a>
                   {% endfor %}

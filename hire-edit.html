@@ -5,7 +5,7 @@ title: "Austin Coding Academy | Hire an ACA Graduate"
 description: ""
 ---
 
-<div class="container mt-90 py-5">
+<div class="container mt-90 pt-1 pb-5">
   <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
     {% for page in site.pages %}
       {% if page.layout == 'resume' %}
@@ -42,10 +42,12 @@ description: ""
                 </div>
                 <div class="col pl-0 d-flex flex-column align-items-center justify-content-around border-left">
                   <a href="{{ page.github }}" target="_blank" rel="noopener">
-                    <i class="text-dark display-6 fab fa-github mb-2"></i>
+                    <i class="text-dark display-6 fab fa-github mb-2" aria-hidden="true"></i>
+                    <span class="sr-only">Link to GitHub</span>
                   </a>
                   <a href="{{ page.linkedin }}" target="_blank" rel="noopener">
-                    <i class="text-dark display-6 fab fa-linkedin"></i>
+                    <i class="text-dark display-6 fab fa-linkedin" aria-hidden="true"></i>
+                    <span class="sr-only">Link to LinkedIn</span>
                   </a>
                 </div>
               </div>
