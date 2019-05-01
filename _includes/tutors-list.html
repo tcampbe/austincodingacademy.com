@@ -1,4 +1,4 @@
-<div class="container mt-90 py-5">
+<div class="container mt-90 pt-1 pb-5">
   {% if page.permalink == "/tutoring/" %}
     <amp-lightbox
       id="apply-now-lightbox"
@@ -31,7 +31,7 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label for="first-name" class="form-label text-white">
-                  Name <span class="text-red">*</span>
+                  Name <span class="text-red-a">*</span>
                 </label>
 
                 <input id="first-name" type="text" class="form-control" name="firstname" placeholder="Name" aria-label="Your name"
@@ -44,7 +44,7 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label for="email" class="form-label text-white">
-                  Email <span class="text-red">*</span>
+                  Email <span class="text-red-a">*</span>
                 </label>
 
                 <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="Your email address"
@@ -53,12 +53,12 @@
             </div>
             <!-- End Input -->
             <div class="col-sm-6 d-flex flex-column justify-content-end text-white">
-              {% include referral-question.html %}
+              {% include referral-question.html id="referral-tutors" %}
             </div>
 
             <!-- Input -->
             <div class="col-sm-6 d-flex flex-column justify-content-end form-group">
-              <label class="form-label text-white" for="best-describes">Which of these best describes you? <span class="text-red">*</span></label>
+              <label class="form-label text-white" for="best-describes">Which of these best describes you? <span class="text-red-a">*</span></label>
               <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
                 <option disabled selected value="">Select your answer</option>
                 <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
@@ -87,7 +87,7 @@
         <div class="text-center">
           <div submit-error>
             <template type="amp-mustache">
-              <p class="text-red">There was an error with your request. Please try again.</p>
+              <p class="text-red-a">There was an error with your request. Please try again.</p>
             </template>
           </div>
         </div>
@@ -107,16 +107,16 @@
       </h4>
       <ul class="fa-ul">
         <li class="mb-2">
-          <span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+          <span class="fa-li"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
           Schedule an appointment with a tutor who is available for your class
         </li>
         <li class="mb-2">
-          <span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+          <span class="fa-li"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
           Send a message on RocketChat to say hi, let the tutor know which class you're in,
           and confirm where you'll meet
         </li>
         <li>
-          <span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+          <span class="fa-li"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
           If you are unable to meet in person, Virtual Classroom is available for video chat
           and screen-sharing
         </li>
@@ -128,22 +128,22 @@
       </h4>
       <ul class="fa-ul">
         <li class="mb-2">
-          <span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+          <span class="fa-li"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
           Every weekend
           <a href="https://www.google.com/maps/place/314+E+Highland+Mall+Blvd,+Austin,+TX+78752/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644ca3c817930a1:0xdcef6c070dfbaef7!8m2!3d30.3290949!4d-97.7114185">
             @<span class="link-underlined">Highland Campus</span>
           </a>
         </li>
         <li class="mb-2">
-          <span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+          <span class="fa-li"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
           Saturdays: 10am - 6pm
         </li>
         <li class="mb-2">
-          <span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+          <span class="fa-li"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
           Sundays: 3pm - 6pm
         </li>
         <li>
-          <span class="fa-li"><i class="fas fa-chevron-right"></i></span>
+          <span class="fa-li"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
           Check your email for a weekly invitation and list of tutors who will be there to help
         </li>
       </ul>
@@ -193,21 +193,25 @@
 
             <!-- Contact -->
             <div class="mt-2">
-              {% unless page.permalink == "/tutors/" %}
+              {% if page.permalink == "/tutors/" %}
                 <a href="{{tutor.rocketchat}}" rel="noopener" target="_blank">
-                  <i class="display-7 fab fa-rocketchat"></i>
+                  <i class="display-7 fab fa-rocketchat" aria-hidden="true"></i>
+                  <span class="sr-only">Message on RocketChat</span>
                 </a>
                 <a href="mailto:{{tutor.email}}" rel="noopener" target="_blank" class="ml-3">
-                  <i class="display-7 fas fa-envelope"></i>
+                  <i class="display-7 fas fa-envelope" aria-hidden="true"></i>
+                  <span class="sr-only">Send email</span>
                 </a>
               {% else %}
                 <a href="#" on="tap:apply-now-lightbox.open" tabindex="0">
-                  <i class="display-7 fab fa-rocketchat"></i>
+                  <i class="display-7 fab fa-rocketchat" aria-hidden="true"></i>
+                  <span class="sr-only">Link to RocketChat</span>
                 </a>
                 <a href="#" on="tap:apply-now-lightbox.open" tabindex="0" class="ml-3">
-                  <i class="display-7 fas fa-envelope"></i>
+                  <i class="display-7 fas fa-envelope" aria-hidden="true"></i>
+                  <span class="sr-only">Link to email</span>
                 </a>
-              {% endunless %}
+              {% endif %}
             </div>
             <!-- End Contact -->
           </div>
@@ -217,26 +221,26 @@
             <!-- htmllint preset="none" -->
             <a class="{% unless tutor.calendar %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{tutor.calendar}}" target="_blank">
             <!-- htmllint preset="$previous" -->
-              <span class="far fa-calendar-alt mr-2"></span>
+              <span class="far fa-calendar-alt mr-2" aria-hidden="true"></span>
               Schedule Tutoring
             </a>
             <!-- htmllint preset="none" -->
             <a class="{% unless tutor.virtual %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{tutor.virtual}}" target="_blank">
             <!-- htmllint preset="$previous" -->
-              <span class="fa fa-chalkboard-teacher mr-2"></span>
+              <span class="fa fa-chalkboard-teacher mr-2" aria-hidden="true"></span>
               Virtual Classroom
             </a>
           {% else %}
             <a href="#" on="tap:apply-now-lightbox.open" tabindex="0"
               class="btn btn-sm u-btn-primary--air transition-3d-hover"
             >
-              <span class="far fa-calendar-alt mr-2"></span>
+              <span class="far fa-calendar-alt mr-2" aria-hidden="true"></span>
               Schedule Tutoring
             </a>
             <a href="#" on="tap:apply-now-lightbox.open" tabindex="0"
               class="btn btn-sm u-btn-primary--air transition-3d-hover"
             >
-              <span class="fa fa-chalkboard-teacher mr-2"></span>
+              <span class="fa fa-chalkboard-teacher mr-2" aria-hidden="true"></span>
               Virtual Classroom
             </a>
           {% endunless %}

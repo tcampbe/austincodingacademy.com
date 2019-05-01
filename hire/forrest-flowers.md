@@ -37,7 +37,7 @@ education:
     certificate: Web Development
 
 projects:
-  - name: Roll Your Life Away
+  - name: Ready To Roll
     desc: A group finder for Dungeons and Dragons and other tabletop games.
     url: https://forrest-flowers-gf.azurewebsites.net/
 ---

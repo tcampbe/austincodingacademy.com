@@ -13,7 +13,7 @@
   side="right">
   {% for item in site.menus.header %}
     <div
-      class="mt-5 text-left"
+      class="mt-4"
       on="tap:sidebar.open"
       role="dialog"
       tabindex="-1"
@@ -44,6 +44,46 @@
             <span class="text-white hover-white">{{ item.title }}</span>
           </a>
         <!-- htmllint preset="$previous" -->
+          <span class="text-white hover-white">
+            {{ item.title }}
+            </span>
+        </a>
+      {% else %}
+        <amp-accordion disable-session-states class="mx-5">
+          <section>
+            <h5 class="text-center text-white hover-white border btn rounded bg-dark py-1 mb-2" tabindex="0">
+              {{item.title}}
+            </h5>
+            <ul class="list-unstyled text-left pl-3">
+              {% if item.links %}
+                {% for link in item.links %}
+                  <li>
+                    <a href="{{link.url}}" class="text-blue hover-white">
+                      {{link.title}}
+                    </a>
+                  </li>
+                {% endfor %}
+              {% else %}
+                {% for section in item.sections %}
+                  <li>
+                    <span class="border-bottom text-white">
+                      {{section.heading}}
+                    </span>
+                    <ul class="list-unstyled">
+                      {% for page in section.pages %}
+                        <li>
+                          <a href="{{page.url}}" class="text-blue hover-white">
+                            {{page.title}}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>
+                {% endfor %}
+              {% endif %}
+            </ul>
+          </section>
+        </amp-accordion>
       {% endif %}
     </div>
 
@@ -71,10 +111,9 @@
       >
         <!-- Logo -->
         <a
-          class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white"
+          class="navbar-logo d-flex"
           href="/"
           aria-label="Logo"
-          style="width:66px; height:66px;"
         >
           <amp-img
             width="66px"
@@ -84,6 +123,7 @@
             src="/assets/images/logo-aca-white.png"
             class="w-100"
           ></amp-img>
+          <span class="sr-only">Austin Coding Academy Logo</span>
         </a>
         <!-- End Logo -->
 
@@ -95,7 +135,7 @@
           tabindex="0"
           role="button"
         >
-          <i class="fas fa-bars"></i>
+          <i class="fas fa-bars" aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
         </button>
         <!-- End Responsive Toggle Button -->
 
@@ -105,37 +145,47 @@
           class="collapse navbar-collapse u-header__navbar-collapse d-none d-md-flex"
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
-
             {% for item in site.menus.header %}
-
-              {% if item.children %}
+              {% if item.button %}
+                <!-- htmllint preset="none" -->
+                <a class="{{ item.button }} hover-white ml-5" href="{{ item.url }}">
+                <!-- htmllint preset="$previous" -->
+                  <span class="text-white hover-white">
+                    {{ item.title }}
+                    </span>
+                </a>
+              {% elsif item.links %}
                 <li class="nav-item u-header__nav-item">
-                  <a href="#" class="nav-link u-header__nav-link">
-                    <span class="text-white hover-white">{{ item.title }} <i class="fas fa-caret-down"></i></span>
+                  <a tabindex="0" class="p-2 mx-2">
+                    <span class="text-white hover-white">
+                      {{ item.title }} <i class="fas fa-caret-down"></i>
+                      </span>
                   </a>
-                  <ul class="d-none position-absolute list-unstyled">
-                  {% for child in item.children %}
-                    <li class="position-relative py-1 pl-3">
-                      <a class="text-white nav-link" href="{{ child.url }}">
-                          <span class="text-white hover-white">{{ child.title }}</span>
-                      </a>
-                    </li>
-                  {% endfor %}
+                  <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
+                    {% for link in item.links %}
+                      {% if link.url != "#" %}
+                        <!-- htmllint preset="none" -->
+                        <li class="position-relative p-0 my-2">
+                        <!-- htmllint preset="$previous" -->
+                          <a class="p-0" href="{{ link.url }}">
+                            <span class="text-white hover-white">
+                              {{ link.title }}
+                            </span>
+                          </a>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
                   </ul>
                 </li>
 
               {% else %}
-                <!-- htmllint preset="none" -->
                 <li class="nav-item u-header__nav-item">
-                  {% if item.button %}
-                    <a class="{{ item.button }} hover-white mx-3" href="{{ item.url }}">
-                  {% else %}
-                    <a class="text-white hover-white nav-link u-header__nav-link" href="{{ item.url }}">
-                  {% endif %}
-                      <span class="text-white">{{ item.title }}</span>
-                    </a>
+                  <a href="{{item.url}}" tabindex="0" class="p-2 mx-2">
+                    <span class="text-white hover-white">
+                      {{ item.title }}
+                    </span>
+                  </a>
                 </li>
-                <!-- htmllint preset="$previous" -->
               {% endif %}
 
             {% endfor %}

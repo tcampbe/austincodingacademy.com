@@ -52,42 +52,39 @@ description: ""
     <div class="container-fluid bg-dark background-logo py-10">
       <div class="row d-flex justify-content-center align-items-end">
         {% for page in site.pages %}
-          {% if page.categories contains 'graduation' and page.projects[0].url and page.skills[0] == 'JavaScript' or page.skills[0] == 'C# .NET' %}
-            <div class="col-12 col-md-3 px-2 mb-4">
-              <div class="d-flex justify-content-center pb-2">
-                <!-- htmllint preset="none" -->
-                <amp-img width="150" height="150"
-                  layout="fixed"
-                  class="rounded-circle shadow-black"
-                  src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
-                  alt="{{ page.fullname }}"
-                ></amp-img>
-                <!-- htmllint preset="$previous" -->
-              </div>
-              <div class="text-center text-white bg-dark shadow-black rounded d-flex flex-column justify-content-between align-items-center py-2 px-1 w-75 mx-auto">
-                <h5 class="h6 m-0">
-                  {{ page.fullname }}
-                </h5>
-                <a href="{{ page.projects[0].url }}">
-                  <small class="text-white link-underlined">
-                    {{ page.projects[0].name }}
-                  </small>
-                </a>
-                <h5 class="h6 m-0 mt-2">
+          {% if page.categories contains 'graduation' and page.projects[0].url %}
+            {% assign track = page.skills[0] %}
+            {% if track == 'JavaScript' or track == 'C# .NET' or track == 'C#' or track == '.NET' or track == 'Web Design' %}
+              <div class="col-12 col-md-3 px-2 mb-4">
+                <div class="d-flex justify-content-center pb-2">
                   <!-- htmllint preset="none" -->
-                  {% if page.skills[0] == 'JavaScript' %}
-                  <span class="badge p-2 rounded bg-blue">
-                    {{ page.skills[0] }}
-                  </span>
-                  {% elsif page.skills[0] == 'C#' %}
-                  <span class="badge p-2 rounded bg-green">
-                    {{ page.skills[0] }}
-                  </span>
-                  {% endif %}
+                  <amp-img width="150" height="150"
+                    layout="fixed"
+                    class="rounded-circle shadow-black"
+                    src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
+                    alt="{{ page.fullname }}"
+                  ></amp-img>
                   <!-- htmllint preset="$previous" -->
-                </h5>
+                </div>
+                <div class="text-center text-white bg-dark shadow-black rounded d-flex flex-column justify-content-between align-items-center py-2 px-1 w-75 mx-auto">
+                  <h5 class="h6 m-0">
+                    {{ page.fullname }}
+                  </h5>
+                  <a href="{{ page.projects[0].url }}" target="_blank" rel="noopener">
+                    <small class="text-white link-underlined">
+                      {{ page.projects[0].name }}
+                    </small>
+                  </a>
+                  <h5 class="h6 m-0 mt-2">
+                    <!-- htmllint preset="none" -->
+                    <span class="badge p-2 rounded bg-blue">
+                      {{ page.skills[0] }}
+                    </span>
+                    <!-- htmllint preset="$previous" -->
+                  </h5>
+                </div>
               </div>
-            </div>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </div>

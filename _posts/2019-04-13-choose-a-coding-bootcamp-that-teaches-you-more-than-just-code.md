@@ -8,15 +8,15 @@ created_at: 2017-04-01 00:00:00 -0500
 updated_at: 2019-02-16 00:00:00 -0600
 categories:
 - web-development
-excerpt: 'Software companies, start-ups, and tech giants aren''t just looking for
+excerpt: "Software companies, start-ups, and tech giants aren't just looking for
   coders. Junior web developers who are proficient in these three soft skills find
   success and are able to accelerate their coding career faster than even the best
-  technical developers:'
+  technical developers:"
 img: "/assets/images/collaboration-stock-photo.jpg"
 redirect_from: []
 permalink: "/blog/web-development/choose-a-coding-bootcamp-that-teaches-you-more-than-just-code/"
-height: ''
-width: ''
+width: "5472"
+height: "3648"
 author_name: Luke Stenis
 author_email: ethanstenis@gmail.com
 date: 2019-04-13 13:57:29 -0500

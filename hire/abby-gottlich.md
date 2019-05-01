@@ -65,5 +65,5 @@ education:
 projects:
   - name: Feast Finder
     desc: Random Restaurant Generator
-    url: https://github.com/abbygottlich/feast-finder-app
+    url: https://abbygottlich.dev/feast-finder-app/
 ---

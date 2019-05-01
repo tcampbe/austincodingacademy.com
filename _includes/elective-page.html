@@ -1,0 +1,160 @@
+<!-- htmllint preset="none" -->
+<div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
+  <!-- htmllint preset="$previous" -->
+    <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
+      {{ page.hero_title }}
+    </h1>
+    <p class="text-white text-center mx-auto px-2 mw-600">
+      {{ page.hero_text }}
+    </p>
+  </div>
+
+  <main>
+    {% include observer-and-header-animation.html %}
+    <section id="curriculum" class="pt-11 container">
+      <div class="row">
+        <div class="mt-3 mb-6 text-center col-12">
+          <h2 class="font-family-alt display-5">
+            What is {{page.course_name}}?
+          </h2>
+        </div>
+        {% for item in page.features %}
+          <div class="col-md-6 mb-5">
+            <div class="row">
+              <div class="col-3 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                <!-- htmllint preset="none" -->
+                <i class="{{item.img_src}} display-3"></i>
+                <!-- htmllint preset="$previous" -->
+              </div>
+              <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
+                <h5 class="font-weight-bold">
+                  {{item.heading}}
+                </h5>
+                <p>
+                  {{item.text}}
+                </p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="py-11">
+      <h2 class="display-6 font-family-alt text-center">
+        Coming Soon
+      </h2>
+      <p class="mw-600 mx-auto text-center">
+        Interested in learning {{page.course_name}} with Austin Coding Academy? Register your interest today and we’ll keep you in the loop about the next start date.
+      </p>
+      <form class="d-flex justify-content-center align-items-center"
+        target="_top"
+        action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/b8fb52b4-28de-4133-920b-7f587724bb3d"
+        method="POST"
+      >
+        <div class="form-container mw-850 px-5 px-lg-0">
+          <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
+          <input name="hs_lead_status" type="hidden" value="NEW">
+          <input name="page_name" type="hidden" value="{{page.title}}">
+          <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
+          <input name="hutk" type="hidden" value="">
+
+          <div class="row center-form">
+            <!-- Input -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="first-name-interest" class="form-label">
+                  First Name <span class="text-red">*</span>
+                </label>
+
+                <input id="first-name-interest" type="text" class="form-control" name="firstname" placeholder="First name" aria-label="Your name"
+                  required data-msg="Please enter your name." data-error-class="u-has-error" data-success-class="u-has-success" />
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="first-name" class="form-label">
+                  Last Name <span class="text-red">*</span>
+                </label>
+
+                <input id="first-name" type="text" class="form-control" name="lastname" placeholder="First name" aria-label="Your name"
+                  required data-msg="Please enter your name." data-error-class="u-has-error" data-success-class="u-has-success" />
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  Email <span class="text-red">*</span>
+                </label>
+
+                <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="Your email address"
+                  required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" />
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-sm-6 d-flex flex-column justify-content-end form-group">
+              <label class="form-label" for="best-describes">Which of these best describes you? <span class="text-red">*</span></label>
+              <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
+                <option disabled selected value="">Select your answer</option>
+                <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
+                <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck</option>
+                <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
+                <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
+                <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
+                <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
+              </select>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="js-form-message mb-4 col-sm-12">
+            <label for="message" class="form-label">
+              Message
+            </label>
+
+            <div class="input-group">
+              <textarea
+                id="message"
+                class="form-control"
+                rows="4"
+                name="message"
+                placeholder="Enter your questions or comments here"
+                aria-label="Enter your questions or comments here"
+                data-msg="Please enter a message."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              ></textarea>
+            </div>
+          </div>
+          <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-12 d-flex align-items-end justify-content-center form-group">
+              <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
+                Submit
+              </button>
+            </div>
+            <!-- End Input -->
+            <div class="col-12 d-flex justify-content-center">
+              {% include data-agreement.html %}
+            </div>
+          </div>
+          <div class="text-center">
+            <div submit-error>
+              <template type="amp-mustache">
+                <p class="text-red">There was an error with your request. Please try again.</p>
+              </template>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>

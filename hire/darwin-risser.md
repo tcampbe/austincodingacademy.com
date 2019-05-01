@@ -53,6 +53,9 @@ education:
     degree: Music Education
 
 projects:
+  - name: teacherr
+    desc: Networking service for connecting music teachers. Uses React, Node, Express, MongoDB
+    url: https://darwinrisser.dev/teacherr
   - name: Developer Portfolio
     desc: A personal website to display my current and past projects.
     url: https://darwinrisser.dev

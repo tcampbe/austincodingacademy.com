@@ -5,7 +5,7 @@
   role="button"
   tabindex="0"
 >
-  Contact us &nbsp;<i class="far fa-envelope"></i>
+  Contact us &nbsp;<i class="far fa-envelope" aria-hidden="true"></i>
 </a>
 
 <amp-lightbox
@@ -24,7 +24,6 @@
   action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/33cc0e23-1881-4874-a1d0-2c0307f20e41"
   method="POST"
   target="_top"
-  class="mb-4"
 >
   <div
     class="form-container"
@@ -41,12 +40,12 @@
       <!-- Input -->
       <div class="col-sm-6 mb-4">
         <div class="js-form-message">
-          <label for="first-name" class="form-label">
-            First Name <span class="text-red">*</span>
+          <label for="first-name-contact" class="form-label">
+            First Name <span class="text-red-a">*</span>
           </label>
 
           <input
-            id="first-name"
+            id="first-name-contact"
             type="text"
             class="form-control"
             name="firstname"
@@ -64,12 +63,12 @@
       <!-- Input -->
       <div class="col-sm-6 mb-4">
         <div class="js-form-message">
-          <label for="last-name" class="form-label">
-            Last Name <span class="text-red">*</span>
+          <label for="last-name-contact" class="form-label">
+            Last Name <span class="text-red-a">*</span>
           </label>
 
           <input
-            id="last-name"
+            id="last-name-contact"
             type="text"
             class="form-control"
             name="lastname"
@@ -87,12 +86,12 @@
       <!-- Input -->
       <div class="col-sm-6 mb-4">
         <div class="js-form-message">
-          <label for="email" class="form-label">
-            Email <span class="text-red">*</span>
+          <label for="email-contact" class="form-label">
+            Email <span class="text-red-a">*</span>
           </label>
 
           <input
-            id="email"
+            id="email-contact"
             type="email"
             class="form-control"
             name="email"
@@ -110,12 +109,12 @@
       <!-- Input -->
       <div class="col-sm-6 mb-4">
         <div class="js-form-message">
-          <label for="phone" class="form-label">
-            Phone <span class="text-red">*</span>
+          <label for="phone-contact" class="form-label">
+            Phone <span class="text-red-a">*</span>
           </label>
 
           <input
-            id="phone"
+            id="phone-contact"
             type="text"
             class="form-control"
             name="phone"
@@ -132,13 +131,13 @@
 
       <!-- Input -->
       <div class="js-form-message mb-4 col-sm-12">
-        <label for="message" class="form-label">
-          Message <span class="text-red">*</span>
+        <label for="message-contact" class="form-label">
+          Message <span class="text-red-a">*</span>
         </label>
 
         <div class="input-group">
           <textarea
-            id="message"
+            id="message-contact"
             class="form-control"
             rows="4"
             name="message"
@@ -153,7 +152,7 @@
       </div>
       <!-- End Input -->
       <div class="col-12 mb-4">
-        {% include referral-question.html %}
+        {% include referral-question.html id="referral-contact" %}
       </div>
       <div class="text-center col-sm-12 mb-4">
         <button
@@ -171,7 +170,7 @@
   <div class="text-center">
     <div submit-error>
       <template type="amp-mustache">
-        <p class="text-red">There was an error with your request. Please try again.</p>
+        <p class="text-red-a">There was an error with your request. Please try again.</p>
       </template>
     </div>
   </div>
