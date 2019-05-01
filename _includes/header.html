@@ -8,89 +8,52 @@
   tabindex="-1"
   role="navigation"
   id="sidebar"
-  class="m-0 bg-dark d-flex d-md-none row flex-column align-items-start justify-content-start"
+  class="m-0 px-5 bg-dark d-flex d-md-none flex-column align-items-start justify-content-start"
   layout="nodisplay"
   side="right">
   {% for item in site.menus.header %}
     <div
-      class="mt-4"
+      class="mt-4 mx-auto d-flex justify-content-center mw-12r"
       on="tap:sidebar.open"
       role="dialog"
       tabindex="-1"
     >
-      {% if item.children %}
-        <div class="mx-5 text-white">
-          {{ item.title }}
-          <ul class="pl-5 m-0 fa-ul">
-            {% for child in item.children %}
-              <li class="mt-3">
-                <span class="fa-li">
-                  <i class="fas fa-long-arrow-alt-right fa-xs"></i>
-                </span>
-                <a href="{{ child.url }}" class="text-white hover-white">
-                  {{ child.title }}
-                </a>
-              </li>
+    {% if item.button %}
+      <!-- htmllint preset="none" -->
+      <a class="{{ item.button }} hover-white" href="{{ item.url }}">
+      <!-- htmllint preset="$previous" -->
+          {{item.title}}
+      </a>
+    {% elsif item.links %}
+      <amp-accordion disable-session-states class="mx-5">
+        <section>
+          <h5 class="text-center text-white hover-white border btn rounded bg-dark py-1 mb-2" tabindex="0">
+            {{item.title}} <i class="fas fa-caret-down"></i>
+          </h5>
+          <ul class="list-unstyled text-left pl-3">
+            {% for link in item.links %}
+              {% if link.url != "#" %}
+                <li>
+                  <a href="{{link.url}}" class="text-blue hover-white text-wrap">
+                    {{link.title}}
+                  </a>
+                </li>
+              {% endif %}
             {% endfor %}
           </ul>
-        </div>
-      {% else %}
-        <!-- htmllint preset="none" -->
-        {% if item.button %}
-          <a class="{{ item.button }} hover-white ml-5" href="{{ item.url }}">
-        {% else %}
-          <a href="{{ item.url }}" class="ml-5 text-white hover-white text-left">
-        {% endif %}
-            <span class="text-white hover-white">{{ item.title }}</span>
-          </a>
-        <!-- htmllint preset="$previous" -->
-          <span class="text-white hover-white">
-            {{ item.title }}
-            </span>
+        </section>
+      </amp-accordion>
+    {% else %}
+      <h5 class="text-center text-white hover-white border btn rounded bg-dark py-1 mb-2" tabindex="0">
+        <a href="{{item.url}}">
+          {{item.title}}
         </a>
-      {% else %}
-        <amp-accordion disable-session-states class="mx-5">
-          <section>
-            <h5 class="text-center text-white hover-white border btn rounded bg-dark py-1 mb-2" tabindex="0">
-              {{item.title}}
-            </h5>
-            <ul class="list-unstyled text-left pl-3">
-              {% if item.links %}
-                {% for link in item.links %}
-                  <li>
-                    <a href="{{link.url}}" class="text-blue hover-white">
-                      {{link.title}}
-                    </a>
-                  </li>
-                {% endfor %}
-              {% else %}
-                {% for section in item.sections %}
-                  <li>
-                    <span class="border-bottom text-white">
-                      {{section.heading}}
-                    </span>
-                    <ul class="list-unstyled">
-                      {% for page in section.pages %}
-                        <li>
-                          <a href="{{page.url}}" class="text-blue hover-white">
-                            {{page.title}}
-                          </a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  </li>
-                {% endfor %}
-              {% endif %}
-            </ul>
-          </section>
-        </amp-accordion>
-      {% endif %}
-    </div>
-
+      </h5>
+    {% endif %}
+  </div>
   {% endfor %}
-
 </amp-sidebar>
-{% endunless%}
+{% endunless %}
 
 <!-- htmllint preset="none" -->
 <header
