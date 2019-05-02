@@ -93,18 +93,15 @@
 {% endunless%}
 
 <!-- htmllint preset="none" -->
-<header
-  id="header"
+<header id="header"
   class="fixed-top {% if color == 'transparent' %}u-header--bg-transparent {% else %}u-header--navbar-bg {% endif %}"
 >
   {% unless page.categories contains 'landing' %}
   <div id="header-background" class="bg-purple d-block position-absolute w-100 h-100"></div>
   {% endunless %}
-  <div
-    class="u-header__section bg-{{ color | default: 'purple' }} p-2"
-  >
+  <div class="u-header__section bg-{{ color | default: 'purple' }} p-2">
   <!-- htmllint preset="$previous" -->
-    <div class="container">
+    <div class="container px-md-0 px-lg-3">
       <!-- Nav -->
       <nav
         class="navbar navbar-expand-md u-header__navbar u-header__navbar--no-space"
@@ -126,7 +123,6 @@
           <span class="sr-only">Austin Coding Academy Logo</span>
         </a>
         <!-- End Logo -->
-
         {% unless page.categories contains 'landing' %}
         <!-- Responsive Toggle Button -->
         <button
@@ -140,8 +136,7 @@
         <!-- End Responsive Toggle Button -->
 
         <!-- Navigation -->
-        <div
-          id="nav-bar"
+        <div id="nav-bar"
           class="collapse navbar-collapse u-header__navbar-collapse d-none d-md-flex"
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
@@ -177,7 +172,6 @@
                     {% endfor %}
                   </ul>
                 </li>
-
               {% else %}
                 <li class="nav-item u-header__nav-item">
                   <a href="{{item.url}}" tabindex="0" class="p-2 mx-2">
@@ -187,9 +181,7 @@
                   </a>
                 </li>
               {% endif %}
-
             {% endfor %}
-
           </ul>
         </div>
         <!-- End Navigation -->
