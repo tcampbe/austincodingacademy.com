@@ -16,11 +16,8 @@ skills:
   - Express.js
   - HTML
   - CSS
-  - jQuery
   - Testing
   - Heroku
-  - Continuous Integration
-  - Automated Deployment
   - Git/GitHub
   - WebPack
   - REST APIs
@@ -57,8 +54,8 @@ education:
     logo: https://austincodingacademy.com/
 
 projects:
-  - name:
-    desc:
-    url:
+  - name: Smart Shop
+    desc: grocery shopping list assistant
+    url: https://jflores353.github.io/smart-shop-app/
 
 ---

@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire ] #don't touch
+categories: [ hire, graduation] #don't touch
 
 fullname: Wes Garbee
 jobtitle: Full-Stack .NET Web Developer, Enterprise ISR
@@ -13,7 +13,7 @@ skills:
   - .NET
 
 skills:
-  - C#/.Net
+  - C# .NET
   - HTML
   - CSS
   - JavaScript

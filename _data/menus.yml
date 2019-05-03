@@ -8,13 +8,13 @@ social:
   url: https://twitter.com/AustinCoding/
   class: mx-3
 - weight: 1
-  title: facebook-square
+  title: facebook
   url: https://www.facebook.com/AustinCodingAcademy/
 
 footer:
 - weight: 1
-  title: Campus Manager
-  url: https://campus.austincodingacademy.com
+  title: C# .NET
+  url: /csharp
 - weight: 2
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
@@ -31,43 +31,45 @@ footer:
   title: Student Grievance Policy
   url: "/student-grievances"
 
-courses:
-- weight: 2
-  title: C# .NET
-  url: "/csharp"
-- weight: 1
-  title: JavaScript
-  url: "/javascript"
-
-about:
-- weight: 1
-  title: FAQ
-  url: "/faq"
-- weight: 2
-  title: Instructors
-  url: "/instructors"
-- weight: 3
-  title: Our Team
-  url: "/team"
-- weight: 4
-  title: Contact Us
-  url: "/contact"
-- weight: 5
-  title: Blog
-  url: "/blog"
-
 header:
 - weight: 1
-  title: Courses &amp; Tuition
-  url: "#"
-  identifier: courses
-- weight: 2
-  title: About Us
-  url: "#"
-  identifier: about
+  title: Courses
+  links:
+    - title: Full Stack Web Development
+      url: /web-development
 - weight: 3
-  title: Financing
-  url: "/financing"
+  title: About Us
+  links:
+    - weight: 1
+      title: FAQ
+      url: "/faq"
+    - weight: 2
+      title: Instructors
+      url: "/instructors"
+    - weight: 3
+      title: Our Team
+      url: "/team"
+    - weight: 4
+      title: Contact Us
+      url: "/contact"
+    - weight: 5
+      title: Blog
+      url: "/blog"
+- weight: 2
+  title: Tuition
+  links:
+    - weight: 1
+      title: Tuition
+      url: "#"
+    - weight: 2
+      title: Financing
+      url: "/financing"
+    - weight: 2
+      title: Scholarships
+      url: "#"
+- weight: 4
+  title: Student Portal
+  url: https://campus.austincodingacademy.com
 - weight: 10
   title: Apply
   url: "/apply"
@@ -88,7 +90,7 @@ tutors:
   - Web 101
   - JS 211
   - JS 311
-  email: charles@austincodingacademy.com
+  email: charcole@protonmail.com
   calendar: https://acaappointment.as.me/?calendarID=2850726
   virtual: https://meet.google.com/vki-mtiq-auh
   rocketchat: https://chat.austincodingacademy.com/direct/charlescole

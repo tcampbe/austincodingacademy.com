@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire ] # don't touch
+categories: [ hire, graduation ] # don't touch
 
 fullname: Christopher Willis
 jobtitle: Web Developer, SEO/SEM Assistant
@@ -72,7 +72,7 @@ education:
 projects:
   - name: Nuclear Display Tool
     desc: Hook nuclear data into visualization tools like d3 documents for science communicators 
-    url: https://github.com/Christopher-Willis/Nuclear-Display
+    url: https://christopher-willis.github.io/Nuclear-Display/
     
   - name: Snack Share
     desc: Market place for cottege food sales

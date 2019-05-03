@@ -4,7 +4,7 @@ title: {{ page.fullname }}
 ---
 <body>
   <!-- ========== MAIN ========== -->
-  <main id="content" role="main" class="mt-90 py-5">
+  <main id="content" role="main" class="mt-90 pt-1 pb-5">
     <!-- Content Section -->
     <div>
       <div class="container">
@@ -28,13 +28,16 @@ title: {{ page.fullname }}
                 </h5>
                 <div class="card-body p-4 d-flex justify-content-center">
                     <a href="{{ page.github }}" class="large-icon">
-                      <i class="text-default fab fa-github-square"></i>
+                      <i class="text-default fab fa-github-square" aria-hidden="true"></i>
+                      <span class="sr-only">Link to GitHub</span>
                     </a>
                     <a href="{{ page.linkedin }}" class="large-icon mx-3">
-                      <i class="text-default icon-large fab fa-linkedin"></i>
+                      <i class="text-default icon-large fab fa-linkedin" aria-hidden="true"></i>
+                      <span class="sr-only">Link to LinkedIn</span>
                     </a>
                     <a href="mailto:{{ page.email }}" class="large-icon">
-                      <i class="text-default fas fa-envelope-square"></i>
+                      <i class="text-default fas fa-envelope-square" aria-hidden="true"></i>
+                      <span class="sr-only">Link to email</span>
                     </a>
                 </div>
               </div>
@@ -55,11 +58,11 @@ title: {{ page.fullname }}
 
             <!-- Info -->
             <div class="mb-4 px-5 d-flex justify-content-center text-muted text-center">
-              <i class="fas fa-quote-left mt-1"></i>
+              <i class="fas fa-quote-left mt-1" aria-hidden="true"></i>
               <p class="text-muted px-1 m-0">
                 {{ page.blurb }}
               </p>
-              <i class="fas fa-quote-right mb-1 align-self-end"></i>
+              <i class="fas fa-quote-right mb-1 align-self-end" aria-hidden="true"></i>
             </div>
             <!-- End Info -->
 
@@ -86,7 +89,7 @@ title: {{ page.fullname }}
                 <ul class="list-group list-group-transparent list-group-flush list-group-borderless mb-0">
                   <li class="list-group-item pt-0 pb-4">
                     <div class="media">
-                      <span class="fas fa-envelope list-group-icon mr-3"></span>
+                      <span class="fas fa-envelope list-group-icon mr-3" aria-hidden="true"></span>
                       <div class="media-body text-lh-sm">
                         <span class="d-block mb-1">
                           Email:
@@ -97,7 +100,7 @@ title: {{ page.fullname }}
                   </li>
                   <li class="list-group-item pt-0 pb-4">
                     <div class="media">
-                      <span class="fas fa-link list-group-icon mr-3"></span>
+                      <span class="fas fa-link list-group-icon mr-3" aria-hidden="true"></span>
                       <div class="media-body text-lh-sm">
                         <span class="d-block mb-1">
                           Web page:
@@ -116,7 +119,7 @@ title: {{ page.fullname }}
 
                   <li class="list-group-item pt-0 pb-4">
                     <div class="media">
-                      <span class="fas fa-mobile-alt list-group-icon mr-3"></span>
+                      <span class="fas fa-mobile-alt list-group-icon mr-3" aria-hidden="true"></span>
                       <div class="media-body text-lh-sm">
                         <span class="d-block mb-1">
                           Phone number:
@@ -132,7 +135,7 @@ title: {{ page.fullname }}
 
                   <li class="list-group-item pt-0 pb-4">
                     <div class="media">
-                      <span class="fas fa-map-marker-alt list-group-icon mr-3"></span>
+                      <span class="fas fa-map-marker-alt list-group-icon mr-3" aria-hidden="true"></span>
                       <div class="media-body text-lh-sm">
                         <span class="d-block mb-1">
                           Location:
@@ -154,7 +157,7 @@ title: {{ page.fullname }}
 
                   <li class="list-group-item pt-0 pb-4">
                     <div class="media">
-                      <span class="fas fa-building list-group-icon mr-3"></span>
+                      <span class="fas fa-building list-group-icon mr-3" aria-hidden="true"></span>
                       <div class="media-body text-lh-sm">
                         <span class="d-block mb-1">
                           Works at:

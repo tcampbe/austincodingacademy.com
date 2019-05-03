@@ -12,28 +12,28 @@
               <a
                 href="https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641"
               >
-                <span class="text-white hover-white"><i class="fas fa-map-marker-alt"></i>&nbsp;Downtown</span>
+                <span class="text-white hover-white"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>&nbsp;Downtown</span>
               </a>
             </div>
             <div class="my-2">
               <a
                 href="https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185"
               >
-                <span class="text-white hover-white"><i class="fas fa-map-marker-alt"></i>&nbsp;North Austin</span>
+                <span class="text-white hover-white"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>&nbsp;North Austin</span>
               </a>
             </div>
           </div>
           <div class="col d-flex flex-column justify-content-around align-items-start">
-            <a
-              href="tel:{{site.phone}}"
-              class="text-white hover-white my-2">
-              <span class="text-white hover-white fas fa-phone"></span>&nbsp;{{site.phone}}
+            <a href="tel:{{site.phone}}" class="text-white hover-white my-2">
+              <span class="text-white hover-white fas fa-phone" aria-hidden="true"></span>&nbsp;{{site.phone}}
             </a>
             <div class="my-2">
               {% for item in site.menus.social %}
                 <!-- htmllint preset="none" -->
                 <a href="{{ item.url }}" class="{{ item.class }}">
-                  <h4 class="text-white hover-white fab fa-{{ item.title }}"></h4>
+                  <span class="text-white hover-white display-7 fab fa-{{ item.title }}" aria-hidden="true">
+                    <span class="sr-only">Link to our {{ item.title }}</span>
+                  </span>
                 </a>
                 <!-- htmllint preset="$previous" -->
               {% endfor %}

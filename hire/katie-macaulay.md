@@ -59,5 +59,5 @@ education:
 projects:
   - name: Teacher Scheduler
     desc: School-Year Management for teachers with large quantities of class loads.
-    url: https://github.com/katiemacaulay/TeacherScheduler
+    url: https://teacher-scheduler.herokuapp.com/
 ---

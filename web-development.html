@@ -1,8 +1,8 @@
 ---
 layout: default
-permalink: "/javascript/"
-track: JavaScript
-title: Learn JavaScript | JavaScript Classes with Austin Coding Academy
+permalink: "/web-development/"
+trackColor: blue
+title: Learn Full Stack Web Development | JavaScript Classes with Austin Coding Academy
 img: "/assets/images/header-javascript.jpg"
 redirect_from: []
 hero: js
@@ -131,4 +131,127 @@ courses:
   - Job-finding strategies
 
 ---
-{% include course-page.html %}
+<!-- htmllint preset="none" -->
+<div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
+<!-- htmllint preset="$previous" -->
+  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
+    Full-stack Web Development
+  </h1>
+  <p class="text-white text-center mx-auto px-2 mw-600">
+    {{ page.hero_text }}
+  </p>
+</div>
+
+<main>
+
+  {% include observer-and-header-animation.html %}
+
+  <section id="curriculum" class="py-11 container-fluid">
+  <div class="row">
+      <div class="d-none d-md-inline col-md-2 mw-10r"></div>
+      <div class="col-md-8 pl-5">
+        <div class="mb-6 text-center mx-auto">
+          <h2 class="font-family-alt display-5">
+            Our JavaScript Curriculum
+          </h2>
+          <p class="mw-600 mx-auto">
+            Our full track is composed of 5 courses, designed to take you from
+            beginner to job-ready in under a year, without having to quit your day job
+            or mortgage your future. If you're looking to level-up in your current job,
+            you can also apply to take any of these courses individually.
+          </p>
+        </div>
+
+        <div class="pl-11 mx-auto mw-600">
+          {% for course in page.courses %}
+            <h4 class="display-7">
+              <!-- htmllint preset="none" -->
+              <i class="fas fa-circle text-{{page.trackColor}}"></i>
+              <!-- htmllint preset="$previous" -->
+              {{course.code}}: <b>{{course.title}}</b>
+            </h4>
+            <ul class="fa-ul">
+              {% for item in course.list %}
+              <li class="mb-1"><span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{item}}</li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="d-none d-md-inline col-md-2"></div>
+    </div>
+  </section>
+
+  <!-- htmllint preset="none" -->
+  <section id="course-guide" class="container-fluid {{page.hero}}-gradient text-white py-11">
+  <!-- htmllint preset="$previous" -->
+    <div class="pt-3"></div>
+    <div class="row">
+      <div class="d-none d-md-inline col-md-2 mw-10r"></div>
+      <div class="col-md-8">
+        {% include course-guide-form.html %}
+      </div>
+      <div class="d-none d-md-inline col-md-2"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="container-fluid py-11">
+    <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
+      <div class="d-none d-md-inline col-md-2 mw-10r"></div>
+      <div class="col-md-8">
+        <h2 class="font-family-alt font-weight-bold text-center display-6">
+          Still Have Questions?
+        </h2>
+        <div class="mw-600 mx-auto p-2 p-md-0">
+          <h5 class="mb-4 text-center">
+            From choosing the right course to understanding course details, we're here
+            to help.
+          </h5>
+          {% include contact-form.html %}
+        </div>
+      </div>
+      <div class="d-none d-md-inline col-md-2"></div>
+    </div>
+  </section>
+
+  {% for course in page.courses %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "{{ course.title }}",
+      "courseCode": "{{ course.code }}",
+      "description": "{{ course.description }}",
+      "hasCourseInstance": [
+        {% for section in course.sections %}
+        {
+          "@type": "CourseInstance",
+          "name": "{{ course.title }}",
+          "description": "{{ course.description }}",
+          "startDate": "{{ section.start }}",
+          "endDate": "{{ section.end }}",
+          "location": {
+            "@type": "Place",
+            "name": "{{ section.campus }}",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "{{ section.address }}",
+              "addressLocality": "Austin"
+            }
+          }
+        }{% unless section == course.sections.last %},{% endunless %}
+        {% endfor %}
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "Austin Coding Academy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{site.url}}/assets/images/logo-aca.png"
+        }
+      }
+    }
+    </script>
+  {% endfor %}
+
+</main>
