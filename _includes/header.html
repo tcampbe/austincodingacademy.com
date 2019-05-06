@@ -18,31 +18,9 @@
       role="dialog"
       tabindex="-1"
     >
-      {% if item.children %}
-        <div class="mx-5 text-white">
-          {{ item.title }}
-          <ul class="pl-5 m-0 fa-ul">
-            {% for child in item.children %}
-              <li class="mt-3">
-                <span class="fa-li">
-                  <i class="fas fa-long-arrow-alt-right fa-xs"></i>
-                </span>
-                <a href="{{ child.url }}" class="text-white hover-white">
-                  {{ child.title }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      {% else %}
+      {% if item.button %}
         <!-- htmllint preset="none" -->
-        {% if item.button %}
-          <a class="{{ item.button }} hover-white ml-5" href="{{ item.url }}">
-        {% else %}
-          <a href="{{ item.url }}" class="ml-5 text-white hover-white text-left">
-        {% endif %}
-            <span class="text-white hover-white">{{ item.title }}</span>
-          </a>
+        <a class="{{ item.button }} hover-white ml-5" href="{{ item.url }}">
         <!-- htmllint preset="$previous" -->
           <span class="text-white hover-white">
             {{ item.title }}
@@ -86,7 +64,6 @@
         </amp-accordion>
       {% endif %}
     </div>
-
   {% endfor %}
 
 </amp-sidebar>
@@ -151,11 +128,19 @@
                 </a>
               {% elsif item.links %}
                 <li class="nav-item u-header__nav-item">
+                  {% if item.url %}
+                  <a href="{{item.url}}" tabindex="0" class="p-2 mx-2">
+                    <span class="text-white hover-white">
+                      {{ item.title }} <i class="fas fa-caret-down"></i>
+                    </span>
+                  </a>
+                  {% else %}
                   <a tabindex="0" class="p-2 mx-2">
                     <span class="text-white hover-white">
                       {{ item.title }} <i class="fas fa-caret-down"></i>
-                      </span>
+                    </span>
                   </a>
+                  {% endif %}
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
                     {% for link in item.links %}
                       {% if link.url != "#" %}

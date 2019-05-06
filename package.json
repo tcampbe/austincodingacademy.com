@@ -20,7 +20,7 @@
     "build": "touch _includes/css.html && yarn css && yarn build-default && yarn build-amp",
     "build-default": "bundle exec jekyll build --config _config.yml",
     "build-amp": "bundle exec jekyll build --config '_config.yml,_amp.yml' --destination _site/amp/",
-    "css": "yarn build-default && node postcss.js && echo '<style amp-custom>' > _includes/css.html && cat assets/css/main.min.css >> _includes/css.html && echo '</style>' >> _includes/css.html"
+    "css": "yarn build-default && node postcss.js && echo '<!-- htmllint preset=\"none\" --><style amp-custom>' > _includes/css.html && cat assets/css/main.min.css >> _includes/css.html && echo '</style><!-- htmllint preset=\"$previous\" -->' >> _includes/css.html"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.7.2",

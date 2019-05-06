@@ -13,4 +13,5 @@ _includes/css.html
 package-lock.json
 .env
 _data/events.yml
+_data/tutors.yml
 assets/tutoring.json

@@ -1,15 +1,17 @@
 const fetch = require('node-fetch');
 const { DateTime } = require('luxon');
+const { safeDump } = require('js-yaml');
 const { writeFileSync } = require('fs');
 const { ACUITY_USER_ID, ACUITY_API_KEY } = process.env;
 
-const acuityApiUrl = `https://${ACUITY_USER_ID}:${ACUITY_API_KEY}@acuityscheduling.com/api/v1`
+const acuityApiUrl = `https://${ACUITY_USER_ID}:${ACUITY_API_KEY}@acuityscheduling.com/api/v1`;
 
 const fetchTutoringTimes = async () => {
   try {
     let response = await fetch(`${acuityApiUrl}/appointment-types`);
     const appointmentTypes = await response.json();
     const tutoringAppointmentTypes = appointmentTypes.filter(type => type.category === 'Tutoring');
+    console.log('tutoringAppointmentTypes', tutoringAppointmentTypes);
     console.log('tutoringAppointmentTypes.length', tutoringAppointmentTypes.length);
     const thisMonth = DateTime.local().toFormat('yyyy-LL');
     const nextMonth = DateTime.local().plus({ months: 1 }).toFormat('yyyy-LL');
@@ -31,9 +33,9 @@ const fetchTutoringTimes = async () => {
         tutoringAppointmentTypes[i].availableDates[j].availableTimes = availableTimes;
       }
     }
-    writeFileSync('assets/tutoring.json', JSON.stringify(tutoringAppointmentTypes, null, 2));
+    writeFileSync('_data/tutors.yml', safeDump((tutoringAppointmentTypes)));
   } catch (error) {
-    console.error(error);
+    console.error('error', error);
   }
 }
 
