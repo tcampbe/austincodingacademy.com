@@ -215,7 +215,7 @@ body, p {
 
 .hover-white:hover {
   color: #ffffff;
-  text-shadow: 0 0 3px rgba(255,255,255,.5);
+  text-shadow: 0 0 4px rgba(255,255,255,.75);
 }
 
 .photo-hover {

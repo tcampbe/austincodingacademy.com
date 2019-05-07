@@ -78,5 +78,5 @@ Want to pursue a career in tech? We’d love to talk about your options:
 
 * [Schedule a Q&A session](https://acaappointment.acuityscheduling.com/schedule.php?appointmentType=1406673) with a member of our admissions team
 * [Book a tour](https://info.austincodingacademy.com/schedule-a-tour) of one of our campuses
-* Learn more about our [Javascript](https://austincodingacademy.com/javascript/#our-program) and [C#/.NET](https://austincodingacademy.com/csharp/) Tracks
+* Learn more about our [Javascript](https://austincodingacademy.com/javascript/) Track
 * Apply now below!

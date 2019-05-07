@@ -38,5 +38,5 @@ If you are interested in having Austin Coding Academy provide coding classes for
 
 * [Schedule a Q&A session](https://acaappointment.acuityscheduling.com/schedule.php?appointmentType=1406673) with a member of our admissions team
 * [Book a tour](https://info.austincodingacademy.com/schedule-a-tour) of one of our campuses
-* Learn more about our [Javascript](https://austincodingacademy.com/javascript/#our-program) and [C#/.NET](https://austincodingacademy.com/csharp/) Tracks
+* Learn more about our [Javascript](https://austincodingacademy.com/javascript/) Track
 * Apply now below!
