@@ -185,3 +185,36 @@ tutors:
   calendar: https://acaappointment.as.me/?calendarID=2522414
   virtual: https://meet.google.com/enj-jjez-zcw
   rocketchat: https://chat.austincodingacademy.com/direct/ericbarrs-913
+- name: Darwin Riser
+  id: 9916197
+  skills:
+  - Web 101
+  - JS 211
+  - JS 311
+  email: risser.darwin@gmail.com
+  location: [ACC Highland (North Campus)]
+  calendar: https://acaappointment.as.me/?calendarID=2928936
+  virtual: https://meet.google.com/zfy-jmew-sjp
+  rocketchat: https://chat.austincodingacademy.com/direct/risser.darwin
+- name: Alan Houston
+  id: 9926962
+  skills:
+  - Web 101
+  - JS 211
+  - JS 311
+  email: alanhouston5000@gmail.com
+  location: [ACC Highland (North Campus), Capital Factory (Downtown Campus)]
+  calendar: https://acaappointment.as.me/?calendarID=2931163
+  virtual: meet.google.com/osg-xoxy-xpx
+  rocketchat: https://chat.austincodingacademy.com/direct/alanhouston
+- name: Gabe Flores
+  id: 9935070
+  skills:
+  - Web 101
+  - JS 211
+  - JS 311
+  email: jflores353@gmail.com
+  location: [ACC Highland (North Campus)]
+  calendar: https://acaappointment.as.me/?calendarID=2932736
+  virtual: meet.google.com/par-vhek-nef
+  rocketchat: https://chat.austincodingacademy.com/direct/gabeflores-958
