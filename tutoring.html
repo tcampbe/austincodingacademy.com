@@ -5,4 +5,10 @@ title: "Tutors | Unlimited Tutoring with Austin Coding Academy"
 description: ""
 redirect_from: []
 ---
-{% include tutors-list.html %}
+{% for _page in site.pages %}
+  {% if _page.tutors %}
+    {% assign tutors = _page.tutors %}
+  {% endif %}
+{% endfor %}
+
+{% include tutors-list.html marketing=true tutors=tutors %}

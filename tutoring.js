@@ -3,6 +3,7 @@ const { DateTime } = require('luxon');
 const { safeDump } = require('js-yaml');
 const { writeFileSync } = require('fs');
 const { ACUITY_USER_ID, ACUITY_API_KEY } = process.env;
+const { keyBy } = require('lodash');
 
 const acuityApiUrl = `https://${ACUITY_USER_ID}:${ACUITY_API_KEY}@acuityscheduling.com/api/v1`;
 
@@ -33,7 +34,7 @@ const fetchTutoringTimes = async () => {
         tutoringAppointmentTypes[i].availableDates[j].availableTimes = availableTimes;
       }
     }
-    writeFileSync('_data/tutors.yml', safeDump((tutoringAppointmentTypes)));
+    writeFileSync('_data/tutors.yml', safeDump((keyBy(tutoringAppointmentTypes, 'id'))));
   } catch (error) {
     console.error('error', error);
   }

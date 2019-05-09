@@ -56,6 +56,7 @@ header:
       url: "/blog"
 - weight: 2
   title: Tuition
+  url: "/tuition"
   links:
     - weight: 1
       title: Tuition
@@ -73,4 +74,3 @@ header:
   title: Apply
   url: "/apply"
   button: btn btn-round text-white cta-gradient py-1 px-6
-  

@@ -63,23 +63,6 @@ logos:
   height: 47px
   src: "/assets/images/logo-pluralsight.png"
   alt: Plural Sight
-- width: 179px
-  height: 47px
-  src: "/assets/images/logo-oracle.png"
-  alt: Oracle
-- width: 200px
-  height: 240px
-  src: "/assets/images/logo-adobe.png"
-  alt: Adobe
-- width: 400px
-  height: 165px
-  src: "/assets/images/logo-cloud-imperium.png"
-  alt: Cloud Imperium
-- width: 763px
-  height: 139px
-  src: "/assets/images/logo-silvercar.png"
-  alt: Silvercar
-form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
 
 ---
 <!-- htmllint preset="none" -->
@@ -258,27 +241,6 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
     </h4>
     <div class="container">
       <div id="logo-section" class="row d-flex justify-content-center align-items-center">
-          <amp-carousel
-            width="750"
-            height="300"
-            controls="false"
-            delay="500"
-          >
-          {% for logo in page.logos %}
-          <div class="d-flex align-items-center justify-content-center company-logo-div">
-              <amp-img
-                width="{{ logo.width }}"
-                height="{{ logo.height }}"
-                layout="responsive"
-                class="company-logo-img mw-100"
-                src="{{ logo.src }}"
-                alt="{{ logo.alt }}"
-              ></amp-img>
-            </div>
-
-          {% endfor %}
-        </amp-carousel>
-        {% comment %}
         {% for logo in page.logos %}
           <div class="col-4 my-3 col-sm-3 my-sm-0 col-md-2 d-flex align-items-center company-logo-div">
             <amp-img
@@ -291,7 +253,6 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
             ></amp-img>
           </div>
         {% endfor %}
-        {% endcomment %}
       </div>
     </div>
   </section>
