@@ -151,6 +151,7 @@
   </div>
 
   <!-- Filters -->
+  {% unless include.marketing %}
   <h4>Filters</h4>
   <div class="d-flex flex-row justify-content-around pb-5">
     <!-- Location -->
@@ -165,7 +166,7 @@
         class="form-control"
       >
       <!-- htmllint preset="$previous" -->
-        <option disabled selected>
+        <option value="any" selected>
           Select Location
         </option>
         <option value="austinNorth">
@@ -199,7 +200,7 @@
       </amp-date-picker>
     </div>
   </div>
-
+  {% endunless %}
 <div class="row">
   <!-- Tutors -->
   {% for tutor in include.tutors %}
@@ -210,7 +211,10 @@
       {% assign name = tutor.name %}
     {% endif %}
     {% assign id = tutor.id | downcase %}
-    <div class="col-sm-6 col-md-4 col-lg-3 mb-3" [hidden]="!( (!location || ['{{tutor.location | join: "','" }}'].includes(location)) && (!selectedDate || ['{{site.data.tutors[id].availableDates | map: 'date' | join: "', '"}}'].includes(selectedDate)))">
+    <div
+      class="col-sm-6 col-md-4 col-lg-3 mb-3"
+      [hidden]="!( (!location || ['{{tutor.location | join: "','" }}'].includes(location)) && (!selectedDate || ['{{site.data.tutors[id].availableDates | map: 'date' | join: "', '"}}'].includes(selectedDate)))"
+    >
       <div class="card text-center shadow">
         <div class="p-3 d-flex flex-column justify-content-between">
           <!-- Team -->
@@ -231,8 +235,8 @@
               {{ name }}
             </h5>
             <p class="small m-0">
-              {% for skill in skills %}
-                {{skill}}{% unless skill == skills.last %} | {% endunless %}
+              {% for skill in tutor.skills %}
+                {{skill}}{% unless skill == tutor.skills.last %} | {% endunless %}
               {% endfor %}
             </p>
             {% unless include.marketing %}
