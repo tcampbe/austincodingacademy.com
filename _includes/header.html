@@ -13,61 +13,71 @@
   side="right">
   {% for item in site.menus.header %}
     <div
-      class="mt-4 mx-auto d-flex justify-content-center mw-12r"
+      class="mt-4"
       on="tap:sidebar.open"
       role="dialog"
       tabindex="-1"
     >
-    {% if item.button %}
-      <!-- htmllint preset="none" -->
-      <a class="{{ item.button }} hover-white" href="{{ item.url }}">
-      <!-- htmllint preset="$previous" -->
-          {{item.title}}
-      </a>
-    {% elsif item.links %}
-      <amp-accordion disable-session-states class="mx-5">
-        <section>
-          <h5 class="text-center text-white hover-white border btn rounded bg-dark py-1 mb-2" tabindex="0">
-            {{item.title}} <i class="fas fa-caret-down"></i>
-          </h5>
-          <ul class="list-unstyled text-left pl-3">
-            {% for link in item.links %}
-              {% if link.url != "#" %}
-                <li>
-                  <a href="{{link.url}}" class="text-blue hover-white text-wrap">
-                    {{link.title}}
-                  </a>
-                </li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </section>
-      </amp-accordion>
-    {% else %}
-      <h5 class="text-center text-white hover-white border btn rounded bg-dark py-1 mb-2" tabindex="0">
-        <a href="{{item.url}}">
-          {{item.title}}
+      {% if item.button %}
+        <!-- htmllint preset="none" -->
+        <a class="{{ item.button }} hover-white ml-5" href="{{ item.url }}">
+        <!-- htmllint preset="$previous" -->
+          <span class="text-white hover-white">
+            {{ item.title }}
+            </span>
         </a>
-      </h5>
-    {% endif %}
-  </div>
+      {% else %}
+        <amp-accordion disable-session-states class="mx-5">
+          <section>
+            <h5 class="text-center text-white hover-white border btn rounded bg-dark py-1 mb-2" tabindex="0">
+              {{item.title}}
+            </h5>
+            <ul class="list-unstyled text-left pl-3">
+              {% if item.links %}
+                {% for link in item.links %}
+                  <li>
+                    <a href="{{link.url}}" class="text-blue hover-white">
+                      {{link.title}}
+                    </a>
+                  </li>
+                {% endfor %}
+              {% else %}
+                {% for section in item.sections %}
+                  <li>
+                    <span class="border-bottom text-white">
+                      {{section.heading}}
+                    </span>
+                    <ul class="list-unstyled">
+                      {% for page in section.pages %}
+                        <li>
+                          <a href="{{page.url}}" class="text-blue hover-white">
+                            {{page.title}}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>
+                {% endfor %}
+              {% endif %}
+            </ul>
+          </section>
+        </amp-accordion>
+      {% endif %}
+    </div>
   {% endfor %}
 </amp-sidebar>
 {% endunless %}
 
 <!-- htmllint preset="none" -->
-<header
-  id="header"
+<header id="header"
   class="fixed-top {% if color == 'transparent' %}u-header--bg-transparent {% else %}u-header--navbar-bg {% endif %}"
 >
   {% unless page.categories contains 'landing' %}
   <div id="header-background" class="bg-purple d-block position-absolute w-100 h-100"></div>
   {% endunless %}
-  <div
-    class="u-header__section bg-{{ color | default: 'purple' }} p-2"
-  >
+  <div class="u-header__section bg-{{ color | default: 'purple' }} p-2">
   <!-- htmllint preset="$previous" -->
-    <div class="container">
+    <div class="container px-md-0 px-lg-3">
       <!-- Nav -->
       <nav
         class="navbar navbar-expand-md u-header__navbar u-header__navbar--no-space"
@@ -89,7 +99,6 @@
           <span class="sr-only">Austin Coding Academy Logo</span>
         </a>
         <!-- End Logo -->
-
         {% unless page.categories contains 'landing' %}
         <!-- Responsive Toggle Button -->
         <button
@@ -103,8 +112,7 @@
         <!-- End Responsive Toggle Button -->
 
         <!-- Navigation -->
-        <div
-          id="nav-bar"
+        <div id="nav-bar"
           class="collapse navbar-collapse u-header__navbar-collapse d-none d-md-flex"
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
@@ -119,11 +127,19 @@
                 </a>
               {% elsif item.links %}
                 <li class="nav-item u-header__nav-item">
+                  {% if item.url %}
+                  <a href="{{item.url}}" tabindex="0" class="p-2 mx-2">
+                    <span class="text-white hover-white">
+                      {{ item.title }} <i class="fas fa-caret-down"></i>
+                    </span>
+                  </a>
+                  {% else %}
                   <a tabindex="0" class="p-2 mx-2">
                     <span class="text-white hover-white">
                       {{ item.title }} <i class="fas fa-caret-down"></i>
-                      </span>
+                    </span>
                   </a>
+                  {% endif %}
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
                     {% for link in item.links %}
                       {% if link.url != "#" %}
@@ -140,7 +156,6 @@
                     {% endfor %}
                   </ul>
                 </li>
-
               {% else %}
                 <li class="nav-item u-header__nav-item">
                   <a href="{{item.url}}" tabindex="0" class="p-2 mx-2">
@@ -150,9 +165,7 @@
                   </a>
                 </li>
               {% endif %}
-
             {% endfor %}
-
           </ul>
         </div>
         <!-- End Navigation -->

@@ -190,6 +190,14 @@ body, p {
   line-height: 1.2;
 }
 
+.display-8 {
+  font-size: 1rem;
+}
+
+.display-small {
+  font-size: .85rem;
+}
+
 .large-icon {
   font-size: 3rem;
 }
@@ -207,7 +215,7 @@ body, p {
 
 .hover-white:hover {
   color: #ffffff;
-  text-shadow: 0 0 3px rgba(255,255,255,.5);
+  text-shadow: 0 0 4px rgba(255,255,255,.75);
 }
 
 .photo-hover {
@@ -228,7 +236,7 @@ body, p {
 }
 
 .hero {
-  min-height: 95vh;
+  min-height: 78vh;
   background-position: 0 -1px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -280,6 +288,41 @@ body, p {
   background: linear-gradient(to right, #21409a, #2d2f77);
 }
 
+.border-blue {
+  border: 2px solid #00b3d1;
+  box-sizing: border-box;
+}
+
+.border-green {
+  border: 2px solid #7fc89a;
+  box-sizing: border-box;
+}
+
+.border-x-none {
+  border-right: none;
+  border-left: none;
+}
+
+.border-y-padding {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  margin-left: -1px;
+  box-sizing: border-box;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+.scrolling-nav {
+  right: 1rem;
+  top: 45%;
+}
+
 /* CUSTOM BUTTONS */
 
 /* no longer used, but may be used again */
@@ -303,6 +346,15 @@ body, p {
 
 /* CUSTOM SPACING */
 
+.sidenav-item {
+  height: 2rem;
+}
+
+.sidenav-selected {
+  top: -1px;
+  left: -1px;
+}
+
 .mw-850 {
   max-width: 850px;
 }
@@ -311,12 +363,8 @@ body, p {
   max-width: 600px;
 }
 
-.mw-22 {
+.mw-22r {
   max-width: 22rem;
-}
-
-.mw-12r {
-  max-width: 12rem;
 }
 
 .mw-10r {
@@ -374,6 +422,14 @@ nav ul ul li {
 .company-logo-div {
   width: 270px;
   height: 160px;
+  text-align: center;
+  /* margin-right: 20px; */
+}
+
+.company-logo-img {
+  width: 100%;
+  max-width: 6rem;
+  height: auto;
 }
 
 @media (max-width: 767.98px) {
@@ -413,6 +469,31 @@ div:not(.form-columns-1) .hs-form-field:not(:first-child) {
 .card-deck .card {
   min-width: 260px;
   max-width: 345px;
+}
+
+.dropdown-filter-button {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* SHARING BUTTONS */

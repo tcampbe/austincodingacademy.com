@@ -1,0 +1,25 @@
+<amp-position-observer
+  on="enter:select-{{include.id}}.start"
+  intersection-ratios="0.6"
+  layout="nodisplay"
+  tabindex="-1"
+>
+</amp-position-observer>
+
+<!-- htmllint preset="none" -->
+<amp-animation id="select-{{include.id}}" layout="nodisplay">
+<!-- htmllint preset="$previous" -->
+  <script type="application/json">
+    {
+      "--opacity": "1",
+      "selector": ".sidenav-selected",
+      "duration": "0.25s",
+      "keyframes": {"opacity": "var(--opacity)"},
+      "fill": "forwards",
+      "subtargets": [{
+        "selector": ":not(#{{include.id}}-selected)",
+        "--opacity": "0"
+      }]
+    }
+  </script>
+</amp-animation>

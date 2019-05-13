@@ -1,12 +1,12 @@
-<h2 class="display-5 mb-5 font-family-alt text-center font-weight-bold">
+<h2 class="display-6 mb-5 font-family-alt text-center font-weight-bold">
   Individual Course Dates
 </h2>
 
 {% for course in page.courses %}
 <div class="mx-auto mb-5">
-  <h4 class="display-7">
+  <h5>
     {{ course.code }}: <b>{{ course.title }}</b>
-  </h4>
+  </h5>
   {% for section in course.sections %}
   <div class="row border shadow rounded my-2 align-items-center">
     <div class="col-6 col-md-3 my-4">
