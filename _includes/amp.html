@@ -68,6 +68,18 @@
 
 <script
   async
+  custom-element="amp-accordion"
+  src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"
+></script>
+
+<script
+  async
+  custom-element="amp-bind"
+  src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+></script>
+
+<script
+  async
   custom-element="amp-iframe"
   src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
 ></script>
@@ -76,12 +88,6 @@
   async
   custom-element="amp-form"
   src="https://cdn.ampproject.org/v0/amp-form-0.1.js"
-></script>
-
-<script
-  async
-  custom-element="amp-accordion"
-  src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"
 ></script>
 
 <script
@@ -96,26 +102,6 @@
   src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"
 ></script>
 
-{% if page.hero %}
-<script
-  async
-  custom-element="amp-position-observer"
-  src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"
-></script>
-
-<script
-  async
-  custom-element="amp-animation"
-  src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"
-></script>
-{% endif %}
-
-<script
-  async
-  custom-element="amp-bind"
-  src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
-></script>
-
 <script
   async
   custom-element="amp-carousel"
@@ -123,7 +109,32 @@
 ></script>
 
 <script
-  async custom-element="amp-date-picker"
+  async
+  custom-element="amp-list"
+  src="https://cdn.ampproject.org/v0/amp-list-0.1.js"
+></script>
+
+{% if page.amp_components contains 'amp-position-observer' %}
+<script
+  async
+  custom-element="amp-position-observer"
+  src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"
+></script>
+{% endif %}
+
+{% if page.amp_components contains 'amp-animation' %}
+<script
+  async
+  custom-element="amp-animation"
+  src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"
+></script>
+{% endif %}
+
+{% if page.amp_components contains 'amp-date-picker' %}
+<script
+  async
+  custom-element="amp-date-picker"
   src="https://cdn.ampproject.org/v0/amp-date-picker-0.1.js"
 ></script>
+{% endif %}
 

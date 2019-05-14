@@ -64,9 +64,6 @@ header:
     - weight: 2
       title: Financing
       url: "/financing"
-    - weight: 2
-      title: Scholarships
-      url: "#"
 - weight: 4
   title: Student Portal
   url: https://campus.austincodingacademy.com
