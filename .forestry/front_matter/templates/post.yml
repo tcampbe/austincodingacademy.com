@@ -69,6 +69,8 @@ fields:
   name: author_email
   label: Author Email
 pages:
+- _posts/2019-01-23-q-a-with-our-new-job-placement-course-director.md
+- _posts/2019-01-23-aca-partners-with-austin-public-library-to-teach-teens-to-code.md
 - _posts/2019-04-16-7-characteristics-of-a-successful-web-developer.md
 - _posts/2019-04-12-5-free-coding-websites-for-beginners-learn-how-to-code-without-the-cost.md
 - _posts/2019-04-13-why-i-left-marketing-to-learn-coding-luke-stenis-austin-coding-academy-alumni-spotlight.md
@@ -77,13 +79,11 @@ pages:
 - _posts/2019-04-13-5-awesome-apps-you-can-create-with-c.md
 - _posts/2019-01-23-what-s-the-difference-between-javascript-and-c.md
 - _posts/2019-02-15-what-will-you-make-as-a-full-time-web-developer-1.md
-- _posts/2019-01-23-aca-partners-with-austin-public-library-to-teach-teens-to-code.md
 - _posts/2019-02-24-four-exciting-projects-that-will-inspire-you-to-learn-javascript-right-now-1.md
 - _posts/2019-02-21-what-are-companies-looking-for-in-a-web-developer-s-portfolio.md
 - _posts/2019-02-21-4-keys-to-making-a-career-switch-into-tech-without-technical-experience.md
 - _posts/2019-02-21-5-tips-to-help-you-learn-coding-faster.md
 - _posts/2019-01-23-highlight-six-aca-grads-land-jobs.md
-- _posts/2019-01-23-q-a-with-our-new-job-placement-course-director.md
 - _posts/2019-01-23-new-in-2019-unlimited-tutoring-for-all-students.md
 - _posts/2019-02-21-5-signs-you-need-to-make-a-career-change.md
 - _posts/2019-02-21-why-you-should-make-time-to-learn-to-code.md
