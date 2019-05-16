@@ -1,0 +1,9 @@
+<Response>
+  <Say voice="alice">
+    For any assistance please call or text 512-827-8498 or email us at info@austincodingacademy.com
+  </Say>
+  <Pause length="1"/>
+  <Say voice="alice">
+    Thank you.
+  </Say>
+</Response>
