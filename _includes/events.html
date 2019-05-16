@@ -54,7 +54,19 @@
           }
         },
         "image": ["{{event.img}}"],
-        "description": "{{event.description | strip_newlines | escape}}"
+        "description": "{{event.description | strip_newlines | escape}}",
+        "performer": {
+          "@type": "PerformingGroup",
+          "name": "Austin Coding Academy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "USD",
+          "price": "0",
+          "validFrom": "{{event.published}}",
+          "url": "{{event.url}}"
+        }
       }
     </script>
   {% endfor %}

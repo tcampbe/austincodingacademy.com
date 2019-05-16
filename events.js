@@ -37,6 +37,7 @@ const fetchEvents = async () => {
       end_date: DateTime.fromISO(event.start.local).toFormat('ccc, LLL d'),
       end_time: DateTime.fromISO(event.start.local).toFormat('h:mm a'),
       start_date_time: event.start.local,
+      published_date_time: event.published,
       end_date_time: event.end.local,
       img: event.logo && event.logo.url,
       height: event.logo && event.logo.crop_mask.height,
