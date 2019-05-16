@@ -57,5 +57,8 @@
     {{ content }}
 
     {% include footer.html %}
+    {% if site.baseurl != '/amp' %}
+      {% include callrail.html %}
+    {% endif %}
   </body>
 </html>
