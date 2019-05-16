@@ -1,0 +1,10 @@
+{% if site.baseurl == '/amp' %}
+<amp-analytics config="https://swappy.callrail.com/companies/915131377/amp-analytics.json?cid=CLIENT_ID(cid-scope-cookie-fallback-name)"></amp-analytics>
+
+<amp-call-tracking config="https://swappy.callrail.com/companies/915131377/amp-swap.json?t=15129938193&cid=CLIENT_ID(cid-scope-cookie-fallback-name)">
+  <a class="{{ include.a_class }}" href="tel:5129938193"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp; 1 512-993-8193</a>
+</amp-call-tracking>
+{% else %}
+<script type="text/javascript" src="https://cdn.callrail.com/companies/915131377/aeae7d528f89ce8e8ac0/12/swap.js"></script>
+<a class="{{ include.a_class }}" href="tel:5128278489"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp; 1 512-827-8489</a>
+{% endif %}

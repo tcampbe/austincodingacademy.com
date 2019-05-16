@@ -38,11 +38,11 @@
       <link rel="stylesheet" href="/assets/css/main.css">
     {% endif %}
 
+    {% include google-tag-manager-head.html %}
+
     {% if site.baseurl == '/amp' %}
-      {% include google-tag-manager-head-amp.html%}
       <link rel="canonical" href="{{site.url}}{{page.url}}">
     {% else %}
-      {% include google-tag-manager-head.html %}
       <link rel="amphtml" href="{{site.url}}/amp{{page.url}}">
     {% endif %}
 
@@ -50,11 +50,7 @@
   </head>
 
   <body>
-    {% if site.baseurl == '/amp' %}
-      {% include google-tag-manager-body-amp.html  page_url=page.url %}
-    {% else %}
-      {% include google-tag-manager-body.html %}
-    {% endif %}
+    {% include google-tag-manager-body.html %}
 
     <div class="position-absolute pl-5 pt-5">
       <!-- Logo -->
