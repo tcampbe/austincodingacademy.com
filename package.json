@@ -19,6 +19,7 @@
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
     "build": "touch _includes/css.html && yarn css && yarn build-default && yarn build-amp",
     "build-default": "bundle exec jekyll build --config _config.yml",
+    "build-lubbock": "bundle exec jekyll build --config _config.yml,_config_lubbock.yml",
     "build-amp": "bundle exec jekyll build --config '_config.yml,_amp.yml' --destination _site/amp/",
     "css": "yarn build-default && node postcss.js && echo '<!-- htmllint preset=\"none\" --><style amp-custom>' > _includes/css.html && cat assets/css/main.min.css >> _includes/css.html && echo '</style><!-- htmllint preset=\"$previous\" -->' >> _includes/css.html"
   },

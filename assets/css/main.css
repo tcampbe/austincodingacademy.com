@@ -367,6 +367,10 @@ body, p {
   max-width: 22rem;
 }
 
+.mw-14r {
+  max-width: 14rem;
+}
+
 .mw-10r {
   min-width: 10rem;
 }
@@ -428,7 +432,7 @@ nav ul ul li {
 
 .company-logo-img {
   width: 100%;
-  max-width: 6rem;
+  max-width: 8rem;
   height: auto;
 }
 

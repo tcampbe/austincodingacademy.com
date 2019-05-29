@@ -1,11 +1,12 @@
 <div class="container mt-90 pt-1 pb-5">
+{% for city in page.city[site.key] %}
   <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-10">
-    {{ page.heading }}
+    {{ city.heading }}
   </h2>
   <div class="row my-5 mx-auto d-flex justify-content-start">
     <div class="col-12 col-lg">
       <div class="row">
-        {% for profile in page.profiles %}
+        {% for profile in city.profiles %}
           <div class="col-4 p-1">
             <!-- htmllint preset="none" -->
             <amp-img
@@ -46,17 +47,18 @@
     <div class="py-10 col-12 d-md-none" id="bio-section"></div>
     <div class="col-12 col-md">
       <h2 class="d-none d-lg-block text-center font-family-alt font-weight-bold display-5 mb-5">
-        {{ page.heading }}
+        {{ city.heading }}
       </h2>
       <p class="mx-5 p-5 rounded border shadow">
         <!-- htmllint preset="none" -->
-        <span class="d-block font-weight-bold text-center" [text]="selectedName">About ACA</span>
+        <span class="d-block font-weight-bold text-center" [text]="selectedName">About {{ city.school }}</span>
         <small class="d-block font-weight-bold text-center mb-3" [text]="selectedTitle"></small>
         <span [text]="selectedBio">
-          {{ page.defaultBio }}
+          {{ city.defaultBio }}
         </span>
         <!-- htmllint preset="$previous" -->
       </p>
     </div>
   </div>
+{% endfor %}
 </div>
