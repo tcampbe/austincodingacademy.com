@@ -1,131 +1,144 @@
-<div class="row">
+<div class="row d-flex justify-content-center">
+  <div class="col-sm-10 col-xs-10 mw-850">
     <h2 class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7">
       Download Our Course Guide
     </h2>
-    <div class="col-12 col-md-7 col-lg mb-5 px-11 pb-md-11">
-      <amp-img
-        class="rounded"
-        layout="responsive"
-        width="579"
-        height="756"
-        src="/assets/images/Course-Guide-Master-Table-Content.png"
-        alt="What's inside our course guide"
-      ></amp-img>
-    </div>
-    <form
-      class="col-12 col-md px-11 pt-md-3"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
-      target="_top"
-      method="POST">
-      <div class="form-container">
-        <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
-        <input name="downloaded_a_courses_guide" type="hidden" value="true">
-        <input name="hs_lead_status" type="hidden" value="NEW">
-        <input name="page_name" type="hidden" value="{{page.title}}">
-        <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
-        <input name="hutk" type="hidden" value="">
-
-        <div class="row center-form">
-          <!-- Input -->
-          <div class="col-12">
-            <div class="form-group">
-              <label for="first-name-cg" class="form-label">
-                Name <span class="text-red-a">*</span>
-              </label>
-
-              <input id="first-name-cg"
-                type="text"
-                class="form-control"
-                name="firstname"
-                placeholder="Name"
-                required data-msg="Please enter your name."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-            <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-12">
-            <div class="form-group">
-              <label for="email-cg" class="form-label">
-                Email <span class="text-red-a">*</span>
-              </label>
-
-              <input id="email-cg"
-                type="email"
-                class="form-control"
-                name="email"
-                placeholder="Email"
-                required data-msg="Please enter a valid email address."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-12">
-            <div class="form-group">
-              <label for="phone-cg" class="form-label">
-                Phone <span class="text-red-a">*</span>
-              </label>
-
-              <input id="phone-cg"
-                type="phone"
-                class="form-control"
-                name="phone"
-                placeholder="Phone"
-                required data-msg="Please enter a valid phone number."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <div class="col-12 d-flex flex-column justify-content-end">
-            {% include referral-question.html id="referral-cg" %}
-          </div>
-
-          <!-- Input -->
-          <div class="col-12 d-flex flex-column justify-content-end form-group">
-            <label class="form-label" for="best-describes-cg">Which of these best describes you? <span class="text-red-a">*</span></label>
-            <select id="best-describes-cg" name="which_of_these_best_describes_you_" class="form-control" required>
-              <option disabled selected value="">Select your answer</option>
-              <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
-              <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck</option>
-              <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
-              <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
-              <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
-              <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
-            </select>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-12 d-flex align-items-end justify-content-center form-group">
-            <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
-              View Guide
-            </button>
-          </div>
-          <!-- End Input -->
-
-          {% if page.categories contains 'landing' %}
-            <div class="col-12 d-flex justify-content-center">
-              {% include data-agreement.html %}
-            </div>
-          {% endif %}
-        </div>
-        <div class="text-center">
-          <div submit-error>
-            <template type="amp-mustache">
-              <p class="text-danger">There was an error with your request. Please try again.</p>
-            </template>
-          </div>
-        </div>
+    <p class="mw-600 mx-auto text-center mb-6">
+      Curious about what our classes entail? Download our course guide to get the rundown on how
+      this whole process works, from how our programs are structured to how we can help you get
+      a job in coding after you graduate.
+    </p>
+    <div class="row">
+      <!-- Image -->
+      <div class="col-xs-11 col-sm-11 col-md-5 col-lg-5 mt-3 mx-auto">
+        <amp-img
+          class="rounded"
+          layout="responsive"
+          width="579"
+          height="756"
+          src="/assets/images/Course-Guide-Master-Table-Content.png"
+          alt="What's inside our course guide"
+        ></amp-img>
       </div>
-    </form>
+      <!-- Form -->
+      <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
+        <form
+          action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
+          target="_top"
+          method="POST"
+        >
+          <div class="form-container">
+            <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
+            <input name="downloaded_a_courses_guide" type="hidden" value="true">
+            <input name="hs_lead_status" type="hidden" value="NEW">
+            <input name="page_name" type="hidden" value="{{page.title}}">
+            <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
+            <input name="hutk" type="hidden" value="">
+
+            <div class="row center-form">
+              <!-- Input -->
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="first-name-cg" class="form-label">
+                    Name <span class="text-red-a">*</span>
+                  </label>
+
+                  <input id="first-name-cg"
+                    type="text"
+                    class="form-control"
+                    name="firstname"
+                    placeholder="Name"
+                    required data-msg="Please enter your name."
+                    data-error-class="u-has-error"
+                    data-success-class="u-has-success"
+                  />
+                </div>
+              </div>
+                <!-- End Input -->
+
+              <!-- Input -->
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="email-cg" class="form-label">
+                    Email <span class="text-red-a">*</span>
+                  </label>
+
+                  <input id="email-cg"
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Email"
+                    required data-msg="Please enter a valid email address."
+                    data-error-class="u-has-error"
+                    data-success-class="u-has-success"
+                  />
+                </div>
+              </div>
+              <!-- End Input -->
+
+              <!-- Input -->
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="phone-cg" class="form-label">
+                    Phone <span class="text-red-a">*</span>
+                  </label>
+
+                  <input id="phone-cg"
+                    type="phone"
+                    class="form-control"
+                    name="phone"
+                    placeholder="Phone"
+                    required data-msg="Please enter a valid phone number."
+                    data-error-class="u-has-error"
+                    data-success-class="u-has-success"
+                  />
+                </div>
+              </div>
+              <!-- End Input -->
+
+              <div class="col-12 d-flex flex-column justify-content-end">
+                {% include referral-question.html id="referral-cg" %}
+              </div>
+
+              <!-- Input -->
+              <div class="col-12 d-flex flex-column justify-content-end form-group">
+                <label class="form-label" for="best-describes-cg">Which of these best describes you? <span class="text-red-a">*</span></label>
+                <select id="best-describes-cg" name="which_of_these_best_describes_you_" class="form-control" required>
+                  <option disabled selected value="">Select your answer</option>
+                  <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
+                  <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck</option>
+                  <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
+                  <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
+                  <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
+                  <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
+                </select>
+              </div>
+              <!-- End Input -->
+
+              <!-- Input -->
+              <div class="col-12 d-flex align-items-end justify-content-center form-group">
+                <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
+                  View Guide
+                </button>
+              </div>
+              <!-- End Input -->
+
+              {% if page.categories contains 'landing' %}
+                <div class="col-12 d-flex justify-content-center">
+                  {% include data-agreement.html %}
+                </div>
+              {% endif %}
+            </div>
+            <div class="text-center">
+              <div submit-error>
+                <template type="amp-mustache">
+                  <p class="text-danger">There was an error with your request. Please try again.</p>
+                </template>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
+</div>

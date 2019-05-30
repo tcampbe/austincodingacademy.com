@@ -13,31 +13,33 @@ amp_components: ['amp-animation', 'amp-position-observer']
 features:
 - heading: Flexible Schedule
   title: Keep Your Day Job While You Make a Career Change
-  bullets:
-  - In-person, part-time classes meet twice a week in the evenings, so learning to
-    code fits your schedule
-  - Our flipped classroom approach makes sure you get the most out of class
-  - Unlimited tutoring gives you the option to book 1-on-1 help on your schedule
-  img: calendar_white.png
+  description: In-person, part-time classes meet twice a week in the evenings, so learning to code
+    fits your schedule. Our flipped classroom approach makes sure you get the most out of class.
+    Unlimited tutoring give syou the option to book 1-on-1 help on your schedule.
+  img: calendar_yellow.png
+  square: true
   alt: Calendar graphic
 - heading: Affordable Tuition
   title: We Work with Our Students to Make Tuition Manageable
-  bullets:
-  - Pay for your tuition course-by-course or pay for the entire program up front and
-    save
-  - Finance your tuition through <a class="text-white link-underlined" href="https://austincodingacademy.skills.fund/">Skills
-    Fund</a>, our primary financing partner
-  - Talk with our admissions team about additional tuition options
-  img: wallet_white.png
+  description: Pay for your tuition course-by-course or pay for the entire program up front and
+    save. Finance your tuition through <a class="text-white link-underlined" href="https://austincodingacademy.skills.fund/">
+    Skills Fund</a>, our primary financing partner. Talk with our admissions team about additional tuition options.
+  img: wallet_red.png
+  square: true
   alt: Wallet graphic
+- heading: Unlimited Tutoring
+  title: ''
+  description: Don't worry, you won't fall behind. We won't let you! Our tutors are available
+    to give you the help and training you need whenever you need it, without jacking up the price.
+  img: tutoring_blue_2.png
+  alt: Pencil graphic
 - heading: Job Placement
   title: You’ll Learn Skills That Will Get You a Job
-  bullets:
-  - Develop skills that employers are looking for with our practical curriculum, taught
-    by professional developers
-  - Receive 1-on-1 attention from our Director of Job Placement
-  - Build your resume, practice interviews, and more in our Job Placement Course
-  img: suitcase_white.png
+  description: Develop skills that employers are looking for with our practical curriculum, taught
+    by professional developers. Receive 1-on-1 attention from our Director of Job Placement. Build
+    your resume, practice interviews, and more in our Job Placement Course.
+  img: suitcase_green.png
+  square: true
   alt: Suitcase graphic
 logos:
 - width: 1600px
@@ -132,7 +134,7 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
               target="_blank"
               rel="noopener"
             >
-              Schedule a Q&amp;A
+              Learn
             </a>
             <!-- htmllint preset="$previous" -->
             <h4 class="text-white display-7 border-top border-bottom">
@@ -147,14 +149,13 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
         </amp-lightbox>
         <!-- htmllint preset="none" -->
         <a
-          class="btn btn-outline-light btn-round mr-2 d-none d-sm-block"
+          class="btn btn-round mr-2 d-none d-sm-block cta-gradient text-white"
           href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
           target="_blank"
           rel="noopener">
-          Schedule a Q&amp;A
+          Learn More
         </a>
         <!-- htmllint preset="$previous" -->
-        {% include btn-apply.html %}
       </div>
     </div>
   </div>
@@ -164,44 +165,78 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
   {% include observer-and-header-animation.html %}
 
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
-    {% include course-guide-form.html %}
+    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+      We Are Committed To Your Success
+    </h2>
+    <p class="mw-600 mx-auto text-center">
+      From learning to code, to landing your job, our team has your back. At Austin Coding Academy
+      you can learn coding in a classroom settingthat works with your busy schedule, and be apart of
+      our community, supporting and inspiring each other to be more than just coders.
+    </p>
+    <p class="mw-600 mx-auto text-center mb-4">
+      <b>Ready when you are.</b>
+    </p>
+    <!-- Apply Button -->
+    <div class="d-flex justify-content-center">
+      {% include btn-apply.html %}
+    </div>
   </section>
 
-  <section id="values" class="my-5 bg-gradient text-white">
-    <div class="container py-11">
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 bg-dark-primary text-white">
+    <div class="mx-auto mw-850">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-        Why Austin Coding Academy
+        Why Choose Us?
       </h2>
-      <div class="row">
+      <p class="mw-600 mx-auto text-center text-white">
+        As fun as it is to learn how to code, we know you didn't just come to us
+        for the kicks. You need to launch a new career and we're here to help you
+        do it. <br>
+        Here's how:
+      </p>
+      <div class="col">
         {% for feature in page.features %}
           <div class="col-12 col-md">
             <div class="row">
-              <div class="col-3 col-md-12 mb-md-3 d-flex align-items-center justify-content-center">
-                <amp-img
-                  width="80px"
-                  height="80px"
-                  layout="fixed"
-                  src="/assets/images/{{ feature.img }}"
-                  alt=""
-                ></amp-img>
-              </div>
-              <div class="col-9 col-md-12">
-                <h5 class="font-weight-bold ml-4 ml-md-0 text-md-center">
-                  {{ feature.heading }}
-                </h5>
-                <ul>
-                  {% for bullet in feature.bullets %}
-                    <li class="mb-2">
-                      {{ bullet }}
-                    </li>
-                  {% endfor %}
-                </ul>
+              <!-- Image -->
+              {% if feature.square %}
+                <div class="col-3 mb-md-3 d-flex align-items-center justify-content-center">
+                  <amp-img
+                    width="80px"
+                    height="80px"
+                    layout="fixed"
+                    src="/assets/images/{{ feature.img }}"
+                    alt=""
+                  ></amp-img>
+                </div>
+              {% else %}
+                <div class="col-3 mb-md-3 d-flex align-items-center justify-content-center">
+                  <amp-img
+                    width="80px"
+                    height="60px"
+                    layout="fixed"
+                    src="/assets/images/{{ feature.img }}"
+                    alt=""
+                  ></amp-img>
+                </div>
+              {% endif %}
+              <!-- Text -->
+              <div class="col-9">
+                <h3 class="font-weight-bold ml-4 ml-md-0 text-left">
+                  <b>{{ feature.heading }}</b>
+                </h3>
+                <div class="mb-3">
+                  {{ feature.description }}
+                </div>
               </div>
             </div>
           </div>
         {% endfor %}
       </div>
     </div>
+  </section>
+  <!-- Course Guide Form -->
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
+    {% include course-guide-form.html %}
   </section>
 
   <section class="my-6 py-5 container">
@@ -211,14 +246,8 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
     <!-- begin student-stories -->
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-6">
-          <h5 class="text-center font-weight-bold">
-            Lillian Situ, ACA graduate
-          </h5>
-          <h5 class="text-center">
-            Software Engineer, data.world
-          </h5>
-          <div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <div class="mt-4">
             <amp-iframe
               src="https://player.vimeo.com/video/290925619"
               width="266.656px"
@@ -230,20 +259,19 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
             >
             </amp-iframe>
           </div>
-          <p class="text-center w-75 mx-auto">
-            "I've always been interested in programming and being able to create
-            something so being able to take what I learned at ACA and get a job with
-            it ... was one of the best decisions I've made."
-          </p>
+          <div class="mt-3 d-flex justify-content-center">
+            <blockquote class="blockquote w-75">
+              <p class="mb-0">
+                "I've always been interested in programming and being able to create
+                something so being able to take what I learned at ACA and get a job with
+                it ... was one of the best decisions I've made."
+              </p>
+              <footer class="blockquote-footer display-9 text-right mt-1">Lillian Situ, <cite title="Title">Software Engineer, data.world</cite></footer>
+            </blockquote>
+          </div>
         </div>
-        <div class="col-12 col-sm-6">
-          <h5 class="text-center font-weight-bold">
-            Greg Swan, ACA graduate
-          </h5>
-          <h5 class="text-center">
-            Web Developer, Kinetic Theory
-          </h5>
-          <div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <div class="mt-4">
             <amp-iframe
               src="https://player.vimeo.com/video/290913789"
               width="266.656px"
@@ -256,16 +284,21 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
               >
             </amp-iframe>
           </div>
-          <p class="text-center w-75 mx-auto">
-            "ACA ... gave me a solid foundation of knowledge,
-            taught me what not to do, and consistently reminded me that there was a
-            job out there for me if I was willing to put in the work."
-          </p>
+          <div class="mt-3 d-flex justify-content-center">
+            <blockquote class="blockquote w-75">
+              <p class="mb-0">
+                "ACA ... gave me a solid foundation of knowledge,
+                taught me what not to do, and consistently reminded me that there was a
+                job out there for me if I was willing to put in the work."
+              </p>
+              <footer class="blockquote-footer display-9 text-right mt-1">Greg Swan, <cite title="Title">Web Developer, Kinetic Theory</cite></footer>
+            </blockquote>
+          </div>
         </div>
       </div>
     </div>
     <!-- end student-stories -->
-    <h4 class="font-family-alt font-weight-bold text-center display-7 mt-5">
+    <h4 class="font-family-alt font-weight-bold text-center display-7 mt-5 mb-3">
       Our Graduates Are Working At
     </h4>
     <div class="container">
@@ -295,7 +328,7 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
       </div>
     </div>
   </section>
-  <section class="my-6 py-10 bg-gradient text-white">
+  <section class="my-6 py-10 bg-dark-secondary text-white">
     <div class="container d-flex justify-content-center flex-column">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Come Meet Us at Our Next Events
@@ -303,7 +336,7 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
       {% include events.html %}
     </div>
   </section>
-  <section class="my-6 py-5">
+  <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5">
     <div class="container mw-600">
       <h3 class="font-family-alt font-weight-bold text-center display-5">
         Have More Questions?
