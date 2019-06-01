@@ -9,6 +9,7 @@
     "lint-css": "stylelint ./**/*.css",
     "lint": "yarn lint-html && yarn lint-css",
     "test": "yarn lint",
+    "pa11y": "pa11y-ci",
     "images": "imagemin assets/images/* --out-dir=assets/images/",
     "favicon": "real-favicon generate favicon.json faviconData.json assets/favicons/ && npm run favicon-inject",
     "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
@@ -63,5 +64,8 @@
         "_includes/css.html"
       ]
     }
+  },
+  "dependencies": {
+    "pa11y-ci": "^2.3.0"
   }
 }
