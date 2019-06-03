@@ -25,7 +25,7 @@ linkedin: https://www.linkedin.com/in/terryroberts
 email: terryjbroberts@yahoo.com
 website: https://mt-ctb-ourvolunteernetwork.azurewebsites.net
 workplace: AFFA
-phone: (512) 593-2019
+phone:
 
 workexperience:
   - company: Austin Coding Academy
