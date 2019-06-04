@@ -209,7 +209,7 @@
         input-selector="[name=tutoringDate]"
       >
       <!-- htmllint preset="$previous" -->
-        <input type="date"
+        <input type="text"
           name="tutoringDate"
           tabindex="0"
           class="form-control"
@@ -230,6 +230,7 @@
     {% assign id = tutor.id | downcase %}
     <div
       class="col-sm-6 col-md-4 col-lg-3 mb-3"
+      id="tutor-{{id}}"
       [hidden]="!( (!location || ['{{tutor.location | join: "','" }}'].includes(location)) && (!selectedDate || ['{{site.data.tutors[id].availableDates | map: 'date' | join: "', '"}}'].includes(selectedDate)))"
     >
       <div class="card text-center shadow" id="{{name}}">
@@ -243,7 +244,7 @@
                 height="100px"
                 layout="fixed"
                 class="rounded-circle"
-                src="http://gravatar.com/avatar/{{ tutor.email | downcase | md5 }}?s=100&r=pg&d=retro"
+                src="https://gravatar.com/avatar/{{ tutor.email | downcase | md5 }}?s=100&r=pg&d=retro"
                 alt="{{name}}"
               ></amp-img>
               <!-- htmllint preset="$previous" -->

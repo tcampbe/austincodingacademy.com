@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [graduation, hire ] # don't touch
+categories: [graduation, hire, austin ] # don't touch
 
 fullname: Brian Bridges
 jobtitle: Web Developer
@@ -10,7 +10,7 @@ blurb: "I am a jumior web designer, looking for remote work in wordpresss"
 
 skills:
   - Web Design
-  - Google Analynics  
+  - Google Analynics
   - SEO
   - Google Search Console
   - Wordpress
@@ -46,12 +46,12 @@ workexperience:
     dates: August 2015 - Present
     title: UI/UX Design, Wordpress Developer
     location: Austin, TX
-  
+
 education:
   - name: Austin Coding Academy
     dates: July 2018- April 2019
     degree: UI/UX Designer
-  
+
 
 
 ---

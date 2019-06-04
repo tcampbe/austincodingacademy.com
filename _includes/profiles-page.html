@@ -1,6 +1,7 @@
 {% assign city = page[site.key] %}
 
 <div class="container mt-90 pt-1 pb-5">
+{% for city in page.city[site.key] %}
   <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-10">
     {{ city.heading }}
   </h2>
@@ -61,4 +62,5 @@
       </p>
     </div>
   </div>
+{% endfor %}
 </div>
