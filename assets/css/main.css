@@ -377,6 +377,10 @@ body, p {
   max-width: 600px;
 }
 
+.mw-450 {
+  max-width: 450px;
+}
+
 .mw-22r {
   max-width: 22rem;
 }
