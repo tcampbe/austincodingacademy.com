@@ -2,7 +2,7 @@
 
 <div class="container mt-90 pt-1 pb-5">
   <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-10">
-    {{ city.heading }}
+    {{ site.acronym | upcase }} Instructors
   </h2>
   <div class="row my-5 mx-auto d-flex justify-content-start">
     <div class="col-12 col-lg">
@@ -52,7 +52,7 @@
       </h2>
       <p class="mx-5 p-5 rounded border shadow">
         <!-- htmllint preset="none" -->
-        <span class="d-block font-weight-bold text-center" [text]="selectedName">About {{ site.key | capitalize }}</span>
+        <span class="d-block font-weight-bold text-center" [text]="selectedName">About {{ site.acronym | upcase }}</span>
         <small class="d-block font-weight-bold text-center mb-3" [text]="selectedTitle"></small>
         <span [text]="selectedBio">
           {{ city.defaultBio }}

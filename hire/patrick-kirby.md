@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ ] # don't touch
+categories: [ austin ] # don't touch
 
 fullname: Patrick Kirby
 jobtitle: Renewal Sales Representative

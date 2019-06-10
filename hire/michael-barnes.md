@@ -1,12 +1,12 @@
 ---
 layout: resume #don't touch
-categories: [ graduation ] # don't touch
+categories: [ graduation, austin ] # don't touch
 
 fullname: Michael Barnes
 jobtitle: Cofounder / VP Product, Quality People
 
 location: Austin, TX
-blurb: "As a former teacher, school leader, and current startup founder and investor in the social impact space, my mission is consistent: helping accelerate 'radical equity' in our society ease the anguish and struggle of underresourced communities, families, and individuals." 
+blurb: "As a former teacher, school leader, and current startup founder and investor in the social impact space, my mission is consistent: helping accelerate 'radical equity' in our society ease the anguish and struggle of underresourced communities, families, and individuals."
 
 skills:
   - JavaScript

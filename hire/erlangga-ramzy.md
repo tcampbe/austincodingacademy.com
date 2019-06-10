@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation ] # don't touch
+categories: [ hire, graduation, austin ] # don't touch
 
 fullname: Erlangga Ramzy
 jobtitle: Research Assistant , Web Developer

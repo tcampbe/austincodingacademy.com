@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ graduation, hire] # don't touch
+categories: [ graduation, hire, austin ] # don't touch
 
 fullname: James Woodard
 jobtitle: Senior Backup Technician, Jungle Disk
@@ -16,7 +16,7 @@ skills:
   - jQuery
   - Azure
   - Google Cloud
-  - SQL  
+  - SQL
 
 github: https://github.com/jamestglh
 linkedin: https://www.linkedin.com/in/james.woodard-283397a8
@@ -27,8 +27,8 @@ workplace: Jungle Disk
 phone: (210)854-6555
 
 workexperience:
-  - company: Jungle Disk 
-    logo: 
+  - company: Jungle Disk
+    logo:
     dates: Jan 2016 - Now
     title: Senior Backup Technician
     location: San Antonio, TX
@@ -38,7 +38,7 @@ education:
   - name: Austin Coding Academy
     dates: April 2018-April 2019
     degree: Web Development
-    logo:  
+    logo:
 
 projects:
   - name: NesCollector

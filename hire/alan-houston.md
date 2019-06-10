@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ graduation, hire ] # don't touch
+categories: [ graduation, hire, austin ] # don't touch
 
 fullname: Alan Houston
 jobtitle: Full Stack Web Developer
@@ -64,6 +64,6 @@ education:
 projects:
   - name: Armstrong Program
     desc: Workout tracker for the Armstrong Pull-up Program
-    url: https://armstrongprogram.herokuapp.com 
+    url: https://armstrongprogram.herokuapp.com
 
 ---
