@@ -1,9 +1,14 @@
 ---
 layout: default
 permalink: "/student-grievances/"
-title: "Student Grievance Policy | Austin Coding Academy"
-description: ""
-redirect_from: []
+austin:
+  title: "Student Grievance Policy | Austin Coding Academy"
+  description: ""
+  redirect_from: []
+lubbock:
+  title: "Student Grievance Policy | Lubbock Coding Academy"
+  description: ""
+  redirect_from: []
 ---
 <div class="container mw-850 mt-90 pt-1 pb-5">
   <div class="p-5 border">
@@ -40,28 +45,30 @@ redirect_from: []
       <li>(512) 827-8498</li>
       <li>clofton@austincodingacademy.com</li>
     </ul>
-    <p>
-      If the committee solution is not accepted by the student, the student is
-      able to contact:
-    </p>
-    <ul class="list-unstyled text-muted pl-5">
-      <li>Texas Workforce Commission</li>
-      <li>Career Schools and Colleges, Room 226T</li>
-      <li>101 East 15th Street</li>
-      <li>Austin, Texas 78778-0001</li>
-      <li>Phone: (512) 936-6959</li>
-      <li>http://csc.twc.state.tx.us/</li>
-    </ul>
-    <p>
-      Austin Coding Academy and it's affiliated schools operate with a certificate
-      of Approval from the Texas Workforce Commission. The TWC-assigned school
-      numbers are shown below. Our programs are approved by the Texas Workforce
-      Commission.
-    </p>
-    <p>School Names with their TWC-Assigned Numbers:</p>
-    <ul class="list-unstyled text-muted pl-5">
-      <li>North Austin Coding Academy - S5117</li>
-      <li>Austin Coding Academy - S4976</li>
-    </ul>
+    {% unless site.key == 'lubbock' %}
+      <p>
+        If the committee solution is not accepted by the student, the student is
+        able to contact:
+      </p>
+      <ul class="list-unstyled text-muted pl-5">
+        <li>Texas Workforce Commission</li>
+        <li>Career Schools and Colleges, Room 226T</li>
+        <li>101 East 15th Street</li>
+        <li>Austin, Texas 78778-0001</li>
+        <li>Phone: (512) 936-6959</li>
+        <li>http://csc.twc.state.tx.us/</li>
+      </ul>
+      <p>
+        {{ site.key | capitalize }} Coding Academy and its affiliated schools operate with a certificate
+        of Approval from the Texas Workforce Commission. The TWC-assigned school
+        numbers are shown below. Our programs are approved by the Texas Workforce
+        Commission.
+      </p>
+      <p>School Names with their TWC-Assigned Numbers:</p>
+      <ul class="list-unstyled text-muted pl-5">
+        <li>North Austin Coding Academy - S5117</li>
+        <li>Austin Coding Academy - S4976</li>
+      </ul>
+    {% endunless %}
   </div>
 </div>

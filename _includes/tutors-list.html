@@ -98,7 +98,7 @@
     Tutoring
   </h2>
   <h5 class="text-center mb-5 mx-auto">
-    Austin Coding Academy offers unlimited tutoring to students and graduates!
+    {{ site.key | capitalize }} Coding Academy offers unlimited tutoring to students and graduates!
   </h5>
   <div class="row mb-10 mt-6">
     <div class="col-md">
@@ -218,7 +218,7 @@
     </div>
   </div>
   {% endunless %}
-<div class="row">
+<div class="row d-flex justify-content-center">
   <!-- Tutors -->
   {% for tutor in include.tutors %}
     {% if include.marketing %}

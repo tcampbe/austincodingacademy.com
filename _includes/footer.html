@@ -10,26 +10,26 @@
           Find Us
         </h5>
         <div class="row">
+          <!-- Addresses -->
           <div class="col d-flex flex-column justify-content-around align-items-start">
-            <div class="my-2">
-              <a
-                href="https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641"
-              >
-                <span class="text-white hover-white"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>&nbsp;Downtown</span>
-              </a>
-            </div>
-            <div class="my-2">
-              <a
-                href="https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185"
-              >
-                <span class="text-white hover-white"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>&nbsp;North Austin</span>
-              </a>
-            </div>
+            {% for location in site.locations %}
+              <div class="my-2">
+                <a
+                  href="{{ location.url }}"
+                  class="d-flex text-white hover-white"
+                >
+                  <i class="fas fa-map-marker-alt pt-1" aria-hidden="true"></i>
+                  <div>&nbsp;{{ location.address }}</div>
+                </a>
+              </div>
+            {% endfor %}
           </div>
+          <!-- End addresses -->
           <div class="col d-flex flex-column justify-content-around align-items-start">
             {% include phone.html a_class="text-white hover-white my-2" icon_class="text-white hover-white fas fa-phone" %}
             <div class="my-2">
-              {% for item in site.menus.social %}
+              {% assign city = site.data.menus[site.key] %}
+              {% for item in city.social %}
                 <!-- htmllint preset="none" -->
                 <a href="{{ item.url }}" class="{{ item.class }}">
                   <span class="text-white hover-white display-7 fab fa-{{ item.title }}" aria-hidden="true">
@@ -49,7 +49,7 @@
         </h5>
         <!-- List Group -->
           <div class="row">
-            {% for item in site.menus.footer %}
+            {% for item in city.footer %}
               <div class="col-6 my-2">
                 <a
                   class="text-white hover-white"
@@ -65,7 +65,7 @@
     </div>
     <div class="text-center border-top bg-purple py-3 w-100">
       <p class="small text-white-70 mb-0">
-        © Austin Coding Academy 2019. All rights reserved.<br/>
+        © {{ site.key | capitalize }} Coding Academy 2019. All rights reserved.<br/>
         <a class="text-white" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> | <a class="text-white" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>
       </p>
     </div>
@@ -77,12 +77,12 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Austin Coding Academy",
+    "name": "{{ site.key | capitalize }} Coding Academy",
     "url": "{{site.url}}",
     "priceRange": "$2990",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{site.url}}/assets/images/logo-aca.png"
+      "url": "{{site.url}}/assets/images/logo-{{ site.acronym }}.png"
     },
     "image": {
       "@type": "ImageObject",
@@ -92,13 +92,13 @@
     "address": [
       {
         "@type": "PostalAddress",
-        "streetAddress": "701 Brazos St, Ste 1616",
-        "addressLocality": "Austin, TX 78701"
+        "streetAddress": "{{ site.locations[0].street }}",
+        "addressLocality": "{{ site.locations[0].locality }}"
       },
       {
         "@type": "PostalAddress",
-        "streetAddress": "314 E Highland Mall Blvd, Ste 114",
-        "addressLocality": "Austin, TX 78752"
+        "streetAddress": "{{ site.locations[1].street }}",
+        "addressLocality": "{{ site.locations[1].locality }}"
       }
     ]
   }

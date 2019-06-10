@@ -31,10 +31,11 @@ See https://github.com/adobe-type-tools/cmap-resources
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta
       name="description"
-      content="{{ page.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
+      content="{{ city.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
     />
     <title>
-      {{ page.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
+      {% assign city = page[site.key] %}
+      {{ city.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
     </title>
 
     <link rel="stylesheet" href="../assets/css/viewer.css">

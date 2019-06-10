@@ -1,14 +1,24 @@
 ---
 layout: default
 permalink: "/apply/"
-title: "Start Your Application | Apply Now at Austin Coding Academy"
-description: "Apply now to learn to code with Austin Coding Academy | Fill out your
-  short application to get on the path to a career in web development."
-form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
-redirect_from:
-- "/application"
+austin:
+  title: "Start Your Application | Apply Now at Austin Coding Academy"
+  description: "Apply now to learn to code with Austin Coding Academy | Fill out your
+    short application to get on the path to a career in web development."
+  form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
+  redirect_from:
+  - "/application"
+lubbock:
+  title: "Start Your Application | Apply Now at Lubbock Coding Academy"
+  description: "Apply now to learn to code with Lubbock Coding Academy | Fill out your
+    short application to get on the path to a career in web development."
+  form_guid: # 9d476e09-2737-4394-b7db-f0395a2d26d5
+  redirect_from:
+  - "/application"
 
 ---
+{% assign city = page[site.key] %}
+
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
     <h2 class="font-family-alt my-10 display-5 text-center">
@@ -16,15 +26,15 @@ redirect_from:
     </h2>
     <form
       class="d-flex justify-content-center"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{page.form_guid}}"
+      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{city.form_guid}}"
       method="POST"
       target="_top"
     >
       <div class="form-container">
         <input name="lifecyclestage" type="hidden" value="opportunity">
         <input name="filled_out_application" type="hidden" value="true">
-        <input name="page_name" type="hidden" value="{{page.title}}">
-        <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.url}}">
+        <input name="page_name" type="hidden" value="{{city.title}}">
+        <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.permalink}}">
         <input name="hutk" type="hidden" value="">
         <div class="mw-850 row">
           <!-- Input -->
@@ -174,7 +184,7 @@ redirect_from:
 
             <p class="small">
               Please note that you must be at least 18 years old by the time your
-              classes begin to apply to Austin Coding Academy. You also must have a
+              classes begin to apply to {{ site.key | capitalize }} Coding Academy. You also must have a
               High School Diploma or GED.
             </p>
 
@@ -334,32 +344,34 @@ redirect_from:
           <!-- End Input -->
 
           <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="campus-interest" class="form-label">
-                Which campus are you interested in?
-                <span class="text-red-a">*</span>
-              </label>
+          {% unless site.key == 'lubbock' %}
+            <div class="col-sm-6 mb-6">
+              <div class="js-form-message form-group">
+                <label for="campus-interest" class="form-label">
+                  Which campus are you interested in?
+                  <span class="text-red-a">*</span>
+                </label>
 
-              <select id="campus-interest" name="campus_interest_new" class="form-control">
-                <option value="" disabled selected>
-                  Select your answer
-                </option>
-                <option value="Austin">
-                  Downtown - Capital Factory (JavaScript only)
-                </option>
-                <option value="Austin - North">
-                  Central - Highland
-                </option>
-                <option value="Any campus">
-                  Either campus works!
-                </option>
-                <option value="Remote">
-                  Remote (Outside of Austin)
-                </option>
-              </select>
+                <select id="campus-interest" name="campus_interest_new" class="form-control">
+                  <option value="" disabled selected>
+                    Select your answer
+                  </option>
+                  <option value="Austin">
+                    Downtown - Capital Factory (JavaScript only)
+                  </option>
+                  <option value="Austin - North">
+                    Central - Highland
+                  </option>
+                  <option value="Any campus">
+                    Either campus works!
+                  </option>
+                  <option value="Remote">
+                    Remote (Outside of Austin)
+                  </option>
+                </select>
+              </div>
             </div>
-          </div>
+          {% endunless %}
           <!-- End Input -->
 
           <div class="col-sm-6 mb-4">

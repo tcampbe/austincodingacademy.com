@@ -1,7 +1,6 @@
 {% assign city = page[site.key] %}
 
 <div class="container mt-90 pt-1 pb-5">
-{% for city in page.city[site.key] %}
   <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-10">
     {{ city.heading }}
   </h2>
@@ -49,11 +48,11 @@
     <div class="py-10 col-12 d-md-none" id="bio-section"></div>
     <div class="col-12 col-md">
       <h2 class="d-none d-lg-block text-center font-family-alt font-weight-bold display-5 mb-5">
-        {{ city.heading }}
+        {{ site.acronym | upcase }} Instructors
       </h2>
       <p class="mx-5 p-5 rounded border shadow">
         <!-- htmllint preset="none" -->
-        <span class="d-block font-weight-bold text-center" [text]="selectedName">About {{ city.school }}</span>
+        <span class="d-block font-weight-bold text-center" [text]="selectedName">About {{ site.key | capitalize }}</span>
         <small class="d-block font-weight-bold text-center mb-3" [text]="selectedTitle"></small>
         <span [text]="selectedBio">
           {{ city.defaultBio }}
@@ -62,5 +61,4 @@
       </p>
     </div>
   </div>
-{% endfor %}
 </div>
