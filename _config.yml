@@ -5,6 +5,7 @@ hubspot_portal_id: 4009818
 phone: (512) 827-8498
 key: austin
 acronym: aca
+filters: true
 locations:
   - address: Downtown
     street: 701 Brazos St, Ste 1616

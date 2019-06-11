@@ -169,54 +169,56 @@
 
   <!-- Filters -->
   {% unless include.marketing %}
-  <h4 class="pt-5">Filters</h4>
-  <div class="d-flex flex-row justify-content-around pb-5">
-    <!-- Location -->
-    <div class="w-50">
-      <label class="form-label">
-        By Location:
-      </label>
-      <!-- htmllint preset="none" -->
-      <select
-        on="change:AMP.setState({ location: event.value })"
-        tabindex="0"
-        class="form-control"
-      >
-      <!-- htmllint preset="$previous" -->
-        <option value="any" selected>
-          Select Location
-        </option>
-        <option value="austinNorth">
-          North Campus
-        </option>
-        <option value="austinDowntown">
-          Downtown Campus
-        </option>
-      </select>
-    </div>
+    {% if include.filters %}
+      <h4 class="pt-5">Filters</h4>
+      <div class="d-flex flex-row justify-content-around pb-5">
+        <!-- Location -->
+        <div class="w-50">
+          <label class="form-label">
+            By Location:
+          </label>
+          <!-- htmllint preset="none" -->
+          <select
+            on="change:AMP.setState({ location: event.value })"
+            tabindex="0"
+            class="form-control"
+          >
+          <!-- htmllint preset="$previous" -->
+            <option value="any" selected>
+              Select Location
+            </option>
+            <option value="austinNorth">
+              North Campus
+            </option>
+            <option value="austinDowntown">
+              Downtown Campus
+            </option>
+          </select>
+        </div>
 
-    <!-- Date Picker -->
-    <div class="ml-1 w-50">
-      <label class="form-label">
-        By Date:
-      </label>
-      <!-- htmllint preset="none" -->
-      <amp-date-picker
-        mode="overlay"
-        layout="container"
-        tabindex="0"
-        on="select:AMP.setState({selectedDate: event.date})"
-        input-selector="[name=tutoringDate]"
-      >
-      <!-- htmllint preset="$previous" -->
-        <input type="text"
-          name="tutoringDate"
-          tabindex="0"
-          class="form-control"
-        />
-      </amp-date-picker>
-    </div>
-  </div>
+        <!-- Date Picker -->
+        <div class="ml-1 w-50">
+          <label class="form-label">
+            By Date:
+          </label>
+          <!-- htmllint preset="none" -->
+          <amp-date-picker
+            mode="overlay"
+            layout="container"
+            tabindex="0"
+            on="select:AMP.setState({selectedDate: event.date})"
+            input-selector="[name=tutoringDate]"
+          >
+          <!-- htmllint preset="$previous" -->
+            <input type="text"
+              name="tutoringDate"
+              tabindex="0"
+              class="form-control"
+            />
+          </amp-date-picker>
+        </div>
+      </div>
+    {% endif %}
   {% endunless %}
 <div class="row d-flex justify-content-center">
   <!-- Tutors -->
