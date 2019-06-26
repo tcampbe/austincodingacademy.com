@@ -99,6 +99,10 @@ body, p {
   color: #ffffff;
 }
 
+.text-grey {
+  color: #cccccc;
+}
+
 .link-underlined, .link-underlined:hover {
   text-decoration: underline;
 }

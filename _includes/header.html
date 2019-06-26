@@ -74,12 +74,12 @@
 
 <!-- htmllint preset="none" -->
 <header id="header"
-  class="fixed-top {% if color == 'transparent' %}u-header--bg-transparent {% else %}u-header--navbar-bg {% endif %}"
+  class="fixed-top {% if color == 'transparent' %}u-header--bg-transparent {% else %}u-header--navbar-bg {% endif %} w-100"
 >
   {% unless page.categories contains 'landing' %}
   <div id="header-background" class="bg-purple d-block position-absolute w-100 h-100"></div>
   {% endunless %}
-  <div class="u-header__section bg-{{ color | default: 'purple' }} p-2">
+  <div class="u-header__section bg-{{ color | default: 'purple' }} py-2">
   <!-- htmllint preset="$previous" -->
     <div class="container px-md-0 px-lg-3">
       <!-- Nav -->
