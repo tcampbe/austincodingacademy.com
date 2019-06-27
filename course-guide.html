@@ -1,10 +1,15 @@
 ---
 layout: default
 permalink: "/course-guide/"
-title: "Course Guide | Austin Coding Academy"
-description: ""
-redirect_from: []
----
+austin:
+  title: "Course Guide | Austin Coding Academy"
+  description: ""
+  redirect_from: []
+lubbock:
+  title: "Course Guide | Lubbock Coding Academy"
+  description: ""
+  redirect_from: []
+  ---
 <div class="container mt-90 space-2">
   <div class="card-deck d-flex justify-content-center">
     <!-- Card -->
@@ -14,7 +19,7 @@ redirect_from: []
           <h1>Thank You</h1>
           <p>
             <a
-              href="/web/viewer.html?file=../assets/documents/Austin-Coding-Academy-Course-Guide-Master.pdf"
+              href="/web/viewer.html?file=../assets/documents/{{ site.key | capitalize }}-Coding-Academy-Course-Guide-Master.pdf"
               target="_blank"
               rel="noopener"
             >

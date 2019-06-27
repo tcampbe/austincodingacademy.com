@@ -5,12 +5,13 @@
   <head>
     <meta charset="utf-8" />
     <title>
-      {{ page.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
+      {% assign city = page[site.key] %}
+      {{ city.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
     </title>
 
     <meta
       name="description"
-      content="{{ page.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
+      content="{{ city.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
     />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -37,12 +38,12 @@
     {% include google-tag-manager-head.html %}
 
     {% if site.baseurl == '/amp' %}
-      <link rel="canonical" href="{{site.url}}{{page.url}}">
+      <link rel="canonical" href="{{site.url}}{{city.url}}">
     {% else %}
-      <link rel="amphtml" href="{{site.url}}/amp{{page.url}}">
+      <link rel="amphtml" href="{{site.url}}/amp{{city.url}}">
     {% endif %}
 
-    {{ page.head }}
+    {{ city.head }}
   </head>
 
   <body>

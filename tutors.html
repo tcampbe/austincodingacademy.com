@@ -40,7 +40,7 @@ tutors:
     - Web 101
     - C# 221
     - ".Net 321"
-    limitation: 
+    limitation:
     email: eddiecrochet1994@gmail.com
     location:
     - any
@@ -68,7 +68,7 @@ tutors:
     - Web 101
     - JS 211
     - JS 311
-    limitation: 
+    limitation:
     email: andrew@austincodingacademy.com
     location:
     - any
@@ -96,7 +96,7 @@ tutors:
     - Web 101
     - JS 211
     - JS 311
-    limitation: 
+    limitation:
     email: sean.philippi@gmail.com
     location:
     - any
@@ -122,7 +122,7 @@ tutors:
     skills:
     - C# Students &amp; Grads
     - JS Grads Only
-    limitation: 
+    limitation:
     email: angomablaise@gmail.com
     location:
     - any
@@ -136,7 +136,7 @@ tutors:
     skills:
     - C# Students &amp; Grads
     - JS Grads Only
-    limitation: 
+    limitation:
     email: olamshin@gmail.com
     location:
     - any
@@ -190,7 +190,7 @@ tutors:
     - Web 101
     - JS 211
     - JS 311
-    limitation: 
+    limitation:
     email: eric@austincodingacademy.com
     location:
     - any
@@ -239,25 +239,25 @@ tutors:
     - ".Net 321"
     - C# 221
     - Web 101
-    email: 
+    email:
     location:
     - austinNorth
     calendar: https://acaappointment.as.me/?appointmentType=10179656
-    virtual: meet.google.com/vhu-ayvq-gbk
-    rocketchat: 
+    virtual:
+    rocketchat:
   - name: Isaiah
     id: ''
     skills:
     - ".Net 321"
     - C# 221
     - Web 101
-    email: 
+    email:
     location:
     - austinNorth
     calendar: https://acaappointment.as.me/?appointmentType=10179645
-    virtual: meet.google.com/sea-ywdd-nnt
-    rocketchat: 
+    virtual:
+    rocketchat:
 
 ---
 {% assign tutors=page.tutors[site.key] %}
-{% include tutors-list.html tutors=tutors %}
+{% include tutors-list.html tutors=tutors filters=site.filters %}

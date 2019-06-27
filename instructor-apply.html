@@ -1,12 +1,22 @@
 ---
 layout: default
 permalink: "/instructor-apply/"
-title: "Become an Instructor | Instructor Application - Austin Coding Academy"
-description: "Become a web development instructor with Austin Coding Academy | Teach
-  coding to the next generation of Austin web developers."
-form_guid: 83193d74-f3de-4679-91db-18ba46864fef
-redirect_from: []
+austin:
+  title: "Become an Instructor | Instructor Application - Austin Coding Academy"
+  description: "Become a web development instructor with Austin Coding Academy | Teach
+    coding to the next generation of Austin web developers."
+  form_guid: 83193d74-f3de-4679-91db-18ba46864fef
+  url: #
+  redirect_from: []
+lubbock:
+  title: "Become an Instructor | Instructor Application - Lubbock Coding Academy"
+  description: "Become a web development instructor with Lubbock Coding Academy | Teach
+    coding to the next generation of Lubbock web developers."
+  form_guid: # 83193d74-f3de-4679-91db-18ba46864fef
+  url: #
+  redirect_from: []
 ---
+{% assign city = page[site.key] %}
 <div class="mt-90 pt-1 b-5 container">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
     <h2 class="font-family-alt my-10 display-5 text-center">
@@ -15,13 +25,13 @@ redirect_from: []
     <form
       target="_top"
       class="d-flex justify-content-center"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{page.form_guid}}"
+      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{city.form_guid}}"
       method="POST"
     >
       <input name="lifecyclestage" type="hidden" value="opportunity">
       <input name="hutk" type="hidden" value="">
-      <input name="page_name" type="hidden" value="{{page.title}}">
-      <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.url}}">
+      <input name="city_name" type="hidden" value="{{city.title}}">
+      <input name="city_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{city.url}}">
       <div class="mw-850 row">
         <!-- Input -->
         <div class="col-sm-6 mb-6">

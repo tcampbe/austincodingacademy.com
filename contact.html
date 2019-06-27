@@ -1,11 +1,42 @@
 ---
 layout: default
 permalink: "/contact/"
-title: "Contact Austin Coding Academy | Programming Classes in Austin"
-description: "Questions, comments or concerns? From classes to financing to your next
-  steps, we’ll help us find the answers. Contact us today!"
-redirect_from: []
+austin:
+  title: "Contact Austin Coding Academy | Programming Classes in Austin"
+  description: "Questions, comments or concerns? From classes to financing to your next
+    steps, we’ll help you find the answers. Contact us today!"
+  redirect_from: []
+  locations:
+    - map_url: https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641
+      address:
+        name: Downtown
+        items:
+        - (Capital Factory)
+        - 701 Brazos St, Ste 1616,
+        - Austin, TX 78701
+    - map_url: https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185
+      address:
+        name: North Austin
+        items:
+        - (Highland)
+        - 314 E Highland Mall Blvd, Ste 114
+        - Austin, TX 78752
+lubbock:
+  title: "Contact Lubbock Coding Academy | Programming Classes in Lubbock"
+  description: "Questions, comments or concerns? From classes to financing to your next
+    steps, we’ll help you find the answers. Contact us today!"
+  redirect_from: []
+  locations:
+    - map_url: https://www.google.com/maps/place/South+Plains+College+Lubbock+Center/@33.5577634,-101.8559531,17z/data=!3m1!4b1!4m5!3m4!1s0x86fe6d1839084583:0x8bdaa2a3477f2bc8!8m2!3d33.5577634!4d-101.8537644
+      address:
+        name: South Plain College
+        items:
+        - (Lubbock Center)
+        - 3907 Avenue Q,
+        - Lubbock, TX 79412
 ---
+{% assign city = page[site.key] %}
+
 <div class="container mt-90 pt-1 pb-5">
   <h2 class="font-family-alt font-weight-bold text-center display-5 my-10">
     Contact Us
@@ -13,41 +44,33 @@ redirect_from: []
   <div class="row">
     <div class="col-sm-6 mb-4">
       <p class="mb-4">
+        <!-- htmllint preset="none" -->
         Have you stopped by our <a href="/faq">FAQ Page</a>? We might have already
+        <!-- htmllint preset="$previous" -->
         answered your question, but if not, don’t hesitate to fill out this form or
         give us a call 9am - 6pm Monday - Friday at
         {% include phone.html a_class="flex-nowrap" %}
       </p>
-      <a
-        class="text-default"
-        href="https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641"
-        target="_blank"
-        rel="noopener"
-      >
-        <ul class="fa-ul">
-          <li>
-            <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> Downtown
-          </li>
-          <li>(Capital Factory)</li>
-          <li>701 Brazos St, Ste 1616,</li>
-          <li>Austin, TX 78701</li>
-        </ul>
-      </a>
-      <a
-        class="text-default"
-        href="https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185"
-        target="_blank"
-        rel="noopener"
-      >
-        <ul class="fa-ul">
-          <li>
-            <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> North Austin
-          </li>
-          <li>(Highland)</li>
-          <li>314 E Highland Mall Blvd, Ste 114</li>
-          <li>Austin, TX 78752</li>
-        </ul>
-      </a>
+      {% for location in city.locations %}
+        <!-- htmllint preset="none" -->
+        <a
+          class="text-default"
+          href="{{ location.map_url }}"
+          target="_blank"
+          rel="noopener"
+        >
+        <!-- htmllint preset="$previous" -->
+          <ul class="fa-ul">
+            <li>
+              <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> {{ location.address.name }}
+            </li>
+            {% assign address = location.address %}
+            {% for item in address.items %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </a>
+      {% endfor %}
     </div>
     <div class="col-xs-12 col-sm-6">
       {% include contact-form.html %}

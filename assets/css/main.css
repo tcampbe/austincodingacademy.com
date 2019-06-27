@@ -99,6 +99,10 @@ body, p {
   color: #ffffff;
 }
 
+.text-grey {
+  color: #cccccc;
+}
+
 .link-underlined, .link-underlined:hover {
   text-decoration: underline;
 }
@@ -192,6 +196,10 @@ body, p {
 
 .display-8 {
   font-size: 1rem;
+}
+/* quote footer */
+.display-9 {
+  font-size: .9rem !important;
 }
 
 .display-small {
@@ -287,6 +295,16 @@ body, p {
 .bg-gradient {
   background: linear-gradient(to right, #21409a, #2d2f77);
 }
+/* new index page backgrounds */
+.bg-dark-primary {
+  background: url(/assets/images/WhyChooseUs.svg);
+  background-size: cover;
+}
+
+.bg-dark-secondary {
+  background: url(/assets/images/BGPattern.svg);
+  background-size: cover;
+}
 
 .border-blue {
   border: 2px solid #00b3d1;
@@ -361,6 +379,10 @@ body, p {
 
 .mw-600 {
   max-width: 600px;
+}
+
+.mw-450 {
+  max-width: 450px;
 }
 
 .mw-22r {

@@ -11,8 +11,9 @@ scroll_offset_for_header: 0.02
 amp_components: ['amp-animation', 'amp-position-observer']
 ---
 <!-- htmllint preset="none" -->
-<div id="hero-{{ page.hero }}" class="hero py-11">
-<!-- htmllint preset="$previous" -->
+<div
+  class="hero py-11" id="hero-{{ page.hero }}">
+  <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 px-1 p-md-0 text-white font-family-alt font-weight-bold display-responsive text-center">
     Austin Coding Academy Blog
   </h1>
@@ -27,35 +28,28 @@ amp_components: ['amp-animation', 'amp-position-observer']
   <div class="container my-10">
     <div class="row">
       {% for post in site.posts %}
-      <div class="col-12 col-md-6 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
-        <article class="card border-0">
-          <div class="card-body p-0">
-            <a href="{{ post.url }}">
-              <div class="mb-5">
-                <amp-img
-                  width="{{ post.width | default:345 }}px"
-                  height="{{ post.height | default:172.5 }}px"
-                  layout="responsive"
-                  class="img-fluid mw-100 rounded"
-                  src="{{ post.img }}"
-                  alt="{{blog.alt}}"
-                ></amp-img>
-              </div>
-            </a>
-            <small class="d-block text-secondary mb-1">
-              {{blog.date}}
-            </small>
-            <a href="{{ post.url }}">
-              <h2 class="h5">
-                {{ post.title }}
-              </h2>
-            </a>
-            <p>
-              {{ post.excerpt }}
-            </p>
-          </div>
-        </article>
-      </div>
+        <div class="col-12 col-md-6 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
+          <article class="card border-0">
+            <div class="card-body p-0">
+              <a href="{{ post.url }}">
+                <div class="mb-5">
+                  <amp-img width="{{ post.width | default:345 }}px" height="{{ post.height | default:172.5 }}px" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img }}" alt="{{blog.alt}}"></amp-img>
+                </div>
+              </a>
+              <small class="d-block text-secondary mb-1">
+                {{blog.date}}
+              </small>
+              <a href="{{ post.url }}">
+                <h2 class="h5">
+                  {{ post.title }}
+                </h2>
+              </a>
+              <p>
+                {{ post.excerpt }}
+              </p>
+            </div>
+          </article>
+        </div>
       {% endfor %}
 
     </div>

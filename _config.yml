@@ -4,6 +4,17 @@ form_url: "https://4runw89p71.execute-api.us-west-1.amazonaws.com/latest/hubspot
 hubspot_portal_id: 4009818
 phone: (512) 827-8498
 key: austin
+acronym: aca
+filters: true
+locations:
+  - address: Downtown
+    street: 701 Brazos St, Ste 1616
+    locality: Austin, TX 78701
+    url: https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641
+  - address: North Austin
+    street: 314 E Highland Mall Blvd, Ste 114
+    locality: Austin, TX 78752
+    url: https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185
 
 # Build settings
 markdown: kramdown
@@ -29,6 +40,7 @@ exclude:
   - package.json
   - yarn.lock
   - README.md
+  - '*.orig'
 
 permalink: /blog/:categories/:title/
 

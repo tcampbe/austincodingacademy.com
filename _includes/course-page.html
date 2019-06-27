@@ -134,7 +134,7 @@
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "{{ section.address }}",
-              "addressLocality": "Austin"
+              "addressLocality": "{{ site.key | capitalize }}"
             }
           }
         }{% unless section == course.sections.last %},{% endunless %}
@@ -142,10 +142,10 @@
       ],
       "provider": {
         "@type": "Organization",
-        "name": "Austin Coding Academy",
+        "name": "{{ site.key | capitalize }} Coding Academy",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{site.url}}/assets/images/logo-aca.png"
+          "url": "{{site.url}}/assets/images/logo-{{ site.acronym }}.png"
         }
       }
     }

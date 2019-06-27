@@ -9,13 +9,17 @@
     "lint-css": "stylelint ./**/*.css",
     "lint": "yarn lint-html && yarn lint-css",
     "test": "yarn lint",
+    "pa11y": "pa11y-ci",
     "images": "imagemin assets/images/* --out-dir=assets/images/",
     "favicon": "real-favicon generate favicon.json faviconData.json assets/favicons/ && npm run favicon-inject",
     "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
     "sitemap": "./node_modules/.bin/sitemap-generator https://austincodingacademy.com -v",
     "deploy": "yarn images && yarn favicon && yarn build",
+    "deploy-lubbock": "yarn images && yarn favicon && yarn build-lubbock",
     "cname": "echo \"preview.austincodingacademy.com\" >> _site/CNAME",
+    "cname-lubbock": "echo \"new.lubbockcodingacademy.com\" >> _site/CNAME",
     "preview": "yarn cname && cp -R .circleci/ _site/.circleci/ && gh-pages --repo \"git@github.com:AustinCodingAcademy/austincodingacademy.com.git\" --dotfiles -d ./_site",
+    "preview-lubbock": "yarn cname-lubbock && gh-pages --repo \"git@github.com:AustinCodingAcademy/new.lubbockcodingacademy.com.git\" --dotfiles -d ./_site",
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
     "build": "touch _includes/css.html && yarn css && yarn build-default && yarn build-amp",
     "build-default": "bundle exec jekyll build --config _config.yml",
@@ -63,5 +67,8 @@
         "_includes/css.html"
       ]
     }
+  },
+  "dependencies": {
+    "pa11y-ci": "^2.3.0"
   }
 }

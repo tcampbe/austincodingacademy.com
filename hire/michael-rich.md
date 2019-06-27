@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation ] # don't touch
+categories: [ hire, graduation, austin ] # don't touch
 
 fullname: Michael Rich
 jobtitle: Courier Driver
@@ -29,17 +29,17 @@ phone: (210) 328-7289
 
 workexperience:
   - company: Relay
-    logo: 
+    logo:
     dates: November 2018 - Present
     title: Contracted Courier Driver
     location: San Antonio, TX
   - company: Caremark/Cvs
-    logo: 
+    logo:
     dates: November 2017 - July 2018
-    title: Data Entry Pharmacy Tech 
+    title: Data Entry Pharmacy Tech
     location: San Antonio, TX
   - company: Walgreens
-    logo: 
+    logo:
     dates: March 2015 - July 2017
     title: Shift Leader
     location: San Antonio, TX
@@ -54,5 +54,5 @@ projects:
   - name: OurVolunteerNetwork.net
     desc: An easy to use hub for volunteers searching for work and for Organizations recruiting volunteers.
     url: https://mt-ctb-ourvolunteernetwork.azurewebsites.net
- 
+
 ---

@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation ] # don't touch
+categories: [ hire, graduation, austin ] # don't touch
 
 fullname: Katie Macaulay
 jobtitle: Web Developer

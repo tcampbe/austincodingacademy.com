@@ -1,17 +1,21 @@
 ---
 layout: default
 permalink: "/hire/"
-title: "Hire a Graduate | Austin Coding Academy"
-description: ""
+austin:
+  title: "Hire a Graduate | Austin Coding Academy"
+  description: ""
+lubbock:
+  title: "Hire a Graduate | Lubbock Coding Academy"
+  description: ""
 ---
 
 <div class="container mt-90 pt-1 pb-5">
   <h2 class="font-family-alt font-weight-bold text-center display-5 my-10">
-    Hire an Austin Coding Academy Graduate
+    Hire {% if site.key == 'lubbock' %} a {% else %} an {% endif %} {{ site.key | capitalize }} Coding Academy Graduate
   </h2>
   <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
     {% for page in site.pages %}
-      {% if page.categories contains 'hire' and page.projects[0].url and page.skills[0] == 'JavaScript' or page.skills[0] contains 'C#' or page.skills[0] contains '.NET' %}
+      {% if page.categories contains 'hire' and page.categories contains site.key and page.projects[0].url and page.skills[0] == 'JavaScript' or page.skills[0] contains 'C#' or page.skills[0] contains '.NET' %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card shadow">
             <div class="card-header">
@@ -32,7 +36,7 @@ description: ""
               </a>
               <div class="row">
                 <div class="col pr-0 d-flex flex-column align-items-center justify-content-around">
-                  {% assign skills = page.skills | slice:0, 3 %}
+                  {% assign skills = page.skills | slice: 0, 3 %}
                   {% for skill in skills %}
                     <div class="badge bg-purple text-white font-weight-medium rounded m-1 p-1">
                       {{skill}}

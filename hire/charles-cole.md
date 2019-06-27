@@ -1,6 +1,6 @@
 ---
 layout: resume # don't touch
-categories: [ hire ] # add "graduating" if you're part of the upcoming graduation event
+categories: [ hire, austin ] # add "graduating" if you're part of the upcoming graduation event
 
 fullname: Charles Cole
 
