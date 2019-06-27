@@ -7,7 +7,7 @@ redirect_from: []
 ---
 {% for _page in site.pages %}
   {% if _page.tutors %}
-    {% assign tutors = _page.tutors %}
+    {% assign tutors = _page.tutors[site.key] %}
   {% endif %}
 {% endfor %}
 
