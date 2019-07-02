@@ -97,7 +97,7 @@ austin:
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero d-flex flex-column align-items-center justify-content-center py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
-  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
+  <h1 class="mt-10 mb-3 text-white font-family-alt font-weight-bold display-4 text-center">
     {{ city.hero_title }}
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
@@ -142,14 +142,17 @@ austin:
         </div>
       {% endfor %}
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex bg-light align-items-center justify-content-around">
+      <h5>
+        <b>Set up a time to discuss your training needs.</b>
+      </h5>
       <a
-        class="btn bg-purple hover-white mx-auto my-4 btn-round text-white"
+        class="btn bg-purple hover-white my-4 btn-round text-white"
         href="https://acaappointment.as.me/schedule.php?calendarID=3049624"
         rel="noopener"
         target="_blank"
       >
-        Schedule a Meeting
+        Schedule a Call
       </a>
     </div>
   </section>
@@ -237,25 +240,12 @@ austin:
           <!-- Input -->
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="company" class="form-label">
-                Company <span class="text-red">*</span>
-              </label>
-
-              <input id="company" type="text" class="form-control" name="company" placeholder="Company" aria-label="Company"
-                required data-msg="Please enter the name of your company." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
               <label for="phone" class="form-label">
                 Phone <span class="text-red">*</span>
               </label>
 
               <input id="phone" type="phone" class="form-control" name="phone" placeholder="Phone" aria-label="Phone"
-                required data-msg="Please enter a valid phone number." data-error-class="u-has-error" data-success-class="u-has-success" />
+              required data-msg="Please enter a valid phone number." data-error-class="u-has-error" data-success-class="u-has-success" />
             </div>
           </div>
           <!-- End Input -->
@@ -268,47 +258,84 @@ austin:
               </label>
 
               <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="Your email address"
-                required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" />
+              required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" />
             </div>
           </div>
           <!-- End Input -->
 
           <!-- Input -->
-          <div class="col-sm-6 d-flex flex-column justify-content-end form-group">
-            <label class="form-label" for="best-describes">What training are you interested in? <span class="text-red">*</span></label>
-            <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
-              <option disabled selected value="">Select your answer</option>
-              <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
-              <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck</option>
-              <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
-              <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
-              <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
-              <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
-            </select>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="city" class="form-label">
+                City <span class="text-red">*</span>
+              </label>
+
+              <input id="city" type="text" class="form-control" name="city" placeholder="City" aria-label="City"
+                required data-msg="Please enter your city." data-error-class="u-has-error" data-success-class="u-has-success" />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="state" class="form-label">
+                State/Region <span class="text-red">*</span>
+              </label>
+
+              <input id="state" type="text" class="form-control" name="state" placeholder="State" aria-label="State"
+                required data-msg="Please enter your state." data-error-class="u-has-error" data-success-class="u-has-success" />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="current-role" class="form-label">
+                Current role <span class="text-red">*</span>
+              </label>
+
+              <input id="current-role" type="text" class="form-control" name="jobtitle" placeholder="Current role" aria-label="Current role"
+                required data-msg="Please enter the name of your current role." data-error-class="u-has-error" data-success-class="u-has-success" />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="company" class="form-label">
+                Company <span class="text-red">*</span>
+              </label>
+
+              <input id="company" type="text" class="form-control" name="company" placeholder="Company" aria-label="Company"
+                required data-msg="Please enter the name of your company." data-error-class="u-has-error" data-success-class="u-has-success" />
+            </div>
           </div>
           <!-- End Input -->
 
           <!-- Input -->
           <div class="js-form-message mb-4 col-sm-12">
-          <label for="message" class="form-label">
-            Message
-          </label>
+            <label for="message" class="form-label">
+              What technologies would you like to train for?
+            </label>
 
-          <div class="input-group">
-            <textarea
-              id="message"
-              class="form-control"
-              rows="4"
-              name="message"
-              placeholder="Enter your questions or comments here"
-              aria-label="Enter your questions or comments here"
-              data-msg="Please enter a message."
-              data-error-class="u-has-error"
-              data-success-class="u-has-success"
-            ></textarea>
+            <div class="input-group">
+              <textarea
+                id="message"
+                class="form-control"
+                rows="4"
+                name="what_technologies_would_you_like_to_train_for_"
+                placeholder="Enter your questions or comments here"
+                aria-label="Enter your questions or comments here"
+                data-msg="Please enter a message."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              ></textarea>
+            </div>
           </div>
-        </div>
-        <!-- End Input -->
+          <!-- End Input -->
 
           <!-- Input -->
           <div class="col-12 d-flex align-items-end justify-content-center form-group">
@@ -317,6 +344,7 @@ austin:
             </button>
           </div>
           <!-- End Input -->
+
           <div class="col-12 d-flex justify-content-center">
             {% include data-agreement.html %}
           </div>
