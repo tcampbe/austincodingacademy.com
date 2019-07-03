@@ -1,0 +1,160 @@
+<!-- htmllint preset="none" -->
+<a
+  class="btn btn-round mt-2 btn-outline-light {{ include.class }}"
+  on="tap:event-lightbox"
+  role="button"
+  tabindex="-1"
+>
+<!-- htmllint preset="$previous" -->
+  Request Info
+</a>
+
+<amp-lightbox
+  id="event-lightbox"
+  class="lightbox d-flex justify-content-center align-items-center"
+  layout="nodisplay"
+  scrollable
+  on="tap:event-lightbox.close"
+  tabindex="-1"
+  role="dialog"
+>
+  <form
+    class="d-flex mt-6 text-white justify-content-center align-items-center"
+    target="_top"
+    action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/b8fb52b4-28de-4133-920b-7f587724bb3d"
+    method="POST"
+    tabindex="-1"
+    on="tap:event-lightbox.open"
+    role="form"
+  >
+    <div class="form-container mw-850 px-5 px-lg-0">
+      <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
+      <input name="hs_lead_status" type="hidden" value="NEW">
+      <input name="page_name" type="hidden" value="{{page.title}}">
+      <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
+      <input name="hutk" type="hidden" value="">
+
+      <div class="row center-form">
+        <!-- Input -->
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="first-name-interest" class="form-label">
+              First Name <span class="text-red">*</span>
+            </label>
+
+            <input id="first-name-interest" type="text" class="form-control" name="firstname" placeholder="First name" aria-label="First name"
+              required data-msg="Please enter your first name." data-error-class="u-has-error" data-success-class="u-has-success" />
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="last-name" class="form-label">
+              Last Name <span class="text-red">*</span>
+            </label>
+
+            <input id="last-name" type="text" class="form-control" name="lastname" placeholder="Last name" aria-label="Last name"
+              required data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success" />
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="company" class="form-label">
+              Company <span class="text-red">*</span>
+            </label>
+
+            <input id="company" type="text" class="form-control" name="company" placeholder="Company" aria-label="Company"
+              required data-msg="Please enter the name of your company." data-error-class="u-has-error" data-success-class="u-has-success" />
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="phone" class="form-label">
+              Phone <span class="text-red">*</span>
+            </label>
+
+            <input id="phone" type="phone" class="form-control" name="phone" placeholder="Phone" aria-label="Phone"
+              required data-msg="Please enter a valid phone number." data-error-class="u-has-error" data-success-class="u-has-success" />
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="email" class="form-label">
+              Email <span class="text-red">*</span>
+            </label>
+
+            <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="Your email address"
+              required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" />
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-sm-6 d-flex flex-column justify-content-end form-group">
+          <label class="form-label" for="best-describes">What training are you interested in? <span class="text-red">*</span></label>
+          <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
+            <option disabled selected value="">Select your answer</option>
+            <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
+            <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck</option>
+            <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
+            <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
+            <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
+            <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
+          </select>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="js-form-message mb-4 col-sm-12">
+        <label for="message" class="form-label">
+          Message
+        </label>
+
+        <div class="input-group">
+          <textarea
+            id="message"
+            class="form-control"
+            rows="4"
+            name="message"
+            placeholder="Enter your questions or comments here"
+            aria-label="Enter your questions or comments here"
+            data-msg="Please enter a message."
+            data-error-class="u-has-error"
+            data-success-class="u-has-success"
+          ></textarea>
+        </div>
+      </div>
+      <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-12 d-flex align-items-end justify-content-center form-group">
+          <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
+            Submit
+          </button>
+        </div>
+        <!-- End Input -->
+        <div class="col-12 d-flex justify-content-center">
+          {% include data-agreement.html %}
+        </div>
+      </div>
+      <div class="text-center">
+        <div submit-error>
+          <template type="amp-mustache">
+            <p class="text-red">There was an error with your request. Please try again.</p>
+          </template>
+        </div>
+      </div>
+    </div>
+  </form>
+</amp-lightbox>

@@ -70,7 +70,20 @@ header:
   links:
     - title: Full Stack Web Development
       url: /web-development
+- weight: 2
+  title: Tuition
+  url: "/tuition"
+  links:
+    - weight: 1
+      title: Tuition
+      url: "/tuition"
+    - weight: 2
+      title: Financing
+      url: "/financing"
 - weight: 3
+  title: For Companies
+  url: "/corporate-training"
+- weight: 4
   title: About Us
   links:
     - weight: 1
@@ -88,17 +101,7 @@ header:
     - weight: 5
       title: Blog
       url: "https://austincodingacademy.com/blog/"
-- weight: 2
-  title: Tuition
-  url: "/tuition"
-  links:
-    - weight: 1
-      title: Tuition
-      url: "/tuition"
-    - weight: 2
-      title: Financing
-      url: "/financing"
-- weight: 4
+- weight: 5
   title: Student Portal
 # url: set in header.html
 - weight: 10
