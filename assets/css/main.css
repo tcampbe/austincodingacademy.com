@@ -355,6 +355,15 @@ body, p {
 
 /* CUSTOM BUTTONS */
 
+/* carousel nav buttons */
+.amp-carousel-button-prev {
+  background: white url(/assets/images/left_blue_arrow.svg);
+}
+
+.amp-carousel-button-next {
+  background: white url(/assets/images/right_blue_arrow.svg);
+}
+
 /* no longer used, but may be used again */
 .outlined-cta {
   min-width: 182px;
