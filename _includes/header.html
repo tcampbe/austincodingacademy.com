@@ -3,6 +3,7 @@
   {% assign color = 'transparent' %}
 {% endif %}
 {% unless page.categories contains 'landing' %}
+{% assign city = site.data.menus[site.key] %}}
 <amp-sidebar
   on="tap:sidebar.open"
   tabindex="-1"
@@ -11,7 +12,7 @@
   class="m-0 px-5 bg-dark d-flex d-md-none flex-column align-items-start justify-content-start"
   layout="nodisplay"
   side="right">
-  {% for item in site.menus.header %}
+  {% for item in city.header %}
     <div
       class="mt-4"
       on="tap:sidebar.open"
@@ -122,7 +123,7 @@
           class="collapse navbar-collapse u-header__navbar-collapse d-none d-md-flex"
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
-            {% for item in site.menus.header %}
+            {% for item in city.header %}
               {% if item.button %}
                 <!-- htmllint preset="none" -->
                 <a class="{{ item.button }} hover-white ml-5" href="{{ item.url }}">
