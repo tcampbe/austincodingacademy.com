@@ -12,6 +12,9 @@ austin:
       - weight: 1
         title: Tuition
         url: "/tuition"
+      - weight: 2
+        title: Financing
+        url: "/financing"
   - weight: 3
     title: For Companies
     url: "/corporate-training"
