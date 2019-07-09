@@ -15,6 +15,22 @@ description: Learn one of the most versatile &amp; common programming languages 
 hero_text: Learn the most popular language for making websites, web apps, games, animations,
   and mobile applications. In this track you'll learn front-end and back-end JavaScript,
   some of today's most versatile and sought-after skills.
+features_heading: Utilize the Benefits of Upskilling
+features_description: Develop talent, empower your team, save time on hiring, and more through Upskilling. Austin Coding Academy will work with you to
+  understand your training needs, develop curriculums, and train your employees in the technologies your business needs.
+features:
+  - heading: Develop Your Team’s Talent
+    text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
+    img_src: Develop.png
+  - heading: Empower Your Employees
+    text: Improve upward mobility, reward hard work, and improve company culture by allowing employees excelling in non-technical roles to train up.
+    img_src: Empower.png
+  - heading: Save Time on Hiring
+    text: Promote and upskill talent from within, instead of dealing with time-consuming and expensive candidate searches, onboarding, and turnover.
+    img_src: Time.png
+  - heading: Train for the Proficiencies You Need
+    text: Request custom training that focuses on the technologies that you need, or pick from popular technologies.
+    img_src: Train.png
 courses:
 - code: Web 101
   title: Intro to Web Development
@@ -146,41 +162,46 @@ courses:
 
   {% include observer-and-header-animation.html %}
 
-  <section id="curriculum" class="py-8 container-fluid">
-  <div class="row">
+  <section id="curriculum" class="pt-4 container-fluid">
+    <div class="row">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
       <div class="col-md-8 pl-5">
         <div class="mb-6 text-center mx-auto">
-          <h2 class="font-family-alt display-5 mb-7">
-            Our JavaScript Curriculum
+          <h2 class="font-family-alt display-5 d-flex flex-column">
+            What is Javascript?
           </h2>
-          <p class="mw-600 mx-auto">
-            Our full track is composed of 5 courses, designed to take you from
-            beginner to job-ready in under a year, without having to quit your day job
-            or mortgage your future. If you're looking to level-up in your current job,
-            you can also apply to take any of these courses individually.
-          </p>
-        </div>
-
-        <div class="pl-11 mx-auto mw-600">
-          {% for course in page.courses %}
-            <div class="my-6">
-              <h4 class="display-7 mb-3">
-                <!-- htmllint preset="none" -->
-                <i class="fas fa-circle text-{{page.trackColor}} mr-2"></i>
-                <!-- htmllint preset="$previous" -->
-                {{course.code}}: <b>{{course.title}}</b>
-              </h4>
-              <ul class="fa-ul">
-                {% for item in course.list %}
-                  <li class="mb-1"><span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{item}}</li>
-                {% endfor %}
-              </ul>
-            </div>
-          {% endfor %}
+          <h4 class="mb-7">(and why do we teach it?)</h4>
         </div>
       </div>
       <div class="d-none d-md-inline col-md-2"></div>
+    </div>
+  </section>
+
+  <section class="pb-4 pt-2 container">
+    <div class="row">
+      {% for item in page.features %}
+        <div class="col-md-6 mb-5">
+          <div class="row">
+            <div class="col-3 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+              <amp-img
+                width="80px"
+                height="80px"
+                layout="fixed"
+                src="/assets/images/{{ item.img_src }}"
+                alt=""
+              ></amp-img>
+            </div>
+            <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
+              <h5 class="font-weight-bold">
+                {{item.heading}}
+              </h5>
+              <p>
+                {{item.text}}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </section>
 
@@ -216,6 +237,8 @@ courses:
     </div>
   </section>
 
+
+  <!-- meta-data for SEO -->
   {% for course in page.courses %}
     <script type="application/ld+json">
     {
