@@ -265,42 +265,51 @@ courses:
   </section>
 
   <section class="pt-4 container-fluid">
-    <!-- courses start -->
-    {% for course in page.courses %}
-      <div class="border shadow mb-4 px-4 pt-2 d-flex align-items-center justify-content-between" style="border-radius: 8px;">
-        <div class="">
-          <div class="display-6 mb-4">
-            {{ course.code }}: {{ course.title }}
+    <div class="row d-flex flex-column align-items-center">
+      <div class="font-family-alt display-5 mb-7 mt-4">Our Javascript Curriculum</div>
+      <!-- courses start -->
+      {% for course in page.courses %}
+        <div class="w-75 border shadow mb-4 px-4 pt-2 mx-auto d-flex align-items-center justify-content-between rounded transition-3d-hover">
+          <div class="">
+            <div class="display-6 mb-4">
+              {{ course.code }}: {{ course.title }}
+            </div>
+            <div>
+              {% for item in course.list %}
+                <ul>
+                  <li>
+                    {{ item }}
+                  </li>
+                </ul>
+              {% endfor %}
+            </div>
           </div>
-          <div>
-            {% for item in course.list %}
-              <ul>
-                <li>
-                  {{ item }}
-                </li>
-              </ul>
-            {% endfor %}
+          <div class="display-5">
+            {% if course.title == page.courses[4].title %}
+              4 Weeks
+            {% else %}
+              8 Weeks
+            {% endif %}
           </div>
         </div>
-        <div class="display-5">
-          8 weeks
-        </div>
-      </div>
-    {% endfor %}
-    <!-- courses end -->
+      {% endfor %}
+      <!-- courses end -->
+    </div>
   </section>
 
-  <section class="d-flex flex-column justify-content-center text-center">
+  <section class="d-flex my-6 flex-column justify-content-center text-center">
     <div class="font-family-alt display-5">
       Job Placement
     </div>
-    <div class="margin-auto">
-      <span class="display-4 font-weight-bold">89%</span>
-      <p>of Austin Coding Academy graduates are employed as web deelopers within 6 months.</p>
-    </div>
-    <div class="margin-auto">
-      <span class="display-4 font-weight-bold">$62,247</span>
-      <p>The average salary for an entry level web developer in Austin, TX.</p>
+    <div class="row justify-content-center">
+      <div class="my-4 col-md-4 col-lg-4 col-sm-10">
+        <div class="display-4 font-weight-bold my-4">89%</div>
+        <p>of Austin Coding Academy graduates are employed as web deelopers within 6 months.</p>
+      </div>
+      <div class="my-4 col-md-4 col-lg-4 col-sm-10">
+        <div class="display-4 font-weight-bold my-4">$62,247</div>
+        <p>The average salary for an entry level web developer in Austin, TX.</p>
+      </div>
     </div>
   </section>
 
