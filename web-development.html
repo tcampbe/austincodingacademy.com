@@ -19,28 +19,28 @@ features_heading: Utilize the Benefits of Upskilling
 features_description: Develop talent, empower your team, save time on hiring, and more through Upskilling. Austin Coding Academy will work with you to
   understand your training needs, develop curriculums, and train your employees in the technologies your business needs.
 features:
-  - heading: Develop Your Team’s Talent
-    text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
-    img_src: Develop.png
-  - heading: Empower Your Employees
-    text: Improve upward mobility, reward hard work, and improve company culture by allowing employees excelling in non-technical roles to train up.
-    img_src: Empower.png
-  - heading: Save Time on Hiring
-    text: Promote and upskill talent from within, instead of dealing with time-consuming and expensive candidate searches, onboarding, and turnover.
-    img_src: Time.png
-  - heading: Train for the Proficiencies You Need
-    text: Request custom training that focuses on the technologies that you need, or pick from popular technologies.
-    img_src: Train.png
+- heading: Develop Your Team’s Talent
+  text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
+  img_src: Develop.png
+- heading: Empower Your Employees
+  text: Improve upward mobility, reward hard work, and improve company culture by allowing employees excelling in non-technical roles to train up.
+  img_src: Empower.png
+- heading: Save Time on Hiring
+  text: Promote and upskill talent from within, instead of dealing with time-consuming and expensive candidate searches, onboarding, and turnover.
+  img_src: Time.png
+- heading: Train for the Proficiencies You Need
+  text: Request custom training that focuses on the technologies that you need, or pick from popular technologies.
+  img_src: Train.png
 walkthrough:
-  - title: Flipped classroom
-    text: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum?
-    img_src:
-  - title: Pre-work
-    text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur iusto provident ad ratione enim quasi.
-    img_src:
-  - title: In-person help
-    text: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    img_src:
+- title: Flipped classroom
+  text: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum?
+  img_src:
+- title: Pre-work
+  text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur iusto provident ad ratione enim quasi.
+  img_src:
+- title: In-person help
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  img_src:
 courses:
 - code: Web 101
   title: Intro to Web Development
@@ -156,16 +156,80 @@ courses:
   - Networking opportunities and strategies
   - Job-finding strategies
 stories:
-  - student_name: Student Brian
-    img_src:
-    text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas cumque dolore voluptatum beatae? Et fugiat maxime porro, delectus laborum vel!
-  - student_name: Student Jessica
-    img_src:
-    text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ratione quas veritatis aspernatur?
-  - student_name: Student Bobby
-    img_src:
-    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa harum nam vitae amet repellat officia id illum, corrupti consequatur. Facere, ex.
-
+- student_name: Student Brian
+  img_src:
+  text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas cumque dolore voluptatum beatae? Et fugiat maxime porro, delectus laborum vel!
+- student_name: Student Jessica
+  img_src:
+  text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ratione quas veritatis aspernatur?
+- student_name: Student Bobby
+  img_src:
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa harum nam vitae amet repellat officia id illum, corrupti consequatur. Facere, ex.
+logos:
+- width: 1600px
+  height: 1600px
+  src: "/assets/images/logo-dell.png"
+  alt: Dell
+- width: 1590px
+  height: 561px
+  src: "/assets/images/logo-microsoft.png"
+  alt: Microsoft
+- width: 1720px
+  height: 360px
+  src: "/assets/images/logo-facebook.png"
+  alt: Facebook
+- width: 1280px
+  height: 320px
+  src: "/assets/images/logo-walmart.png"
+  alt: Walmart
+- width: 4460px
+  height: 1940px
+  src: "/assets/images/logo-ibm.png"
+  alt: IBM
+- width: 645px
+  height: 340px
+  src: "/assets/images/logo-dosh.png"
+  alt: Dosh
+- width: 400px
+  height: 400px
+  src: "/assets/images/logo-oracle.png"
+  alt: Oracle
+- width: 256px
+  height: 256px
+  src: "/assets/images/logo-adobe.png"
+  alt: Adobe
+- width: 960px
+  height: 142px
+  src: "/assets/images/logo-mooveit.png"
+  alt: Moove-It
+- width: 750px
+  height: 450px
+  src: "/assets/images/logo-pluralsight.png"
+  alt: Pluralsight
+- width: 1270px
+  height: 145px
+  src: "/assets/images/logo-flosports.png"
+  alt: Flosports
+- width: 400px
+  height: 282px
+  src: "/assets/images/logo-cloud-imperium.png"
+  alt: Cloud Imperium
+- width: 768px
+  height: 139px
+  src: "/assets/images/logo-silvercar.png"
+  alt: Silvercar
+- width: 300px
+  height: 127px
+  src: "/assets/images/logo-versasuite.png"
+  alt: VersaSuite
+- width: 960px
+  height: 560px
+  src: "/assets/images/logo-onespot.png"
+  alt: OneSpot
+- width: 914px
+  height: 408px
+  src: "/assets/images/logo-onit.png"
+  alt: Onit
 ---
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
@@ -275,10 +339,10 @@ stories:
 
   <section class="py-8 container-fluid">
     <div class="row d-flex flex-column align-items-center">
-      <div class="font-family-alt display-5 mb-7 mt-4">Course Structure</div>
+      <div class="font-family-alt display-5 mb-7 text-center mt-4">Course Structure</div>
       <!-- courses start -->
         {% for course in page.courses %}
-          <div class="w-75 border shadow mb-4 px-4 pt-2 mx-auto d-flex align-items-center justify-content-between rounded transition-3d-hover">
+          <div class="w-75 border shadow mb-4 px-4 pt-2 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded transition-3d-hover">
             <div class="">
               <div class="display-6 mb-4">
                 {{ course.code }}: {{ course.title }}
@@ -293,7 +357,7 @@ stories:
                 {% endfor %}
               </div>
             </div>
-            <div class="display-5">
+            <div class="display-6 card-body rounded border col-md-3 mb-4 text-center">
               {% if course.title == page.courses[4].title %}
                 4 Weeks
               {% else %}
@@ -312,11 +376,11 @@ stories:
     </div>
     <div class="row justify-content-center">
       <div class="my-4 col-md-4 col-lg-4 col-sm-10">
-        <div class="display-4 font-weight-bold my-4 font-family-alt">89%</div>
+        <div class="display-4 font-weight-bold my-2 font-family-alt">89%</div>
         <p>of Austin Coding Academy graduates are employed as web deelopers within 6 months.</p>
       </div>
       <div class="my-4 col-md-4 col-lg-4 col-sm-10">
-        <div class="display-4 font-weight-bold my-4 font-family-alt">$62,247</div>
+        <div class="display-4 font-weight-bold my-2 font-family-alt">$62,247</div>
         <p>The average salary for an entry level web developer in Austin, TX.</p>
       </div>
     </div>
@@ -327,7 +391,7 @@ stories:
       <div class="display-6 mb-2">
         Curriculum
       </div>
-      <p class="w-50">
+      <p class="w-sm-75 w-md-50 w-lg-50">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
         cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
       </p>
@@ -336,7 +400,7 @@ stories:
       <div class="display-6 mb-2">
         Director of Placement
       </div>
-      <p class="w-50">
+      <p class="w-sm-75 w-md-50 w-lg-50">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
         cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
       </p>
@@ -345,7 +409,7 @@ stories:
       <div class="display-6 mb-2">
         4-Week Job Placement Course
       </div>
-      <p class="w-50">
+      <p class="w-sm-75 w-md-50 w-lg-50">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
         cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
       </p>
@@ -354,7 +418,7 @@ stories:
       <div class="display-6 mb-2">
         Hiring Partnerships
       </div>
-      <p class="w-50">
+      <p class="w-sm-75 w-md-50 w-lg-50">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
         cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
       </p>
@@ -365,11 +429,11 @@ stories:
     <div class="display-6 text-center mb-4">
       Student Outcomes
     </div>
-    <div class="mx-auto d-flex justify-content-center" style="width: 80%">
+    <div class="mx-auto d-flex flex-wrap justify-content-center" style="width: 80%">
       {% for story in page.stories %}
         <div class="card my-2 mx-2" style="width: 18rem;">
           <amp-img
-            class="rounded border"
+            class="rounded border mb-2"
             layout="responsive"
             width="250"
             height="320"
@@ -377,7 +441,7 @@ stories:
             alt="Student Success"
           >
           </amp-img>
-          <div class="card-title">
+          <div class="card-title px-3">
             {{ story.student_name }}
           </div>
           <div class="card-body">
@@ -388,7 +452,7 @@ stories:
       {% endfor %}
     </div>
   </section>
-  {% include company-carousel.html %}
+  <!-- {% include company-carousel.html %} -->
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid {{page.hero}}-gradient text-white py-11">
   <!-- htmllint preset="$previous" -->
