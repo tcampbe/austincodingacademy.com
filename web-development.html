@@ -15,6 +15,7 @@ description: Learn one of the most versatile &amp; common programming languages 
 hero_text: Learn the most popular language for making websites, web apps, games, animations,
   and mobile applications. In this track you'll learn front-end and back-end JavaScript,
   some of today's most versatile and sought-after skills.
+next_start_date: Tuesday, August 27th
 features_heading: Utilize the Benefits of Upskilling
 features_description: Develop talent, empower your team, save time on hiring, and more through Upskilling. Austin Coding Academy will work with you to
   understand your training needs, develop curriculums, and train your employees in the technologies your business needs.
@@ -299,7 +300,9 @@ tuition_options:
     </div>
   </section>
 
-  <section id="curriculum" class="pt-6 pb-6 container-fluid {{page.hero}}-gradient text-white">
+  <!-- htmllint preset="none" -->
+  <section class="pt-6 pb-6 container-fluid {{page.hero}}-gradient text-white">
+  <!-- htmllint preset="$previous" -->
     <!-- walkthrough blocks -->
     <div class="row flex-column align-items-center">
       <div class="col-md-8 pl-5 d-flex">
@@ -310,7 +313,7 @@ tuition_options:
       <div class="container">
         <!-- 1  -->
         <div class="d-flex justify-content-between mb-2 p-4">
-          <div class="col-7 mr-4 text-white" id="text-block">
+          <div class="col-7 mr-4 text-white">
             <h4>
               {{ page.walkthrough[0].title }}
             </h4>
@@ -323,22 +326,22 @@ tuition_options:
         <!-- 2 -->
         <div class="d-flex justify-content-between mb-2 p-4">
           <amp-img class="col-5" src="{{ page.walkthrough[1].img_src }}" style="border: 1px solid black; height: 200px; width: 450px;"></amp-img>
-          <div class="col-7 text-right ml-4" id="text-block">
+          <div class="col-7 text-right ml-4">
             <h4>
               {{ page.walkthrough[1].title }}
             </h4>
-            <p class="">
+            <p>
               {{ page.walkthrough[1].text }}
             </p>
           </div>
         </div>
         <!-- 3 -->
         <div class="d-flex justify-content-between mb-2 p-4">
-          <div class="col-7 mr-4 text-white" id="text-block">
+          <div class="col-7 mr-4 text-white">
             <h4>
               {{ page.walkthrough[2].title }}
             </h4>
-            <p class="">
+            <p>
               {{ page.walkthrough[2].text }}
             </p>
           </div>
@@ -355,7 +358,7 @@ tuition_options:
       <!-- courses start -->
         {% for course in page.courses %}
           <div class="w-75 border shadow mb-4 px-4 pt-2 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded transition-3d-hover">
-            <div class="">
+            <div>
               <div class="display-6 mb-4">
                 {{ course.code }}: {{ course.title }}
               </div>
@@ -475,7 +478,7 @@ tuition_options:
     </div>
   </section>
 
-  <!-- * {% include company-carousel.html %} -->
+  <!-- {% include company-carousel.html %} -->
 
   <section class="container">
     {% for option in page.tuition_options %}
@@ -509,6 +512,22 @@ tuition_options:
         </div>
       </div>
     {% endfor %}
+  </section>
+
+  <section class="container">
+    <div class="card shadow w-75 w-sm-50 w-md-50 w-lg-50 mx-auto">
+      <div class="card-body">
+        <div class="display-7 pt-4 text-center">
+          Join us on our upcoming start date.
+        </div>
+        <div class="text-center display-6 py-4">
+          {{ page.next_start_date }}
+        </div>
+        <div class="text-center py-4">
+          {% include btn-apply.html %}
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="contact" class="container-fluid py-11">

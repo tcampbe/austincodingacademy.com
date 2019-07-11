@@ -3,26 +3,26 @@
     <h2 class="font-family-alt font-weight-bold text-center display-6">
       Our Graduates Are Working At
     </h2>
-    <amp-carousel
-      width="600px"
-      height="300px"
-      type="slides"
-      autoplay
-      controls="false"
-      delay="1500"
-    >
-      {% for logo in page.logos %}
-        <div class="d-flex align-items-center justify-content-center">
-          <amp-img
-            width="{{ logo.width }}"
-            height="{{ logo.height }}"
-            layout="responsive"
-            class="w-100 h-auto mw-14r"
-            src="{{ logo.src }}"
-            alt="{{ logo.alt }}"
-          ></amp-img>
-        </div>
-      {% endfor %}
-    </amp-carousel>
-  </div>
-</section>
+      <amp-carousel
+        width="600px"
+        height="300px"
+        type="slides"
+        autoplay
+        controls="false"
+        delay="1500"
+      >
+        {% for logo in page.logos %}
+          <div class="d-flex align-items-center justify-content-center">
+            <amp-img
+              width="{{ logo.width }}"
+              height="{{ logo.height }}"
+              layout="responsive"
+              class="w-100 h-auto mw-14r"
+              src="{{ logo.src }}"
+              alt="{{ logo.alt }}"
+            ></amp-img>
+          </div>
+        {% endfor %}
+      </amp-carousel>
+    </div>
+  </section>
