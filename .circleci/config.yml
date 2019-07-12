@@ -52,8 +52,8 @@ jobs:
               yarn deploy
               sudo apt install rsync
               rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
-              yarn predeploy-lubbock
-              yarn deploy-lubbock
+              # yarn predeploy-lubbock
+              # yarn deploy-lubbock
               fi
 
 workflows:
