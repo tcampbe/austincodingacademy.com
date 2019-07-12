@@ -40,9 +40,9 @@ jobs:
               if [ "${CIRCLE_BRANCH}" == "preview" ]; then
               git config --global user.email "kevin@austincodingacademy.com"
               git config --global user.name "Kevin Colten"
-              yarn deploy
+              yarn predeploy
               yarn preview
-              yarn deploy-lubbock
+              yarn predeploy-lubbock
               yarn preview-lubbock
               fi
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
@@ -52,6 +52,8 @@ jobs:
               yarn deploy
               sudo apt install rsync
               rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
+              yarn predeploy-lubbock
+              yarn deploy-lubbock
               fi
 
 workflows:

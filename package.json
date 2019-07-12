@@ -14,14 +14,16 @@
     "favicon": "real-favicon generate favicon.json faviconData.json assets/favicons/ && npm run favicon-inject",
     "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
     "sitemap": "./node_modules/.bin/sitemap-generator https://austincodingacademy.com -v",
-    "deploy": "yarn images && yarn favicon && yarn build",
-    "deploy-lubbock": "yarn images && yarn favicon && yarn build-lubbock",
+    "predeploy": "yarn images && yarn favicon && yarn build",
+    "predeploy-lubbock": "yarn images && yarn favicon && yarn build-lubbock",
+    "deploy-lubbock": "yarn cname-lubbock && gh-pages --repo \"git@github.com:AustinCodingAcademy/lubbockcodingacademy.com.git\" --dotfiles -d ./_site",
     "cname": "echo \"preview.austincodingacademy.com\" >> _site/CNAME",
-    "cname-lubbock": "echo \"new.lubbockcodingacademy.com\" >> _site/CNAME",
+    "cname-lubbock": "echo \"lubbockcodingacademy.com\" >> _site/CNAME",
+    "cname-preview-lubbock": "echo \"preview.lubbockcodingacademy.com\" >> _site/CNAME",
     "preview": "yarn cname && cp -R .circleci/ _site/.circleci/ && gh-pages --repo \"git@github.com:AustinCodingAcademy/austincodingacademy.com.git\" --dotfiles -d ./_site",
-    "preview-lubbock": "yarn cname-lubbock && gh-pages --repo \"git@github.com:AustinCodingAcademy/new.lubbockcodingacademy.com.git\" --dotfiles -d ./_site",
+    "preview-lubbock": "yarn cname-preview-lubbock && gh-pages --repo \"git@github.com:AustinCodingAcademy/preview.lubbockcodingacademy.com.git\" --dotfiles -d ./_site",
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
-    "build": "touch _includes/css.html && yarn css && yarn build-default && yarn build-amp",
+    "build": "touch _includes/css.html && yarn css && yarn build-lubbock && yarn build-amp",
     "build-default": "bundle exec jekyll build --config _config.yml",
     "build-lubbock": "bundle exec jekyll build --config _config.yml,_config_lubbock.yml",
     "build-amp": "bundle exec jekyll build --config '_config.yml,_amp.yml' --destination _site/amp/",
@@ -55,7 +57,7 @@
     "stylelint-config-recommended": "^2.1.0"
   },
   "watch": {
-    "build": {
+    "build-lubbock": {
       "patterns": [
         "./*"
       ],

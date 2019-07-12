@@ -1,6 +1,6 @@
 
 <div class="row d-flex flex-wrap justify-content-around justify-content-sm-center">
-  {% for event in site.data.events limit:3 %}
+  {% for event in site.data.events[site.key] limit:3 %}
     <div class="col-12 col-md card card-frame shadow-black text-center m-2 mw-22r">
       <!-- Card -->
       <div class="card-body pt-6 pb-3">
@@ -29,7 +29,7 @@
           target="_blank"
           role="button"
         >
-          View Details <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+          View Details
         </a>
       </div>
       <!-- End Card -->

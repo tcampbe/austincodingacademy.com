@@ -20,7 +20,7 @@
     >
       {% if item.button or item.links == nil %}
         <!-- htmllint preset="none" -->
-        <a class="{{ item.button }} hover-white ml-5" href="{{ item.url }}">
+        <a class="{{ item.button }} hover-white ml-5" href="{{ item.url | liquify }}">
         <!-- htmllint preset="$previous" -->
           <span class="text-white hover-white">
             {{ item.title }}
