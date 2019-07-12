@@ -19,7 +19,7 @@
     "cname": "echo \"preview.$KEYcodingacademy.com\" >> _site/CNAME",
     "preview": "yarn cname && cp -R .circleci/ _site/.circleci/ && gh-pages --repo \"git@github.com:AustinCodingAcademy/preview.$KEYcodingacademy.com.git\" --dotfiles -d ./_site",
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
-    "build": "touch _includes/css.html && yarn css && yarn jekyll-build && yarn build-amp",
+    "build": "touch _includes/css.html && yarn css && yarn jekyll-build && yarn jekyll-build-amp",
     "jekyll-build": "bundle exec jekyll build --config _config.yml,_config_$KEY.yml",
     "jekyll-build-amp": "bundle exec jekyll build --config '_config.yml,_config_$KEY.yml,_amp.yml' --destination _site/amp/",
     "css": "yarn jekyll-build && node postcss.js && echo '<!-- htmllint preset=\"none\" --><style amp-custom>' > _includes/css.html && cat assets/css/main.min.css >> _includes/css.html && echo '</style><!-- htmllint preset=\"$previous\" -->' >> _includes/css.html"
