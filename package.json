@@ -22,7 +22,7 @@
     "build": "touch _includes/css.html && yarn css && yarn jekyll-build && yarn jekyll-build-amp",
     "jekyll-build": "bundle exec jekyll build --config _config.yml,_config_$KEY.yml",
     "jekyll-build-amp": "bundle exec jekyll build --config _config.yml,_config_$KEY.yml,_amp.yml --destination _site/amp/",
-    "css": "yarn jekyll-build && node postcss.js && echo '<!-- htmllint preset=\"none\" --><style amp-custom>' > _includes/css.html && cat assets/css/main.min.css >> _includes/css.html && echo '</style><!-- htmllint preset=\"$previous\" -->' >> _includes/css.html"
+    "css": "yarn jekyll-build && node _javascripts/postcss.js && echo '<!-- htmllint preset=\"none\" --><style amp-custom>' > _includes/css.html && cat assets/css/main.min.css >> _includes/css.html && echo '</style><!-- htmllint preset=\"$previous\" -->' >> _includes/css.html"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.7.2",
