@@ -41,6 +41,7 @@ exclude:
   - yarn.lock
   - README.md
   - '*.orig'
+  - '*.json'
 
 permalink: /blog/:categories/:title/
 
