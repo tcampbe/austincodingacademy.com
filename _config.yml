@@ -42,7 +42,6 @@ exclude:
   - README.md
   - '*.orig'
   - '*.json'
-  - '*.js'
 
 permalink: /blog/:categories/:title/
 

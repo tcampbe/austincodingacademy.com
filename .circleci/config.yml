@@ -32,8 +32,8 @@ jobs:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       - run: yarn test
-      - run: node events.js
-      - run: node tutoring.js
+      - run: node _javascripts/events.js
+      - run: node _javascripts/tutoring.js
       - deploy:
           name: Deploy
           command: |
