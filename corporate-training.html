@@ -6,16 +6,16 @@ description: ""
 scroll_offset_for_header:
 hero: corporate
 amp_components: ['amp-animation', 'amp-position-observer', 'amp-lightbox']
+hero_title: Train Your Talent – Your Way.
+hero_text: Upskill your team with our custom-built training. Maybe conventions have changed, you’re opening a new department, or pivoting.
+  We create curriculum based on specific gaps in your employees skills, and deliver it in the way that suits you best.
+heading: Corporate Training
+subheading:
+description:
+features_heading: Utilize the Benefits of Upskilling
+features_description: Develop talent, empower your team, save time on hiring, and more through Upskilling. {{ site.key | capitalize }} Coding Academy will work with you to
+  understand your training needs, develop curriculums, and train your employees in the technologies your business needs.
 austin:
-  hero_title: Train Your Talent – Your Way.
-  hero_text: Upskill your team with our custom-built training. Maybe conventions have changed, you’re opening a new department, or pivoting.
-    We create curriculum based on specific gaps in your employees skills, and deliver it in the way that suits you best.
-  heading: Corporate Training
-  subheading:
-  description:
-  features_heading: Utilize the Benefits of Upskilling
-  features_description: Develop talent, empower your team, save time on hiring, and more through Upskilling. Austin Coding Academy will work with you to
-    understand your training needs, develop curriculums, and train your employees in the technologies your business needs.
   features:
     - heading: Develop Your Team’s Talent
       text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
@@ -64,31 +64,55 @@ austin:
       - RESTful APIs
       - Web VR
       - Spring/Spring Boot
-  lubbock:
-    heading: Corporate Training
-    subheading:
-    sections:
-      - title:
-        description:
-        header:
-        bullets:
-        -
-        -
-        -
-      - title:
-        description:
-        header:
-        bullets:
-        -
-        -
-        -
-      - title:
-        description:
-        header:
-        bullets:
-        -
-        -
-        -
+lubbock:
+  features:
+    - heading: Develop Your Team’s Talent
+      text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
+      img_src: Develop.png
+    - heading: Empower Your Employees
+      text: Improve upward mobility, reward hard work, and improve company culture by allowing employees excelling in non-technical roles to train up.
+      img_src: Empower.png
+    - heading: Save Time on Hiring
+      text: Promote and upskill talent from within, instead of dealing with time-consuming and expensive candidate searches, onboarding, and turnover.
+      img_src: Time.png
+    - heading: Train for the Proficiencies You Need
+      text: Request custom training that focuses on the technologies that you need, or pick from popular technologies.
+      img_src: Train.png
+  sections_heading: Our Training Offerings
+  sections:
+    - title: Custom Training (flexible lengths)
+      description: "Lubbock Coding Academy offers a wide variety of technology and skill training. Want your
+        developer team to learn React Native? Reskill some of your helpdesk team to learn development? ACA
+        can build the curriculum, and structure of delivery, that works for your team."
+      header: "We’ve delivered training in:"
+      bullets:
+      - React/React Native
+      - C#/.NET
+      - Java/Spring Boot
+      - Serverless backend
+      - Many more…
+    - title: Seminars (8 weeks)
+      description: "Companies upskilling 1-5 employees at a time find our seminars to be a perfect fit. Affordable,
+        targeting, and scheduled outside of work hours, you can get your employees the training they need without
+        disrupting the work week. Our 8-week seminars are designed to leave participants with a solid understanding
+        of the technology and projects to prove it!"
+      header: "Our current offerings:"
+      bullets:
+      - C#
+      - .Net framework
+      - Product design
+      - Wordpress
+      - Web VR
+    - title: Intensives (1 - 3 days)
+      description: "Don’t have time for an 8-week seminar? For those single technologies your team needs to learn quick,
+        ACA has put together all you need to know to get started producing."
+      header: "Some of our one-off intensives include:"
+      bullets:
+      - React Native
+      - Selenium Testing
+      - RESTful APIs
+      - Web VR
+      - Spring/Spring Boot
 
 ---
 
@@ -98,10 +122,10 @@ austin:
 <div id="hero-{{ page.hero }}" class="hero d-flex flex-column align-items-center justify-content-center py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-3 text-white font-family-alt font-weight-bold display-4 text-center">
-    {{ city.hero_title }}
+    {{ page.hero_title }}
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
-    {{ city.hero_text }}
+    {{ page.hero_text }}
   </p>
   {% include corporate-form.html class="btn-outline-light" %}
 </div>
@@ -112,10 +136,10 @@ austin:
     <div class="row">
       <div class="mt-2 mb-6 text-center col-12">
         <h2 class="font-family-alt display-5 pb-4">
-          {{ city.features_heading }}
+          {{ page.features_heading }}
         </h2>
         <p class="px-4 mx-auto">
-          {{ city.features_description }}
+          {{ page.features_description }}
         </p>
       </div>
       {% for item in city.features %}

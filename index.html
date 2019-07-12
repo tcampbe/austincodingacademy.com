@@ -77,8 +77,8 @@ austin:
   redirect_from: []
   nextStartDate: April 2nd
   heading: Change Your Life With a New Career
-  subheading: Part-time coding classes taught by full-time developers here in Austin, TX
-  appt_type: 1406673
+  subheading: Par't-time coding classes taught by full-time developers here in Austin, TX
+  schedule_href: "https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
   phone: 5128278498
   features:
   - heading: Flexible Schedule
@@ -139,7 +139,7 @@ lubbock:
   nextStartDate: July 22nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers in Lubbock, TX
-  appt_type:
+  schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
   phone: 8069055021
   features:
   - heading: Flexible Schedule
@@ -188,7 +188,6 @@ lubbock:
     name: Greg Swan
     position: Web Developer, Kinetic Theory
   form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
-
 ---
 
 {% assign city = page[site.key] %}
@@ -251,7 +250,7 @@ lubbock:
         </a>
         <a
           class="btn cta-gradient text-white hover-white btn-round mr-2 d-none d-sm-block"
-          href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType={{ city.appt_type }}"
+          href="{{ city.schedule_href }}}"
           target="_blank"
           rel="noopener">
           Schedule a Q&A
@@ -265,7 +264,7 @@ lubbock:
 <main>
   {% include observer-and-header-animation.html %}
 
-  <section class="py-8 container-fluid px-lg-3">
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
     <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
       We Are Committed To Your Success
     </h2>
@@ -283,7 +282,7 @@ lubbock:
     </div>
   </section>
 
-  <section class="py-8 container-fluid px-lg-3 bg-textured-1 text-white">
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 bg-textured-1 text-white">
     <div class="mx-auto mw-850">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Why Choose Us?
@@ -336,75 +335,79 @@ lubbock:
     </div>
   </section>
   <!-- Course Guide Form -->
-  <section class="py-8 container-fluid px-lg-3">
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
     {% include course-guide-form.html %}
   </section>
 
-  <section class="py-8 bg-textured-3">
-    <h2 class="font-family-alt font-weight-bold text-center text-white display-5 mb-5">
-      Student Success Stories
-    </h2>
-    <!-- begin student-stories -->
-    <div class="container">
-      <div class="row">
-        {% for story in city.stories %}
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <div class="mt-4">
-              <amp-iframe
-                src="{{ story.src }}"
-                width="266.656px"
-                height="150px"
-                layout="responsive"
-                sandbox="allow-scripts allow-same-origin"
-                frameborder="0"
-                allowfullscreen
-                title="{{ story.title }}"
-              >
-              </amp-iframe>
-            </div>
-            <div class="mt-3 d-flex justify-content-center">
-              <blockquote class="blockquote w-75">
-                <p class="mb-0 text-white">
-                  {{ story.quote }}
-                </p>
-                <footer class="text-grey blockquote-footer display-9 text-right mt-1">{{ story.name }}, <cite title="Title">{{ story.position }}</cite></footer>
-              </blockquote>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  <section class="pt-8 pb-4">
-    <!-- end student-stories -->
-    <div id="logo-section" class="d-flex flex-column justify-content-center align-items-center">
-      <h2 class="font-family-alt font-weight-bold text-center display-6">
-        Our Graduates Are Working At
+  {% if site.key == 'austin' %}
+    <section class="py-8 bg-textured-3">
+      <h2 class="font-family-alt font-weight-bold text-center text-white display-5 mb-5">
+        Student Success Stories
       </h2>
-
-        <amp-carousel
-          width="600px"
-          height="300px"
-          type="slides"
-          autoplay
-          controls="false"
-          delay="1500"
-        >
-          {% for logo in page.logos %}
-            <div class="d-flex align-items-center justify-content-center">
-              <amp-img
-                width="{{ logo.width }}"
-                height="{{ logo.height }}"
-                layout="responsive"
-                class="w-100 h-auto mw-14r"
-                src="{{ logo.src }}"
-                alt="{{ logo.alt }}"
-              ></amp-img>
+      <!-- begin student-stories -->
+      <div class="container">
+        <div class="row">
+          {% for story in city.stories %}
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="mt-4">
+                <amp-iframe
+                  src="{{ story.src }}"
+                  width="266.656px"
+                  height="150px"
+                  layout="responsive"
+                  sandbox="allow-scripts allow-same-origin"
+                  frameborder="0"
+                  allowfullscreen
+                  title="{{ story.title }}"
+                >
+                </amp-iframe>
+              </div>
+              <div class="mt-3 d-flex justify-content-center">
+                <blockquote class="blockquote w-75">
+                  <p class="mb-0 text-white">
+                    {{ story.quote }}
+                  </p>
+                  <footer class="text-grey blockquote-footer display-9 text-right mt-1">{{ story.name }}, <cite title="Title">{{ story.position }}</cite></footer>
+                </blockquote>
+              </div>
             </div>
           {% endfor %}
-        </amp-carousel>
+        </div>
       </div>
-  </section>
+    </section>
+    <!-- end student-stories -->
+    <!-- begin company carousel -->
+    <section class="pt-8 pb-4">
+      <div id="logo-section" class="d-flex flex-column justify-content-center align-items-center">
+        <h2 class="font-family-alt font-weight-bold text-center display-6">
+          Our Graduates Are Working At
+        </h2>
+
+          <amp-carousel
+            width="600px"
+            height="300px"
+            type="slides"
+            autoplay
+            controls="false"
+            delay="1500"
+          >
+            {% for logo in page.logos %}
+              <div class="d-flex align-items-center justify-content-center">
+                <amp-img
+                  width="{{ logo.width }}"
+                  height="{{ logo.height }}"
+                  layout="responsive"
+                  class="w-100 h-auto mw-14r"
+                  src="{{ logo.src }}"
+                  alt="{{ logo.alt }}"
+                ></amp-img>
+              </div>
+            {% endfor %}
+          </amp-carousel>
+        </div>
+    </section>
+    <!-- end company carousel -->
+  {% endif %}
   <section class="py-8 bg-textured-2 text-white">
     <div class="container d-flex justify-content-center flex-column">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
@@ -413,7 +416,7 @@ lubbock:
       {% include events.html %}
     </div>
   </section>
-  <section class="col-xs-11 col-sm-11 mx-auto py-8">
+  <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5">
     <div class="container mw-600">
       <h3 class="font-family-alt font-weight-bold text-center display-5">
         Have More Questions?
