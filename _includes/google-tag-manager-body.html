@@ -1,9 +1,9 @@
 <!-- htmllint preset="none" -->
 {% if site.baseurl == '/amp' %}
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-KZ9XHND&gtm.url={{site.url}}{{site.baseurl}}{{page.url}}" data-credentials="include"></amp-analytics>
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{site.google_tag_manager_amp}}&gtm.url={{site.url}}{{site.baseurl}}{{page.url}}" data-credentials="include"></amp-analytics>
 {% else %}
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBH7GK"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{site.google_tag_manager}}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 {% endif %}

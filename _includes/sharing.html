@@ -5,12 +5,12 @@
 {% assign image = page.img | default: '/assets/images/logo-{{ site.acronym }}.png'%}
 <meta property="og:image" content="{{ site.url | append: image }}">
 <meta property="og:description" content="{{ page.description | liquify }}">
-<meta property="og:site_name" content="Austin Coding Academy" />
+<meta property="og:site_name" content="{{ site.key | capitalize }} Coding Academy" />
 <meta property="og:locale" content="en_US" />
 <!-- TWITTER TAGS -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@AustinCoding">
-<meta name="twitter:creator" content="@AustinCoding">
+<meta name="twitter:site" content="{{site.twitter}}">
+<meta name="twitter:creator" content="{{site.twitter}}">
 <meta name="twitter:title" content="{{ page.title | liquify }}">
 <meta name="twitter:description" content="{{ page.description | liquify }}">
 <meta name="twitter:image" content="{{ site.url | append: image }}">
