@@ -1,4 +1,42 @@
 austin:
+  header:
+  - weight: 1
+    title: Courses
+    links:
+      - title: Full Stack Web Development
+        url: "/web-development"
+  - weight: 2
+    title: Tuition
+    url: "/tuition"
+    links:
+      - weight: 1
+        title: Tuition
+        url: "/tuition"
+  - weight: 3
+    title: For Companies
+    url: "/corporate-training"
+  - weight: 4
+    title: About Us
+    links:
+      - weight: 1
+        title: FAQ
+        url: "/faq"
+      - weight: 3
+        title: Our Team
+        url: "/team"
+      - weight: 4
+        title: Contact Us
+        url: "/contact"
+      - weight: 5
+        title: Blog
+        url: "https://austincodingacademy.com/blog/"
+  - weight: 5
+    title: Student Portal
+  # url: set in header.html
+  - weight: 10
+    title: Apply
+    url: "/apply"
+    button: btn btn-round text-white cta-gradient py-1 px-6
   social:
   - weight: 3
     title: instagram
@@ -32,6 +70,35 @@ austin:
     url: "/student-grievances"
 
 lubbock:
+  header:
+  - weight: 1
+    title: Courses
+    links:
+      - title: Full Stack Web Development
+        url: "/web-development"
+  - weight: 2
+    title: Tuition
+    url: "/tuition"
+    links:
+      - weight: 1
+        title: Tuition
+        url: "/tuition"
+  - weight: 4
+    title: About Us
+    links:
+      - weight: 1
+        title: FAQ
+        url: "/faq"
+      - weight: 4
+        title: Contact Us
+        url: "/contact"
+  - weight: 5
+    title: Student Portal
+  # url: set in header.html
+  - weight: 10
+    title: Apply
+    url: "/apply"
+    button: btn btn-round text-white cta-gradient py-1 px-6
   social:
   - weight: 3
     title: instagram
@@ -63,48 +130,3 @@ lubbock:
   - weight: 6
     title: Student Grievance Policy
     url: "/student-grievances"
-
-header:
-- weight: 1
-  title: Courses
-  links:
-    - title: Full Stack Web Development
-      url: /web-development
-- weight: 2
-  title: Tuition
-  url: "/tuition"
-  links:
-    - weight: 1
-      title: Tuition
-      url: "/tuition"
-    - weight: 2
-      title: Financing
-      url: "/financing"
-- weight: 3
-  title: For Companies
-  url: "/corporate-training"
-- weight: 4
-  title: About Us
-  links:
-    - weight: 1
-      title: FAQ
-      url: "/faq"
-    - weight: 2
-      title: Instructors
-      url: "/instructors"
-    - weight: 3
-      title: Our Team
-      url: "/team"
-    - weight: 4
-      title: Contact Us
-      url: "/contact"
-    - weight: 5
-      title: Blog
-      url: "https://austincodingacademy.com/blog/"
-- weight: 5
-  title: Student Portal
-# url: set in header.html
-- weight: 10
-  title: Apply
-  url: "/apply"
-  button: btn btn-round text-white cta-gradient py-1 px-6
