@@ -103,7 +103,7 @@ header:
       url: "https://austincodingacademy.com/blog/"
 - weight: 5
   title: Student Portal
-# url: set in header.html
+  url: ''
 - weight: 10
   title: Apply
   url: "/apply"
