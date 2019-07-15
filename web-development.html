@@ -33,13 +33,13 @@ features:
   text: Request custom training that focuses on the technologies that you need, or pick from popular technologies.
   img_src: Train.png
 walkthrough:
-- title: Flipped classroom
+- title: In the Classroom
   text: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum?
   img_src:
-- title: Pre-work
+- title: Outside of Class
   text: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur iusto provident ad ratione enim quasi.
   img_src:
-- title: In-person help
+- title: Job Readiness
   text: Lorem ipsum dolor sit amet consectetur adipisicing elit.
   img_src:
 courses:
@@ -156,16 +156,22 @@ courses:
   - Resume building
   - Networking opportunities and strategies
   - Job-finding strategies
-stories:
-- student_name: Student Brian
+successes:
+- name: Student Brian
+  title: Software Engineer
+  company: Dell
   img_src:
-  text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas cumque dolore voluptatum beatae? Et fugiat maxime porro, delectus laborum vel!
-- student_name: Student Jessica
+  learn_url:
+- name: Student Jessica
+  title: Web Developer
+  company: IBM
   img_src:
-  text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ratione quas veritatis aspernatur?
-- student_name: Student Bobby
+  learn_url:
+- name: Student Bobby
+  title: UI Developer
+  company: Indeed
   img_src:
-  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa harum nam vitae amet repellat officia id illum, corrupti consequatur. Facere, ex.
+  learn_url:
 logos:
 - width: 1600px
   height: 1600px
@@ -248,11 +254,26 @@ tuition_options:
 <div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
-    Full-stack Web Development
+    Full Stack Web Development
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
     {{ page.hero_text }}
   </p>
+  <div class="d-flex mt-4 align-items-center justify-content-center">
+    <div class="mr-2">
+      <!-- htmllint preset="none" -->
+      <a
+      class="btn btn-round btn-outline-light {{ include.class }}"
+      on="tap:event-lightbox"
+      role="button"
+      tabindex="-1"
+      >
+      <!-- htmllint preset="$previous" -->
+        Course Guide
+      </a>
+    </div>
+    <div class="ml-2">{% include btn-apply.html %}</div>
+  </div>
 </div>
 
 <main>
@@ -330,18 +351,18 @@ tuition_options:
             <h4>
               {{ page.walkthrough[1].title }}
             </h4>
-            <p>
+            <p class="text-white">
               {{ page.walkthrough[1].text }}
             </p>
           </div>
         </div>
         <!-- 3 -->
         <div class="d-flex justify-content-between mb-2 p-4">
-          <div class="col-7 mr-4 text-white">
+          <div class="col-7 mr-4">
             <h4>
               {{ page.walkthrough[2].title }}
             </h4>
-            <p>
+            <p class="text-white">
               {{ page.walkthrough[2].text }}
             </p>
           </div>
@@ -353,34 +374,35 @@ tuition_options:
   </section>
 
   <section class="py-8 container-fluid">
+    <div class="font-family-alt text-center display-5 mb-7 mt-4">Program Overview</div>
+    <div class="font-family-alt w-75 mx-auto display-6 mb-4 pt-4">Course Structure</div>
     <div class="row d-flex flex-column align-items-center">
-      <div class="font-family-alt display-5 mb-7 text-center mt-4">Course Structure</div>
       <!-- courses start -->
-        {% for course in page.courses %}
-          <div class="w-75 border shadow mb-4 px-4 pt-2 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded transition-3d-hover">
-            <div>
-              <div class="display-6 mb-4">
-                {{ course.code }}: {{ course.title }}
-              </div>
-              <div>
-                {% for item in course.list %}
-                  <ul>
-                    <li>
-                      {{ item }}
-                    </li>
-                  </ul>
-                {% endfor %}
-              </div>
+      {% for course in page.courses %}
+        <div class="w-75 border shadow mb-4 px-4 pt-2 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded">
+          <div>
+            <div class="display-6 mb-4">
+              <strong>{{ course.code }}: {{ course.title }}</strong>
             </div>
-            <div class="display-6 card-body rounded border col-md-3 mb-4 text-center">
-              {% if course.title == page.courses[4].title %}
-                4 Weeks
-              {% else %}
-                8 Weeks
-              {% endif %}
+            <div>
+              {% for item in course.list %}
+                <ul>
+                  <li>
+                    {{ item }}
+                  </li>
+                </ul>
+              {% endfor %}
             </div>
           </div>
-        {% endfor %}
+          <div class="display-6 card-body rounded border col-md-3 mb-4 text-center">
+            {% if course.title == page.courses[4].title %}
+              4 Weeks
+            {% else %}
+              8 Weeks
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
       <!-- courses end -->
     </div>
   </section>
@@ -390,7 +412,7 @@ tuition_options:
   <!-- htmllint preset="$previous" -->
     <div class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html %}
+        {% include course-guide-form.html class="text-white" %}
       </div>
     </div>
   </section>
@@ -411,42 +433,41 @@ tuition_options:
     </div>
   </section>
 
-  <section class="container w-75 py-8">
-    <div class="mb-4">
-      <div class="display-6 mb-2">
-        Curriculum
-      </div>
-      <p class="w-sm-75 w-md-50 w-lg-50">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
-        cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
-      </p>
+  <section class="container-fluid d-flex pb-4 flex-column justify-content-center text-center">
+    <div class="font-family-alt display-5 w-100 w-sm-75 w-md-75 w-lg-75 mx-auto">
+      4 Ways We Make Sure Our Students Are Job-Ready
     </div>
-    <div class="mb-4">
-      <div class="display-6 mb-2">
-        Director of Placement
+    <div class="row justify-content-center align-items-center">
+      <div class="my-4 col-md-4 col-lg-4 col-sm-10">
+        <div class="display-6 font-weight-bold my-2 font-family-alt">Curriculum</div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
+          cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
+        </p>
       </div>
-      <p class="w-sm-75 w-md-50 w-lg-50">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
-        cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
-      </p>
+      <div class="my-4 col-md-4 col-lg-4 col-sm-10">
+        <div class="display-6 font-weight-bold my-2 font-family-alt">Director of Placement</div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
+          cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
+        </p>
+      </div>
     </div>
-    <div class="mb-4">
-      <div class="display-6 mb-2">
-        4-Week Job Placement Course
+    <div class="row justify-content-center align-items-center">
+      <div class="my-4 col-md-4 col-lg-4 col-sm-10">
+        <div class="display-6 font-weight-bold my-2 font-family-alt">4-Week Job Placement Course</div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
+          cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
+        </p>
       </div>
-      <p class="w-sm-75 w-md-50 w-lg-50">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
-        cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
-      </p>
-    </div>
-    <div class="mb-4">
-      <div class="display-6 mb-2">
-        Hiring Partnerships
+      <div class="my-4 col-md-4 col-lg-4 col-sm-10">
+        <div class="display-6 font-weight-bold my-2 font-family-alt">Hiring Partnerships</div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
+          cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
+        </p>
       </div>
-      <p class="w-sm-75 w-md-50 w-lg-50">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repudiandae
-        cupiditate laboriosam officia eius eos officiis commodi, adipisci ipsam autem!
-      </p>
     </div>
   </section>
 
@@ -455,25 +476,35 @@ tuition_options:
       Student Outcomes
     </div>
     <div class="mx-auto d-flex flex-wrap justify-content-center" style="width: 80%">
-      {% for story in page.stories %}
+      {% for success in page.successes %}
         <div class="card my-2 mx-2" style="width: 18rem;">
           <amp-img
-            class="rounded border mb-2"
-            layout="responsive"
+            class="rounded border mb-2 mt-3 mx-auto"
+            layout="fixed"
             width="250"
             height="320"
-            src="{{ story.img_src }}"
+            src="{{ success.img_src }}"
             alt="Student Success"
           >
           </amp-img>
-          <div class="card-title px-3">
-            {{ story.student_name }}
-          </div>
-          <div class="card-body">
-            {{ story.text }}
+          <div class="d-flex flex-column align-items-center">
+            <div class="card-title px-3">
+              {{ success.name }}
+            </div>
+            <div class="mb-2">
+              {{ success.title }} @ {{ success.company }}
+            </div>
+            <a
+              class="btn btn-round bg-purple text-white text-center hover-white mt-2 mb-3"
+              style="width: 42px;"
+              href="{{ success.learn_url }}"
+              rel="noopener"
+              target="_blank"
+            >
+              Learn More &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
-
       {% endfor %}
     </div>
   </section>
@@ -518,7 +549,7 @@ tuition_options:
     <div class="card shadow w-75 w-sm-50 w-md-50 w-lg-50 mx-auto">
       <div class="card-body">
         <div class="display-7 pt-4 text-center">
-          Join us on our upcoming start date.
+          Join our upcoming start date:
         </div>
         <div class="text-center display-6 py-4">
           {{ page.next_start_date }}
