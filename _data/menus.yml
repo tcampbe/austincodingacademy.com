@@ -13,7 +13,7 @@ austin:
 
   footer:
   - weight: 1
-    title: C# .NET
+    title: "C# .NET"
     url: /csharp
   - weight: 2
     title: Hack Overflow
@@ -103,7 +103,7 @@ header:
       url: "https://austincodingacademy.com/blog/"
 - weight: 5
   title: Student Portal
-  url: ''
+  url: ""
 - weight: 10
   title: Apply
   url: "/apply"
