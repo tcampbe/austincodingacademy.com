@@ -49,7 +49,7 @@
     "postcss-no-important": "^3.0.1",
     "qs": "^6.7.0",
     "sitemap-generator-cli": "^4.3.0",
-    "stylelint": "^10.1.0",
+    "stylelint": "^9.9.0",
     "stylelint-config-recommended": "^2.2.0"
   },
   "watch": {
