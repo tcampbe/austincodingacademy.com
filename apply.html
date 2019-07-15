@@ -1,21 +1,16 @@
 ---
 layout: default
 permalink: "/apply/"
+redirect_from:
+  - "/application"
 austin:
   title: "Start Your Application | Apply Now at Austin Coding Academy"
   description: "Apply now to learn to code with Austin Coding Academy | Fill out your
     short application to get on the path to a career in web development."
-  form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
-  redirect_from:
-  - "/application"
 lubbock:
   title: "Start Your Application | Apply Now at Lubbock Coding Academy"
   description: "Apply now to learn to code with Lubbock Coding Academy | Fill out your
     short application to get on the path to a career in web development."
-  form_guid: # 9d476e09-2737-4394-b7db-f0395a2d26d5
-  redirect_from:
-  - "/application"
-
 ---
 {% assign city = page[site.key] %}
 
@@ -26,7 +21,7 @@ lubbock:
     </h2>
     <form
       class="d-flex justify-content-center"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{city.form_guid}}"
+      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.application_form_guid}}"
       method="POST"
       target="_top"
     >
