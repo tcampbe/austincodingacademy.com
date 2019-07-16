@@ -39,6 +39,7 @@ features:
   img_width: 90px
 walkthrough:
 - title: In the Classroom
+  odd: true
   text: "Part-time, evening classes work around your schedule so you can begin your career transition while continuing to support yourself. Led by instructors
     who work as professional web developers, classes focus on in-depth, practical projects that prepare you for success in your new career."
   img_src:
@@ -47,6 +48,7 @@ walkthrough:
     part of our flipped classroom approach. By studying outside of class, students can use class time to build their projects and get feedback from their instructor."
   img_src:
 - title: Job Readiness
+  odd: true
   text: "Austin Coding Academy’s Full Stack Web Development Track is designed to take students from no experience to job ready in under a year. After graduating,
     students continue to receive support in finding their first job from our Job Placement Course, Director of Job Placement, and various hiring partners."
   img_src:
@@ -351,50 +353,51 @@ tuition_options:
   <!-- htmllint preset="none" -->
   <section class="pt-6 pb-6 container-fluid {{page.hero}}-gradient text-white">
   <!-- htmllint preset="$previous" -->
-    <!-- walkthrough blocks -->
-    <div class="row flex-column align-items-center">
-      <div class="col-md-8 pl-5 d-flex">
-        <h2 class="font-family-alt display-5 mx-auto mt-2 mb-4">
-          Program Overview
-        </h2>
-      </div>
+  <div class="row flex-column align-items-center">
+    <div class="col-md-8 pl-5 d-flex">
+      <h2 class="font-family-alt display-5 mx-auto mt-2 mb-4">
+        Program Overview
+      </h2>
+    </div>
+      <!-- walkthrough blocks -->
       <div class="container">
-        <!-- 1  -->
-        <div class="d-flex justify-content-between mb-2 p-4">
-          <div class="col-7 mr-4 text-white">
-            <h4>
-              {{ page.walkthrough[0].title }}
-            </h4>
-            <p class="text-white">
-              {{ page.walkthrough[0].text }}
-            </p>
-          </div>
-          <amp-img class="col-5" src="{{ page.walkthrough[0].img_src }}" style="border: 1px solid black; height: 200px; width: 450px;"></amp-img>
-        </div>
-        <!-- 2 -->
-        <div class="d-flex justify-content-between mb-2 p-4">
-          <amp-img class="col-5" src="{{ page.walkthrough[1].img_src }}" style="border: 1px solid black; height: 200px; width: 450px;"></amp-img>
-          <div class="col-7 text-right ml-4">
-            <h4>
-              {{ page.walkthrough[1].title }}
-            </h4>
-            <p class="text-white">
-              {{ page.walkthrough[1].text }}
-            </p>
-          </div>
-        </div>
-        <!-- 3 -->
-        <div class="d-flex justify-content-between mb-2 p-4">
-          <div class="col-7 mr-4">
-            <h4>
-              {{ page.walkthrough[2].title }}
-            </h4>
-            <p class="text-white">
-              {{ page.walkthrough[2].text }}
-            </p>
-          </div>
-          <amp-img class="col-5" src="{{ page.walkthrough[2].img_src }}" style="border: 1px solid black; height: 200px; width: 450px;"></amp-img>
-        </div>
+        {% for item in page.walkthrough %}
+          {% if item.odd %}
+            <div class="d-flex justify-content-between mb-2 p-4">
+              <div class="col-6 mr-4 text-white">
+                <h4>
+                  {{ item.title }}
+                </h4>
+                <p class="text-white">
+                  {{ item.text }}
+                </p>
+              </div>
+              <amp-img
+                class="col-6"
+                src="{{ item.img_src }}"
+                style="border: 1px solid black; height: 225px; width: 450px;"
+              >
+              </amp-img>
+            </div>
+          {% else %}
+            <div class="d-flex justify-content-between mb-2 p-4">
+              <amp-img
+                class="col-6"
+                src="{{ item.img_src }}"
+                style="border: 1px solid black; height: 225px; width: 450px;"
+              >
+              </amp-img>
+              <div class="col-6 text-right ml-4">
+                <h4>
+                  {{ item.title }}
+                </h4>
+                <p class="text-white">
+                  {{ item.text }}
+                </p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
     <!-- end walkthrough blocks -->
