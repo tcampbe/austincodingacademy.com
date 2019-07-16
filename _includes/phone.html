@@ -5,8 +5,6 @@
 <amp-call-tracking config="https://swappy.callrail.com/companies/915131377/amp-swap.json?t=15128278498&cid=CLIENT_ID(cid-scope-cookie-fallback-name)">
   <a class="{{ include.a_class }}" href="tel:{{ site.phone | remove: "(" | remove: ")" | remove: " " | remove: "-" }}"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;{{ site.phone }}</a>
 </amp-call-tracking>
-{% elsif site.key == 'austin' %}
-<a class="{{ include.a_class }}" href="tel:{{ site.phone | remove: "(" | remove: ")" | remove: " " | remove: "-" }}"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;{{ site.phone }}</a>
 {% else %}
 <a class="{{ include.a_class }}" href="tel:{{ site.phone | remove: "(" | remove: ")" | remove: " " | remove: "-" }}"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;{{ site.phone }}</a>
 {% endif %}

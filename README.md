@@ -12,7 +12,7 @@
 
 1. `bundle install`
 2. `yarn`
-3. `yarn start`
+3. `KEY=austin yarn start` or `KEY=lubbock yarn start`
 4. navigate to http://localhost:4000
 
 ## Test

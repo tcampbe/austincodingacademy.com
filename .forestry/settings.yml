@@ -26,7 +26,7 @@ build:
   - JEKYLL_ENV=production
   preview_output_directory: _site
   output_directory: _site
-  instant_preview_command: node postcss.js && echo '<style amp-custom>' > _includes/css.html
-    && cat assets/css/main.min.css >> _includes/css.html && echo '</style>' >> _includes/css.html"
-    && bundle exec jekyll serve --config _configs/default.yml --host 0.0.0.0 --port
-    8080 -d _site
+  instant_preview_command: bundle exec jekyll build
+  install_dependencies_command: bundle install --path vendor/bundle
+  preview_docker_image: forestryio/ruby:2.6
+  mount_path: "/srv"

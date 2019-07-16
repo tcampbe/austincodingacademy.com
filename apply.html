@@ -1,21 +1,16 @@
 ---
 layout: default
 permalink: "/apply/"
+redirect_from:
+  - "/application"
 austin:
   title: "Start Your Application | Apply Now at Austin Coding Academy"
   description: "Apply now to learn to code with Austin Coding Academy | Fill out your
     short application to get on the path to a career in web development."
-  form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
-  redirect_from:
-  - "/application"
 lubbock:
   title: "Start Your Application | Apply Now at Lubbock Coding Academy"
   description: "Apply now to learn to code with Lubbock Coding Academy | Fill out your
     short application to get on the path to a career in web development."
-  form_guid: # 9d476e09-2737-4394-b7db-f0395a2d26d5
-  redirect_from:
-  - "/application"
-
 ---
 {% assign city = page[site.key] %}
 
@@ -26,7 +21,7 @@ lubbock:
     </h2>
     <form
       class="d-flex justify-content-center"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{city.form_guid}}"
+      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.application_form_guid}}"
       method="POST"
       target="_top"
     >
@@ -311,44 +306,6 @@ lubbock:
                 </option>
                 <option value="I'm a professional developer">
                   Professional developer, gaining more skills.
-                </option>
-              </select>
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="curriculum-track" class="form-label">
-                To which program are you applying?
-                <span class="text-red-a">*</span>
-              </label>
-
-              <select id="curriculum-track" name="curriculum_track" class="form-control">
-                <option value="" disabled selected>
-                  Select your answer
-                </option>
-                <option value="Full Stack JavaScript Track">
-                  Full-Stack Web Development Track
-                </option>
-                <option value="Web 101: Intro to Web Development">
-                  Web 101: Intro to Web Development
-                </option>
-                <option value="JS 211: JavaScript Language Basics">
-                  JS 211: JavaScript Language Basics
-                </option>
-                <option value="JS 311: Back-End JavaScript">
-                  JS 311: Back-End JavaScript
-                </option>
-                <option value="JS 411: Javascript Front-End">
-                  JS 411: Javascript Front-End
-                </option>
-                <option value="Individual Classes">
-                  Individual Classes
-                </option>
-                <option value="I'm not sure!">
-                  I'm not sure yet!
                 </option>
               </select>
             </div>

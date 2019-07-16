@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title>
       {% assign city = page[site.key] %}
-      {{ city.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
+      {{ city.title | default: site.default_title }}
     </title>
 
     <meta

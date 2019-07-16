@@ -32,26 +32,28 @@ jobs:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       - run: yarn test
-      - run: node events.js
-      - run: node tutoring.js
+      - run: node _javascripts/events.js
+      - run: node _javascripts/tutoring.js
       - deploy:
           name: Deploy
           command: |
               if [ "${CIRCLE_BRANCH}" == "preview" ]; then
-              git config --global user.email "kevin@austincodingacademy.com"
-              git config --global user.name "Kevin Colten"
-              yarn deploy
-              yarn preview
-              yarn deploy-lubbock
-              yarn preview-lubbock
+                git config --global user.email "kevin@austincodingacademy.com"
+                git config --global user.name "Kevin Colten"
+                KEY=austin yarn predeploy
+                KEY=austin yarn preview
+                KEY=lubbock yarn predeploy
+                KEY=lubbock yarn preview
               fi
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              git config --global user.email "kevin@austincodingacademy.com"
-              git config --global user.name "Kevin Colten"
-              yarn sitemap
-              yarn deploy
-              sudo apt install rsync
-              rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
+                git config --global user.email "kevin@austincodingacademy.com"
+                git config --global user.name "Kevin Colten"
+                KEY=austin yarn sitemap
+                KEY=austin yarn predeploy
+                sudo apt install rsync
+                rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
+                KEY=lubbock yarn predeploy
+                KEY=lubbock yarn deploy
               fi
 
 workflows:
