@@ -20,12 +20,12 @@ features:
 - heading: "The World’s #1 Programming Language"
   text: "For the 7th year in a row, JavaScript is the world’s most-used programming language, with nearly 70% of the world’s
     developers using JS in their work according to Stack Overflow."
-  img_src: icon-frontend.png
-  img_width: 90px
-- heading: Design Engaging, Responsive Front-Ends
-  text: "Discover the power of JavaScript: a language used by nearly every website on the internet to display, animate, and make webpages come to life."
   img_src: icon-javascript.png
   img_width: 65px
+- heading: Design Engaging, Responsive Front-Ends
+  text: "Discover the power of JavaScript: a language used by nearly every website on the internet to display, animate, and make webpages come to life."
+  img_src: icon-frontend.png
+  img_width: 90px
 - heading: Use Node and Express to Build Powerful Back-Ends
   text: "Learn how to collect and process data using JavaScript with Node.js and Express.js – and also how to manage databases with SQL."
   img_src: icon-databases.png
@@ -173,15 +173,23 @@ job_placement:
   - heading: Practical Curriculum
     text: "Our courses are designed to teach you relevant skills through practical application.
       Learn in-demand technologies by building real-life projects with feedback from professional developers."
+    img_src: icon-javascript.png
+    img_width: 65px
   - heading: Director of Job Placement
     text: "Receive one-on-one attention from our Director of Job Placement, who provides resume feedback, sets up
       interviews and events with companies, helps with applying, and more."
+    img_src: icon-frontend.png
+    img_width: 90px
   - heading: Job Placement Course
     text: "Hone your online presence, resume, and interview skills in our 4-week job placement course. This course is
       led by both a professional developer and a recruiter and is free to all ACA graduates."
+    img_src: icon-databases.png
+    img_width: 90px
   - heading: Hiring Partnerships
     text: "Austin Coding Academy maintains working relationships with a host of Austin companies that depend on our
       graduates to fill open web development positions."
+    img_src: icon-jobs.png
+    img_width: 90px
 successes:
 - name: Student Brian
   title: Software Engineer
@@ -327,7 +335,7 @@ tuition_options:
           <div class="row">
             <div class="col-3 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
               <amp-img
-                width="{{item.img_width}}"
+                width="{{ item.img_width }}"
                 height="80px"
                 layout="fixed"
                 src="/assets/images/{{ item.img_src }}"
@@ -336,10 +344,10 @@ tuition_options:
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
               <h5 class="font-weight-bold">
-                {{item.heading}}
+                {{ item.heading }}
               </h5>
               <p>
-                {{item.text}}
+                {{ item.text }}
               </p>
             </div>
           </div>
@@ -371,7 +379,7 @@ tuition_options:
                 </p>
               </div>
               <amp-img
-                class="col-6"
+                class="col-6 shadow-sm"
                 src="{{ item.img_src }}"
                 style="border: 1px solid black; height: 225px; width: 450px;"
               >
@@ -380,12 +388,12 @@ tuition_options:
           {% else %}
             <div class="d-flex justify-content-between mb-2 p-4">
               <amp-img
-                class="col-6"
+                class="col-6 shadow-sm"
                 src="{{ item.img_src }}"
                 style="border: 1px solid black; height: 225px; width: 450px;"
               >
               </amp-img>
-              <div class="col-6 text-right ml-4">
+              <div class="col-6 ml-4">
                 <h4>
                   {{ item.title }}
                 </h4>
@@ -402,11 +410,16 @@ tuition_options:
   </section>
 
   <section class="py-8 container-fluid">
-    <div class="font-family-alt w-75 mx-auto display-5 mb-4 pt-4">Course Structure</div>
+    <div class="font-family-alt w-75 mx-auto display-5 mb-4 pt-4">
+      Course Structure
+    </div>
     <div class="row d-flex flex-column align-items-center">
       <!-- courses start -->
       {% for course in page.courses %}
-        <div class="w-75 border shadow mb-4 px-4 pt-2 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded">
+        <div
+          class="w-75 border shadow-sm mb-4 px-4 pt-2 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded"
+          style="min-height: 350px;"
+        >
           <div>
             <div class="display-6 mb-4">
               <strong>{{ course.code }}: {{ course.title }}</strong>
@@ -421,7 +434,7 @@ tuition_options:
               {% endfor %}
             </div>
           </div>
-          <div class="display-6 card-body rounded border col-md-3 mb-4 text-center">
+          <div class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center">
             {% if course.title == page.courses[4].title %}
               4 Weeks
             {% else %}
@@ -445,7 +458,7 @@ tuition_options:
   </section>
 
   <section class="container-fluid d-flex py-8 flex-column justify-content-center text-center">
-    <div class="font-family-alt display-5 mb-2">
+    <div class="font-family-alt display-5 mb-4">
       Job Placement
     </div>
     <div class="row justify-content-center">
@@ -458,31 +471,46 @@ tuition_options:
     </div>
   </section>
 
-  <section class="container-fluid d-flex pb-4 flex-column justify-content-center text-center">
-    <div class="font-family-alt display-5 w-100 w-sm-75 w-md-50 w-lg-50 mx-auto mb-2">
+  <section class="pb-4 pt-4 container">
+    <div class="font-family-alt display-6 w-100 w-sm-75 w-md-50 w-lg-50 mx-auto mb-7">
       4 Ways We Make Sure Our Students Are Job-Ready
     </div>
-    <div class="d-flex flex-wrap w-100 w-sm-75 w-md-75 w-lg-75 justify-content-center align-items-center mx-auto">
+    <div class="row">
       {% for prop in page.job_placement.value_props %}
-        <div class="my-4 col-12 col-sm-5 col-md-5 col-lg-5">
-          <div class="display-6 font-weight-bold my-2 font-family-alt">{{ prop.heading }}</div>
-          <p>
-            {{ prop.text }}
-          </p>
+        <div class="col-md-6 mb-5">
+          <div class="row">
+            <div class="col-3 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+              <amp-img
+                width="{{ prop.img_width }}"
+                height="80px"
+                layout="fixed"
+                src="/assets/images/{{ prop.img_src }}"
+                alt=""
+              ></amp-img>
+            </div>
+            <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
+              <h5 class="font-weight-bold">
+                {{ prop.heading }}
+              </h5>
+              <p>
+                {{ prop.text }}
+              </p>
+            </div>
+          </div>
         </div>
       {% endfor %}
     </div>
   </section>
 
-  <section class="container-fluid py-8">
-    <div class="display-6 text-center mb-4">
+  <section class="container-fluid py-8 bg-textured-2">
+    <div class="display-6 text-center text-white mb-4">
       Student Outcomes
     </div>
     <div class="mx-auto d-flex flex-wrap justify-content-center" style="width: 80%">
       {% for success in page.successes %}
-        <div class="card my-2 mx-2" style="width: 18rem;">
+        <div class="card shadow-sm my-2 mx-2" style="width: 18rem;">
           <amp-img
-            class="rounded border mb-2 mt-3 mx-auto"
+            class="rounded border shadow-sm mb-2 mt-3 mx-auto"
             layout="fixed"
             width="250"
             height="320"
@@ -548,8 +576,8 @@ tuition_options:
     {% endfor %}
   </section>
 
-  <section class="container">
-    <div class="card shadow w-75 w-sm-50 w-md-50 w-lg-50 mx-auto">
+  <section class="bg-textured-2 py-8">
+    <div class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
       <div class="card-body">
         <div class="display-7 pt-4 text-center">
           Join our upcoming start date:
