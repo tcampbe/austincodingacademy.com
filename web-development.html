@@ -24,15 +24,19 @@ features:
   text: "For the 7th year in a row, JavaScript is the world’s most-used programming language, with nearly 70% of the world’s
     developers using JS in their work according to Stack Overflow."
   img_src: icon-frontend.png
+  img_width: 90px
 - heading: Design Engaging, Responsive Front-Ends
   text: "Discover the power of JavaScript: a language used by nearly every website on the internet to display, animate, and make webpages come to life."
   img_src: icon-javascript.png
+  img_width: 65px
 - heading: Use Node and Express to Build Powerful Back-Ends
   text: "Learn how to collect and process data using JavaScript with Node.js and Express.js – and also how to manage databases with SQL."
   img_src: icon-databases.png
+  img_width: 90px
 - heading: Tap Into Austin’s Start-Up Scene
   text: "As the most in-demand language for small to mid-level companies, JavaScript powers Austin’s thriving start-up scene, with new jobs opportunities arising daily."
   img_src: icon-jobs.png
+  img_width: 90px
 walkthrough:
 - title: In the Classroom
   text: "Part-time, evening classes work around your schedule so you can begin your career transition while continuing to support yourself. Led by instructors
@@ -323,7 +327,7 @@ tuition_options:
           <div class="row">
             <div class="col-3 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
               <amp-img
-                width="80px"
+                width="{{item.img_width}}"
                 height="80px"
                 layout="fixed"
                 src="/assets/images/{{ item.img_src }}"
@@ -440,7 +444,7 @@ tuition_options:
   </section>
 
   <section class="container-fluid d-flex py-8 flex-column justify-content-center text-center">
-    <div class="font-family-alt display-5">
+    <div class="font-family-alt display-5 mb-2">
       Job Placement
     </div>
     <div class="row justify-content-center">
@@ -454,7 +458,7 @@ tuition_options:
   </section>
 
   <section class="container-fluid d-flex pb-4 flex-column justify-content-center text-center">
-    <div class="font-family-alt display-5 w-100 w-sm-75 w-md-50 w-lg-50 mx-auto">
+    <div class="font-family-alt display-5 w-100 w-sm-75 w-md-50 w-lg-50 mx-auto mb-2">
       4 Ways We Make Sure Our Students Are Job-Ready
     </div>
     <div class="d-flex flex-wrap w-100 w-sm-75 w-md-75 w-lg-75 justify-content-center align-items-center mx-auto">
