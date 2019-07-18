@@ -16,7 +16,7 @@ excerpt: "Since coding academies have become an increasingly visible part of the
   directly:\n\n"
 img: "/assets/images/4-ways-a-coding-bootcamp-graphic.png"
 redirect_from: []
-permalink: "/blog/web-development/4-ways-a-coding-bootcamp-is-worth-it"
+permalink: "/blog/web-development/4-ways-a-coding-bootcamp-is-worth-it/"
 height: 
 width: 
 author_name: Austin Coding Academy
