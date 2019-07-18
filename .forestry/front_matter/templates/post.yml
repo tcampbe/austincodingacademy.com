@@ -69,6 +69,7 @@ fields:
   name: author_email
   label: Author Email
 pages:
+- _posts/2019-07-18-4-ways-a-coding-bootcamp-is-worth-it.md
 - _posts/2019-01-23-q-a-with-our-new-job-placement-course-director.md
 - _posts/2019-01-23-aca-partners-with-austin-public-library-to-teach-teens-to-code.md
 - _posts/2019-04-16-7-characteristics-of-a-successful-web-developer.md
