@@ -1,0 +1,127 @@
+User-agent: *
+Disallow: /student-grievances
+Disallow: /tutors
+Disallow: /search
+
+# Discourse
+User-agent: *
+Disallow: /forum/auth/
+Noindex: /forum/auth/
+Disallow: /forum/assets/browser-update*.js
+Noindex: /forum/assets/browser-update*.js
+Disallow: /forum/users/
+Noindex: /forum/users/
+Disallow: /forum/u/
+Noindex: /forum/u/
+Disallow: /forum/my/
+Noindex: /forum/my/
+Disallow: /forum/badges/
+Noindex: /forum/badges/
+Disallow: /forum/search
+Noindex: /forum/search
+Disallow: /forum/search/
+Noindex: /forum/search/
+Disallow: /forum/tags
+Noindex: /forum/tags
+Disallow: /forum/tags/
+Noindex: /forum/tags/
+Disallow: /forum/email/
+Noindex: /forum/email/
+Disallow: /forum/session
+Noindex: /forum/session
+Disallow: /forum/session/
+Noindex: /forum/session/
+Disallow: /forum/admin
+Noindex: /forum/admin
+Disallow: /forum/admin/
+Noindex: /forum/admin/
+Disallow: /forum/user-api-key
+Noindex: /forum/user-api-key
+Disallow: /forum/user-api-key/
+Noindex: /forum/user-api-key/
+Disallow: /forum/*?api_key*
+Noindex: /forum/*?api_key*
+Disallow: /forum/*?*api_key*
+Noindex: /forum/*?*api_key*
+Disallow: /forum/groups
+Noindex: /forum/groups
+Disallow: /forum/groups/
+Noindex: /forum/groups/
+Disallow: /forum/t/*/*.rss
+Noindex: /forum/t/*/*.rss
+Disallow: /forum/tags/*.rss
+Noindex: /forum/tags/*.rss
+Disallow: /forum/c/*.rss
+Noindex: /forum/c/*.rss
+
+
+User-agent: mauibot
+Disallow: /forum/
+Noindex: /forum/
+
+
+User-agent: semrushbot
+Disallow: /forum/
+Noindex: /forum/
+
+
+User-agent: ahrefsbot
+Disallow: /forum/
+Noindex: /forum/
+
+
+User-agent: blexbot
+Disallow: /forum/
+Noindex: /forum/
+
+
+User-agent: bingbot
+Crawl-delay: 60
+Disallow: /forum/auth/
+Noindex: /forum/auth/
+Disallow: /forum/assets/browser-update*.js
+Noindex: /forum/assets/browser-update*.js
+Disallow: /forum/users/
+Noindex: /forum/users/
+Disallow: /forum/u/
+Noindex: /forum/u/
+Disallow: /forum/my/
+Noindex: /forum/my/
+Disallow: /forum/badges/
+Noindex: /forum/badges/
+Disallow: /forum/search
+Noindex: /forum/search
+Disallow: /forum/search/
+Noindex: /forum/search/
+Disallow: /forum/tags
+Noindex: /forum/tags
+Disallow: /forum/tags/
+Noindex: /forum/tags/
+Disallow: /forum/email/
+Noindex: /forum/email/
+Disallow: /forum/session
+Noindex: /forum/session
+Disallow: /forum/session/
+Noindex: /forum/session/
+Disallow: /forum/admin
+Noindex: /forum/admin
+Disallow: /forum/admin/
+Noindex: /forum/admin/
+Disallow: /forum/user-api-key
+Noindex: /forum/user-api-key
+Disallow: /forum/user-api-key/
+Noindex: /forum/user-api-key/
+Disallow: /forum/*?api_key*
+Noindex: /forum/*?api_key*
+Disallow: /forum/*?*api_key*
+Noindex: /forum/*?*api_key*
+Disallow: /forum/groups
+Noindex: /forum/groups
+Disallow: /forum/groups/
+Noindex: /forum/groups/
+Disallow: /forum/t/*/*.rss
+Noindex: /forum/t/*/*.rss
+Disallow: /forum/tags/*.rss
+Noindex: /forum/tags/*.rss
+Disallow: /forum/c/*.rss
+Noindex: /forum/c/*.rss
