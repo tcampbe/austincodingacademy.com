@@ -312,36 +312,58 @@ lubbock:
           </div>
           <!-- End Input -->
 
+          {% if site.key == 'austin' %}
           <!-- Input -->
-          {% unless site.key == 'lubbock' %}
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="campus-interest" class="form-label">
-                  Which campus are you interested in?
-                  <span class="text-red-a">*</span>
-                </label>
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="curriculum-track" class="form-label">
+                To which program are you applying?
+                <span class="text-red-a">*</span>
+              </label>
 
-                <select id="campus-interest" name="campus_interest_new" class="form-control">
-                  <option value="" disabled selected>
-                    Select your answer
-                  </option>
-                  <option value="Austin">
-                    Downtown - Capital Factory (JavaScript only)
-                  </option>
-                  <option value="Austin - North">
-                    Central - Highland
-                  </option>
-                  <option value="Any campus">
-                    Either campus works!
-                  </option>
-                  <option value="Remote">
-                    Remote (Outside of Austin)
-                  </option>
-                </select>
-              </div>
+              <select id="curriculum-track" name="curriculum_track" class="form-control">
+                <option value="" disabled selected>
+                  Select your answer
+                </option>
+                <option value="Full Stack JavaScript Track">
+                  Full-Stack Web Development Track
+                </option>
+                <option value="Wordpress & Web Design (WP Engine)">
+                  Wordpress & Web Design (WP Engine)
+                </option>
+              </select>
             </div>
-          {% endunless %}
+          </div>
           <!-- End Input -->
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="campus-interest" class="form-label">
+                Which campus are you interested in?
+                <span class="text-red-a">*</span>
+              </label>
+
+              <select id="campus-interest" name="campus_interest_new" class="form-control">
+                <option value="" disabled selected>
+                  Select your answer
+                </option>
+                <option value="Austin">
+                  Downtown - Capital Factory
+                </option>
+                <option value="Austin - North">
+                  Central - Highland
+                </option>
+                <option value="Any campus">
+                  Either campus works!
+                </option>
+                <option value="Remote">
+                  Remote (Outside of Austin)
+                </option>
+              </select>
+            </div>
+          </div>
+          <!-- End Input -->
+          {% endif %}
 
           <div class="col-sm-6 mb-4">
             {% include referral-question.html id="referral-apply" %}
