@@ -28,6 +28,8 @@ lubbock_header:
   links:
   - title: Full Stack Web Development
     url: "/web-development"
+  - title: Wordpress & Design
+    url: "/wordpress"
 austin_header:
 - weight: 6
   title: Apply
