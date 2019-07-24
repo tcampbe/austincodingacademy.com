@@ -104,16 +104,16 @@ austin:
     odd: true
     text: "Part-time, evening classes work around your schedule so you can begin your career transition while continuing to support yourself. Led by instructors
       who work as professional web developers, classes focus on in-depth, practical projects that prepare you for success in your new career."
-    img_src:
+    img_src: "/assets/images/cap-factory-web-dev.jpg"
   - title: Outside of Class
     text: "Students are expected to utilize their e-textbook, unlimited tutoring, and organized group study sessions to practice course material outside of class –
       part of our flipped classroom approach. By studying outside of class, students can use class time to build their projects and get feedback from their instructor."
-    img_src:
+    img_src: "/assets/images/cap-factory-web-dev-2.jpg"
   - title: Job Readiness
     odd: true
     text: "Austin Coding Academy’s Full Stack Web Development Track is designed to take students from no experience to job ready in under a year. After graduating,
       students continue to receive support in finding their first job from our Job Placement Course, Director of Job Placement, and various hiring partners."
-    img_src:
+    img_src: "/assets/images/cap-factory-web-dev-3.jpg"
   courses:
   - code: Web 101
     title: Intro to Web Development
@@ -586,7 +586,7 @@ lubbock:
         {% for item in school.walkthrough %}
           {% if item.odd %}
             <div class="d-flex justify-content-between mb-2 p-4">
-              <div class="col-6 mr-4 text-white">
+              <div class="w-50 mr-4 text-white">
                 <h4>
                   {{ item.title }}
                 </h4>
@@ -594,22 +594,32 @@ lubbock:
                   {{ item.text }}
                 </p>
               </div>
-              <amp-img
-                class="col-6 shadow-sm"
-                src="{{ item.img_src }}"
-                style="border: 1px solid black; height: 225px; width: 450px;"
-              >
-              </amp-img>
+              <!-- IMAGE -->
+              <div style="min-width: 200px">
+                <amp-img
+                  layout="responsive"
+                  class="img-fluid shadow"
+                  height="200px"
+                  height="400px"
+                  src="{{ item.img_src }}"
+                >
+                </amp-img>
+              </div>
             </div>
           {% else %}
             <div class="d-flex justify-content-between mb-2 p-4">
-              <amp-img
-                class="col-6 shadow-sm"
-                src="{{ item.img_src }}"
-                style="border: 1px solid black; height: 225px; width: 450px;"
-              >
-              </amp-img>
-              <div class="col-6 ml-4">
+              <!-- IMAGE 2 -->
+              <div style="min-width: 380px">
+                <amp-img
+                  layout="responsive"
+                  class="img-fluid shadow"
+                  height="200px"
+                  height="400px"
+                  src="{{ item.img_src }}"
+                >
+                </amp-img>
+              </div>
+              <div class="w-50 ml-4">
                 <h4>
                   {{ item.title }}
                 </h4>
