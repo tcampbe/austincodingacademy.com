@@ -1,0 +1,137 @@
+<a
+  class="btn btn-round bg-purple text-white hover-white"
+  on="tap:event-lightbox"
+  role="button"
+  tabindex="-1"
+>
+  Join Us
+</a>
+
+<amp-lightbox
+  id="event-lightbox"
+  class="lightbox d-flex justify-content-center align-items-center"
+  layout="nodisplay"
+  scrollable
+  on="tap:event-lightbox.close"
+  tabindex="-1"
+  role="dialog"
+>
+  <form
+    class="col-6 col-md-6 col-sm-10 col-xs-10 px-11 pt-6 mt-6 mx-auto"
+    action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/5346fc1c-3703-49e4-98bb-c35f5a055d0e"
+    target="_top"
+    on="tap:event-lightbox.open"
+    method="POST"
+    tabindex="-1"
+    role="form"
+  >
+    <div class="form-container">
+      <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
+      <!-- ! need name values, come from hubspot -->
+      <input name="event_name" type="hidden" value="{{include.event_name}}">
+      <input name="hs_lead_status" type="hidden" value="NEW">
+      <input name="page_name" type="hidden" value="{{page.title}} ({{include.event_date}})">
+      <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
+      <input name="hutk" type="hidden" value="">
+
+      <div class="row center-form">
+        <!-- Input -->
+        <div class="col-12">
+          <div class="form-group">
+            <label for="first-name-cg" class="form-label text-white">
+              First name <span class="text-red-a">*</span>
+            </label>
+
+            <input id="first-name-cg"
+              type="text"
+              class="form-control"
+              name="firstname"
+              placeholder="First name"
+              required data-msg="Please enter your first name."
+              data-error-class="u-has-error"
+              data-success-class="u-has-success"
+            />
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-12">
+          <div class="form-group">
+            <label for="first-name-cg" class="form-label text-white">
+              Last name <span class="text-red-a">*</span>
+            </label>
+
+            <input id="last-name-cg"
+              type="text"
+              class="form-control"
+              name="lastname"
+              placeholder="Last name"
+              required data-msg="Please enter your last name."
+              data-error-class="u-has-error"
+              data-success-class="u-has-success"
+            />
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-12">
+          <div class="form-group">
+            <label for="email-cg" class="form-label text-white">
+              Email <span class="text-red-a">*</span>
+            </label>
+
+            <input id="email-cg"
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="Email"
+              required data-msg="Please enter a valid email address."
+              data-error-class="u-has-error"
+              data-success-class="u-has-success"
+            />
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <!-- Input -->
+        <div class="col-12">
+          <div class="form-group">
+            <label for="phone-cg" class="form-label text-white">
+              Phone <span class="text-red-a">*</span>
+            </label>
+
+            <input id="phone-cg"
+              type="phone"
+              class="form-control"
+              name="phone"
+              placeholder="Phone"
+              required data-msg="Please enter a valid phone number."
+              data-error-class="u-has-error"
+              data-success-class="u-has-success"
+            />
+          </div>
+        </div>
+        <!-- End Input -->
+
+        <div class="col-12 d-flex flex-column justify-content-end">
+          {% include referral-question.html id="referral-cg" %}
+        </div>
+
+        <!-- Input -->
+        <div class="col-12 d-flex align-items-end justify-content-center form-group mt-3">
+          <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
+            Submit
+          </button>
+        </div>
+        <!-- End Input -->
+      </div>
+      <div submit-error>
+        <template type="amp-mustache">
+          <p class="text-danger">There was an error with your request. Please try again.</p>
+        </template>
+      </div>
+    </div>
+  </form>
+</amp-lightbox>
