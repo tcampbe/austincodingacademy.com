@@ -11,9 +11,12 @@ lubbock_header:
   title: About Us
   links:
   - weight: 1
+    title: Events
+    url: "/events"
+  - weight: 2
     title: FAQ
     url: "/faq"
-  - weight: 4
+  - weight: 3
     title: Contact Us
     url: "/contact"
 - weight: 2
@@ -40,6 +43,9 @@ austin_header:
   title: About Us
   links:
   - weight: 1
+    title: Events
+    url: "/events"
+  - weight: 2
     title: FAQ
     url: "/faq"
   - weight: 3
@@ -78,7 +84,7 @@ lubbock_footer:
   url: "/instructor-apply"
 - weight: 2
   title: Upcoming Events
-  url: https://www.eventbrite.com/o/lubbock-coding-academy-18046524539
+  url: "/events"
 - weight: 1
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
@@ -105,7 +111,7 @@ austin_footer:
   url: "/instructor-apply"
 - weight: 3
   title: Upcoming Events
-  url: https://www.eventbrite.com/o/austin-coding-academy-10937668459
+  url: "/events"
 - weight: 2
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
