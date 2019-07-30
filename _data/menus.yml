@@ -83,8 +83,8 @@ lubbock_footer:
   title: Become an Instructor
   url: "/instructor-apply"
 - weight: 2
-  title: Upcoming Events
-  url: "/events"
+  title: Tutoring
+  url: "/tutoring"
 - weight: 1
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
@@ -110,8 +110,8 @@ austin_footer:
   title: Become an Instructor
   url: "/instructor-apply"
 - weight: 3
-  title: Upcoming Events
-  url: "/events"
+  title: Tutoring
+  url: "/tutoring"
 - weight: 2
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
