@@ -70,9 +70,6 @@ lubbock_footer:
 - weight: 5
   title: Student Grievance Policy
   url: "/student-grievances"
-- weight: 3
-  title: Hire a Graduate
-  url: "/hire"
 - weight: 4
   title: Become an Instructor
   url: "/instructor-apply"
