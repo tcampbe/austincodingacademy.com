@@ -1,5 +1,5 @@
 <!-- ========== HEADER ========== -->
-{% if page.hero %}
+{% if page.hero and page.hero != 'csharp' %}
   {% assign color = 'transparent' %}
 {% endif %}
 {% unless page.categories contains 'landing' %}
