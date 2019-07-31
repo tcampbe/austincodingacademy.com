@@ -1,8 +1,13 @@
 ---
 permalink: "/grads/"
-title: "Austin Coding Academy | Graduate Projects"
-description: ""
+austin:
+  title: "Austin Coding Academy | Graduate Projects"
+  description: ""
+lubbock:
+  title: "Lubbock Coding Academy | Graduate Projects"
+  description: ""
 ---
+{% assign school = page[site.key] %}
 
 <!DOCTYPE html>
 <html>
@@ -12,7 +17,7 @@ description: ""
     />
     <meta
       name="description"
-      content="{{ page.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
+      content="{{ school.description | default : 'At {{ site.key | capitalize }} Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
     />
     <meta
       name="viewport"
@@ -40,7 +45,7 @@ description: ""
 
     {% include favicon.html %}
 
-    {{ page.head }}
+    {{ school.head }}
   </head>
 
   <body>
@@ -52,7 +57,7 @@ description: ""
     <div class="container-fluid bg-dark background-logo py-10">
       <div class="row d-flex justify-content-center align-items-end">
         {% for page in site.pages %}
-          {% if page.categories contains 'graduation' and page.projects[0].url %}
+          {% if page.categories contains 'graduation' and page.projects[0].url and page.categories contains site.key %}
             {% assign track = page.skills[0] %}
             {% if track == 'JavaScript' or track == 'C# .NET' or track == 'C#' or track == '.NET' or track == 'Web Design' %}
               <div class="col-12 col-md-3 px-2 mb-4">
@@ -91,7 +96,7 @@ description: ""
     </div>
     <div class="text-center border-top bg-purple py-3 w-100">
       <p class="small text-white-70 mb-0">
-        © Austin Coding Academy 2019. All rights reserved.<br/>
+        © {{ site.key | capitalize }} Coding Academy 2019. All rights reserved.<br/>
         <a class="text-white" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> | <a class="text-white" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>
       </p>
     </div>
