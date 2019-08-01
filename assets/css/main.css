@@ -272,7 +272,7 @@ body, p {
 
 #hero-csharp {
   background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-csharp.jpg');
-  background-position: 50% 10%;
+  background-position: 50% 5%;
   background-size: cover;
 }
 
