@@ -23,7 +23,7 @@ author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 
 ---
-## Just one of our students who has found her dream job!
+# Get to know Austin Coding Academy graduate Lillian Situ
 
 Every month we like to feature our outstanding students at Austin Coding Academy. ACA’s student body is as diverse as it is interesting and we’d like to give everyone the opportunity to get to know them a little better. Our students make Austin Coding Academy the great place that it is.
 
