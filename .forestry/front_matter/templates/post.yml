@@ -69,8 +69,8 @@ fields:
   name: author_email
   label: Author Email
 pages:
+- _posts/2019-08-01-austin-coding-academy-student-highlight-greg-swan.md
 - _posts/2019-04-02-student-highlight-lillian-situ.md
-- _posts/austin-coding-academy-student-highlight-greg-swan.md
 - _posts/2019-04-13-5-awesome-apps-you-can-create-with-c.md
 - _posts/2019-01-23-q-a-with-our-new-job-placement-course-director.md
 - _posts/2019-02-15-what-will-you-make-as-a-full-time-web-developer-1.md
