@@ -13,7 +13,7 @@ excerpt: Every month we like to feature our outstanding students at Austin Codin
   give everyone the opportunity to get to know them a little better. This month we’re
   putting the spotlight on Lillian Situ. Lillian completed the Full Stack JavaScript
   program in December 2017 and now she is employed as a Software Engineer at data.world!
-img: c
+img: "/assets/images/student-highlight-header-lillian-situ.png"
 redirect_from: []
 permalink: "/blog/student-highlight/lillian-situ/"
 height: 
