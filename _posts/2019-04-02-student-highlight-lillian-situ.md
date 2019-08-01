@@ -2,7 +2,8 @@
 tags: []
 layout: post
 title: 'Austin Coding Academy Student Highlight: Lillian Situ'
-description: c
+description: Lillian Situ graduated from Austin Coding Academy's Full Stack Web Development
+  program in December 2017, and is now a Software Engineer at data.world.
 created_at: 2017-12-19T06:00:00.000+00:00
 updated_at: 2017-12-19T06:00:00.000+00:00
 categories:
