@@ -24,11 +24,11 @@ author_email: info@austincodingacademy.com
 ---
 # Get to know Austin Coding Academy graduate Greg Swan
 
-At Austin Coding Academy, we're really proud of our students and graduates, and we want other people to get the chance to see how awesome they are too. 
+At Austin Coding Academy, we take pride in the success that our students and graduates achieve. Every month we look to highlight at least one of our graduates and let the world know about what they're doing in their new careers.
 
-This month, we caught up with ACA graduate [Greg Swan](), who accepted a job as a Web Developer at Kinetic Theory in Austin after finishing the JavaScript track. Greg now works as a Web Application Developer with OpenSymmetry. Here's what he had to say about his experience as an Austin Coding Academy student:
+This month, we caught up with Austin Coding Academy graduate [Greg Swan](), who accepted a job as a Web Developer at Kinetic Theory in Austin after finishing our Full Stack Web Development Track in 2018. Greg now works as a Web Application Developer with OpenSymmetry. Here's what he had to say about his experience as an Austin Coding Academy student:
 
-### How did ACA prepare you for the job market?
+### How did Austin Coding Academy prepare you for the job market?
 
 ACA prepared me for the job market the way a high school teacher prepares you for college; they gave me a solid foundation of knowledge, taught me what not to do, and consistently reminded me that there was a job out there for me if I was willing to put in the work.
 
@@ -38,7 +38,7 @@ Yes! Chris Lofton was a great a help as far as finding and landing my first job.
 
 ### Any advice for current or future ACA students?
 
-[A portfolio](https://gcswan.github.io/Resume/) is helpful and can help you find a job, but I think it was also helpful to build one more website. Also: the more you code, the better you get. 
+[A portfolio](https://gcswan.github.io/Resume/) is helpful and can help you find a job, but I think it was also helpful to build one more website. **Also: the more you code, the better you get.**
 
 ### Share a fun fact about yourself.
 
