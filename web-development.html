@@ -250,21 +250,21 @@ austin:
       img_src: icon-jobs.png
       img_width: 90px
   successes:
-  - name: Student Brian
+  - name: Luke Stenis
+    title: Analytics Implementation Engineer
+    company: Pluralsight
+    img_src:
+    learn_url: https://austincodingacademy.com/blog/alumni-spotlight/luke-stenis/why-i-left-marketing-to-learn-coding/
+  - name: Lillian Situ
     title: Software Engineer
-    company: Dell
+    company: data.world
     img_src:
-    learn_url:
-  - name: Student Jessica
-    title: Web Developer
-    company: IBM
+    learn_url: https://austincodingacademy.com/blog/student-highlight/lillian-situ/
+  - name: Greg Swan
+    title: Web Application Developer
+    company: OpenSymmetry
     img_src:
-    learn_url:
-  - name: Student Bobby
-    title: UI Developer
-    company: Indeed
-    img_src:
-    learn_url:
+    learn_url: https://austincodingacademy.com/blog/student-highlight/greg-swan/
   tuition_options:
   - title: Pay Up Front (Savings Option)
     description: "Save $1,000 on the cost of the Full Stack Web Development Track when you choose to pay for the entire cost of the program up front. Instead of paying for the individual price of 4 web development courses, ($11,960), you’ll pay the reduced price of $10,960."
@@ -709,6 +709,46 @@ austin:
                 {{ prop.text }}
               </p>
             </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="container-fluid py-8 bg-textured-2">
+    <div class="display-6 text-center text-white mb-4">
+      Student Outcomes
+    </div>
+    <div class="mx-auto d-flex flex-wrap justify-content-center" style="width: 80%">
+      {% for success in school.successes %}
+        <div class="card shadow-sm my-2 mx-2" style="width: 18rem;">
+          <amp-img
+            class="rounded border shadow-sm mb-2 mt-3 mx-auto"
+            layout="fixed"
+            width="250"
+            height="320"
+            src="{{ success.img_src }}"
+            alt="Student Success"
+          >
+          </amp-img>
+          <div class="d-flex flex-column align-items-center">
+            <div class="card-title px-3 font-weight-bold">
+              {{ success.name }}
+            </div>
+            <div class="mb-2 display-9 text-center">
+              {{ success.title }} <br>
+              @ {{ success.company }}
+            </div>
+            <a
+              class="btn btn-round bg-purple text-white text-center hover-white mt-2 mb-3"
+              style="width: 42px;"
+              href="{{ success.learn_url }}"
+              rel="noopener"
+              target="_blank"
+            >
+              {% assign name = success.name | split: ' ' %}
+              About {{ name[0] | capitalize }} &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       {% endfor %}
