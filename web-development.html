@@ -128,7 +128,7 @@ lubbock:
   hero: js
   title: C# Development with Lubbock Coding Academy
   description: Learn one of the most versatile &amp; common programming languages with
-    Lubbock Code Academy’s Full-Stack track. You’ll go from beginner to advanced within
+    Lubbock Code Academy’s Full Stack track. You’ll go from beginner to advanced within
     a year - all without quitting your day job. Enroll today!
   hero_text: Learn the most popular language for making websites, web apps, games, animations,
     and mobile applications. In this track you'll learn front-end JavaScript and back-end C#/.Net,
@@ -251,7 +251,7 @@ lubbock:
 <div id="hero-{{ city.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
-    Full-stack Web Development
+    Full Stack Web Development
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
     {{ city.hero_text }}
@@ -263,29 +263,31 @@ lubbock:
   {% include observer-and-header-animation.html %}
 
   <section id="curriculum" class="py-8 container-fluid">
-  <div class="row">
+    <div class="row">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
       <div class="col-md-8 pl-5">
         <div class="mb-6 text-center mx-auto">
           <h2 class="font-family-alt display-5 mb-7">
-            Our Full-Stack Curriculum
+            Our Full Stack Curriculum
           </h2>
           <p class="mw-600 mx-auto">
-            Our full track is composed of 5 courses, designed to take you from
+            Our curriculum is composed of 5 courses, designed to take you from
             beginner to job-ready in under a year, without having to quit your day job
             or mortgage your future. If you're looking to level-up in your current job,
             you can also apply to take any of these courses individually.
           </p>
         </div>
 
-        <div class="pl-11 mx-auto mw-600">
+        <div class="p-0 pl-sm-11 mx-auto mw-600">
           {% for course in city.courses %}
             <div class="my-6">
-              <h4 class="display-7 mb-3">
+              <h4 class="display-7 d-flex mb-3">
                 <!-- htmllint preset="none" -->
-                <i class="fas fa-circle text-{{city.trackColor}} mr-2"></i>
+                <i class="fas fa-circle text-{{city.trackColor}} mr-3 mt-1"></i>
                 <!-- htmllint preset="$previous" -->
-                {{course.code}}: <b>{{course.title}}</b>
+                <div>
+                  {{course.code}}: <b>{{course.title}}</b>
+                </div>
               </h4>
               <ul class="fa-ul">
                 {% for item in course.list %}
