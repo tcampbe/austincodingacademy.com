@@ -253,17 +253,17 @@ austin:
   - name: Luke Stenis
     title: Analytics Implementation Engineer
     company: Pluralsight
-    img_src:
+    img_src: '/assets/images/luke-stenis-headshot.jpeg'
     learn_url: https://austincodingacademy.com/blog/alumni-spotlight/luke-stenis/why-i-left-marketing-to-learn-coding/
   - name: Lillian Situ
     title: Software Engineer
     company: data.world
-    img_src:
+    img_src: '/assets/images/lillian-situ-headshot.jpeg'
     learn_url: https://austincodingacademy.com/blog/student-highlight/lillian-situ/
   - name: Greg Swan
     title: Web Application Developer
     company: OpenSymmetry
-    img_src:
+    img_src: '/assets/images/greg-swan-headshot.jpeg'
     learn_url: https://austincodingacademy.com/blog/student-highlight/greg-swan/
   tuition_options:
   - title: Pay Up Front (Savings Option)
@@ -685,7 +685,7 @@ austin:
   </section>
 
   <section class="pt-4 container">
-    <div class="font-family-alt display-6 w-100 w-sm-75 w-md-50 w-lg-50 mx-auto mb-7">
+    <div class="font-family-alt text-center display-6 w-100 w-sm-75 w-md-50 mx-auto mb-7">
       4 Ways We Make Sure Our Students Are Job-Ready
     </div>
     <div class="row">
@@ -716,17 +716,17 @@ austin:
   </section>
 
   <section class="container-fluid py-8 bg-textured-2">
-    <div class="display-6 text-center text-white mb-4">
+    <div class="display-6 text-center text-white mb-6">
       Student Outcomes
     </div>
-    <div class="mx-auto d-flex flex-wrap justify-content-center" style="width: 80%">
+    <div class="mx-auto d-flex flex-wrap justify-content-between col-12 col-sm-8">
       {% for success in school.successes %}
-        <div class="card shadow-sm my-2 mx-2" style="width: 18rem;">
+        <div class="card shadow mb-4 p-2 mx-auto" style="width: 18rem;">
           <amp-img
-            class="rounded border shadow-sm mb-2 mt-3 mx-auto"
-            layout="fixed"
-            width="250"
-            height="320"
+            class="w-100 rounded border shadow mb-2"
+            layout="responsive"
+            width="500"
+            height="500"
             src="{{ success.img_src }}"
             alt="Student Success"
           >
@@ -784,7 +784,7 @@ austin:
                   </p>
                 </div>
               {% elsif option.cta %}
-                <div class="text-center">
+                <div class="mt-4 mt-sm-0 text-center">
                   <h5>
                     Learn More
                   </h5>
