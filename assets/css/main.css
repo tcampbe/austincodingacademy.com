@@ -237,6 +237,18 @@ body, p {
   transform: scale(1.025);
 }
 
+/* HEADER IMAGES */
+
+#header-events {
+  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0,179,209, 0.7)), url('/assets/images/header-csharp.jpg');
+  background-position: top;
+}
+
+#header-javascript {
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/header-javascript.jpg');
+  background-position: top right;
+}
+
 /* HERO IMAGES */
 
 #bg-404 {
@@ -259,12 +271,13 @@ body, p {
 }
 
 #hero-csharp {
-  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(127,200,154, 0.7)), url('/assets/images/hero-csharp.jpg');
-  background-position: top;
+  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-csharp.jpg');
+  background-position: 50% 10%;
+  background-size: cover;
 }
 
 #hero-corporate {
-  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-csharp.jpg');
+  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-corporate.jpg');
   background-position: top;
 }
 
@@ -279,6 +292,11 @@ body, p {
 }
 
 #hero-landing {
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/hero-landing.jpg');
+  background-position: top right;
+}
+
+#hero-events {
   background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/hero-landing.jpg');
   background-position: top right;
 }
@@ -585,6 +603,19 @@ ul.share-buttons img {
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
   }
+}
+
+/* Event Page Card Hover */
+.hover-animate {
+  transition: 0.5s;
+}
+
+.hover-animate:hover {
+  background-color: rgb(240, 240, 240) !important;
+}
+
+.hover-animate:hover a {
+  color: #05B4D0 !important;
 }
 
 /* GRADS PAGE */

@@ -1,29 +1,33 @@
 ---
 tags: []
 layout: post
-title: 'Student Highlight: Lillian Situ'
-description: c
-created_at: 2017-12-19 06:00:00 +0000
-updated_at: 2017-12-19 06:00:00 +0000
+title: 'Austin Coding Academy Student Highlight: Lillian Situ'
+description: Lillian Situ graduated from Austin Coding Academy's Full Stack Web Development
+  program in December 2017, and is now a Software Engineer at data.world.
+created_at: 2017-12-19T06:00:00.000+00:00
+updated_at: 2017-12-19T06:00:00.000+00:00
 categories:
 - student-highlight
-excerpt: This week we’re putting the spotlight on Lillian Situ. Lillian completed
-  the Full Stack JavaScript program in December 2017 and now she is employed as a
-  Software Engineer at data.world! We asked her to reflect on herself and her time
-  at Austin Coding Academy.
-img: c
+excerpt: Every month we like to feature our outstanding students at Austin Coding
+  Academy. ACA’s student body is as diverse as it is interesting and we’d like to
+  give everyone the opportunity to get to know them a little better. This month we’re
+  putting the spotlight on Lillian Situ. Lillian completed the Full Stack JavaScript
+  program in December 2017 and now she is employed as a Software Engineer at data.world!
+img: "/assets/images/student-highlight-header-lillian-situ.png"
 redirect_from: []
-permalink: "/blog/student-highlight/lillian-situ"
-height: ''
-width: ''
-date: 2019-04-02 14:42:59 +0000
+permalink: "/blog/student-highlight/lillian-situ/"
+height: 
+width: 
+date: '2019-04-02T14:42:59.000+00:00'
+author_name: Austin Coding Academy
+author_email: info@austincodingacademy.com
 
 ---
-## Just one of our students who has found her dream job!
+# Get to know Austin Coding Academy graduate Lillian Situ
 
 Every month we like to feature our outstanding students at Austin Coding Academy. ACA’s student body is as diverse as it is interesting and we’d like to give everyone the opportunity to get to know them a little better. Our students make Austin Coding Academy the great place that it is.
 
-This week we’re putting the spotlight on Lillian Situ. Lillian completed the Full Stack JavaScript program in December 2017 and now she is employed as a Software Engineer at data.world! We asked her to reflect on herself and her time at Austin Coding Academy.
+This month we’re putting the spotlight on Lillian Situ. Lillian completed the Full Stack JavaScript program in December 2017 and now she is employed as a Software Engineer at data.world! We asked her to reflect on herself and her time at Austin Coding Academy.
 
 **Hometown?**
 

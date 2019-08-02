@@ -1,6 +1,6 @@
 ---
 layout: resume # don't touch
-categories: [ graduation, hire austin ] # don't touch
+categories: [ graduation, hire, austin ] # don't touch
 
 fullname: Brian Bridges
 jobtitle: Web Developer
@@ -10,7 +10,7 @@ blurb: "I am a junior web designer, looking for remote work in wordpress"
 
 skills:
   - Web Design
-  - Google Analytics  
+  - Google Analytics
   - SEO
   - Google Search Console
   - Wordpress
