@@ -1,21 +1,85 @@
 ---
 layout: default
 permalink: "/new-student-referral/"
-contactLightbox: true
-title: New Student Referral Info | Austin Coding Academy
-description: Austin Coding Academy new student referrals info.
+austin:
+  contactLightbox: true
+  title: New Student Referral Info | Austin Coding Academy
+  referral_amount: $100
+  description: Students at Austin Coding Academy come from all walks of life, but they each share one common trait; every ACA student is
+    committed to learning and improving, whether they’re hoping to launch a more rewarding career, adding a new skill to their
+    repertoire, or transforming a great idea into a new company. After our students complete ACA and witness first-hand the
+    transformative nature of our school, they’re so often shouting our praises from the rooftop. As a way of saying thanks for all of
+    that ACA love, we’re offering a special Referral Program for our November and January cohorts!
+  faq:
+  - question: How Does It Work?
+    text: Austin Coding Academy’s referral process is simple. Current students, graduates, and instructors who want to share the benefits of
+      learning with ACA will be rewarded for growing the community. ACA will be awarding referral bonuses to both current students, grads,
+      and instructors who refer new students, and to referred students who enroll in classes. Both the new student and the referring
+      student, graduate, or instructor will receive a $100 for helping build our community. When a referred student submits an application
+      they’ll select either "ACA faculty / staff" or "ACA student / alumni" in the "How did you hear about us?" field. Be sure to mention
+      who you were referred by in your application interview. Once the new student has completed three weeks of their course, both the student
+      and the referrer will receive their reward... Easy!
+  - question: Who Should I Refer?
+    text: Know someone else who is committed to improvement? Maybe a friend, family member, or coworker who is looking for a career change or to
+      add a new set of skills to their current job? Don’t be shy, let them know about our program. Austin Coding Academy is here to help people
+      who are looking to improve their lives. We’re proud of how strong our community is, so adding someone who shares our values makes all of us better.
+  - question: Why Should I Refer Someone?
+    text: Referrals help keep the ACA community growing, and it’s always extra rewarding to help someone you care about succeed. By referring someone
+      to ACA, you’re giving that person the opportunity to improve their lives by gaining a valuable and in-demand skill. It’s exciting to see friends
+      and family members work together in our program and strive towards making meaningful changes in their careers, together. Let’s keep that up!
+  rule_bullets:
+  - Rewards for referrals apply to students who enroll in the Austin Coding Academy Full Stack Web Development Track
+  - Referred students must complete at least 3 weeks of class for referral benefits to be awarded – at that point, a member of the
+    ACA team will reach out to both parties.
+  - You can refer as many students as you like to sign up for our classes.
+  - The $100 referral credit will be awarded to graduates and instructors in the form of a Visa gift card.
+  - Current students will have the option to have the $100 credited to their account for future courses or receive the credit as a $100 Visa gift card.
+  - Newly referred students will have the $100 credit awarded towards their tuition payment.
+
+lubbock:
+  contactLightbox: true
+  title: New Student Referral Info | Lubbock Coding Academy
+  referral_amount: $50
+  description: Students at Lubbock Coding Academy come from all walks of life, but they each share one common trait; every LCA student is
+    committed to learning and improving, whether they’re hoping to launch a more rewarding career, adding a new skill to their repertoire,
+    or transforming a great idea into a new company. The best way to grow Lubbock Coding Academy and continue to make sure that people have
+    access to an affordable and practical web development education is by spreading the word.
+  faq:
+  - question: How Does It Work?
+    text: Lubbock Coding Academy’s referral process is simple. Current students, graduates, and instructors who want to share the benefits of
+      learning with LCA will be rewarded for growing the community. LCA will be awarding referral bonuses to both current students, grads, and
+      instructors who refer new students, and to referred students who enroll in classes. Both the new student and the referring student, graduate,
+      or instructor will receive a $50 Amazon gift card for helping build our community. Simply enter your information at the bottom of this page
+      and document which current Lubbock Coding Academy student, staff, or instructor referred you to the program. Once you apply, make sure to
+      mention that you are taking advantage of the student referral program.
+  - question: Who Should I Refer?
+    text: Know someone else who is committed to improvement? Maybe a friend, family member, or coworker who is looking for a career change or to
+      add a new set of skills to their current job? Don’t be shy, let them know about our program. Lubbock Coding Academy is here to help people who
+      are looking to improve their lives. We’re proud of how strong our community is, so adding someone who shares our values makes all of us better.
+  - question: Why Should I Refer Someone?
+    text: Referrals help keep the LCA community growing, and it’s always extra rewarding to help someone you care about succeed. By referring someone
+      to LCA, you’re giving that person the opportunity to improve their lives by gaining a valuable and in-demand skill. It’s exciting to see friends
+      and family members work together in our program and strive towards making meaningful changes in their careers, together. Let’s keep that up!
+  rule_bullets:
+    –Rewards for referrals apply to students who enroll in the Lubbock Coding Academy Full Stack Web Development Track
+    –Referred students must complete at least 3 weeks of class for referral benefits to be awarded – at that point, a member of the LCA team will reach out to both parties.
+    –You can refer as many students as you like to sign up for our classes
+    –The $50 referral credits will be awarded in the form of a Visa/Amazon gift card
 
 ---
+{% assign school = page[site.key] %}
+
 <div class="container mw-850 mt-90 pt-1 pb-5">
   <div class="my-10">
     <h1 class="text-center font-family-alt font-weight-bold display-5 mb-4">
-      Austin Coding Academy New Student Referrals
+      {{ site.key | capitalize }} Coding Academy<br>
+      New Student Referrals
     </h1>
-    <h2 class="text-center display-6">
-      Earn $100 each for you and a friend when they become a student of Austin Coding Academy
+    <h2 class="text-center display-7">
+      Earn {{ school.referral_amount }} each for you and a friend when they become a student of {{ site.key | capitalize }} Coding Academy
     </h2>
   </div>
-  <div class="w-75 mx-auto mb-6">
+  <div class="w-100 w-sm-75 mx-auto mb-6">
     <amp-img
       height="400px"
       width="600px"
@@ -24,66 +88,47 @@ description: Austin Coding Academy new student referrals info.
       alt="Passion Led Us Here"
     ></amp-img>
   </div>
-  <p class="mt-6 pt-4">
-    Students at Austin Coding Academy come from all walks of life, but they each share one common trait; every ACA student is committed to learning and improving, whether they’re hoping to launch a more rewarding career, adding a new skill to their repertoire, or transforming a great idea into a new company. After our students complete ACA and witness first-hand the transformative nature of our school, they’re so often shouting our praises from the rooftop. As a way of saying thanks for all of that ACA love, we’re offering a special Referral Program for our November and January cohorts!
+  <p class="mt-6 mb-10 pt-4 px-2 p-sm-0 mx-auto">
+    {{ school.description }}
   </p>
-  <div class="my-10">
-    <h2 class="font-family-alt font-weight-bold display-6">
-      How Does It Work?
-    </h2>
-  </div>
-  <p class="mt-3">
-    Austin Coding Academy’s referral process is simple. Current students, graduates, and instructors who want to share the benefits of learning with ACA will be rewarded for growing the community. ACA will be awarding referral bonuses to both current students, grads, and instructors who refer new students, and to referred students who enroll in classes. Both the new student and the referring student, graduate, or instructor will receive a $100 for helping build our community. When a referred student submits an application they’ll select either "ACA faculty / staff" or "ACA student / alumni" in the "How did you hear about us?" field. Be sure to mention who you were referred by in your application interview. Once the new student has completed three weeks of their course, both the studente and the referrer will receive their reward... Easy!
+  <!-- Start Questions -->
+  {% for item in school.faq %}
+    <div class="mb-8">
+      <h2 class="mx-auto mx-sm-0 text-center text-sm-left font-family-alt font-weight-bold display-6 mb-4">
+        {{ item.question }}
+      </h2>
+      <p class="px-2 p-sm-0 mx-auto">
+        {{ item.text }}
+      </p>
+    </div>
+  {% endfor %}
+  <!-- End Questions -->
   </p>
-  <div class="my-10">
-    <h2 class="font-family-alt font-weight-bold display-6">
-      Who Should I Refer?
-    </h2>
-  </div>
-  <p class="mt-3">
-    Know someone else who is committed to improvement? Maybe a friend, family member, or coworker who is looking for a career change or to add a new set of skills to their current job? Don’t be shy, let them know about our program. Austin Coding Academy is here to help people who are looking to improve their lives. We’re proud of how strong our community is, so adding someone who shares our values makes all of us better.
-  </p>
-  <div class="my-10">
-    <h2 class="font-family-alt font-weight-bold display-6">
-      Why Should I Refer Someone?
-    </h2>
-  </div>
-  <p class="mt-3">
-    Referrals help keep the ACA community growing, and it’s always extra rewarding to help someone you care about succeed. By referring someone to ACA, you’re giving that person the opportunity to improve their lives by gaining a valuable and in-demand skill. It’s exciting to see friends and family members work together in our program and strive towards making meaningful changes in their careers, together. Let’s keep that up!
-  </p>
-  <div class="my-10">
-    <h2 class="font-family-alt font-weight-bold display-6">
+  <!-- Rules -->
+  <div class="mb-8">
+    <h2 class="mx-auto mx-sm-0 text-center text-sm-left font-family-alt font-weight-bold display-6 mb-4">
       What Are The Rules?
     </h2>
+    <p class="px-2 p-sm-0 mx-auto">
+      Here are the key things you need to know about how our referral program works:
+    </p>
+    <ul>
+      {% for item in school.rule_bullets %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
   </div>
-  <p class="mt-3">
-    Here are the key things you need to know about how our referral program works:
-  </p>
-  <ul>
-    <li>Rewards for referrals apply to students who enroll in the Austin Coding Academy Full Stack Web Development Track </li>
-    <li>
-        Referred students must complete at least 3 weeks of class for referral benefits to be awarded – at that point, a member of the ACA team will reach out to both parties.
-    </li>
-    <li>You can refer as many students as you like to sign up for our classes</li>
-    <li>
-      The $100 referral credit will be awarded to graduates and instructors in the form of a Visa gift card
-    </li>
-    <li>
-      Current students will have the option to have the $100 credited to their account for future courses or receive the credit as a $100 Visa gift card
-    </li>
-    <li>
-      Newly referred students will have the $100 credit awarded towards their tuition payment
-    </li>
-  </ul>
-  <div class="my-10">
-    <h2 class="font-family-alt font-weight-bold display-6">
+  <!-- End Rules -->
+  <div class="mb-8">
+    <h2 class="mx-auto mx-sm-0 text-center text-sm-left font-family-alt font-weight-bold display-6 mb-4">
       Questions?
     </h2>
+    <p class="px-2 p-sm-0 mx-auto">
+      Have additional questions about the Referral Program? Email <a href="mailto:info@{{ site.key }}codingacademy.com" rel="noopener" target="_blank">info@{{ site.key }}codingacademy.com</a>
+      with the subject line “Referral Program” with your question, and a member of the {{ site.acronym | upcase }} team will get back to you with an answer!
+    </p>
   </div>
-  <p class="mt-3">
-    Have additional questions about the Referral Program? Email <a href="info@austincodingacademy.com" rel="noopener" target="_blank">info@austincodingacademy.com</a> with the subject line “Referral Program” with your question, and a member of the ACA team will get back to you with an answer!
-  </p>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center mb-4">
     <!-- htmllint preset="none" -->
     <a
       class="text-white btn btn-round bg-purple hover-white center mt-4 hover-white"
