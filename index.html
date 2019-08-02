@@ -287,41 +287,51 @@ lubbock:
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Why Choose Us?
       </h2>
-      <p class="mw-600 mx-auto text-center text-white">
+      <p class="px-1 mw-600 mx-auto text-center text-white">
         As fun as it is to learn how to code, we know you didn't just come to us
         for the kicks. You need to launch a new career and we're here to help you
-        do it. <br>
+        do it.
+        <br>
+        <br>
         Here's how:
       </p>
-      <div class="col">
+      <div>
         {% for feature in city.features %}
-          <div class="col-12 col-md">
-            <div class="row">
+          <div class="col-12">
+            <div class="row d-flex justify-content-center align-items-center">
               <!-- Image -->
               {% if feature.square %}
-                <div class="col-3 mb-md-3 d-flex align-items-center justify-content-center">
+                <div
+                  style="max-width: 112px; max-height: 112px;"
+                  class="col-3 mr-sm-4 mb-sm-3 d-flex align-items-center justify-content-center"
+                >
                   <amp-img
                     width="80px"
                     height="80px"
-                    layout="fixed"
+                    layout="responsive"
+                    class="w-100"
                     src="/assets/images/{{ feature.img }}"
-                    alt=""
+                    alt="{{ feature.alt }}"
                   ></amp-img>
                 </div>
               {% else %}
-                <div class="col-3 mb-md-3 d-flex align-items-center justify-content-center">
+                <div
+                  style="max-width: 112px; max-height: 84px;"
+                  class="col-3 mr-sm-4 mb-sm-3 d-flex align-items-center justify-content-center"
+                >
                   <amp-img
                     width="80px"
                     height="60px"
-                    layout="fixed"
+                    layout="responsive"
+                    class="w-100"
                     src="/assets/images/{{ feature.img }}"
-                    alt=""
+                    alt="{{ feature.alt }}"
                   ></amp-img>
                 </div>
               {% endif %}
               <!-- Text -->
               <div class="col-9">
-                <h3 class="font-weight-bold ml-4 ml-md-0 text-left">
+                <h3 class="font-weight-bold text-left">
                   <b>{{ feature.heading }}</b>
                 </h3>
                 <div class="mb-3">
