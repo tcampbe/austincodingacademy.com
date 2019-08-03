@@ -104,11 +104,13 @@
   src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"
 ></script>
 
+{% if page.amp_components contains 'amp-carousel' %}
 <script
   async
   custom-element="amp-carousel"
   src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
 ></script>
+{% endif %}
 
 <script
   async
