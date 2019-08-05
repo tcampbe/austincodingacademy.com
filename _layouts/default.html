@@ -38,9 +38,9 @@
     {% include google-tag-manager-head.html %}
 
     {% if site.baseurl == '/amp' %}
-      <link rel="canonical" href="{{site.url}}{{city.url}}">
+      <link rel="canonical" href="{{site.url}}{{city.url}}{{page.url}}">
     {% else %}
-      <link rel="amphtml" href="{{site.url}}/amp{{city.url}}">
+      <link rel="amphtml" href="{{site.url}}/amp{{city.url}}{{page.url}}">
     {% endif %}
 
     {{ city.head }}
