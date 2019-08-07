@@ -11,10 +11,18 @@ lubbock:
 <div class="container mt-90 pt-1 pb-5">
   <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
     {% for page in site.pages %}
-      {% if page.layout == 'resume' %}
+      {% if page.layout == 'resume' and page.categories contains site.key %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 text-center">
           <a href="https://github.com/AustinCodingAcademy/austincodingacademy.com/edit/preview/{{page.path}}" target="_blank" rel="noopener">
-            {% unless page.categories contains 'hire' and page.projects[0].url and page.skills[0] == 'JavaScript' or page.skills[0] == 'C# .NET' %} 🚧 {% endunless %} Edit This Page {% unless page.categories contains 'hire' and page.projects[0].url and page.skills[0] == 'JavaScript' or page.skills[0] == 'C# .NET' %} 🚧 {% endunless %}
+            {% assign track = page.skills[0] | downcase %}
+            {%
+              if page.categories contains 'hire' and page.projects[0].url and
+              track contains 'javascript' or track contains 'c#' or track contains 'csharp' or track contains '.net' or track contains 'web design'
+            %}
+              Edit This Page
+            {% else %}
+              🚧 Edit This Page 🚧
+            {% endif %}
           </a>
           <div class="card shadow">
             <div class="card-header">
