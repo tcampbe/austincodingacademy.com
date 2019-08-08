@@ -113,6 +113,9 @@ austin_footer:
 - weight: 6
   title: Hire a Graduate
   url: "/hire"
+- weight: 4
+  title: Graduating Class
+  url: "/grads"
 - weight: 5
   title: Become an Instructor
   url: "/instructor-apply"
