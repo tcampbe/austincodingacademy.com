@@ -1,12 +1,15 @@
 @import url('../../node_modules/front/assets/css/theme.css');
-@import url('../../node_modules/@fortawesome/fontawesome-free/css/all.css');
+@import url('../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css');
 
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(/assets/fonts/MontserratBold.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+    url(/assets/fonts/MontserratBold.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
   font-display: swap;
 }
 
@@ -15,55 +18,67 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(/assets/fonts/OpenSansRegular.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url(/assets/fonts/OpenSansRegular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
   font-display: swap;
 }
 
+.fa, .far, .fas {
+  font-family: Font Awesome\5 Free;
+}
+
+.fab {
+  font-family: Font Awesome\5 Brands;
+}
+
 @font-face {
-  font-family: Font Awesome\ 5 Brands;
+  font-family: Font Awesome\5 Brands;
   font-style: normal;
   font-weight: 400;
   font-display: auto;
   src: url(/assets/fonts/fa-brands-400.eot);
-  src: url(/assets/fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),
-  url(/assets/fonts/fa-brands-400.woff2) format("woff2"),
-  url(/assets/fonts/fa-brands-400.woff) format("woff"),
-  url(/assets/fonts/fa-brands-400.ttf) format("truetype"),
-  url(/assets/fonts/fa-brands-400.svg#fontawesome) format("svg");
+  src: url(/assets/fonts/fa-brands-400.eot?#iefix) format('embedded-opentype'),
+    url(/assets/fonts/fa-brands-400.woff2) format('woff2'),
+    url(/assets/fonts/fa-brands-400.woff) format('woff'),
+    url(/assets/fonts/fa-brands-400.ttf) format('truetype'),
+    url(/assets/fonts/fa-brands-400.svg#fontawesome) format('svg');
   font-display: swap;
 }
 
 @font-face {
-  font-family: Font Awesome\ 5 Free;
+  font-family: Font Awesome\5 Free;
   font-style: normal;
   font-weight: 400;
   font-display: auto;
   src: url(/assets/fonts/fa-regular-400.eot);
-  src: url(/assets/fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),
-  url(/assets/fonts/fa-regular-400.woff2) format("woff2"),
-  url(/assets/fonts/fa-regular-400.woff) format("woff"),
-  url(/assets/fonts/fa-regular-400.ttf) format("truetype"),
-  url(/assets/fonts/fa-regular-400.svg#fontawesome) format("svg");
+  src: url(/assets/fonts/fa-regular-400.eot?#iefix) format('embedded-opentype'),
+    url(/assets/fonts/fa-regular-400.woff2) format('woff2'),
+    url(/assets/fonts/fa-regular-400.woff) format('woff'),
+    url(/assets/fonts/fa-regular-400.ttf) format('truetype'),
+    url(/assets/fonts/fa-regular-400.svg#fontawesome) format('svg');
   font-display: swap;
 }
 
 @font-face {
-  font-family: Font Awesome\ 5 Free;
+  font-family: Font Awesome\5 Free;
   font-style: normal;
   font-weight: 900;
   font-display: auto;
   src: url(/assets/fonts/fa-solid-900.eot);
-  src: url(/assets/fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),
-  url(/assets/fonts/fa-solid-900.woff2) format("woff2"),
-  url(/assets/fonts/fa-solid-900.woff) format("woff"),
-  url(/assets/fonts/fa-solid-900.ttf) format("truetype"),
-  url(/assets/fonts/fa-solid-900.svg#fontawesome) format("svg");
+  src: url(/assets/fonts/fa-solid-900.eot?#iefix) format('embedded-opentype'),
+    url(/assets/fonts/fa-solid-900.woff2) format('woff2'),
+    url(/assets/fonts/fa-solid-900.woff) format('woff'),
+    url(/assets/fonts/fa-solid-900.ttf) format('truetype'),
+    url(/assets/fonts/fa-solid-900.svg#fontawesome) format('svg');
   font-display: swap;
 }
 
-body, p {
-  font-family: "Open Sans", sans-serif;
+body,
+p {
+  font-family: 'Open Sans', sans-serif;
   color: #303133;
 }
 
@@ -84,7 +99,7 @@ body, p {
 }
 
 .text-red-a {
-  color: #d83e31
+  color: #d83e31;
 }
 
 .text-blue {
@@ -103,7 +118,8 @@ body, p {
   color: #cccccc;
 }
 
-.link-underlined, .link-underlined:hover {
+.link-underlined,
+.link-underlined:hover {
   text-decoration: underline;
 }
 
@@ -132,10 +148,11 @@ body, p {
 }
 
 .shadow-dark {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15)
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.shadow-black, .shadow-black:hover {
+.shadow-black,
+.shadow-black:hover {
   box-shadow: 2px 2px 10px #1e2022;
 }
 
@@ -154,11 +171,11 @@ body, p {
 }
 
 .font-family-alt {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .font-family-serif {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
 }
 
 /* CUSTOM FONT SIZING */
@@ -173,7 +190,7 @@ body, p {
   .display-responsive {
     font-size: 2rem;
     font-weight: 300;
-    line-height: 1.2
+    line-height: 1.2;
   }
 }
 
@@ -199,11 +216,11 @@ body, p {
 }
 /* quote footer */
 .display-9 {
-  font-size: .9rem !important;
+  font-size: 0.9rem !important;
 }
 
 .display-small {
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 .large-icon {
@@ -216,23 +233,25 @@ body, p {
   opacity: 0;
 }
 
-.nav-item a:hover, #sidebar a:hover, .cta-gradient:hover {
+.nav-item a:hover,
+#sidebar a:hover,
+.cta-gradient:hover {
   color: #ffffff;
   cursor: pointer;
 }
 
 .hover-white:hover {
   color: #ffffff;
-  text-shadow: 0 0 4px rgba(255,255,255,.75);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.75);
 }
 
 .photo-hover {
-  -webkit-transition: box-shadow .3s, transform .3s; /* Safari */
-  transition: box-shadow .3s, transform .3s;
+  -webkit-transition: box-shadow 0.3s, transform 0.3s; /* Safari */
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .photo-hover:hover {
-  box-shadow: 0 0 30px rgba(45,47,119, 0.7);
+  box-shadow: 0 0 30px rgba(45, 47, 119, 0.7);
   -webkit-transform: scale(1.025); /* Safari */
   transform: scale(1.025);
 }
@@ -240,12 +259,14 @@ body, p {
 /* HEADER IMAGES */
 
 #header-events {
-  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0,179,209, 0.7)), url('/assets/images/header-csharp.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0, 179, 209, 0.7)),
+    url('/assets/images/header-csharp.jpg');
   background-position: top;
 }
 
 #header-javascript {
-  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/header-javascript.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)),
+    url('/assets/images/header-javascript.jpg');
   background-position: top right;
 }
 
@@ -266,7 +287,8 @@ body, p {
 }
 
 #hero-index {
-  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-index.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7)),
+    url('/assets/images/hero-index.jpg');
   background-position: top;
 }
 
@@ -277,27 +299,32 @@ body, p {
 }
 
 #hero-corporate {
-  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-corporate.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7)),
+    url('/assets/images/hero-corporate.jpg');
   background-position: top;
 }
 
 #hero-js {
-  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0,179,209, 0.7)), url('/assets/images/hero-javascript.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0, 179, 209, 0.7)),
+    url('/assets/images/hero-javascript.jpg');
   background-position: top;
 }
 
 #hero-blog {
-  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/hero-blog.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)),
+    url('/assets/images/hero-blog.jpg');
   background-position: center;
 }
 
 #hero-landing {
-  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/hero-landing.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)),
+    url('/assets/images/hero-landing.jpg');
   background-position: top right;
 }
 
 #hero-events {
-  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/hero-landing.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)),
+    url('/assets/images/hero-landing.jpg');
   background-position: top right;
 }
 
@@ -465,12 +492,12 @@ body, p {
 }
 
 /* Hide Dropdowns */
-#nav-bar>ul>li>ul {
+#nav-bar > ul > li > ul {
   display: none;
 }
 
 /* Display Dropdowns on Hover */
-#nav-bar>ul>li:hover>ul {
+#nav-bar > ul > li:hover > ul {
   display: inherit;
 }
 
@@ -507,7 +534,7 @@ nav ul ul li {
 /* LIGHTBOX FORMS */
 
 .lightbox {
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100%;
 }
@@ -581,27 +608,35 @@ ul.share-buttons img {
 /* TYPING ANIMATION */
 
 @media (min-width: 768px) {
-  .line-typewriter{
+  .line-typewriter {
     position: relative;
     width: auto;
-    border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
   }
 
   /* Animation */
-  .anim-typewriter{
-  animation: typewriter 4s steps(60) 1s 1 normal both,
-            blinkTextCursor 1400ms steps(44) infinite normal;
+  .anim-typewriter {
+    animation: typewriter 4s steps(60) 1s 1 normal both,
+      blinkTextCursor 1400ms steps(44) infinite normal;
   }
-  @keyframes typewriter{
-  from{width: 0;}
-  to{width: 34rem;}
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 34rem;
+    }
   }
-  @keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+      border-right-color: transparent;
+    }
   }
 }
 
@@ -615,14 +650,14 @@ ul.share-buttons img {
 }
 
 .hover-animate:hover a {
-  color: #05B4D0 !important;
+  color: #05b4d0 !important;
 }
 
 /* GRADS PAGE */
 
 .background-logo {
   min-height: 100vh;
-  background-image: url("/assets/images/ACA-logo-white-large.png");
+  background-image: url('/assets/images/ACA-logo-white-large.png');
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
