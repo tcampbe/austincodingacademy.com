@@ -44,6 +44,6 @@ education:
 projects:
   - name: Third Coast Coffee
     desc: a redesign/rebuild of Third Coast Coffee's website
-    url: https://pure-fortress-19155.herokuapp.com/Contact
+    url: https://pure-fortress-19155.herokuapp.com/
 
 ---
