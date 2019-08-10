@@ -2,7 +2,7 @@
 layout: resume #don't touch
 categories: [ hire, graduation, austin ] # don't touch
 
-fullname: Collin
+fullname: Collin Betori
 jobtitle: Web Developer
 
 location: Austin, TX
