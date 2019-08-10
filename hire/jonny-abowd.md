@@ -25,7 +25,7 @@ skills:
 github: https://github.com/jonnyabowd
 linkedin: https://www.linkedin.com/in/jonnyabowd
 email: hello@jonnyabowd.com
-website: https://jonnyabowd.com
+website: https://jonnyabowd.github.io/site/
 workplace: Capital One
 phone:
 
