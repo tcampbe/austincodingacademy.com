@@ -24,7 +24,6 @@ skills:
 
 github: https://github.com/jonnyabowd
 linkedin: https://www.linkedin.com/in/jonnyabowd
-
 email: hello@jonnyabowd.com
 website: https://jonnyabowd.com
 workplace: Capital One
@@ -41,7 +40,7 @@ education:
   - name: Austin Coding Academy
     dates: August 2019
     degree: Full Stack Web Development (Javascript)
-    logo: https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/5062/s200/aca-logo-white-bckgnd-min.png
+    #logo: https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/5062/s200/aca-logo-white-bckgnd-min.png
 
 projects:
   - name: Huey
