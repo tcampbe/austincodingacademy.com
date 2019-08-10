@@ -54,6 +54,6 @@ education:
 projects:
   - name: Standup
     desc: Dev progress app created in mind of ACA students and grads.
-    url: https://safe-journey-50392.herokuapp.com/
+    url: https://stand-up1.herokuapp.com/
 
 ---
