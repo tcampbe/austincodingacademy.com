@@ -31,29 +31,19 @@ email: jschaef80@gmail.com
 phone: (972) 249-8840
 
 workexperience:
-  - company:
-    dates: October 2014 - March 2018
-    title: Logistics Manager
-    location: Austin, TX
-
-  - company:
-    dates: June 2014 - Februrary 2016
-    title: Asbestos Inspector & Abatement Project Manager
-    location: Austin, TX
-
-  - company:
-    dates: April 2008 - May 2014
-    title: Delivery Driver
+  - company: Third Coast Coffee
+    dates: September 2017 - Present
+    title: Assistant Manager
     location: Austin, TX
 
 education:
   - name: Austin Coding Acaademy
-    dates: June 2018 - April 2019
+    dates: September 2018 - August 2019
     degree: Web Development
 
 projects:
-  - name: Smart Shop
-    desc: grocery shopping list assistant
-    url: google.com
+  - name: Third Coast Coffee
+    desc: a redesign/rebuild of Third Coast Coffee's website
+    url: https://pure-fortress-19155.herokuapp.com/Contact
 
 ---
