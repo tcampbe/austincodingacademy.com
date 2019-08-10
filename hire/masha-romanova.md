@@ -49,6 +49,10 @@ education:
   - name: Austin Coding Acaademy
     dates: October 2018 - August 2019
     degree: UI/UX Development
+    
+  - name: University of Texas
+    dates: August 2011 - August 2015
+    degree: B.A. Sociology; Business Foundations Certification
 
 projects:
   - name: Bare Nutrition
