@@ -51,7 +51,8 @@ title: {{ page.fullname }}
                 {{ page.fullname }}
               </h1>
               <h2 class="display-7 mb-0">
-                {{ page.skills[0] }} Developer
+                {% assign track = page.skills[0] | capitalize %}
+                {{ track }} {% unless track contains 'Web' %} Developer {% endunless %}
               </h2>
             </div>
             <!-- End User Details -->

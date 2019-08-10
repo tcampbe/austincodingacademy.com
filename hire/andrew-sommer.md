@@ -3,7 +3,7 @@ layout: resume #don't touch
 categories: [ hire, graduation, austin ] # don't touch
 
 fullname: Andrew Sommer
-jobtitle: Administrative Assistant
+jobtitle: Software Engineer
 
 location: Austin, TX
 blurb: ""
@@ -34,30 +34,30 @@ workexperience:
   - company: MCM Law
     dates: 2018 - 2019
     title: Administrative Assistant
-    location: St. Louis, MO
+    location: "St. Louis, MO"
 
   - company: Total Quality Logistics
     dates: 2016 - 2017
     title: Account Manager
-    location: St. Louis, MO
+    location: "St. Louis, MO"
 
   - company: Dewey's Pizza
     dates: 2010-2016
-    title: Kitchen Manager/ Cook
-    location: Austin, TX
+    title: Kitchen Manager / Cook
+    location: "Austin, TX"
 
 education:
   - name: Austin Coding Acaademy
     dates: October 2018 - August 2019
     degree: Web Development
- 
- - name: Maryville University
-   dates: Graduated 2015
-   degreee: Criminal Justice
+
+  - name: Maryville University
+    dates: Graduated 2015
+    degreee: Criminal Justice
 
 projects:
   - name: Yolf
     desc: track your golf statistics
-    url: google.com
+    url: https://yolf-app.herokuapp.com/
 
 ---
