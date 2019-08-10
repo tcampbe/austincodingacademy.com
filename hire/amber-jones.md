@@ -6,7 +6,7 @@ fullname: Amber Jones
 jobtitle: Software Engineer
 
 location: Austin, TX
-blurb: "I describe myself as a well-rounded software developer. I have the skills to produce consistent and polished code based on wire-frames to customer specifications.  However, I am grateful for the stability that algorithms bring. Collaboration and creativity are what I love about working as a team. Additionally, I am at a prime and rare stage where I can be molded to best suit your companies team."
+blurb: "I describe myself as a well-rounded software developer. I have the skills to produce consistent and polished code based on wire-frames to customer specifications.  However, I am grateful for the stability that algorithms bring. Collaboration and creativity are what I love about working as a team. Additionally, I am at a prime and rare stage where I can be molded to best suit your company's team."
 
 
 # first item must be JavaScript or C# or .NET or C#/.NET
@@ -45,9 +45,9 @@ workexperience:
     location: San Antonio, TX
 
 education:
-  - name: Austin Coding Academy
-    dates: November 2018 - July 2019
-    degree: Full Stack Web Development
+- name: Austin Coding Academy
+  dates: November 2018 - July 2019
+  degree: Full Stack Web Development
 
 projects:
   - name: PACE
