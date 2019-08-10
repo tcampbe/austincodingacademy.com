@@ -31,19 +31,19 @@ email: hnbarr94@gmail.com
 phone: (903) 714-1269
 
 workexperience:
-  - company:
-    dates: October 2014 - March 2018
-    title: Logistics Manager
+  - company: Razzoos
+    dates: October 2018 - August 2019
+    title: Server
+    location: Roundn Rock, TX
+
+  - company: Visa
+    dates: January 2018 - October 2018
+    title: Customer AService Rep
     location: Austin, TX
 
-  - company:
-    dates: June 2014 - Februrary 2016
-    title: Asbestos Inspector & Abatement Project Manager
-    location: Austin, TX
-
-  - company:
-    dates: April 2008 - May 2014
-    title: Delivery Driver
+  - company: Yodle/Web.com
+    dates: January 2017 - December 2017
+    title: Sales Rep
     location: Austin, TX
 
 education:
@@ -52,8 +52,8 @@ education:
     degree: Web Development
 
 projects:
-  - name: Smart Shop
-    desc: grocery shopping list assistant
-    url: google.com
+  - name: Standup
+    desc: Dev progress app created in mind of ACA students and grads.
+    url: https://safe-journey-50392.herokuapp.com/
 
 ---
