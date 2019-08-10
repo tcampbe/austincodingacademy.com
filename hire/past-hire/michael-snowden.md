@@ -6,7 +6,7 @@ fullname: Michael Snowden
 jobtitle: Web Developer
 
 location: Austin, TX
-blurb: "stay kewt"
+blurb: ""
 
 # first item must be JavaScript or C# or .NET or C#/.NET
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
@@ -54,6 +54,6 @@ education:
 projects:
   - name: Michael Snowden Studio
     desc: Online portfolio and marketplace for my art business
-    url: www.michaelsnowdenstudio.com
+    url: https://ms-studio.herokuapp.com/
 
 ---
