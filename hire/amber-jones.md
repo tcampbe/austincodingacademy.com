@@ -50,7 +50,7 @@ education:
     degree: Full Stack Web Development
 
 projects:
-  - name: &lt; PACE />
+  - name: PACE
     desc:  "My app is a forum style chat room, where the user must register to access protected content. Once registered, the user can log in, create, edit and delete their own profile. Once an authorized user logs in, they may create a post in the forum and fellow users can leave comments. Also, users are able to check the local listings of upcoming 5k events and see their place on a map. Finally, my app includes a music player that contains all music and videos found on the Google YouTube site."
     url: https://fierce-lowlands-48024.herokuapp.com/
 
