@@ -45,9 +45,9 @@ workexperience:
     location: San Antonio, TX
 
 education:
-  - name: Austin Coding Academy
-    dates: November 2018 - July 2019
-    degree: Full Stack Web Development
+- name: Austin Coding Academy
+  dates: November 2018 - July 2019
+  degree: Full Stack Web Development
 
 projects:
   - name: PACE
