@@ -50,7 +50,7 @@ education:
     degree: Associate of Applied Science Degree | Graphic Arts Technology Specialization
 
 projects:
-  - name: Venus Ramirez - small business owner
+  - name: Venus Ramirez
     desc: creating a small business website for haistylist
     url: https://venus-ramirez.com/
 
