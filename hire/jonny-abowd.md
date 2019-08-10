@@ -6,7 +6,7 @@ fullname: Jonny Abowd
 jobtitle: Chief Technology Officer, Web Developer
 
 location: Austin, TX
-blurb: "Good design is like a refrigerator—when it works, no one notices, but when it doesn’t, it sure stinks." –Irene Au
+blurb: "'Good design is like a refrigerator—when it works, no one notices, but when it doesn’t, it sure stinks.' –Irene Au"
 
 skills:
   - JavaScript
