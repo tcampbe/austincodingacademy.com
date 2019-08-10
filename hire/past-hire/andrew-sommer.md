@@ -58,6 +58,6 @@ education:
 projects:
   - name: Yolf
     desc: track your golf statistics
-    url: google.com
+    url: https://yolf-app.herokuapp.com/
 
 ---
