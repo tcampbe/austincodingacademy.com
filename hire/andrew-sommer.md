@@ -3,7 +3,7 @@ layout: resume #don't touch
 categories: [ hire, graduation, austin ] # don't touch
 
 fullname: Andrew Sommer
-jobtitle: Administrative Assistant
+jobtitle: Software Engineer
 
 location: Austin, TX
 blurb: ""
