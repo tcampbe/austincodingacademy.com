@@ -12,7 +12,7 @@ blurb: "I describe myself as a well-rounded software developer. I have the skill
 # first item must be JavaScript or C# or .NET or C#/.NET
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
-  - JavaScript ES6
+  - JavaScript
   - Node.js
   - Test Driven Development
   - Git/GitHub
@@ -45,12 +45,12 @@ workexperience:
     location: San Antonio, TX
 
 education:
-  - name: Austin Coding Acaademy
+  - name: Austin Coding Academy
     dates: November 2018 - July 2019
     degree: Full Stack Web Development
 
 projects:
-  - name: <PACE/>
+  - name: &lt; PACE />
     desc:  "My app is a forum style chat room, where the user must register to access protected content. Once registered, the user can log in, create, edit and delete their own profile. Once an authorized user logs in, they may create a post in the forum and fellow users can leave comments. Also, users are able to check the local listings of upcoming 5k events and see their place on a map. Finally, my app includes a music player that contains all music and videos found on the Google YouTube site."
     url: https://fierce-lowlands-48024.herokuapp.com/
 
