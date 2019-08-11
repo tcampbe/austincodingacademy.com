@@ -23,7 +23,7 @@ github: https://github.com/hudsong444
 linkedin: https://www.linkedin.com/in/gwenhudson
 
 email: gwenhudson.designs@gmail.com
-web page: https://www.gwenhudsondesigns.com/
+website: https://www.gwenhudsondesigns.com/
 phone: 512-297-1648
 
 workexperience:
