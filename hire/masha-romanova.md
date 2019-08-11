@@ -27,7 +27,7 @@ github: https://github.com/masharomanova
 linkedin: https://www.linkedin.com/in/mromanova/
 
 email: masha@mashabydesign.com
-web page: https://mashabydesign.com/
+website: https://mashabydesign.com/
 phone: (512) 552-5977
 
 workexperience:
