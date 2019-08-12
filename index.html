@@ -1,7 +1,16 @@
 ---
 layout: default
 permalink: "/"
-amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel']
+amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel', 'amp-lightbox', 'amp-video', 'amp-youtube']
+cover_video:
+  src: "/assets/videos/aca-intro.webm"
+  src_mp4: "/assets/videos/aca-intro.mp4"
+  title: 'ACA Cover Video'
+  poster: "/assets/images/aca-intro-poster.png"
+lightbox_youtube:
+  src_id: "n4x3bdW-kq8"
+  title: 'Karen Davis ACA Testimonial'
+  src_mp4: "/assets/videos/KarenDavis_ACA_Testimonial.mp4"
 logos:
 - width: 721px
   height: 225px
@@ -198,22 +207,20 @@ lubbock:
   form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
 ---
 
-{% assign city = page[site.key] %}
-<!-- htmllint preset="none" -->
-<div id="hero-{{ city.hero }}" class="hero">
-<!-- htmllint preset="$previous" -->
-  <div class="py-7 py-md-11 container">
+{% assign school = page[site.key] %}
+<div id="video-container" class="position-relative d-flex d-sm-block justify-content-center flex-column">
+  <div class="pl-3 pl-sm-6 ml-sm-4 py-7 py-md-11 container position-absolute z-20">
     <div class="col-8 col-md-7 col-lg-6 pl-0">
       <div class="my-11"></div>
       <h1 class="text-white font-family-alt font-weight-bold display-responsive">
-        {{ city.heading }}
+        {{ school.heading }}
       </h1>
       <p class="text-white mt-4 mb-3 line-typewriter anim-typewriter">
-        {{ city.subheading }}
+        {{ school.subheading }}
       </p>
       <div class="d-flex justify-content-start">
         <button
-          class="btn btn-outline-light btn-round mr-2 px-2 d-sm-none"
+          class="btn btn-outline-light btn-round mr-2 px-2 d-md-none"
           on="tap:call-us"
           role="button"
           tabindex="0"
@@ -230,43 +237,91 @@ lubbock:
           role="dialog"
         >
           <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center">
-            <!-- htmllint preset="none" -->
-            <a class="my-5 btn btn-light btn-round mr-2 d-sm-none"
-              href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType={{ city.appt_type }}"
+            <a class="my-5 btn btn-light btn-round mr-2 d-md-none"
+              href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType={{ school.appt_type }}"
               target="_blank"
               rel="noopener"
             >
               Schedule a Q&A
             </a>
-            <!-- htmllint preset="$previous" -->
             <h4 class="text-white display-7 border-top border-bottom">
               OR
             </h4>
-            <a class="my-5 btn btn-light btn-round mr-2 d-sm-none"
-              href="tel:{{ city.phone }}"
+            <a class="my-5 btn btn-light btn-round mr-2 d-md-none"
+              href="tel:{{ school.phone }}"
             >
               Call Us Now!
             </a>
           </div>
         </amp-lightbox>
-        <!-- htmllint preset="none" -->
         <a
-          class="btn btn-outline-light btn-round mr-2 d-none d-sm-block"
+          class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
           href="/web-development"
-          rel="noopener">
+          rel="noopener"
+          >
           Learn More
         </a>
         <a
-          class="btn cta-gradient text-white hover-white btn-round mr-2 d-none d-sm-block"
-          href="{{ city.schedule_href }}}"
-          target="_blank"
-          rel="noopener">
-          Schedule a Q&A
+          class="btn cta-gradient text-white hover-white btn-round mr-2 d-none d-md-block"
+          on="tap:testimonial-lightbox"
+          tabindex="0"
+          rel="noopener"
+          >
+          Hear From a Student
         </a>
-        <!-- htmllint preset="$previous" -->
+        <!-- Lightbox Testimonial Video -->
+        {% assign testimonial = page.lightbox_youtube %}
+        <amp-lightbox
+          id="testimonial-lightbox"
+          class="lightbox"
+          layout="nodisplay"
+          on="tap:testimonial-lightbox.close"
+          tabindex="0"
+          role="dialog"
+        >
+          <div class="w-75 mx-auto" style="margin-top: 100px">
+            <amp-youtube
+              data-videoid="{{ testimonial.src_id }}"
+              width="480"
+              height="270"
+              tabindex="0"
+              role="presentation"
+              on="tap:testimonial-lightbox.open"
+              layout="responsive"
+              title="{{ testimonial.title }}"
+            >
+            </amp-youtube>
+          </div>
+        </amp-lightbox>
       </div>
     </div>
   </div>
+  <!-- htmllint preset="none" -->
+  <div id="hero-{{ school.hero }}" class="hero z-10"></div>
+  <!-- htmllint preset="$previous" -->
+  <!-- Cover Video -->
+  {% assign video = page.cover_video %}
+  <amp-video
+    width="640"
+    height="360"
+    layout="responsive"
+    poster="{{ video.poster }}"
+    autoplay
+    loop
+    title="{{ video.title }}"
+  >
+    <source
+      src="{{ video.src }}"
+      type="video/webm"
+    />
+    <source
+      src="{{ video.src_mp4 }}"
+      type="video/mp4"
+    />
+    <div fallback>
+      <p>This browser does not support the video element.</p>
+    </div>
+  </amp-video>
 </div>
 
 <main>
@@ -304,7 +359,7 @@ lubbock:
         Here's how:
       </p>
       <div>
-        {% for feature in city.features %}
+        {% for feature in school.features %}
           <div class="col-12">
             <div class="row d-flex justify-content-center align-items-center">
               <!-- Image -->
@@ -365,7 +420,7 @@ lubbock:
       <!-- begin student-stories -->
       <div class="container">
         <div class="row">
-          {% for story in city.stories %}
+          {% for story in school.stories %}
             <div class="col-xs-12 col-sm-12 col-md-6">
               <div class="mt-4">
                 <amp-iframe
@@ -374,7 +429,6 @@ lubbock:
                   height="150px"
                   layout="responsive"
                   sandbox="allow-scripts allow-same-origin"
-                  frameborder="0"
                   allowfullscreen
                   title="{{ story.title }}"
                 >
