@@ -2,7 +2,7 @@
 layout: resume #don't touch
 categories: [ hire, graduation, austin ] # don't touch
 
-fullname: Gwendolyn Hudson
+fullname: Gwen Hudson
 jobtitle: Freelance Graphic/Web Designer
 
 location: Austin, TX
@@ -23,6 +23,7 @@ github: https://github.com/hudsong444
 linkedin: https://www.linkedin.com/in/gwenhudson
 
 email: gwenhudson.designs@gmail.com
+website: https://www.gwenhudsondesigns.com/
 phone: 512-297-1648
 
 workexperience:
@@ -39,6 +40,7 @@ workexperience:
   - company: Ambion
     dates: September 2000 - March 2006
     title: New Product Coordinator
+    location: Austin, TX
 
 education:
   - name: Austin Coding Acaademy
