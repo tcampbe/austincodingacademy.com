@@ -295,6 +295,7 @@ p {
 #video-container {
   overflow: hidden;
   max-height: 78vh;
+  min-height: 24rem;
 }
 
 /* filter over video */
