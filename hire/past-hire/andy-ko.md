@@ -8,7 +8,7 @@ location:
 blurb:
 
 skills:
-  - C# .NET
+  - C#/.NET
   - Node.js
   - React
   - Redux

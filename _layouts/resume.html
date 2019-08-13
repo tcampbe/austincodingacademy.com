@@ -51,8 +51,15 @@ title: {{ page.fullname }}
                 {{ page.fullname }}
               </h1>
               <h2 class="display-7 mb-0">
-                {% assign track = page.skills[0] | capitalize %}
-                {{ track }} {% unless track contains 'Web' %} Developer {% endunless %}
+                {% assign words = page.skills[0] | split: ' ' %}
+                {% capture skill %}{% for word in words %}{{ word | capitalize }}{% endfor %}{% endcapture %}
+                {% if skill contains 'Design' %}
+                  {{ skill | append: "er" }}
+                {% elsif skill contains 'C#' %}
+                  C#/.NET Developer
+                {% else %}
+                  {{ skill }} Developer
+                {% endif %}
               </h2>
             </div>
             <!-- End User Details -->
