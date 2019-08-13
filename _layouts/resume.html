@@ -52,9 +52,9 @@ title: {{ page.fullname }}
               </h1>
               <h2 class="display-7 mb-0">
                 {% assign words = page.skills[0] | split: ' ' %}
-                {% capture skill %}{% for word in words %}{{ word | capitalize }}{% endfor %}{% endcapture %}
+                {% capture skill %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %}
                 {% if skill contains 'Design' %}
-                  {{ skill | append: "er" }}
+                  {{ skill | strip | append: "er" }}
                 {% elsif skill contains 'C#' %}
                   C#/.NET Developer
                 {% else %}
@@ -197,21 +197,23 @@ title: {{ page.fullname }}
                 <!-- End Title -->
 
                 {% for work in page.workexperience %}
-                <!-- Info -->
-                <div class="media mb-5">
-                  <div class="media-body">
-                    <small class="d-block text-secondary">
-                      {{ work.dates }}
-                    </small>
-                    <h4 class="h6 mb-0">
-                      {{ work.title }}
-                    </h4>
-                    <span class="d-block text-secondary">
-                      {{ work.company }} - {{ work.location }}
-                    </span>
-                  </div>
-                </div>
-                <!-- End Info -->
+                  {% if work.company %}
+                    <!-- Info -->
+                    <div class="media mb-5">
+                      <div class="media-body">
+                        <small class="d-block text-secondary">
+                          {{ work.dates }}
+                        </small>
+                        <h4 class="h6 mb-0">
+                          {{ work.title }}
+                        </h4>
+                        <span class="d-block text-secondary">
+                          {{ work.company }} - {{ work.location }}
+                        </span>
+                      </div>
+                    </div>
+                    <!-- End Info -->
+                  {% endif %}
                 {% endfor %}
               </div>
 
