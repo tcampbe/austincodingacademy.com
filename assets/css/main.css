@@ -84,6 +84,12 @@ p {
   color: #303133;
 }
 
+@media (max-width: 850px) {
+  body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+}
+
 .text-default {
   color: #303133;
 }
@@ -496,6 +502,10 @@ p {
 
 .mt-90 {
   margin-top: 90px;
+}
+
+.mt-100 {
+  margin-top: 100px;
 }
 
 /* HEADER */

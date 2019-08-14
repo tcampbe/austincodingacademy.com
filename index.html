@@ -278,7 +278,7 @@ lubbock:
           tabindex="0"
           role="dialog"
         >
-          <div class="w-75 mx-auto" style="margin-top: 100px">
+          <div class="w-75 mx-auto mt-100">
             <amp-youtube
               data-videoid="{{ testimonial.src_id }}"
               width="480"
@@ -296,7 +296,7 @@ lubbock:
     </div>
   </div>
   <!-- htmllint preset="none" -->
-  <div id="hero-{{ school.hero }}" class="hero z-10 h-100"></div>
+  <div id="hero-{{ school.hero }}" class="hero z-10 vh-100"></div>
   <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}
@@ -306,6 +306,7 @@ lubbock:
     layout="responsive"
     poster="{{ video.poster }}"
     autoplay
+    class="d-none d-md-block"
     loop
     title="{{ video.title }}"
   >
