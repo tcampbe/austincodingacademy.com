@@ -15,18 +15,19 @@ public_path: "/assets/images"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
+instant_preview: false
 build:
-  preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
-    --config _configs/default.yml
-  publish_command: bundle exec jekyll build -d _site
   preview_env:
   - JEKYLL_ENV=staging
   - RUBY_VERSION=2.6.2
-  publish_env:
-  - JEKYLL_ENV=production
   preview_output_directory: _site
-  output_directory: _site
   install_dependencies_command: bundle install --path vendor/bundle
   preview_docker_image: forestryio/ruby:2.6
   mount_path: "/srv"
   instant_preview_command: bundle exec jekyll build
+  publish_command: bundle exec jekyll build -d _site
+  publish_env:
+  - JEKYLL_ENV=production
+  output_directory: _site
+  preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
+    --config _configs/default.yml
