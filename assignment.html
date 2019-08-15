@@ -5,10 +5,10 @@ title: "Assignment"
 description: ""
 amp_components: ['amp-img']
 redirect_from: []
-assignment_form_guid:
+assignment_form_guid: 60651a89-8f76-427f-aaf6-13263bfd9c6b
 
 heading: New Student Assignment
-form_heading: Personal Information
+form_heading: Student Information
 input_names:
 - first_name: firstname
 - last_name: lastname
@@ -24,7 +24,7 @@ challenge_descript2: "This is not a test of your coding knowledge. You are encou
 img_src: /assets/images/coding-assignment.png
 resources:
 - W3 Schools
-- Codepen (view this assignment in Code Pen <a href="">here</a>)
+- Codepen (view this assignment in Code Pen <a href="https://codepen.io/austincoding/pen/ELabMz" target="_blank" rel="noopener">here</a>)
 - Google
 ---
 
@@ -38,7 +38,7 @@ resources:
   <div class="row">
     <!-- Form -->
     <div class="col-xs-10 col-sm-10 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
-      <h2 class="mx-auto mb-4">
+      <h2 class="mx-auto mb-4 w-100">
         {{ page.form_heading }}
       </h2>
       <form
@@ -49,7 +49,6 @@ resources:
         <div class="form-container">
           <div class="row center-form mb-4">
             <!-- Input -->
-            {% assign page.input_names = name %}
             <div class="col-6">
               <div class="form-group">
                 <label for="first-name-cg" class="form-label">
@@ -60,7 +59,7 @@ resources:
                   id="first-name-cg"
                   type="text"
                   class="form-control"
-                  name="{{ name.first_name }}"
+                  name="firstname"
                   placeholder="First name"
                   required data-msg="Please enter your first name."
                   data-error-class="u-has-error"
@@ -81,7 +80,7 @@ resources:
                   id="last-name-cg"
                   type="text"
                   class="form-control"
-                  name="{{ name.last_name }}"
+                  name="lastname"
                   placeholder="Last name"
                   required data-msg="Please enter your last name."
                   data-error-class="u-has-error"
@@ -102,7 +101,7 @@ resources:
                   id="email-cg"
                   type="email"
                   class="form-control"
-                  name="{{ name.email }}"
+                  name="email"
                   placeholder="Email"
                   required data-msg="Please enter a valid email address."
                   data-error-class="u-has-error"
@@ -111,7 +110,9 @@ resources:
               </div>
             </div>
             <!-- End Input -->
-
+            <h2 class="mx-auto mb-4 w-100 col-12">
+              Student Essays
+            </h2>
             <!-- Input -->
             <div class="js-form-message mb-6 col-sm-12">
               <label for="goals" class="form-label">
@@ -123,7 +124,7 @@ resources:
                   class="form-control"
                   id="goals"
                   rows="14"
-                  name="{{ name.goals }}"
+                  name="what_are_your_goals_with_learning_to_code_and_why_are_you_taking_classes_"
                   placeholder="3-5 paragraphs"
                   aria-label="Goals question"
                   required
@@ -146,7 +147,7 @@ resources:
                   id="previous-efforts"
                   class="form-control"
                   rows="10"
-                  name="{{ name.previous_efforts }}"
+                  name="previous_coding_learning"
                   placeholder="1-2 paragraphs"
                   aria-label="Previous efforts question"
                   required
@@ -157,15 +158,18 @@ resources:
               </div>
             </div>
             <!-- End Input -->
-
-            <!-- Coding Challenge -->
-            <p class="px-4 px-md-0">
-              {{ page.challenge_descript1 }}
-            </p>
-            <p class="mb-6 px-4 px-md-0">
-              {{ page.challenge_descript2 }}
-            </p>
-
+            <div class="col-12">
+              <h2 class="mx-auto mb-4 w-100">
+                Coding Assignment
+              </h2>
+              <!-- Coding Challenge -->
+              <p class="px-4 px-md-0">
+                {{ page.challenge_descript1 }}
+              </p>
+              <p class="mb-6 px-4 px-md-0">
+                {{ page.challenge_descript2 }}
+              </p>
+            </div>
             <div class="mb-6">
               <ul class="fa-ul m-0">
                 {% for resource in page.resources %}
@@ -200,7 +204,7 @@ resources:
                   id="code-challenge"
                   class="form-control"
                   rows="10"
-                  name="{{ name.coding_challenge }}"
+                  name="coding_assignment_answer"
                   placeholder="1-2 paragraphs"
                   aria-label="Coding Challenge Question"
                   required
