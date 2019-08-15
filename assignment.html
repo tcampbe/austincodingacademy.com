@@ -5,6 +5,7 @@ title: "Assignment"
 description: ""
 amp_components: ['amp-img']
 redirect_from: []
+assignment_form_guid:
 
 heading: New Student Assignment
 form_heading: Personal Information
@@ -41,7 +42,7 @@ resources:
         {{ page.form_heading }}
       </h2>
       <form
-        action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.course_guide_form_guid}}"
+        action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ page.assignment_form_guid }}"
         target="_top"
         method="POST"
       >
@@ -55,7 +56,8 @@ resources:
                   First Name <span class="text-red-a">*</span>
                 </label>
 
-                <input id="first-name-cg"
+                <input
+                  id="first-name-cg"
                   type="text"
                   class="form-control"
                   name="{{ name.first_name }}"
@@ -75,7 +77,8 @@ resources:
                   Last Name <span class="text-red-a">*</span>
                 </label>
 
-                <input id="last-name-cg"
+                <input
+                  id="last-name-cg"
                   type="text"
                   class="form-control"
                   name="{{ name.last_name }}"
@@ -95,7 +98,8 @@ resources:
                   Email (Same email you used when applying.) <span class="text-red-a">*</span>
                 </label>
 
-                <input id="email-cg"
+                <input
+                  id="email-cg"
                   type="email"
                   class="form-control"
                   name="{{ name.email }}"
@@ -110,13 +114,14 @@ resources:
 
             <!-- Input -->
             <div class="js-form-message mb-6 col-sm-12">
-              <label for="message-contact" class="form-label">
+              <label for="goals" class="form-label">
                 What are your goals with learning to code and why are you a good fit for ACA? <span class="text-red-a">*</span>
               </label>
 
               <div class="input-group">
                 <textarea
                   class="form-control"
+                  id="goals"
                   rows="14"
                   name="{{ name.goals }}"
                   placeholder="3-5 paragraphs"
@@ -132,12 +137,13 @@ resources:
 
             <!-- Input -->
             <div class="js-form-message mb-6 col-sm-12">
-              <label for="message-contact" class="form-label">
+              <label for="previous-efforts" class="form-label">
                 Describe the previous efforts you've made to learn to code. <span class="text-red-a">*</span>
               </label>
 
               <div class="input-group">
                 <textarea
+                  id="previous-efforts"
                   class="form-control"
                   rows="10"
                   name="{{ name.previous_efforts }}"
@@ -185,12 +191,13 @@ resources:
                 </amp-img>
               </div>
 
-              <label for="message-contact" class="form-label flex-wrap">
+              <label for="code-challenge" class="form-label flex-wrap">
                 Describe in 1-2 paragraphs what the code above is creating. <span class="text-red-a">*</span>
               </label>
 
               <div class="input-group">
                 <textarea
+                  id="code-challenge"
                   class="form-control"
                   rows="10"
                   name="{{ name.coding_challenge }}"
