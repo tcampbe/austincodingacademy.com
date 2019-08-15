@@ -1,7 +1,10 @@
 <div class="row d-flex justify-content-center">
   <div class="col-sm-10 col-xs-10 mw-850">
     <h2 class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7">
-      Download Our Course Guide
+      {% if page.permalink == "/web-development/" %}
+        Want an In-Depth Look? <br>
+      {% endif %}
+        Download Our Course Guide
     </h2>
     <!-- htmllint preset="none" -->
     <p class="mw-600 mx-auto {{ include.p_class  }} text-center mb-6">

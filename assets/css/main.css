@@ -1,3 +1,4 @@
+@import url('../../node_modules/bootstrap/dist/css/bootstrap.css');
 @import url('../../node_modules/front/assets/css/theme.css');
 @import url('../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css');
 
@@ -26,16 +27,18 @@
   font-display: swap;
 }
 
-.fa, .far, .fas {
-  font-family: Font Awesome\5 Free;
+.fa,
+.far,
+.fas {
+  font-family: 'Font Awesome 5 Free';
 }
 
 .fab {
-  font-family: Font Awesome\5 Brands;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 @font-face {
-  font-family: Font Awesome\5 Brands;
+  font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -49,7 +52,7 @@
 }
 
 @font-face {
-  font-family: Font Awesome\5 Free;
+  font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -63,7 +66,7 @@
 }
 
 @font-face {
-  font-family: Font Awesome\5 Free;
+  font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
   font-display: auto;
@@ -80,6 +83,12 @@ body,
 p {
   font-family: 'Open Sans', sans-serif;
   color: #303133;
+}
+
+@media (max-width: 850px) {
+  body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
 }
 
 .text-default {
@@ -186,7 +195,15 @@ p {
   line-height: 1.2;
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 850px) and (max-width: 1024px) {
+  .display-responsive {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 850px) {
   .display-responsive {
     font-size: 2rem;
     font-weight: 300;
@@ -234,10 +251,6 @@ p {
 }
 
 /* HEADER LINKS */
-
-#header-background {
-  opacity: 0;
-}
 
 .nav-item a:hover,
 #sidebar a:hover,
@@ -292,16 +305,32 @@ p {
   -o-background-size: cover;
 }
 
+#video-container {
+  overflow: hidden;
+  max-height: 78vh;
+  min-height: 24rem;
+}
+
+/* filter over video */
 #hero-index {
   background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7)),
     url('/assets/images/hero-index.jpg');
   background-position: top;
 }
 
+@media (min-width: 768px) {
+  #hero-index {
+    background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7));
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+  }
+}
+
 #hero-csharp {
   background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7)),
     url('/assets/images/hero-csharp.jpg');
-  background-position: 50% 5%;
+  background-position: 50% 10%;
   background-size: cover;
 }
 
@@ -480,6 +509,10 @@ p {
 
 .mt-90 {
   margin-top: 90px;
+}
+
+.mt-100 {
+  margin-top: 100px;
 }
 
 /* HEADER */
@@ -670,4 +703,26 @@ ul.share-buttons img {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
+}
+
+.z-0 {
+  z-index: 0;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-30 {
+  z-index: 30;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+.z-auto {
+  z-index: auto;
 }

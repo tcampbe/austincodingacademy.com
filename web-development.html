@@ -1,22 +1,125 @@
 ---
 layout: default
 permalink: "/web-development/"
-redirect_from: ["/javascript/", "/javascript"]
-amp_components: ['amp-animation', 'amp-position-observer']
+amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel']
 scroll_offset_header: 0.09
+logos:
+- width: 721px
+  height: 225px
+  src: "/assets/images/logo-indeed.png"
+  alt: Indeed
+- width: 1853px
+  height: 799px
+  src: "/assets/images/logo-big-commerce.png"
+  alt: Big Commerce
+- width: 1600px
+  height: 1600px
+  src: "/assets/images/logo-dell.png"
+  alt: Dell
+- width: 1590px
+  height: 561px
+  src: "/assets/images/logo-microsoft.png"
+  alt: Microsoft
+- width: 1720px
+  height: 360px
+  src: "/assets/images/logo-facebook.png"
+  alt: Facebook
+- width: 1280px
+  height: 320px
+  src: "/assets/images/logo-walmart.png"
+  alt: Walmart
+- width: 4460px
+  height: 1940px
+  src: "/assets/images/logo-ibm.png"
+  alt: IBM
+- width: 645px
+  height: 340px
+  src: "/assets/images/logo-dosh.png"
+  alt: Dosh
+- width: 400px
+  height: 400px
+  src: "/assets/images/logo-oracle.png"
+  alt: Oracle
+- width: 256px
+  height: 256px
+  src: "/assets/images/logo-adobe.png"
+  alt: Adobe
+- width: 960px
+  height: 142px
+  src: "/assets/images/logo-mooveit.png"
+  alt: Moove-It
+- width: 750px
+  height: 450px
+  src: "/assets/images/logo-pluralsight.png"
+  alt: Pluralsight
+- width: 1270px
+  height: 145px
+  src: "/assets/images/logo-flosports.png"
+  alt: Flosports
+- width: 400px
+  height: 282px
+  src: "/assets/images/logo-cloud-imperium.png"
+  alt: Cloud Imperium
+- width: 768px
+  height: 139px
+  src: "/assets/images/logo-silvercar.png"
+  alt: Silvercar
+- width: 300px
+  height: 127px
+  src: "/assets/images/logo-versasuite.png"
+  alt: VersaSuite
+- width: 960px
+  height: 560px
+  src: "/assets/images/logo-onespot.png"
+  alt: OneSpot
+- width: 914px
+  height: 408px
+  src: "/assets/images/logo-onit.png"
+  alt: Onit
 austin:
-  trackColor: blue
+  redirect_from: ["/javascript/", "/javascript"]
   hero: js
-  title: Learn Full Stack Web Development | JavaScript Classes with Austin Coding Academy
-  description: Learn one of the most versatile &amp; common programming languages with
-    Austin Code Academy’s JavaScript track. You’ll go from beginner to advanced within
-    a year - all without quitting your day job. Enroll today!
   hero_text: Learn the most popular language for making websites, web apps, games, animations,
     and mobile applications. In this track you'll learn front-end and back-end JavaScript,
     some of today's most versatile and sought-after skills.
+  next_start_date: Tuesday, August 27th
+  features:
+  - heading: "The World’s #1 Programming Language"
+    text: "For the 7th year in a row, JavaScript is the world’s most-used programming language, with nearly 70% of the world’s
+      developers using JS in their work according to Stack Overflow."
+    img_src: icon-javascript.png
+    img_width: 65px
+  - heading: Design Engaging, Responsive Front-Ends
+    text: "Discover the power of JavaScript: a language used by nearly every website on the internet to display, animate, and make webpages come to life."
+    img_src: icon-frontend.png
+    img_width: 90px
+  - heading: Use Node and Express to Build Powerful Back-Ends
+    text: "Learn how to collect and process data using JavaScript with Node.js and Express.js – and also how to manage databases with SQL."
+    img_src: icon-databases.png
+    img_width: 90px
+  - heading: Tap Into Austin’s Start-Up Scene
+    text: "As the most in-demand language for small to mid-level companies, JavaScript powers Austin’s thriving start-up scene, with new jobs opportunities arising daily."
+    img_src: icon-jobs.png
+    img_width: 90px
+  overview:
+  - title: In the Classroom
+    odd: true
+    text: "Part-time, evening classes work around your schedule so you can begin your career transition while continuing to support yourself. Led by instructors
+      who work as professional web developers, classes focus on in-depth, practical projects that prepare you for success in your new career."
+    img_src: "/assets/images/cap-factory-web-dev.jpg"
+  - title: Outside of Class
+    text: "Students are expected to utilize their e-textbook, unlimited tutoring, and organized group study sessions to practice course material outside of class –
+      part of our flipped classroom approach. By studying outside of class, students can use class time to build their projects and get feedback from their instructor."
+    img_src: "/assets/images/cap-factory-web-dev-2.jpg"
+  - title: Job Readiness
+    odd: true
+    text: "Austin Coding Academy’s Full Stack Web Development Track is designed to take students from no experience to job ready in under a year. After graduating,
+      students continue to receive support in finding their first job from our Job Placement Course, Director of Job Placement, and various hiring partners."
+    img_src: "/assets/images/cap-factory-web-dev-3.jpg"
   courses:
   - code: Web 101
     title: Intro to Web Development
+    description: Intro to Web Development
     sections:
     - start: May 29, 2019
       end: July 24, 2019
@@ -39,6 +142,7 @@ austin:
     - Input Control and Form Submissions
   - code: JS 211
     title: JavaScript Language Basics
+    description: JavaScript Language Basics
     sections:
     - start: July 29, 2019
       end: September 25, 2019
@@ -59,6 +163,7 @@ austin:
     - Interact with remote APIs and manipulate data
   - code: JS 311
     title: Back-End JavaScript
+    description: Back-End JavaScript
     sections:
     - start: September 30, 2019
       end: November 20, 2019
@@ -81,6 +186,7 @@ austin:
     - Learn to host, deploy and manage your web applications
   - code: JS 411
     title: Javascript Front-End
+    description: Javascript Front-End
     sections:
     - start: December 2, 2019
       end: February 5, 2020
@@ -103,6 +209,7 @@ austin:
     - Deep-Dive into HTTPS protocol
   - code: Job 501
     title: Job Placement Course
+    description: Job Placement Course
     sections:
     - start: February 10, 2020
       end: March 4, 2020
@@ -123,141 +230,597 @@ austin:
     - Resume building
     - Networking opportunities and strategies
     - Job-finding strategies
-lubbock:
-  trackColor: blue
-  hero: js
-  title: C# Development with Lubbock Coding Academy
-  description: Learn one of the most versatile &amp; common programming languages with
-    Lubbock Code Academy’s Full Stack track. You’ll go from beginner to advanced within
-    a year - all without quitting your day job. Enroll today!
-  hero_text: Learn the most popular language for making websites, web apps, games, animations,
-    and mobile applications. In this track you'll learn front-end JavaScript and back-end C#/.Net,
-    some of today's most versatile and sought-after skills.
-  courses:
-  - code: Web 101
-    title: Intro to Web Development
-    sections:
-    - start: July 22, 2019
-      end: September 18, 2019
-      weekdays: Mondays &amp; Wednesdays
-      time: 6:00pm - 9:00pm
-      address: '3907 Avenue Q, Lubbock, TX 79412'
-      campus: South Plains College, Lubbock Center
-    list:
-    - HTML5 + all new HTML5 APIs
-    - CSS3 + Animations and Transitions
-    - Version Control Software - Git
-    - Responsive Web Design
-    - JavaScript Basics &amp; DOM Manipulation
-    - Input Control and Form Submissions
-  - code: C# .NET 221
-    title: C# .NET Fundamentals
-    sections: []
-    list:
-    - Immersion in Object Oriented Programming (OOP)
-    - Build Unit Testing + Test Driven Development (TDD)
-    - Data Structures
-    - Algorithms
-    - SQL
-  - code: C# 321
-    title: C# .NET Intermediate
-    sections: []
-    list:
-    - C#
-    - .NET Framework
-    - MVC Architecture
-    - Visual Studio
-    - Build Applications
-    - Test Applications
-  - code: C# .NET 421
-    title: C# .NET Advanced
-    sections: []
-    list:
-    - .NET Framework
-    - MVC Architecture
-    - Security
-    - Deployment
-    - Hosting
-    - Angular.js
-  - code: Job 501
-    title: 4 Week Job Placement Course
-    sections: []
-    list:
-    - Technical interview prep
-    - White-boarding practice and feedback
-    - Portfolio support
-    - Resume building
-    - Networking opportunities and strategies
-    - Job-finding strategies
+  job_placement:
+    stats:
+    - stat: 89%
+      descript: of Austin Coding Academy graduates are employed as web deelopers within 6 months.
+    - stat: $62,247
+      descript: The average salary for an entry level web developer in Austin, TX.
+    value_props:
+    - heading: Practical Curriculum
+      text: "Our courses are designed to teach you relevant skills through practical application.
+        Learn in-demand technologies by building real-life projects with feedback from professional developers."
+      img_src: icon-curriculum.png
+      img_width: 90px
+    - heading: Director of Job Placement
+      text: "Receive one-on-one attention from our Director of Job Placement, who provides resume feedback, sets up
+        interviews and events with companies, helps with applying, and more."
+      img_src: icon-director-of-placement.png
+      img_width: 90px
+    - heading: Job Placement Course
+      text: "Hone your online presence, resume, and interview skills in our 4-week job placement course. This course is
+        led by both a professional developer and a recruiter and is free to all ACA graduates."
+      img_src: icon-grad-course.png
+      img_width: 90px
+    - heading: Hiring Partnerships
+      text: "Austin Coding Academy maintains working relationships with a host of Austin companies that depend on our
+        graduates to fill open web development positions."
+      img_src: icon-jobs.png
+      img_width: 90px
+  successes:
+  - name: Luke Stenis
+    title: Analytics Implementation Engineer
+    company: Pluralsight
+    img_src: '/assets/images/luke-stenis-headshot.jpeg'
+    learn_url: https://austincodingacademy.com/blog/alumni-spotlight/luke-stenis/why-i-left-marketing-to-learn-coding/
+  - name: Lillian Situ
+    title: Software Engineer
+    company: data.world
+    img_src: '/assets/images/lillian-situ-headshot.jpeg'
+    learn_url: https://austincodingacademy.com/blog/student-highlight/lillian-situ/
+  - name: Greg Swan
+    title: Web Application Developer
+    company: OpenSymmetry
+    img_src: '/assets/images/greg-swan-headshot.jpeg'
+    learn_url: https://austincodingacademy.com/blog/student-highlight/greg-swan/
+  tuition_options:
+  - title: Pay Up Front (Savings Option)
+    description: "Save $1,000 on the cost of the Full Stack Web Development Track when you choose to pay for the entire cost of the program up front. Instead of paying for the individual price of 4 web development courses, ($11,960), you’ll pay the reduced price of $10,960."
+    price-header: Total Price
+    price: $10,960
+  - title: Pay-As-You-Go (Flexible Option)
+    description: "To provide a more flexible tuition option, we also offer a “pay-as-you-go” plan. Rather than paying for the entire cost of the program up front, you’re able to pay for each course when you take it, ($2,990/course)."
+    price-header: Total Price
+    price: $11,960
+  - title: Financing
+    description: "Whether you choose to pay for the entire program up front, or pay-as-you-go, all students are welcome to finance their program independently, or through Skills Fund, our primary financing partner. You can learn more about financing options on our financing page."
+    cta: <a href="/financing" class="btn btn-outline-light btn-round mr-2 d-sm-block">Financing Options <span class="fas fa-arrow-right small"></span></a>
 
+#lubbock:
+#  redirect_from: ["/javascript/", "/javascript"]
+#  hero: js
+#  hero_text: Learn the most popular language for making websites, web apps, games, animations,
+#    and mobile applications. In this track you'll learn front-end and back-end JavaScript,
+#    some of today's most versatile and sought-after skills.
+#  next_start_date: Tuesday, August 27th
+#  features:
+#  - heading: "The World’s #1 Programming Language"
+#    text: "For the 7th year in a row, JavaScript is the world’s most-used programming language, with nearly 70% of the world’s
+#      developers using JS in their work according to Stack Overflow."
+#    img_src: icon-javascript.png
+#    img_width: 65px
+#  - heading: Design Engaging, Responsive Front-Ends
+#    text: "Discover the power of JavaScript: a language used by nearly every website on the internet to display, animate, and make webpages come to life."
+#    img_src: icon-frontend.png
+#    img_width: 90px
+#  - heading: Use Node and Express to Build Powerful Back-Ends
+#    text: "Learn how to collect and process data using JavaScript with Node.js and Express.js – and also how to manage databases with SQL."
+#    img_src: icon-databases.png
+#    img_width: 90px
+#  - heading: Tap Into Austin’s Start-Up Scene
+#    text: "As the most in-demand language for small to mid-level companies, JavaScript powers Austin’s thriving start-up scene, with new jobs opportunities arising daily."
+#    img_src: icon-jobs.png
+#    img_width: 90px
+#  overview:
+#  - title: In the Classroom
+#    odd: true
+#    text: "Part-time, evening classes work around your schedule so you can begin your career transition while continuing to support yourself. Led by instructors
+#      who work as professional web developers, classes focus on in-depth, practical projects that prepare you for success in your new career."
+#    img_src:
+#  - title: Outside of Class
+#    text: "Students are expected to utilize their e-textbook, unlimited tutoring, and organized group study sessions to practice course material outside of class –
+#      part of our flipped classroom approach. By studying outside of class, students can use class time to build their projects and get feedback from their instructor."
+#    img_src:
+#  - title: Job Readiness
+#    odd: true
+#    text: "Austin Coding Academy’s Full Stack Web Development Track is designed to take students from no experience to job ready in under a year. After graduating,
+#      students continue to receive support in finding their first job from our Job Placement Course, Director of Job Placement, and various hiring partners."
+#    img_src:
+#  courses:
+#  - code: Web 101
+#    title: Intro to Web Development
+#    description: Intro to Web Development
+#    sections:
+#    - start: May 29, 2019
+#      end: July 24, 2019
+#      weekdays: Mondays &amp; Wednesdays
+#      time: 6:30pm - 9:00pm
+#      address: '701 Brazos St #16, Austin, TX 78701'
+#      campus: Downtown Capital Factory Campus
+#    - start: June 25, 2019
+#      end: August 22, 2019
+#      weekdays: Tuesdays &amp; Thursdays
+#      time: 6:30pm - 9:00pm
+#      address: 314 E Highland Mall Blvd Ste 115, Austin, TX 78752
+#      campus: North Austin Highland Campus
+#    list:
+#    - HTML5 + all new HTML5 APIs
+#    - CSS3 + Animations and Transitions
+#    - Version Control Software - Git
+#    - Responsive Web Design
+#    - JavaScript Basics &amp; DOM Manipulation
+#    - Input Control and Form Submissions
+#  - code: JS 211
+#    title: JavaScript Language Basics
+#    description: JavaScript Language Basics
+#    sections:
+#    - start: July 29, 2019
+#      end: September 25, 2019
+#      weekdays: Mondays &amp; Wednesdays
+#      time: 6:30pm - 9:00pm
+#      address: '701 Brazos St #16, Austin, TX 78701'
+#      campus: Downtown Capital Factory Campus
+#    - start: August 27, 2019
+#      end: 'October 17, 2019 '
+#      weekdays: Tuesdays &amp; Thursdays
+#      time: 6:30pm - 9:00pm
+#      address: 314 E Highland Mall Blvd Ste 115, Austin, TX 78752
+#      campus: North Austin Highland Campus
+#    list:
+#    - Immersion in Object Oriented Programming (OOP)
+#    - Build Unit Testing + Test Driven Development (TDD)
+#    - Master Callbacks and Functional Programming
+#    - Interact with remote APIs and manipulate data
+#  - code: JS 311
+#    title: Back-End JavaScript
+#    description: Back-End JavaScript
+#    sections:
+#    - start: September 30, 2019
+#      end: November 20, 2019
+#      weekdays: Mondays &amp; Wednesdays
+#      time: 6:30pm - 9:00pm
+#      address: '701 Brazos St #16, Austin, TX 78701'
+#      campus: 'Downtown Capital Factory Campus '
+#    - start: October 22, 2019
+#      end: December 19, 2019
+#      weekdays: Tuesdays &amp; Thursdays
+#      time: 6:30pm - 9:00pm
+#      address: 314 E Highland Mall Blvd Ste 115, Austin, TX 78752
+#      campus: North Austin Highland Campus
+#    list:
+#    - Shape your own SQL Database
+#    - Serve Express.js routes
+#    - Harness the power of Node.js
+#    - MVC - Model, View, Controller
+#    - Deploy your own Node Modules
+#    - Learn to host, deploy and manage your web applications
+#  - code: JS 411
+#    title: Javascript Front-End
+#    description: Javascript Front-End
+#    sections:
+#    - start: December 2, 2019
+#      end: February 5, 2020
+#      weekdays: Mondays &amp; Wednesdays
+#      time: 6:30pm - 9:00pm
+#      address: '701 Brazos St #16, Austin, TX 78701'
+#      campus: Downtown Capital Factory Campus
+#    - start: January 6, 2020
+#      end: February 27, 2020
+#      weekdays: Tuesdays &amp; Thursdays
+#      time: 6:30pm - 9:00pm
+#      address: 314 E Highland Mall Blvd Ste 115, Austin, TX 78752
+#      campus: North Austin Highland Campus
+#    list:
+#    - Build mobile apps with React &amp; React Native
+#    - Maintain app state with Redux
+#    - Build Production grade Apps with Webpack
+#    - Handle Client-Side Routing
+#    - Expand your knowledge of Git
+#    - Deep-Dive into HTTPS protocol
+#  - code: Job 501
+#    title: Job Placement Course
+#    description: Job Placement Course
+#    sections:
+#    - start: February 10, 2020
+#      end: March 4, 2020
+#      weekdays: Mondays &amp; Wednesdays
+#      time: 6:30pm - 9:00pm
+#      address: '701 Brazos St #16, Austin, TX 78701'
+#      campus: Downtown Capital Factory Campus
+#    - start: March 9, 2020
+#      end: April 2, 2020
+#      weekdays: Tuesdays &amp; Thursdays
+#      time: 6:30pm - 9:00pm
+#      campus: North Austin Highland Campus
+#      address: 314 E Highland Mall Blvd Ste 115, Austin, TX 78752
+#    list:
+#    - Technical interview prep
+#    - White-boarding practice and feedback
+#    - Portfolio support
+#    - Resume building
+#    - Networking opportunities and strategies
+#    - Job-finding strategies
+#  job_placement:
+#    stats:
+#    - stat: 89%
+#      descript: of Austin Coding Academy graduates are employed as web deelopers within 6 months.
+#    - stat: $62,247
+#      descript: The average salary for an entry level web developer in Austin, TX.
+#    value_props:
+#    - heading: Practical Curriculum
+#      text: "Our courses are designed to teach you relevant skills through practical application.
+#        Learn in-demand technologies by building real-life projects with feedback from professional developers."
+#      img_src: icon-curriculum.png
+#      img_width: 90px
+#    - heading: Director of Job Placement
+#      text: "Receive one-on-one attention from our Director of Job Placement, who provides resume feedback, sets up
+#        interviews and events with companies, helps with applying, and more."
+#      img_src: icon-director-of-placement.png
+#      img_width: 90px
+#    - heading: Job Placement Course
+#      text: "Hone your online presence, resume, and interview skills in our 4-week job placement course. This course is
+#        led by both a professional developer and a recruiter and is free to all ACA graduates."
+#      img_src: icon-grad-course.png
+#      img_width: 90px
+#    - heading: Hiring Partnerships
+#      text: "Austin Coding Academy maintains working relationships with a host of Austin companies that depend on our
+#        graduates to fill open web development positions."
+#      img_src: icon-jobs.png
+#      img_width: 90px
+#  successes:
+#  - name: Student Brian
+#    title: Software Engineer
+#    company: Dell
+#    img_src:
+#    learn_url:
+#  - name: Student Jessica
+#    title: Web Developer
+#    company: IBM
+#    img_src:
+#    learn_url:
+#  - name: Student Bobby
+#    title: UI Developer
+#    company: Indeed
+#    img_src:
+#    learn_url:
+#  tuition_options:
+#  - title: Pay Up Front (Savings Option)
+#    description: "Save $1,000 on the cost of the Full Stack Web Development Track when you choose to pay for the entire cost of the program up front. Instead of paying for the individual price of 4 web development courses, ($11,960), you’ll pay the reduced price of $10,960."
+#    price-header: Total Price
+#    price: $10,960
+#  - title: Pay-As-You-Go (Flexible Option)
+#    description: "To provide a more flexible tuition option, we also offer a “pay-as-you-go” plan. Rather than paying for the entire cost of the program up front, you’re able to pay for each course when you take it, ($2,990/course)."
+#    price-header: Total Price
+#    price: $11,960
+#    - title: Financing
+#    description: "Whether you choose to pay for the entire program up front, or pay-as-you-go, all students are welcome to finance their program independently, or through Skills Fund, our primary financing partner. You can learn more about financing options on our financing page."
+#    cta: <a href="/financing" class="btn btn-outline-light btn-round mr-2 d-sm-block">Financing Options <span class="fas fa-arrow-right small"></span></a>
 ---
-{% assign city = page[site.key] %}
 
+{% assign school = page[site.key] %}
 <!-- htmllint preset="none" -->
-<div id="hero-{{ city.hero }}" class="hero py-5 py-md-11">
+<div id="hero-{{ school.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-55 display-sm-5 text-center">
     Full Stack Web Development
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
-    {{ city.hero_text }}
+    {{ school.hero_text }}
   </p>
+  <div class="d-flex mt-4 align-items-center justify-content-center">
+    <div class="mr-2">
+      <!-- htmllint preset="none" -->
+      <a
+      class="btn btn-round btn-outline-light {{ include.class }}"
+      on="tap:event-lightbox"
+      role="button"
+      tabindex="-1"
+      >
+      <!-- htmllint preset="$previous" -->
+        Course Guide
+      </a>
+    </div>
+    <div class="ml-2">{% include btn-apply.html %}</div>
+  </div>
 </div>
 
 <main>
 
   {% include observer-and-header-animation.html %}
 
-  <section id="curriculum" class="py-8 container-fluid">
-    <div class="row">
-      <div class="d-none d-md-inline col-md-2 mw-10r"></div>
-      <div class="col-md-8 pl-5">
-        <div class="mb-6 text-center mx-auto">
-          <h2 class="font-family-alt display-5 mb-7">
-            Our Full Stack Curriculum
-          </h2>
-          <p class="mw-600 mx-auto">
-            Our curriculum is composed of 5 courses, designed to take you from
-            beginner to job-ready in under a year, without having to quit your day job
-            or mortgage your future. If you're looking to level-up in your current job,
-            you can also apply to take any of these courses individually.
-          </p>
-        </div>
-
-        <div class="p-0 pl-sm-11 mx-auto mw-600">
-          {% for course in city.courses %}
-            <div class="my-6">
-              <h4 class="display-7 d-flex mb-3">
-                <!-- htmllint preset="none" -->
-                <i class="fas fa-circle text-{{city.trackColor}} mr-3 mt-1"></i>
-                <!-- htmllint preset="$previous" -->
-                <div>
-                  {{course.code}}: <b>{{course.title}}</b>
-                </div>
-              </h4>
-              <ul class="fa-ul">
-                {% for item in course.list %}
-                  <li class="mb-1"><span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{item}}</li>
-                {% endfor %}
-              </ul>
-            </div>
-          {% endfor %}
-        </div>
+  <section id="curriculum" class="pt-8 container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-8 p-0 pl-sm-5 d-flex flex-column align-items-center text-center">
+        <h2 class="font-family-alt display-5">
+          What is Javascript?
+        </h2>
+        <h4 class="mb-7">
+          (and why do we teach it?)
+        </h4>
       </div>
-      <div class="d-none d-md-inline col-md-2"></div>
+    </div>
+  </section>
+
+  <section class="pb-4 pt-2 container">
+    <div class="row">
+      {% for item in school.features %}
+        <div class="col-md-6 mb-5">
+          <div class="row">
+            <div class="col-3 col-md-4 col-lg-3 p-0 d-flex justify-content-center align-items-center">
+              <amp-img
+                width="{{ item.img_width }}"
+                height="80px"
+                layout="fixed"
+                src="/assets/images/{{ item.img_src }}"
+                alt=""
+              ></amp-img>
+            </div>
+            <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
+              <h5 class="font-weight-bold">
+                {{ item.heading }}
+              </h5>
+              <p>
+                {{ item.text }}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </section>
 
   <!-- htmllint preset="none" -->
-  <section id="course-guide" class="container-fluid {{city.hero}}-gradient text-white py-11">
+  <section class="py-8 container-fluid {{school.hero}}-gradient text-white">
   <!-- htmllint preset="$previous" -->
-    <div class="pt-3"></div>
-    <div class="row">
-      <div class="d-none d-md-inline col-md-2 mw-10r"></div>
+  <div class="row flex-column align-items-center">
+    <div class="col-md-8 p-0 pl-sm-5 d-flex">
+      <h2 class="font-family-alt display-5 mx-auto mt-2 mb-4 text-center text-sm-left">
+        Program Overview
+      </h2>
+    </div>
+      <!-- overview blocks -->
+      <div class="container text-center text-sm-left">
+        {% for item in school.overview %}
+          {% if item.odd %}
+            <div class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
+              <div class="w-100 w-sm-50 m-0 mr-sm-4 text-white">
+                <h4>
+                  {{ item.title }}
+                </h4>
+                <p class="text-white mx-auto">
+                  {{ item.text }}
+                </p>
+              </div>
+              <div class="w-100 w-sm-50 p-0 pl-sm-4 my-auto">
+                <amp-img
+                  layout="responsive"
+                  class="img-fluid shadow"
+                  width="3535"
+                  height="2146"
+                  src="{{ item.img_src }}"
+                >
+                </amp-img>
+              </div>
+            </div>
+          {% else %}
+            <div class="flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
+              <div class="w-100 w-sm-50 p-0 pr-sm-4 my-auto">
+                <amp-img
+                  layout="responsive"
+                  class="img-fluid shadow"
+                  width="3535"
+                  height="2146"
+                  src="{{ item.img_src }}"
+                >
+                </amp-img>
+              </div>
+              <div class="w-100 w-sm-50 m-0 ml-sm-4">
+                <h4>
+                  {{ item.title }}
+                </h4>
+                <p class="text-white">
+                  {{ item.text }}
+                </p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end overview blocks -->
+  </section>
+
+  <section class="py-8 container-fluid">
+    <div class="font-family-alt w-75 mx-auto display-5 mb-4 pt-2 text-center text-sm-left">
+      Course Structure
+    </div>
+    <div class="row d-flex flex-column align-items-center">
+      <!-- course cards start -->
+      {% for course in school.courses %}
+        <div
+          class="w-75 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded"
+          style="min-height: 350px;"
+        >
+          <div>
+            <div class="display-6 mb-4 pl-2 pl-sm-0">
+              <strong>{{ course.code }}: {{ course.title }}</strong>
+            </div>
+            <div>
+              {% for item in course.list %}
+                <ul>
+                  <li>
+                    {{ item }}
+                  </li>
+                </ul>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center">
+            {% if course.title == school.courses[4].title %}
+              4 Weeks
+            {% else %}
+              8 Weeks
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+      <!-- course cards end -->
+    </div>
+  </section>
+
+  <!-- htmllint preset="none" -->
+  <section id="course-guide" class="container-fluid {{school.hero}}-gradient text-white py-8">
+  <!-- htmllint preset="$previous" -->
+    <div class="row justify-content-center">
       <div class="col-md-8">
         {% include course-guide-form.html p_class="text-white" %}
       </div>
-      <div class="d-none d-md-inline col-md-2"></div>
+    </div>
+  </section>
+
+  <section class="container-fluid d-flex py-8 flex-column justify-content-center text-center">
+    <div class="font-family-alt display-5 mb-4">
+      Job Placement
+    </div>
+    <div class="row justify-content-center">
+      {% for item in school.job_placement.stats %}
+        <div class="my-4 col-md-4 col-lg-4 col-sm-10">
+          <div class="display-4 font-weight-bold my-2 font-family-alt">{{ item.stat }}</div>
+          <p>{{ item.descript }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="pt-4 container">
+    <div class="font-family-alt text-center display-6 w-100 w-sm-75 w-md-50 mx-auto mb-7">
+      4 Ways We Make Sure Our Students Are Job-Ready
+    </div>
+    <div class="row">
+      {% for prop in school.job_placement.value_props %}
+        <div class="col-md-6 mb-5">
+          <div class="row">
+            <div class="col-3 col-md-4 col-lg-3 d-flex p-0 justify-content-center align-items-center">
+              <amp-img
+                width="{{ prop.img_width }}"
+                height="80px"
+                layout="fixed"
+                src="/assets/images/{{ prop.img_src }}"
+                alt=""
+              ></amp-img>
+            </div>
+            <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
+              <h5 class="font-weight-bold">
+                {{ prop.heading }}
+              </h5>
+              <p>
+                {{ prop.text }}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="container-fluid py-8 bg-textured-2">
+    <div class="display-6 text-center text-white mb-6">
+      Student Outcomes
+    </div>
+    <div class="mx-auto d-flex flex-wrap justify-content-between col-12 col-sm-8">
+      {% for success in school.successes %}
+        <div class="card shadow mb-4 p-2 mx-auto" style="width: 18rem;">
+          <amp-img
+            class="w-100 rounded border shadow mb-2"
+            layout="responsive"
+            width="500"
+            height="500"
+            src="{{ success.img_src }}"
+            alt="Student Success"
+          >
+          </amp-img>
+          <div class="d-flex flex-column align-items-center">
+            <div class="card-title px-3 font-weight-bold">
+              {{ success.name }}
+            </div>
+            <div class="mb-2 display-9 text-center">
+              {{ success.title }} <br>
+              @ {{ success.company }}
+            </div>
+            <a
+              class="btn btn-round bg-purple text-white text-center hover-white mt-2 mb-3"
+              style="width: 42px;"
+              href="{{ success.learn_url }}"
+              rel="noopener"
+              target="_blank"
+            >
+              {% assign name = success.name | split: ' ' %}
+              About {{ name[0] | capitalize }} &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% include company-carousel.html %}
+
+  <section class="bg-textured-2 ">
+    <div class="text-white m-0 pt-8 pb-2">
+      <div class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
+        Tuition
+      </div>
+      <div class="container pt-2">
+        {% for option in school.tuition_options %}
+          <div class="row my-5 d-flex justify-content-between">
+            <div class="col-md-8">
+              <h3 class="display-7 border-bottom">
+                {{option.title}}
+              </h3>
+              <p class="text-white">
+                {{option.description}}
+              </p>
+            </div>
+            <div class="w-sm-50 col-md-3 p-0 d-flex flex-column justify-content-center">
+              {% if option.price %}
+                <div class="text-center">
+                  <h5>
+                    {{option.price-header}}
+                  </h5>
+                  <p class="card-body text-white w-50 w-sm-100 w-m-100 w-lg-100 mx-auto mx-md-0 mx-lg-0 rounded border shadow display-6">
+                    {{option.price}}
+                  </p>
+                </div>
+              {% elsif option.cta %}
+                <div class="mt-4 mt-sm-0 text-center">
+                  <h5>
+                    Learn More
+                  </h5>
+                  {{ option.cta }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="pb-8 mt-4">
+      <div class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
+        <div class="card-body">
+          <div class="display-7 pb-4 text-center">
+            Join our upcoming start date:
+          </div>
+          <div class="shadow border">
+            <div class="text-center display-6 py-4">
+              {{ school.next_start_date }}
+            </div>
+          </div>
+            <div class="text-center py-4">
+              {% include btn-apply.html %}
+            </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -280,7 +843,7 @@ lubbock:
     </div>
   </section>
 
-  {% for course in city.courses %}
+  {% for course in school.courses %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
