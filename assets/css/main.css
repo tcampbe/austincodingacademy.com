@@ -300,15 +300,6 @@ p {
   background-position: 0 -1px;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-
-#video-container {
-  overflow: hidden;
-  max-height: 78vh;
-  min-height: 24rem;
 }
 
 /* filter over video */
