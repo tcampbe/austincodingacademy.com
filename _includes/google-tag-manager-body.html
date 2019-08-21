@@ -1,6 +1,6 @@
 <!-- htmllint preset="none" -->
 {% if site.baseurl == '/amp' %}
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{site.google_tag_manager_amp}}&gtm.url={{site.url}}{{site.baseurl}}{{page.url}}" data-credentials="include"></amp-analytics>
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{site.google_tag_manager_amp}}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
 {% else %}
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{site.google_tag_manager}}"
