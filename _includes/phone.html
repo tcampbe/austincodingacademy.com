@@ -1,11 +1,11 @@
 <!-- htmllint preset="none" -->
 {% if site.baseurl == '/amp' %}
-<amp-analytics config="https://swappy.callrail.com/companies/915131377/amp-analytics.json?cid=CLIENT_ID(cid-scope-cookie-fallback-name)"></amp-analytics>
+<amp-analytics config="https://swappy.callrail.com/companies/{{ site.callrail_company_id }}/amp-analytics.json?cid=CLIENT_ID(cid-scope-cookie-fallback-name)"></amp-analytics>
 
-<amp-call-tracking config="https://swappy.callrail.com/companies/915131377/amp-swap.json?t=15128278498&cid=CLIENT_ID(cid-scope-cookie-fallback-name)">
-  <a class="{{ include.a_class }}" href="tel:{{ site.phone | remove: "(" | remove: ")" | remove: " " | remove: "-" }}"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;{{ site.phone }}</a>
+<amp-call-tracking config="https://swappy.callrail.com/companies/{{ site.callrail_company_id }}/amp-swap.json?t={{ site.phone }}&cid=CLIENT_ID(cid-scope-cookie-fallback-name)">
+  <a class="{{ include.a_class }}" href="tel:{{ site.phone }}"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;{{ site.phone | phone_number }}</a>
 </amp-call-tracking>
 {% else %}
-<a class="{{ include.a_class }}" href="tel:{{ site.phone | remove: "(" | remove: ")" | remove: " " | remove: "-" }}"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;{{ site.phone }}</a>
+<a class="{{ include.a_class }}" href="tel:{{ site.phone }}"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;{{ site.phone | phone_number }}</a>
 {% endif %}
 <!-- htmllint preset="$previous" -->
