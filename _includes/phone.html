@@ -5,10 +5,10 @@
 <div class="d-flex align-items-center">
   <span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;
   <amp-call-tracking config="https://swappy.callrail.com/companies/{{ site.callrail_company_id }}/amp-swap.json?t={{ site.phone }}&cid=CLIENT_ID(cid-scope-cookie-fallback-name)">
-    <a class="{{ include.a_class }}" href="tel:{{ site.phone }}"><span>{{ site.phone | phone_number }}</span></a>
+    <a class="{{ include.a_class }}" href="tel:{{ site.phone }}">{{ site.phone | phone_number }}</a>
   </amp-call-tracking>
 </div>
 {% else %}
-<div class="d-flex align-items-center"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;<a class="{{ include.a_class }}" href="tel:{{ site.phone }}"><span>{{ site.phone | phone_number }}</span></a></div>
+<div class="d-flex align-items-center"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp;<a class="{{ include.a_class }}" href="tel:{{ site.phone }}">{{ site.phone | phone_number }}</a></div>
 {% endif %}
 <!-- htmllint preset="$previous" -->
