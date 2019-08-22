@@ -53,7 +53,7 @@ education:
 
 projects:
   - name: Recipi
-    desc: ...
+    desc:
     url: https://myrecipi.herokuapp.com/login
 
 ---
