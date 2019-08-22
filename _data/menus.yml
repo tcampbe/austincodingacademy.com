@@ -11,6 +11,9 @@ austin_header:
   title: About Us
   links:
   - weight: 1
+    title: Events
+    url: "/events"
+  - weight: 2
     title: FAQ
     url: "/faq"
   - weight: 3
@@ -22,7 +25,7 @@ austin_header:
   - weight: 5
     title: Contact Us
     url: "/contact"
-  - weight: 6
+  - weight: 5
     title: Blog
     url: https://austincodingacademy.com/blog/
 - weight: 3
@@ -52,14 +55,11 @@ lubbock_header:
   title: About Us
   links:
   - weight: 1
+    title: Events
+    url: "/events"
+  - weight: 2
     title: FAQ
     url: "/faq"
-  - weight: 2
-    title: Our Team
-    url: "/team"
-  - weight: 3
-    title: Our Instructors
-    url: "/instructors"
   - weight: 4
     title: Contact Us
     url: "/contact"
@@ -74,21 +74,30 @@ lubbock_header:
   title: Courses
   links:
   - title: Full Stack Web Development
-    url: "/web-development"
+    url: "/web-dev"
 
 austin_footer:
-- weight: 6
+- weight: 9
   title: Student Grievance Policy
   url: "/student-grievances"
-- weight: 4
+- weight: 8
+  title: Student Referral
+  url: "/new-student-referral"
+- weight: 7
   title: Hire a Graduate
   url: "/hire"
+- weight: 6
+  title: Graduating Class
+  url: "/grads"
 - weight: 5
   title: Become an Instructor
   url: "/instructor-apply"
+- weight: 4
+  title: Tutoring
+  url: "/tutoring"
 - weight: 3
   title: Upcoming Events
-  url: https://www.eventbrite.com/o/austin-coding-academy-10937668459
+  url: "/events"
 - weight: 2
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
@@ -99,12 +108,12 @@ lubbock_footer:
 - weight: 5
   title: Student Grievance Policy
   url: "/student-grievances"
-- weight: 3
-  title: Hire a Graduate
-  url: "/hire"
 - weight: 4
   title: Become an Instructor
   url: "/instructor-apply"
+- weight: 3
+  title: Hire a Graduate
+  url: "/hire"
 - weight: 2
   title: Upcoming Events
   url: https://www.eventbrite.com/o/lubbock-coding-academy-18046524539
@@ -134,3 +143,7 @@ lubbock_social:
 - weight: 3
   title: instagram
   url: https://www.instagram.com/lubbockcodingacademy/
+
+
+
+
