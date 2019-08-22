@@ -72,7 +72,7 @@ lubbock_header:
   title: Courses
   links:
   - title: Full Stack Web Development
-    url: "/web-development"
+    url: "/web-dev"
 lubbock_footer:
 - weight: 6
   title: Student Grievance Policy
