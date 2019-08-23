@@ -322,11 +322,11 @@ lubbock:
             >
               <div class="form-container mt-4 d-flex flex-column align-items-center">
                 <div class="w-100 w-sm-75">
-                  <label class="text-white" for="Email">Email Address:</label>
+                  <label class="text-white" for="email">Email Address:</label>
                   <input
-                    id=""
+                    id="email"
                     class="form-control border"
-                    name={{ testimonial.hubspot_email }}
+                    name="{{ testimonial.hubspot_email }}"
                     type="email"
                     placeholder="Email"
                     required data-msg="Please enter a valid email address."
@@ -335,11 +335,11 @@ lubbock:
                   >
                 </div>
                 <div class="w-100 w-sm-75 mt-2">
-                  <label class="text-white" for="Phone">Phone Number:</label>
+                  <label class="text-white" for="phone">Phone Number:</label>
                   <input
-                    id=""
+                    id="phone"
                     class="form-control border"
-                    name={{ testimonial.hubspot_phone }}
+                    name="{{ testimonial.hubspot_phone }}"
                     type="phone"
                     placeholder="Phone Number"
                     required data-msg="Please enter a valid phone number."
