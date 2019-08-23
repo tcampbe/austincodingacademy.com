@@ -292,19 +292,56 @@ lubbock:
           tabindex="0"
           role="dialog"
         >
-          <div class="w-75 mx-auto mt-100">
+          <div
+            class="w-50 mx-auto mt-100"
+            on="tap:testimonial-lightbox.open"
+          >
             <amp-youtube
               data-videoid="{{ testimonial.src_id }}"
               width="480"
               height="270"
               tabindex="0"
               role="presentation"
-              on="tap:testimonial-lightbox.open"
               layout="responsive"
               title="{{ testimonial.title }}"
               autoplay
             >
             </amp-youtube>
+            <!-- CTA -->
+            <div class="form-container mt-4 d-flex flex-column align-items-center">
+              <div class="w-75">
+                <label class="text-white" for="Email">Email Address:</label>
+                <input
+                  id=""
+                  class="form-control border"
+                  name="Email"
+                  type="text"
+                  placeholder="Email"
+                  required data-msg="Please enter a valid email address."
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                >
+              </div>
+              <div class="w-75 mt-2">
+                <label class="text-white" for="Phone">Phone Number:</label>
+                <input
+                  id=""
+                  class="form-control border"
+                  name="Phone"
+                  type="text"
+                  placeholder="Phone Number"
+                  required data-msg="Please enter a valid phone number."
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                >
+              </div>
+              <button
+                type="submit"
+                class="btn btn-round btn-sm-block text-white bg-purple hover-white mt-4"
+              >
+                I Want to Learn More
+              </button>
+            </div>
           </div>
         </amp-lightbox>
       </div>
