@@ -100,11 +100,6 @@ austin:
   lightbox_youtube:
     src_id: UGW-v_uam4k
     title: The Moment I Realized My Life Was Changed
-    hubspot_email: email_austin
-    hubspot_phone: phone_austin
-    hubspot_first_name: first_name_austin
-    hubspot_last_name: last_name_austin
-    cta_form_guid:
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
   features:
   - heading: Flexible Schedule
@@ -172,11 +167,6 @@ lubbock:
   lightbox_youtube:
     src_id: UGW-v_uam4k
     title: The Moment I Realized My Life Was Changed
-    hubspot_email: email_lubbock
-    hubspot_phone: phone_lubbock
-    hubspot_first_name: first_name_lubbock
-    hubspot_last_name: last_name_lubbock
-    cta_form_guid:
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
   features:
   - heading: Flexible Schedule
@@ -320,19 +310,22 @@ lubbock:
             </amp-youtube>
             <!-- CTA Form -->
             <form
-              action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ school.cta_form_guid }}"
+              action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ site.cta_form_guid }}"
               target="_top"
               method="POST"
-              class="mt-4 w-100"
+              tabindex="-1"
+              role="form"
+              class="mt-2 w-100"
             >
+              <input name="school" type="hidden" value="{{ site.key | capitalize }} Coding Academy">
               <div class="form-container d-flex flex-column align-items-center">
                 <div class="d-flex justify-content-between w-100">
-                  <div class="w-50 mr-1">
+                  <div class="w-50 mr-2">
                     <label class="text-white" for="first-name">First Name:</label>
                     <input
                       id="first-name"
                       class="form-control"
-                      name="{{ testimonial.hubspot_first_name }}"
+                      name="firstname"
                       type="text"
                       placeholder="First Name"
                       required data-msg="Please enter your first name."
@@ -340,12 +333,12 @@ lubbock:
                       data-success-class="u-has-success"
                     >
                   </div>
-                  <div class="w-50 ml-1">
+                  <div class="w-50 ml-2">
                     <label class="text-white" for="email">Last Name:</label>
                     <input
                       id="last-name"
                       class="form-control"
-                      name="{{ testimonial.hubspot_last_name }}"
+                      name="lastname"
                       type="text"
                       placeholder="Last Name"
                       required data-msg="Please enter your last name."
@@ -355,12 +348,12 @@ lubbock:
                   </div>
                 </div>
                 <div class="mt-2 d-flex justify-content-between w-100">
-                  <div class="w-50 mr-1">
+                  <div class="w-50 mr-2">
                     <label class="text-white" for="email">Email Address:</label>
                     <input
                       id="email"
                       class="form-control"
-                      name="{{ testimonial.hubspot_email }}"
+                      name="email"
                       type="email"
                       placeholder="Email"
                       required data-msg="Please enter a valid email address."
@@ -368,12 +361,12 @@ lubbock:
                       data-success-class="u-has-success"
                     >
                   </div>
-                  <div class="w-50 ml-1">
+                  <div class="w-50 ml-2">
                     <label class="text-white" for="phone">Phone Number:</label>
                     <input
                       id="phone"
                       class="form-control"
-                      name="{{ testimonial.hubspot_phone }}"
+                      name="phone"
                       type="phone"
                       placeholder="Phone Number"
                       required data-msg="Please enter a valid phone number."
