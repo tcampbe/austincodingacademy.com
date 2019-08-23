@@ -102,6 +102,8 @@ austin:
     title: The Moment I Realized My Life Was Changed
     hubspot_email: email_austin
     hubspot_phone: phone_austin
+    hubspot_first_name: first_name_austin
+    hubspot_last_name: last_name_austin
     cta_form_guid:
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
   features:
@@ -172,6 +174,8 @@ lubbock:
     title: The Moment I Realized My Life Was Changed
     hubspot_email: email_lubbock
     hubspot_phone: phone_lubbock
+    hubspot_first_name: first_name_lubbock
+    hubspot_last_name: last_name_lubbock
     cta_form_guid:
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
   features:
@@ -300,7 +304,7 @@ lubbock:
           role="dialog"
         >
           <div
-            class="w-75 w-sm-50 mx-auto mt-120"
+            class="w-75 w-sm-50 mx-auto mt-100"
             on="tap:testimonial-lightbox.open"
           >
             <amp-youtube
@@ -314,44 +318,75 @@ lubbock:
               autoplay
             >
             </amp-youtube>
-            <!-- CTA -->
+            <!-- CTA Form -->
             <form
               action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ school.cta_form_guid }}"
               target="_top"
               method="POST"
+              class="mt-4 w-100"
             >
-              <div class="form-container mt-4 d-flex flex-column align-items-center">
-                <div class="w-100 w-sm-75">
-                  <label class="text-white" for="email">Email Address:</label>
-                  <input
-                    id="email"
-                    class="form-control border"
-                    name="{{ testimonial.hubspot_email }}"
-                    type="email"
-                    placeholder="Email"
-                    required data-msg="Please enter a valid email address."
-                    data-error-class="u-has-error"
-                    data-success-class="u-has-success"
-                  >
+              <div class="form-container d-flex flex-column align-items-center">
+                <div class="d-flex justify-content-between w-100">
+                  <div class="w-50 mr-1">
+                    <label class="text-white" for="first-name">First Name:</label>
+                    <input
+                      id="first-name"
+                      class="form-control"
+                      name="{{ testimonial.hubspot_first_name }}"
+                      type="text"
+                      placeholder="First Name"
+                      required data-msg="Please enter your first name."
+                      data-error-class="u-has-error"
+                      data-success-class="u-has-success"
+                    >
+                  </div>
+                  <div class="w-50 ml-1">
+                    <label class="text-white" for="email">Last Name:</label>
+                    <input
+                      id="last-name"
+                      class="form-control"
+                      name="{{ testimonial.hubspot_last_name }}"
+                      type="text"
+                      placeholder="Last Name"
+                      required data-msg="Please enter your last name."
+                      data-error-class="u-has-error"
+                      data-success-class="u-has-success"
+                    >
+                  </div>
                 </div>
-                <div class="w-100 w-sm-75 mt-2">
-                  <label class="text-white" for="phone">Phone Number:</label>
-                  <input
-                    id="phone"
-                    class="form-control border"
-                    name="{{ testimonial.hubspot_phone }}"
-                    type="phone"
-                    placeholder="Phone Number"
-                    required data-msg="Please enter a valid phone number."
-                    data-error-class="u-has-error"
-                    data-success-class="u-has-success"
-                  >
+                <div class="mt-2 d-flex justify-content-between w-100">
+                  <div class="w-50 mr-1">
+                    <label class="text-white" for="email">Email Address:</label>
+                    <input
+                      id="email"
+                      class="form-control"
+                      name="{{ testimonial.hubspot_email }}"
+                      type="email"
+                      placeholder="Email"
+                      required data-msg="Please enter a valid email address."
+                      data-error-class="u-has-error"
+                      data-success-class="u-has-success"
+                    >
+                  </div>
+                  <div class="w-50 ml-1">
+                    <label class="text-white" for="phone">Phone Number:</label>
+                    <input
+                      id="phone"
+                      class="form-control"
+                      name="{{ testimonial.hubspot_phone }}"
+                      type="phone"
+                      placeholder="Phone Number"
+                      required data-msg="Please enter a valid phone number."
+                      data-error-class="u-has-error"
+                      data-success-class="u-has-success"
+                    >
+                  </div>
                 </div>
                 <button
                   type="submit"
                   class="btn btn-round btn-sm-block text-white bg-purple hover-white mt-4"
                 >
-                  I Want to Learn More
+                  Get in Touch
                 </button>
               </div>
             </form>
