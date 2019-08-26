@@ -25,7 +25,7 @@ austin_header:
   - weight: 5
     title: Contact Us
     url: "/contact"
-  - weight: 5
+  - weight: 6
     title: Blog
     url: https://austincodingacademy.com/blog/
 - weight: 3
@@ -60,7 +60,13 @@ lubbock_header:
   - weight: 2
     title: FAQ
     url: "/faq"
+  - weight: 3
+    title: Our Team
+    url: "/team"
   - weight: 4
+    title: Our Instructors
+    url: "/instructors"
+  - weight: 5
     title: Contact Us
     url: "/contact"
 - weight: 2
