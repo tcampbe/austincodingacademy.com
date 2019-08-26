@@ -104,19 +104,23 @@ austin_footer:
 - weight: 1
   title: C# .NET
   url: "/csharp"
+
 lubbock_footer:
-- weight: 5
+- weight: 6
   title: Student Grievance Policy
   url: "/student-grievances"
+- weight: 5
+  title: Student Referral
+  url: "/new-student-referral"
 - weight: 4
   title: Become an Instructor
   url: "/instructor-apply"
-- weight: 3
-  title: Hire a Graduate
-  url: "/hire"
 - weight: 2
+  title: Tutoring
+  url: "/tutoring"
+- weight: 3
   title: Upcoming Events
-  url: https://www.eventbrite.com/o/lubbock-coding-academy-18046524539
+  url: "/events"
 - weight: 1
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
@@ -132,6 +136,7 @@ austin_social:
 - weight: 3
   title: instagram
   url: https://www.instagram.com/austincodingacademy/
+
 lubbock_social:
 - weight: 1
   title: facebook
@@ -143,7 +148,5 @@ lubbock_social:
 - weight: 3
   title: instagram
   url: https://www.instagram.com/lubbockcodingacademy/
-
-
 
 

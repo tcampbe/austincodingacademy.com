@@ -20,7 +20,7 @@
       role="dialog"
       tabindex="-1"
     >
-      {% if item.button or item.links == nil %}
+      {% if item.button %}
         <!-- htmllint preset="none" -->
         <a class="{{ item.button }} hover-white ml-5" href="{{ item.url | liquify }}">
         <!-- htmllint preset="$previous" -->
@@ -28,47 +28,55 @@
             {{ item.title }}
             </span>
         </a>
-      {% else %}
-        <amp-accordion disable-session-states class="mx-5">
-          <section>
-            <h5 class="text-center text-white hover-white border btn rounded bg-dark py-1 mb-2" tabindex="0">
-              {{item.title}}
+      {% elsif item.links == nil %}
+        <section>
+          <a href="{{ item.url }}">
+            <h5
+              class="pl-0 text-white hover-white btn rounded bg-dark py-1 mb-2"
+              tabindex="0"
+              style="font-size: 1.25rem; line-height: 1.5; font-weight: 500; cursor: pointer;"
+            >
+              {{ item.title }}
             </h5>
-            <ul class="list-unstyled text-left pl-3">
-              {% if item.links %}
-                {% assign header_menu_links = item.links | sort: 'weight' %}
-                {% for link in header_menu_links %}
-                  <li>
-                    <!-- htmllint preset="none" -->
-                    <a href="{{link.url}}" class="text-blue hover-white">
-                    <!-- htmllint preset="$previous" -->
-                      {{link.title}}
-                    </a>
-                  </li>
-                {% endfor %}
-              {% else %}
-                {% for section in item.sections %}
-                  <li>
-                    <span class="border-bottom text-white">
-                      {{section.heading}}
-                    </span>
-                    <ul class="list-unstyled">
-                      {% for page in section.pages %}
-                        <li>
-                          <!-- htmllint preset="none" -->
-                          <a href="{{page.url}}" class="text-blue hover-white">
-                          <!-- htmllint preset="$previous" -->
-                            {{page.title}}
-                          </a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  </li>
-                {% endfor %}
-              {% endif %}
-            </ul>
-          </section>
-        </amp-accordion>
+          </a>
+        </section>
+      {% else %}
+        <section>
+          <h5 class="text-white bg-dark py-1 mb-2" tabindex="0">
+            {{item.title}}
+          </h5>
+          <ul class="list-unstyled text-left pl-3">
+            {% if item.links %}
+              {% assign header_menu_links = item.links | sort: 'weight' %}
+              {% for link in header_menu_links %}
+                <li>
+                  <a href="{{link.url}}" class="text-blue hover-white">
+                    {{link.title}}
+                  </a>
+                </li>
+              {% endfor %}
+            {% else %}
+              {% for section in item.sections %}
+                <li>
+                  <span class="border-bottom text-white">
+                    {{section.heading}}
+                  </span>
+                  <ul class="list-unstyled">
+                    {% for page in section.pages %}
+                      <li>
+                        <!-- htmllint preset="none" -->
+                        <a href="{{page.url}}" class="text-blue hover-white">
+                        <!-- htmllint preset="$previous" -->
+                          {{page.title}}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </section>
       {% endif %}
     </div>
   {% endfor %}
@@ -132,7 +140,7 @@
                 <!-- htmllint preset="$previous" -->
                   <span class="text-white hover-white">
                     {{ item.title }}
-                    </span>
+                  </span>
                 </a>
               {% elsif item.links %}
                 <li class="nav-item u-header__nav-item">
