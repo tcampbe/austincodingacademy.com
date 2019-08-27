@@ -309,6 +309,15 @@ p {
   background-position: top;
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+  #hero-index {
+    background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7)),
+      url('/assets/images/hero-index.jpg');
+    background-position: top;
+    height: 100vh;
+  }
+}
+
 @media (min-width: 768px) {
   #hero-index {
     background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7));
