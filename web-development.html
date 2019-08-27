@@ -282,9 +282,6 @@ austin:
     description: "To provide a more flexible tuition option, we also offer a “pay-as-you-go” plan. Rather than paying for the entire cost of the program up front, you’re able to pay for each course when you take it, ($2,990/course)."
     price-header: Total Price
     price: $11,960
-  - title: Financing
-    description: "Whether you choose to pay for the entire program up front, or pay-as-you-go, all students are welcome to finance their program independently, or through Skills Fund, our primary financing partner. You can learn more about financing options on our financing page."
-    cta: <a href="/financing" class="btn btn-outline-light btn-round mr-2 d-sm-block">Financing Options <span class="fas fa-arrow-right small"></span></a>
 
 #lubbock:
 #  redirect_from: ["/javascript/", "/javascript"]
@@ -492,9 +489,6 @@ austin:
 #    description: "To provide a more flexible tuition option, we also offer a “pay-as-you-go” plan. Rather than paying for the entire cost of the program up front, you’re able to pay for each course when you take it, ($2,990/course)."
 #    price-header: Total Price
 #    price: $11,960
-#    - title: Financing
-#    description: "Whether you choose to pay for the entire program up front, or pay-as-you-go, all students are welcome to finance their program independently, or through Skills Fund, our primary financing partner. You can learn more about financing options on our financing page."
-#    cta: <a href="/financing" class="btn btn-outline-light btn-round mr-2 d-sm-block">Financing Options <span class="fas fa-arrow-right small"></span></a>
 ---
 
 {% assign school = page[site.key] %}
@@ -791,13 +785,6 @@ austin:
                   <p class="card-body text-white w-50 w-sm-100 w-m-100 w-lg-100 mx-auto mx-md-0 mx-lg-0 rounded border shadow display-6">
                     {{option.price}}
                   </p>
-                </div>
-              {% elsif option.cta %}
-                <div class="mt-4 mt-sm-0 text-center">
-                  <h5>
-                    Learn More
-                  </h5>
-                  {{ option.cta }}
                 </div>
               {% endif %}
             </div>
