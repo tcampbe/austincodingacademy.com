@@ -6,7 +6,7 @@ fullname: Michael Snowden
 jobtitle: Web Developer
 
 location: Austin, TX
-blurb: ""
+blurb: "Happy Healthy Humble"
 
 # first item must be JavaScript or C# or .NET or C#/.NET
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
