@@ -23,13 +23,6 @@ austin:
         able to pay for each course when you take it, ($2,990/course).
       price-header: Total Price
       price: "$11,960"
-    - title: Financing
-      description: Whether you choose to pay for the entire program up front, or pay-as-you-go,
-        all students are welcome to finance their program independently, or through
-        Skills Fund, our primary financing partner. You can learn more about financing
-        options on our financing page.
-      cta: <a href="/financing" class="btn btn-round bg-purple text-white hover-white
-        mt-2">Financing Options <span class="fas fa-arrow-right small"></span></a>
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Austin Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
@@ -54,8 +47,7 @@ austin:
       price: "$2,990"
     - title: Electives
       description: Electives with Austin Coding Academy are coming soon. Stay tuned
-        for updates on seminar courses on web design, C# .Net, and data science. Coming
-        soon.
+        for updates on seminar courses on web design, C# .Net, and data science.
 lubbock:
   title: Affordable Tuition | Software Engineering Classes at Lubbock Coding Academy
   sections:
@@ -92,7 +84,6 @@ lubbock:
   {% for section in city.sections %}
     <section class="mt-5 mb-10">
       {% if section.button %}
-      <!-- remove bg-light -->
         <div class="container-fluid text-center py-3 my-5">
           <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
             {{section.title}}
@@ -110,7 +101,7 @@ lubbock:
           </a>
         </div>
       {% else %}
-      <div class="container-fluid bg-light text-center py-3 my-5">
+        <div class="container-fluid bg-light text-center py-3 my-5">
           <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
             {{section.title}}
           </h2>
@@ -118,39 +109,32 @@ lubbock:
             {{section.description}}
           </p>
         </div>
-      <div class="container">
-        {% for option in section.options %}
-          <div class="row my-5">
-            <div class="col-md-8">
-              <h3 class="display-7 border-bottom">
-                {{option.title}}
-              </h3>
-              <p>
-                {{option.description}}
-              </p>
+        <div class="container">
+          {% for option in section.options %}
+            <div class="row my-5">
+              <div class="col-md-8">
+                <h3 class="display-7 border-bottom">
+                  {{option.title}}
+                </h3>
+                <p>
+                  {{option.description}}
+                </p>
+              </div>
+              <div class="col-md-4 px-5">
+                {% if option.price %}
+                  <div class="text-center">
+                    <h5>
+                      {{option.price-header}}
+                    </h5>
+                    <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6">
+                      {{option.price}}
+                    </p>
+                  </div>
+                {% endif %}
+              </div>
             </div>
-            <div class="col-md-4 px-5">
-              {% if option.price %}
-                <div class="text-center">
-                  <h5>
-                    {{option.price-header}}
-                  </h5>
-                  <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6">
-                    {{option.price}}
-                  </p>
-                </div>
-              {% elsif option.cta %}
-                <div class="text-center">
-                  <h5>
-                    Learn More
-                  </h5>
-                  {{option.cta}}
-                </div>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+          {% endfor %}
+        </div>
       {% endif %}
     </section>
   {% endfor %}

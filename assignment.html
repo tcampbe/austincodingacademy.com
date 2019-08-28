@@ -3,12 +3,246 @@ layout: default
 permalink: "/assignment/"
 title: "Assignment"
 description: ""
+amp_components: ['amp-img']
 redirect_from: []
----
-<h2 class="font-family-alt font-weight-bold text-center display-5 mt-90 mb-10">
-  Assignment
-</h2>
+assignment_form_guid: 60651a89-8f76-427f-aaf6-13263bfd9c6b
 
-<div class="container">
-  {% include hubspot-form.html form_id='60651a89-8f76-427f-aaf6-13263bfd9c6b' %}
-</div>
+heading: New Student Assignment
+form_heading: Student Information
+input_names:
+- first_name: firstname
+- last_name: lastname
+- email: email
+- goals: goals
+- previous_efforts: previousefforts
+- coding_challenge: codingchallenge
+
+challenge_descript1: "Take a look at the picture below showing HTML, CSS, and JavaScript.  In the space provided,
+  please describe in 1-2 paragraphs what the code displayed in the picture is creating."
+challenge_descript2: "This is not a test of your coding knowledge. You are encouraged to use online resources to find answers that you don't know —
+  as a developer that will be an important part of your job! Here are some resources we recommend using:"
+img_src: /assets/images/coding-assignment.png
+resources:
+- W3 Schools
+- Codepen (view this assignment in Code Pen <a href="https://codepen.io/austincoding/pen/ELabMz" target="_blank" rel="noopener">here</a>)
+- Google
+---
+
+<main class="mt-90 pt-1 pb-5 px-4 px-md-0">
+  <div class="my-10 container mb-6">
+    <h1 class="text-center font-family-alt font-weight-bold display-5">
+      {{ page.heading }}
+    </h1>
+  </div>
+
+  <div class="row">
+    <!-- Form -->
+    <div class="col-xs-10 col-sm-10 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
+      <h2 class="mx-auto mb-4 w-100">
+        {{ page.form_heading }}
+      </h2>
+      <form
+        action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ page.assignment_form_guid }}"
+        target="_top"
+        method="POST"
+      >
+        <div class="form-container">
+          <div class="row center-form mb-4">
+            <!-- Input -->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="first-name-cg" class="form-label">
+                  First Name <span class="text-red-a">*</span>
+                </label>
+
+                <input
+                  id="first-name-cg"
+                  type="text"
+                  class="form-control"
+                  name="firstname"
+                  placeholder="First name"
+                  required data-msg="Please enter your first name."
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                />
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="last-name-cg" class="form-label">
+                  Last Name <span class="text-red-a">*</span>
+                </label>
+
+                <input
+                  id="last-name-cg"
+                  type="text"
+                  class="form-control"
+                  name="lastname"
+                  placeholder="Last name"
+                  required data-msg="Please enter your last name."
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                />
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-12 my-4">
+              <div class="form-group">
+                <label for="email-cg" class="form-label align-middle">
+                  Email (Same email you used when applying.) <span class="text-red-a">*</span>
+                </label>
+
+                <input
+                  id="email-cg"
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Email"
+                  required data-msg="Please enter a valid email address."
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                />
+              </div>
+            </div>
+            <!-- End Input -->
+            <h2 class="mx-auto mb-4 w-100 col-12">
+              Student Essays
+            </h2>
+            <!-- Input -->
+            <div class="js-form-message mb-6 col-sm-12">
+              <label for="goals" class="form-label">
+                What are your goals with learning to code and why are you a good fit for ACA? <span class="text-red-a">*</span>
+              </label>
+
+              <div class="input-group">
+                <textarea
+                  class="form-control"
+                  id="goals"
+                  rows="14"
+                  name="what_are_your_goals_with_learning_to_code_and_why_are_you_taking_classes_"
+                  placeholder="3-5 paragraphs"
+                  aria-label="Goals question"
+                  required
+                  data-msg="Please enter a response."
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                ></textarea>
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="js-form-message mb-6 col-sm-12">
+              <label for="previous-efforts" class="form-label">
+                Describe the previous efforts you've made to learn to code. <span class="text-red-a">*</span>
+              </label>
+
+              <div class="input-group">
+                <textarea
+                  id="previous-efforts"
+                  class="form-control"
+                  rows="10"
+                  name="previous_coding_learning"
+                  placeholder="1-2 paragraphs"
+                  aria-label="Previous efforts question"
+                  required
+                  data-msg="Please enter a response."
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                ></textarea>
+              </div>
+            </div>
+            <!-- End Input -->
+            <div class="col-12">
+              <h2 class="mx-auto mb-4 w-100">
+                Coding Assignment
+              </h2>
+              <!-- Coding Challenge -->
+              <p class="px-4 px-md-0">
+                {{ page.challenge_descript1 }}
+              </p>
+              <p class="mb-6 px-4 px-md-0">
+                {{ page.challenge_descript2 }}
+              </p>
+            </div>
+            <div class="mb-6">
+              <ul class="fa-ul m-0">
+                {% for resource in page.resources %}
+                  <li class="mb-1">
+                    <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ resource }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+
+            <div class="js-form-message mb-6 col-sm-12">
+              <div class="w-100 mx-auto mb-6">
+                <amp-img
+                  src="{{ page.img_src }}"
+                  width="2000px"
+                  height="620px"
+                  layout="responsive"
+                  class="img-fluid w-100"
+                  alt="coding challenge codepen"
+                  title="coding challenge codepen"
+                  tabindex="0"
+                >
+                </amp-img>
+              </div>
+
+              <label for="code-challenge" class="form-label flex-wrap">
+                Describe in 1-2 paragraphs what the code above is creating. <span class="text-red-a">*</span>
+              </label>
+
+              <div class="input-group">
+                <textarea
+                  id="code-challenge"
+                  class="form-control"
+                  rows="10"
+                  name="coding_assignment_answer"
+                  placeholder="1-2 paragraphs"
+                  aria-label="Coding Challenge Question"
+                  required
+                  data-msg="Please enter a response."
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                ></textarea>
+              </div>
+            </div>
+            <!-- End Challenge -->
+
+            {% if page.categories contains 'landing' %}
+              <div class="col-12 d-flex justify-content-center">
+                {% include data-agreement.html %}
+              </div>
+            {% endif %}
+
+          </div>
+          <div class="text-center">
+            <div submit-error>
+              <template type="amp-mustache">
+                <p class="text-danger">There was an error with your request. Please try again.</p>
+              </template>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center mb-4">
+            <button
+              type="submit"
+              class="text-white btn btn-round bg-purple hover-white mx-auto"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- End Form -->
+    </div>
+  </div>
+
+</main>

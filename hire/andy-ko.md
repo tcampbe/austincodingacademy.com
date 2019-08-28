@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation, austin ] # don't touch
+categories: [ hire, austin ] # don't touch
 
 fullname: Andy Ko
 
@@ -8,7 +8,7 @@ location:
 blurb:
 
 skills:
-  - C# .NET
+  - C#/.NET
   - Node.js
   - React
   - Redux
