@@ -9,6 +9,7 @@ node_modules
 .DS_Store
 *.orig
 assets/css/main.min.css
+assets/css/main.min.css.map
 _includes/css.html
 package-lock.json
 .env
