@@ -45,8 +45,9 @@ austin_header:
     url: "/web-development"
   - title: Wordpress & Design
     url: "/wordpress"
-austin_header:
-- weight: 6
+
+lubbock_header:
+- weight: 5
   title: Apply
   url: "/apply"
   button: btn btn-round text-white cta-gradient py-1 px-6
@@ -156,5 +157,3 @@ lubbock_social:
 - weight: 3
   title: instagram
   url: https://www.instagram.com/lubbockcodingacademy/
-
-

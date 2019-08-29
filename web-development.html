@@ -4,8 +4,6 @@ permalink: "/web-development/"
 amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel']
 scroll_offset_header: 0.09
 logos:
-<<<<<<< HEAD
-=======
 - width: 721px
   height: 225px
   src: "/assets/images/logo-indeed.png"
@@ -14,7 +12,6 @@ logos:
   height: 799px
   src: "/assets/images/logo-big-commerce.png"
   alt: Big Commerce
->>>>>>> preview
 - width: 1600px
   height: 1600px
   src: "/assets/images/logo-dell.png"
@@ -498,11 +495,7 @@ austin:
 <!-- htmllint preset="none" -->
 <div id="hero-{{ school.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
-<<<<<<< HEAD
-  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
-=======
-  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-55 display-sm-5 text-center">
->>>>>>> preview
+  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-55 text-center">
     Full Stack Web Development
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
@@ -592,10 +585,6 @@ austin:
                   {{ item.text }}
                 </p>
               </div>
-<<<<<<< HEAD
-              <!-- IMAGE -->
-=======
->>>>>>> preview
               <div class="w-100 w-sm-50 p-0 pl-sm-4 my-auto">
                 <amp-img
                   layout="responsive"
@@ -609,10 +598,6 @@ austin:
             </div>
           {% else %}
             <div class="flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
-<<<<<<< HEAD
-              <!-- IMAGE 2 -->
-=======
->>>>>>> preview
               <div class="w-100 w-sm-50 p-0 pr-sm-4 my-auto">
                 <amp-img
                   layout="responsive"
@@ -702,11 +687,7 @@ austin:
   </section>
 
   <section class="pt-4 container">
-<<<<<<< HEAD
-    <div class="font-family-alt display-6 w-100 w-sm-75 w-md-50 w-lg-50 mx-auto mb-7">
-=======
     <div class="font-family-alt text-center display-6 w-100 w-sm-75 w-md-50 mx-auto mb-7">
->>>>>>> preview
       4 Ways We Make Sure Our Students Are Job-Ready
     </div>
     <div class="row">
@@ -736,20 +717,6 @@ austin:
     </div>
   </section>
 
-<<<<<<< HEAD
-  <!-- <section class="container-fluid py-8 bg-textured-2">
-    <div class="display-6 text-center text-white mb-4">
-      Student Outcomes
-    </div>
-    <div class="mx-auto d-flex flex-wrap justify-content-center" style="width: 80%">
-      {% for success in school.successes %}
-        <div class="card shadow-sm my-2 mx-2" style="width: 18rem;">
-          <amp-img
-            class="rounded border shadow-sm mb-2 mt-3 mx-auto"
-            layout="fixed"
-            width="250"
-            height="320"
-=======
   <section class="container-fluid py-8 bg-textured-2">
     <div class="display-6 text-center text-white mb-6">
       Student Outcomes
@@ -763,26 +730,17 @@ austin:
             layout="responsive"
             width="500"
             height="500"
->>>>>>> preview
             src="{{ success.img_src }}"
             alt="Student Success"
           >
           </amp-img>
           <div class="d-flex flex-column align-items-center">
-<<<<<<< HEAD
-            <div class="card-title px-3">
-              {{ success.name }}
-            </div>
-            <div class="mb-2">
-              {{ success.title }} @ {{ success.company }}
-=======
             <div class="card-title px-3 font-weight-bold">
               {{ success.name }}
             </div>
             <div class="mb-2 display-9 text-center">
               {{ success.title }} <br>
               @ {{ success.company }}
->>>>>>> preview
             </div>
             <a
               class="btn btn-round bg-purple text-white text-center hover-white mt-2 mb-3"
@@ -791,22 +749,14 @@ austin:
               rel="noopener"
               target="_blank"
             >
-<<<<<<< HEAD
-              Learn More &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i>
-=======
               {% assign name = success.name | split: ' ' %}
               About {{ name[0] | capitalize }} &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i>
->>>>>>> preview
             </a>
           </div>
         </div>
       {% endfor %}
     </div>
-<<<<<<< HEAD
-  </section> -->
-=======
   </section>
->>>>>>> preview
 
   {% include company-carousel.html %}
 
@@ -836,16 +786,6 @@ austin:
                     {{option.price}}
                   </p>
                 </div>
-<<<<<<< HEAD
-              {% elsif option.cta %}
-                <div class="text-center">
-                  <h5>
-                    Learn More
-                  </h5>
-                  {{ option.cta }}
-                </div>
-=======
->>>>>>> preview
               {% endif %}
             </div>
           </div>

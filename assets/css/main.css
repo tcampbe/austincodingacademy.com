@@ -211,6 +211,12 @@ p {
   }
 }
 
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 .display-5 {
   font-size: 3rem;
   font-weight: 300;
