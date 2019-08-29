@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: "/web-development/"
-amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel']
+amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel', 'amp-fx']
 scroll_offset_header: 0.09
 logos:
 - width: 721px
@@ -538,7 +538,7 @@ austin:
   <section class="pb-4 pt-2 container">
     <div class="row">
       {% for item in school.features %}
-        <div class="col-md-6 mb-5">
+        <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="col-md-6 mb-5">
           <div class="row">
             <div class="col-3 col-md-4 col-lg-3 p-0 d-flex justify-content-center align-items-center">
               <amp-img
@@ -568,15 +568,15 @@ austin:
   <!-- htmllint preset="$previous" -->
   <div class="row flex-column align-items-center">
     <div class="col-md-8 p-0 pl-sm-5 d-flex">
-      <h2 class="font-family-alt display-5 mx-auto mt-2 mb-4 text-center text-sm-left">
+      <h2 amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt display-5 mx-auto mt-2 mb-4 text-center text-sm-left">
         Program Overview
       </h2>
     </div>
       <!-- overview blocks -->
-      <div class="container text-center text-sm-left">
+      <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="container text-center text-sm-left">
         {% for item in school.overview %}
           {% if item.odd %}
-            <div class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
+            <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
               <div class="w-100 w-sm-50 m-0 mr-sm-4 text-white">
                 <h4>
                   {{ item.title }}
@@ -597,7 +597,7 @@ austin:
               </div>
             </div>
           {% else %}
-            <div class="flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
+            <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
               <div class="w-100 w-sm-50 p-0 pr-sm-4 my-auto">
                 <amp-img
                   layout="responsive"
@@ -625,13 +625,15 @@ austin:
   </section>
 
   <section class="py-8 container-fluid">
-    <div class="font-family-alt w-75 mx-auto display-5 mb-4 pt-2 text-center text-sm-left">
+    <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt w-75 mx-auto display-5 mb-4 pt-2 text-center text-sm-left">
       Course Structure
     </div>
     <div class="row d-flex flex-column align-items-center">
       <!-- course cards start -->
       {% for course in school.courses %}
         <div
+          amp-fx="fade-in"
+          data-duration="750ms" data-margin-start="1%" data-margin-end="20%"
           class="w-75 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded"
           style="min-height: 350px;"
         >
@@ -641,7 +643,7 @@ austin:
             </div>
             <div>
               {% for item in course.list %}
-                <ul>
+                <ul amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%">
                   <li>
                     {{ item }}
                   </li>
@@ -649,7 +651,11 @@ austin:
               {% endfor %}
             </div>
           </div>
-          <div class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center">
+          <div
+            amp-fx="fade-in"
+            data-duration="750ms" data-margin-start="1%" data-margin-end="20%"
+            class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center"
+          >
             {% if course.title == school.courses[4].title %}
               4 Weeks
             {% else %}
@@ -665,7 +671,7 @@ austin:
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid {{school.hero}}-gradient text-white py-8">
   <!-- htmllint preset="$previous" -->
-    <div class="row justify-content-center">
+    <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       <div class="col-md-8">
         {% include course-guide-form.html p_class="text-white" %}
       </div>
@@ -673,12 +679,12 @@ austin:
   </section>
 
   <section class="container-fluid d-flex py-8 flex-column justify-content-center text-center">
-    <div class="font-family-alt display-5 mb-4">
+    <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt display-5 mb-4">
       Job Placement
     </div>
-    <div class="row justify-content-center">
+    <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       {% for item in school.job_placement.stats %}
-        <div class="my-4 col-md-4 col-lg-4 col-sm-10">
+        <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="my-4 col-md-4 col-lg-4 col-sm-10">
           <div class="display-4 font-weight-bold my-2 font-family-alt">{{ item.stat }}</div>
           <p>{{ item.descript }}</p>
         </div>
@@ -687,12 +693,12 @@ austin:
   </section>
 
   <section class="pt-4 container">
-    <div class="font-family-alt text-center display-6 w-100 w-sm-75 w-md-50 mx-auto mb-7">
+    <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt text-center display-6 w-100 w-sm-75 w-md-50 mx-auto mb-7">
       4 Ways We Make Sure Our Students Are Job-Ready
     </div>
     <div class="row">
       {% for prop in school.job_placement.value_props %}
-        <div class="col-md-6 mb-5">
+        <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="col-md-6 mb-5">
           <div class="row">
             <div class="col-3 col-md-4 col-lg-3 d-flex p-0 justify-content-center align-items-center">
               <amp-img
@@ -718,12 +724,12 @@ austin:
   </section>
 
   <section class="container-fluid py-8 bg-textured-2">
-    <div class="display-6 text-center text-white mb-6">
+    <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="display-6 text-center text-white mb-6">
       Student Outcomes
     </div>
     <div class="mx-auto d-flex flex-wrap justify-content-between col-12 col-sm-8">
       {% for success in school.successes %}
-        <div class="card shadow mb-4 p-2 mx-auto" style="width: 18rem;">
+        <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="card shadow mb-4 p-2 mx-auto" style="width: 18rem;">
           <amp-img
             class="w-100 rounded border shadow mb-2"
             style="filter: grayscale(100%);"
@@ -762,12 +768,12 @@ austin:
 
   <section class="bg-textured-2 ">
     <div class="text-white m-0 pt-8 pb-2">
-      <div class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
+      <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
         Tuition
       </div>
       <div class="container pt-2">
         {% for option in school.tuition_options %}
-          <div class="row my-5 d-flex justify-content-between">
+          <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="row my-5 d-flex justify-content-between">
             <div class="col-md-8">
               <h3 class="display-7 border-bottom">
                 {{option.title}}
@@ -794,17 +800,17 @@ austin:
     </div>
 
     <div class="pb-8 mt-4">
-      <div class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
+      <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
         <div class="card-body">
-          <div class="display-7 pb-4 text-center">
+          <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="display-7 pb-4 text-center">
             Join our upcoming start date:
           </div>
-          <div class="shadow border">
+          <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="shadow border">
             <div class="text-center display-6 py-4">
               {{ school.next_start_date }}
             </div>
           </div>
-            <div class="text-center py-4">
+            <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="text-center py-4">
               {% include btn-apply.html %}
             </div>
         </div>
@@ -816,10 +822,10 @@ austin:
     <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
       <div class="col-md-8">
-        <h2 class="font-family-alt font-weight-bold text-center display-6">
+        <h2 amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt font-weight-bold text-center display-6">
           Still Have Questions?
         </h2>
-        <div class="mw-600 mx-auto p-2 p-md-0">
+        <div amp-fx="fade-in" data-duration="750ms" data-margin-start="1%" data-margin-end="20%" class="mw-600 mx-auto p-2 p-md-0">
           <h5 class="mb-4 text-center">
             From choosing the right course to understanding course details, we're here
             to help.
