@@ -1,28 +1,28 @@
 <section class="pt-8 pb-4">
+  <h2 class="font-family-alt font-weight-bold text-center display-6">
+    Our Graduates Are Working At
+  </h2>
   <div id="logo-section" class="d-flex w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row justify-content-center align-items-center">
-    <h2 class="font-family-alt font-weight-bold text-center display-6">
-      Our Graduates Are Working At
-    </h2>
-      <amp-carousel
-        width="600px"
-        height="300px"
-        type="slides"
-        autoplay
-        controls="false"
-        delay="1500"
-      >
-        {% for logo in page.logos %}
-          <div class="d-flex align-items-center justify-content-center">
-            <amp-img
-              width="{{ logo.width }}"
-              height="{{ logo.height }}"
-              layout="responsive"
-              class="w-100 h-auto mw-14r"
-              src="{{ logo.src }}"
-              alt="{{ logo.alt }}"
-            ></amp-img>
-          </div>
-        {% endfor %}
-      </amp-carousel>
-    </div>
-  </section>
+    <amp-carousel
+      width="600px"
+      height="300px"
+      type="slides"
+      autoplay
+      controls="false"
+      delay="1500"
+    >
+      {% for logo in page.logos %}
+        <div class="d-flex align-items-center justify-content-center">
+          <amp-img
+            width="{{ logo.width }}"
+            height="{{ logo.height }}"
+            layout="responsive"
+            class="w-100 h-auto mw-14r"
+            src="{{ logo.src }}"
+            alt="{{ logo.alt }}"
+          ></amp-img>
+        </div>
+      {% endfor %}
+    </amp-carousel>
+  </div>
+</section>

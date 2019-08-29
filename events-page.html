@@ -2,20 +2,26 @@
 layout: default
 permalink: "/events/"
 redirect_from: []
-amp_components: ["amp-img", "amp-lightbox"]
-scroll_offset_for_header: 0.02
+amp_components:
+- amp-img
+- amp-lightbox
+scroll_offset_for_header: "0.02"
 austin:
   title: Events | Austin Coding Academy
   header_img: events
   heading: Upcoming Events
-  subheading: "Come join Austin Coding Academy at one of our next events! Whether you'd like a free introduction to coding, to attend an open house,
-    network with us at one of our monthly happy hours, or anything else – check out our upcoming events for opportunities to meet and join our growing community."
+  subheading: Come join Austin Coding Academy at one of our next events! Whether you'd
+    like a free introduction to coding, to attend an open house, network with us at
+    one of our monthly happy hours, or anything else – check out our upcoming events
+    for opportunities to meet and join our growing community.
 lubbock:
   title: Events | Lubbock Coding Academy
   header_img: events
   heading: Upcoming Events
-  subheading: "Come join Lubbock Coding Academy at one of our next events! Whether you'd like a free introduction to coding, to attend an open house,
-    network with us at one of our monthly happy hours, or anything else – check out our upcoming events for opportunities to meet and join our growing community."
+  subheading: Come join Lubbock Coding Academy at one of our next events! Whether
+    you'd like a free introduction to coding, to attend an open house, network with
+    us at one of our monthly happy hours, or anything else – check out our upcoming
+    events for opportunities to meet and join our growing community.
 
 ---
 {% assign school = page[site.key] %}
@@ -30,7 +36,7 @@ lubbock:
     {{ school.subheading }}
   </p>
 </div>
-<main>
+<main class="container">
   <!-- htmllint preset="none" -->
   <div class="mt-4 pb-5 d-flex flex-column">
   <!-- htmllint preset="$previous" -->

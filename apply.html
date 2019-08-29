@@ -170,49 +170,118 @@ lubbock:
           </div>
           <!-- End Input -->
 
-          <!-- Input -->
-          <div class="js-form-message mb-6 col-sm-12 form-group">
-            <label class="form-label" for="yes">
-              Will you be at least 18 by the time your classes begin?
-              <span class="text-red-a">*</span>
-            </label>
+          {% if site.key == 'lubbock' %}
+            <!-- Input -->
+            <div class="js-form-message d-flex flex-wrap flex-sm-nowrap align-items-center form-group">
+              <div class="col-12 col-sm-6">
+                <label class="form-label" for="yes">
+                  Will you be at least 18 by the time your classes begin?
+                  <span class="text-red-a">*</span>
+                </label>
+                <p class="small">
+                  Please note that you must be at least 18 years old by the time your
+                  classes begin to apply to {{ site.key | capitalize }} Coding Academy. You also must have a
+                  High School Diploma or GED.
+                </p>
+                <div id="age">
+                  <!-- Radio Buttons -->
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="are_you_18_or_older_"
+                      id="yes"
+                      value="true"
+                      aria-label="You must be 18 or older to begin classes"
+                      required
+                      data-msg="Please indicate whether you will be 18 or older when classes begin"
+                      data-error-class="u-has-error"
+                      data-success-class="u-has-success"
+                    />
+                    <label class="form-check-label" for="yes">Yes</label>
+                  </div>
 
-            <p class="small">
-              Please note that you must be at least 18 years old by the time your
-              classes begin to apply to {{ site.key | capitalize }} Coding Academy. You also must have a
-              High School Diploma or GED.
-            </p>
-
-            <div id="age">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="are_you_18_or_older_"
-                  id="yes"
-                  value="true"
-                  aria-label="You must be 18 or older to begin classes"
-                  required
-                  data-msg="Please indicate whether you will be 18 or older when classes begin"
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-                <label class="form-check-label" for="yes">Yes</label>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="no"
+                      name="are_you_18_or_older_"
+                      value="false"
+                    />
+                    <label class="form-check-label" for="no">No</label>
+                  </div>
+                </div>
+                <!-- End Radio Buttons -->
               </div>
 
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  id="no"
-                  name="are_you_18_or_older_"
-                  value="false"
-                />
-                <label class="form-check-label" for="no">No</label>
+              <div class="col-12 col-sm-6 mt-6 mt-sm-0">
+                <div class="js-form-message form-group">
+                  <label for="date-of-birth" class="form-label">
+                    Date of Birth<span class="text-red-a">*</span>
+                  </label>
+
+                  <input
+                    id="date-of-birth"
+                    style="text-transform: uppercase;"
+                    type="date"
+                    class="form-control"
+                    name="date_of_birth1"
+                    aria-label="Date of Birth"
+                    required
+                    data-msg="Please enter your date of birth."
+                    data-error-class="u-has-error"
+                    data-success-class="u-has-success"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <!-- End Input -->
+            <!-- End Input -->
+          {% else %}
+            <!-- Input -->
+            <div class="js-form-message mb-6 col-sm-12 form-group">
+              <label class="form-label" for="yes">
+                Will you be at least 18 by the time your classes begin?
+                <span class="text-red-a">*</span>
+              </label>
+
+              <p class="small">
+                Please note that you must be at least 18 years old by the time your
+                classes begin to apply to {{ site.key | capitalize }} Coding Academy. You also must have a
+                High School Diploma or GED.
+              </p>
+
+              <div id="age2">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="are_you_18_or_older_"
+                    id="yes2"
+                    value="true"
+                    aria-label="You must be 18 or older to begin classes"
+                    required
+                    data-msg="Please indicate whether you will be 18 or older when classes begin"
+                    data-error-class="u-has-error"
+                    data-success-class="u-has-success"
+                  />
+                  <label class="form-check-label" for="yes2">Yes</label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="no2"
+                    name="are_you_18_or_older_"
+                    value="false"
+                  />
+                  <label class="form-check-label" for="no2">No</label>
+                </div>
+              </div>
+            </div>
+            <!-- End Input -->
+          {% endif %}
 
           <!-- Input -->
           <div class="col-sm-6 mb-6">

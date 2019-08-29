@@ -1,5 +1,5 @@
+{% assign city = page[site.key] %}
 <div class="container mt-90 pt-1 pb-5">
-  {% assign city = page[site.key] %}
   <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-10">
     {{ city.heading }}
   </h2>
@@ -18,9 +18,9 @@
               alt="{{ profile.name }}"
               title="{{ profile.name }}"
               on="tap:AMP.setState({
-                selectedBio:'{{profile.bio}}',
-                selectedName:'{{profile.name}}',
-                selectedTitle:'{{profile.title}}'
+                selectedBio:'{{ profile.bio }}',
+                selectedName:'{{ profile.name }}',
+                selectedTitle:'{{ profile.title }}'
               }),bio-section.scrollTo(duration=200)"
               tabindex="0"
             ></amp-img>
