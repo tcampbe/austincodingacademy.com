@@ -121,12 +121,12 @@ lubbock_footer:
 - weight: 4
   title: Become an Instructor
   url: "/instructor-apply"
-- weight: 2
-  title: Tutoring
-  url: "/tutoring"
 - weight: 3
   title: Upcoming Events
   url: "/events"
+- weight: 2
+  title: Tutoring
+  url: "/tutoring"
 - weight: 1
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
