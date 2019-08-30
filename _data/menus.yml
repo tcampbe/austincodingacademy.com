@@ -61,6 +61,9 @@ lubbock_header:
   - weight: 2
     title: FAQ
     url: "/faq"
+  - weight: 3
+    title: Our Team
+    url: "/team"
   - weight: 4
     title: Our Instructors
     url: "/instructors"
