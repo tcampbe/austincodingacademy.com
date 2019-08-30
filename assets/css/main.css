@@ -275,6 +275,17 @@ p {
   transform: scale(1.025);
 }
 
+.course-hover {
+  -webkit-transition: box-shadow .3s, transform .3s; /* Safari */
+  transition: box-shadow .3s, transform .3s;
+}
+
+.course-hover:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.249);
+  -webkit-transform: scale(1.003); /* Safari */
+  transform: scale(1.003);
+}
+
 /* HEADER IMAGES */
 
 #header-events {

@@ -43,6 +43,7 @@ austin_header:
   links:
   - title: Full Stack Web Development
     url: "/web-development"
+
 lubbock_header:
 - weight: 5
   title: Apply
@@ -60,9 +61,6 @@ lubbock_header:
   - weight: 2
     title: FAQ
     url: "/faq"
-  - weight: 3
-    title: Our Team
-    url: "/team"
   - weight: 4
     title: Our Instructors
     url: "/instructors"
