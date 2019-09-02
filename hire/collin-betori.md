@@ -12,8 +12,9 @@ blurb: "Getting work done since 1993"
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
   - JavaScript
-  - Node.js
+  - Go
   - React
+  - Node.js
   - Redux
   - Express.js
   - HTML
@@ -44,6 +45,6 @@ education:
 projects:
   - name: Investor Dashboard
     desc: Dashboard React Application
-    url: https://betori-db.herokuapp.com/
+    url: https://aca-dashboard-go.herokuapp.com/
 
 ---

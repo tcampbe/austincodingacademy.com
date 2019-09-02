@@ -282,9 +282,6 @@ austin:
     description: "To provide a more flexible tuition option, we also offer a “pay-as-you-go” plan. Rather than paying for the entire cost of the program up front, you’re able to pay for each course when you take it, ($2,990/course)."
     price-header: Total Price
     price: $11,960
-  - title: Financing
-    description: "Whether you choose to pay for the entire program up front, or pay-as-you-go, all students are welcome to finance their program independently, or through Skills Fund, our primary financing partner. You can learn more about financing options on our financing page."
-    cta: <a href="/financing" class="btn btn-outline-light btn-round mr-2 d-sm-block">Financing Options <span class="fas fa-arrow-right small"></span></a>
 
 #lubbock:
 #  redirect_from: ["/javascript/", "/javascript"]
@@ -492,9 +489,6 @@ austin:
 #    description: "To provide a more flexible tuition option, we also offer a “pay-as-you-go” plan. Rather than paying for the entire cost of the program up front, you’re able to pay for each course when you take it, ($2,990/course)."
 #    price-header: Total Price
 #    price: $11,960
-#    - title: Financing
-#    description: "Whether you choose to pay for the entire program up front, or pay-as-you-go, all students are welcome to finance their program independently, or through Skills Fund, our primary financing partner. You can learn more about financing options on our financing page."
-#    cta: <a href="/financing" class="btn btn-outline-light btn-round mr-2 d-sm-block">Financing Options <span class="fas fa-arrow-right small"></span></a>
 ---
 
 {% assign school = page[site.key] %}
@@ -594,7 +588,7 @@ austin:
               <div class="w-100 w-sm-50 p-0 pl-sm-4 my-auto">
                 <amp-img
                   layout="responsive"
-                  class="img-fluid shadow"
+                  class="img-fluid shadow-black"
                   width="3535"
                   height="2146"
                   src="{{ item.img_src }}"
@@ -607,7 +601,7 @@ austin:
               <div class="w-100 w-sm-50 p-0 pr-sm-4 my-auto">
                 <amp-img
                   layout="responsive"
-                  class="img-fluid shadow"
+                  class="img-fluid shadow-black"
                   width="3535"
                   height="2146"
                   src="{{ item.img_src }}"
@@ -638,7 +632,7 @@ austin:
       <!-- course cards start -->
       {% for course in school.courses %}
         <div
-          class="w-75 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded"
+          class="w-75 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded course-hover"
           style="min-height: 350px;"
         >
           <div>
@@ -693,8 +687,8 @@ austin:
   </section>
 
   <section class="pt-4 container">
-    <div class="font-family-alt text-center display-6 w-100 w-sm-75 w-md-50 mx-auto mb-7">
-      4 Ways We Make Sure Our Students Are Job-Ready
+    <div class="font-family-alt text-center text-sm-left display-6 w-100 mb-7 p-0 pl-sm-5 mx-0 mx-sm-auto">
+      Graduate Job-Ready
     </div>
     <div class="row">
       {% for prop in school.job_placement.value_props %}
@@ -727,7 +721,7 @@ austin:
     <div class="display-6 text-center text-white mb-6">
       Student Outcomes
     </div>
-    <div class="mx-auto d-flex flex-wrap justify-content-between col-12 col-sm-8">
+    <div class="mx-auto d-flex flex-wrap justify-content-between col-12 col-sm-10">
       {% for success in school.successes %}
         <div class="card shadow mb-4 p-2 mx-auto" style="width: 18rem;">
           <amp-img
@@ -756,7 +750,9 @@ austin:
               target="_blank"
             >
               {% assign name = success.name | split: ' ' %}
-              About {{ name[0] | capitalize }} &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i>
+              <span class="hover-white text-white">
+                About {{ name[0] | capitalize }} &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i>
+              </span>
             </a>
           </div>
         </div>
@@ -792,13 +788,6 @@ austin:
                     {{option.price}}
                   </p>
                 </div>
-              {% elsif option.cta %}
-                <div class="mt-4 mt-sm-0 text-center">
-                  <h5>
-                    Learn More
-                  </h5>
-                  {{ option.cta }}
-                </div>
               {% endif %}
             </div>
           </div>
@@ -813,13 +802,13 @@ austin:
             Join our upcoming start date:
           </div>
           <div class="shadow border">
-            <div class="text-center display-6 py-4">
+            <div class="text-center display-6 pt-4">
               {{ school.next_start_date }}
             </div>
-          </div>
             <div class="text-center py-4">
               {% include btn-apply.html %}
             </div>
+          </div>
         </div>
       </div>
     </div>

@@ -275,6 +275,17 @@ p {
   transform: scale(1.025);
 }
 
+.course-hover {
+  -webkit-transition: box-shadow .3s, transform .3s; /* Safari */
+  transition: box-shadow .3s, transform .3s;
+}
+
+.course-hover:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.249);
+  -webkit-transform: scale(1.003); /* Safari */
+  transform: scale(1.003);
+}
+
 /* HEADER IMAGES */
 
 #header-events {
@@ -307,6 +318,15 @@ p {
   background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7)),
     url('/assets/images/hero-index.jpg');
   background-position: top;
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  #hero-index {
+    background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7)),
+      url('/assets/images/hero-index.jpg');
+    background-position: top;
+    height: 100vh;
+  }
 }
 
 @media (min-width: 768px) {

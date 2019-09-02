@@ -44,7 +44,7 @@ jobs:
                 KEY=austin yarn predeploy
                 KEY=austin PREVIEW='preview.' yarn deploy
                 KEY=lubbock yarn predeploy
-                KEY=lubbock PREIVEW='preview.' yarn deploy
+                KEY=lubbock PREVIEW='preview.' yarn deploy
               fi
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
                 git config --global user.email "kevin@austincodingacademy.com"
