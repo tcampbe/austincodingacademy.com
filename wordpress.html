@@ -310,15 +310,15 @@ role_sections:
     <!-- end overview blocks -->
   </section>
 
-  <section class="py-8 container-fluid">
-    <div class="font-family-alt w-75 mx-auto display-5 mb-4 pt-2 text-center">
+  <section class="py-8 container-fluid bg-textured-2">
+    <div class="font-family-alt w-75 mx-auto display-5 mb-4 pt-2 text-center text-white">
       Course Structure
     </div>
     <div class="row d-flex flex-column align-items-center mt-2">
       <!-- course cards start -->
       {% for module in page.modules %}
         <div
-          class="w-75 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded"
+          class="bg-white w-75 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded"
           style="min-height: 350px;"
         >
           <div>
@@ -340,24 +340,24 @@ role_sections:
     </div>
   </section>
 
-  <!-- htmllint preset="none" -->
-  <section id="course-guide" class="container-fluid {{page.hero}}-gradient text-white py-8">
-  <!-- htmllint preset="$previous" -->
+  <section id="course-guide" class="container-fluid py-8">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html p_class="text-white" %}
+        {% include course-guide-form.html %}
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
 
-  <section class="container d-flex py-8 flex-column justify-content-center text-center">
+  <!-- htmllint preset="none" -->
+  <section class="container-fluid d-flex py-8 flex-column justify-content-center text-center text-white {{ page.hero }}-gradient">
+  <!-- htmllint preset="$previous" -->
     <div class="font-family-alt display-5 mb-4">
       About WP Engine
     </div>
     <!-- about -->
-    <div class="container text-center text-sm-left">
+    <div class="container text-center text-sm-left text-white">
       {% for item in page.about %}
         {% if item.odd %}
           <div class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
@@ -365,7 +365,7 @@ role_sections:
               <h4>
                 {{ item.title }}
               </h4>
-              <p class="mx-auto">
+              <p class="mx-auto text-white">
                 {{ item.text }}
               </p>
             </div>
@@ -396,7 +396,7 @@ role_sections:
               <h4>
                 {{ item.title }}
               </h4>
-              <p>
+              <p class="text-white">
                 {{ item.text }}
               </p>
             </div>
@@ -408,9 +408,9 @@ role_sections:
   </section>
 
   {% assign interview = page.interview %}
-  <section class="container-fluid d-flex py-8 flex-column justify-content-center align-items-center bg-textured-2">
+  <section class="container-fluid d-flex py-8 flex-column justify-content-center align-items-center">
     <div class="col-md-8 d-flex flex-column align-items-center justify-content-center">
-      <h2 class="text-center display-5 font-family-alt py-6 text-white">
+      <h2 class="text-center display-5 font-family-alt py-6">
         {{ interview.heading }}
       </h2>
     </div>
@@ -427,10 +427,10 @@ role_sections:
         </amp-img>
       </div>
       <div class="w-100 w-sm-50 m-0 ml-sm-4">
-        <h4 class="text-white">
+        <h4>
           {{ interview.title }}
         </h4>
-        <p class="text-white">
+        <p>
           {{ interview.text }}
         </p>
       </div>
@@ -439,24 +439,24 @@ role_sections:
     <!-- ABOUT THIS ROLE -->
 
     <div class="container py-8">
-      <div class="display-5 font-family-alt text-white mb-4">
+      <div class="display-5 font-family-alt mb-4">
         About the Role
       </div>
-      <p class="text-white">
+      <p>
         During the WordPress Development Course, you will also be learning valuable customer service skills that as well as prepare
         As a Technical Support Specialist, you’ll be providing support to WP Engine customers primarily using live chat, but also
         over the phone and via support tickets.
       </p>
       <div class="mb-2">
-        <div class="display-7 text-white mb-4">
+        <div class="display-7 mb-4">
           What's Cool About This Job
         </div>
-        <p class="text-white">
+        <p>
           You will serve as the first point of contact for WP Engine customers, supporting all of their WordPress questions and needs.
           You will develop a deep technical knowledge of the various open source technologies which deliver amazing digital
           experiences for WP Engine customers.
         </p>
-        <p class="text-white">
+        <p>
           WP Engine cares about its employees, meaning that they invest in both personal and professional development. Their mission
           is to develop you to your full potential and work with you through each stage of your career. WP Engine likes to promote
           people within their business, and many of those folks started out in technical support. Talent is recognized and rewarded
@@ -466,12 +466,12 @@ role_sections:
       <div class="my-2">
         {% for role in page.role_sections %}
           <div class="my-4">
-            <div class="display-7 text-white mb-3">
+            <div class="display-7 mb-3">
               {{ role.title }}
             </div>
             <ul class="fa-ul mb-2">
               {% for bullet in role.bullets %}
-                <li class="mb-1 text-white">
+                <li class="mb-1">
                   <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
                 </li>
               {% endfor %}
@@ -482,15 +482,17 @@ role_sections:
     </div>
 
     <div class="d-flex justify-content-center">
-      <a class="btn cta-gradient text-white hover-white btn-round mr-4" href="/">
-        <span class="text-white hover-white">
+      <a class="btn cta-gradient hover-white btn-round mr-4 text-white" href="/">
+        <span class="hover-white">
           Apply to the WordPress <br>
           Development Program
         </span>
       </a>
-      <a class="btn btn-round btn-outline-light ml-4" href="/">
-        Learn More About <br>
-        WP Engine
+      <a class="btn btn-round text-white bg-purple hover-white ml-4" href="/">
+        <span class="text-white hover-white">
+          Learn More About <br>
+          WP Engine
+        </span>
       </a>
     </div>
   </section>
