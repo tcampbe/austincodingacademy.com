@@ -42,9 +42,9 @@ austin_header:
   title: Courses
   links:
   - title: Full Stack Web Development
-    url: "/web-development"
+    url: "/courses/web-development"
   - title: WordPress Development
-    url: "/wordpress"
+    url: "/courses/wordpress-development"
 
 lubbock_header:
 - weight: 5
