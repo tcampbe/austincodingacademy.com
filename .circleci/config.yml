@@ -42,8 +42,10 @@ jobs:
                 git config --global user.name "Kevin Colten"
                 yarn images
                 KEY=austin yarn predeploy
+                yarn encrypt
                 KEY=austin PREVIEW='preview.' yarn deploy
                 KEY=lubbock yarn predeploy
+                yarn encrypt
                 KEY=lubbock PREVIEW='preview.' yarn deploy
               fi
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
