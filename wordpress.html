@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: "/courses/wordpress-development/"
-amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel', 'amp-fit-text']
+amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel']
 scroll_offset_header: 0.09
 redirect_from: []
 hero: js
@@ -118,6 +118,20 @@ interview:
   title: Graduate with a Guaranteed Job Interview
   text: In this program, you will learn all of the skills necessary to work as a Technical Support Specialist with WP Engine. Every student that completes
     the course is guaranteed an interview with WP Engine for the role of Technical Support Specialist.
+
+role:
+  heading: "About the Role"
+  p1: "During the WordPress Development Course, you will also be learning valuable customer service skills that as well as prepare
+    As a Technical Support Specialist, you’ll be providing support to WP Engine customers primarily using live chat, but also
+    over the phone and via support tickets."
+  subheading: "What's Cool About This Job"
+  p2: "You will serve as the first point of contact for WP Engine customers, supporting all of their WordPress questions and needs.
+    You will develop a deep technical knowledge of the various open source technologies which deliver amazing digital
+    experiences for WP Engine customers."
+  p3: "WP Engine cares about its employees, meaning that they invest in both personal and professional development. Their mission
+    is to develop you to your full potential and work with you through each stage of your career. WP Engine likes to promote
+    people within their business, and many of those folks started out in technical support. Talent is recognized and rewarded
+    at WP Engine. If you are a self-motivator seeking a challenge and can think outside the box, then this role is for you!"
 
 role_sections:
 - title: Your Impact
@@ -434,30 +448,23 @@ role_sections:
     </div>
 
     <!-- ABOUT THIS ROLE -->
-
+    {% assign role = page.role %}
     <div class="container py-8">
       <div class="display-5 font-family-alt mb-4 text-white">
-        About the Role
+        {{ role.heading }}
       </div>
       <p class="text-white">
-        During the WordPress Development Course, you will also be learning valuable customer service skills that as well as prepare
-        As a Technical Support Specialist, you’ll be providing support to WP Engine customers primarily using live chat, but also
-        over the phone and via support tickets.
+        {{ role.p1 }}
       </p>
       <div class="mb-2">
         <div class="display-7 mb-4 text-white">
-          What's Cool About This Job
+          {{ role.subheading }}
         </div>
         <p class="text-white">
-          You will serve as the first point of contact for WP Engine customers, supporting all of their WordPress questions and needs.
-          You will develop a deep technical knowledge of the various open source technologies which deliver amazing digital
-          experiences for WP Engine customers.
+          {{ role.p2 }}
         </p>
         <p class="text-white">
-          WP Engine cares about its employees, meaning that they invest in both personal and professional development. Their mission
-          is to develop you to your full potential and work with you through each stage of your career. WP Engine likes to promote
-          people within their business, and many of those folks started out in technical support. Talent is recognized and rewarded
-          at WP Engine. If you are a self-motivator seeking a challenge and can think outside the box, then this role is for you!
+          {{ role.p3 }}
         </p>
       </div>
       <div class="my-2">
