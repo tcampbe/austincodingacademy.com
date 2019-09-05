@@ -42,7 +42,9 @@ austin_header:
   title: Courses
   links:
   - title: Full Stack Web Development
-    url: "/web-development"
+    url: "/courses/web-development"
+  - title: WordPress Development
+    url: "/courses/wordpress-development"
 
 lubbock_header:
 - weight: 5
@@ -155,5 +157,3 @@ lubbock_social:
 - weight: 3
   title: instagram
   url: https://www.instagram.com/lubbockcodingacademy/
-
-
