@@ -193,7 +193,7 @@ role_sections:
         About This Program
       </div>
       <div class="d-flex justify-space-between flex-column flex-sm-row">
-        <div class="mx-0 mx-sm-auto p-4 w-100 w-sm-50 bg-light card shadow border">
+        <div class="mx-0 mx-sm-auto p-4 w-100 w-sm-50">
           {{ page.program_descript }}
         </div>
         <div class="w-100 w-sm-50 d-flex flex-column align-items-center justify-content-center">
@@ -259,22 +259,25 @@ role_sections:
     </div>
   </section>
 
-  <section class="container d-flex py-8 justify-content-center align-items-center">
-    <div class="w-100 w-sm-50 p-0 pr-sm-4 my-auto">
-      <amp-img
-        layout="responsive"
-        class="img-fluid shadow-black"
-        width="3535"
-        height="2146"
-        src="{{ page.overview_img }}"
-      >
-      </amp-img>
-    </div>
-    <div class="mx-0 mx-sm-auto p-4 w-100 w-sm-50">
-      <div class="text-center font-family-alt display-7 py-6">
-        Our Partnership with WP Engine
+  <section class="container d-flex flex-column flex-sm-row py-8 justify-content-center align-items-center">
+    <div class="w-100 w-sm-50 p-0 pr-sm-4">
+      <div class="text-center font-family-alt display-6 mb-6">
+        Our Partnership with<br>
+        WP Engine
       </div>
-      <div class="bg-light card shadow border p-4">
+      <div class="mb-4 px-2 mb-sm-0">
+        <amp-img
+          layout="responsive"
+          class="img-fluid shadow-black"
+          width="3535"
+          height="2146"
+          src="{{ page.overview_img }}"
+        >
+        </amp-img>
+      </div>
+    </div>
+    <div class="mx-0 mx-sm-auto px-2 pl-sm-4 w-100 w-sm-50">
+      <div class="">
         {{ page.program_overview }}
       </div>
     </div>
@@ -291,7 +294,7 @@ role_sections:
       <!-- overview blocks -->
       <div class="d-flex justify-content-between text-center flex-column flex-sm-row">
         {% for item in page.highlights %}
-          <div class="card shadow col-11 col-sm-4 mx-1 pt-2 my-1">
+          <div class="card shadow col-11 col-sm-4 mx-auto mx-sm-2 pt-2 my-1">
             <h4>
               {{ item.title }}
             </h4>
@@ -313,7 +316,7 @@ role_sections:
       <!-- course cards start -->
       {% for module in page.modules %}
         <div
-          class="bg-white w-75 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded"
+          class="bg-white w-auto mx-4 w-sm-75 mx-sm-auto border shadow mb-4 px-4 pt-4 pt-sm-0 d-flex flex-wrap align-items-center justify-content-between rounded"
           style="min-height: 350px;"
         >
           <div>
@@ -351,7 +354,7 @@ role_sections:
       About WP Engine
     </div>
     <!-- about -->
-    <div class="container text-center text-sm-left">
+    <div class="text-center text-sm-left">
       {% for item in page.about %}
         {% if item.odd %}
           <div class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
