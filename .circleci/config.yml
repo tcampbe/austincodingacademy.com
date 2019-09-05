@@ -33,7 +33,7 @@ jobs:
 
       - run: yarn test
       - run: node _javascripts/events.js
-      - run: node _javascripts/tutoring.js
+      # - run: node _javascripts/tutoring.js
       - deploy:
           name: Deploy
           command: |
@@ -54,6 +54,7 @@ jobs:
                 git config --global user.email "kevin@austincodingacademy.com"
                 git config --global user.name "Kevin Colten"
                 yarn images
+                node _javascripts/tutoring.js
                 KEY=austin yarn sitemap
                 KEY=austin yarn favicon
                 KEY=austin yarn build
