@@ -5,7 +5,6 @@ title: "Assignment"
 description: ""
 amp_components: ['amp-img']
 redirect_from: []
-assignment_form_guid: 60651a89-8f76-427f-aaf6-13263bfd9c6b
 
 heading: New Student Assignment
 form_heading: Student Information
@@ -27,6 +26,12 @@ resources:
 - Codepen (view this assignment in Code Pen <a href="https://codepen.io/austincoding/pen/ELabMz" target="_blank" rel="noopener">here</a>)
 - Google
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 
 <main class="mt-90 pt-1 pb-5 px-4 px-md-0">
   <div class="my-10 container mb-6">
@@ -42,7 +47,7 @@ resources:
         {{ page.form_heading }}
       </h2>
       <form
-        action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ page.assignment_form_guid }}"
+        action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ settings.assignment_form_guid }}"
         target="_top"
         method="POST"
       >

@@ -7,7 +7,20 @@ redirect_from: []
 amp_components:
 - amp-date-picker
 tutors:
-  austin:
+  austincodingacademy:
+  - name: Emilio Sanchez
+    id: "3188939"
+    skills:
+    - JS411
+    - JS311
+    - JS211
+    - Web 101
+    email: sanchez.emilio483@gmail.com
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/?calendarID=3188939
+    virtual: https://meet.google.com/yxu-czvr-bsv
+    rocketchat: https://chat.austincodingacademy.com/direct/emiliosanchez-1176
   - name: Wes Garbee
     id: "10004148"
     skills:
@@ -16,24 +29,10 @@ tutors:
     - ".Net 321"
     email: wgarbee@gmail.com
     location:
-    - North Campus - 314 E. Highland Blvd, STE 115, Austin, TX 78752
-    calendar: https://acaappointment.as.me/?calendarID=2946352
-    virtual: https://meet.google.com/nrm-efsq-vra
-    rocketchat: wes.g.garbee
-  - name: Sarah Cheatham
-    id: "8858846"
-    skills:
-    - Web 101
-    - JS 211
-    - JS 311
-    email: sarah.cheatham14@gmail.com
-    location:
-    - any
     - austinNorth
-    - austinDowntown
-    calendar: https://acaappointment.as.me/schedule.php?calendarID=2705621
-    virtual: https://meet.google.com/rpm-ecko-bxv
-    rocketchat: https://chat.austincodingacademy.com/direct/sarahcheatham-955
+    calendar: https://acaappointment.as.me/?calendarID=2946352
+    virtual: meet.google.com/nrm-efsq-vra
+    rocketchat: https://chat.austincodingacademy.com/direct/wes.g.garbee
   - name: Eddie Crochet
     id: "8858762"
     skills:
@@ -96,7 +95,7 @@ tutors:
     - Web 101
     - JS 211
     - JS 311
-    limitation: Meet @ Highland Only
+    limitation:
     email: sean.philippi@gmail.com
     location:
     - any
@@ -199,7 +198,7 @@ tutors:
     calendar: https://acaappointment.as.me/?calendarID=2522414
     virtual: https://meet.google.com/dvg-kciy-jty
     rocketchat: https://chat.austincodingacademy.com/direct/ericbarrs-913
-  lubbock:
+  lubbockcodingacademy:
   - name: Johnny Reina
     id: "10233633"
     skills:
@@ -243,43 +242,29 @@ tutors:
     calendar: https://acaappointment.as.me/?calendarID=3093012
     virtual: https://meet.google.com/ium-axum-djx
     rocketchat:
-#  - name: Lindsay Wilson
-#    id: ""
-#    skills:
-#    -
-#    email: lindsay.89@outlook.com
-#    location:
-#    - South Plains Community College
-#    calendar:
-#    virtual: https://meet.google.com/wfz-mckx-wqu
-#    rocketchat:
 
   dell:
   - name: Dana
     id: ''
     skills:
     - Web 101
-    - C# 221
-    - ".Net 321"
     email:
     location:
     - austinNorth
     calendar: https://acaappointment.as.me/?appointmentType=10179656
-    virtual: https://meet.google.com/nbo-xtrv-nna
+    virtual:
     rocketchat:
   - name: Isaiah
     id: ''
     skills:
     - Web 101
-    - C# 221
-    - ".Net 321"
     email:
     location:
     - austinNorth
     calendar: https://acaappointment.as.me/?appointmentType=10179645
-    virtual: https://meet.google.com/ium-axum-djx
+    virtual:
     rocketchat:
 
 ---
 {% assign tutors=page.tutors[site.key] %}
-{% include tutors-list.html tutors=tutors filters=site.filters %}
+{% include tutors-list.html tutors=tutors %}

@@ -1,15 +1,21 @@
 ---
 layout: default
 permalink: "/tuition/"
-austin:
+austincodingacademy:
   title: Affordable Tuition | Software Engineering Classes at Austin Coding Academy
   sections:
   - title: Full Stack Web Development Track
-    description: There are three ways our students are able to fund the Full Stack
-      Web Development Track – the core program at Austin Coding Academy. This track
-      includes four 8-week web development courses, ($2,990/course), and a complimentary
-      job placement course.
+    description: There are three ways our students are able to fund our core program.
+      This track includes four 8-week web development courses, ($2,990/course), and a
+      job placement course that is free for all graduates.
     options:
+    - title: Austin Coding Academy Payment Plan (Budget Option)
+      description: With our new payment plan, you can get started with Austin Coding Academy
+        for just $490 up-front. After you begin classes you’ll make bi-weekly payments of $235
+        for 2 years. No interest and no penalty for prepayment!
+      price-header: Details
+      price: $490
+      price2: $235
     - title: Pay Up Front (Savings Option)
       description: Save $1,000 on the cost of the Full Stack Web Development Track
         when you choose to pay for the entire cost of the program up front. Instead
@@ -48,19 +54,76 @@ austin:
     - title: Electives
       description: Electives with Austin Coding Academy are coming soon. Stay tuned
         for updates on seminar courses on web design, C# .Net, and data science.
-lubbock:
+lubbockcodingacademy:
   title: Affordable Tuition | Software Engineering Classes at Lubbock Coding Academy
   sections:
   - title: Full Stack Web Development Track
-    description: There are four courses in our Full Stack program at Lubbock Coding
-      Academy. This track includes four 8-week web development courses, ($1,490/course),
-      and a complimentary job placement course.
+    description: There are four courses ($1,490/course) in our Full Stack Web Development Track,
+      as well as a job placement class (free to all graduates). Find out how we make tuition
+      affordable with our different payment options below.
     options:
+    - title: Lubbock Coding Academy Payment Plan (Budget Option)
+      description: With our new payment plan, you can get started with Lubbock Coding Academy
+        for just $490 up-front. After you begin classes you’ll make bi-weekly payments of $250
+        for 9 months. No interest and no penalty for prepayment!
+      price-header: Details
+      price: $490
+      price2: $250
+    - title: Pay-As-You-Go (Flexible Option)
+      description: You can pay one class at a time for $1,490. The tuition price covers one 8 week
+        session. The cost of the entire program is $5,960.
+      price-header: Total Price
+      price: "$5,960"
     - title: Full Stack Web Development Program
       description: You can pay one class at a time for $1,490. The tuition price covers
         one 8 week session. The cost of the entire program is $5,960.
       price-header: Total Price
       price: "$5,960"
+    - title: Financing (via Texas Tech Credit Union)
+      description: Finance your tuition through Texas Tech Credit Union’s “Lubbock Coding Academy Loan”.
+        Apply with Texas Tech Credit Union, and once accepted simply make your $490 deposit and begin monthly
+        payments towards tuition over the course of the loan. Learn more on Texas Tech Credit Union’s website.
+      cta: <a href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan" rel="noopener" class="btn btn-round bg-purple text-white hover-white
+        mt-2" target="_blank"><span class="text-white hover-white">Financing Options</span> <span class="text-white hover-white fas fa-arrow-right small"></span></a>
+  - title: Apply to Join the Full Stack Web Development Track
+    description: Submit your short 5-minute application to Lubbock Coding Academy’s
+      Full Stack Web Development Track and discuss tuition with a follow-up call with
+      your admissions advisor.
+    button: Apply
+    url: "/apply"
+    style: text-white btn btn-round bg-purple hover-white center mt-4
+
+texastechuniversitycodingacademy:
+  title: Affordable Tuition | Software Engineering Classes at Lubbock Coding Academy
+  sections:
+  - title: Full Stack Web Development Track
+    description: There are four courses ($1,490/course) in our Full Stack Web Development Track,
+      as well as a job placement class (free to all graduates). Find out how we make tuition
+      affordable with our different payment options below.
+    options:
+    - title: Lubbock Coding Academy Payment Plan (Budget Option)
+      description: With our new payment plan, you can get started with Lubbock Coding Academy
+        for just $490 up-front. After you begin classes you’ll make bi-weekly payments of $250
+        for 9 months. No interest and no penalty for prepayment!
+      price-header: Details
+      price: $490
+      price2: $250
+    - title: Pay-As-You-Go (Flexible Option)
+      description: You can pay one class at a time for $1,490. The tuition price covers one 8 week
+        session. The cost of the entire program is $5,960.
+      price-header: Total Price
+      price: "$5,960"
+    - title: Full Stack Web Development Program
+      description: You can pay one class at a time for $1,490. The tuition price covers
+        one 8 week session. The cost of the entire program is $5,960.
+      price-header: Total Price
+      price: "$5,960"
+    - title: Financing (via Texas Tech Credit Union)
+      description: Finance your tuition through Texas Tech Credit Union’s “Lubbock Coding Academy Loan”.
+        Apply with Texas Tech Credit Union, and once accepted simply make your $490 deposit and begin monthly
+        payments towards tuition over the course of the loan. Learn more on Texas Tech Credit Union’s website.
+      cta: <a href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan" rel="noopener" class="btn btn-round bg-purple text-white hover-white
+        mt-2" target="_blank"><span class="text-white hover-white">Financing Options</span> <span class="text-white hover-white fas fa-arrow-right small"></span></a>
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Lubbock Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
@@ -101,40 +164,62 @@ lubbock:
           </a>
         </div>
       {% else %}
-        <div class="container-fluid bg-light text-center py-3 my-5">
-          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-            {{section.title}}
-          </h2>
-          <p class="m-0 mx-auto mw-600">
-            {{section.description}}
-          </p>
-        </div>
-        <div class="container">
-          {% for option in section.options %}
-            <div class="row my-5">
-              <div class="col-md-8">
-                <h3 class="display-7 border-bottom">
-                  {{option.title}}
-                </h3>
-                <p>
-                  {{option.description}}
-                </p>
-              </div>
-              <div class="col-md-4 px-5">
-                {% if option.price %}
-                  <div class="text-center">
-                    <h5>
-                      {{option.price-header}}
-                    </h5>
-                    <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6">
-                      {{option.price}}
-                    </p>
-                  </div>
-                {% endif %}
-              </div>
+      <div class="container-fluid bg-light text-center py-3 my-5">
+        <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
+          {{section.title}}
+        </h2>
+        <p class="m-0 mx-auto mw-600">
+          {{section.description}}
+        </p>
+      </div>
+      <div class="container">
+        {% for option in section.options %}
+          <div class="row my-5">
+            <div class="col-md-8">
+              <h3 class="display-7 border-bottom">
+                {{option.title}}
+              </h3>
+              <p>
+                {{option.description}}
+              </p>
             </div>
-          {% endfor %}
-        </div>
+            <div class="col-md-4 px-5">
+              {% if option.price-header == 'Details' %}
+                <div class="text-center">
+                  <h5>
+                    {{option.price-header}}
+                  </h5>
+                  <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
+                    <div class="display-6">
+                      {{option.price}} <span style="font-size: 1rem;">to start</span>
+                    </div>
+                    <div class="display-8">
+                      +<br>
+                      {{option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
+                    </div>
+                  </div>
+                </div>
+              {% elsif option.price %}
+                <div class="text-center">
+                  <h5>
+                    {{option.price-header}}
+                  </h5>
+                  <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6">
+                    {{option.price}}
+                  </p>
+                </div>
+              {% elsif option.cta %}
+                <div class="text-center">
+                  <h5>
+                    Learn More
+                  </h5>
+                  {{option.cta}}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
       {% endif %}
     </section>
   {% endfor %}

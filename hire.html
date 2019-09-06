@@ -1,17 +1,25 @@
 ---
 layout: default
 permalink: "/hire/"
-austin:
+austincodingacademy:
   title: "Hire a Graduate | Austin Coding Academy"
   description: ""
-lubbock:
+lubbockcodingacademy:
   title: "Hire a Graduate | Lubbock Coding Academy"
   description: ""
+texastechuniversitycodingacademy:
+  title: "Hire a Graduate | Austin Coding Academy"
+  description: ""
 ---
-
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <div class="container mt-90 pt-1 pb-5">
   <h2 class="font-family-alt font-weight-bold text-center display-5 my-10">
-    Hire {% if site.key == 'lubbock' %} a {% else %} an {% endif %} {{ site.key | capitalize }} Coding Academy Graduate
+    Hire {% if site.key == 'lubbock' %} a {% else %} an {% endif %} {{ key_settings.school }} Graduate
   </h2>
   <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
     {% for page in site.pages %}

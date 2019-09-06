@@ -11,6 +11,7 @@ node_modules
 assets/css/main.min.css
 assets/css/main.min.css.map
 _includes/css.html
+assets/css/main.min.css.map
 package-lock.json
 .env
 _data/events.yml

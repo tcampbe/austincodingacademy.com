@@ -86,7 +86,7 @@ logos:
   height: 408px
   src: "/assets/images/logo-onit.png"
   alt: Onit
-austin:
+austincodingacademy:
   title: Austin Coding Academy | Learn to Code, Change Your Life
   img: "/assets/images/hero-index.jpg"
   hero: index
@@ -114,9 +114,7 @@ austin:
   - heading: Affordable Tuition
     title: We Work with Our Students to Make Tuition Manageable
     description: Cover your tuition by paying course-by-course or for the entire program
-      up front, (and saving). Finance your tuition through <a class="link-underlined"
-      rel="noopener" target="_blank" href="https://austincodingacademy.skills.fund/">
-      Skills Fund</a>, our primary financing partner, or privately. Contact our admissions
+      up front, (and saving). Contact our admissions
       team to discuss how Austin Coding Academy can work for you.
     img: wallet_red.png
     square: true
@@ -152,8 +150,7 @@ austin:
       was willing to put in the work.
     name: Greg Swan
     position: Web Developer, Kinetic Theory
-  form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
-lubbock:
+lubbockcodingacademy:
   title: Lubbock Coding Academy | Learn to Code, Change Your Life
   img: "/assets/images/hero-index.jpg"
   hero: index
@@ -218,9 +215,77 @@ lubbock:
       was willing to put in the work.
     name: Greg Swan
     position: Web Developer, Kinetic Theory
-  form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
-
+texastechuniversitycodingacademy:
+  title: Austin Coding Academy | Learn to Code, Change Your Life
+  img: "/assets/images/hero-index.jpg"
+  hero: index
+  description: At Austin Coding Academy, we fit learning to code into your life with
+    a flexible &amp; affordable array of options, all taught by current industry professionals.
+    Don’t wait - embark on a new career today!
+  redirect_from: []
+  nextStartDate: April 2nd
+  heading: Change Your Life With a New Career
+  subheading: Part-time coding classes taught by full-time developers here in Austin, TX
+  lightbox_youtube:
+    src_id: UGW-v_uam4k
+    title: The Moment I Realized My Life Was Changed
+  schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
+  features:
+  - heading: Flexible Schedule
+    title: Keep Your Day Job While You Make a Career Change
+    description: In-person, part-time classes meet twice a week in the evenings, so
+      learning to code fits your schedule. Benefit from a “flipped classroom” approach,
+      with hands-on classes led by instructors who work as professional developers
+      during the day.
+    img: calendar_yellow.png
+    square: true
+    alt: Calendar graphic
+  - heading: Affordable Tuition
+    title: We Work with Our Students to Make Tuition Manageable
+    description: Cover your tuition by paying course-by-course or for the entire program
+      up front, (and saving). Contact our admissions
+      team to discuss how Austin Coding Academy can work for you.
+    img: wallet_red.png
+    square: true
+    alt: Wallet graphic
+  - heading: Unlimited Tutoring
+    title: ''
+    description: Stay on track with your coursework by taking advantage of free unlimited
+      tutoring. You can book 1-on-1 help on your schedule or take advantage of weekend
+      group tutoring at both of our campuses.
+    img: tutoring_blue_2.png
+    alt: Pencil graphic
+  - heading: Job Placement
+    title: You’ll Learn Skills That Will Get You a Job
+    description: Develop skills that employers are looking for with our practical
+      curriculum, taught by professional developers. Receive 1-on-1 attention from
+      our Director of Job Placement. Build your resume, practice interviews, and more
+      in our Job Placement Course.
+    img: suitcase_green.png
+    square: true
+    alt: Suitcase graphic
+  stories:
+  - src: https://player.vimeo.com/video/290925619
+    title: Lilian Situ video review of Austin Coding Academy
+    quote: I've always been interested in programming and being able to create something
+      so being able to take what I learned at ACA and get a job with it ... was one
+      of the best decisions I've made.
+    name: Lillian Situ
+    position: Software Engineer, data.world
+  - src: https://player.vimeo.com/video/290913789
+    title: Greg Swan video review of Austin Coding Academy
+    quote: ACA ... gave me a solid foundation of knowledge, taught me what not to
+      do, and consistently reminded me that there was a job out there for me if I
+      was willing to put in the work.
+    name: Greg Swan
+    position: Web Developer, Kinetic Theory
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 {% assign school = page[site.key] %}
 <div class="position-relative d-flex justify-content-center flex-column overflow-hidden">
   <div class="pl-3 pl-sm-6 ml-sm-4 py-7 pb-md-11 position-absolute z-20 d-flex justify-content-center">
@@ -281,7 +346,9 @@ lubbock:
           tabindex="0"
           rel="noopener"
           >
-          Hear From a Student
+          <span class="hover-white text-white">
+            Hear From a Student
+          </span>
         </a>
         <!-- Lightbox Testimonial Video -->
         {% assign testimonial = school.lightbox_youtube %}
@@ -310,14 +377,14 @@ lubbock:
             </amp-youtube>
             <!-- CTA Form -->
             <form
-              action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ site.cta_form_guid }}"
+              action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ key_settings.cta_form_guid }}"
               target="_top"
               method="POST"
               tabindex="-1"
               role="form"
               class="mt-2 w-100"
             >
-              <input name="school" type="hidden" value="{{ site.key | capitalize }} Coding Academy">
+              <input name="school" type="hidden" value="{{ key_settings.school }}">
               <div class="form-container d-flex flex-column align-items-center">
                 <div class="d-flex justify-content-between w-100">
                   <div class="w-50 mr-2">
@@ -425,7 +492,7 @@ lubbock:
       We Are Committed To Your Success
     </h2>
     <p class="mw-600 mx-auto text-center">
-      From learning to code, to landing your job, our team has your back. At {{ site.key | capitalize }} Coding Academy
+      From learning to code, to landing your job, our team has your back. At {{ key_settings.school }}
       you can learn coding in a classroom setting that works with your busy schedule, and be a part of
       our community, supporting and inspiring each other to be more than just coders.
     </p>

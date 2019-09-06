@@ -211,6 +211,12 @@ p {
   }
 }
 
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 .display-5 {
   font-size: 3rem;
   font-weight: 300;
@@ -273,6 +279,17 @@ p {
   box-shadow: 0 0 30px rgba(45, 47, 119, 0.7);
   -webkit-transform: scale(1.025); /* Safari */
   transform: scale(1.025);
+}
+
+.course-hover {
+  -webkit-transition: box-shadow .3s, transform .3s; /* Safari */
+  transition: box-shadow .3s, transform .3s;
+}
+
+.course-hover:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.249);
+  -webkit-transform: scale(1.003); /* Safari */
+  transform: scale(1.003);
 }
 
 /* HEADER IMAGES */
