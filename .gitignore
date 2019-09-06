@@ -10,6 +10,7 @@ node_modules
 *.orig
 assets/css/main.min.css
 _includes/css.html
+assets/css/main.min.css.map
 package-lock.json
 .env
 _data/events.yml
