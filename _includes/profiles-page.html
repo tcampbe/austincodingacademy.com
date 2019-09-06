@@ -1,3 +1,9 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 {% assign city = page[site.key] %}
 <div class="container mt-90 pt-1 pb-5">
   <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-10">
@@ -51,10 +57,10 @@
       </h2>
       <p class="mx-0 mx-sm-5 p-4 p-sm-5 rounded border shadow">
         <!-- htmllint preset="none" -->
-        <span class="d-block font-weight-bold text-center" [text]="selectedName">About {{ site.acronym | upcase }}</span>
+        <span class="d-block font-weight-bold text-center" [text]="selectedName">About {{ key_settings.school }}</span>
         <small class="d-block font-weight-bold text-center mb-3" [text]="selectedTitle"></small>
         <span [text]="selectedBio">
-          {{ city.defaultBio }}
+          {{ city.default_bio }}
         </span>
         <!-- htmllint preset="$previous" -->
       </p>

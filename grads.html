@@ -1,16 +1,27 @@
 ---
 permalink: "/grads/"
-austin:
+austincodingacademy.com:
   title: "Austin Coding Academy | Graduate Projects"
   description: 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught
     by current industry professionals. Don\’t wait - embark on a new career today!'
   grad_date: August 2019
-lubbock:
+lubbockcodingacademy.com:
   title: "Lubbock Coding Academy | Graduate Projects"
   description: 'At Lubbock Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught
     by current industry professionals. Don\’t wait - embark on a new career today!'
   grad_date:
+texastechuniversitycodingacademy.com:
+  title: "Austin Coding Academy | Graduate Projects"
+  description: 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught
+    by current industry professionals. Don\’t wait - embark on a new career today!'
+  grad_date: August 2019
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 {% assign school = page[site.key] %}
 
 <!DOCTYPE html>
@@ -33,7 +44,7 @@ lubbock:
     />
 
     <title>
-      {{ site.key | capitalize }} Coding Academy | Graduate Projects
+      {{ key_settings.school }} | Graduate Projects
     </title>
 
     <link
@@ -64,12 +75,12 @@ lubbock:
           width="66px"
           height="66px"
           layout="fixed"
-          alt="{{ site.acronym | upcase }} Home"
-          src="/assets/images/logo-{{ site.acronym }}-white.png"
+          alt="{{ key_settings.school }} Home"
+          src="/assets/images/logo-{{ site.key }}-white.png"
           class="w-100"
         ></amp-img>
         <!-- htmllint preset="$previous" -->
-        <span class="sr-only">{{ site.key | capitalize }} Coding Academy Logo</span>
+        <span class="sr-only">{{ key_settings.school }} Logo</span>
       </a>
       <h3 class="pl-4 font-family-alt mb-0">
         {{ school.grad_date | capitalize }} Graduates
@@ -120,7 +131,7 @@ lubbock:
     </div>
     <div class="text-center border-top bg-purple py-3 w-100">
       <p class="small text-white-70 mb-0">
-        © {{ site.key | capitalize }} Coding Academy 2019. All rights reserved.<br/>
+        © {{ key_settings.school }} 2019. All rights reserved.<br/>
         <a class="text-white" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> | <a class="text-white" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>
       </p>
     </div>

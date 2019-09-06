@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- ========== MAIN ========== -->
 <main id="content" role="main" class="mt-90">
   <!-- Description Section -->
@@ -148,11 +154,11 @@ layout: default
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{site.url}}{{site.baseurl}}{{page.url}}"
+        "@id": "{{key_settings.url}}{{site.baseurl}}{{page.url}}"
       },
       "headline": "{{page.title}}",
       "image": [
-        "{{site.url}}{{page.img}}"
+        "{{key_settings.url}}{{page.img}}"
         ],
       "datePublished": "{{page.created_at}}",
       "dateModified": "{{page.updated_at}}",
@@ -162,10 +168,10 @@ layout: default
       },
         "publisher": {
         "@type": "Organization",
-        "name": "{{ site.key | capitalize }} Coding Academy",
+        "name": "{{ key_settings.school }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{site.url}}/assets/images/logo-{{ site.acronym }}.png"
+          "url": "{{key_settings.url}}/assets/images/logo-{{ site.key }}.png"
         }
       },
       "description": "{{page.excerpt}}"

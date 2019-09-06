@@ -3,7 +3,7 @@ layout: default
 permalink: "/web-dev/"
 amp_components: ['amp-animation', 'amp-position-observer']
 scroll_offset_header: 0.09
-austin:
+austincodingacademy.com:
   trackColor: blue
   hero: js
   title: Learn Full Stack Web Development | JavaScript Classes with Austin Coding Academy
@@ -122,7 +122,7 @@ austin:
     - Resume building
     - Networking opportunities and strategies
     - Job-finding strategies
-lubbock:
+texastechuniversitycodingacademy.com:
   trackColor: blue
   hero: js
   title: C# Development with Lubbock Coding Academy
@@ -242,10 +242,134 @@ lubbock:
     - Resume building
     - Networking opportunities and strategies
     - Job-finding strategies
-
+    lubbockcodingacademy.com:
+    trackColor: blue
+    hero: js
+    title: C# Development with Lubbock Coding Academy
+    description: Learn one of the most versatile &amp; common programming languages with
+      Lubbock Code Academy’s Full-Stack track. You’ll go from beginner to advanced within
+      a year - all without quitting your day job. Enroll today!
+    hero_text: Learn the most popular language for making websites, web apps, games, animations,
+      and mobile applications. In this track you'll learn front-end JavaScript and back-end C#/.Net,
+      some of today's most versatile and sought-after skills.
+    courses:
+    - code: Web 101
+      title: Intro to Web Development
+      sections:
+      - start: July 22, 2019
+        end: September 18, 2019
+        weekdays: Mondays &amp; Wednesdays
+        time: 6:00pm - 9:00pm
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      - start:
+        end:
+        weekdays:
+        time:
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      list:
+      - HTML5 + all new HTML5 APIs
+      - CSS3 + Animations and Transitions
+      - Version Control Software - Git
+      - Responsive Web Design
+      - JavaScript Basics &amp; DOM Manipulation
+      - Input Control and Form Submissions
+    - code: C# .NET 221
+      title: C# .NET Fundamentals
+      sections:
+      - start:
+        end:
+        weekdays:
+        time:
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      - start:
+        end:
+        weekdays:
+        time:
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      list:
+      - Immersion in Object Oriented Programming (OOP)
+      - Build Unit Testing + Test Driven Development (TDD)
+      - Data Structures
+      - Algorithms
+      - SQL
+    - code: C# 321
+      title: C# .NET Intermediate
+      sections:
+      - start:
+        end:
+        weekdays:
+        time:
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      - start:
+        end:
+        weekdays:
+        time:
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      list:
+      - C#
+      - .NET Framework
+      - MVC Architecture
+      - Visual Studio
+      - Build Applications
+      - Test Applications
+    - code: C# .NET 421
+      title: C# .NET Advanced
+      sections:
+      - start:
+        end:
+        weekdays:
+        time:
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      - start:
+        end:
+        weekdays:
+        time:
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      list:
+      - .NET Framework
+      - MVC Architecture
+      - Security
+      - Deployment
+      - Hosting
+      - Angular.js
+    - code: Job 501
+      title: 4 Week Job Placement Course
+      sections:
+      - start:
+        end:
+        weekdays:
+        time:
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      - start:
+        end:
+        weekdays:
+        time:
+        address: '3907 Avenue Q, Lubbock, TX 79412'
+        campus: South Plains College, Lubbock Center
+      list:
+      - Technical interview prep
+      - White-boarding practice and feedback
+      - Portfolio support
+      - Resume building
+      - Networking opportunities and strategies
+      - Job-finding strategies
 ---
 {% assign city = page[site.key] %}
-
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- htmllint preset="none" -->
 <div id="hero-{{ city.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
@@ -353,7 +477,7 @@ lubbock:
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "{{ section.address }}",
-              "addressLocality": "{{ site.key | capitalize }}"
+              "addressLocality": "{{ key_settings.city }}"
             }
           }
         }{% unless section == course.sections.last %},{% endunless %}
@@ -361,10 +485,10 @@ lubbock:
       ],
       "provider": {
         "@type": "Organization",
-        "name": "{{ site.key | capitalize }} Coding Academy",
+        "name": "{{ key_settings.school }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{site.url}}/assets/images/logo-{{ site.acronym }}.png"
+          "url": "{{key_settings.url}}/assets/images/logo-{{ site.key }}.png"
         }
       }
     }

@@ -1,5 +1,13 @@
+---
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 {
-  "masterPicture": "assets/images/logo-lca-favicon.png",
+  "masterPicture": "assets/images/logo-{{site.key}}-favicon.png",
   "iconsPath": "/assets/favicons/",
   "design": {
     "ios": {
@@ -10,7 +18,7 @@
         "precomposedIcons": false,
         "declareOnlyDefaultIcon": true
       },
-      "appName": "Lubbock Coding Academy"
+      "appName": "{{key_settings.school}}"
     },
     "desktopBrowser": {},
     "windows": {
@@ -26,13 +34,13 @@
           "rectangle": false
         }
       },
-      "appName": "Lubbock Coding Academy"
+      "appName": "{{key_settings.school}}"
     },
     "androidChrome": {
       "pictureAspect": "noChange",
       "themeColor": "#ffffff",
       "manifest": {
-        "name": "Lubbock Coding Academy",
+        "name": "{{key_settings.school}}",
         "display": "standalone",
         "orientation": "notSet",
         "onConflict": "override",

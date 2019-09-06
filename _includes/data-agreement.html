@@ -1,5 +1,10 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign key = _page[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- htmllint preset="none" -->
 <small class="text-center {{ padding | default: px-md-10 }}">
-  By submitting your information, you agree to our <a class="{{include.class}}" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> and <a class="{{include.class}}" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>, and to receive marketing communications from {{ site.key | capitalize }} Coding Academy.
+  By submitting your information, you agree to our <a class="{{include.class}}" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> and <a class="{{include.class}}" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>, and to receive marketing communications from {{ key_settings.school }}.
 </small>
 <!-- htmllint preset="$previous" -->
