@@ -23,6 +23,3 @@ exclude:
 
 permalink: /blog/:categories/:title/
 categories: [ hire, graduate, landing ]
-
-form_url: "https://4runw89p71.execute-api.us-west-1.amazonaws.com/latest/hubspot"
-hubspot_portal_id: 4009818
