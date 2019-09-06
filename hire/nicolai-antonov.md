@@ -31,25 +31,24 @@ email: nantonov@utexas.edu
 phone: (281) 475-0616
 
 workexperience:
-  - company:
-    dates: October 2014 - March 2018
-    title: Logistics Manager
-    location: Austin, TX
+  - company: C&F International
+    dates: June 2014 - August 2014, June 2015 - August 2015
+    title: IT Engineer
+    location: Houston, TX
 
-  - company:
-    dates: June 2014 - Februrary 2016
-    title: Asbestos Inspector & Abatement Project Manager
-    location: Austin, TX
-
-  - company:
-    dates: April 2008 - May 2014
-    title: Delivery Driver
+  - company: Allegis Transcription
+    dates: October 2018 - Present
+    title: IC Transcriptionist
     location: Austin, TX
 
 education:
-  - name: Austin Coding Acaademy
+  - name: Austin Coding Academy
     dates: Oct 2018 - Aug 2019
     degree: Web Development
+
+  - name: University of Texas at Austin
+    dates: Aug 2013 - May 2017
+    degree: Elements of Computing and History
 
 projects:
   - name: Recipi
