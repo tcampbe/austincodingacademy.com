@@ -1,3 +1,9 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- ========== HEADER ========== -->
 {% if page.hero and page.hero != 'csharp' %}
   {% assign color = 'transparent' %}
@@ -108,12 +114,12 @@
             width="66px"
             height="66px"
             layout="fixed"
-            alt="{{ site.acronym | upcase }} Home"
-            src="/assets/images/logo-{{ site.acronym }}-white.png"
+            alt="{{ key_settings.school | upcase }} Home"
+            src="/assets/images/logo-{{ site.key }}-white.png"
             class="w-100"
           ></amp-img>
           <!-- htmllint preset="$previous" -->
-          <span class="sr-only">{{ site.key | capitalize }} Coding Academy Logo</span>
+          <span class="sr-only">{{ key_settings.school }} Logo</span>
         </a>
         <!-- End Logo -->
         {% unless page.categories contains 'landing' %}

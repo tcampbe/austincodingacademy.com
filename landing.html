@@ -1,9 +1,32 @@
 ---
-layout: landing
+layout: default
 hero: landing
 categories: [ landing ]
 color: transparent
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
+<div class="position-absolute pl-5 pt-5">
+  <!-- Logo -->
+    <a
+      href="/"
+      aria-label="Logo"
+      style="width:80px; height:80px;"
+    >
+      <amp-img
+        width="80px"
+        height="80px"
+        layout="fixed"
+        alt="{{ key_settings.school }} Logo"
+        src="/assets/images/logo-{{ site.key }}-white.png"
+      ></amp-img>
+    </a>
+  <!-- End Logo -->
+</div>
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero">
 <!-- htmllint preset="$previous" -->
@@ -14,11 +37,11 @@ color: transparent
           See How It Works.
         </h1>
         <p class="display-7 text-white my-5">
-          Download the {{ site.key | capitalize }} Coding Academy Course Guide to&nbsp;see how we help our students launch their web development careers. Included in the guide is:
+          Download the {{ key_settings.school }} Course Guide to&nbsp;see how we help our students launch their web development careers. Included in the guide is:
         </p>
         <ul class="fa-ul">
           <li><span class="fa-li" ><i class="fas fa-check" aria-hidden="true"></i></span>Our Courses Explained</li>
-          <li><span class="fa-li" ><i class="fas fa-check" aria-hidden="true"></i></span>“How {{ site.acronym | upcase }} Makes Sure You Get a Job”</li>
+          <li><span class="fa-li" ><i class="fas fa-check" aria-hidden="true"></i></span>“How {{ key_settings.school }} Makes Sure You Get a Job”</li>
           <li><span class="fa-li" ><i class="fas fa-check" aria-hidden="true"></i></span>A Tuition and Financing Breakdown</li>
           <li><span class="fa-li" ><i class="fas fa-check" aria-hidden="true"></i></span>JavaScript vs. C#: A Comparison</li>
         </ul>
@@ -27,14 +50,14 @@ color: transparent
         <form
           class="d-flex justify-content-center align-items-center"
           target="_top"
-          action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.course_guide_form_guid}}"
+          action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{key_settings.course_guide_form_guid}}"
           method="POST">
           <div class="form-container">
             <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
             <input name="downloaded_a_courses_guide" type="hidden" value="true">
             <input name="hs_lead_status" type="hidden" value="NEW">
             <input name="page_name" type="hidden" value="{{page.title}}">
-            <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
+            <input name="page_uri" type="hidden" value="{{key_settings.url}}{{page.url}}">
             <input name="hutk" type="hidden" value="">
             <div class="row center-form bg-purple border rounded p-4">
               <div class="col-12">

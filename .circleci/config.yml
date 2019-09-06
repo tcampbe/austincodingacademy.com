@@ -41,14 +41,18 @@ jobs:
                 git config --global user.email "kevin@austincodingacademy.com"
                 git config --global user.name "Kevin Colten"
                 yarn images
-                KEY=austin yarn favicon
-                KEY=austin yarn build
+                KEY=austincodingacademy.com yarn favicon
+                KEY=austincodingacademy.com yarn build
                 # yarn encrypt
-                KEY=austin PREVIEW='preview.' yarn deploy
-                KEY=lubbock yarn favicon
-                KEY=lubbock yarn build
+                KEY=austincodingacademy.com PREVIEW='preview.' yarn deploy
+                KEY=lubbockcodingacademy.com yarn favicon
+                KEY=lubbockcodingacademy.com yarn build
                 # yarn encrypt
-                KEY=lubbock PREVIEW='preview.' yarn deploy
+                KEY=lubbockcodingacademy.com PREVIEW='preview.' yarn deploy
+                KEY=texastechuniversitycodingacademy.com yarn favicon
+                KEY=texastechuniversitycodingacademy.com yarn build
+                # yarn encrypt
+                KEY=texastechuniversitycodingacademy.com PREVIEW='preview.' yarn deploy
               fi
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
                 git config --global user.email "kevin@austincodingacademy.com"
