@@ -15,7 +15,6 @@ public_path: "/assets/images"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
-instant_preview: true
 build:
   preview_env:
   - JEKYLL_ENV=staging
@@ -25,10 +24,5 @@ build:
   preview_docker_image: forestryio/ruby:2.6
   mount_path: "/srv"
   instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
-    -d _site --config _config.yml,_configs/_config_austin.yml --port 8080 --host 0.0.0.0
-  publish_command: bundle exec jekyll build -d _site
-  publish_env:
-  - JEKYLL_ENV=production
-  output_directory: _site
-  preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
-    --config _configs/default.yml
+    -d _site --config _config.yml,_configs/texastechuniversitycodingacademy.yml --port
+    8080 --host 0.0.0.0
