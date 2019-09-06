@@ -14,12 +14,12 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - favicon.json
   - faviconData.json
   - package.json
   - yarn.lock
   - README.md
   - '*.orig'
+  - '*.log'
 
 permalink: /blog/:categories/:title/
 categories: [ hire, graduate, landing ]
