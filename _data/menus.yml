@@ -1,5 +1,5 @@
 ---
-austincodingacademy.com_header:
+austincodingacademy_header:
 - weight: 6
   title: Apply
   url: "/apply"
@@ -46,7 +46,7 @@ austincodingacademy.com_header:
   - title: WordPress Development
     url: "/courses/wordpress-development"
 
-austincodingacademy.com_footer:
+austincodingacademy_footer:
 - weight: 9
   title: Student Grievance Policy
   url: "/student-grievances"
@@ -75,7 +75,7 @@ austincodingacademy.com_footer:
   title: C# .NET
   url: "/csharp"
 
-austincodingacademy.com_social:
+austincodingacademy_social:
 - weight: 1
   title: facebook
   url: https://www.facebook.com/AustinCodingAcademy/
@@ -87,7 +87,7 @@ austincodingacademy.com_social:
   title: instagram
   url: https://www.instagram.com/austincodingacademy/
 
-lubbockcodingacademy.com_header:
+lubbockcodingacademy_header:
 - weight: 5
   title: Apply
   url: "/apply"
@@ -126,7 +126,7 @@ lubbockcodingacademy.com_header:
   - title: Full Stack Web Development
     url: "/web-dev"
 
-lubbockcodingacademy.com_footer:
+lubbockcodingacademy_footer:
 - weight: 6
   title: Student Grievance Policy
   url: "/student-grievances"
@@ -146,7 +146,7 @@ lubbockcodingacademy.com_footer:
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
 
-lubbockcodingacademy.com_social:
+lubbockcodingacademy_social:
 - weight: 1
   title: facebook
   url: https://www.facebook.com/LubbockCodingAcademy/
@@ -158,7 +158,7 @@ lubbockcodingacademy.com_social:
   title: instagram
   url: https://www.instagram.com/lubbockcodingacademy/
 
-texastechuniversitycodingacademy.com_header:
+texastechuniversitycodingacademy_header:
 - weight: 5
   title: Apply
   url: "/apply"
@@ -197,7 +197,7 @@ texastechuniversitycodingacademy.com_header:
   - title: Full Stack Web Development
     url: "/web-dev"
 
-texastechuniversitycodingacademy.com_footer:
+texastechuniversitycodingacademy_footer:
 - weight: 6
   title: Student Grievance Policy
   url: "/student-grievances"
@@ -217,7 +217,7 @@ texastechuniversitycodingacademy.com_footer:
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
 
-texastechuniversitycodingacademy.com_social:
+texastechuniversitycodingacademy_social:
 - weight: 1
   title: facebook
   url: https://www.facebook.com/LubbockCodingAcademy/
