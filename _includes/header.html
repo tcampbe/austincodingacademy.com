@@ -5,7 +5,7 @@
   {% endif %}
 {% endfor %}
 <!-- ========== HEADER ========== -->
-{% if page.hero and page.hero != 'csharp' %}
+{% if page[site.key].hero or page.hero %}
   {% assign color = 'transparent' %}
 {% endif %}
 {% unless page.categories contains 'landing' %}
