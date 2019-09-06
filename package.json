@@ -16,7 +16,7 @@
     "sitemap": "./node_modules/.bin/sitemap-generator https://$(echo $KEY)codingacademy.com -v",
     "deploy": "yarn cname && gh-pages --repo git@github.com:AustinCodingAcademy/$(echo $PREVIEW)$(echo $KEY)codingacademy.com.git -d ./_site",
     "cname": "echo $(echo $PREVIEW)$(echo $KEY)codingacademy.com >> _site/CNAME",
-    "encrypt": "set -e && find ./_site -type f -name '*.html' -exec staticrypt -f _javascripts/password_template.html -e {} $PASSWORD -o {} \\;",
+    "encrypt": "set -e && find ./_site -type f -name '*.html' -exec staticrypt -f _javascripts/password_template.html {} $PASSWORD -o {} \\;",
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
     "build": "touch _includes/css.html && yarn css && yarn jekyll-build && yarn jekyll-build-amp",
     "jekyll-build": "bundle exec jekyll build --config _config.yml,_configs/_config_$KEY.yml",

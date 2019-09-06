@@ -43,11 +43,11 @@ jobs:
                 yarn images
                 KEY=austin yarn favicon
                 KEY=austin yarn build
-               
+                yarn encrypt
                 KEY=austin PREVIEW='preview.' yarn deploy
                 KEY=lubbock yarn favicon
                 KEY=lubbock yarn build
-                
+                yarn encrypt
                 KEY=lubbock PREVIEW='preview.' yarn deploy
               fi
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
