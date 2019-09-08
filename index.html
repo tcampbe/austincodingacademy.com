@@ -1,6 +1,10 @@
 ---
 layout: default
 permalink: "/"
+head_title: "{{ key_settings.school }} | Learn to Code, Change Your Life"
+hero: index
+description: At {{ key_settings.school }}, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!
+redirect_from: []
 amp_components:
 - amp-animation
 - amp-position-observer
@@ -87,13 +91,6 @@ logos:
   src: "/assets/images/logo-onit.png"
   alt: Onit
 austincodingacademy:
-  title: Austin Coding Academy | Learn to Code, Change Your Life
-  img: "/assets/images/hero-index.jpg"
-  hero: index
-  description: At Austin Coding Academy, we fit learning to code into your life with
-    a flexible &amp; affordable array of options, all taught by current industry professionals.
-    Don’t wait - embark on a new career today!
-  redirect_from: []
   nextStartDate: April 2nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers here in Austin, TX
@@ -151,13 +148,6 @@ austincodingacademy:
     name: Greg Swan
     position: Web Developer, Kinetic Theory
 lubbockcodingacademy:
-  title: Lubbock Coding Academy | Learn to Code, Change Your Life
-  img: "/assets/images/hero-index.jpg"
-  hero: index
-  description: At Lubbock Coding Academy, we fit learning to code into your life with
-    a flexible &amp; affordable array of options, all taught by current industry professionals.
-    Don’t wait - embark on a new career today!
-  redirect_from: []
   nextStartDate: July 22nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers in Lubbock, TX
@@ -216,13 +206,6 @@ lubbockcodingacademy:
     name: Greg Swan
     position: Web Developer, Kinetic Theory
 texastechuniversitycodingacademy:
-  title: Austin Coding Academy | Learn to Code, Change Your Life
-  img: "/assets/images/hero-index.jpg"
-  hero: index
-  description: At Austin Coding Academy, we fit learning to code into your life with
-    a flexible &amp; affordable array of options, all taught by current industry professionals.
-    Don’t wait - embark on a new career today!
-  redirect_from: []
   nextStartDate: April 2nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers here in Austin, TX
@@ -457,7 +440,7 @@ texastechuniversitycodingacademy:
     </div>
   </div>
   <!-- htmllint preset="none" -->
-  <div id="hero-{{ school.hero }}" class="hero z-10 h-100"></div>
+  <div id="hero-{{ page.hero }}" class="hero z-10 h-100"></div>
   <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}
