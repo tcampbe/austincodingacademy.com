@@ -77,8 +77,8 @@ fields:
     label: locations
     fields:
     - type: text
-      name: address
-      label: address
+      name: name
+      label: name
     - type: text
       name: street
       label: street
