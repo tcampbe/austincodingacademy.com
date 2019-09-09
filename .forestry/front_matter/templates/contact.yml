@@ -80,3 +80,5 @@ fields:
       - type: list
         name: items
         label: items
+pages:
+- contact.html
