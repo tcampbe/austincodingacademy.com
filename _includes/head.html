@@ -9,12 +9,12 @@
   <meta charset="utf-8" />
   <title>
     {% assign key_page = page[site.key] %}
-    {{ key_page.title | default: key_settings.title }}
+    {{ page.head_title | liquify }}
   </title>
 
   <meta
     name="description"
-    content="{{ key_page.description | default : key_settings.description }}"
+    content="{{ page.description | liquify }}"
   />
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,6 +45,4 @@
   {% else %}
     <link rel="amphtml" href="{{key_settings.url}}/amp{{page.url}}">
   {% endif %}
-
-  {{ city.head }}
 </head>

@@ -1,6 +1,10 @@
 ---
 layout: default
 permalink: "/"
+head_title: "{{ key_settings.school }} | Learn to Code, Change Your Life"
+hero: index
+description: At {{ key_settings.school }}, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!
+redirect_from: []
 amp_components:
 - amp-carousel
 - amp-lightbox
@@ -85,13 +89,6 @@ logos:
   src: "/assets/images/logo-onit.png"
   alt: Onit
 austincodingacademy:
-  title: Austin Coding Academy | Learn to Code, Change Your Life
-  img: "/assets/images/hero-index.jpg"
-  hero: index
-  description: At Austin Coding Academy, we fit learning to code into your life with
-    a flexible &amp; affordable array of options, all taught by current industry professionals.
-    Don’t wait - embark on a new career today!
-  redirect_from: []
   nextStartDate: April 2nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers here in Austin, TX
@@ -149,13 +146,6 @@ austincodingacademy:
     name: Greg Swan
     position: Web Developer, Kinetic Theory
 lubbockcodingacademy:
-  title: Lubbock Coding Academy | Learn to Code, Change Your Life
-  img: "/assets/images/hero-index.jpg"
-  hero: index
-  description: At Lubbock Coding Academy, we fit learning to code into your life with
-    a flexible &amp; affordable array of options, all taught by current industry professionals.
-    Don’t wait - embark on a new career today!
-  redirect_from: []
   nextStartDate: July 22nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers in Lubbock, TX
@@ -214,13 +204,6 @@ lubbockcodingacademy:
     name: Greg Swan
     position: Web Developer, Kinetic Theory
 texastechuniversitycodingacademy:
-  title: Austin Coding Academy | Learn to Code, Change Your Life
-  img: "/assets/images/hero-index.jpg"
-  hero: index
-  description: At Austin Coding Academy, we fit learning to code into your life with
-    a flexible &amp; affordable array of options, all taught by current industry professionals.
-    Don’t wait - embark on a new career today!
-  redirect_from: []
   nextStartDate: April 2nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers here in Austin, TX
@@ -287,9 +270,9 @@ texastechuniversitycodingacademy:
 {% assign school = page[site.key] %}
 <div class="position-relative d-flex justify-content-center flex-column overflow-hidden">
   <div class="pl-3 pl-sm-6 ml-sm-4 py-7 pb-md-11 position-absolute z-20 d-flex justify-content-center">
-    <div class="col-8 col-md-8 col-lg-6 pl-0">
+    <div class="col-8 col-md-10 col-lg-10 pl-0">
       <div class="my-11"></div>
-      <h1 class="text-white font-family-alt font-weight-bold display-responsive">
+      <h1 class="text-white font-family-alt font-weight-bold display-responsive w-75">
         {{ school.heading }}
       </h1>
       <p class="text-white mt-4 mb-3 line-typewriter anim-typewriter">
@@ -361,6 +344,7 @@ texastechuniversitycodingacademy:
           <div
             class="w-75 w-sm-50 mx-auto mt-100"
             on="tap:testimonial-lightbox.open"
+            tabindex="0"
           >
             <amp-youtube
               data-videoid="{{ testimonial.src_id }}"
@@ -375,7 +359,7 @@ texastechuniversitycodingacademy:
             </amp-youtube>
             <!-- CTA Form -->
             <form
-              action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ key_settings.cta_form_guid }}"
+              action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.cta_form_guid }}"
               target="_top"
               method="POST"
               tabindex="-1"
@@ -454,7 +438,7 @@ texastechuniversitycodingacademy:
     </div>
   </div>
   <!-- htmllint preset="none" -->
-  <div id="hero-{{ school.hero }}" class="hero z-10 h-100"></div>
+  <div id="hero-{{ page.hero }}" class="hero z-10 h-100"></div>
   <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}

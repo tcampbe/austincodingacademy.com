@@ -1,21 +1,10 @@
 ---
 layout: default
 permalink: "/instructor-apply/"
-austincodingacademy:
-  title: "Become an Instructor | Instructor Application - Austin Coding Academy"
-  description: "Become a web development instructor with Austin Coding Academy | Teach
-    coding to the next generation of Austin web developers."
-  redirect_from: []
-lubbockcodingacademy:
-  title: "Become an Instructor | Instructor Application - Lubbock Coding Academy"
-  description: "Become a web development instructor with Lubbock Coding Academy | Teach
-    coding to the next generation of Lubbock web developers."
-  redirect_from: []
-texastechuniversitycodingacademy:
-  title: "Become an Instructor | Instructor Application - Lubbock Coding Academy"
-  description: "Become a web development instructor with Lubbock Coding Academy | Teach
-    coding to the next generation of Lubbock web developers."
-  redirect_from: []
+head_title: "Become an Instructor | Instructor Application - {{ key_settings.school }}"
+description: "Become a web development instructor with {{ key_settings.school }} | Teach
+  coding to the next generation of {{ key_settings.city }} web developers."
+redirect_from: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -32,7 +21,7 @@ texastechuniversitycodingacademy:
     <form
       target="_top"
       class="d-flex justify-content-center"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{settings.instructor_form_guid}}"
+      action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{settings.instructor_form_guid}}"
       method="POST"
     >
       <input name="lifecyclestage" type="hidden" value="opportunity">

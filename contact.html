@@ -1,11 +1,10 @@
 ---
 layout: default
 permalink: "/contact/"
+head_title: "Contact {{ key_settings.school }} | Programming Classes in {{ key_settings.city }}"
+description: "Questions, comments or concerns? From classes to financing to your next steps, we’ll help you find the answers. Contact us today!"
+redirect_from: []
 austincodingacademy:
-  title: "Contact Austin Coding Academy | Programming Classes in Austin"
-  description: "Questions, comments or concerns? From classes to financing to your next
-    steps, we’ll help you find the answers. Contact us today!"
-  redirect_from: []
   locations:
     - map_url: https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641
       address:
@@ -22,23 +21,15 @@ austincodingacademy:
         - 314 E Highland Mall Blvd, Ste 114
         - Austin, TX 78752
 lubbockcodingacademy:
-  title: "Contact Lubbock Coding Academy | Programming Classes in Lubbock"
-  description: "Questions, comments or concerns? From classes to financing to your next
-    steps, we’ll help you find the answers. Contact us today!"
-  redirect_from: []
   locations:
     - map_url: https://www.google.com/maps/place/South+Plains+College+Lubbock+Center/@33.5577634,-101.8559531,17z/data=!3m1!4b1!4m5!3m4!1s0x86fe6d1839084583:0x8bdaa2a3477f2bc8!8m2!3d33.5577634!4d-101.8537644
       address:
-        name: South Plain College
+        name: South Plains College
         items:
         - (Lubbock Center)
         - 3907 Avenue Q,
         - Lubbock, TX 79412
 texastechuniversitycodingacademy:
-  title: "Contact Austin Coding Academy | Programming Classes in Austin"
-  description: "Questions, comments or concerns? From classes to financing to your next
-    steps, we’ll help you find the answers. Contact us today!"
-  redirect_from: []
   locations:
     - map_url: https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641
       address:
@@ -68,8 +59,7 @@ texastechuniversitycodingacademy:
         Have you stopped by our <a href="/faq">FAQ Page</a>? We might have already
         <!-- htmllint preset="$previous" -->
         answered your question, but if not, don’t hesitate to fill out this form or
-        give us a call 9am - 6pm Monday - Friday at
-        {% include phone.html a_class="flex-nowrap" %}
+        give us a call 9am - 6pm Monday - Friday at {% include phone.html a_class="flex-nowrap"%}
       </p>
       {% for location in city.locations %}
         <!-- htmllint preset="none" -->

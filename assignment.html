@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: "/assignment/"
-title: "Assignment"
+head_title: ""
 description: ""
 amp_components: ['amp-img']
 redirect_from: []
@@ -47,7 +47,7 @@ resources:
         {{ page.form_heading }}
       </h2>
       <form
-        action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ settings.assignment_form_guid }}"
+        action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.assignment_form_guid }}"
         target="_top"
         method="POST"
       >

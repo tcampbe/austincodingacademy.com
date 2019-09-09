@@ -55,7 +55,6 @@ modules:
 - code: Module 1
   length: (Week 1 - Week 4)
   text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
-# start metadata
   sections:
   - start: May 29, 2019
     end: July 24, 2019
@@ -69,11 +68,9 @@ modules:
     time: 6:30pm - 9:00pm
     address: 314 E Highland Mall Blvd Ste 115, Austin, TX 78752
     campus: North Austin Highland Campus
-# end metadata
 - code: Module 2
   length: (Week 5 - Week 8)
   text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
-# start metadata
   sections:
   - start: July 29, 2019
     end: September 25, 2019
@@ -87,7 +84,6 @@ modules:
     time: 6:30pm - 9:00pm
     address: 314 E Highland Mall Blvd Ste 115, Austin, TX 78752
     campus: North Austin Highland Campus
-# end metadata
     list:
     - Immersion in Object Oriented Programming (OOP)
     - Build Unit Testing + Test Driven Development (TDD)
@@ -170,7 +166,6 @@ role_sections:
     {% assign key_settings = settings[site.key] %}
   {% endif %}
 {% endfor %}
-{% assign school = page[site.key] %}
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
