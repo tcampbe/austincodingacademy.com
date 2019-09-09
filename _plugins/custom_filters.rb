@@ -4,6 +4,10 @@ module Jekyll
       phone = phone.to_s
       "#{phone[1, 3]}-#{phone[4, 3]}-#{phone[7, 4]}"
     end
+
+    def liquify(input)
+      Liquid::Template.parse(input).render(@context)
+    end
   end
 end
 
