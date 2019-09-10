@@ -23,6 +23,159 @@ fields:
 - type: text
   name: assignment_form_guid
   label: assignment_form_guid
+- type: text
+  name: head_title
+  label: head_title
+- type: textarea
+  name: description
+  label: description
+- type: field_group
+  name: courses
+  label: courses
+  fields:
+  - type: field_group
+    name: Web 101
+    label: Web 101
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: JS 211
+    label: JS 211
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: JS 311
+    label: JS 311
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: JS 411
+    label: JS 411
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: C# 221
+    label: C# 221
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: length
+      label: length
+    - type: text
+      name: description
+      label: description
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: C# 321
+    label: C# 321
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: C# 421
+    label: C# 421
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: Job 501
+    label: Job 501
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+- type: field_group_list
+  name: logos
+  label: logos
+  fields:
+  - type: text
+    name: width
+    label: width
+  - type: text
+    name: height
+    label: height
+  - type: file
+    name: src
+    label: src
+  - type: text
+    name: alt
+    label: alt
+  config:
+    labelField: alt
 - type: field_group
   name: austincodingacademy
   label: austincodingacademy
@@ -42,12 +195,6 @@ fields:
   - type: number
     name: callrail_company_id
     label: callrail_company_id
-  - type: text
-    name: title
-    label: title
-  - type: textarea
-    name: description
-    label: description
   - type: text
     name: google_tag_manager
     label: google_tag_manager
@@ -108,12 +255,6 @@ fields:
     name: callrail_company_id
     label: callrail_company_id
   - type: text
-    name: title
-    label: title
-  - type: textarea
-    name: description
-    label: description
-  - type: text
     name: google_tag_manager
     label: google_tag_manager
   - type: text
@@ -139,8 +280,8 @@ fields:
     label: locations
     fields:
     - type: text
-      name: address
-      label: address
+      name: name
+      label: name
     - type: text
       name: street
       label: street
@@ -169,12 +310,6 @@ fields:
   - type: text
     name: callrail_company_id
     label: callrail_company_id
-  - type: text
-    name: title
-    label: title
-  - type: textarea
-    name: description
-    label: description
   - type: text
     name: google_tag_manager
     label: google_tag_manager
