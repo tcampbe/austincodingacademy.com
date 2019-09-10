@@ -1,4 +1,10 @@
-{% if page.contactLightbox %}
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
+{% if page.contact_lightbox %}
 <a href="#"
   class="btn btn-round text-white bg-purple hover-white mx-auto"
   on="tap:contact-lightbox"
@@ -21,7 +27,7 @@
 {% endif %}
 
 <form
-  action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.contact_form_guid}}"
+  action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{key_settings.contact_form_guid}}"
   method="POST"
   target="_top"
 >
@@ -34,7 +40,7 @@
     <input name="lifecyclestage" type="hidden" value="lead">
     <input name="hs_lead_status" type="hidden" value="NEW">
     <input name="page_name" type="hidden" value="{{page.title}}">
-    <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.url}}">
+    <input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.url}}">
     <input name="hutk" type="hidden" value="">
     <div class="row center-form">
       <!-- Input -->
@@ -177,7 +183,7 @@
   </div>
 </form>
 
-{% if page.contactLightbox %}
+{% if page.contact_lightbox %}
   </div>
 </amp-lightbox>
 {% endif %}

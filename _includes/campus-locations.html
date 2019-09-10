@@ -1,10 +1,16 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <div class="d-flex justify-content-center mt-3">
   <h2 class="mx-auto mb-5 display-6 font-family-alt font-weight-bold">
     We are located at:
   </h2>
 </div>
 <div class="row text-center">
-  {% for location in site.locations %}
+  {% for location in key_settings.locations %}
     <div class="col-12 col-md mt-5 mt-md-0">
       <div class="mb-2">
         <h5 class="font-weight-bold m-0">

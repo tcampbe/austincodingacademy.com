@@ -1,21 +1,17 @@
 ---
 layout: default
 permalink: "/instructor-apply/"
-austin:
-  title: "Become an Instructor | Instructor Application - Austin Coding Academy"
-  description: "Become a web development instructor with Austin Coding Academy | Teach
-    coding to the next generation of Austin web developers."
-  form_guid: 83193d74-f3de-4679-91db-18ba46864fef
-  url: #
-  redirect_from: []
-lubbock:
-  title: "Become an Instructor | Instructor Application - Lubbock Coding Academy"
-  description: "Become a web development instructor with Lubbock Coding Academy | Teach
-    coding to the next generation of Lubbock web developers."
-  form_guid: # 83193d74-f3de-4679-91db-18ba46864fef
-  url: #
-  redirect_from: []
+head_title: "Become an Instructor | Instructor Application - {{ key_settings.school }}"
+description: "Become a web development instructor with {{ key_settings.school }} | Teach
+  coding to the next generation of {{ key_settings.city }} web developers."
+redirect_from: []
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 {% assign city = page[site.key] %}
 <div class="mt-90 pt-1 b-5 container">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
@@ -25,13 +21,13 @@ lubbock:
     <form
       target="_top"
       class="d-flex justify-content-center"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{city.form_guid}}"
+      action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{settings.instructor_form_guid}}"
       method="POST"
     >
       <input name="lifecyclestage" type="hidden" value="opportunity">
       <input name="hutk" type="hidden" value="">
-      <input name="city_name" type="hidden" value="{{city.title}}">
-      <input name="city_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{city.url}}">
+      <input name="page_name" type="hidden" value="{{page.title}}">
+      <input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.url}}">
       <div class="mw-850 row">
         <!-- Input -->
         <div class="col-sm-6 mb-6">
@@ -198,7 +194,7 @@ lubbock:
               <span class="text-red-a">*</span>
             </label>
 
-            <input id="github" type="text" class="form-control" name="github_profile" placeholder="https://github.com/{{ site.key | capitalize }}CodingAcademy"
+            <input id="github" type="text" class="form-control" name="github_profile" placeholder="https://github.com/AustinCodingAcademy"
               aria-label="github" required data-msg="Please enter your github profile link." data-error-class="u-has-error"
               data-success-class="u-has-success" />
           </div>

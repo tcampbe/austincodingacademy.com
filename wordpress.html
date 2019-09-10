@@ -1,8 +1,7 @@
 ---
 layout: default
 permalink: "/courses/wordpress-development/"
-amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel']
-scroll_offset_header: 0.09
+amp_components: ['amp-carousel']
 redirect_from: []
 hero: js
 hero_heading: WordPress Development Course
@@ -56,7 +55,6 @@ modules:
 - code: Module 1
   length: (Week 1 - Week 4)
   text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
-# start metadata
   sections:
   - start: May 29, 2019
     end: July 24, 2019
@@ -70,11 +68,9 @@ modules:
     time: 6:30pm - 9:00pm
     address: 314 E Highland Mall Blvd Ste 115, Austin, TX 78752
     campus: North Austin Highland Campus
-# end metadata
 - code: Module 2
   length: (Week 5 - Week 8)
   text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
-# start metadata
   sections:
   - start: July 29, 2019
     end: September 25, 2019
@@ -88,7 +84,6 @@ modules:
     time: 6:30pm - 9:00pm
     address: 314 E Highland Mall Blvd Ste 115, Austin, TX 78752
     campus: North Austin Highland Campus
-# end metadata
     list:
     - Immersion in Object Oriented Programming (OOP)
     - Build Unit Testing + Test Driven Development (TDD)
@@ -165,8 +160,12 @@ role_sections:
   - Transportation (paid parking or commuter reimbursement).
 
 ---
-
-{% assign school = page[site.key] %}
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
@@ -199,9 +198,6 @@ role_sections:
 </div>
 
 <main>
-
-  {% include observer-and-header-animation.html %}
-
   <section class="py-6 container">
     <div class="pb-6">
       <div class="text-center font-family-alt display-5 pb-6">
@@ -543,7 +539,7 @@ role_sections:
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "{{ section.address }}",
-              "addressLocality": "{{ site.key | capitalize }}"
+              "addressLocality": "{{ key_settings.city }}"
             }
           }
         }{% unless section == course.sections.last %},{% endunless %}
@@ -551,10 +547,10 @@ role_sections:
       ],
       "provider": {
         "@type": "Organization",
-        "name": "{{ site.key | capitalize }} Coding Academy",
+        "name": "{{ key_settings.school }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{site.url}}/assets/images/logo-{{ site.acronym }}.png"
+          "url": "{{key_settings.url}}/assets/images/logo-{{ site.key }}.png"
         }
       }
     }

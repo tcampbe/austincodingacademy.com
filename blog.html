@@ -1,29 +1,26 @@
 ---
 layout: default
-title: Coding Blog | Austin Coding Academy
 img: "/assets/images/hero-blog.jpg"
-description: Read the Austin Coding Academy blog to get the latest news and tips on
-  coding bootcamps, learning to code, web development, JavaScript, C# and .NET, and career development.
 permalink: "/blog/"
+head_title: Coding Blog | {{ key_settings.school }}
+description: Read the {{ key_settings.school }} blog to get the latest news and tips on coding bootcamps, learning to code, web development, JavaScript, C# and .NET, and career development.
 hero: blog
 redirect_from: []
-scroll_offset_for_header: 0.02
-amp_components: ['amp-animation', 'amp-position-observer']
+amp_components: []
 ---
 <!-- htmllint preset="none" -->
 <div
   class="hero py-11" id="hero-{{ page.hero }}">
   <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 px-1 p-md-0 text-white font-family-alt font-weight-bold display-responsive text-center">
-    Austin Coding Academy Blog
+    {{ key_settings.school }}
   </h1>
   <p class="text-white text-center mx-auto px-4 px-md-0 mw-600">
-    Welcome to the Austin Coding Academy Blog. Read the latest news from the Austin Coding Academy team on web development, tech, what’s happening in the community, and more.
+    Welcome to the {{ key_settings.school }} Blog. Read the latest news from the {{ key_settings.school }} team on web development, tech, what’s happening in the community, and more.
   </p>
 </div>
 
 <main id="content" role="main">
-  {% include observer-and-header-animation.html %}
   <!-- Blog Classic Section -->
   <div class="container my-10">
     <div class="row">

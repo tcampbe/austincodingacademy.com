@@ -1,11 +1,12 @@
 ---
 layout: default
 permalink: "/instructors/"
-austin:
-  title: "Instructors | Learn Coding with Austin Coding Academy"
+head_title: "Instructors | Learn Coding with {{ key_settings.school }}"
+description: ""
+
+austincodingacademy:
   heading: Meet Our Instructors
-  description: ""
-  defaultBio: Our instructors live and work in Austin as full-time software developers.
+  default_bio: Our instructors live and work in Austin as full-time software developers.
     They come from diverse backgrounds and love to help our students get all the skills they need in a real
     workplace, no matter which class they choose to pursue.
   profiles:
@@ -64,15 +65,18 @@ austin:
       title: .NET 321 (North Campus)
       campus: North
       bio: "Erik has been a front-end engineer at Gartner since September 2018. Before that he was a software engineer at General Motors."
-lubbock:
-  title: "Instructors | Learn Coding with Lubbock Coding Academy"
+texastechuniversitycodingacademy:
   heading: Meet Our Instructors
-  description: ""
-  defaultBio: Our instructors live and work in Lubbock as full-time software developers.
+  default_bio: Our instructors live and work in Lubbock as full-time software developers.
+    They come from diverse backgrounds and love to help our students get all the skills they need in a real
+    workplace, no matter which class they choose to pursue.
+  profiles: []
+lubbockcodingacademy:
+  heading: Meet Our Instructors
+  default_bio: Our instructors live and work in Lubbock as full-time software developers.
     They come from diverse backgrounds and love to help our students get all the skills they need in a real
     workplace, no matter which class they choose to pursue.
   profiles:
-
     - name: Jeffrey Zheng
       email: jeffreyzheng360@gmail.com
       linkedin: https://www.linkedin.com/in/jeffrey-zheng-572b3698/
@@ -97,7 +101,6 @@ lubbock:
       title: Instructor
       campus:
       bio: Full-stack web developer and project manager with a passion for learning new technologies, sharing knowledge, and mocha cappuccino.
-
 ---
 
 {% include profiles-page.html %}

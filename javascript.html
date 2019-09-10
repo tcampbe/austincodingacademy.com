@@ -2,14 +2,13 @@
 layout: default
 permalink: "/javascript/"
 trackColor: blue
-title: Learn Full-stack Web Development | JavaScript Classes with Austin Coding Academy
+head_title: Learn Full-stack Web Development | JavaScript Classes with {{ key_settings.school }}
 img: "/assets/images/header-javascript.jpg"
 redirect_from: []
 hero: js
 skills: React.js or Node.js
-scroll_offset_header: 0.09
 description: Learn one of the most versatile &amp; common programming languages with
-  Austin Code Academy’s JavaScript track. You’ll go from beginner to advanced within
+  {{ key_settings.school }}’s JavaScript track. You’ll go from beginner to advanced within
   a year - all without quitting your day job. Enroll today!
 hero_text: Learn the most popular language for making websites, web apps, games, animations,
   and mobile applications. In this track you'll learn front-end and back-end JavaScript,
@@ -130,6 +129,12 @@ courses:
   - Job-finding strategies
 
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
@@ -145,7 +150,6 @@ courses:
 <main>
 
   {% include scrolling-menu-disappearing.html %}
-  {% include observer-and-header-animation.html %}
 
   <div class="container-fluid">
     <div class="row w-100 h-100 fixed-top pointer-events-none">
@@ -421,7 +425,7 @@ courses:
         "name": "Austin Coding Academy",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{site.url}}/assets/images/logo-{{ site.acronym }}.png"
+          "url": "{{key_settings.url}}/assets/images/logo-{{ site.key }}.png"
         }
       }
     }

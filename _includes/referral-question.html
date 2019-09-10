@@ -1,3 +1,9 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- Input -->
 <div class="form-group">
   <!-- htmllint preset="none" -->
@@ -38,16 +44,16 @@
       Search engine
     </option>
 
-    <option value="{{ site.acronym | upcase }} event">
-      {{ site.acronym | upcase }} event
+    <option value="{{ key_settings.school }} event">
+      {{ key_settings.school }} event
     </option>
 
-    <option value="{{ site.acronym | upcase }} faculty / staff">
-      {{ site.acronym | upcase }} faculty / staff
+    <option value="{{ key_settings.school }} faculty / staff">
+      {{ key_settings.school }} faculty / staff
     </option>
 
-    <option value="{{ site.acronym | upcase }} student / alumni">
-      {{ site.acronym | upcase }} student / alumni
+    <option value="{{ key_settings.school }} student / alumni">
+      {{ key_settings.school }} student / alumni
     </option>
 
     <option value="News (TV, article)">

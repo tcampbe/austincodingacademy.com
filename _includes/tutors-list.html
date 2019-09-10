@@ -1,3 +1,9 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <div class="container mt-90 pt-1 pb-5">
   {% if include.marketing %}
     <amp-lightbox
@@ -16,14 +22,14 @@
       </div>
       <form class="d-flex justify-content-center align-items-center"
         target="_top"
-        action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.course_guide_form_guid}}"
+        action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{key_settings.course_guide_form_guid}}"
         method="POST">
         <div class="form-container px-5 px-lg-11 mx-lg-11">
           <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
           <input name="downloaded_a_courses_guide" type="hidden" value="true">
           <input name="hs_lead_status" type="hidden" value="NEW">
           <input name="page_name" type="hidden" value="{{page.title}}">
-          <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
+          <input name="page_uri" type="hidden" value="{{key_settings.url}}{{page.url}}">
           <input name="hutk" type="hidden" value="">
 
           <div class="row center-form px-5 pb-3" on="tap:apply-now-lightbox.open" role="button" tabindex="0">
@@ -98,7 +104,7 @@
     Tutoring
   </h2>
   <h5 class="text-center mb-5 mx-auto">
-    {{ site.key | capitalize }} Coding Academy offers unlimited tutoring to students and graduates!
+    {{ key_settings.school }} offers unlimited tutoring to students and graduates!
   </h5>
   <div class="row mb-10 mt-6">
     <div class="col-md">
@@ -169,55 +175,53 @@
 
   <!-- Filters -->
   {% unless include.marketing %}
-    {% if include.filters %}
-      <h4 class="pt-5">Filters</h4>
-      <div class="d-flex flex-row justify-content-around pb-5">
-        <!-- Location -->
-        <div class="w-50">
-          <label class="form-label">
-            By Location:
-          </label>
-          <!-- htmllint preset="none" -->
-          <select
-            on="change:AMP.setState({ location: event.value })"
+    <h4 class="pt-5">Filters</h4>
+    <div class="d-flex flex-row justify-content-around pb-5">
+      <!-- Location -->
+      <div class="w-50">
+        <label class="form-label">
+          By Location:
+        </label>
+        <!-- htmllint preset="none" -->
+        <select
+          on="change:AMP.setState({ location: event.value })"
+          tabindex="0"
+          class="form-control"
+        >
+        <!-- htmllint preset="$previous" -->
+          <option value="any" selected>
+            Select Location
+          </option>
+          <option value="austinNorth">
+            North Campus
+          </option>
+          <option value="austinDowntown">
+            Downtown Campus
+          </option>
+        </select>
+      </div>
+
+      <!-- Date Picker -->
+      <div class="ml-1 w-50">
+        <label class="form-label">
+          By Date:
+        </label>
+        <!-- htmllint preset="none" -->
+        <amp-date-picker
+          mode="overlay"
+          tabindex="0"
+          on="select:AMP.setState({selectedDate: event.date})"
+          input-selector="[name=tutoringDate]"
+        >
+        <!-- htmllint preset="$previous" -->
+          <input type="text"
+            name="tutoringDate"
             tabindex="0"
             class="form-control"
-          >
-          <!-- htmllint preset="$previous" -->
-            <option value="any" selected>
-              Select Location
-            </option>
-            <option value="austinNorth">
-              North Campus
-            </option>
-            <option value="austinDowntown">
-              Downtown Campus
-            </option>
-          </select>
-        </div>
-
-        <!-- Date Picker -->
-        <div class="ml-1 w-50">
-          <label class="form-label">
-            By Date:
-          </label>
-          <!-- htmllint preset="none" -->
-          <amp-date-picker
-            mode="overlay"
-            tabindex="0"
-            on="select:AMP.setState({selectedDate: event.date})"
-            input-selector="[name=tutoringDate]"
-          >
-          <!-- htmllint preset="$previous" -->
-            <input type="text"
-              name="tutoringDate"
-              tabindex="0"
-              class="form-control"
-            />
-          </amp-date-picker>
-        </div>
+          />
+        </amp-date-picker>
       </div>
-    {% endif %}
+    </div>
   {% endunless %}
 <div class="row d-flex justify-content-center">
   <!-- Tutors -->

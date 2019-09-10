@@ -1,3 +1,9 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <div class="row d-flex justify-content-center">
   <div class="col-sm-10 col-xs-10 mw-850">
     <h2 class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7">
@@ -28,7 +34,7 @@
       <!-- Form -->
       <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
         <form
-          action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.course_guide_form_guid}}"
+          action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{key_settings.course_guide_form_guid}}"
           target="_top"
           method="POST"
         >
@@ -37,7 +43,7 @@
             <input name="downloaded_a_courses_guide" type="hidden" value="true">
             <input name="hs_lead_status" type="hidden" value="NEW">
             <input name="page_name" type="hidden" value="{{page.title}}">
-            <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
+            <input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.url}}">
             <input name="hutk" type="hidden" value="">
 
             <div class="row center-form">

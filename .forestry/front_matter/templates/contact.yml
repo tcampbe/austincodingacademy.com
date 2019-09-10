@@ -1,0 +1,21 @@
+---
+label: Contact
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: head_title
+  label: head_title
+- type: textarea
+  name: description
+  label: description
+- type: list
+  name: redirect_from
+  label: redirect_from
+pages:
+- contact.html

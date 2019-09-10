@@ -33,8 +33,8 @@ const fetchEvents = async () => {
     venues = keyBy(venues, 'id');
 
     const events = {
-      austin: austinEvents.map(event => parseEvent(event)),
-      lubbock: lubbockEvents.map(event => parseEvent(event))
+      'austincodingacademy': austinEvents.map(event => parseEvent(event)),
+      'lubbockcodingacademy': lubbockEvents.map(event => parseEvent(event))
     };
 
     writeFileSync('_data/events.yml', safeDump(events));

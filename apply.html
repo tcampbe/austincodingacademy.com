@@ -3,16 +3,15 @@ layout: default
 permalink: "/apply/"
 redirect_from:
   - "/application"
-austin:
-  title: "Start Your Application | Apply Now at Austin Coding Academy"
-  description: "Apply now to learn to code with Austin Coding Academy | Fill out your
-    short application to get on the path to a career in web development."
-lubbock:
-  title: "Start Your Application | Apply Now at Lubbock Coding Academy"
-  description: "Apply now to learn to code with Lubbock Coding Academy | Fill out your
-    short application to get on the path to a career in web development."
+head_title: "Start Your Application | Apply Now at {{ key_settings.school }}"
+description: "Apply now to learn to code with {{ key_settings.school }} | Fill out your short application to get on the path to a career in web development."
 ---
-{% assign city = page[site.key] %}
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
@@ -21,15 +20,15 @@ lubbock:
     </h2>
     <form
       class="d-flex justify-content-center"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.application_form_guid}}"
+      action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{key_settings.application_form_guid}}"
       method="POST"
       target="_top"
     >
       <div class="form-container">
         <input name="lifecyclestage" type="hidden" value="opportunity">
         <input name="filled_out_application" type="hidden" value="true">
-        <input name="page_name" type="hidden" value="{{city.title}}">
-        <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.permalink}}">
+        <input name="page_name" type="hidden" value="{{page.title}}">
+        <input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.permalink}}">
         <input name="hutk" type="hidden" value="">
         <div class="mw-850 row">
           <!-- Input -->
@@ -180,7 +179,7 @@ lubbock:
                 </label>
                 <p class="small">
                   Please note that you must be at least 18 years old by the time your
-                  classes begin to apply to {{ site.key | capitalize }} Coding Academy. You also must have a
+                  classes begin to apply to {{ key_settings.school }}. You also must have a
                   High School Diploma or GED.
                 </p>
                 <div id="age">
@@ -247,7 +246,7 @@ lubbock:
 
               <p class="small">
                 Please note that you must be at least 18 years old by the time your
-                classes begin to apply to {{ site.key | capitalize }} Coding Academy. You also must have a
+                classes begin to apply to {{ key_settings.school }}. You also must have a
                 High School Diploma or GED.
               </p>
 

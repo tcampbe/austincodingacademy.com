@@ -1,5 +1,5 @@
 ---
-austin_header:
+austincodingacademy_header:
 - weight: 6
   title: Apply
   url: "/apply"
@@ -46,7 +46,48 @@ austin_header:
   - title: WordPress Development
     url: "/courses/wordpress-development"
 
-lubbock_header:
+austincodingacademy_footer:
+- weight: 9
+  title: Student Grievance Policy
+  url: "/student-grievances"
+- weight: 8
+  title: Student Referral
+  url: "/new-student-referral"
+- weight: 7
+  title: Hire a Graduate
+  url: "/hire"
+- weight: 6
+  title: Graduating Class
+  url: "/grads"
+- weight: 5
+  title: Become an Instructor
+  url: "/instructor-apply"
+- weight: 4
+  title: Tutoring
+  url: "/tutoring"
+- weight: 3
+  title: Upcoming Events
+  url: "/events"
+- weight: 2
+  title: Hack Overflow
+  url: https://austincodingacademy.com/forum
+- weight: 1
+  title: C# .NET
+  url: "/csharp"
+
+austincodingacademy_social:
+- weight: 1
+  title: facebook
+  url: https://www.facebook.com/AustinCodingAcademy/
+- weight: 2
+  title: twitter
+  url: https://twitter.com/AustinCoding/
+  class: mx-3
+- weight: 3
+  title: instagram
+  url: https://www.instagram.com/austincodingacademy/
+
+lubbockcodingacademy_header:
 - weight: 5
   title: Apply
   url: "/apply"
@@ -85,36 +126,7 @@ lubbock_header:
   - title: Full Stack Web Development
     url: "/web-dev"
 
-austin_footer:
-- weight: 9
-  title: Student Grievance Policy
-  url: "/student-grievances"
-- weight: 8
-  title: Student Referral
-  url: "/new-student-referral"
-- weight: 7
-  title: Hire a Graduate
-  url: "/hire"
-- weight: 6
-  title: Graduating Class
-  url: "/grads"
-- weight: 5
-  title: Become an Instructor
-  url: "/instructor-apply"
-- weight: 4
-  title: Tutoring
-  url: "/tutoring"
-- weight: 3
-  title: Upcoming Events
-  url: "/events"
-- weight: 2
-  title: Hack Overflow
-  url: https://austincodingacademy.com/forum
-- weight: 1
-  title: C# .NET
-  url: "/csharp"
-
-lubbock_footer:
+lubbockcodingacademy_footer:
 - weight: 6
   title: Student Grievance Policy
   url: "/student-grievances"
@@ -134,19 +146,78 @@ lubbock_footer:
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
 
-austin_social:
+lubbockcodingacademy_social:
 - weight: 1
   title: facebook
-  url: https://www.facebook.com/AustinCodingAcademy/
+  url: https://www.facebook.com/LubbockCodingAcademy/
 - weight: 2
   title: twitter
-  url: https://twitter.com/AustinCoding/
+  url: https://twitter.com/LubbockCoding/
   class: mx-3
 - weight: 3
   title: instagram
-  url: https://www.instagram.com/austincodingacademy/
+  url: https://www.instagram.com/lubbockcodingacademy/
 
-lubbock_social:
+texastechuniversitycodingacademy_header:
+- weight: 5
+  title: Apply
+  url: "/apply"
+  button: btn btn-round text-white cta-gradient py-1 px-6
+- weight: 4
+  title: Student Portal
+  url: https://campus.lubbockcodingacademy.com
+- weight: 3
+  title: About Us
+  links:
+  - weight: 1
+    title: Events
+    url: "/events"
+  - weight: 2
+    title: FAQ
+    url: "/faq"
+  - weight: 3
+    title: Our Team
+    url: "/team"
+  - weight: 4
+    title: Our Instructors
+    url: "/instructors"
+  - weight: 5
+    title: Contact Us
+    url: "/contact"
+- weight: 2
+  title: Tuition
+  url: "/tuition"
+  links:
+  - weight: 1
+    title: Tuition
+    url: "/tuition"
+- weight: 1
+  title: Courses
+  links:
+  - title: Full Stack Web Development
+    url: "/web-dev"
+
+texastechuniversitycodingacademy_footer:
+- weight: 6
+  title: Student Grievance Policy
+  url: "/student-grievances"
+- weight: 5
+  title: Student Referral
+  url: "/new-student-referral"
+- weight: 4
+  title: Become an Instructor
+  url: "/instructor-apply"
+- weight: 3
+  title: Upcoming Events
+  url: "/events"
+- weight: 2
+  title: Tutoring
+  url: "/tutoring"
+- weight: 1
+  title: Hack Overflow
+  url: https://austincodingacademy.com/forum
+
+texastechuniversitycodingacademy_social:
 - weight: 1
   title: facebook
   url: https://www.facebook.com/LubbockCodingAcademy/

@@ -1,9 +1,10 @@
 ---
 layout: default
 permalink: "/new-student-referral/"
-austin:
-  contactLightbox: true
-  title: New Student Referral Info | Austin Coding Academy
+head_title: New Student Referral Info | {{ key_settings.school }}
+description: ""
+austincodingacademy:
+  contact_lightbox: true
   referral_amount: $100
   description: Students at Austin Coding Academy come from all walks of life, but they each share one common trait; every ACA student is
     committed to learning and improving, whether they’re hoping to launch a more rewarding career, adding a new skill to their
@@ -36,9 +37,37 @@ austin:
   - Current students will have the option to have the $100 credited to their account for future courses or receive the credit as a $100 Visa gift card.
   - Newly referred students will have the $100 credit awarded towards their tuition payment.
 
-lubbock:
-  contactLightbox: true
-  title: New Student Referral Info | Lubbock Coding Academy
+lubbockcodingacademy:
+  contact_lightbox: true
+  referral_amount: $50
+  description: Students at Lubbock Coding Academy come from all walks of life, but they each share one common trait; every LCA student is
+    committed to learning and improving, whether they’re hoping to launch a more rewarding career, adding a new skill to their repertoire,
+    or transforming a great idea into a new company. The best way to grow Lubbock Coding Academy and continue to make sure that people have
+    access to an affordable and practical web development education is by spreading the word.
+  faq:
+  - question: How Does It Work?
+    text: Lubbock Coding Academy’s referral process is simple. Current students, graduates, and instructors who want to share the benefits of
+      learning with LCA will be rewarded for growing the community. LCA will be awarding referral bonuses to both current students, grads, and
+      instructors who refer new students, and to referred students who enroll in classes. Both the new student and the referring student, graduate,
+      or instructor will receive a $50 Amazon gift card for helping build our community. Simply enter your information at the bottom of this page
+      and document which current Lubbock Coding Academy student, staff, or instructor referred you to the program. Once you apply, make sure to
+      mention that you are taking advantage of the student referral program.
+  - question: Who Should I Refer?
+    text: Know someone else who is committed to improvement? Maybe a friend, family member, or coworker who is looking for a career change or to
+      add a new set of skills to their current job? Don’t be shy, let them know about our program. Lubbock Coding Academy is here to help people who
+      are looking to improve their lives. We’re proud of how strong our community is, so adding someone who shares our values makes all of us better.
+  - question: Why Should I Refer Someone?
+    text: Referrals help keep the LCA community growing, and it’s always extra rewarding to help someone you care about succeed. By referring someone
+      to LCA, you’re giving that person the opportunity to improve their lives by gaining a valuable and in-demand skill. It’s exciting to see friends
+      and family members work together in our program and strive towards making meaningful changes in their careers, together. Let’s keep that up!
+  rule_bullets:
+    –Rewards for referrals apply to students who enroll in the Lubbock Coding Academy Full Stack Web Development Track
+    –Referred students must complete at least 3 weeks of class for referral benefits to be awarded – at that point, a member of the LCA team will reach out to both parties.
+    –You can refer as many students as you like to sign up for our classes
+    –The $50 referral credits will be awarded in the form of a Visa/Amazon gift card
+
+texastechuniversitycodingacademy:
+  contact_lightbox: true
   referral_amount: $50
   description: Students at Lubbock Coding Academy come from all walks of life, but they each share one common trait; every LCA student is
     committed to learning and improving, whether they’re hoping to launch a more rewarding career, adding a new skill to their repertoire,
@@ -67,6 +96,12 @@ lubbock:
     –The $50 referral credits will be awarded in the form of a Visa/Amazon gift card
 
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 {% assign school = page[site.key] %}
 
 <div class="container mw-850 mt-90 pt-1 pb-5">
@@ -75,7 +110,7 @@ lubbock:
       New Student Referrals
     </h1>
     <h2 class="text-center display-7">
-      Earn {{ school.referral_amount }} each for you and a friend when they become a student of {{ site.key | capitalize }} Coding Academy
+      Earn {{ school.referral_amount }} each for you and a friend when they become a student of {{ key_settings.school }}
     </h2>
   </div>
   <div class="w-100 w-sm-75 mx-auto mb-6">
@@ -124,7 +159,7 @@ lubbock:
     </h2>
     <p class="px-2 p-sm-0 mx-auto">
       Have additional questions about the Referral Program? Email <a href="mailto:info@{{ site.key }}codingacademy.com" rel="noopener" target="_blank">info@{{ site.key }}codingacademy.com</a>
-      with the subject line “Referral Program” with your question, and a member of the {{ site.acronym | upcase }} team will get back to you with an answer!
+      with the subject line “Referral Program” with your question, and a member of the {{ key_settings.school }} team will get back to you with an answer!
     </p>
   </div>
   <div class="d-flex justify-content-center mb-4">

@@ -1,50 +1,14 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <!DOCTYPE html>
 <!-- htmllint preset="none" -->
 <html {% if site.baseurl == '/amp' %}amp{% endif %}>
-<!-- htmllint preset="$previous" -->
-  <head>
-    <meta charset="utf-8" />
-    <title>
-      {% assign city = page[site.key] %}
-      {{ city.title | default: site.default_title }}
-    </title>
 
-    <meta
-      name="description"
-      content="{{ city.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
-    />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    {% include favicon.html %}
-
-    {% include sharing.html %}
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-    />
-
-    {% include amp.html %}
-
-    {% capture amp_css %}{% file_exists _includes/css.html %}{% endcapture %}
-    {% if amp_css == "true" %}
-      {% include css.html %}
-    {% else %}
-      <link rel="stylesheet" href="https://austincodingacademy.github.io/front/assets/css/theme.css">
-      <link rel="stylesheet" href="/assets/css/main.css">
-    {% endif %}
-
-    {% include google-tag-manager-head.html %}
-
-    {% if site.baseurl == '/amp' %}
-      <link rel="canonical" href="{{site.url}}{{city.url}}{{page.url}}">
-    {% else %}
-      <link rel="amphtml" href="{{site.url}}/amp{{city.url}}{{page.url}}">
-    {% endif %}
-
-    {{ city.head }}
-  </head>
+  {% include head.html %}
 
   <body>
     {% include google-tag-manager-body.html %}

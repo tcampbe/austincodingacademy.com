@@ -1,21 +1,13 @@
 ---
 layout: default
 permalink: "/assignment/"
-title: "Assignment"
+head_title: ""
 description: ""
 amp_components: ['amp-img']
 redirect_from: []
-assignment_form_guid: 60651a89-8f76-427f-aaf6-13263bfd9c6b
 
 heading: New Student Assignment
 form_heading: Student Information
-input_names:
-- first_name: firstname
-- last_name: lastname
-- email: email
-- goals: goals
-- previous_efforts: previousefforts
-- coding_challenge: codingchallenge
 
 challenge_descript1: "Take a look at the picture below showing HTML, CSS, and JavaScript.  In the space provided,
   please describe in 1-2 paragraphs what the code displayed in the picture is creating."
@@ -23,10 +15,17 @@ challenge_descript2: "This is not a test of your coding knowledge. You are encou
   as a developer that will be an important part of your job! Here are some resources we recommend using:"
 img_src: /assets/images/coding-assignment.png
 resources:
-- W3 Schools
-- Codepen (view this assignment in Code Pen <a href="https://codepen.io/austincoding/pen/ELabMz" target="_blank" rel="noopener">here</a>)
-- Google
+- name: What is the web?
+  url: https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g
+- name: Codepen
+  url: https://codepen.io/austincoding/pen/ELabMz
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 
 <main class="mt-90 pt-1 pb-5 px-4 px-md-0">
   <div class="my-10 container mb-6">
@@ -42,7 +41,7 @@ resources:
         {{ page.form_heading }}
       </h2>
       <form
-        action-xhr="{{ site.form_url }}/{{ site.hubspot_portal_id }}/{{ page.assignment_form_guid }}"
+        action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.assignment_form_guid }}"
         target="_top"
         method="POST"
       >
@@ -174,7 +173,8 @@ resources:
               <ul class="fa-ul m-0">
                 {% for resource in page.resources %}
                   <li class="mb-1">
-                    <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ resource }}
+                    <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>
+                    <a href="{{resource.url}}" target="_blank" rel="noopener">{{ resource.name }}</a>
                   </li>
                 {% endfor %}
               </ul>

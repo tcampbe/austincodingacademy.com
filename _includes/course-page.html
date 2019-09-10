@@ -1,3 +1,8 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign key = _page[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
@@ -13,7 +18,6 @@
 <main>
 
   {% include scrolling-menu-disappearing.html %}
-  {% include observer-and-header-animation.html %}
 
   <div class="container-fluid">
     <div class="row w-100 h-100 fixed-top pointer-events-none">
@@ -134,7 +138,7 @@
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "{{ section.address }}",
-              "addressLocality": "{{ site.key | capitalize }}"
+              "addressLocality": "{{ key_settings.city }}"
             }
           }
         }{% unless section == course.sections.last %},{% endunless %}
@@ -142,10 +146,10 @@
       ],
       "provider": {
         "@type": "Organization",
-        "name": "{{ site.key | capitalize }} Coding Academy",
+        "name": "{{ key_settings.school }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{site.url}}/assets/images/logo-{{ site.acronym }}.png"
+          "url": "{{key_settings.url}}/assets/images/logo-{{ site.key }}.png"
         }
       }
     }
