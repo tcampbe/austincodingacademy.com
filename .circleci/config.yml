@@ -33,7 +33,7 @@ jobs:
 
       - run: yarn test
       - run: node _javascripts/events.js
-      # - run: node _javascripts/tutoring.js
+      - run: node _javascripts/tutoring.js
       - deploy:
           name: Deploy
           command: |
