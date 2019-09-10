@@ -174,8 +174,6 @@ fields:
   - type: text
     name: alt
     label: alt
-  config:
-    labelField: alt
 - type: field_group
   name: austincodingacademy
   label: austincodingacademy
@@ -342,8 +340,8 @@ fields:
     label: locations
     fields:
     - type: text
-      name: address
-      label: address
+      name: name
+      label: name
     - type: text
       name: street
       label: street
@@ -353,5 +351,3 @@ fields:
     - type: text
       name: url
       label: url
-pages:
-- settings.html
