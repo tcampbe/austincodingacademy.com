@@ -2,7 +2,6 @@
 layout: default
 permalink: "/courses/wordpress-development/apply/"
 redirect_from:
-  - "/application"
 head_title: "Start Your Application | Apply Now at {{ key_settings.school }}"
 description: "Apply now to learn to code with {{ key_settings.school }} | Fill out your short application to get on the path to a career in web development."
 ---
@@ -133,380 +132,263 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
           </div>
           <!-- End Input -->
 
+          <h2 class="display-6 mb-4 col-12">
+            Education & Work Experience
+          </h2>
 
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="current-occupation-wp" class="form-label">
+                Highest Level of Education <span class="text-red-a">*</span>
+              </label>
 
-          {% if site.key == 'lubbock' %}
-            <!-- Input -->
-            <div class="js-form-message d-flex flex-wrap flex-sm-nowrap align-items-center form-group">
-              <div class="col-12 col-sm-6">
-                <label class="form-label" for="yes">
-                  Will you be at least 18 by the time your classes begin? <span class="text-red-a">*</span>
-                </label>
-                <p class="small">
-                  Please note that you must be at least 18 years old by the time your
-                  classes begin to apply to {{ key_settings.school }}. You also must have a
-                  High School Diploma or GED.
-                </p>
-                <div id="age">
-                  <!-- Radio Buttons -->
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="are_you_18_or_older_"
-                      id="yes"
-                      value="true"
-                      aria-label="You must be 18 or older to begin classes"
-                      required
-                      data-msg="Please indicate whether you will be 18 or older when classes begin"
-                      data-error-class="u-has-error"
-                      data-success-class="u-has-success"
-                    />
-                    <label class="form-check-label" for="yes">Yes</label>
-                  </div>
+              <select id="education-level" name="" class="form-control">
+                <option value="" disabled selected>
 
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="no"
-                      name="are_you_18_or_older_"
-                      value="false"
-                    />
-                    <label class="form-check-label" for="no">No</label>
-                  </div>
-                </div>
-                <!-- End Radio Buttons -->
-              </div>
+                </option>
+                <option value="">
 
-              <div class="col-12 col-sm-6 mt-6 mt-sm-0">
-                <div class="js-form-message form-group">
-                  <label for="date-of-birth" class="form-label">
-                    Date of Birth <span class="text-red-a">*</span>
-                  </label>
+                </option>
+                <option value="">
 
-                  <input
-                    id="date-of-birth"
-                    style="text-transform: uppercase;"
-                    type="date"
-                    class="form-control"
-                    name="date_of_birth1"
-                    aria-label="Date of Birth"
-                    required
-                    data-msg="Please enter your date of birth."
-                    data-error-class="u-has-error"
-                    data-success-class="u-has-success"
-                  />
-                </div>
-              </div>
+                </option>
+                <option value="">
+
+                </option>
+                <option value="">
+
+                </option>
+              </select>
             </div>
-            <!-- End Input -->
-            {% else %}
-              <!-- Input -->
-              <div class="js-form-message mb-6 col-sm-12 form-group">
-                <label class="form-label" for="yes">
-                  Will you be at least 18 by the time your classes begin?
-                  <span class="text-red-a">*</span>
-                </label>
+          </div>
+          <!-- End Input -->
 
-                <p class="small">
-                  Please note that you must be at least 18 years old by the time your
-                  classes begin to apply to {{ key_settings.school }}. You also must have a
-                  High School Diploma or GED.
-                </p>
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="school-attended-wp" class="form-label">
+                Last School Attended <span class="text-red-a">*</span>
+              </label>
 
-                <div id="age2">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="are_you_18_or_older_"
-                      id="yes2"
-                      value="true"
-                      aria-label="You must be 18 or older to begin classes"
-                      required
-                      data-msg="Please indicate whether you will be 18 or older when classes begin"
-                      data-error-class="u-has-error"
-                      data-success-class="u-has-success"
-                    />
-                    <label class="form-check-label" for="yes2">Yes</label>
-                  </div>
-
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="no2"
-                      name="are_you_18_or_older_"
-                      value="false"
-                    />
-                    <label class="form-check-label" for="no2">No</label>
-                  </div>
-                </div>
-              </div>
-              <!-- End Input -->
-            {% endif %}
-
-            <h2 class="display-6 mb-4">
-              Education & Work Experience
-            </h2>
-
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="current-occupation1" class="form-label">
-                  Highest Level of Education <span class="text-red-a">*</span>
-                </label>
-
-                <select id="education-level" name="" class="form-control">
-                  <option value="" disabled selected>
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                </select>
-              </div>
+              <input
+                id="school-attended-wp"
+                type="text"
+                class="form-control"
+                name="school-attended-wp"
+                placeholder="The last school you attended"
+                aria-label="Last school attended"
+                required
+                data-msg="Please enter the last school you attended."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
             </div>
-            <!-- End Input -->
+          </div>
+          <!-- End Input -->
 
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="college-or-school-attended1" class="form-label">
-                  Last School Attended <span class="text-red-a">*</span>
-                </label>
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="current-occupation-wp" class="form-label">
+                Current Occupation or Job Title <span class="text-red-a">*</span>
+              </label>
 
-                <input
-                  id="college-or-school-attended1"
-                  type="text"
-                  class="form-control"
-                  name="college_or_school_attended1"
-                  placeholder="The last school you attended"
-                  aria-label="Last school attended"
-                  required
-                  data-msg="Please enter the last school you attended."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-              </div>
+              <input
+                id="current-occupation-wp"
+                type="text"
+                class="form-control"
+                name="current_occupation1"
+                placeholder="Your current job title"
+                aria-label="Your current job title"
+                required
+                data-msg="Please enter your current job title."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
             </div>
-            <!-- End Input -->
+          </div>
+          <!-- End Input -->
 
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="current-occupation1" class="form-label">
-                  Current Occupation or Job Title <span class="text-red-a">*</span>
-                </label>
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="current-company1" class="form-label">
+                Current Company <span class="text-red-a">*</span>
+              </label>
 
-                <input
-                  id="current-occupation1"
-                  type="text"
-                  class="form-control"
-                  name="current_occupation1"
-                  placeholder="Your current job title"
-                  aria-label="Your current job title"
-                  required
-                  data-msg="Please enter your current job title."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-              </div>
+              <input
+                id="current-company1"
+                type="text"
+                class="form-control"
+                name="current_company1"
+                placeholder="Your current company"
+                aria-label="Your current company"
+                required
+                data-msg="Please enter your current company."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
             </div>
-            <!-- End Input -->
+          </div>
+          <!-- End Input -->
 
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="current-company1" class="form-label">
-                  Current Company <span class="text-red-a">*</span>
-                </label>
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="computer-experience-wp" class="form-label">
+                What experience do you have with computers? <span class="text-red-a">*</span>
+              </label>
 
-                <input
-                  id="current-company1"
-                  type="text"
-                  class="form-control"
-                  name="current_company1"
-                  placeholder="Your current company"
-                  aria-label="Your current company"
-                  required
-                  data-msg="Please enter your current company."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-              </div>
+              <select id="computer-experience-wp" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
+                <option value="" disabled selected>
+
+                </option>
+                <option value="None at all!">
+
+                </option>
+                <option value="">
+
+                </option>
+                <option value="">
+
+                </option>
+                <option value="">
+
+                </option>
+              </select>
             </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="coding-experience-wp" class="form-label">
+                What experience do you have in coding? <span class="text-red-a">*</span>
+              </label>
+
+              <select id="coding-experience-wp" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
+                <option value="" disabled selected>
+                  Select your answer
+                </option>
+                <option value="None at all!">
+                  None at all!
+                </option>
+                <option value="I've dabbled with some online tutorials">
+                  I've dabbled with some online tutorials.
+                </option>
+                <option value="Solid fundamentals but not ready for a job">
+                  Solid fundamentals but not ready for a job.
+                </option>
+                <option value="I'm a professional developer">
+                  Professional developer, gaining more skills.
+                </option>
+              </select>
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <h2 class="display-6 mb-4 col-12">
+            Additional Info
+          </h2>
+
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="zip" class="form-label">
+                Zip Code <span class="text-red-a">*</span>
+              </label>
+              <input
+                id="zip"
+                type="text"
+                class="form-control"
+                name="college_or_school_attended1"
+                placeholder="zip code"
+                aria-label="zip code"
+                required
+              />
+
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="date-of-birth" class="form-label">
+                Date of Birth <span class="text-red-a">*</span>
+              </label>
+
+              <input
+                id="date-of-birth"
+                type="text"
+                class="form-control"
+                name=""
+                placeholder="Date of Birth"
+                aria-label="Date of Birth"
+                required
+                data-msg="Please enter your date of birth"
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
             <!-- End Input -->
 
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="coding-experience" class="form-label">
-                  What experience do you have with computers? <span class="text-red-a">*</span>
-                </label>
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="payment" class="form-label">
+                Payment <span class="text-red-a">*</span>
+              </label>
 
-                <select id="coding-experience" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
-                  <option value="" disabled selected>
-
-                  </option>
-                  <option value="None at all!">
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                </select>
-              </div>
+              <input
+                id="payment"
+                type="text"
+                class="form-control"
+                name="payment"
+                placeholder=""
+                aria-label=""
+                required
+                data-msg=""
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
             </div>
-            <!-- End Input -->
+          </div>
+          <!-- End Input -->
 
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="coding-experience" class="form-label">
-                  What experience do you have in coding? <span class="text-red-a">*</span>
-                </label>
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="hear-about-us" class="form-label">
+                How did you hear? <span class="text-red-a">*</span>
+              </label>
 
-                <select id="coding-experience" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
-                  <option value="" disabled selected>
-                    Select your answer
-                  </option>
-                  <option value="None at all!">
-                    None at all!
-                  </option>
-                  <option value="I've dabbled with some online tutorials">
-                    I've dabbled with some online tutorials.
-                  </option>
-                  <option value="Solid fundamentals but not ready for a job">
-                    Solid fundamentals but not ready for a job.
-                  </option>
-                  <option value="I'm a professional developer">
-                    Professional developer, gaining more skills.
-                  </option>
-                </select>
-              </div>
+              <select id="hear-about-us" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
+                <option value="" disabled selected>
+
+                </option>
+                <option value="">
+
+                </option>
+                <option value="">
+
+                </option>
+                <option value="">
+
+                </option>
+                <option value="">
+
+                </option>
+              </select>
             </div>
-            <!-- End Input -->
-
-            <h2 class="display-6 mb-4 col-12">
-              Additional Info
-            </h2>
-
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="current-occupation1" class="form-label">
-                  Zip Code <span class="text-red-a">*</span>
-                </label>
-                <input
-                  id="college-or-school-attended1"
-                  type="text"
-                  class="form-control"
-                  name="college_or_school_attended1"
-                  placeholder="The last school you attended"
-                  aria-label="Last school attended"
-                  required
-                  data-msg="Please enter the last school you attended."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-
-              </div>
-            </div>
-            <!-- End Input -->
-
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="college-or-school-attended1" class="form-label">
-                  Date of Birth <span class="text-red-a">*</span>
-                </label>
-
-                <input
-                  id="college-or-school-attended1"
-                  type="text"
-                  class="form-control"
-                  name="college_or_school_attended1"
-                  placeholder="The last school you attended"
-                  aria-label="Last school attended"
-                  required
-                  data-msg="Please enter the last school you attended."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-              </div>
-            </div>
-              <!-- End Input -->
-
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="current-occupation1" class="form-label">
-                  Payment <span class="text-red-a">*</span>
-                </label>
-
-                <input
-                  id="current-occupation1"
-                  type="text"
-                  class="form-control"
-                  name="current_occupation1"
-                  placeholder="Your current job title"
-                  aria-label="Your current job title"
-                  required
-                  data-msg="Please enter your current job title."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-              </div>
-            </div>
-            <!-- End Input -->
-
-            <!-- Input -->
-            <div class="col-sm-6 mb-6">
-              <div class="js-form-message form-group">
-                <label for="current-company1" class="form-label">
-                  How did you hear? <span class="text-red-a">*</span>
-                </label>
-
-                <select id="coding-experience" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
-                  <option value="" disabled selected>
-
-                  </option>
-                  <option value="None at all!">
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                  <option value="">
-
-                  </option>
-                </select>
-              </div>
-            </div>
-            <!-- End Input -->
+          </div>
+          <!-- End Input -->
           <div class="col-12 mb-4 d-flex justify-content-center">
             <button class="btn btn-round text-white bg-purple" type="Submit">
-              Submit and Schedule Your Call
+              Finish Your Application
             </button>
           </div>
         </div>
