@@ -686,7 +686,7 @@ ul.share-buttons img {
 
   /* Animation */
   .anim-typewriter {
-    animation: typewriter 4s steps(60) 1s 1 normal both,
+    animation: typewriter 5s steps(60) 1s 1 normal both,
       blinkTextCursor 1400ms steps(44) infinite normal;
   }
   @keyframes typewriter {

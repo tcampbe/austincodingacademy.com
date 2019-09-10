@@ -9,12 +9,12 @@
   <meta charset="utf-8" />
   <title>
     {% assign key_page = page[site.key] %}
-    {{ page.head_title | liquify }}
+    {{ page.head_title | default: settings.head_title | liquify }}
   </title>
 
   <meta
     name="description"
-    content="{{ page.description | liquify }}"
+    content="{{ page.description | default: settings.description | liquify }}"
   />
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />

@@ -43,8 +43,6 @@ austincodingacademy_header:
   links:
   - title: Full Stack Web Development
     url: "/courses/web-development"
-  - title: WordPress Development
-    url: "/courses/wordpress-development"
 
 austincodingacademy_footer:
 - weight: 9
@@ -71,9 +69,6 @@ austincodingacademy_footer:
 - weight: 2
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
-- weight: 1
-  title: C# .NET
-  url: "/csharp"
 
 austincodingacademy_social:
 - weight: 1
@@ -124,7 +119,7 @@ lubbockcodingacademy_header:
   title: Courses
   links:
   - title: Full Stack Web Development
-    url: "/web-dev"
+    url: "/courses/web-development"
 
 lubbockcodingacademy_footer:
 - weight: 6
@@ -165,7 +160,7 @@ texastechuniversitycodingacademy_header:
   button: btn btn-round text-white cta-gradient py-1 px-6
 - weight: 4
   title: Student Portal
-  url: https://campus.lubbockcodingacademy.com
+  url: https://campus.texastechuniversitycodingacademy.com
 - weight: 3
   title: About Us
   links:
@@ -195,7 +190,7 @@ texastechuniversitycodingacademy_header:
   title: Courses
   links:
   - title: Full Stack Web Development
-    url: "/web-dev"
+    url: "/courses/web-development"
 
 texastechuniversitycodingacademy_footer:
 - weight: 6
@@ -220,11 +215,11 @@ texastechuniversitycodingacademy_footer:
 texastechuniversitycodingacademy_social:
 - weight: 1
   title: facebook
-  url: https://www.facebook.com/LubbockCodingAcademy/
+  url:
 - weight: 2
   title: twitter
-  url: https://twitter.com/LubbockCoding/
+  url:
   class: mx-3
 - weight: 3
   title: instagram
-  url: https://www.instagram.com/lubbockcodingacademy/
+  url:
