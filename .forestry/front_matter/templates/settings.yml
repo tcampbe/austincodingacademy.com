@@ -172,8 +172,8 @@ fields:
     name: src
     label: src
   - type: text
-    name: alt
-    label: alt
+    name: name
+    label: name
 - type: field_group
   name: austincodingacademy
   label: austincodingacademy
@@ -351,3 +351,5 @@ fields:
     - type: text
       name: url
       label: url
+pages:
+- settings.html
