@@ -1,0 +1,36 @@
+---
+label: Grads
+hide_body: false
+fields:
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: head_title
+  label: head_title
+- type: textarea
+  name: description
+  label: description
+- type: field_group
+  name: austincodingacademy
+  label: austincodingacademy
+  fields:
+  - type: text
+    name: grad_date
+    label: grad_date
+- type: field_group
+  name: lubbockcodingacademy
+  label: lubbockcodingacademy
+  fields:
+  - type: text
+    name: grad_date
+    label: grad_date
+- type: field_group
+  name: texastechuniversitycodingacademy
+  label: texastechuniversitycodingacademy
+  fields:
+  - type: text
+    name: grad_date
+    label: grad_date
+pages:
+- grads.html

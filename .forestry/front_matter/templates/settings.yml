@@ -163,6 +163,9 @@ fields:
   label: logos
   fields:
   - type: text
+    name: name
+    label: name
+  - type: text
     name: width
     label: width
   - type: text
@@ -171,9 +174,6 @@ fields:
   - type: file
     name: src
     label: src
-  - type: text
-    name: name
-    label: name
 - type: field_group
   name: austincodingacademy
   label: austincodingacademy
@@ -324,12 +324,6 @@ fields:
     name: course_guide_form_guid
     label: course_guide_form_guid
   - type: text
-    name: corporate_form_guid
-    label: corporate_form_guid
-  - type: text
-    name: corporate_trainings_form_guid
-    label: corporate_trainings_form_guid
-  - type: text
     name: cta_form_guid
     label: cta_form_guid
   - type: text
@@ -351,3 +345,5 @@ fields:
     - type: text
       name: url
       label: url
+pages:
+- settings.html
