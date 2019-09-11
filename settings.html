@@ -10,6 +10,52 @@ head_title: "{{ key_settings.school }} | Learn to Code, Change Your Life"
 description: At {{ key_settings.school }}, we fit learning to code into your life
   with a flexible &amp; affordable array of options, all taught by current industry
   professionals. Don’t wait - embark on a new career today!
+
+navigation:
+  header:
+  - title: Courses
+  - title: Tuition
+    url: "/tuition"
+  - title: For Companies
+    url: "/corporate-training"
+  - title: About Us
+    links:
+    - title: Events
+      url: "/events"
+    - title: FAQ
+      url: "/faq"
+    - title: Our Team
+      url: "/team"
+    - title: Our Instructors
+      url: "/instructors"
+    - title: Contact Us
+      url: "/contact"
+    - title: Blog
+      url: https://austincodingacademy.com/blog/
+  - title: Student Portal
+    url: https://campus.{{site.key}}.com
+  - title: Apply
+    url: "/apply"
+    class: btn btn-round text-white cta-gradient py-1 px-6
+
+  footer:
+  - title: Hack Overflow
+    url: https://austincodingacademy.com/forum
+  - title: Upcoming Events
+    url: "/events"
+  - title: Tutoring
+    url: "/tutoring"
+  - title: Become an Instructor
+    url: "/instructor-apply"
+  - title: Graduating Class
+    url: "/grads"
+  - title: Hire a Graduate
+    url: "/hire"
+  - title: Student Referral
+    url: "/new-student-referral"
+  - title: Student Grievance Policy
+    url: "/student-grievances"
+
 courses:
   Web 101:
     title: Intro to Web Development
@@ -95,6 +141,15 @@ courses:
     - Resume building
     - Networking opportunities and strategies
     - Job-finding strategies
+
+tracks:
+  web:
+    url: '/courses/web-development'
+    name: Web Development
+  wordpress:
+    url: '/courses/wordpress-development'
+    name: 'WordPress Development'
+
 logos:
 - name: Indeed
   width: 721px
@@ -170,7 +225,7 @@ logos:
   src: "/assets/images/logo-onit.png"
 austincodingacademy:
   school: Austin Coding Academy
-  city: Austin
+  tracks: ['web', 'wordpress']
   url: https://austincodingacademy.com
   phone: 15128278498
   callrail_company_id: 915131377
@@ -180,20 +235,29 @@ austincodingacademy:
   cta_form_guid: cddbd037-925f-49ea-b55c-099c986ac822
   course_guide_form_guid: 702969c4-4c75-4b99-b6d2-59d04d6ebd03
   application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
-  twitter: "@AustinCoding"
+  twitter: https://twitter.com/austincoding
   eventbrite: https://austincodingacademy.eventbrite.com
+  facebook: https://www.facebook.com/AustinCodingAcademy
+  instagram: https://www.instagram.com/austincodingacademy
   locations:
-  - name: Downtown
-    street: 701 Brazos St, Ste 1616
-    locality: Austin, TX 78701
-    url: https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641
-  - name: Highland
-    street: 314 E Highland Mall Blvd, Ste 114
-    locality: Austin, TX 78752
-    url: https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185
+    downtown:
+      campus: Capital Factory
+      street: 701 Brazos St, Ste 1616
+      city: Austin
+      state: TX
+      postal: 78701
+      url: https://goo.gl/maps/S27rc4Zkmfvpe2Ui8
+    highland:
+      campus: Highland Business Center
+      street: 314 E Highland Mall Blvd, Ste 114
+      city: Austin
+      state: TX
+      postal: 78752
+      url: https://goo.gl/maps/NssXRytdtdezgKft7
+
 lubbockcodingacademy:
   school: Lubbock Coding Academy
-  city: Lubbock
+  tracks: ['web']
   url: https://lubbockcodingacademy.com
   phone: 18069055021
   callrail_company_id: 740142126
@@ -203,29 +267,41 @@ lubbockcodingacademy:
   application_form_guid: 3abd444f-ac31-4c9c-8448-c7f4c25eb9d7
   course_guide_form_guid: 4bea04a4-c623-44c2-aee9-3186bb154f18
   cta_form_guid: 21e581ad-e0aa-47b4-8c4c-d1e976a973da
-  twitter: "@LubbockCoding"
+  twitter: https://twitter.com/lubbockcoding
+  eventbrite: https://lubbockcodingacademy.eventbrite.com
+  facebook: https://www.facebook.com/LubbockCodingAcademy
+  instagram: https://www.instagram.com/lubbockcodingacademy
   locations:
-  - name: South Plains College Lubbock Center
-    street: 3907 Avenue Q
-    locality: Lubbock, TX 79412
-    url: https://www.google.com/maps/place/South+Plains+College+Lubbock+Center/@33.5577634,-101.8559531,17z/data=!3m1!4b1!4m5!3m4!1s0x86fe6d1839084583:0x8bdaa2a3477f2bc8!8m2!3d33.5577634!4d-101.8537644
+    lubbockcenter:
+      campus: South Plains College - Lubbock Center
+      street: 3907 Avenue Q
+      city: Lubbock
+      state: TX
+      postal: 10019
+      url: https://goo.gl/maps/QQDwUZBinyaYXGV57
+
 texastechuniversitycodingacademy:
   school: Texas Tech University Coding Academy
-  city: Marble Falls
+  tracks: ['web']
   url: https://texastechuniversitycodingacademy.com
   phone: "18302567665"
   callrail_company_id: "457867625"
   google_tag_manager: GTM-59P7KFG
   google_tag_manager_amp: GTM-NXQMWW7
-  contact_form_guid: ''
-  application_form_guid: ''
-  course_guide_form_guid: ''
-  cta_form_guid: ''
-  twitter: ''
+  contact_form_guid: 33cc0e23-1881-4874-a1d0-2c0307f20e41
+  cta_form_guid: cddbd037-925f-49ea-b55c-099c986ac822
+  course_guide_form_guid: 702969c4-4c75-4b99-b6d2-59d04d6ebd03
+  application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
+  twitter: https://twitter.com/austincoding
+  eventbrite: https://austincodingacademy.eventbrite.com
+  facebook: https://www.facebook.com/AustinCodingAcademy
+  instagram: https://www.instagram.com/austincodingacademy
   locations:
-  - name: TTU Coding Academy at TTU Highland Lakes
-    street: 806 Steve Hawkins Pkwy
-    locality: Marble Falls, TX 78654
-    url: https://goo.gl/maps/KM7Y6BcKmNJHxSNVA
-
+    highlandlakes:
+      campus: Texas Tech University - Highland Lakes
+      street: 806 Steve Hawkins Pkwy
+      city: Marble Falls
+      state: TX
+      postal: 78654
+      url: https://goo.gl/maps/KM7Y6BcKmNJHxSNVA
 ---

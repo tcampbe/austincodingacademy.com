@@ -4,13 +4,6 @@
     {% assign key_settings = settings[site.key] %}
   {% endif %}
 {% endfor %}
-<!-- ========== HEADER ========== -->
-{% if page.hero and page.hero != 'csharp' %}
-  {% assign color = 'transparent' %}
-{% endif %}
-{% unless page.categories contains 'landing' %}
-{% assign key_header = site.key | append: '_header' %}
-{% assign header_menu = site.data.menus[key_header] | sort: 'weight' %}
 <amp-sidebar
   on="tap:sidebar.open"
   tabindex="-1"
@@ -19,83 +12,57 @@
   class="m-0 px-5 bg-dark d-flex d-lg-none flex-column align-items-start justify-content-start"
   layout="nodisplay"
   side="right">
-  {% for item in header_menu %}
+  {% for item in settings.navigation.header %}
     <div
       class="mt-4"
       on="tap:sidebar.open"
       role="dialog"
       tabindex="-1"
     >
-      {% if item.button %}
-        <!-- htmllint preset="none" -->
-        <a class="{{ item.button }} hover-white ml-5" href="{{ item.url | liquify }}">
-        <!-- htmllint preset="$previous" -->
-          <span class="text-white hover-white">
-            {{ item.title }}
-            </span>
-        </a>
-      {% elsif item.links == nil %}
-        <section>
-          <a href="{{ item.url }}">
-            <h5
-              class="pl-0 text-white hover-white btn rounded bg-dark py-1 mb-2"
-              tabindex="0"
-              style="font-size: 1.25rem; line-height: 1.5; font-weight: 500; cursor: pointer;"
-            >
-              {{ item.title }}
-            </h5>
-          </a>
-        </section>
+      {% if item.links %}
+        <span class="h5 text-white bg-dark py-1 mb-2" tabindex="0">
+          {{item.title | liquify}}
+        </span>
+        <ul class="list-unstyled text-left pl-3">
+          {% for link in item.links %}
+            <li>
+              <a href="{{ link.url | liquify }}" class="text-blue hover-white">
+                {{ link.title | liquify }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% elsif item.title == 'Courses' %}
+        <span class="h5 text-white bg-dark py-1 mb-2" tabindex="0">
+          {{item.title | liquify}}
+        </span>
+        <ul class="list-unstyled text-left pl-3">
+          {% for track in key_settings.tracks %}
+            <li>
+              <a href="{{ settings.tracks[track].url }}" class="text-blue hover-white">
+                {{ settings.tracks[track].name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       {% else %}
-        <section>
-          <h5 class="text-white bg-dark py-1 mb-2" tabindex="0">
-            {{item.title}}
-          </h5>
-          <ul class="list-unstyled text-left pl-3">
-            {% if item.links %}
-              {% assign header_menu_links = item.links | sort: 'weight' %}
-              {% for link in header_menu_links %}
-                <li>
-                  <a href="{{link.url}}" class="text-blue hover-white">
-                    {{link.title}}
-                  </a>
-                </li>
-              {% endfor %}
-            {% else %}
-              {% for section in item.sections %}
-                <li>
-                  <span class="border-bottom text-white">
-                    {{section.heading}}
-                  </span>
-                  <ul class="list-unstyled">
-                    {% for page in section.pages %}
-                      <li>
-                        <!-- htmllint preset="none" -->
-                        <a href="{{page.url}}" class="text-blue hover-white">
-                        <!-- htmllint preset="$previous" -->
-                          {{page.title}}
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </li>
-              {% endfor %}
-            {% endif %}
-          </ul>
-        </section>
+        <!-- htmllint preset="none" -->
+        <a class="{{ item.class }} hover-white" href="{{ item.url | liquify }}">
+        <!-- htmllint preset="$previous" -->
+          <span class="h5 text-white hover-white">
+            {{ item.title | liquify }}
+          </span>
+        </a>
       {% endif %}
     </div>
   {% endfor %}
 </amp-sidebar>
-{% endunless %}
 
 <!-- htmllint preset="none" -->
 <header id="header"
-  class="fixed-top {% if color == 'transparent' %}u-header--bg-transparent {% else %}u-header--navbar-bg {% endif %} w-100"
+  class="fixed-top {% if color == 'transparent' %}u-header--bg-transparent {% else %} u-header--navbar-bg {% endif %} w-100"
 >
-  {% unless page.categories contains 'landing' %}
   <div id="header-background" class="bg-purple d-block position-absolute w-100 h-100"></div>
-  {% endunless %}
   <div class="u-header__section bg-{{ color | default: 'purple' }} py-2">
   <!-- htmllint preset="$previous" -->
     <div class="container px-md-0 px-lg-3">
@@ -114,7 +81,7 @@
             width="66px"
             height="66px"
             layout="fixed"
-            alt="{{ key_settings.school | upcase }} Home"
+            alt="{{ key_settings.school }} Home"
             src="/assets/images/logo-{{ site.key }}-white.png"
             class="w-100"
           ></amp-img>
@@ -122,7 +89,6 @@
           <span class="sr-only">{{ key_settings.school }} Logo</span>
         </a>
         <!-- End Logo -->
-        {% unless page.categories contains 'landing' %}
         <!-- Responsive Toggle Button -->
         <button
           class="btn btn-link text-white d-flex justify-content-end d-lg-none"
@@ -139,73 +105,56 @@
           class="collapse navbar-collapse u-header__navbar-collapse d-none d-lg-flex"
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
-            {% for item in header_menu %}
-              {% if item.button %}
-                <!-- htmllint preset="none" -->
-                <a class="{{ item.button }} hover-white ml-5" href="{{ item.url }}">
-                <!-- htmllint preset="$previous" -->
+            {% for item in settings.navigation.header %}
+              <li class="nav-item u-header__nav-item ml-5">
+              {% if item.links %}
+                <!-- <a tabindex="0"> -->
                   <span class="text-white hover-white">
-                    {{ item.title }}
+                    {{ item.title }} <i class="fas fa-caret-down"></i>
                   </span>
-                </a>
-              {% elsif item.links %}
-                <li class="nav-item u-header__nav-item">
-                  {% if item.url %}
-                  <a href="{{item.url}}" tabindex="0" class="p-2 mx-2">
-                    <span class="text-white hover-white">
-                      {{ item.title }} <i class="fas fa-caret-down"></i>
-                    </span>
-                  </a>
-                  {% else %}
-                  <a tabindex="0" class="p-2 mx-2">
-                    <span class="text-white hover-white">
-                      {{ item.title }} <i class="fas fa-caret-down"></i>
-                    </span>
-                  </a>
-                  {% endif %}
+                <!-- </a> -->
+                <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
+                  {% for link in item.links %}
+                    <li class="position-relative p-0 my-2">
+                      <!-- htmllint preset="none" -->
+                      <a class="p-0" href="{{ link.url | liquify }}">
+                        <!-- htmllint preset="$previous" -->
+                        <span class="text-white hover-white">
+                          {{ link.title | liquify }}
+                        </span>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+                {% elsif item.title == 'Courses' %}
+                  <span class="text-white hover-white">
+                    {{ item.title }} <i class="fas fa-caret-down"></i>
+                  </span>
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
-                    {% assign header_menu_links = item.links | sort: 'weight' %}
-                    {% for link in header_menu_links %}
-                      {% if link.url != "#" %}
-                        <li class="position-relative p-0 my-2">
-                          <!-- htmllint preset="none" -->
-                          <a class="p-0" href="{{ link.url }}">
-                            <!-- htmllint preset="$previous" -->
-                            <span class="text-white hover-white">
-                              {{ link.title }}
-                            </span>
-                          </a>
-                        </li>
-                      {% endif %}
+                    {% for track in key_settings.tracks %}
+                      <li class="position-relative p-0 my-2">
+                        <!-- htmllint preset="none" -->
+                        <a class="p-0" href="{{ settings.tracks[track].url }}">
+                          <!-- htmllint preset="$previous" -->
+                          <span class="text-white hover-white">
+                            {{ settings.tracks[track].name }}
+                          </span>
+                        </a>
+                      </li>
                     {% endfor %}
                   </ul>
-                </li>
-              {% elsif item.title == 'Student Portal' %}
-                <li class="nav-item u-header__nav-item">
-                  <!-- htmllint preset="none" -->
-                  <a href="{{item.url}}" tabindex="0" class="p-2 mx-2">
+                {% else %}
+                 <!-- htmllint preset="none" -->
+                 <a class="{{ item.class }} hover-white" href="{{ item.url | liquify }}">
                   <!-- htmllint preset="$previous" -->
-                    <span class="text-white hover-white">
-                      {{ item.title }}
-                    </span>
-                  </a>
-                </li>
-              {% else %}
-                <li class="nav-item u-header__nav-item">
-                  <!-- htmllint preset="none" -->
-                  <a href="{{ item.url }}" tabindex="0" class="p-2 mx-2">
-                  <!-- htmllint preset="$previous" -->
-                    <span class="text-white hover-white">
-                      {{ item.title }}
-                    </span>
-                  </a>
-                </li>
-              {% endif %}
+                  <span class="text-white hover-white">{{ item.title | liquify }}</span>
+                </a>
+                {% endif %}
+              </li>
             {% endfor %}
           </ul>
         </div>
         <!-- End Navigation -->
-        {% endunless %}
       </nav>
       <!-- End Nav -->
     </div>

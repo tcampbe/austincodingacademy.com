@@ -21,11 +21,11 @@
             {% for location in key_settings.locations %}
               <div class="my-2">
                 <a
-                  href="{{ location.url }}"
+                  href="{{ location[1].url }}"
                   class="d-flex text-white hover-white"
                 >
                   <i class="fas fa-map-marker-alt pt-1" aria-hidden="true"></i>
-                  <div>&nbsp;{{ location.name }}</div>
+                  <div>&nbsp;{{ location[1].campus }}</div>
                 </a>
               </div>
             {% endfor %}
@@ -33,17 +33,18 @@
           <!-- End addresses -->
           <div class="col d-flex flex-column justify-content-around align-items-start">
             {% include phone.html a_class="text-white hover-white my-2" icon_class="text-white hover-white fas fa-phone" %}
-            <div class="my-2">
-              {% assign key_social = site.key | append: '_social' %}
-              {% assign social_menu = site.data.menus[key_social] | sort: 'weight' %}
-              {% for item in social_menu %}
+            <div class="my-2 d-flex">
+              {% assign socials = 'twitter facebook instagram' | split: ' ' ] %}
+              {% for item in socials %}
                 <!-- htmllint preset="none" -->
-                <a href="{{ item.url }}" class="{{ item.class }}">
-                  <span class="text-white hover-white display-7 fab fa-{{ item.title }}" aria-hidden="true">
-                    <span class="sr-only">Link to our {{ item.title }}</span>
+                {% if key_settings[item] %}
+                <a href="{{ key_settings[item] }}">
+                  <span class="text-white hover-white display-7 fab fa-{{ item }} mr-4" aria-hidden="true">
+                    <span class="sr-only">Link to our {{ item }}</span>
                   </span>
                 </a>
                 <!-- htmllint preset="$previous" -->
+                {% endif %}
               {% endfor %}
             </div>
           </div>
@@ -56,9 +57,7 @@
         </h5>
         <!-- List Group -->
           <div class="row">
-            {% assign key_footer = site.key | append: '_footer' %}
-            {% assign footer_menu = site.data.menus[key_footer] | sort: 'weight' %}
-            {% for item in footer_menu %}
+            {% for item in settings.navigation.footer %}
               <div class="col-6 my-2">
                 <a
                   class="text-white hover-white"
@@ -95,20 +94,19 @@
     },
     "image": {
       "@type": "ImageObject",
-      "url": "{{key_settings.url}}/assets/images/header-index.jpg"
+      "url": "{{ key_settings.url }}/assets/images/header-index.jpg"
     },
     "telephone": "{{ key_settings.phone | phone_number }}",
     "address": [
-      {
-        "@type": "PostalAddress",
-        "streetAddress": "{{ key_settings.locations[0].street }}",
-        "addressLocality": "{{ key_settings.locations[0].locality }}"
-      },
-      {
-        "@type": "PostalAddress",
-        "streetAddress": "{{ key_settings.locations[1].street }}",
-        "addressLocality": "{{ key_settings.locations[1].locality }}"
-      }
+      {% for location in key_settings.locations %}
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "{{ location[1].street }}",
+          "addressLocality": "{{ location[1].city }}",
+          "addressRegion": "{{ location[1].state }}",
+          "postalCode": "location[1].postal",
+        }{% unless locations == key_settings.locations.last %},{% endunless %}
+      {% endfor %}
     ]
   }
   </script>
