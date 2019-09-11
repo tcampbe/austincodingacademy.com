@@ -144,9 +144,9 @@
                     {% endfor %}
                   </ul>
                 {% else %}
-                 <!-- htmllint preset="none" -->
-                 <a class="{{ item.class }} hover-white" href="{{ item.url | liquify }}">
-                  <!-- htmllint preset="$previous" -->
+                <!-- htmllint preset="none" -->
+                <a class="{{ item.class }} hover-white" href="{{ item.url | liquify }}">
+                <!-- htmllint preset="$previous" -->
                   <span class="text-white hover-white">{{ item.title | liquify }}</span>
                 </a>
                 {% endif %}
