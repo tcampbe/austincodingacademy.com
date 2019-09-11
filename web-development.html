@@ -94,7 +94,7 @@ features:
     text: "Discover the power of JavaScript: a language used by nearly every website on the internet to display, animate, and make webpages come to life."
     img_src: icon-frontend.png
     img_width: 90px
-  - heading: Use {{page[site.key].backend}} to Build Powerful Back-Ends
+  - heading: Use {{ page[site.key].backend }} to Build Powerful Back-Ends
     text: "Learn how to collect and process data using {{page[site.key].backend}} – and also how to manage databases with SQL."
     img_src: icon-databases.png
     img_width: 90px
@@ -435,7 +435,7 @@ texastechuniversitycodingacademy:
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
               <h5 class="font-weight-bold">
-                {{ item.heading }}
+                {{ item.heading | liquify }}
               </h5>
               <p>
                 {{ item.text | liquify }}
