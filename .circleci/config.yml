@@ -68,7 +68,7 @@ jobs:
                 KEY=lubbockcodingacademy.com yarn favicon
                 KEY=lubbockcodingacademy.com yarn build
                 KEY=lubbockcodingacademy.com yarn deploy
-                KEY=texastechuniversitycodingacademy.com yarn sitemap
+                # KEY=texastechuniversitycodingacademy.com yarn sitemap
                 KEY=texastechuniversitycodingacademy.com yarn favicon
                 KEY=texastechuniversitycodingacademy.com yarn build
                 KEY=texastechuniversitycodingacademy.com yarn deploy
