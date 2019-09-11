@@ -532,11 +532,14 @@ role_sections:
           "endDate": "{{ section.end }}",
           "location": {
             "@type": "Place",
-            "name": "{{ section.campus }}",
+            "name": "{{ key_settings.school }}",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "{{ section.address }}",
-              "addressLocality": "{{ key_settings.city }}"
+              "streetAddress": "{{ key_settings.locations[section.campus].street }}",
+              "addressLocality": "{{ key_settings.locations[section.campus].city }}",
+              "addressRegion": "{{ key_settings.locations[section.campus].state }}",
+              "postalCode": "key_settings.locations[section.campus].postal",
+              "addressCountry": "US"
             }
           }
         }{% unless section == course.sections.last %},{% endunless %}

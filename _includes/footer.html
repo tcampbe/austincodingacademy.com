@@ -105,6 +105,7 @@
           "addressLocality": "{{ location[1].city }}",
           "addressRegion": "{{ location[1].state }}",
           "postalCode": "location[1].postal",
+          "addressCountry": "US"
         }{% unless locations == key_settings.locations.last %},{% endunless %}
       {% endfor %}
     ]
