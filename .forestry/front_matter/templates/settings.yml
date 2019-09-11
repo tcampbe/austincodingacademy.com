@@ -1,0 +1,470 @@
+---
+label: Settings
+hide_body: true
+fields:
+- type: boolean
+  name: settings
+  label: settings
+- type: text
+  name: form_url
+  label: form_url
+- type: number
+  name: hubspot_portal_id
+  label: hubspot_portal_id
+- type: text
+  name: instructor_form_guid
+  label: instructor_form_guid
+- type: text
+  name: corporate_trainings_form_guid
+  label: corporate_trainings_form_guid
+- type: text
+  name: corporate_form_guid
+  label: corporate_form_guid
+- type: text
+  name: assignment_form_guid
+  label: assignment_form_guid
+- type: text
+  name: head_title
+  label: head_title
+- type: textarea
+  name: description
+  label: description
+- type: field_group
+  name: navigation
+  label: navigation
+  fields:
+  - type: field_group_list
+    name: header
+    label: header
+    fields:
+    - type: text
+      name: title
+      label: title
+  - type: field_group_list
+    name: footer
+    label: footer
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: url
+      label: url
+- type: field_group
+  name: courses
+  label: courses
+  fields:
+  - type: field_group
+    name: Web 101
+    label: Web 101
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: JS 211
+    label: JS 211
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: JS 311
+    label: JS 311
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: JS 411
+    label: JS 411
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: C# 221
+    label: C# 221
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: length
+      label: length
+    - type: text
+      name: description
+      label: description
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: C# 321
+    label: C# 321
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: C# 421
+    label: C# 421
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+  - type: field_group
+    name: Job 501
+    label: Job 501
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: length
+      label: length
+    - type: list
+      name: list
+      label: list
+- type: field_group
+  name: tracks
+  label: tracks
+  fields:
+  - type: field_group
+    name: web
+    label: web
+    fields:
+    - type: text
+      name: url
+      label: url
+    - type: text
+      name: name
+      label: name
+  - type: field_group
+    name: wordpress
+    label: wordpress
+    fields:
+    - type: text
+      name: url
+      label: url
+    - type: text
+      name: name
+      label: name
+- type: field_group_list
+  name: logos
+  label: logos
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: width
+    label: width
+  - type: text
+    name: height
+    label: height
+  - type: file
+    name: src
+    label: src
+- type: field_group
+  name: austincodingacademy
+  label: austincodingacademy
+  fields:
+  - type: text
+    name: school
+    label: school
+  - type: list
+    name: tracks
+    label: tracks
+  - type: text
+    name: url
+    label: url
+  - type: number
+    name: phone
+    label: phone
+  - type: number
+    name: callrail_company_id
+    label: callrail_company_id
+  - type: text
+    name: google_tag_manager
+    label: google_tag_manager
+  - type: text
+    name: google_tag_manager_amp
+    label: google_tag_manager_amp
+  - type: text
+    name: contact_form_guid
+    label: contact_form_guid
+  - type: text
+    name: cta_form_guid
+    label: cta_form_guid
+  - type: text
+    name: course_guide_form_guid
+    label: course_guide_form_guid
+  - type: text
+    name: application_form_guid
+    label: application_form_guid
+  - type: text
+    name: twitter
+    label: twitter
+  - type: text
+    name: eventbrite
+    label: eventbrite
+  - type: text
+    name: facebook
+    label: facebook
+  - type: text
+    name: instagram
+    label: instagram
+  - type: field_group
+    name: locations
+    label: locations
+    fields:
+    - type: field_group
+      name: downtown
+      label: downtown
+      fields:
+      - type: text
+        name: campus
+        label: campus
+      - type: text
+        name: street
+        label: street
+      - type: text
+        name: city
+        label: city
+      - type: text
+        name: state
+        label: state
+      - type: number
+        name: postal
+        label: postal
+      - type: text
+        name: url
+        label: url
+    - type: field_group
+      name: highland
+      label: highland
+      fields:
+      - type: text
+        name: campus
+        label: campus
+      - type: text
+        name: street
+        label: street
+      - type: text
+        name: city
+        label: city
+      - type: text
+        name: state
+        label: state
+      - type: number
+        name: postal
+        label: postal
+      - type: text
+        name: url
+        label: url
+- type: field_group
+  name: lubbockcodingacademy
+  label: lubbockcodingacademy
+  fields:
+  - type: text
+    name: school
+    label: school
+  - type: list
+    name: tracks
+    label: tracks
+  - type: text
+    name: url
+    label: url
+  - type: number
+    name: phone
+    label: phone
+  - type: number
+    name: callrail_company_id
+    label: callrail_company_id
+  - type: text
+    name: google_tag_manager
+    label: google_tag_manager
+  - type: text
+    name: google_tag_manager_amp
+    label: google_tag_manager_amp
+  - type: text
+    name: contact_form_guid
+    label: contact_form_guid
+  - type: text
+    name: application_form_guid
+    label: application_form_guid
+  - type: text
+    name: course_guide_form_guid
+    label: course_guide_form_guid
+  - type: text
+    name: cta_form_guid
+    label: cta_form_guid
+  - type: text
+    name: twitter
+    label: twitter
+  - type: text
+    name: eventbrite
+    label: eventbrite
+  - type: text
+    name: facebook
+    label: facebook
+  - type: text
+    name: instagram
+    label: instagram
+  - type: field_group
+    name: locations
+    label: locations
+    fields:
+    - type: field_group
+      name: lubbockcenter
+      label: lubbockcenter
+      fields:
+      - type: text
+        name: campus
+        label: campus
+      - type: text
+        name: street
+        label: street
+      - type: text
+        name: city
+        label: city
+      - type: text
+        name: state
+        label: state
+      - type: number
+        name: postal
+        label: postal
+      - type: text
+        name: url
+        label: url
+- type: field_group
+  name: texastechuniversitycodingacademy
+  label: texastechuniversitycodingacademy
+  fields:
+  - type: text
+    name: school
+    label: school
+  - type: list
+    name: tracks
+    label: tracks
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: phone
+    label: phone
+  - type: text
+    name: callrail_company_id
+    label: callrail_company_id
+  - type: text
+    name: google_tag_manager
+    label: google_tag_manager
+  - type: text
+    name: google_tag_manager_amp
+    label: google_tag_manager_amp
+  - type: text
+    name: contact_form_guid
+    label: contact_form_guid
+  - type: text
+    name: cta_form_guid
+    label: cta_form_guid
+  - type: text
+    name: course_guide_form_guid
+    label: course_guide_form_guid
+  - type: text
+    name: application_form_guid
+    label: application_form_guid
+  - type: text
+    name: twitter
+    label: twitter
+  - type: text
+    name: eventbrite
+    label: eventbrite
+  - type: text
+    name: facebook
+    label: facebook
+  - type: text
+    name: instagram
+    label: instagram
+  - type: field_group
+    name: locations
+    label: locations
+    fields:
+    - type: field_group
+      name: highlandlakes
+      label: highlandlakes
+      fields:
+      - type: text
+        name: campus
+        label: campus
+      - type: text
+        name: street
+        label: street
+      - type: text
+        name: city
+        label: city
+      - type: text
+        name: state
+        label: state
+      - type: number
+        name: postal
+        label: postal
+      - type: text
+        name: url
+        label: url
+pages:
+- settings.html
