@@ -32,3 +32,5 @@ fields:
   - type: text
     name: grad_date
     label: grad_date
+pages:
+- grads.html
