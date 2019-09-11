@@ -19,14 +19,29 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
     </h2>
     <!-- Proccess Application -->
     <div class="d-flex">
-      <i style="width: 20px;"></i>
-      <i style="width: 20px;"></i>
-      <i style="width: 20px;"></i>
+      <div>
+        <i style="width: 20px;"></i>
+        <p>
+          Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+      <div>
+        <i style="width: 20px;"></i>
+        <p>
+          Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+      <div>
+        <i style="width: 20px;"></i>
+        <p>
+          Lorem ipsum dolor sit amet.
+        </p>
+      </div>
     </div>
     <!-- Proccess Application End -->
     <form
       class="d-flex justify-content-center"
-      action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{key_settings.application_form_guid}}"
+      action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{key_settings.application_wp_form_guid}}"
       method="POST"
       target="_top"
     >
@@ -46,7 +61,6 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
               <label for="firstname" class="form-label">
                 First Name <span class="text-red-a">*</span>
               </label>
-
               <input
                 type="text"
                 id="firstname"
@@ -69,7 +83,6 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
               <label for="lastname" class="form-label">
                 Last Name <span class="text-red-a">*</span>
               </label>
-
               <input
                 type="text"
                 id="lastname"
@@ -90,9 +103,8 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
           <div class="col-sm-6 mb-6">
             <div class="js-form-message form-group">
               <label for="phone" class="form-label">
-                Phone <span class="text-red-a">*</span>
+                Phone Number<span class="text-red-a">*</span>
               </label>
-
               <input
                 type="tel"
                 id="phone"
@@ -115,7 +127,6 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
               <label for="email" class="form-label">
                 Email <span class="text-red-a">*</span>
               </label>
-
               <input
                 type="email"
                 id="email"
@@ -132,6 +143,47 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
           </div>
           <!-- End Input -->
 
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+              <div class="js-form-message form-group">
+                <label for="zip" class="form-label">
+                  Your Zip Code <span class="text-red-a">*</span>
+                </label>
+                <input
+                  id="zip"
+                  type="text"
+                  class="form-control"
+                  name="zip"
+                  placeholder="zip code"
+                  aria-label="zip code"
+                  required
+                />
+              </div>
+            </div>
+            <!-- End Input -->
+
+            <!-- Input -->
+            <div class="col-sm-6 mb-6">
+              <div class="js-form-message form-group">
+                <label for="date-of-birth" class="form-label">
+                  Date of Birth <span class="text-red-a">*</span>
+                </label>
+                <input
+                  id="date-of-birth"
+                  type="text"
+                  class="form-control"
+                  name="date_of_birth1"
+                  placeholder="Date of Birth"
+                  aria-label="Date of Birth"
+                  required
+                  data-msg="Please enter your date of birth"
+                  data-error-class="u-has-error"
+                  data-success-class="u-has-success"
+                />
+              </div>
+            </div>
+              <!-- End Input -->
+
           <h2 class="display-6 mb-4 col-12">
             Education & Work Experience
           </h2>
@@ -140,24 +192,26 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
           <div class="col-sm-6 mb-6">
             <div class="js-form-message form-group">
               <label for="current-occupation-wp" class="form-label">
-                Highest Level of Education <span class="text-red-a">*</span>
+                Highest Level of Education Completed<span class="text-red-a">*</span>
               </label>
-
-              <select id="education-level" name="" class="form-control">
-                <option value="" disabled selected>
-
+              <select id="education-level" name="highest_level_of_education_completed" class="form-control">
+                <option value="High School Diploma/GED" disabled selected>
+                  High School Diploma/GED
                 </option>
-                <option value="">
-
+                <option value="Some College, No Degree">
+                  Some College, No Degree
                 </option>
-                <option value="">
-
+                <option value="2-Year Associate Degree">
+                  2-Year Associate Degree
                 </option>
-                <option value="">
-
+                <option value="Bachelors Degree">
+                  Bachelors Degree
                 </option>
-                <option value="">
-
+                <option value="Some Graduate Courses">
+                  Some Graduate Courses
+                </option>
+                <option value="Graduate College Degree">
+                  Graduate College Degree
                 </option>
               </select>
             </div>
@@ -168,14 +222,13 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
           <div class="col-sm-6 mb-6">
             <div class="js-form-message form-group">
               <label for="school-attended-wp" class="form-label">
-                Last School Attended <span class="text-red-a">*</span>
+                Name of Last School Attended <span class="text-red-a">*</span>
               </label>
-
               <input
                 id="school-attended-wp"
                 type="text"
                 class="form-control"
-                name="school-attended-wp"
+                name="college_or_school_attended1"
                 placeholder="The last school you attended"
                 aria-label="Last school attended"
                 required
@@ -191,9 +244,8 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
           <div class="col-sm-6 mb-6">
             <div class="js-form-message form-group">
               <label for="current-occupation-wp" class="form-label">
-                Current Occupation or Job Title <span class="text-red-a">*</span>
+                Current Occupation/Job Title <span class="text-red-a">*</span>
               </label>
-
               <input
                 id="current-occupation-wp"
                 type="text"
@@ -216,7 +268,6 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
               <label for="current-company1" class="form-label">
                 Current Company <span class="text-red-a">*</span>
               </label>
-
               <input
                 id="current-company1"
                 type="text"
@@ -233,62 +284,6 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
           </div>
           <!-- End Input -->
 
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="computer-experience-wp" class="form-label">
-                What experience do you have with computers? <span class="text-red-a">*</span>
-              </label>
-
-              <select id="computer-experience-wp" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
-                <option value="" disabled selected>
-
-                </option>
-                <option value="None at all!">
-
-                </option>
-                <option value="">
-
-                </option>
-                <option value="">
-
-                </option>
-                <option value="">
-
-                </option>
-              </select>
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="coding-experience-wp" class="form-label">
-                What experience do you have in coding? <span class="text-red-a">*</span>
-              </label>
-
-              <select id="coding-experience-wp" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
-                <option value="" disabled selected>
-                  Select your answer
-                </option>
-                <option value="None at all!">
-                  None at all!
-                </option>
-                <option value="I've dabbled with some online tutorials">
-                  I've dabbled with some online tutorials.
-                </option>
-                <option value="Solid fundamentals but not ready for a job">
-                  Solid fundamentals but not ready for a job.
-                </option>
-                <option value="I'm a professional developer">
-                  Professional developer, gaining more skills.
-                </option>
-              </select>
-            </div>
-          </div>
-          <!-- End Input -->
-
           <h2 class="display-6 mb-4 col-12">
             Additional Info
           </h2>
@@ -296,65 +291,23 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
           <!-- Input -->
           <div class="col-sm-6 mb-6">
             <div class="js-form-message form-group">
-              <label for="zip" class="form-label">
-                Zip Code <span class="text-red-a">*</span>
-              </label>
-              <input
-                id="zip"
-                type="text"
-                class="form-control"
-                name="college_or_school_attended1"
-                placeholder="zip code"
-                aria-label="zip code"
-                required
-              />
-
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="date-of-birth" class="form-label">
-                Date of Birth <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                id="date-of-birth"
-                type="text"
-                class="form-control"
-                name=""
-                placeholder="Date of Birth"
-                aria-label="Date of Birth"
-                required
-                data-msg="Please enter your date of birth"
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-            <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
               <label for="payment" class="form-label">
-                Payment <span class="text-red-a">*</span>
+                Do You Own a Laptop? <span class="text-red-a">*</span>
               </label>
-
-              <input
-                id="payment"
-                type="text"
-                class="form-control"
-                name="payment"
-                placeholder=""
-                aria-label=""
-                required
-                data-msg=""
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
+              <select id="hear-about-us" name="do_you_own_a_laptop" class="form-control">
+                <option value="" disabled selected>
+                  Yes (a Chromebook)
+                </option>
+                <option value="">
+                  Yes (a Mac or Windows machine Pre-2012)
+                </option>
+                <option value="">
+                  Yes (a Mac or Windows machine Post-2012)
+                </option>
+                <option value="">
+                  Yes (other)
+                </option>
+              </select>
             </div>
           </div>
           <!-- End Input -->
@@ -363,24 +316,101 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
           <div class="col-sm-6 mb-6">
             <div class="js-form-message form-group">
               <label for="hear-about-us" class="form-label">
-                How did you hear? <span class="text-red-a">*</span>
+                How did you hear About Austin Coding Academy? <span class="text-red-a">*</span>
               </label>
+              <select id="hear-about-us" name="how_did_you_hear_about_us" class="form-control">
+              <option value="" disabled selected>
+                  Select your answer
+                </option>
+                <option value="Facebook">
+                  Facebook
+                </option>
+                <option value="Instagram">
+                  Instagram
+                </option>
+                <option value="Twitter">
+                  Twitter
+                </option>
+                <option value="LinkedIn">
+                  LinkedIn
+                </option>
+                <option value="Friend / Family">
+                  Friend / Family
+                </option>
+                <option value="Search engine">
+                  Search engine
+                </option>
+                <option value="{{ key_settings.school }} event">
+                  {{ key_settings.school }} event
+                </option>
+                <option value="{{ key_settings.school }} faculty / staff">
+                  {{ key_settings.school }} faculty / staff
+                </option>
+                <option value="{{ key_settings.school }} student / alumni">
+                  {{ key_settings.school }} student / alumni
+                </option>
+                <option value="News (TV, article)">
+                  News (TV, article)
+                </option>
+                <option value="Radio">
+                  Radio
+                </option>
+                <option value="Other">
+                  Other
+                </option>
+              </select>
+            </div>
+          </div>
+          <!-- End Input -->
 
-              <select id="hear-about-us" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="hear-about-us" class="form-label">
+                How Do You Intend to Pay for the Course? <span class="text-red-a">*</span>
+              </label>
+              <select id="hear-about-us" name="how_do_you_intend_to_pay_for_the_course_" class="form-control">
                 <option value="" disabled selected>
+                  Select your answer
+                </option>
+                <option value="Paying on my own">
+                  I'll be paying on my own.
+                </option>
+                <option value="Planning to finance">
+                  I'm planning to finance tuition.
+                </option>
+                <option value="Employer will be paying / reimbursing">
+                  My employer will be paying/reimbursing me.
+                </option>
+                <option value="Other">
+                  Other
+                </option>
+              </select>
+            </div>
+          </div>
+          <!-- End Input -->
 
+          <!-- Input -->
+          <div class="col-sm-6 mb-6">
+            <div class="js-form-message form-group">
+              <label for="hear-about-us" class="form-label">
+                When Would You Like to Begin Class? <span class="text-red-a">*</span>
+              </label>
+              <select id="hear-about-us" name="when_would_you_like_to_begin_class" class="form-control">
+                <option value="" disabled selected>
+                  As Soon as Possible
                 </option>
                 <option value="">
-
+                  2 - 4 Weeks
                 </option>
                 <option value="">
-
+                  1 - 3 Months
                 </option>
                 <option value="">
-
+                  3 - 6 Months
                 </option>
                 <option value="">
-
+                  > 6 Months
                 </option>
               </select>
             </div>
