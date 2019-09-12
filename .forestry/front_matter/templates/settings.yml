@@ -226,6 +226,18 @@ fields:
   - type: text
     name: school
     label: school
+  - type: text
+    name: primary_light_color
+    label: primary_light_color
+  - type: text
+    name: primary_dark_color
+    label: primary_dark_color
+  - type: text
+    name: secondary_light_color
+    label: secondary_light_color
+  - type: text
+    name: secondary_dark_color
+    label: secondary_dark_color
   - type: list
     name: tracks
     label: tracks
@@ -323,6 +335,18 @@ fields:
   - type: text
     name: school
     label: school
+  - type: text
+    name: primary_light_color
+    label: primary_light_color
+  - type: text
+    name: primary_dark_color
+    label: primary_dark_color
+  - type: text
+    name: secondary_light_color
+    label: secondary_light_color
+  - type: text
+    name: secondary_dark_color
+    label: secondary_dark_color
   - type: list
     name: tracks
     label: tracks
@@ -398,6 +422,18 @@ fields:
   - type: text
     name: school
     label: school
+  - type: text
+    name: primary_light_color
+    label: primary_light_color
+  - type: text
+    name: primary_dark_color
+    label: primary_dark_color
+  - type: text
+    name: secondary_light_color
+    label: secondary_light_color
+  - type: text
+    name: secondary_dark_color
+    label: secondary_dark_color
   - type: list
     name: tracks
     label: tracks
