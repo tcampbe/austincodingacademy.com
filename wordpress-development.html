@@ -51,41 +51,41 @@ highlights:
   text: "All Austin Coding Academy students have access to unlimited tutoring. Choose whether you want to meet with a tutor in-person or via video chat, and book
     your session through our tutoring portal. Whether you need help on nights, weekends, or during the day – Austin Coding Academy tutors are here to help you work
     through your barriers."
-modules:
-- code: Module 1
-  length: (Week 1 - Week 4)
-  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
-  sections:
-  - start: May 29, 2019
-    end: July 24, 2019
-    weekdays: Mondays &amp; Wednesdays
-    time: 6:30pm - 9:00pm
-    name: Downtown (Capital Factory)
-  - start: June 25, 2019
-    end: August 22, 2019
-    weekdays: Tuesdays &amp; Thursdays
-    time: 6:30pm - 9:00pm
-    campus: Highland (Highland Business Center)
-- code: Module 2
-  length: (Week 5 - Week 8)
-  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
-  sections:
-  - start: July 29, 2019
-    end: September 25, 2019
-    weekdays: Mondays &amp; Wednesdays
-    time: 6:30pm - 9:00pm
-    name: Downtown (Capital Factory)
-    campus: Downtown Capital Factory Campus
-  - start: August 27, 2019
-    end: 'October 17, 2019 '
-    weekdays: Tuesdays &amp; Thursdays
-    time: 6:30pm - 9:00pm
-    name: Highland (Highland Business Center)
-    list:
-    - Immersion in Object Oriented Programming (OOP)
-    - Build Unit Testing + Test Driven Development (TDD)
-    - Master Callbacks and Functional Programming
-    - Interact with remote APIs and manipulate data
+#modules:
+#- code: Module 1
+#  length: (Week 1 - Week 4)
+#  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
+#  sections:
+#  - start: May 29, 2019
+#    end: July 24, 2019
+#    weekdays: Mondays &amp; Wednesdays
+#    time: 6:30pm - 9:00pm
+#    name: Downtown (Capital Factory)
+#  - start: June 25, 2019
+#    end: August 22, 2019
+#    weekdays: Tuesdays &amp; Thursdays
+#    time: 6:30pm - 9:00pm
+#    campus: Highland (Highland Business Center)
+#- code: Module 2
+#  length: (Week 5 - Week 8)
+#  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
+#  sections:
+#  - start: July 29, 2019
+#    end: September 25, 2019
+#    weekdays: Mondays &amp; Wednesdays
+#    time: 6:30pm - 9:00pm
+#    name: Downtown (Capital Factory)
+#    campus: Downtown Capital Factory Campus
+#  - start: August 27, 2019
+#    end: 'October 17, 2019 '
+#    weekdays: Tuesdays &amp; Thursdays
+#    time: 6:30pm - 9:00pm
+#    name: Highland (Highland Business Center)
+#    list:
+#    - Immersion in Object Oriented Programming (OOP)
+#    - Build Unit Testing + Test Driven Development (TDD)
+#    - Master Callbacks and Functional Programming
+#    - Interact with remote APIs and manipulate data
 
 about:
 - title: "WP Engine: The WordPress Digital Experience Platform"
@@ -303,7 +303,7 @@ role_sections:
       <div class="d-flex justify-content-between text-center flex-column flex-sm-row flex-wrap flex-md-nowrap">
         {% for item in page.highlights %}
           <div class="card shadow col-sm mx-auto mx-sm-2 pt-2 my-2">
-            <h4>
+            <h4 class="mb-4">
               {{ item.title }}
             </h4>
             <p>
@@ -316,7 +316,7 @@ role_sections:
     <!-- end overview blocks -->
   </section>
 
-  <section class="py-8 container">
+  <!-- <section class="py-8 container">
     <div class="font-family-alt display-6 mb-4 pt-2">
       Course Structure
     </div>
@@ -344,7 +344,7 @@ role_sections:
     <div class="d-flex justify-content-center mt-4">
       {% include btn-apply.html %}
     </div>
-  </section>
+  </section> -->
 
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid py-8 {{ page.hero }}-gradient">
