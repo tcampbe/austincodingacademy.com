@@ -548,7 +548,7 @@ a:hover, .btn-link:hover, .hover-white:hover {
 
 /* Display Dropdowns on Hover */
 #nav-bar > ul > li:hover > ul {
-  display: inherit;
+  display: block;
 }
 
 /* First Tier Dropdown */
