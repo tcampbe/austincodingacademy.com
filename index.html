@@ -15,6 +15,21 @@ cover_video:
   src_mp4: "/assets/videos/aca-intro.mp4"
   title: ACA Cover Video
   poster: "/assets/images/aca-intro-poster.png"
+stories:
+- src: https://player.vimeo.com/video/290925619
+  title: Lilian Situ video review of Austin Coding Academy
+  quote: I've always been interested in programming and being able to create something
+    so being able to take what I learned at ACA and get a job with it ... was one
+    of the best decisions I've made.
+  name: Lillian Situ
+  position: Software Engineer, data.world
+- src: https://player.vimeo.com/video/290913789
+  title: Greg Swan video review of Austin Coding Academy
+  quote: ACA ... gave me a solid foundation of knowledge, taught me what not to
+    do, and consistently reminded me that there was a job out there for me if I
+    was willing to put in the work.
+  name: Greg Swan
+  position: Web Developer, Kinetic Theory
 heading: Change Your Life With a New Career
 subheading: Part-time coding classes taught by local full-time developers
 lightbox_youtube:
@@ -369,7 +384,7 @@ texastechuniversitycodingacademy:
       <!-- begin student-stories -->
       <div class="container">
         <div class="row">
-          {% for story in school.stories %}
+          {% for story in page.stories %}
             <div class="col-xs-12 col-sm-12 col-md-6">
               <div class="mt-4">
                 <amp-iframe
