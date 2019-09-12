@@ -106,7 +106,7 @@
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
             {% for item in settings.navigation.header %}
-              <li class="nav-item u-header__nav-item ml-5">
+              <li class="nav-item u-header__nav-item ml-5 pb-2">
               {% if item.links %}
                 <!-- <a tabindex="0"> -->
                   <span class="text-white hover-white">
@@ -149,7 +149,7 @@
                 <!-- htmllint preset="$previous" -->
                   <span class="text-white hover-white">{{ item.title | liquify }}</span>
                 </a>
-                {% endif %}
+              {% endif %}
               </li>
             {% endfor %}
           </ul>
