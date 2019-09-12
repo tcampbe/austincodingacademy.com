@@ -6,39 +6,23 @@ head_title: Events | {{ key_settings.school }}
 amp_components:
 - amp-img
 - amp-lightbox
-austincodingacademy:
-  header_img: events
-  heading: Upcoming Events
-  subheading: Come join Austin Coding Academy at one of our next events! Whether you'd
-    like a free introduction to coding, to attend an open house, network with us at
-    one of our monthly happy hours, or anything else – check out our upcoming events
-    for opportunities to meet and join our growing community.
-lubbockcodingacademy:
-  header_img: events
-  heading: Upcoming Events
-  subheading: Come join Lubbock Coding Academy at one of our next events! Whether
-    you'd like a free introduction to coding, to attend an open house, network with
-    us at one of our monthly happy hours, or anything else – check out our upcoming
-    events for opportunities to meet and join our growing community.
-texastechuniversitycodingacademy:
-  header_img: events
-  heading: Upcoming Events
-  subheading: Come join Austin Coding Academy at one of our next events! Whether you'd
-    like a free introduction to coding, to attend an open house, network with us at
-    one of our monthly happy hours, or anything else – check out our upcoming events
-    for opportunities to meet and join our growing community.
+heading: Upcoming Events
+subheading: Come join {{ key_settings.school }} at one of our next events! Whether you'd
+  like a free introduction to coding, to attend an open house, network with us at
+  one of our monthly happy hours, or anything else – check out our upcoming events
+  for opportunities to meet and join our growing community.
 
 ---
 {% assign school = page[site.key] %}
 
 <!-- htmllint preset="none" -->
-<div id="header-{{ school.header_img }}" class="py-5 py-md-11">
+<div id="hero-events" class="bg-gradient py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
-    {{ school.heading }}
+    {{ page.heading | liquify }}
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
-    {{ school.subheading }}
+    {{ page.subheading | liquify }}
   </p>
 </div>
 <main class="container">

@@ -7,7 +7,7 @@ description: ""
 ---
 {% for _page in site.pages %}
   {% if _page.tutors %}
-    {% assign tutors = _page.tutors[site.key] %}
+    {% assign tutors = _page[site.key] %}
   {% endif %}
 {% endfor %}
 

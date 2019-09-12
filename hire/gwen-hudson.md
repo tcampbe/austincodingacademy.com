@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation, austin ] # don't touch
+categories: [ hire, graduation, austincodingacademy] # don't touch
 
 fullname: Gwen Hudson
 jobtitle: Freelance Graphic/Web Designer
@@ -46,7 +46,7 @@ education:
   - name: Austin Coding Acaademy
     dates: Oct 2018 - Aug 2019
     degree: Web Design
-    
+
   - name: Austin Community College
     dates: 2011 - 2014
     degree: Associate of Applied Science Degree | Graphic Arts Technology Specialization

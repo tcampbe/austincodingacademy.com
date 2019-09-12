@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, austin ] # don't touch
+categories: [ hire, austincodingacademy] # don't touch
 
 fullname: Gabe Flores
 jobtitle: Web Developer
