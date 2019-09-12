@@ -1,0 +1,85 @@
+---
+label: FAQ
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  default: default
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: head_title
+  label: head_title
+- type: textarea
+  name: description
+  label: description
+- type: list
+  name: redirect_from
+  label: redirect_from
+- type: field_group
+  name: austincodingacademy
+  label: austincodingacademy
+  fields:
+  - type: field_group_list
+    name: categories
+    label: categories
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: field_group_list
+      name: faqs
+      label: faqs
+      fields:
+      - type: text
+        name: question
+        label: question
+      - type: textarea
+        name: answer
+        label: answer
+- type: field_group
+  name: lubbockcodingacademy
+  label: lubbockcodingacademy
+  fields:
+  - type: field_group_list
+    name: categories
+    label: categories
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: field_group_list
+      name: faqs
+      label: faqs
+      fields:
+      - type: text
+        name: question
+        label: question
+      - type: textarea
+        name: answer
+        label: answer
+- type: field_group
+  name: texastechuniversitycodingacademy
+  label: texastechuniversitycodingacademy
+  fields:
+  - type: field_group_list
+    name: categories
+    label: categories
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: field_group_list
+      name: faqs
+      label: faqs
+      fields:
+      - type: text
+        name: question
+        label: question
+      - type: textarea
+        name: answer
+        label: answer
+pages:
+- faq.html

@@ -11,7 +11,7 @@
       controls="false"
       delay="1500"
     >
-      {% for logo in page.logos %}
+      {% for logo in settings.logos %}
         <div class="d-flex align-items-center justify-content-center">
           <amp-img
             width="{{ logo.width }}"
@@ -19,7 +19,7 @@
             layout="responsive"
             class="w-100 h-auto mw-14r"
             src="{{ logo.src }}"
-            alt="{{ logo.alt }}"
+            alt="{{ logo.name }}"
           ></amp-img>
         </div>
       {% endfor %}

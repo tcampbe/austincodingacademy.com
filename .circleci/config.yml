@@ -59,15 +59,19 @@ jobs:
                 git config --global user.name "Kevin Colten"
                 yarn images
                 node _javascripts/tutoring.js
-                KEY=austin yarn sitemap
-                KEY=austin yarn favicon
-                KEY=austin yarn build
+                KEY=austincodingacademy.com yarn sitemap
+                KEY=austincodingacademy.com yarn favicon
+                KEY=austincodingacademy.com yarn build
                 sudo apt install rsync
                 rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
-                KEY=lubbock yarn sitemap
-                KEY=lubbock yarn favicon
-                KEY=lubbock yarn build
-                KEY=lubbock yarn deploy
+                KEY=lubbockcodingacademy.com yarn sitemap
+                KEY=lubbockcodingacademy.com yarn favicon
+                KEY=lubbockcodingacademy.com yarn build
+                KEY=lubbockcodingacademy.com yarn deploy
+                KEY=texastechuniversitycodingacademy.com yarn sitemap
+                KEY=texastechuniversitycodingacademy.com yarn favicon
+                KEY=texastechuniversitycodingacademy.com yarn build
+                KEY=texastechuniversitycodingacademy.com yarn deploy
               fi
 
 workflows:

@@ -14,15 +14,15 @@
     <div class="col-12 col-md mt-5 mt-md-0">
       <div class="mb-2">
         <h5 class="font-weight-bold m-0">
-          {{ location.address }}
+          {{ location[1].campus }}
         </h5>
         <small>
-          {{ location.street }}<br>
-          {{ location.locality }}
+          {{ location[1].street }}<br>
+          {{ location[1].city }}, {{ location[1].state }} {{ location[1].postal }}
         </small>
       </div>
       <amp-iframe
-        src="{{ location.url }}"
+        src="{{ location[1].url }}"
         width="525"
         height="242"
         layout="responsive"

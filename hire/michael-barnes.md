@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ austin ] # don't touch
+categories: [ austincodingacademy] # don't touch
 
 fullname: Michael Barnes
 jobtitle: Cofounder / VP Product, Quality People
