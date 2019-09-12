@@ -126,3 +126,5 @@ fields:
   - type: text
     name: schedule_href
     label: schedule_href
+pages:
+- index.html
