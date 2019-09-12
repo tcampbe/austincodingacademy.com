@@ -341,14 +341,7 @@ texastechuniversitycodingacademy:
       end: April 2, 2020
       weekdays: Tuesdays &amp; Thursdays
       time: 6:30pm - 9:00pm
-  tuition_options:
-  - title: Apply to Join the Full Stack Web Development Track
-    description: Submit your short 5-minute application to Austin Coding Academy’s
-      Full Stack Web Development Track and discuss tuition with a follow-up call with
-      your admissions advisor.
-    button: Apply
-    url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+  tuition_options: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -367,6 +360,7 @@ texastechuniversitycodingacademy:
     {{ page.hero_text }}
   </p>
   <div class="d-flex mt-4 align-items-center justify-content-center">
+    {% if key_settings.course_guide %}
     <div class="mr-2">
       <!-- htmllint preset="none" -->
       <a
@@ -379,6 +373,7 @@ texastechuniversitycodingacademy:
         Course Guide
       </a>
     </div>
+    {% endif %}
     <div class="ml-2">{% include btn-apply.html %}</div>
   </div>
 </div>
@@ -519,7 +514,7 @@ texastechuniversitycodingacademy:
       <!-- course cards end -->
     </div>
   </section>
-
+  {% if key_settings.course_guide %}
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid {{page.hero}}-gradient text-white py-8">
   <!-- htmllint preset="$previous" -->
@@ -529,7 +524,7 @@ texastechuniversitycodingacademy:
       </div>
     </div>
   </section>
-
+  {% endif %}
   <section class="container-fluid d-flex py-8 flex-column justify-content-center text-center">
     <div class="font-family-alt display-5 mb-4">
       Job Placement
@@ -621,7 +616,7 @@ texastechuniversitycodingacademy:
   </section>
 
   {% include company-carousel.html %}
-
+  {% if school.tuition_options.length > 0 %}
   <section class="bg-textured ">
     <div class="text-white m-0 pt-8 pb-2">
       <div class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
@@ -695,7 +690,7 @@ texastechuniversitycodingacademy:
       </div>
     </div>
   </section>
-
+  {% endif %}
   <section id="contact" class="container-fluid py-11">
     <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>

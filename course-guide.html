@@ -5,6 +5,12 @@ head_title: "Course Guide | {{ key_settings.school }}"
 description: ""
 redirect_from: []
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <div class="container mt-90 space-2">
   <div class="card-deck d-flex justify-content-center">
     <!-- Card -->
@@ -14,7 +20,7 @@ redirect_from: []
           <h1>Thank You</h1>
           <p>
             <a
-              href="/web/viewer.html?file=../assets/documents/{{ site.key }}-Coding-Academy-Course-Guide-Master.pdf"
+              href="/web/viewer.html?file={{key_settings.course_guide}}"
               target="_blank"
               rel="noopener"
             >

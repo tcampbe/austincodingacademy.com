@@ -371,10 +371,12 @@ texastechuniversitycodingacademy:
       </div>
     </div>
   </section>
+  {% if key_settings.course_guide %}
   <!-- Course Guide Form -->
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
     {% include course-guide-form.html %}
   </section>
+  {% endif %}
 
   {% if site.key == 'austincodingacademy' %}
     <section class="py-8 bg-textured">
@@ -416,6 +418,7 @@ texastechuniversitycodingacademy:
     {% include company-carousel.html %}
     <!-- end company carousel -->
   {% endif %}
+  {% if site.data.events[site.key] > 0 %}
   <section class="py-8 bg-textured text-white">
     <div class="container d-flex justify-content-center flex-column">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
@@ -427,6 +430,7 @@ texastechuniversitycodingacademy:
       </div>
     </div>
   </section>
+  {% endif %}
   <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5">
     <div class="container mw-600">
       <h3 class="font-family-alt font-weight-bold text-center display-5">
