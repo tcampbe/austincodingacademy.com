@@ -5,6 +5,7 @@ fields:
 - type: text
   name: layout
   label: layout
+  default: default
 - type: text
   name: permalink
   label: permalink
