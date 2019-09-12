@@ -195,7 +195,7 @@ austincodingacademy:
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-purple hover-white center mt-4
+    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
 
 lubbockcodingacademy:
   next_start_date: Tuesday, August 27th
@@ -275,7 +275,7 @@ lubbockcodingacademy:
     description: Finance your tuition through Texas Tech Credit Union’s “Lubbock Coding Academy Loan”.
       Apply with Texas Tech Credit Union, and once accepted simply make your $490 deposit and begin monthly
       payments towards tuition over the course of the loan. Learn more on Texas Tech Credit Union’s website.
-    cta: <a href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan" rel="noopener" class="btn btn-round bg-purple text-white hover-white
+    cta: <a href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan" rel="noopener" class="btn btn-round bg-primary-dark text-white hover-white
       mt-2" target="_blank"><span class="text-white hover-white">Financing Options</span> <span class="text-white hover-white fas fa-arrow-right small"></span></a>
 
 texastechuniversitycodingacademy:
@@ -370,7 +370,7 @@ texastechuniversitycodingacademy:
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-purple hover-white center mt-4
+    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -380,7 +380,7 @@ texastechuniversitycodingacademy:
 {% endfor %}
 {% assign school = page[site.key] %}
 <!-- htmllint preset="none" -->
-<div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
+<div id="hero-{{ page.hero }}" class="bg-gradient hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-55 display-sm-4 text-center">
     Full Stack Web Development
@@ -597,7 +597,7 @@ texastechuniversitycodingacademy:
     </div>
   </section>
 
-  <section class="container-fluid py-8 bg-textured-2">
+  <section class="container-fluid py-8 bg-textured">
     <div class="display-6 text-center text-white mb-6">
       Student Outcomes
     </div>
@@ -624,7 +624,7 @@ texastechuniversitycodingacademy:
                 @ {{ success.company }}
               </div>
               <a
-                class="btn btn-round bg-purple text-white text-center hover-white mt-2 mb-3"
+                class="btn btn-round bg-primary-dark text-white text-center hover-white mt-2 mb-3"
                 style="width: 42px;"
                 href="{{ success.learn_url }}"
                 rel="noopener"
@@ -644,7 +644,7 @@ texastechuniversitycodingacademy:
 
   {% include company-carousel.html %}
 
-  <section class="bg-textured-2 ">
+  <section class="bg-textured ">
     <div class="text-white m-0 pt-8 pb-2">
       <div class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
         Tuition

@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation, austin ] # don't touch
+categories: [ hire, graduation, austincodingacademy] # don't touch
 
 fullname: Collin Betori
 jobtitle: Web Developer
