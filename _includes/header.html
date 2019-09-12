@@ -26,7 +26,7 @@
         <ul class="list-unstyled text-left pl-3">
           {% for link in item.links %}
             <li>
-              <a href="{{ link.url | liquify }}" class="text-blue hover-white">
+              <a href="{{ link.url | liquify }}" class="hover-white">
                 {{ link.title | liquify }}
               </a>
             </li>
@@ -39,7 +39,7 @@
         <ul class="list-unstyled text-left pl-3">
           {% for track in key_settings.tracks %}
             <li>
-              <a href="{{ settings.tracks[track].url }}" class="text-blue hover-white">
+              <a href="{{ settings.tracks[track].url }}" class="hover-white">
                 {{ settings.tracks[track].name }}
               </a>
             </li>
@@ -60,10 +60,10 @@
 
 <!-- htmllint preset="none" -->
 <header id="header"
-  class="fixed-top {% if color == 'transparent' %}u-header--bg-transparent {% else %} u-header--navbar-bg {% endif %} w-100"
+  class="fixed-top u-header--navbar-bg w-100"
 >
-  <div id="header-background" class="bg-purple d-block position-absolute w-100 h-100"></div>
-  <div class="u-header__section bg-{{ color | default: 'purple' }} py-2">
+  <div id="header-background" class="bg-primary-dark d-block position-absolute w-100 h-100"></div>
+  <div class="u-header__section bg-primary-dark py-2">
   <!-- htmllint preset="$previous" -->
     <div class="container px-md-0 px-lg-3">
       <!-- Nav -->

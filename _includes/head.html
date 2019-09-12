@@ -30,6 +30,15 @@
 
   {% include amp.html %}
 
+  <style amp-custom>
+    :root {
+      --primary-light: {{ key_settings.primary_light_color }};
+      --primary-dark: {{ key_settings.primary_dark_color }};
+      --secondary-light: {{ key_settings.secondary_light_color }};
+      --secondary-dark: {{ key_settings.secondary_dark_color }};
+    }
+  </style>
+
   {% capture amp_css %}{% file_exists _includes/css.html %}{% endcapture %}
   {% if amp_css == "true" %}
     {% include css.html %}

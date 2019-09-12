@@ -1,4 +1,5 @@
 ---
+layout: default
 permalink: "/grads/"
 head_title: "{{ key_settings.school }} | Graduate Projects"
 description: At {{ key_settings.school }}, we fit learning to code into your life
@@ -19,117 +20,46 @@ texastechuniversitycodingacademy:
   {% endif %}
 {% endfor %}
 {% assign school = page[site.key] %}
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      name="description"
-      content="{{ school.description }}"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-    />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-
-    <title>
-      {{ key_settings.school }} | Graduate Projects
-    </title>
-
-    <link
-      rel="stylesheet"
-      href="https://austincodingacademy.github.io/front/assets/css/theme.css"
-    >
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    >
-
-    {% include amp.html %}
-
-    {% include favicon.html %}
-
-    {{ school.head }}
-  </head>
-
-  <body>
-    <header class="container-fluid bg-gradient d-flex align-items-center text-white py-2 m-0">
-      <a
-        class="navbar-logo d-flex"
-        href="/"
-        aria-label="Logo"
-      >
-        <!-- htmllint preset="none" -->
-        <amp-img
-          width="66px"
-          height="66px"
-          layout="fixed"
-          alt="{{ key_settings.school }} Home"
-          src="/assets/images/logo-{{ site.key }}-white.png"
-          class="w-100"
-        ></amp-img>
-        <!-- htmllint preset="$previous" -->
-        <span class="sr-only">{{ key_settings.school }} Logo</span>
-      </a>
-      <h3 class="pl-4 font-family-alt mb-0">
-        {{ school.grad_date | capitalize }} Graduates
-      </h3>
-    </header>
-    <div class="container-fluid py-10" style="background-color: black;">
-      <div class="row col-9 col-sm-10 col-md-9 mx-auto d-flex justify-content-center align-items-end">
-        {% for page in site.pages %}
-          {% if page.categories contains 'graduation' and page.projects[0].url and page.categories contains site.key %}
-            {% assign track = page.skills[0] | downcase %}
-            {% if track contains 'javascript' or track contains 'c#' or track contains 'csharp' or track contains '.net' or track contains 'web design' %}
-              <!-- Card Start -->
-              <div
-                class="col-12 col-sm-4 col-md-3 p-2"
-                style="height: 250px;"
-              >
-                <div class="w-100 px-1 h-100 py-2 d-flex flex-column rounded border align-items-center justify-content-between" style="min-height: 100%; box-shadow: 0px 0px 5px #fff;">
-                  <div class="d-flex justify-content-center pb-2">
-                    <!-- htmllint preset="none" -->
-                    <amp-img width="150" height="150"
-                      layout="fixed"
-                      class="rounded-circle shadow-black px-2"
-                      src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
-                      alt="{{ page.fullname }}"
-                    ></amp-img>
-                    <!-- htmllint preset="$previous" -->
-                  </div>
-                  <h5 class="h6 m-0 text-white font-weight-bold">
-                    {{ page.fullname }}
-                  </h5>
-                  <a
-                    href="{{ page.projects[0].url }}"
-                    target="_blank"
-                    rel="noopener"
-                    class="d-flex justify-content-center"
-                  >
-                    <small class="link-underlined hover-white text-white text-center">
-                      {{ page.projects[0].name }}
-                    </small>
-                  </a>
-                </div>
+<div class="container-fluid py-10" style="background-color: black;">
+  <div class="row col-9 col-sm-10 col-md-9 mx-auto d-flex justify-content-center align-items-end">
+    {% for page in site.pages %}
+      {% if page.categories contains 'graduation' and page.projects[0].url and page.categories contains site.key %}
+        {% assign track = page.skills[0] | downcase %}
+        {% if track contains 'javascript' or track contains 'c#' or track contains 'csharp' or track contains '.net' or track contains 'web design' %}
+          <!-- Card Start -->
+          <div
+            class="col-12 col-sm-4 col-md-3 p-2"
+            style="height: 250px;"
+          >
+            <div class="w-100 px-1 h-100 py-2 d-flex flex-column rounded border align-items-center justify-content-between" style="min-height: 100%; box-shadow: 0px 0px 5px #fff;">
+              <div class="d-flex justify-content-center pb-2">
+                <!-- htmllint preset="none" -->
+                <amp-img width="150" height="150"
+                  layout="fixed"
+                  class="rounded-circle shadow-black px-2"
+                  src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
+                  alt="{{ page.fullname }}"
+                ></amp-img>
+                <!-- htmllint preset="$previous" -->
               </div>
-              <!-- Card End -->
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-    <div class="text-center border-top bg-purple py-3 w-100">
-      <p class="small text-white-70 mb-0">
-        © {{ key_settings.school }} 2019. All rights reserved.<br/>
-        <a class="text-white" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> | <a class="text-white" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>
-      </p>
-    </div>
-  </body>
-</html>
+              <h5 class="h6 m-0 text-white font-weight-bold">
+                {{ page.fullname }}
+              </h5>
+              <a
+                href="{{ page.projects[0].url }}"
+                target="_blank"
+                rel="noopener"
+                class="d-flex justify-content-center"
+              >
+                <small class="link-underlined hover-white text-white text-center">
+                  {{ page.projects[0].name }}
+                </small>
+              </a>
+            </div>
+          </div>
+          <!-- Card End -->
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
