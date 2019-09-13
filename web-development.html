@@ -616,80 +616,80 @@ texastechuniversitycodingacademy:
   </section>
 
   {% include company-carousel.html %}
-  {% if school.tuition_options.length > 0 %}
-  <section class="bg-textured ">
-    <div class="text-white m-0 pt-8 pb-2">
-      <div class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
-        Tuition
-      </div>
-      <div class="container">
-        {% for option in school.tuition_options %}
-          <div class="row my-5">
-            <div class="col-md-8">
-              <h3 class="display-7 border-bottom">
-                {{option.title}}
-              </h3>
-              <p class="text-white">
-                {{option.description}}
-              </p>
-            </div>
-            <div class="col-md-4 px-5">
-              {% if option.price-header == 'Details' %}
-                <div class="text-center">
-                  <h5>
-                    {{option.price-header}}
-                  </h5>
-                  <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
-                    <div class="display-6 text-white">
-                      {{option.price}} <span style="font-size: 1rem;">to start</span>
-                    </div>
-                    <div class="display-8 text-white">
-                      +<br>
-                      {{option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
+  {% if school.tuition_options.size > 0 %}
+    <section class="bg-textured">
+      <div class="text-white m-0 pt-8 pb-2">
+        <div class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
+          Tuition
+        </div>
+        <div class="container">
+          {% for option in school.tuition_options %}
+            <div class="row my-5">
+              <div class="col-md-8">
+                <h3 class="display-7 border-bottom">
+                  {{option.title}}
+                </h3>
+                <p class="text-white">
+                  {{option.description}}
+                </p>
+              </div>
+              <div class="col-md-4 px-5">
+                {% if option.price-header == 'Details' %}
+                  <div class="text-center">
+                    <h5>
+                      {{option.price-header}}
+                    </h5>
+                    <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
+                      <div class="display-6 text-white">
+                        {{option.price}} <span style="font-size: 1rem;">to start</span>
+                      </div>
+                      <div class="display-8 text-white">
+                        +<br>
+                        {{option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              {% elsif option.price %}
-                <div class="text-center">
-                  <h5>
-                    {{option.price-header}}
-                  </h5>
-                  <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6 text-white">
-                    {{option.price}}
-                  </p>
-                </div>
-              {% elsif option.cta %}
-                <div class="text-center text-white">
-                  <h5>
-                    Learn More
-                  </h5>
-                  {{option.cta}}
-                </div>
-              {% endif %}
+                {% elsif option.price %}
+                  <div class="text-center">
+                    <h5>
+                      {{option.price-header}}
+                    </h5>
+                    <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6 text-white">
+                      {{option.price}}
+                    </p>
+                  </div>
+                {% elsif option.cta %}
+                  <div class="text-center text-white">
+                    <h5>
+                      Learn More
+                    </h5>
+                    {{option.cta}}
+                  </div>
+                {% endif %}
+              </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
 
-    <div class="pb-8 mt-4">
-      <div class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
-        <div class="card-body">
-          <div class="display-7 pb-4 text-center">
-            Join our upcoming start date:
-          </div>
-          <div class="shadow border">
-            <div class="text-center display-6 pt-4">
-              {{ school.next_start_date }}
+      <div class="pb-8 mt-4">
+        <div class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
+          <div class="card-body">
+            <div class="display-7 pb-4 text-center">
+              Join our upcoming start date:
             </div>
-            <div class="text-center py-4">
-              {% include btn-apply.html %}
+            <div class="shadow border">
+              <div class="text-center display-6 pt-4">
+                {{ school.next_start_date }}
+              </div>
+              <div class="text-center py-4">
+                {% include btn-apply.html %}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   {% endif %}
   <section id="contact" class="container-fluid py-11">
     <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
