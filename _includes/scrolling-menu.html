@@ -3,11 +3,16 @@
   <ul class="list-unstyled text-white bg-white border-{{page.trackColor}} rounded p-1 pointer-events-auto">
     {% for item in site.menus.scrolling %}
       <li id="header-{{item.id}}" class="sidenav-item pb-3 position-relative">
-        <p on="tap:{{item.id}}.scrollTo(duration=300)" class="px-2 m-0 border-y-padding">
+        <p
+          on="tap:{{item.id}}.scrollTo(duration=300)"
+          class="px-2 m-0 border-y-padding"
+          tabindex="-1"
+        >
           {{item.name}}
         </h5>
         <p on="tap:{{item.id}}.scrollTo(duration=300)"
           id="{{item.id}}-selected"
+          tabindex="-1"
           class="border-{{page.trackColor}} border-x-none w-100 position-absolute sidenav-selected px-2 m-0"
         >
           {{item.name}}
