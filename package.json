@@ -14,7 +14,7 @@
     "favicon": "yarn build && real-favicon generate _site/favicon.json faviconData.json assets/favicons/ && yarn favicon-inject",
     "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
     "sitemap": "./node_modules/.bin/sitemap-generator https://$(echo $KEY) -v",
-    "deploy": "yarn cname && gh-pages --repo git@github.com:AustinCodingAcademy/$(echo $PREVIEW)$(echo $KEY).git -d ./_site",
+    "deploy": "yarn cname && gh-pages --repo git@github.com:AustinCodingAcademy/$(echo $PREVIEW)$(echo $KEY).git -d ./_site -t",
     "cname": "echo $(echo $PREVIEW)$(echo $KEY) >> _site/CNAME",
     "encrypt": "set -e && find ./_site -type f -name '*.html' -exec staticrypt -f _javascripts/password_template.html {} $PASSWORD -o {} \\;",
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
