@@ -3,7 +3,9 @@ layout: default
 permalink: "/"
 head_title: "{{ key_settings.school }} | Learn to Code, Change Your Life"
 hero: index
-description: At {{ key_settings.school }}, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!
+description: At {{ key_settings.school }}, we fit learning to code into your life
+  with a flexible &amp; affordable array of options, all taught by current industry
+  professionals. Don’t wait - embark on a new career today!
 redirect_from: []
 amp_components:
 - amp-carousel
@@ -15,6 +17,21 @@ cover_video:
   src_mp4: "/assets/videos/aca-intro.mp4"
   title: ACA Cover Video
   poster: "/assets/images/aca-intro-poster.png"
+stories:
+- src: https://player.vimeo.com/video/290925619
+  title: Lilian Situ video review of Austin Coding Academy
+  quote: I've always been interested in programming and being able to create something
+    so being able to take what I learned at ACA and get a job with it ... was one
+    of the best decisions I've made.
+  name: Lillian Situ
+  position: Software Engineer, data.world
+- src: https://player.vimeo.com/video/290913789
+  title: Greg Swan video review of Austin Coding Academy
+  quote: ACA ... gave me a solid foundation of knowledge, taught me what not to do,
+    and consistently reminded me that there was a job out there for me if I was willing
+    to put in the work.
+  name: Greg Swan
+  position: Web Developer, Kinetic Theory
 heading: Change Your Life With a New Career
 subheading: Part-time coding classes taught by local full-time developers
 lightbox_youtube:
@@ -25,16 +42,16 @@ features:
   title: Keep Your Day Job While You Make a Career Change
   description: In-person, part-time classes meet twice a week in the evenings, so
     learning to code fits your schedule. Benefit from a “flipped classroom” approach,
-    with hands-on classes led by instructors who work as professional developers
-    during the day.
+    with hands-on classes led by instructors who work as professional developers during
+    the day.
   img: calendar_white.png
   square: true
   alt: Calendar graphic
 - heading: Affordable Tuition
   title: We Work with Our Students to Make Tuition Manageable
   description: Cover your tuition by paying course-by-course or for the entire program
-    up front, (and saving). Contact our admissions
-    team to discuss how {{ key_settings.school }} can work for you.
+    up front, (and saving). Contact our admissions team to discuss how {{ key_settings.school
+    }} can work for you.
   img: wallet_white.png
   square: true
   alt: Wallet graphic
@@ -45,27 +62,26 @@ features:
     group tutoring at both of our campuses.
   img: tutoring-white.png
   alt: Pencil graphic
+  square: false
 - heading: Job Placement
   title: You’ll Learn Skills That Will Get You a Job
-  description: Develop skills that employers are looking for with our practical
-    curriculum, taught by professional developers. Receive 1-on-1 attention from
-    our Director of Job Placement. Build your resume, practice interviews, and more
-    in our Job Placement Course.
+  description: Develop skills that employers are looking for with our practical curriculum,
+    taught by professional developers. Receive 1-on-1 attention from our Director
+    of Job Placement. Build your resume, practice interviews, and more in our Job
+    Placement Course.
   img: suitcase_white.png
   square: true
   alt: Suitcase graphic
-
 austincodingacademy:
   nextStartDate: April 2nd
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
-
 lubbockcodingacademy:
   nextStartDate: July 22nd
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
-
 texastechuniversitycodingacademy:
   nextStartDate: April 2nd
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
+
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -122,7 +138,7 @@ texastechuniversitycodingacademy:
         </amp-lightbox>
         <a
           class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
-          href="/web-development"
+          href="/courses/web-development"
           rel="noopener"
         >
           Learn More
@@ -151,6 +167,7 @@ texastechuniversitycodingacademy:
             class="w-75 w-sm-50 mx-auto mt-100"
             on="tap:testimonial-lightbox.open"
             tabindex="0"
+            role="button"
           >
             <amp-youtube
               data-videoid="{{ testimonial.src_id }}"
@@ -347,7 +364,7 @@ texastechuniversitycodingacademy:
                   <b>{{ feature.heading }}</b>
                 </h3>
                 <div class="mb-3">
-                  {{ feature.description }}
+                  {{ feature.description | liquify }}
                 </div>
               </div>
             </div>
@@ -356,10 +373,12 @@ texastechuniversitycodingacademy:
       </div>
     </div>
   </section>
+  {% if key_settings.course_guide %}
   <!-- Course Guide Form -->
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
     {% include course-guide-form.html %}
   </section>
+  {% endif %}
 
   {% if site.key == 'austincodingacademy' %}
     <section class="py-8 bg-textured">
@@ -369,7 +388,7 @@ texastechuniversitycodingacademy:
       <!-- begin student-stories -->
       <div class="container">
         <div class="row">
-          {% for story in school.stories %}
+          {% for story in page.stories %}
             <div class="col-xs-12 col-sm-12 col-md-6">
               <div class="mt-4">
                 <amp-iframe
@@ -401,6 +420,7 @@ texastechuniversitycodingacademy:
     {% include company-carousel.html %}
     <!-- end company carousel -->
   {% endif %}
+  {% if site.data.events[site.key] > 0 %}
   <section class="py-8 bg-textured text-white">
     <div class="container d-flex justify-content-center flex-column">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
@@ -412,6 +432,7 @@ texastechuniversitycodingacademy:
       </div>
     </div>
   </section>
+  {% endif %}
   <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5">
     <div class="container mw-600">
       <h3 class="font-family-alt font-weight-bold text-center display-5">

@@ -21,5 +21,8 @@ exclude:
   - '*.orig'
   - '*.log'
 
+include:
+  - .nojekyll
+
 permalink: /blog/:categories/:title/
 categories: [ hire, graduate, landing ]

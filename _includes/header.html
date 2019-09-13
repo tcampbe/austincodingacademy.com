@@ -4,6 +4,7 @@
     {% assign key_settings = settings[site.key] %}
   {% endif %}
 {% endfor %}
+{% assign navigation = key_settings.navigation.header | default: settings.navigation.header %}
 <amp-sidebar
   on="tap:sidebar.open"
   tabindex="-1"
@@ -11,8 +12,9 @@
   id="sidebar"
   class="m-0 px-5 bg-dark d-flex d-lg-none flex-column align-items-start justify-content-start"
   layout="nodisplay"
-  side="right">
-  {% for item in settings.navigation.header %}
+  side="right"
+>
+  {% for item in navigation %}
     <div
       class="mt-4"
       on="tap:sidebar.open"
@@ -105,8 +107,8 @@
           class="collapse navbar-collapse u-header__navbar-collapse d-none d-lg-flex"
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
-            {% for item in settings.navigation.header %}
-              <li class="nav-item u-header__nav-item ml-5">
+            {% for item in navigation %}
+              <li class="nav-item u-header__nav-item ml-5 pb-2">
               {% if item.links %}
                 <!-- <a tabindex="0"> -->
                   <span class="text-white hover-white">
@@ -149,7 +151,7 @@
                 <!-- htmllint preset="$previous" -->
                   <span class="text-white hover-white">{{ item.title | liquify }}</span>
                 </a>
-                {% endif %}
+              {% endif %}
               </li>
             {% endfor %}
           </ul>

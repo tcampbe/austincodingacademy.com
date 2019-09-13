@@ -4,6 +4,7 @@
     {% assign key_settings = settings[site.key] %}
   {% endif %}
 {% endfor %}
+{% assign navigation = key_settings.navigation.footer | default: settings.navigation.footer %}
 <!-- ========== FOOTER ========== -->
 <footer class="bg-textured">
   {% if page.trackColor %}
@@ -57,7 +58,7 @@
         </h5>
         <!-- List Group -->
           <div class="row">
-            {% for item in settings.navigation.footer %}
+            {% for item in navigation %}
               <div class="col-6 my-2">
                 <a
                   class="text-white hover-white"
