@@ -53,14 +53,14 @@
     <div class="py-10 col-12 d-md-none" id="bio-section"></div>
     <div class="col-12 col-md">
       <h2 class="d-none d-lg-block text-center font-family-alt font-weight-bold display-5 mb-5">
-        {{ page.heading | liquify }}
+        {{ city.heading | default page.heading| liquify }}
       </h2>
       <p class="mx-0 mx-sm-5 p-4 p-sm-5 rounded border shadow">
         <!-- htmllint preset="none" -->
         <span class="d-block font-weight-bold text-center" [text]="selectedName">About {{ key_settings.school }}</span>
         <small class="d-block font-weight-bold text-center mb-3" [text]="selectedTitle"></small>
         <span [text]="selectedBio">
-          {{ page.default_bio | liquify }}
+          {{ city.default_bio | default: page.default_bio | liquify }}
         </span>
         <!-- htmllint preset="$previous" -->
       </p>
