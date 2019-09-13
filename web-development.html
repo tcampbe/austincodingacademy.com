@@ -735,7 +735,7 @@ texastechuniversitycodingacademy:
               "addressLocality": "{{ key_settings.locations[section.campus].locality }}"
             }
           }
-        }{% unless section == course.sections.last %},{% endunless %}
+        }{% unless forloop.last %},{% endunless %}
         {% endfor %}
       ],
       "provider": {
