@@ -1,6 +1,7 @@
 <input name="page_name" type="hidden" value="{{page.title}}">
 <input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.permalink}}">
 <input name="hutk" type="hidden" value="">
+<!-- htmllint preset="none" -->
 {% for field in include.fields %}
   {% if field.type == "hidden" %}
     <input name="{{ field.name }}" type="{{ field.type }}" value="{{ field.value }}">
@@ -45,3 +46,4 @@
     </div>
   {% endif %}
 {% endfor %}
+<!-- htmllint preset="$previous" -->
