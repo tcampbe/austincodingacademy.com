@@ -14,6 +14,8 @@ form_fields:
   value: opportunity
   placeholder:
   required:
+  small_width:
+  medium_width:
 
 - name: filled_out_application
   label:
@@ -23,6 +25,8 @@ form_fields:
   description:
   placeholder:
   required:
+  small_width:
+  medium_width:
 
 - name: firstname
   label: First Name
@@ -31,6 +35,8 @@ form_fields:
   value:
   placeholder: First Name
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: lastname
   label: Last Name
@@ -39,6 +45,8 @@ form_fields:
   value:
   placeholder: Last Name
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: phone
   label: Phone
@@ -47,6 +55,8 @@ form_fields:
   value:
   placeholder: (***)***-****
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: email
   label: Email
@@ -55,14 +65,18 @@ form_fields:
   value:
   placeholder: name@example.com
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: city
   label: Your Current City
   description:
   type: text
   value:
-  placeholder: city
+  placeholder: City
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: state
   label: State
@@ -71,6 +85,8 @@ form_fields:
   value:
   placeholder: ST
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: are_you_18_or_older_
   label: Will you be at least 18 by the time your classes begin?
@@ -81,19 +97,13 @@ form_fields:
   value:
   options:
   - value: true
-    label: Yes
+    label: 'Yes'
   - value: false
-    label: No
+    label: 'No'
   placeholder: Select One
   required: true
-
-- name: state
-  label: State
-  description:
-  type: text
-  value:
-  placeholder: ST
-  required: true
+  small_width: 12
+  medium_width: 12
 
 - name: current_occupation1
   label: Current Occupation or Job Title
@@ -102,6 +112,8 @@ form_fields:
   value:
   placeholder: Your current job title
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: current_company1
   label: Current Company
@@ -110,6 +122,8 @@ form_fields:
   value:
   placeholder: Please enter your current company
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: college_or_school_attended1
   label: Last School Attended
@@ -118,25 +132,27 @@ form_fields:
   value:
   placeholder: The last school you attended
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: what_experience_if_any_do_you_have_in_coding_currently_
   label: What experience do you have in coding?
-  description:  Please note that you must be at least 18 years old by the time your
-    classes begin to apply to {{ key_settings.school }}. You also must have a
-    High School Diploma or GED.
+  description:
   type: select
   value:
   options:
   - value: None at all!
     label: None at all!
   - value: I've dabbled with some online tutorials
-    label: I've dabbled with some online tutorials
+    label: I've dabbled with some online tutorials.
   - value: Solid fundamentals but not ready for a job
     label: Solid fundamentals but not ready for a job.
   - value: I'm a professional developer
     label: Professional developer, gaining more skills.
   placeholder: Select your answer
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: how_do_you_intend_to_pay_for_the_course_
   label: How do you intend to pay for the course?
@@ -154,6 +170,8 @@ form_fields:
     label: Other
   placeholder: Select your answer
   required: true
+  small_width: 12
+  medium_width: 6
 
 - name: which_of_these_best_describes_you_
   label: Which of these best describes you?
@@ -175,6 +193,8 @@ form_fields:
     label: I want to learn a new skill for my current job.
   placeholder: Select your answer
   required: true
+  small_width: 12
+  medium_width: 6
 
 austincodingacademy:
   form_fields:
@@ -190,6 +210,8 @@ austincodingacademy:
       label: Wordpress & Web Design (WP Engine)
     placeholder: Select your answer
     required: true
+    small_width: 12
+    medium_width: 6
 
   - name: campus_interest_new
     label: Which campus are you interested in?
@@ -207,6 +229,8 @@ austincodingacademy:
       label: Remote (Outside of Austin)
     placeholder: Select your answer
     required: true
+    small_width: 12
+    medium_width: 6
 
 lubbockcodingaademy:
   form_fields:
@@ -217,6 +241,8 @@ lubbockcodingaademy:
     value:
     placeholder:
     required: true
+    small_width: 12
+    medium_width: 6
 
 texastechuniversitycodingacademy:
   form_fields: []
@@ -234,17 +260,17 @@ texastechuniversitycodingacademy:
       Student Application
     </h2>
     <form
-      class="d-flex justify-content-center"
       action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{ key_settings.application_form_guid }}"
       method="POST"
       target="_top"
     >
-      {% assign all_fields = page.form_fields | concat: page[site.key].form_fields %}
-      {% include fields.html fields=all_fields %}
+      <div class="row p-5">
+        {% assign all_fields = page.form_fields | concat: page[site.key].form_fields %}
+        {% include fields.html fields=all_fields %}
 
-      <div class="mb-4">
-        {% include referral-question.html %}
-      </div>
+        <div class="col-12 mb-4">
+          {% include referral-question.html %}
+        </div>
 
         <div class="col-12 mb-4 d-flex justify-content-center">
           <button class="btn btn-round text-white bg-primary-dark" type="Submit">
