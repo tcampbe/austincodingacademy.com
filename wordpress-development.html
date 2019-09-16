@@ -542,7 +542,7 @@ role_sections:
               "addressCountry": "US"
             }
           }
-        }{% unless section == course.sections.last %},{% endunless %}
+        }{% unless forloop.last %},{% endunless %}
         {% endfor %}
       ],
       "provider": {

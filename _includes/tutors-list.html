@@ -259,7 +259,7 @@
             </h5>
             <p class="small m-0">
               {% for skill in tutor.skills %}
-                {{skill}}{% unless skill == tutor.skills.last %} | {% endunless %}
+                {{skill}}{% unless forloop.last == true %} | {% endunless %}
               {% endfor %}
             </p>
             {% unless include.marketing %}
