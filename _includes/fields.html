@@ -1,0 +1,49 @@
+<input name="page_name" type="hidden" value="{{page.title}}">
+<input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.permalink}}">
+<input name="hutk" type="hidden" value="">
+<div class="row">
+  {% for field in include.fields %}
+    {% if field.type == "hidden" %}
+      <input name="{{ field.name }}" type="{{ field.type }}" value="{{ field.value }}">
+    {% elsif field.type == 'select' %}
+      <div class="mb-6">
+        <div class="form-group">
+          <label for="{{ field.name }}" class="form-label">
+            {{ field.label }}
+            <span class="text-red-a">*</span>
+          </label>
+          <small>{{ field.description }}</small>
+          <select id="{{ field.name }}" name="{{ field.name }}" class="form-control">
+            <option value="" disabled selected>
+              {{ field.placeholder }}
+            </option>
+            {% for option is field.options %}
+              <option value="{{ option.value }}">
+                {{ option.label }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+    {% else %}
+      <div class="mb-6">
+        <div class="form-group">
+          <label for="{{ field.name }}" class="form-label">
+            {{ field.label }}
+            {% if field.required %}<span class="text-red-a">*</span>{% endif %}
+          </label>
+          <small>{{ field.description }}</small>
+          <input
+            type="{{ field.type }}"
+            id="{{ field.name }}"
+            class="form-control"
+            name="{{ field.name }}"
+            placeholder="{{ field.placeholder }}"
+            aria-label="{{ field.label }}"
+            {% if field.required %}required{% endif %}
+          />
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

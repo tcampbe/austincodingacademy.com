@@ -8,6 +8,11 @@ module Jekyll
     def liquify(input)
       Liquid::Template.parse(input).render(@context)
     end
+
+    def hash_concat(hash_1, hash_2)
+      merger = proc { |key, v1, v2| Hash === v1 && Hash === v2 ? v1.merge(v2, &merger) : Array === v1 && Array === v2 ? v1 | v2 : [:undefined, nil, :nil].include?(v2) ? v1 : v2 }
+      hash_1.merge(hash_2.to_h, &merger)
+    end
   end
 end
 

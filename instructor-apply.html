@@ -12,7 +12,6 @@ redirect_from: []
     {% assign key_settings = settings[site.key] %}
   {% endif %}
 {% endfor %}
-{% assign city = page[site.key] %}
 <div class="mt-90 pt-1 b-5 container">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
     <h2 class="font-family-alt my-10 display-5 text-center">
@@ -274,7 +273,7 @@ redirect_from: []
         </div>
         <!-- End Input -->
         <div class="col-sm-6 mb-4">
-          {% include referral-question.html id="referral-instructor" %}
+          {% include referral-question.html %}
         </div>
         <div class="col-12 mb-4 d-flex justify-content-center">
           <button class="btn btn-round text-white hover-white bg-primary-dark" type="Submit">
