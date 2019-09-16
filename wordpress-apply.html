@@ -4,6 +4,19 @@ permalink: "/courses/wordpress-development/apply/"
 redirect_from:
 head_title: "Start Your Application | Apply Now at {{ key_settings.school }}"
 description: "Apply now to learn to code with {{ key_settings.school }} | Fill out your short application to get on the path to a career in web development."
+process:
+- heading: process1
+  text: Lorem ipsum dolor sit amet.
+  img_src: icon-databases.png
+  img_width: 90px
+- heading: process2
+  text: Lorem ipsum dolor sit amet.
+  img_src: icon-frontend.png
+  img_width: 90px
+- heading: process3
+  text: Lorem ipsum dolor sit amet.
+  img_src: icon-javascript.png
+  img_width: 65px
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -18,25 +31,24 @@ description: "Apply now to learn to code with {{ key_settings.school }} | Fill o
       WordPress Development Course Application
     </h2>
     <!-- Proccess Application -->
-    <div class="d-flex">
-      <!-- <div>
-        <i style="width: 20px;"></i>
-        <p>
-          Lorem ipsum dolor sit amet.
-        </p>
-      </div>
-      <div>
-        <i style="width: 20px;"></i>
-        <p>
-          Lorem ipsum dolor sit amet.
-        </p>
-      </div>
-      <div>
-        <i style="width: 20px;"></i>
-        <p>
-          Lorem ipsum dolor sit amet.
-        </p>
-      </div> -->
+    <div class="d-flex justify-content-around mb-4">
+      {% for item in page.process %}
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <amp-img
+            width="{{ item.img_width }}"
+            height="80px"
+            layout="fixed"
+            src="/assets/images/{{ item.img_src }}"
+            alt=""
+          ></amp-img>
+          <h3>
+            {{ item.heading }}
+          </h3>
+          <p>
+            {{ item.text }}
+          </p>
+        </div>
+      {% endfor %}
     </div>
     <!-- Proccess Application End -->
     <form
