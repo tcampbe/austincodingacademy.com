@@ -30,8 +30,7 @@ github: https://github.com/kelly-tnguyen
 linkedin: https://www.linkedin.com/in/kellynguyen617
 
 email: nguyen.kelly617@gmail.com
-phone: 832-638-7040
-website:
+phone: (832) 638-7040
 
 workexperience:
   - company: Fresenius Health Partners
