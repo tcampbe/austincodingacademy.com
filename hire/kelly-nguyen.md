@@ -31,7 +31,6 @@ linkedin: https://www.linkedin.com/in/kellynguyen617
 
 email: nguyen.kelly617@gmail.com
 phone: 832-638-7040
-website: 
 
 workexperience:
   - company: Fresenius Health Partners
@@ -40,7 +39,7 @@ workexperience:
     location: Austin, TX
 
   - company: Fresenius Health Partners
-    dates: August 2017 = June 2019
+    dates: August 2017 - June 2019
     title: Quality Data Entry
     location: Austin, TX
 
@@ -57,6 +56,6 @@ education:
 projects:
   - name: CarePortal
     desc: This application serves to bolster the support of local organizations and provide to families in need by creating a catalogue of items available, donated by the community
-    url: # link to your deployed project
+    url: https://google.com
 
 ---
