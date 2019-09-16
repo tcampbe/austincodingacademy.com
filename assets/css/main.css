@@ -86,11 +86,7 @@ p {
 }
 
 a {
-  color: blue;
-}
-
-a:hover {
-  color: rgba(var(--primary-dark), 1);
+  color: rgba(var(--secondary-dark), 1);
 }
 
 @media (max-width: 850px) {
@@ -393,9 +389,10 @@ a:hover {
 /* CUSTOM GRADIENTS */
 
 .cta-gradient {
-  background: linear-gradient(to right, rgba(var(--primary-light), 1), rgba(var(--secondary-light), 1));
-  border-right: 0 !important;
-  border-left: 0 !important;
+  background: linear-gradient(to right, rgba(var(--secondary-dark), 1), rgba(var(--secondary-light), 1));
+  border-right: 0;
+  border-left: 0;
+  text-shadow: 10px 0px 20px #292929;
 }
 
 .js-gradient {
