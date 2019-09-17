@@ -57,7 +57,7 @@ subheading: Come join {{ key_settings.school }} at one of our next events! Wheth
                     <p>
                       <strong>{{ event.venue_name }}</strong>, {{ event.venue_city }}, {{ event.venue_state }}
                       <br>
-                      {{ event.start_date }} | {{ event.start_date_time | date: "%I:%M%p" }} - {{ event.end_date_time | date: "%I:%M%p" }}
+                      {{ event.start_date }} | {{ event.start_date_time | date: "%I:%M%p" }} - {{ event.end_date_time | date: "%I:%M%p" | liquify }}
                     </p>
                     <p>
                       {% assign paragraphs = event.description | newline_to_br | split: '<br />' %}

@@ -95,7 +95,7 @@ texastechuniversitycodingacademy:
     <div class="col-8 col-md-10 col-lg-10 pl-0">
       <div class="my-11"></div>
       <h1 class="text-white font-family-alt font-weight-bold display-responsive w-75">
-        {{ page.heading }}
+        {{ page.heading | liquify }}
       </h1>
       <p class="text-white mt-4 mb-3 line-typewriter anim-typewriter">
         {{ page.subheading | liquify }}
@@ -130,7 +130,7 @@ texastechuniversitycodingacademy:
               OR
             </h4>
             <a class="my-5 btn btn-light btn-round mr-2 d-md-none"
-              href="tel:{{ key_settings.phone }}"
+              href="tel:{{ key_settings.phone | liquify }}"
             >
               Call Us Now!
             </a>
@@ -176,7 +176,7 @@ texastechuniversitycodingacademy:
               tabindex="0"
               role="presentation"
               layout="responsive"
-              title="{{ testimonial.title }}"
+              title="{{ testimonial.title | liquify }}"
               autoplay
             >
             </amp-youtube>
@@ -190,7 +190,7 @@ texastechuniversitycodingacademy:
               class="mt-2 w-100"
             >
               <input name="school" type="hidden" value="{{ key_settings.school }}">
-              <input name="page_name" type="hidden" value="{{ page.head_title }}">
+              <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
               <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink }}">
               <input name="hutk" type="hidden" value="">
               <div class="form-container d-flex flex-column align-items-center">
@@ -264,7 +264,7 @@ texastechuniversitycodingacademy:
     </div>
   </div>
   <!-- htmllint preset="none" -->
-  <div id="hero-{{ page.hero }}" class="bg-gradient hero z-10 h-100"></div>
+  <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero z-10 h-100"></div>
   <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}
@@ -272,18 +272,18 @@ texastechuniversitycodingacademy:
     width="640"
     height="360"
     layout="responsive"
-    poster="{{ video.poster }}"
+    poster="{{ video.poster | liquify }}"
     autoplay
     class="d-none d-md-block"
     loop
-    title="{{ video.title }}"
+    title="{{ video.title | liquify }}"
   >
     <source
-      src="{{ video.src }}"
+      src="{{ video.src | liquify }}"
       type="video/webm"
     />
     <source
-      src="{{ video.src_mp4 }}"
+      src="{{ video.src_mp4 | liquify }}"
       type="video/mp4"
     />
     <div fallback>
@@ -339,8 +339,8 @@ texastechuniversitycodingacademy:
                     height="80px"
                     layout="responsive"
                     class="w-100"
-                    src="/assets/images/{{ feature.img }}"
-                    alt="{{ feature.alt }}"
+                    src="/assets/images/{{ feature.img | liquify }}"
+                    alt="{{ feature.alt | liquify }}"
                   ></amp-img>
                 </div>
               {% else %}
@@ -353,15 +353,15 @@ texastechuniversitycodingacademy:
                     height="60px"
                     layout="responsive"
                     class="w-100"
-                    src="/assets/images/{{ feature.img }}"
-                    alt="{{ feature.alt }}"
+                    src="/assets/images/{{ feature.img | liquify }}"
+                    alt="{{ feature.alt | liquify }}"
                   ></amp-img>
                 </div>
               {% endif %}
               <!-- Text -->
               <div class="col-9">
                 <h3 class="font-weight-bold text-left">
-                  <b>{{ feature.heading }}</b>
+                  <b>{{ feature.heading | liquify }}</b>
                 </h3>
                 <div class="mb-3">
                   {{ feature.description | liquify }}
@@ -392,22 +392,22 @@ texastechuniversitycodingacademy:
             <div class="col-xs-12 col-sm-12 col-md-6">
               <div class="mt-4">
                 <amp-iframe
-                  src="{{ story.src }}"
+                  src="{{ story.src | liquify }}"
                   width="266.656px"
                   height="150px"
                   layout="responsive"
                   sandbox="allow-scripts allow-same-origin"
                   allowfullscreen
-                  title="{{ story.title }}"
+                  title="{{ story.title | liquify }}"
                 >
                 </amp-iframe>
               </div>
               <div class="mt-3 d-flex justify-content-center">
                 <blockquote class="blockquote w-75">
                   <p class="mb-0 text-white">
-                    {{ story.quote }}
+                    {{ story.quote | liquify }}
                   </p>
-                  <footer class="text-grey blockquote-footer display-9 text-right mt-1">{{ story.name }}, <cite title="Title">{{ story.position }}</cite></footer>
+                  <footer class="text-grey blockquote-footer display-9 text-right mt-1">{{ story.name | liquify }}, <cite title="Title">{{ story.position | liquify }}</cite></footer>
                 </blockquote>
               </div>
             </div>

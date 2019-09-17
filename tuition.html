@@ -119,27 +119,27 @@ texastechuniversitycodingacademy:
       {% if section.button %}
         <div class="container-fluid text-center py-3 my-5">
           <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-            {{ section.title }}
+            {{ section.title | liquify }}
           </h2>
           <p class="m-0 mx-auto mw-600">
-            {{ section.description }}
+            {{ section.description | liquify }}
           </p>
           <!-- Apply button -->
           <!-- htmllint preset="none" -->
-          <a class="{{ section.style }} hover-white" href="{{ section.url }}">
+          <a class="{{ section.style | liquify }} hover-white" href="{{ section.url }}">
           <!-- htmllint preset="$previous" -->
             <span class="text-white hover-white">
-              {{ section.button }}
+              {{ section.button | liquify }}
             </span>
           </a>
         </div>
       {% else %}
       <div class="container-fluid bg-light text-center py-3 my-5">
         <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-          {{ section.title }}
+          {{ section.title | liquify }}
         </h2>
         <p class="m-0 mx-auto mw-600">
-          {{ section.description }}
+          {{ section.description | liquify }}
         </p>
       </div>
       <div class="container">
@@ -147,21 +147,21 @@ texastechuniversitycodingacademy:
           <div class="row my-5">
             <div class="col-md-8">
               <h3 class="display-7 border-bottom">
-                {{ option.title }}
+                {{ option.title | liquify }}
               </h3>
               <p>
-                {{ option.description }}
+                {{ option.description | liquify }}
               </p>
             </div>
             <div class="col-md-4 px-5">
               {% if option.price-header == 'Details' %}
                 <div class="text-center">
                   <h5>
-                    {{ option.price-header }}
+                    {{ option.price-header | liquify }}
                   </h5>
                   <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
                     <div class="display-6">
-                      {{ option.price }} <span style="font-size: 1rem;">to start</span>
+                      {{ option.price | liquify }} <span style="font-size: 1rem;">to start</span>
                     </div>
                     <div class="display-8">
                       +<br>
@@ -172,10 +172,10 @@ texastechuniversitycodingacademy:
               {% elsif option.price %}
                 <div class="text-center">
                   <h5>
-                    {{ option.price-header }}
+                    {{ option.price-header | liquify }}
                   </h5>
                   <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6">
-                    {{ option.price }}
+                    {{ option.price | liquify }}
                   </p>
                 </div>
               {% elsif option.cta %}
@@ -183,7 +183,7 @@ texastechuniversitycodingacademy:
                   <h5>
                     Learn More
                   </h5>
-                  {{ option.cta }}
+                  {{ option.cta | liquify }}
                 </div>
               {% endif %}
             </div>

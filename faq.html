@@ -306,16 +306,16 @@ texastechuniversitycodingacademy:
   {% for category in city.categories %}
     <div class="my-10">
       <h2 class="font-family-alt mb-6 text-center display-5">
-        {{ category.title }}
+        {{ category.title | liquify }}
       </h2>
       <amp-accordion disable-session-states>
         {% for faq in category.faqs %}
           <section class="mb-3">
             <h4 class="display-7 bg-light mb-0 px-2 p-1 rounded-top">
-              {{ faq.question }}
+              {{ faq.question | liquify }}
             </h4>
             <p class="text-default px-2 py-1 border border-top-0 rounded-bottom">
-              {{ faq.answer }}
+              {{ faq.answer | liquify }}
             </p>
           </section>
         {% endfor %}

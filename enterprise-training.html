@@ -170,13 +170,13 @@ texastechuniversitycodingacademy:
 {% assign city = page[site.key] %}
 
 <!-- htmllint preset="none" -->
-<div id="hero-{{ page.hero }}" class="bg-gradient hero d-flex flex-column align-items-center justify-content-center py-5 py-md-11">
+<div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero d-flex flex-column align-items-center justify-content-center py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-3 text-white font-family-alt font-weight-bold display-4 text-center">
-    {{ page.hero_title }}
+    {{ page.hero_title | liquify }}
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
-    {{ page.hero_text }}
+    {{ page.hero_text | liquify }}
   </p>
   {% include corporate-form.html class="btn-outline-light" %}
 </div>
@@ -186,10 +186,10 @@ texastechuniversitycodingacademy:
     <div class="row">
       <div class="mt-2 mb-6 text-center col-12">
         <h2 class="font-family-alt display-5 pb-4">
-          {{ page.features_heading }}
+          {{ page.features_heading | liquify }}
         </h2>
         <p class="px-4 mx-auto">
-          {{ page.features_description }}
+          {{ page.features_description | liquify }}
         </p>
       </div>
       {% for item in city.features %}
@@ -200,16 +200,16 @@ texastechuniversitycodingacademy:
                 width="80px"
                 height="80px"
                 layout="fixed"
-                src="/assets/images/{{ item.img_src }}"
+                src="/assets/images/{{ item.img_src | liquify }}"
                 alt=""
               ></amp-img>
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
               <h5 class="font-weight-bold">
-                {{ item.heading }}
+                {{ item.heading | liquify }}
               </h5>
               <p>
-                {{ item.text }}
+                {{ item.text | liquify }}
               </p>
             </div>
           </div>
@@ -235,26 +235,26 @@ texastechuniversitycodingacademy:
     <section class="container">
       <div class="row pt-4 pb-3 d-flex flex-column align-items-center">
         <h2 class="text-center col-12 pt-6 pb-6 font-family-alt display-5">
-          {{ city.sections_heading }}
+          {{ city.sections_heading | liquify }}
         </h2>
         {% for section in city.sections %}
           <section class="mw-850 mb-3">
             <div class="container-fluid py-3">
               <h2 class="mb-4 font-family-alt font-weight-bold">
-                {{ section.title }}
+                {{ section.title | liquify }}
               </h2>
               <p class="m-0 text-white mw-600">
-                {{ section.description }}
+                {{ section.description | liquify }}
               </p>
             </div>
             <div class="pl-3 mw-450 d-flex flex-column">
               <h5 class="py-3">
-                {{ section.header }}
+                {{ section.header | liquify }}
               </h5>
               <ul class="fa-ul m-0">
                 {% for bullet in section.bullets %}
                   <li class="mb-1">
-                    <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
+                    <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet | liquify }}
                   </li>
                 {% endfor %}
               </ul>
@@ -280,7 +280,7 @@ texastechuniversitycodingacademy:
       <div class="form-container mw-850 px-5 px-lg-0">
         <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
         <input name="hs_lead_status" type="hidden" value="NEW">
-        <input name="page_name" type="hidden" value="{{ page.title }}">
+        <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
         <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ page.url }}">
         <input name="hutk" type="hidden" value="">
 

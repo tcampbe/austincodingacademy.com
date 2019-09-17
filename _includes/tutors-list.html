@@ -28,7 +28,7 @@
           <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
           <input name="downloaded_a_courses_guide" type="hidden" value="true">
           <input name="hs_lead_status" type="hidden" value="NEW">
-          <input name="page_name" type="hidden" value="{{ page.title }}">
+          <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
           <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ page.url }}">
           <input name="hutk" type="hidden" value="">
 
@@ -235,10 +235,10 @@
     {% assign id = tutor.id | downcase %}
     <div
       class="col-sm-6 col-md-4 col-lg-3 mb-3"
-      id="tutor-{{ id }}"
-      [hidden]="!( (!location || ['{{ tutor.location | join: "','" }}'].includes(location)) && (!selectedDate || ['{{ site.data.tutors[id].availableDates | map: 'date' | join: "', '"}}'].includes(selectedDate)))"
+      id="tutor-{{ id | liquify }}"
+      [hidden]="!( (!location || ['{{ tutor.location | join: "','" | liquify }}'].includes(location)) && (!selectedDate || ['{{ site.data.tutors[id].availableDates | map: 'date' | join: "', '"}}'].includes(selectedDate)))"
     >
-      <div class="card text-center shadow" id="{{ name }}">
+      <div class="card text-center shadow" id="{{ name | liquify }}">
         <div class="p-3 d-flex flex-column justify-content-between">
           <!-- Team -->
           <div>
@@ -250,12 +250,12 @@
                 layout="fixed"
                 class="rounded-circle"
                 src="https://gravatar.com/avatar/{{ tutor.email | downcase | md5 }}?s=100&r=pg&d=retro"
-                alt="{{ name }}"
+                alt="{{ name | liquify }}"
               ></amp-img>
               <!-- htmllint preset="$previous" -->
             </div>
             <h5 class="mb-0">
-              {{ name }}
+              {{ name | liquify }}
             </h5>
             <p class="small m-0">
               {% for skill in tutor.skills %}
@@ -264,7 +264,7 @@
             </p>
             {% unless include.marketing %}
               <p class="small my-1">
-                <i>{{ tutor.limitation }}</i>
+                <i>{{ tutor.limitation | liquify }}</i>
               </p>
             {% endunless %}
           </div>
@@ -273,7 +273,7 @@
           <!-- Contact -->
           <div class="mt-2">
             {% unless include.marketing %}
-              <a href="{{ tutor.rocketchat }}" rel="noopener" target="_blank">
+              <a href="{{ tutor.rocketchat | liquify }}" rel="noopener" target="_blank">
                 <i class="display-7 fab fa-rocketchat"></i>
               </a>
               <a href="mailto:{{ tutor.email }}" rel="noopener" target="_blank" class="ml-3">
@@ -295,7 +295,7 @@
 
         {% unless include.marketing %}
           <!-- htmllint preset="none" -->
-          <a class="{% unless tutor.calendar %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{ tutor.calendar }}" target="_blank">
+          <a class="{% unless tutor.calendar %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{ tutor.calendar | liquify }}" target="_blank">
           <!-- htmllint preset="$previous" -->
             <span class="far fa-calendar-alt mr-2"></span>
             Schedule Tutoring

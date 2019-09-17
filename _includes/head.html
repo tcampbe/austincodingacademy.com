@@ -5,48 +5,46 @@
   {% endif %}
 {% endfor %}
 <!-- htmllint preset="$previous" -->
-<head>
-  <meta charset="utf-8" />
-  <title>
-    {% assign key_page = page[site.key] %}
-    {{ page.head_title | default: settings.head_title | liquify }}
-  </title>
+<meta charset="utf-8" />
+<title>
+  {% assign key_page = page[site.key] %}
+  {{ page.head_title | default: settings.head_title | liquify }}
+</title>
 
-  <meta
-    name="description"
-    content="{{ page.description | default: settings.description | liquify }}"
-  />
+<meta
+  name="description"
+  content="{{ page.description | default: settings.description | liquify }}"
+/>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  {% include favicon.html %}
+{% include favicon.html %}
 
-  {% include sharing.html %}
+{% include sharing.html %}
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-  />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+/>
 
-  {% include amp.html %}
+{% include amp.html %}
 
-  <!-- htmllint preset="none" -->
-  <style amp-custom>
-    :root {
-      --primary-light: {{ key_settings.primary_light_color }};
-      --primary-dark: {{ key_settings.primary_dark_color }};
-      --secondary-light: {{ key_settings.secondary_light_color }};
-      --secondary-dark: {{ key_settings.secondary_dark_color }};
-    }
-    {% include css.html %}
-  </style>
-  <!-- htmllint preset="$previous" -->
+<!-- htmllint preset="none" -->
+<style amp-custom>
+  :root {
+    --primary-light: {{ key_settings.primary_light_color }};
+    --primary-dark: {{ key_settings.primary_dark_color }};
+    --secondary-light: {{ key_settings.secondary_light_color }};
+    --secondary-dark: {{ key_settings.secondary_dark_color }};
+  }
+  {% include css.html %}
+</style>
+<!-- htmllint preset="$previous" -->
 
-  {% include google-tag-manager-head.html %}
+{% include google-tag-manager-head.html %}
 
-  {% if site.baseurl == '/amp' %}
-    <link rel="canonical" href="{{ key_settings.url }}{{ page.url }}">
-  {% else %}
-    <link rel="amphtml" href="{{ key_settings.url }}/amp{{ page.url }}">
-  {% endif %}
-</head>
+{% if site.baseurl == '/amp' %}
+  <link rel="canonical" href="{{ key_settings.url }}{{ page.url }}">
+{% else %}
+  <link rel="amphtml" href="{{ key_settings.url }}/amp{{ page.url }}">
+{% endif %}

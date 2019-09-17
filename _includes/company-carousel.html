@@ -18,8 +18,8 @@
             height="{{ logo.height }}"
             layout="responsive"
             class="w-100 h-auto mw-14r"
-            src="{{ logo.src }}"
-            alt="{{ logo.name }}"
+            src="{{ logo.src | liquify }}"
+            alt="{{ logo.name | liquify }}"
           ></amp-img>
         </div>
       {% endfor %}

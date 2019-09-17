@@ -164,16 +164,16 @@ role_sections:
   {% endif %}
 {% endfor %}
 <!-- htmllint preset="none" -->
-<div id="hero-{{ page.hero }}" class="bg-gradient hero py-5 py-md-11">
+<div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
-    {{ page.hero_heading }}
+    {{ page.hero_heading | liquify }}
     <p class="text-center display-7 text-white mt-2">
-      {{ page.hero_subheading }}
+      {{ page.hero_subheading | liquify }}
     </p>
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
-    {{ page.hero_text }}
+    {{ page.hero_text | liquify }}
   </p>
   <div class="d-flex mt-4 align-items-center justify-content-center">
     <div class="mr-2">
@@ -182,7 +182,7 @@ role_sections:
     <div class="ml-2">
       <!-- htmllint preset="none" -->
       <a
-        class="btn btn-round btn-outline-light {{ include.class }}"
+        class="btn btn-round btn-outline-light {{ include.class | liquify }}"
         on="tap:event-lightbox"
         role="button"
         tabindex="-1"
@@ -202,7 +202,7 @@ role_sections:
       </div>
       <div class="d-flex justify-space-between flex-column flex-sm-row">
         <div class="mx-0 mx-sm-auto p-4 w-100 w-sm-50">
-          {{ page.program_descript }}
+          {{ page.program_descript | liquify }}
         </div>
         <div class="w-100 w-sm-50 d-flex flex-column align-items-center justify-content-center">
           <!-- ACA -->
@@ -249,16 +249,16 @@ role_sections:
                 width="{{ item.img_width }}"
                 height="80px"
                 layout="fixed"
-                src="/assets/images/{{ item.img_src }}"
+                src="/assets/images/{{ item.img_src | liquify }}"
                 alt=""
               ></amp-img>
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
               <h5 class="font-weight-bold">
-                {{ item.heading }}
+                {{ item.heading | liquify }}
               </h5>
               <p class="text-white">
-                {{ item.text }}
+                {{ item.text | liquify }}
               </p>
             </div>
           </div>
@@ -285,14 +285,14 @@ role_sections:
             class="img-fluid shadow-black"
             width="3535"
             height="2146"
-            src="{{ page.overview_img }}"
+            src="{{ page.overview_img | liquify }}"
           >
           </amp-img>
         </div>
       </div>
       <div class="mx-0 mx-sm-auto px-2 pl-sm-4 w-100 w-sm-50">
         <div>
-          {{ page.program_overview }}
+          {{ page.program_overview | liquify }}
         </div>
       </div>
     </section>
@@ -305,10 +305,10 @@ role_sections:
         {% for item in page.highlights %}
           <div class="card shadow col-sm mx-auto mx-sm-2 pt-2 my-2">
             <h4 class="mb-4">
-              {{ item.title }}
+              {{ item.title | liquify }}
             </h4>
             <p>
-              {{ item.text }}
+              {{ item.text | liquify }}
             </p>
           </div>
         {% endfor %}
@@ -330,11 +330,11 @@ role_sections:
         >
           <div>
             <div class="mb-4 pl-2 pl-sm-0">
-              <strong class="display-6">{{ module.code }}</strong> <br>
-              <span class="display-7 text-grey">{{ module.length }}</span>
+              <strong class="display-6">{{ module.code | liquify }}</strong> <br>
+              <span class="display-7 text-grey">{{ module.length | liquify }}</span>
             </div>
             <div>
-              {{ module.text }}
+              {{ module.text | liquify }}
             </div>
           </div>
         </div>
@@ -348,7 +348,7 @@ role_sections:
   </section> -->
 
   <!-- htmllint preset="none" -->
-  <section id="course-guide" class="container-fluid py-8 {{ page.hero }}-gradient">
+  <section id="course-guide" class="container-fluid py-8 {{ page.hero | liquify }}-gradient">
   <!-- htmllint preset="$previous" -->
     <div class="row justify-content-center">
       <div class="col-md-8 text-white">
@@ -369,10 +369,10 @@ role_sections:
           <div class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
             <div class="w-100 w-sm-50 m-0 mr-sm-4">
               <h4>
-                {{ item.title }}
+                {{ item.title | liquify }}
               </h4>
               <p class="mx-auto">
-                {{ item.text }}
+                {{ item.text | liquify }}
               </p>
             </div>
             <div class="w-100 w-sm-50 p-0 pl-sm-4 my-auto">
@@ -381,7 +381,7 @@ role_sections:
                 class="img-fluid shadow-black"
                 width="3535"
                 height="2146"
-                src="{{ item.img_src }}"
+                src="{{ item.img_src | liquify }}"
               >
               </amp-img>
             </div>
@@ -394,16 +394,16 @@ role_sections:
                 class="img-fluid shadow-black"
                 width="3535"
                 height="2146"
-                src="{{ item.img_src }}"
+                src="{{ item.img_src | liquify }}"
               >
               </amp-img>
             </div>
             <div class="w-100 w-sm-50 m-0 ml-sm-4">
               <h4>
-                {{ item.title }}
+                {{ item.title | liquify }}
               </h4>
               <p>
-                {{ item.text }}
+                {{ item.text | liquify }}
               </p>
             </div>
           </div>
@@ -417,7 +417,7 @@ role_sections:
   <section class="container-fluid d-flex py-8 flex-column justify-content-center align-items-center bg-textured">
     <div class="col-md-8 d-flex flex-column align-items-center justify-content-center">
       <h2 class="text-center display-5 font-family-alt py-6 text-white">
-        {{ interview.heading }}
+        {{ interview.heading | liquify }}
       </h2>
     </div>
 
@@ -428,16 +428,16 @@ role_sections:
           class="img-fluid shadow-black"
           width="3535"
           height="2146"
-          src="{{ interview.img_src }}"
+          src="{{ interview.img_src | liquify }}"
         >
         </amp-img>
       </div>
       <div class="w-100 w-sm-50 m-0 ml-sm-4">
         <h4 class="text-white">
-          {{ interview.title }}
+          {{ interview.title | liquify }}
         </h4>
         <p class="text-white">
-          {{ interview.text }}
+          {{ interview.text | liquify }}
         </p>
       </div>
     </div>
@@ -447,34 +447,34 @@ role_sections:
     <div class="container py-8">
       <div class="mb-4">
         <div class="display-5 font-family-alt text-white mb-1">
-          {{ role.heading }}
+          {{ role.heading | liquify }}
         </div>
         <a href="{{ role.url }}">Description from WP Engine</a>
       </div>
       <p class="text-white">
-        {{ role.p1 }}
+        {{ role.p1 | liquify }}
       </p>
       <div class="mb-2">
         <div class="display-7 mb-4 text-white">
-          {{ role.subheading }}
+          {{ role.subheading | liquify }}
         </div>
         <p class="text-white">
-          {{ role.p2 }}
+          {{ role.p2 | liquify }}
         </p>
         <p class="text-white">
-          {{ role.p3 }}
+          {{ role.p3 | liquify }}
         </p>
       </div>
       <div class="my-2">
         {% for role in page.role_sections %}
           <div class="my-4">
             <div class="display-7 mb-3 text-white">
-              {{ role.title }}
+              {{ role.title | liquify }}
             </div>
             <ul class="fa-ul mb-2 text-white">
               {% for bullet in role.bullets %}
                 <li class="mb-1">
-                  <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
+                  <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet | liquify }}
                 </li>
               {% endfor %}
             </ul>
@@ -519,25 +519,25 @@ role_sections:
     {
       "@context": "https://schema.org",
       "@type": "Course",
-      "name": "{{ course.title }}",
-      "courseCode": "{{ course.code }}",
-      "description": "{{ course.description }}",
+      "name": "{{ course.title | liquify }}",
+      "courseCode": "{{ course.code | liquify }}",
+      "description": "{{ course.description | liquify }}",
       "hasCourseInstance": [
         {% for section in course.sections %}
         {
           "@type": "CourseInstance",
-          "name": "{{ course.title }}",
-          "description": "{{ course.description }}",
-          "startDate": "{{ section.start }}",
-          "endDate": "{{ section.end }}",
+          "name": "{{ course.title | liquify }}",
+          "description": "{{ course.description | liquify }}",
+          "startDate": "{{ section.start | liquify }}",
+          "endDate": "{{ section.end | liquify }}",
           "location": {
             "@type": "Place",
             "name": "{{ key_settings.school }}",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "{{ key_settings.locations[section.campus].street }}",
+              "streetAddress": "{{ key_settings.locations[section.campus].street | liquify }}",
               "addressLocality": "{{ key_settings.locations[section.campus].city }}",
-              "addressRegion": "{{ key_settings.locations[section.campus].state }}",
+              "addressRegion": "{{ key_settings.locations[section.campus].state | liquify }}",
               "postalCode": "key_settings.locations[section.campus].postal",
               "addressCountry": "US"
             }

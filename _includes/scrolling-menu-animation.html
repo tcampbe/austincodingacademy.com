@@ -1,5 +1,5 @@
 <amp-position-observer
-  on="enter:select-{{ include.id }}.start"
+  on="enter:select-{{ include.id | liquify }}.start"
   intersection-ratios="0.6"
   layout="nodisplay"
   tabindex="-1"
@@ -7,7 +7,7 @@
 </amp-position-observer>
 
 <!-- htmllint preset="none" -->
-<amp-animation id="select-{{ include.id }}" layout="nodisplay">
+<amp-animation id="select-{{ include.id | liquify }}" layout="nodisplay">
 <!-- htmllint preset="$previous" -->
   <script type="application/json">
     {
@@ -17,7 +17,7 @@
       "keyframes": {"opacity": "var(--opacity)"},
       "fill": "forwards",
       "subtargets": [{
-        "selector": ":not(#{{ include.id }}-selected)",
+        "selector": ":not(#{{ include.id | liquify }}-selected)",
         "--opacity": "0"
       }]
     }

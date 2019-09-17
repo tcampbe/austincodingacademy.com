@@ -1,12 +1,12 @@
 <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
-<input name="page_uri" type="hidden" value="{{ key_settings.url | liquify }}{{ site.baseurl | liquify }}{{ page.permalink | liquify }}">
+<input name="page_uri" type="hidden" value="{{ key_settings.url | liquify }}{{ site.baseurl | liquify }}{{ page.permalink }}">
 <input name="hutk" type="hidden" value="">
 <!-- htmllint preset="none" -->
 {% for field in include.fields %}
   {% if field.type == "hidden" %}
-    <input name="{{ field.name | liquify }}" type="{{ field.type | liquify }}" value="{{ field.value | liquify }}">
+    <input name="{{ field.name | liquify }}" type="{{ field.type | liquify }}" value="{{ field.value | append: '' | liquify }}">
   {% elsif field.type == 'select' %}
-    <div class="mb-6 col-12 col-sm-{{ field.small_width | liquify }} col-md-{{ field.medium_width | liquify }}">
+    <div class="mb-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }}">
       <div class="form-group">
         <label for="{{ field.name | liquify }}" class="form-label">
           {{ field.label }}
@@ -15,18 +15,18 @@
         <small>{{ field.description | liquify }}</small>
         <select id="{{ field.name | liquify }}" name="{{ field.name | liquify }}" class="form-control">
           <option value="" disabled selected>
-            {{ field.placeholder }}
+            {{ field.placeholder | liquify }}
           </option>
           {% for option in field.options %}
-            <option value="{{ option.value | liquify }}">
-              {{ option.label }}
+            <option value="{{ option.value | append: '' | liquify }}">
+              {{ option.label | liquify }}
             </option>
           {% endfor %}
         </select>
       </div>
     </div>
   {% else %}
-    <div class="mb-6 col-12 col-sm-{{ field.small_width | liquify }} col-md-{{ field.medium_width | liquify }}">
+    <div class="mb-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }}">
       <div class="form-group">
         <label for="{{ field.name | liquify }}" class="form-label">
           {{ field.label }}

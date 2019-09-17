@@ -110,7 +110,7 @@ texastechuniversitycodingacademy:
       New Student Referrals
     </h1>
     <h2 class="text-center display-7">
-      Earn {{ school.referral_amount }} each for you and a friend when they become a student of {{ key_settings.school }}
+      Earn {{ school.referral_amount | liquify }} each for you and a friend when they become a student of {{ key_settings.school }}
     </h2>
   </div>
   <div class="w-100 w-sm-75 mx-auto mb-6">
@@ -123,16 +123,16 @@ texastechuniversitycodingacademy:
     ></amp-img>
   </div>
   <p class="mt-6 mb-10 pt-4 px-2 p-sm-0 mx-auto">
-    {{ school.description }}
+    {{ school.description | liquify }}
   </p>
   <!-- Start Questions -->
   {% for item in school.faq %}
     <div class="mb-8">
       <h2 class="mx-auto mx-sm-0 text-center text-sm-left font-family-alt font-weight-bold display-6 mb-4">
-        {{ item.question }}
+        {{ item.question | liquify }}
       </h2>
       <p class="px-2 p-sm-0 mx-auto">
-        {{ item.text }}
+        {{ item.text | liquify }}
       </p>
     </div>
   {% endfor %}
@@ -148,7 +148,7 @@ texastechuniversitycodingacademy:
     </p>
     <ul>
       {% for item in school.rule_bullets %}
-        <li>{{ item }}</li>
+        <li>{{ item | liquify }}</li>
       {% endfor %}
     </ul>
   </div>

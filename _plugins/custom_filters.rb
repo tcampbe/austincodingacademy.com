@@ -6,7 +6,7 @@ module Jekyll
     end
 
     def liquify(input)
-      Liquid::Template.parse(input).render(@context)
+      Liquid::Template.parse(input.to_s).render(@context)
     end
 
     def hash_concat(hash_1, hash_2)

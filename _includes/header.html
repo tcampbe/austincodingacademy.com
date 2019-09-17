@@ -42,14 +42,14 @@
           {% for track in key_settings.tracks %}
             <li>
               <a href="{{ settings.tracks[track].url }}" class="hover-white">
-                {{ settings.tracks[track].name }}
+                {{ settings.tracks[track].name | liquify }}
               </a>
             </li>
           {% endfor %}
         </ul>
       {% else %}
         <!-- htmllint preset="none" -->
-        <a class="{{ item.class }} hover-white" href="{{ item.url | liquify }}">
+        <a class="{{ item.class | liquify }} hover-white" href="{{ item.url | liquify }}">
         <!-- htmllint preset="$previous" -->
           <span class="h5 text-white hover-white">
             {{ item.title | liquify }}
@@ -112,7 +112,7 @@
               {% if item.links %}
                 <!-- <a tabindex="0"> -->
                   <span class="text-white hover-white">
-                    {{ item.title }} <i class="fas fa-caret-down"></i>
+                    {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
                   </span>
                 <!-- </a> -->
                 <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
@@ -130,7 +130,7 @@
                 </ul>
                 {% elsif item.title == 'Courses' %}
                   <span class="text-white hover-white">
-                    {{ item.title }} <i class="fas fa-caret-down"></i>
+                    {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
                   </span>
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
                     {% for track in key_settings.tracks %}
@@ -139,7 +139,7 @@
                         <a class="p-0" href="{{ settings.tracks[track].url }}">
                           <!-- htmllint preset="$previous" -->
                           <span class="text-white hover-white">
-                            {{ settings.tracks[track].name }}
+                            {{ settings.tracks[track].name | liquify }}
                           </span>
                         </a>
                       </li>
@@ -147,7 +147,7 @@
                   </ul>
                 {% else %}
                 <!-- htmllint preset="none" -->
-                <a class="{{ item.class }} hover-white" href="{{ item.url | liquify }}">
+                <a class="{{ item.class | liquify }} hover-white" href="{{ item.url | liquify }}">
                 <!-- htmllint preset="$previous" -->
                   <span class="text-white hover-white">{{ item.title | liquify }}</span>
                 </a>

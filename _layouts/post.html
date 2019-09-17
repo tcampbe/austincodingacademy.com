@@ -12,16 +12,16 @@ layout: default
   <!-- Description Section -->
   <div class="container space-top-1 d-flex flex-column">
     <amp-img
-      src="{{ page.img }}"
+      src="{{ page.img | liquify }}"
       class="w-100 w-lg-80 mx-auto"
       layout="responsive"
       width="{{ page.width | default:345 }}px"
       height="{{ page.height | default:172.5 }}px"
-      alt="{{ page.alt }}"
+      alt="{{ page.alt | liquify }}"
     ></amp-img>
     <div class="w-lg-80 mx-auto space-top-1">
       <h1 class="font-weight-bold">
-        {{ page.title }}
+        {{ page.title | liquify }}
       </h1>
       <div class="row my-4">
         <div class="col col-md-8 pt-md-2">
@@ -31,7 +31,7 @@ layout: default
               <amp-img width="50" height="50"
                 class="rounded-circle"
                 layout="fixed"
-                alt=" Gravatar icon for {{ page.author_name }}"
+                alt=" Gravatar icon for {{ page.author_name | liquify }}"
                 src="https://gravatar.com/avatar/{{ page.author_email | downcase | md5 }}?s=100&r=pg&d=mp"
               ></amp-img>
             </div>
@@ -39,16 +39,16 @@ layout: default
               {% if page.author_email %}
                 <a href="mailto:{{ page.author_email }}">
                   <h5 class="text-default link-underlined m-0">
-                    {{ page.author_name | default: "Austin Coding Academy" }}
+                    {{ page.author_name | default: "Austin Coding Academy" | liquify }}
                   </h5>
                 </a>
               {% else %}
                 <h5 class="text-default m-0">
-                  {{ page.author_name | default: "Austin Coding Academy" }}
+                  {{ page.author_name | default: "Austin Coding Academy" | liquify }}
                 </h5>
               {% endif %}
               <h5 class="text-muted m-0">
-                {{ page.updated_at | date: "%B %d, %Y" }}
+                {{ page.updated_at | date: "%B %d, %Y" | liquify }}
               </h5>
             </div>
             <!-- htmllint preset="$previous" -->
@@ -62,7 +62,7 @@ layout: default
               <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
-                  href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&quote={{ page.title | replace: ' ', '%20' }}"
+                  href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&quote={{ page.title | replace: ' ', '%20' | liquify }}"
                   title="Share on Facebook"
                   target="_blank">
                   <amp-img
@@ -78,7 +78,7 @@ layout: default
               <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
-                  href="https://twitter.com/intent/tweet?source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&text={{ page.title | replace: ' ', '%20' }}:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
+                  href="https://twitter.com/intent/tweet?source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&text={{ page.title | replace: ' ', '%20' | liquify }}:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
                   target="_blank"
                   title="Tweet">
                   <amp-img
@@ -94,7 +94,7 @@ layout: default
               <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
-                  href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&title={{ page.title | replace: ' ', '%20' }}&summary=desc&source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
+                  href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&title={{ page.title | replace: ' ', '%20' | liquify }}&summary=desc&source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
                   target="_blank"
                   title="Share on LinkedIn">
                   <amp-img
@@ -110,7 +110,7 @@ layout: default
               <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
-                  href="mailto:?subject={{ page.title | replace: ' ', '%20' }}&body=desc:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
+                  href="mailto:?subject={{ page.title | replace: ' ', '%20' | liquify }}&body=desc:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
                   target="_blank"
                   title="Send email">
                   <amp-img
@@ -139,7 +139,7 @@ layout: default
         {% for tag in page.tags %}
         <li class="list-inline-item pb-3">
           <span class="badge badge-light badge-pill">
-            {{ tag }}
+            {{ tag | liquify }}
           </span>
         </li>
         {% endfor %}
@@ -156,9 +156,9 @@ layout: default
         "@type": "WebPage",
         "@id": "{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}"
       },
-      "headline": "{{ page.title }}",
+      "headline": "{{ page.title | liquify }}",
       "image": [
-        "{{ key_settings.url }}{{ page.img }}"
+        "{{ key_settings.url }}{{ page.img | liquify }}"
         ],
       "datePublished": "{{ page.created_at }}",
       "dateModified": "{{ page.updated_at }}",
@@ -174,7 +174,7 @@ layout: default
           "url": "{{ key_settings.url }}/assets/images/logo-{{ site.key }}.png"
         }
       },
-      "description": "{{ page.excerpt }}"
+      "description": "{{ page.excerpt | liquify }}"
     }
   </script>
 </main>

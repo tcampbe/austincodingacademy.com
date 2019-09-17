@@ -38,14 +38,14 @@ process:
             width="{{ item.img_width }}"
             height="80px"
             layout="fixed"
-            src="/assets/images/{{ item.img_src }}"
+            src="/assets/images/{{ item.img_src | liquify }}"
             alt=""
           ></amp-img>
           <h3>
-            {{ item.heading }}
+            {{ item.heading | liquify }}
           </h3>
           <p>
-            {{ item.text }}
+            {{ item.text | liquify }}
           </p>
         </div>
       {% endfor %}
@@ -60,8 +60,8 @@ process:
       <div class="form-container">
         <input name="lifecyclestage" type="hidden" value="opportunity">
         <input name="filled_out_application" type="hidden" value="true">
-        <input name="page_name" type="hidden" value="{{ page.title }}">
-        <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink }}">
+        <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+        <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink | liquify }}">
         <input name="hutk" type="hidden" value="">
         <h2 class="display-6 mb-4">
           About You

@@ -30,7 +30,7 @@ resources:
 <main class="mt-90 pt-1 pb-5 px-4 px-md-0">
   <div class="my-10 container mb-6">
     <h1 class="text-center font-family-alt font-weight-bold display-5">
-      {{ page.heading }}
+      {{ page.heading | liquify }}
     </h1>
   </div>
 
@@ -38,7 +38,7 @@ resources:
     <!-- Form -->
     <div class="col-xs-10 col-sm-10 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
       <h2 class="mx-auto mb-4 w-100">
-        {{ page.form_heading }}
+        {{ page.form_heading | liquify }}
       </h2>
       <form
         action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.assignment_form_guid }}"
@@ -163,10 +163,10 @@ resources:
               </h2>
               <!-- Coding Challenge -->
               <p class="px-4 px-md-0">
-                {{ page.challenge_descript1 }}
+                {{ page.challenge_descript1 | liquify }}
               </p>
               <p class="mb-6 px-4 px-md-0">
-                {{ page.challenge_descript2 }}
+                {{ page.challenge_descript2 | liquify }}
               </p>
             </div>
             <div class="mb-6">
@@ -174,7 +174,7 @@ resources:
                 {% for resource in page.resources %}
                   <li class="mb-1">
                     <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>
-                    <a href="{{ resource.url }}" target="_blank" rel="noopener">{{ resource.name }}</a>
+                    <a href="{{ resource.url }}" target="_blank" rel="noopener">{{ resource.name | liquify }}</a>
                   </li>
                 {% endfor %}
               </ul>
@@ -183,7 +183,7 @@ resources:
             <div class="js-form-message mb-6 col-sm-12">
               <div class="w-100 mx-auto mb-6">
                 <amp-img
-                  src="{{ page.img_src }}"
+                  src="{{ page.img_src | liquify }}"
                   width="2000px"
                   height="620px"
                   layout="responsive"

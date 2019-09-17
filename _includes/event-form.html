@@ -34,9 +34,9 @@
     <div class="form-container">
       <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
       <!-- ! need name values, come from hubspot -->
-      <input name="event_name" type="hidden" value="{{ include.event_name }}">
+      <input name="event_name" type="hidden" value="{{ include.event_name | liquify }}">
       <input name="hs_lead_status" type="hidden" value="NEW">
-      <input name="page_name" type="hidden" value="{{ page.title }} ({{ include.event_date }})">
+      <input name="page_name" type="hidden" value="{{ page.title | liquify }} ({{ include.event_date | liquify }})">
       <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ page.url }}">
       <input name="hutk" type="hidden" value="">
 
