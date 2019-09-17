@@ -1,0 +1,139 @@
+---
+label: Apply
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: list
+  name: redirect_from
+  label: redirect_from
+- type: text
+  name: head_title
+  label: head_title
+- type: textarea
+  name: description
+  label: description
+- type: field_group_list
+  name: form_fields
+  label: form_fields
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: label
+    label: label
+  - type: text
+    name: description
+    label: description
+  - type: text
+    name: type
+    label: type
+  - type: text
+    name: value
+    label: value
+  - type: text
+    name: placeholder
+    label: placeholder
+  - type: text
+    name: required
+    label: required
+  - type: text
+    name: small_width
+    label: small_width
+  - type: text
+    name: medium_width
+    label: medium_width
+- type: field_group
+  name: austincodingacademy
+  label: austincodingacademy
+  fields:
+  - type: field_group_list
+    name: form_fields
+    label: form_fields
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: label
+      label: label
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: type
+      label: type
+    - type: text
+      name: value
+      label: value
+    - type: field_group_list
+      name: options
+      label: options
+      fields:
+      - type: text
+        name: value
+        label: value
+      - type: text
+        name: label
+        label: label
+    - type: text
+      name: placeholder
+      label: placeholder
+    - type: boolean
+      name: required
+      label: required
+    - type: number
+      name: small_width
+      label: small_width
+    - type: number
+      name: medium_width
+      label: medium_width
+- type: field_group
+  name: lubbockcodingaademy
+  label: lubbockcodingaademy
+  fields:
+  - type: field_group_list
+    name: form_fields
+    label: form_fields
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: label
+      label: label
+    - type: text
+      name: description
+      label: description
+    - type: text
+      name: type
+      label: type
+    - type: text
+      name: value
+      label: value
+    - type: text
+      name: placeholder
+      label: placeholder
+    - type: boolean
+      name: required
+      label: required
+    - type: number
+      name: small_width
+      label: small_width
+    - type: number
+      name: medium_width
+      label: medium_width
+- type: field_group
+  name: texastechuniversitycodingacademy
+  label: texastechuniversitycodingacademy
+  fields:
+  - type: list
+    name: form_fields
+    label: form_fields
+pages:
+- apply.html

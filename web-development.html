@@ -109,12 +109,12 @@ features:
   img_src: icon-frontend.png
   img_width: 90px
 - heading: Use {{ page[site.key].backend }} to Build Powerful Back-Ends
-  text: Learn how to collect and process data using {{page[site.key].backend}} – and
+  text: Learn how to collect and process data using {{ page[site.key].backend }} – and
     also how to manage databases with SQL.
   img_src: icon-databases.png
   img_width: 90px
 - heading: Tap Into The Tech Scene
-  text: As the most in-demand language for small to mid-level companies, {{page[site.key].backend}}
+  text: As the most in-demand language for small to mid-level companies, {{ page[site.key].backend }}
     and Javascript powers the thriving start-up scene, with new jobs opportunities
     arising daily.
   img_src: icon-jobs.png
@@ -368,20 +368,20 @@ texastechuniversitycodingacademy:
 {% endfor %}
 {% assign school = page[site.key] %}
 <!-- htmllint preset="none" -->
-<div id="hero-{{ page.hero }}" class="bg-gradient hero py-5 py-md-11">
+<div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-55 display-sm-4 text-center">
     Full Stack Web Development
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
-    {{ page.hero_text }}
+    {{ page.hero_text | liquify }}
   </p>
   <div class="d-flex mt-4 align-items-center justify-content-center">
     {% if key_settings.course_guide %}
     <div class="mr-2">
       <!-- htmllint preset="none" -->
       <a
-        class="btn btn-round btn-outline-light {{ include.class }}"
+        class="btn btn-round btn-outline-light {{ include.class | liquify }}"
         on="tap:event-lightbox"
         role="button"
         tabindex="-1"
@@ -419,7 +419,7 @@ texastechuniversitycodingacademy:
                 width="{{ item.img_width }}"
                 height="80px"
                 layout="fixed"
-                src="/assets/images/{{ item.img_src }}"
+                src="/assets/images/{{ item.img_src | liquify }}"
                 alt=""
               ></amp-img>
             </div>
@@ -438,7 +438,7 @@ texastechuniversitycodingacademy:
   </section>
 
   <!-- htmllint preset="none" -->
-  <section class="py-8 container-fluid {{page.hero}}-gradient text-white">
+  <section class="py-8 container-fluid {{ page.hero | liquify }}-gradient text-white">
   <!-- htmllint preset="$previous" -->
   <div class="row flex-column align-items-center">
     <div class="col-md-8 p-0 pl-sm-5 d-flex">
@@ -453,7 +453,7 @@ texastechuniversitycodingacademy:
             <div class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
               <div class="w-100 w-sm-50 m-0 mr-sm-4 text-white">
                 <h4>
-                  {{ item.title }}
+                  {{ item.title | liquify }}
                 </h4>
                 <p class="text-white mx-auto">
                   {{ item.text | liquify }}
@@ -465,7 +465,7 @@ texastechuniversitycodingacademy:
                   class="img-fluid shadow-black"
                   width="3535"
                   height="2146"
-                  src="{{ item.img_src }}"
+                  src="{{ item.img_src | liquify }}"
                 >
                 </amp-img>
               </div>
@@ -478,16 +478,16 @@ texastechuniversitycodingacademy:
                   class="img-fluid shadow-black"
                   width="3535"
                   height="2146"
-                  src="{{ item.img_src }}"
+                  src="{{ item.img_src | liquify }}"
                 >
                 </amp-img>
               </div>
               <div class="w-100 w-sm-50 m-0 ml-sm-4">
                 <h4>
-                  {{ item.title }}
+                  {{ item.title | liquify }}
                 </h4>
                 <p class="text-white">
-                  {{ item.text }}
+                  {{ item.text | liquify }}
                 </p>
               </div>
             </div>
@@ -511,20 +511,20 @@ texastechuniversitycodingacademy:
         >
           <div>
             <div class="display-6 mb-4 pl-2 pl-sm-0">
-              <strong>{{ course.code }}: {{ settings.courses[course.code].title }}</strong>
+              <strong>{{ course.code | liquify }}: {{ settings.courses[course.code].title | liquify }}</strong>
             </div>
             <div>
               {% for item in settings.courses[course.code].list %}
                 <ul>
                   <li>
-                    {{ item }}
+                    {{ item | liquify }}
                   </li>
                 </ul>
               {% endfor %}
             </div>
           </div>
           <div class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center">
-            {{ settings.courses[course.code].length }}
+            {{ settings.courses[course.code].length | liquify }}
           </div>
         </div>
       {% endfor %}
@@ -533,7 +533,7 @@ texastechuniversitycodingacademy:
   </section>
   {% if key_settings.course_guide %}
   <!-- htmllint preset="none" -->
-  <section id="course-guide" class="container-fluid {{page.hero}}-gradient text-white py-8">
+  <section id="course-guide" class="container-fluid {{ page.hero | liquify }}-gradient text-white py-8">
   <!-- htmllint preset="$previous" -->
     <div class="row justify-content-center">
       <div class="col-md-8">
@@ -549,8 +549,8 @@ texastechuniversitycodingacademy:
     <div class="row justify-content-center">
       {% for item in page.job_placement.stats %}
         <div class="my-4 col-md-4 col-lg-4 col-sm-10">
-          <div class="display-4 font-weight-bold my-2 font-family-alt">{{ item.stat }}</div>
-          <p>{{ item.descript | liquify}}</p>
+          <div class="display-4 font-weight-bold my-2 font-family-alt">{{ item.stat | liquify }}</div>
+          <p>{{ item.descript | liquify }}</p>
         </div>
       {% endfor %}
     </div>
@@ -569,13 +569,13 @@ texastechuniversitycodingacademy:
                 width="{{ prop.img_width }}"
                 height="80px"
                 layout="fixed"
-                src="/assets/images/{{ prop.img_src }}"
+                src="/assets/images/{{ prop.img_src | liquify }}"
                 alt=""
               ></amp-img>
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
               <h5 class="font-weight-bold">
-                {{ prop.heading }}
+                {{ prop.heading | liquify }}
               </h5>
               <p>
                 {{ prop.text | liquify }}
@@ -601,16 +601,16 @@ texastechuniversitycodingacademy:
               layout="responsive"
               width="500"
               height="500"
-              src="{{ success.img_src }}"
+              src="{{ success.img_src | liquify }}"
               alt="Student Success"
             >
             </amp-img>
             <div class="d-flex flex-column align-items-center">
               <div class="card-title px-3 font-weight-bold">
-                {{ success.name }}
+                {{ success.name | liquify }}
               </div>
               <div class="mb-2 display-9 text-center">
-                {{ success.title }} <br>
+                {{ success.title | liquify }} <br>
                 @ {{ success.company }}
               </div>
               <a
@@ -622,7 +622,7 @@ texastechuniversitycodingacademy:
               >
                 {% assign name = success.name | split: ' ' %}
                 <span class="hover-white text-white">
-                  About {{ name[0] | capitalize }} &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                  About {{ name[0] | capitalize | liquify }} &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i>
                 </span>
               </a>
             </div>
@@ -633,80 +633,80 @@ texastechuniversitycodingacademy:
   </section>
 
   {% include company-carousel.html %}
-  {% if school.tuition_options.length > 0 %}
-  <section class="bg-textured ">
-    <div class="text-white m-0 pt-8 pb-2">
-      <div class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
-        Tuition
-      </div>
-      <div class="container">
-        {% for option in school.tuition_options %}
-          <div class="row my-5">
-            <div class="col-md-8">
-              <h3 class="display-7 border-bottom">
-                {{option.title}}
-              </h3>
-              <p class="text-white">
-                {{option.description}}
-              </p>
-            </div>
-            <div class="col-md-4 px-5">
-              {% if option.price-header == 'Details' %}
-                <div class="text-center">
-                  <h5>
-                    {{option.price-header}}
-                  </h5>
-                  <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
-                    <div class="display-6 text-white">
-                      {{option.price}} <span style="font-size: 1rem;">to start</span>
-                    </div>
-                    <div class="display-8 text-white">
-                      +<br>
-                      {{option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
+  {% if school.tuition_options.size > 0 %}
+    <section class="bg-textured">
+      <div class="text-white m-0 pt-8 pb-2">
+        <div class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
+          Tuition
+        </div>
+        <div class="container">
+          {% for option in school.tuition_options %}
+            <div class="row my-5">
+              <div class="col-md-8">
+                <h3 class="display-7 border-bottom">
+                  {{ option.title | liquify }}
+                </h3>
+                <p class="text-white">
+                  {{ option.description | liquify }}
+                </p>
+              </div>
+              <div class="col-md-4 px-5">
+                {% if option.price-header == 'Details' %}
+                  <div class="text-center">
+                    <h5>
+                      {{ option.price-header | liquify }}
+                    </h5>
+                    <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
+                      <div class="display-6 text-white">
+                        {{ option.price | liquify }} <span style="font-size: 1rem;">to start</span>
+                      </div>
+                      <div class="display-8 text-white">
+                        +<br>
+                        {{ option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              {% elsif option.price %}
-                <div class="text-center">
-                  <h5>
-                    {{option.price-header}}
-                  </h5>
-                  <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6 text-white">
-                    {{option.price}}
-                  </p>
-                </div>
-              {% elsif option.cta %}
-                <div class="text-center text-white">
-                  <h5>
-                    Learn More
-                  </h5>
-                  {{option.cta}}
-                </div>
-              {% endif %}
+                {% elsif option.price %}
+                  <div class="text-center">
+                    <h5>
+                      {{ option.price-header | liquify }}
+                    </h5>
+                    <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6 text-white">
+                      {{ option.price | liquify }}
+                    </p>
+                  </div>
+                {% elsif option.cta %}
+                  <div class="text-center text-white">
+                    <h5>
+                      Learn More
+                    </h5>
+                    {{ option.cta | liquify }}
+                  </div>
+                {% endif %}
+              </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
 
-    <div class="pb-8 mt-4">
-      <div class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
-        <div class="card-body">
-          <div class="display-7 pb-4 text-center">
-            Join our upcoming start date:
-          </div>
-          <div class="shadow border">
-            <div class="text-center display-6 pt-4">
-              {{ school.next_start_date }}
+      <div class="pb-8 mt-4">
+        <div class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
+          <div class="card-body">
+            <div class="display-7 pb-4 text-center">
+              Join our upcoming start date:
             </div>
-            <div class="text-center py-4">
-              {% include btn-apply.html %}
+            <div class="shadow border">
+              <div class="text-center display-6 pt-4">
+                {{ school.next_start_date | liquify }}
+              </div>
+              <div class="text-center py-4">
+                {% include btn-apply.html %}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   {% endif %}
   <section id="contact" class="container-fluid py-11">
     <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
@@ -732,23 +732,23 @@ texastechuniversitycodingacademy:
     {
       "@context": "https://schema.org",
       "@type": "Course",
-      "name": "{{ settings.courses[course.code].title }}",
-      "courseCode": "{{ course.code }}",
-      "description": "{{ settings.courses[course.code].description }}",
+      "name": "{{ settings.courses[course.code].title | liquify }}",
+      "courseCode": "{{ course.code | liquify }}",
+      "description": "{{ settings.courses[course.code].description | liquify }}",
       "hasCourseInstance": [
         {% for section in course.sections %}
         {
           "@type": "CourseInstance",
-          "name": "{{ settings.courses[course.code].title }}",
-          "description": "{{ settings.courses[course.code].description }}",
-          "startDate": "{{ section.start }}",
-          "endDate": "{{ section.end }}",
+          "name": "{{ settings.courses[course.code].title | liquify }}",
+          "description": "{{ settings.courses[course.code].description | liquify }}",
+          "startDate": "{{ section.start | liquify }}",
+          "endDate": "{{ section.end | liquify }}",
           "location": {
             "@type": "Place",
             "name": "{{ key_settings.school }}",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "{{ key_settings.locations[section.campus].street }}",
+              "streetAddress": "{{ key_settings.locations[section.campus].street | liquify }}",
               "addressLocality": "{{ key_settings.locations[section.campus].locality }}"
             }
           }
@@ -760,7 +760,7 @@ texastechuniversitycodingacademy:
         "name": "{{ key_settings.school }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{key_settings.url}}/assets/images/logo-{{ site.key }}.png"
+          "url": "{{ key_settings.url }}/assets/images/logo-{{ site.key }}.png"
         }
       }
     }

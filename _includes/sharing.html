@@ -7,7 +7,7 @@
 <!-- OPEN GRAPH TAGS -->
 <meta property="og:title" content="{{ page[site.key].title | liquify }}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{key_settings.url}}{{ page.url }}">
+<meta property="og:url" content="{{ key_settings.url }}{{ page.url }}">
 {% assign default_image = '/assets/images/logo-' | append: site.key | append: '.png' %}
 {% assign image = page.img | default: default_image %}
 <meta property="og:image" content="{{ key_settings.url | append: image }}">
@@ -16,8 +16,8 @@
 <meta property="og:locale" content="en_US" />
 <!-- TWITTER TAGS -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="{{key_settings.twitter}}">
-<meta name="twitter:creator" content="{{key_settings.twitter}}">
+<meta name="twitter:site" content="{{ key_settings.twitter }}">
+<meta name="twitter:creator" content="{{ key_settings.twitter }}">
 <meta name="twitter:title" content="{{ page[site.key].title | liquify }}">
 <meta name="twitter:description" content="{{ page[site.key].description | liquify }}">
 <meta name="twitter:image" content="{{ key_settings.url | append: image }}">

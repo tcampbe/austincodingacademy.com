@@ -8,9 +8,15 @@ hero: blog
 redirect_from: []
 amp_components: []
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- htmllint preset="none" -->
 <div
-  class="hero py-11 bg-gradient" id="hero-{{ page.hero }}">
+  class="hero py-11 bg-gradient" id="hero-{{ page.hero | liquify }}">
   <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 px-1 p-md-0 text-white font-family-alt font-weight-bold display-responsive text-center">
     {{ key_settings.school }}
@@ -30,19 +36,19 @@ amp_components: []
             <div class="card-body p-0">
               <a href="{{ post.url }}">
                 <div class="mb-5">
-                  <amp-img width="{{ post.width | default:345 }}px" height="{{ post.height | default:172.5 }}px" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img }}" alt="{{blog.alt}}"></amp-img>
+                  <amp-img width="{{ post.width | default:345 }}px" height="{{ post.height | default:172.5 }}px" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
                 </div>
               </a>
               <small class="d-block text-secondary mb-1">
-                {{blog.date}}
+                {{ blog.date }}
               </small>
               <a href="{{ post.url }}">
                 <h2 class="h5">
-                  {{ post.title }}
+                  {{ post.title | liquify }}
                 </h2>
               </a>
               <p>
-                {{ post.excerpt }}
+                {{ post.excerpt | liquify }}
               </p>
             </div>
           </article>

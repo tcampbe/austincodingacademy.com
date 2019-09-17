@@ -26,7 +26,7 @@
                   class="d-flex text-white hover-white"
                 >
                   <i class="fas fa-map-marker-alt pt-1 hover-white text-white" aria-hidden="true"></i>
-                  <div class="hover-white text-white">&nbsp;{{ location[1].campus }}</div>
+                  <div class="hover-white text-white">&nbsp;{{ location[1].campus | liquify }}</div>
                 </a>
               </div>
             {% endfor %}
@@ -39,9 +39,9 @@
               {% for item in socials %}
                 <!-- htmllint preset="none" -->
                 {% if key_settings[item] %}
-                <a href="{{ key_settings[item] }}">
-                  <span class="text-white hover-white display-7 fab fa-{{ item }} mr-4" aria-hidden="true">
-                    <span class="sr-only">Link to our {{ item }}</span>
+                <a href="{{ key_settings[item] | liquify }}">
+                  <span class="text-white hover-white display-7 fab fa-{{ item | liquify }} mr-4" aria-hidden="true">
+                    <span class="sr-only">Link to our {{ item | liquify }}</span>
                   </span>
                 </a>
                 <!-- htmllint preset="$previous" -->
@@ -65,7 +65,7 @@
                   href="{{ item.url }}"
                 >
                   <span class="hover-white text-white">
-                    {{ item.title }}
+                    {{ item.title | liquify }}
                   </span>
                 </a>
               </div>
@@ -89,11 +89,11 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "{{ key_settings.school }}",
-    "url": "{{key_settings.url}}",
+    "url": "{{ key_settings.url }}",
     "priceRange": "$2990",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{key_settings.url}}/assets/images/logo-{{ site.key }}.png"
+      "url": "{{ key_settings.url }}/assets/images/logo-{{ site.key }}.png"
     },
     "image": {
       "@type": "ImageObject",
@@ -104,9 +104,9 @@
       {% for location in key_settings.locations %}
         {
           "@type": "PostalAddress",
-          "streetAddress": "{{ location[1].street }}",
+          "streetAddress": "{{ location[1].street | liquify }}",
           "addressLocality": "{{ location[1].city }}",
-          "addressRegion": "{{ location[1].state }}",
+          "addressRegion": "{{ location[1].state | liquify }}",
           "postalCode": "{{ location[1].postal }}",
           "addressCountry": "US"
         }{% unless forloop.last %},{% endunless %}

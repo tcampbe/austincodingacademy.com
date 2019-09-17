@@ -19,19 +19,19 @@ title: {{ page.fullname }}
                     layout="fixed"
                     class="u-lg-avatar rounded-circle"
                     src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200&r=pg&d=retro"
-                    alt="Gravatar for {{page.fullname}}"
+                    alt="Gravatar for {{ page.fullname | liquify }}"
                   ></amp-img>
                   <!-- htmllint preset="$previous" -->
                 </div>
                 <h5 class="m-0">
-                  {{ page.fullname }}
+                  {{ page.fullname | liquify }}
                 </h5>
                 <div class="card-body p-4 d-flex justify-content-center">
-                    <a href="{{ page.github }}" class="large-icon">
+                    <a href="{{ page.github | liquify }}" class="large-icon">
                       <i class="text-default fab fa-github-square" aria-hidden="true"></i>
                       <span class="sr-only">Link to GitHub</span>
                     </a>
-                    <a href="{{ page.linkedin }}" class="large-icon mx-3">
+                    <a href="{{ page.linkedin | liquify }}" class="large-icon mx-3">
                       <i class="text-default icon-large fab fa-linkedin" aria-hidden="true"></i>
                       <span class="sr-only">Link to LinkedIn</span>
                     </a>
@@ -48,13 +48,13 @@ title: {{ page.fullname }}
             <!-- User Details -->
             <div class="mb-4 text-center">
               <h1>
-                {{ page.fullname }}
+                {{ page.fullname | liquify }}
               </h1>
               <h2 class="display-7 mb-0">
                 {% assign words = page.skills[0] | split: ' ' %}
-                {% capture skill %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %}
+                {% capture skill %}{% for word in words %}{{ word | capitalize | liquify }} {% endfor %}{% endcapture %}
                 {% if skill contains 'Design' %}
-                  {{ skill | strip | append: "er" }}
+                  {{ skill | strip | append: "er" | liquify }}
                 {% elsif skill contains 'C#' %}
                   C#/.NET Developer
                 {% else %}
@@ -68,7 +68,7 @@ title: {{ page.fullname }}
             <div class="mb-4 px-5 d-flex justify-content-center text-muted text-center">
               <i class="fas fa-quote-left mt-1" aria-hidden="true"></i>
               <p class="text-muted px-1 m-0">
-                {{ page.blurb }}
+                {{ page.blurb | liquify }}
               </p>
               <i class="fas fa-quote-right mb-1 align-self-end" aria-hidden="true"></i>
             </div>
@@ -81,7 +81,7 @@ title: {{ page.fullname }}
               <li class="list-inline-item mb-3 mb-sm-0 mx-2">
                 <div class="d-flex align-items-center">
                   <div class="badge bg-primary-dark text-white font-weight-medium rounded p-2 my-1">
-                    {{skill}}
+                    {{ skill }}
                   </div>
                 </div>
               </li>
@@ -102,7 +102,7 @@ title: {{ page.fullname }}
                         <span class="d-block mb-1">
                           Email:
                         </span>
-                        <a href="mailto:{{page.email}}">{{ page.email }}</a>
+                        <a href="mailto:{{ page.email }}">{{ page.email }}</a>
                       </div>
                     </div>
                   </li>
@@ -113,7 +113,7 @@ title: {{ page.fullname }}
                         <span class="d-block mb-1">
                           Web page:
                         </span>
-                        <a href="{{page.website}}">{{ page.website }}</a>
+                        <a href="{{ page.website | liquify }}">{{ page.website | liquify }}</a>
                       </div>
                     </div>
                   </li>
@@ -133,8 +133,8 @@ title: {{ page.fullname }}
                           Phone number:
                         </span>
                         <span class="d-block text-muted">
-                          <a href="tel:{{page.phone}}">
-                            {{ page.phone }}
+                          <a href="tel:{{ page.phone | liquify }}">
+                            {{ page.phone | liquify }}
                           </a>
                         </span>
                       </div>
@@ -149,7 +149,7 @@ title: {{ page.fullname }}
                           Location:
                         </span>
                         <span class="d-block text-muted">
-                          {{ page.location }}
+                          {{ page.location | liquify }}
                         </span>
                       </div>
                     </div>
@@ -171,7 +171,7 @@ title: {{ page.fullname }}
                           Works at:
                         </span>
                         <span class="d-block text-muted">
-                          {{ page.workplace }}
+                          {{ page.workplace | liquify }}
                         </span>
                       </div>
                     </div>
@@ -202,13 +202,13 @@ title: {{ page.fullname }}
                     <div class="media mb-5">
                       <div class="media-body">
                         <small class="d-block text-secondary">
-                          {{ work.dates }}
+                          {{ work.dates | liquify }}
                         </small>
                         <h4 class="h6 mb-0">
-                          {{ work.title }}
+                          {{ work.title | liquify }}
                         </h4>
                         <span class="d-block text-secondary">
-                          {{ work.company }} - {{ work.location }}
+                          {{ work.company }} - {{ work.location | liquify }}
                         </span>
                       </div>
                     </div>
@@ -231,13 +231,13 @@ title: {{ page.fullname }}
                 <div class="media mb-5">
                   <div class="media-body">
                     <small class="d-block text-secondary">
-                      {{ school.dates }}
+                      {{ school.dates | liquify }}
                     </small>
                     <h4 class="h6 mb-0">
-                      {{ school.degree }}
+                      {{ school.degree | liquify }}
                     </h4>
                     <span class="d-block text-secondary">
-                      {{ school.name }}
+                      {{ school.name | liquify }}
                     </span>
                   </div>
                 </div>
@@ -261,11 +261,11 @@ title: {{ page.fullname }}
                       <div class="media-body">
                         <h5 class="mb-0 link-underlined">
                           <a href="{{ project.url }}">
-                            {{ project.name }}
+                            {{ project.name | liquify }}
                           </a>
                         </h5>
                         <p class="mb-0">
-                          {{project.desc}}
+                          {{ project.desc | liquify }}
                         </p>
                       </div>
                     </div>
@@ -287,7 +287,7 @@ title: {{ page.fullname }}
                   <li class="list-inline-item mb-3 mb-sm-0 mr-3">
                     <div class="d-flex align-items-center">
                       <div class="badge badge-light border font-weight-medium rounded p-1 my-1">
-                        {{skill}}
+                        {{ skill }}
                       </div>
                     </div>
                   </li>
@@ -316,28 +316,28 @@ title: {{ page.fullname }}
                   <div class="media mb-3">
                     <div>
                       <amp-img width="80" height="80" layout="fixed" class="u-avatar rounded-circle mr-3" src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}"
-                        alt="{{review.name}}"></amp-img>
+                        alt="{{ review.name | liquify }}"></amp-img>
                     </div>
                     <div class="media-body align-self-center">
                       <h4 class="d-inline-block mb-1">
                         <a class="d-block h6 mb-0" href="#">
-                          {{review.name}}
+                          {{ review.name | liquify }}
                           <br/>
                           <small>
-                            {{review.position}}
+                            {{ review.position | liquify }}
                           </small>
                         </a>
                       </h4>
                     </div>
                     <div class="media-body text-right">
                       <small class="d-block text-muted">
-                        {{review.timestamp}}
+                        {{ review.timestamp | liquify }}
                       </small>
                     </div>
                   </div>
                   <!-- End Author -->
                   <p>
-                    {{review.post}}
+                    {{ review.post | liquify }}
                   </p>
                 </div>
                 <hr class="my-7">
