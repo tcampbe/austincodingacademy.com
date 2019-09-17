@@ -8,7 +8,11 @@ description: Texas Tech University Coding Academy launches at TTU Highland Lakes
 created_at: 2019-09-17 14:00:00 -0500
 updated_at: 2019-09-17 14:00:00 -0500
 categories: []
-excerpt: ''
+excerpt: Texas Tech University and Austin Coding Academy (ACA) today announced an
+  ongoing partnership to launch “Texas Tech University Coding Academy”, a part-time
+  web development program that prepares students for careers as web developers and
+  software engineers. Texas Tech University Coding Academy will launch its first cohort
+  at Texas Tech University at Highland Lakes in early 2020.
 img: "/assets/images/aca-official-press-release-blog-header.png"
 redirect_from: []
 permalink: "/blog/press-release/texas-tech-and-austin-coding-academy-partner-to-launch-texas-tech-university-coding-academy/"
