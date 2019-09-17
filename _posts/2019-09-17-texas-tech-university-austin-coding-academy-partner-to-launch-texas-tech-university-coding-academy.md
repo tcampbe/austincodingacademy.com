@@ -26,7 +26,7 @@ _FOR IMMEDIATE RELEASE: 9/17/2019_
 
 ***
 
-**_Austin, TX – September 2019:_** _Texas Tech University and Austin Coding Academy (ACA) today announced an ongoing partnership to launch “Texas Tech University Coding Academy”, a part-time web development program that prepares students for careers as web developers and software engineers. Texas Tech University Coding Academy will launch its first cohort at Texas Tech University at Highland Lakes in early 2020._
+**_Austin, TX – September 2019:_** _Texas Tech University and Austin Coding Academy (ACA) today announced an ongoing partnership to launch “Texas Tech University Coding Academy”, a part-time web development program that prepares students for careers as web developers and software engineers. Texas Tech University Coding Academy will launch its first cohort at Texas Tech University at Highland Lakes in early 2020._ 
 
 _Austin Coding Academy’s mission is to increase access to careers in technology through thoughtful technical training and to create innovative employment, training, and education solutions to meet the needs of the growing tech industry. “Texas Tech Coding Academy represents a great opportunity for Austin Coding Academy to partner with one of Texas’ premier public universities to provide an innovative education solution for communities around the state,'' says Austin Coding Academy CEO, Chris Lofton. “We’re looking forward to launching the program at Texas Tech University at Highland Lakes, and finding ways that we can make Texas Tech Coding Academy work for the community of Marble Falls and surrounding areas.”_
 
