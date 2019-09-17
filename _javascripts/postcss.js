@@ -5,9 +5,12 @@ const purgecss = require('@fullhuman/postcss-purgecss')
 const cssnano = require('cssnano');
 const amp = require('postcss-amp');
 
-postcss([atImport, amp, purgecss({
-  content: ['./_site/**/*.html']
-}), cssnano({ preset: ['advanced'] })])
+postcss([
+  atImport,
+  amp,
+  purgecss({ content: ['./_site/**/*.html'] }),
+  cssnano({ preset: ['advanced', { discardComments: { removeAll: true }}]}),
+])
   .process(
     readFileSync('assets/css/main.css'),
     {
