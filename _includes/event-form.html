@@ -24,7 +24,7 @@
 >
   <form
     class="col-6 col-md-6 col-sm-10 col-xs-10 px-11 pt-6 mt-6 mx-auto"
-    action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/5346fc1c-3703-49e4-98bb-c35f5a055d0e"
+    action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/5346fc1c-3703-49e4-98bb-c35f5a055d0e"
     target="_top"
     on="tap:event-lightbox.open"
     method="POST"
@@ -34,10 +34,10 @@
     <div class="form-container">
       <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
       <!-- ! need name values, come from hubspot -->
-      <input name="event_name" type="hidden" value="{{include.event_name}}">
+      <input name="event_name" type="hidden" value="{{ include.event_name }}">
       <input name="hs_lead_status" type="hidden" value="NEW">
-      <input name="page_name" type="hidden" value="{{page.title}} ({{include.event_date}})">
-      <input name="page_uri" type="hidden" value="{{key_settings.url}}{{page.url}}">
+      <input name="page_name" type="hidden" value="{{ page.title }} ({{ include.event_date }})">
+      <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ page.url }}">
       <input name="hutk" type="hidden" value="">
 
       <div class="row center-form">

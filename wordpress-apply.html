@@ -53,15 +53,15 @@ process:
     <!-- Proccess Application End -->
     <form
       class="d-flex justify-content-center"
-      action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{key_settings.application_wp_form_guid}}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.application_wp_form_guid }}"
       method="POST"
       target="_top"
     >
       <div class="form-container">
         <input name="lifecyclestage" type="hidden" value="opportunity">
         <input name="filled_out_application" type="hidden" value="true">
-        <input name="page_name" type="hidden" value="{{page.title}}">
-        <input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.permalink}}">
+        <input name="page_name" type="hidden" value="{{ page.title }}">
+        <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink }}">
         <input name="hutk" type="hidden" value="">
         <h2 class="display-6 mb-4">
           About You

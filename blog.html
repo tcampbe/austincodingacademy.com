@@ -30,11 +30,11 @@ amp_components: []
             <div class="card-body p-0">
               <a href="{{ post.url }}">
                 <div class="mb-5">
-                  <amp-img width="{{ post.width | default:345 }}px" height="{{ post.height | default:172.5 }}px" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img }}" alt="{{blog.alt}}"></amp-img>
+                  <amp-img width="{{ post.width | default:345 }}px" height="{{ post.height | default:172.5 }}px" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img }}" alt="{{ blog.alt }}"></amp-img>
                 </div>
               </a>
               <small class="d-block text-secondary mb-1">
-                {{blog.date}}
+                {{ blog.date }}
               </small>
               <a href="{{ post.url }}">
                 <h2 class="h5">

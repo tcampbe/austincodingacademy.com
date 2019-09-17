@@ -139,7 +139,7 @@ layout: default
         {% for tag in page.tags %}
         <li class="list-inline-item pb-3">
           <span class="badge badge-light badge-pill">
-            {{tag}}
+            {{ tag }}
           </span>
         </li>
         {% endfor %}
@@ -154,27 +154,27 @@ layout: default
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{key_settings.url}}{{site.baseurl}}{{page.url}}"
+        "@id": "{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}"
       },
-      "headline": "{{page.title}}",
+      "headline": "{{ page.title }}",
       "image": [
-        "{{key_settings.url}}{{page.img}}"
+        "{{ key_settings.url }}{{ page.img }}"
         ],
-      "datePublished": "{{page.created_at}}",
-      "dateModified": "{{page.updated_at}}",
+      "datePublished": "{{ page.created_at }}",
+      "dateModified": "{{ page.updated_at }}",
       "author": {
         "@type": "{% if page.author_name %}Person{% else %}Organization{% endif %}",
-        "name": "{{page.author_name | default: 'Austin Coding Academy'}}"
+        "name": "{{ page.author_name | default: 'Austin Coding Academy'}}"
       },
         "publisher": {
         "@type": "Organization",
         "name": "{{ key_settings.school }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{key_settings.url}}/assets/images/logo-{{ site.key }}.png"
+          "url": "{{ key_settings.url }}/assets/images/logo-{{ site.key }}.png"
         }
       },
-      "description": "{{page.excerpt}}"
+      "description": "{{ page.excerpt }}"
     }
   </script>
 </main>

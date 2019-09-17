@@ -206,10 +206,10 @@ texastechuniversitycodingacademy:
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
               <h5 class="font-weight-bold">
-                {{item.heading}}
+                {{ item.heading }}
               </h5>
               <p>
-                {{item.text}}
+                {{ item.text }}
               </p>
             </div>
           </div>
@@ -241,10 +241,10 @@ texastechuniversitycodingacademy:
           <section class="mw-850 mb-3">
             <div class="container-fluid py-3">
               <h2 class="mb-4 font-family-alt font-weight-bold">
-                {{section.title}}
+                {{ section.title }}
               </h2>
               <p class="m-0 text-white mw-600">
-                {{section.description}}
+                {{ section.description }}
               </p>
             </div>
             <div class="pl-3 mw-450 d-flex flex-column">
@@ -274,14 +274,14 @@ texastechuniversitycodingacademy:
     </p>
     <form class="d-flex justify-content-center align-items-center"
       target="_top"
-      action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{settings.corporate_trainings_form_guid}}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.corporate_trainings_form_guid }}"
       method="POST"
     >
       <div class="form-container mw-850 px-5 px-lg-0">
         <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
         <input name="hs_lead_status" type="hidden" value="NEW">
-        <input name="page_name" type="hidden" value="{{page.title}}">
-        <input name="page_uri" type="hidden" value="{{key_settings.url}}{{page.url}}">
+        <input name="page_name" type="hidden" value="{{ page.title }}">
+        <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ page.url }}">
         <input name="hutk" type="hidden" value="">
 
         <div class="row center-form">

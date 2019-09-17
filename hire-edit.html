@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: "/hire-edit/"
-head_title: "{{key_settings.school}} | Hire an {{key_settings.school}} Graduate"
+head_title: "{{ key_settings.school }} | Hire an {{ key_settings.school }} Graduate"
 description: ""
 ---
 <div class="container mt-90 pt-1 pb-5">
@@ -9,7 +9,7 @@ description: ""
     {% for page in site.pages %}
       {% if page.layout == 'resume' and page.categories contains site.key %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 text-center">
-          <a href="https://github.com/AustinCodingAcademy/austincodingacademy.com/edit/preview/{{page.path}}" target="_blank" rel="noopener">
+          <a href="https://github.com/AustinCodingAcademy/austincodingacademy.com/edit/preview/{{ page.path }}" target="_blank" rel="noopener">
             {% assign track = page.skills[0] | downcase %}
             {%
               if page.categories contains 'hire' and page.projects[0].url and
@@ -42,7 +42,7 @@ description: ""
                   {% assign skills = page.skills | slice:0, 3 %}
                   {% for skill in skills %}
                     <div class="badge bg-primary-dark text-white font-weight-medium rounded m-1 p-1">
-                      {{skill}}
+                      {{ skill }}
                       <span class="sr-only">top skill</span>
                     </div>
                   {% endfor %}

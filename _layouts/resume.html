@@ -19,7 +19,7 @@ title: {{ page.fullname }}
                     layout="fixed"
                     class="u-lg-avatar rounded-circle"
                     src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200&r=pg&d=retro"
-                    alt="Gravatar for {{page.fullname}}"
+                    alt="Gravatar for {{ page.fullname }}"
                   ></amp-img>
                   <!-- htmllint preset="$previous" -->
                 </div>
@@ -81,7 +81,7 @@ title: {{ page.fullname }}
               <li class="list-inline-item mb-3 mb-sm-0 mx-2">
                 <div class="d-flex align-items-center">
                   <div class="badge bg-primary-dark text-white font-weight-medium rounded p-2 my-1">
-                    {{skill}}
+                    {{ skill }}
                   </div>
                 </div>
               </li>
@@ -102,7 +102,7 @@ title: {{ page.fullname }}
                         <span class="d-block mb-1">
                           Email:
                         </span>
-                        <a href="mailto:{{page.email}}">{{ page.email }}</a>
+                        <a href="mailto:{{ page.email }}">{{ page.email }}</a>
                       </div>
                     </div>
                   </li>
@@ -113,7 +113,7 @@ title: {{ page.fullname }}
                         <span class="d-block mb-1">
                           Web page:
                         </span>
-                        <a href="{{page.website}}">{{ page.website }}</a>
+                        <a href="{{ page.website }}">{{ page.website }}</a>
                       </div>
                     </div>
                   </li>
@@ -133,7 +133,7 @@ title: {{ page.fullname }}
                           Phone number:
                         </span>
                         <span class="d-block text-muted">
-                          <a href="tel:{{page.phone}}">
+                          <a href="tel:{{ page.phone }}">
                             {{ page.phone }}
                           </a>
                         </span>
@@ -265,7 +265,7 @@ title: {{ page.fullname }}
                           </a>
                         </h5>
                         <p class="mb-0">
-                          {{project.desc}}
+                          {{ project.desc }}
                         </p>
                       </div>
                     </div>
@@ -287,7 +287,7 @@ title: {{ page.fullname }}
                   <li class="list-inline-item mb-3 mb-sm-0 mr-3">
                     <div class="d-flex align-items-center">
                       <div class="badge badge-light border font-weight-medium rounded p-1 my-1">
-                        {{skill}}
+                        {{ skill }}
                       </div>
                     </div>
                   </li>
@@ -316,28 +316,28 @@ title: {{ page.fullname }}
                   <div class="media mb-3">
                     <div>
                       <amp-img width="80" height="80" layout="fixed" class="u-avatar rounded-circle mr-3" src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}"
-                        alt="{{review.name}}"></amp-img>
+                        alt="{{ review.name }}"></amp-img>
                     </div>
                     <div class="media-body align-self-center">
                       <h4 class="d-inline-block mb-1">
                         <a class="d-block h6 mb-0" href="#">
-                          {{review.name}}
+                          {{ review.name }}
                           <br/>
                           <small>
-                            {{review.position}}
+                            {{ review.position }}
                           </small>
                         </a>
                       </h4>
                     </div>
                     <div class="media-body text-right">
                       <small class="d-block text-muted">
-                        {{review.timestamp}}
+                        {{ review.timestamp }}
                       </small>
                     </div>
                   </div>
                   <!-- End Author -->
                   <p>
-                    {{review.post}}
+                    {{ review.post }}
                   </p>
                 </div>
                 <hr class="my-7">

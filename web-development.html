@@ -109,12 +109,12 @@ features:
   img_src: icon-frontend.png
   img_width: 90px
 - heading: Use {{ page[site.key].backend }} to Build Powerful Back-Ends
-  text: Learn how to collect and process data using {{page[site.key].backend}} – and
+  text: Learn how to collect and process data using {{ page[site.key].backend }} – and
     also how to manage databases with SQL.
   img_src: icon-databases.png
   img_width: 90px
 - heading: Tap Into The Tech Scene
-  text: As the most in-demand language for small to mid-level companies, {{page[site.key].backend}}
+  text: As the most in-demand language for small to mid-level companies, {{ page[site.key].backend }}
     and Javascript powers the thriving start-up scene, with new jobs opportunities
     arising daily.
   img_src: icon-jobs.png
@@ -438,7 +438,7 @@ texastechuniversitycodingacademy:
   </section>
 
   <!-- htmllint preset="none" -->
-  <section class="py-8 container-fluid {{page.hero}}-gradient text-white">
+  <section class="py-8 container-fluid {{ page.hero }}-gradient text-white">
   <!-- htmllint preset="$previous" -->
   <div class="row flex-column align-items-center">
     <div class="col-md-8 p-0 pl-sm-5 d-flex">
@@ -533,7 +533,7 @@ texastechuniversitycodingacademy:
   </section>
   {% if key_settings.course_guide %}
   <!-- htmllint preset="none" -->
-  <section id="course-guide" class="container-fluid {{page.hero}}-gradient text-white py-8">
+  <section id="course-guide" class="container-fluid {{ page.hero }}-gradient text-white py-8">
   <!-- htmllint preset="$previous" -->
     <div class="row justify-content-center">
       <div class="col-md-8">
@@ -550,7 +550,7 @@ texastechuniversitycodingacademy:
       {% for item in page.job_placement.stats %}
         <div class="my-4 col-md-4 col-lg-4 col-sm-10">
           <div class="display-4 font-weight-bold my-2 font-family-alt">{{ item.stat }}</div>
-          <p>{{ item.descript | liquify}}</p>
+          <p>{{ item.descript | liquify }}</p>
         </div>
       {% endfor %}
     </div>
@@ -644,35 +644,35 @@ texastechuniversitycodingacademy:
             <div class="row my-5">
               <div class="col-md-8">
                 <h3 class="display-7 border-bottom">
-                  {{option.title}}
+                  {{ option.title }}
                 </h3>
                 <p class="text-white">
-                  {{option.description}}
+                  {{ option.description }}
                 </p>
               </div>
               <div class="col-md-4 px-5">
                 {% if option.price-header == 'Details' %}
                   <div class="text-center">
                     <h5>
-                      {{option.price-header}}
+                      {{ option.price-header }}
                     </h5>
                     <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
                       <div class="display-6 text-white">
-                        {{option.price}} <span style="font-size: 1rem;">to start</span>
+                        {{ option.price }} <span style="font-size: 1rem;">to start</span>
                       </div>
                       <div class="display-8 text-white">
                         +<br>
-                        {{option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
+                        {{ option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
                       </div>
                     </div>
                   </div>
                 {% elsif option.price %}
                   <div class="text-center">
                     <h5>
-                      {{option.price-header}}
+                      {{ option.price-header }}
                     </h5>
                     <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6 text-white">
-                      {{option.price}}
+                      {{ option.price }}
                     </p>
                   </div>
                 {% elsif option.cta %}
@@ -680,7 +680,7 @@ texastechuniversitycodingacademy:
                     <h5>
                       Learn More
                     </h5>
-                    {{option.cta}}
+                    {{ option.cta }}
                   </div>
                 {% endif %}
               </div>
@@ -760,7 +760,7 @@ texastechuniversitycodingacademy:
         "name": "{{ key_settings.school }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{key_settings.url}}/assets/images/logo-{{ site.key }}.png"
+          "url": "{{ key_settings.url }}/assets/images/logo-{{ site.key }}.png"
         }
       }
     }

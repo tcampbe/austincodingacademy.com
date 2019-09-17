@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: "/hire/"
-head_title: "Hire a Graduate | {{key_settings.school}}"
+head_title: "Hire a Graduate | {{ key_settings.school }}"
 description: ""
 ---
 {% for _page in site.pages %}
@@ -41,7 +41,7 @@ description: ""
                   {% assign skills = page.skills | slice: 0, 3 %}
                   {% for skill in skills %}
                     <div class="badge bg-primary-dark text-white font-weight-medium rounded m-1 p-1">
-                      {{skill}}
+                      {{ skill }}
                       <span class="sr-only">top skill</span>
                     </div>
                   {% endfor %}

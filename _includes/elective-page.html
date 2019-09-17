@@ -19,7 +19,7 @@
       <div class="row">
         <div class="mt-3 mb-6 text-center col-12">
           <h2 class="font-family-alt display-5">
-            What is {{page.course_name}}?
+            What is {{ page.course_name }}?
           </h2>
         </div>
         {% for item in page.features %}
@@ -27,15 +27,15 @@
             <div class="row">
               <div class="col-3 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
                 <!-- htmllint preset="none" -->
-                <i class="{{item.img_src}} display-3"></i>
+                <i class="{{ item.img_src }} display-3"></i>
                 <!-- htmllint preset="$previous" -->
               </div>
               <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
                 <h5 class="font-weight-bold">
-                  {{item.heading}}
+                  {{ item.heading }}
                 </h5>
                 <p>
-                  {{item.text}}
+                  {{ item.text }}
                 </p>
               </div>
             </div>
@@ -49,18 +49,18 @@
         Coming Soon
       </h2>
       <p class="mw-600 mx-auto text-center">
-        Interested in learning {{page.course_name}} with {{ key_settings.school }}? Register your interest today and we’ll keep you in the loop about the next start date.
+        Interested in learning {{ page.course_name }} with {{ key_settings.school }}? Register your interest today and we’ll keep you in the loop about the next start date.
       </p>
       <form class="d-flex justify-content-center align-items-center"
         target="_top"
-        action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{settings.corporate_form_guid}}"
+        action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.corporate_form_guid }}"
         method="POST"
       >
         <div class="form-container mw-850 px-5 px-lg-0">
           <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
           <input name="hs_lead_status" type="hidden" value="NEW">
-          <input name="page_name" type="hidden" value="{{page.title}}">
-          <input name="page_uri" type="hidden" value="{{key_settings.url}}{{page.url}}">
+          <input name="page_name" type="hidden" value="{{ page.title }}">
+          <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ page.url }}">
           <input name="hutk" type="hidden" value="">
 
           <div class="row center-form">
