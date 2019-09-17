@@ -59,7 +59,7 @@
             </div>
             <!-- End Input -->
             <div class="col-sm-6 d-flex flex-column justify-content-end text-white">
-              {% include referral-question.html id="referral-tutors" %}
+              {% include referral-question.html %}
             </div>
 
             <!-- Input -->
@@ -259,7 +259,7 @@
             </h5>
             <p class="small m-0">
               {% for skill in tutor.skills %}
-                {{skill}}{% unless skill == tutor.skills.last %} | {% endunless %}
+                {{skill}}{% unless forloop.last == true %} | {% endunless %}
               {% endfor %}
             </p>
             {% unless include.marketing %}

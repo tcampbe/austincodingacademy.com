@@ -283,7 +283,7 @@ a {
   cursor: pointer;
 }
 
-a:hover, .btn-link:hover, .hover-white:hover {
+.btn-link:hover, .hover-white:hover {
   color: #ffffff;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.75);
   cursor: pointer;
@@ -326,14 +326,14 @@ a:hover, .btn-link:hover, .hover-white:hover {
 
 /* filter over video */
 #hero-index {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--secondary-dark), 0.7)),
+  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7)),
     url('/assets/images/hero-index.jpg');
   background-position: top;
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
   #hero-index {
-    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--secondary-dark), 0.7)),
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7)),
       url('/assets/images/hero-index.jpg');
     background-position: top;
     height: 100vh;
@@ -342,7 +342,7 @@ a:hover, .btn-link:hover, .hover-white:hover {
 
 @media (min-width: 768px) {
   #hero-index {
-    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--secondary-dark), 0.7));
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7));
     opacity: 0.8;
     position: absolute;
     width: 100%;
@@ -350,38 +350,38 @@ a:hover, .btn-link:hover, .hover-white:hover {
 }
 
 #hero-csharp {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--secondary-dark), 0.7)),
+  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-csharp.jpg');
   background-position: 50% 10%;
   background-size: cover;
 }
 
 #hero-corporate {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--secondary-dark), 0.7)),
+  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-corporate.jpg');
   background-position: top;
 }
 
 #hero-js {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--secondary-dark), 0.7)),
+  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-javascript.jpg');
   background-position: top;
 }
 
 #hero-blog {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--secondary-dark), 0.7)),
+  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-blog.jpg');
   background-position: center;
 }
 
 #hero-landing {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--secondary-dark), 0.7)),
+  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-landing.jpg');
   background-position: top right;
 }
 
 #hero-events {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--secondary-dark), 0.7)),
+  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-landing.jpg');
   background-position: top right;
 }
@@ -389,17 +389,18 @@ a:hover, .btn-link:hover, .hover-white:hover {
 /* CUSTOM GRADIENTS */
 
 .cta-gradient {
-  background: linear-gradient(to right, rgba(var(--secondary-dark), 1), rgba(var(--secondary-dark), 1));
-  border-right: 0 !important;
-  border-left: 0 !important;
+  background: linear-gradient(to right, rgba(var(--secondary-dark), 1), rgba(var(--secondary-light), 1));
+  border-right: 0;
+  border-left: 0;
+  text-shadow: 10px 0px 20px #292929;
 }
 
 .js-gradient {
-  background: linear-gradient(to right, rgba(var(--secondary-dark), 1), rgba(var(--secondary-dark), 1));
+  background: linear-gradient(to right, rgba(var(--primary-dark), 1), rgba(var(--primary-light), 1));
 }
 
 .csharp-gradient {
-  background: linear-gradient(to right, rgba(var(--secondary-dark), 1), rgba(var(--secondary-dark), 1));
+  background: linear-gradient(to right, rgba(var(--primary-light), 1), rgba(var(--secondary-light), 1));
 }
 
 .bg-gradient {

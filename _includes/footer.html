@@ -25,8 +25,8 @@
                   href="{{ location[1].url }}"
                   class="d-flex text-white hover-white"
                 >
-                  <i class="fas fa-map-marker-alt pt-1" aria-hidden="true"></i>
-                  <div>&nbsp;{{ location[1].campus }}</div>
+                  <i class="fas fa-map-marker-alt pt-1 hover-white text-white" aria-hidden="true"></i>
+                  <div class="hover-white text-white">&nbsp;{{ location[1].campus }}</div>
                 </a>
               </div>
             {% endfor %}
@@ -64,7 +64,9 @@
                   class="text-white hover-white"
                   href="{{ item.url }}"
                 >
-                  {{ item.title }}
+                  <span class="hover-white text-white">
+                    {{ item.title }}
+                  </span>
                 </a>
               </div>
             {% endfor %}
@@ -105,9 +107,9 @@
           "streetAddress": "{{ location[1].street }}",
           "addressLocality": "{{ location[1].city }}",
           "addressRegion": "{{ location[1].state }}",
-          "postalCode": "location[1].postal",
+          "postalCode": "{{ location[1].postal }}",
           "addressCountry": "US"
-        }{% unless locations == key_settings.locations.last %},{% endunless %}
+        }{% unless forloop.last %},{% endunless %}
       {% endfor %}
     ]
   }
