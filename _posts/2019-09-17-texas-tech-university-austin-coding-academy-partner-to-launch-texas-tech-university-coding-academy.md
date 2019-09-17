@@ -9,9 +9,9 @@ created_at: 2019-09-17 14:00:00 -0500
 updated_at: 2019-09-17 14:00:00 -0500
 categories: []
 excerpt: ''
-img: x
+img: "/assets/image/aca-official-press-release-blog-header.png"
 redirect_from: []
-permalink: "/blog/press-release/texas-tech-and-austin-coding-academy-partner-to-launch-texas-tech-university-coding-academy"
+permalink: "/blog/press-release/texas-tech-and-austin-coding-academy-partner-to-launch-texas-tech-university-coding-academy/"
 height: 
 width: 
 author_name: Austin Coding Academy
