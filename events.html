@@ -31,7 +31,8 @@ subheading: Come join {{ key_settings.school }} at one of our next events! Wheth
   <!-- htmllint preset="$previous" -->
     <!-- Events Cards -->
     <div id="cards-container" class="d-flex flex-column justify-content-center">
-      {% for event in site.data.events[site.key] %}
+      {% assign events = site.data.events[site.key] %}
+      {% for event in events %}
         <!-- Start Card  -->
         <div class="hover-animate d-flex flex-column justify-content-center mx-auto border-top col-12 col-sm-11 flex-wrap flex-sm-nowrap">
           <a href="{{ event.url }}">
