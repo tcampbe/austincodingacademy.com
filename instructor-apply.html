@@ -20,13 +20,13 @@ redirect_from: []
     <form
       target="_top"
       class="d-flex justify-content-center"
-      action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{settings.instructor_form_guid}}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.instructor_form_guid }}"
       method="POST"
     >
       <input name="lifecyclestage" type="hidden" value="opportunity">
       <input name="hutk" type="hidden" value="">
-      <input name="page_name" type="hidden" value="{{page.title}}">
-      <input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.url}}">
+      <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+      <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}">
       <div class="mw-850 row">
         <!-- Input -->
         <div class="col-sm-6 mb-6">

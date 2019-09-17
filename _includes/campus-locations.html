@@ -14,11 +14,11 @@
     <div class="col-12 col-md mt-5 mt-md-0">
       <div class="mb-2">
         <h5 class="font-weight-bold m-0">
-          {{ location[1].campus }}
+          {{ location[1].campus | liquify }}
         </h5>
         <small>
-          {{ location[1].street }}<br>
-          {{ location[1].city }}, {{ location[1].state }} {{ location[1].postal }}
+          {{ location[1].street | liquify }}<br>
+          {{ location[1].city }}, {{ location[1].state | liquify }} {{ location[1].postal }}
         </small>
       </div>
       <amp-iframe

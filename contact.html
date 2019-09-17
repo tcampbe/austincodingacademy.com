@@ -36,10 +36,10 @@ redirect_from: []
         <!-- htmllint preset="$previous" -->
           <ul class="fa-ul">
             <li>
-              <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> {{ location[1].campus }}
+              <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> {{ location[1].campus | liquify }}
             </li>
-            <li>{{ location[1].street }}</li>
-            <li>{{ location[1].city }}, {{ location[1].state }} {{ location[1].postal }}</li>
+            <li>{{ location[1].street | liquify }}</li>
+            <li>{{ location[1].city }}, {{ location[1].state | liquify }} {{ location[1].postal }}</li>
           </ul>
         </a>
       {% endfor %}

@@ -38,12 +38,12 @@ texastechuniversitycodingacademy:
                   layout="fixed"
                   class="rounded-circle shadow-black px-2"
                   src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
-                  alt="{{ page.fullname }}"
+                  alt="{{ page.fullname | liquify }}"
                 ></amp-img>
                 <!-- htmllint preset="$previous" -->
               </div>
               <h5 class="h6 m-0 text-white font-weight-bold">
-                {{ page.fullname }}
+                {{ page.fullname | liquify }}
               </h5>
               <a
                 href="{{ page.projects[0].url }}"
@@ -52,7 +52,7 @@ texastechuniversitycodingacademy:
                 class="d-flex justify-content-center"
               >
                 <small class="link-underlined hover-white text-white text-center">
-                  {{ page.projects[0].name }}
+                  {{ page.projects[0].name | liquify }}
                 </small>
               </a>
             </div>
