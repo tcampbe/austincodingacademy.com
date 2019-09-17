@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ graduation, austincodingacademy ] # don't touch
+categories: [ graduation, hire, austincodingacademy ] # don't touch
 
 fullname: Jenna Gullick
 jobtitle: Full Stack JavaScript Developer
