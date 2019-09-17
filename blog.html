@@ -8,6 +8,12 @@ hero: blog
 redirect_from: []
 amp_components: []
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <!-- htmllint preset="none" -->
 <div
   class="hero py-11 bg-gradient" id="hero-{{ page.hero }}">
