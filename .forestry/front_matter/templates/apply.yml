@@ -135,3 +135,5 @@ fields:
   - type: list
     name: form_fields
     label: form_fields
+pages:
+- apply.html
