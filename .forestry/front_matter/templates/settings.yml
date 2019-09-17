@@ -280,6 +280,9 @@ fields:
   - type: text
     name: instagram
     label: instagram
+  - type: file
+    name: course_guide
+    label: course_guide
   - type: field_group
     name: locations
     label: locations
@@ -389,6 +392,9 @@ fields:
   - type: text
     name: instagram
     label: instagram
+  - type: file
+    name: course_guide
+    label: course_guide
   - type: field_group
     name: locations
     label: locations
@@ -434,6 +440,20 @@ fields:
   - type: text
     name: secondary_dark_color
     label: secondary_dark_color
+  - type: field_group
+    name: navigation
+    label: navigation
+    fields:
+    - type: field_group_list
+      name: header
+      label: header
+      fields:
+      - type: text
+        name: title
+        label: title
+    - type: list
+      name: footer
+      label: footer
   - type: list
     name: tracks
     label: tracks
@@ -476,6 +496,9 @@ fields:
   - type: text
     name: instagram
     label: instagram
+  - type: text
+    name: course_guide
+    label: course_guide
   - type: field_group
     name: locations
     label: locations
