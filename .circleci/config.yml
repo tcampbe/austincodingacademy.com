@@ -58,7 +58,6 @@ jobs:
                 git config --global user.email "kevin@austincodingacademy.com"
                 git config --global user.name "Kevin Colten"
                 yarn images
-                node _javascripts/tutoring.js
                 KEY=austincodingacademy.com yarn sitemap
                 KEY=austincodingacademy.com yarn favicon
                 KEY=austincodingacademy.com yarn build
