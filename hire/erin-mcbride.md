@@ -22,24 +22,24 @@ github: https://github.com/rmcbride2121
 linkedin: https://www.linkedin.com/in/erin-mcbride/
 
 email: rmcbride2121@gmail.com
-phone: 703-638-2757
+phone: (703) 638-2757
 website: https://rmcbride2121.github.io/portfolio_website/
 
 workexperience:
   - company: Digital Pharmacist
     dates: August 2019 - Present
     title: Website Implementation Specialist
-    location: Austin, TX
+    location: "Austin, TX"
 
   - company: Zengistics
     dates: January 2019 - August 2019
     title: Master Data Associate
-    location: Austin, TX
+    location: "Austin, TX"
 
   - company: Dell Medical School
     dates: July 2018 - January 2019
     title: Web Editor
-    location: Austin, TX
+    location: "Austin, TX"
 
 education:
   - name: Austin Coding Acaademy
@@ -54,6 +54,6 @@ education:
 projects:
   - name: Critter – Running App
     desc: Personalized running app
-    url: # link to your deployed project
+    url: https://www.google.com/
 
 ---
