@@ -9,10 +9,12 @@ process:
   text: Lorem ipsum dolor sit amet.
   img_src: wp-apply.png
   img_width: 90px
+- item: null #for chevron icon
 - heading: Assignment
   text: Lorem ipsum dolor sit amet.
   img_src: wp-assignment.png
   img_width: 90px
+- item: null #for chevron icon
 - heading: Enroll
   text: Lorem ipsum dolor sit amet.
   img_src: wp-enroll.png
@@ -32,57 +34,32 @@ process:
     </h2>
     <!-- Proccess Application -->
     <div class="d-flex flex-column flex-sm-row justify-content-around align-items-center mb-4">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <amp-img
-          width="{{ page.process[0].img_width }}"
-          height="80px"
-          layout="fixed"
-          src="/assets/images/{{ page.process[0].img_src }}"
-          alt=""
-        ></amp-img>
-        <h3>
-          {{ page.process[0].heading }}
-        </h3>
-        <p>
-          {{ page.process[0].text }}
-        </p>
-      </div>
-      <i class="fas fa-chevron-right responsive-fa-icon" style="font-size: 2rem;" aria-hidden="true"></i>
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <amp-img
-          width="{{ page.process[1].img_width }}"
-          height="80px"
-          layout="fixed"
-          src="/assets/images/{{ page.process[1].img_src }}"
-          alt=""
-        ></amp-img>
-        <h3>
-          {{ page.process[1].heading }}
-        </h3>
-        <p>
-          {{ page.process[1].text }}
-        </p>
-      </div>
-      <i class="fas fa-chevron-right responsive-fa-icon" style="font-size: 2rem;" aria-hidden="true"></i>
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <amp-img
-          width="{{ page.process[2].img_width }}"
-          height="80px"
-          layout="fixed"
-          src="/assets/images/{{ page.process[2].img_src }}"
-          alt=""
-        ></amp-img>
-        <h3>
-          {{ page.process[2].heading }}
-        </h3>
-        <p>
-          {{ page.process[2].text }}
-        </p>
-      </div>
+      {% for item in page.process %}
+        {% assign mod = forloop.index | modulo: 2 %}
+        {% if mod == 1 %}
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <amp-img
+              width="{{ item.img_width }}"
+              height="80px"
+              layout="fixed"
+              src="/assets/images/{{ item.img_src }}"
+              alt=""
+            ></amp-img>
+            <h3>
+              {{ item.heading }}
+            </h3>
+            <p>
+              {{ item.text }}
+            </p>
+          </div>
+        {% else %}
+          <i class="fas fa-chevron-right responsive-fa-icon" style="font-size: 2rem;" aria-hidden="true"></i>
+        {% endif %}
+      {% endfor %}
     </div>
     <!-- Proccess Application End -->
     <form
-      class="d-flex justify-content-center"
+      class="d-flex justify-content-center pt-4"
       action-xhr="{{settings.form_url}}/{{settings.hubspot_portal_id}}/{{key_settings.application_wp_form_guid}}"
       method="POST"
       target="_top"
