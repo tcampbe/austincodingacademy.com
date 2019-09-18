@@ -81,6 +81,8 @@ fields:
       - type: text
         name: label
         label: label
+      config:
+        labelField: value
     - type: text
       name: placeholder
       label: placeholder
