@@ -1,19 +1,16 @@
 ---
 layout: default
 permalink: "/course-guide/"
-austincodingacademy:
-  title: "Course Guide | Austin Coding Academy"
-  description: ""
-  redirect_from: []
-lubbockcodingacademy:
-  title: "Course Guide | Lubbock Coding Academy"
-  description: ""
-  redirect_from: []
-texastechuniversitycodingacademy:
-  title: "Course Guide | Austin Coding Academy"
-  description: ""
-  redirect_from: []
+head_title: "Course Guide | {{ key_settings.school }}"
+description: ""
+redirect_from: []
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% assign key_settings = settings[site.key] %}
+  {% endif %}
+{% endfor %}
 <div class="container mt-90 space-2">
   <div class="card-deck d-flex justify-content-center">
     <!-- Card -->
@@ -23,7 +20,7 @@ texastechuniversitycodingacademy:
           <h1>Thank You</h1>
           <p>
             <a
-              href="/web/viewer.html?file=../assets/documents/{{ site.key }}-Coding-Academy-Course-Guide-Master.pdf"
+              href="/web/viewer.html?file={{ key_settings.course_guide | liquify }}"
               target="_blank"
               rel="noopener"
             >

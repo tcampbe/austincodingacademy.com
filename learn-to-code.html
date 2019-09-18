@@ -1,11 +1,10 @@
 ---
 layout: default
 permalink: "/learn-to-code/"
-title: "Learn to Code Workshop | Free Coding Class with Austin Coding Academy"
+head_title: "Learn to Code Workshop | Free Coding Class with {{ key_settings.school }}"
 description: "Learn the basics of web development at a free Learn to Code Workshop
-  with Austin Coding Academy. Sign up to learn HTML, CSS, and Git basics."
+  with {{ key_settings.school }}. Sign up to learn HTML, CSS, and Git basics."
 redirect_from: []
-
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -51,8 +50,8 @@ redirect_from: []
       Upcoming Workshops
     </h3>
     <a
-      class="btn btn-round btn-info bg-purple my-5 text-white text-wrap"
-      href="{{key_settings.eventbrite}}"
+      class="btn btn-round btn-info bg-primary-dark my-5 text-white text-wrap"
+      href="{{ key_settings.eventbrite | liquify }}"
     >
       RSVP to one of our workshops<br />to reserve your spot!
     </a>

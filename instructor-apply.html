@@ -1,21 +1,10 @@
 ---
 layout: default
 permalink: "/instructor-apply/"
-austincodingacademy:
-  title: "Become an Instructor | Instructor Application - Austin Coding Academy"
-  description: "Become a web development instructor with Austin Coding Academy | Teach
-    coding to the next generation of Austin web developers."
-  redirect_from: []
-lubbockcodingacademy:
-  title: "Become an Instructor | Instructor Application - Lubbock Coding Academy"
-  description: "Become a web development instructor with Lubbock Coding Academy | Teach
-    coding to the next generation of Lubbock web developers."
-  redirect_from: []
-texastechuniversitycodingacademy:
-  title: "Become an Instructor | Instructor Application - Lubbock Coding Academy"
-  description: "Become a web development instructor with Lubbock Coding Academy | Teach
-    coding to the next generation of Lubbock web developers."
-  redirect_from: []
+head_title: "Become an Instructor | Instructor Application - {{ key_settings.school }}"
+description: "Become a web development instructor with {{ key_settings.school }} | Teach
+  coding to the next generation of web developers."
+redirect_from: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -23,7 +12,6 @@ texastechuniversitycodingacademy:
     {% assign key_settings = settings[site.key] %}
   {% endif %}
 {% endfor %}
-{% assign city = page[site.key] %}
 <div class="mt-90 pt-1 b-5 container">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
     <h2 class="font-family-alt my-10 display-5 text-center">
@@ -32,13 +20,13 @@ texastechuniversitycodingacademy:
     <form
       target="_top"
       class="d-flex justify-content-center"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{settings.instructor_form_guid}}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.instructor_form_guid }}"
       method="POST"
     >
       <input name="lifecyclestage" type="hidden" value="opportunity">
       <input name="hutk" type="hidden" value="">
-      <input name="page_name" type="hidden" value="{{page.title}}">
-      <input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.url}}">
+      <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+      <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}">
       <div class="mw-850 row">
         <!-- Input -->
         <div class="col-sm-6 mb-6">
@@ -285,10 +273,10 @@ texastechuniversitycodingacademy:
         </div>
         <!-- End Input -->
         <div class="col-sm-6 mb-4">
-          {% include referral-question.html id="referral-instructor" %}
+          {% include referral-question.html %}
         </div>
         <div class="col-12 mb-4 d-flex justify-content-center">
-          <button class="btn btn-round text-white hover-white bg-purple" type="Submit">
+          <button class="btn btn-round text-white hover-white bg-primary-dark" type="Submit">
             Submit
           </button>
         </div>

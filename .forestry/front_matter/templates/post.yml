@@ -69,6 +69,7 @@ fields:
   name: author_email
   label: Author Email
 pages:
+- _posts/2019-09-17-texas-tech-university-austin-coding-academy-partner-to-launch-texas-tech-university-coding-academy.md
 - _posts/2019-01-23-coming-spring-2019-lubbock-coding-academy.md
 - _posts/2019-03-04-the-benefits-of-an-in-person-coding-bootcamp-vs-online-classes.md
 - _posts/2019-02-06-how-to-stop-multi-tasking-and-develop-focus-1.md

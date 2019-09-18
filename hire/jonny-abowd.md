@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation, austin ] # don't touch
+categories: [ hire, austincodingacademy] # don't touch
 
 fullname: Jonny Abowd
 jobtitle: Chief Technology Officer, Web Developer

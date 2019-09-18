@@ -7,10 +7,11 @@
 <!DOCTYPE html>
 <!-- htmllint preset="none" -->
 <html {% if site.baseurl == '/amp' %}amp{% endif %}>
+  <head>
+    {% include head.html %}
+  </head>
 
-  {% include head.html %}
-
-  <body>
+  <body class="d-flex justify-content-between flex-column min-vh-100">
     {% include google-tag-manager-body.html %}
 
     {% include header.html %}

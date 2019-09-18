@@ -1,8 +1,8 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation, austin ] # don't touch
+categories: [ hire, austincodingacademy] # don't touch
 
-fullname: Amber Jones 
+fullname: Amber Jones
 jobtitle: Software Engineer
 
 location: Austin, TX
@@ -20,7 +20,7 @@ skills:
   - Redux
   - Express.js
   - SQL
-  - Object Oriented Programing 
+  - Object Oriented Programing
   - SASS
   - Bootstrap
   - HTML5 / CSS3

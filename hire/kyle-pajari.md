@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation, austin ] # don't touch
+categories: [ hire, austincodingacademy] # don't touch
 
 fullname: Kyle Pajari
 jobtitle: Software Developer

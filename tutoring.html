@@ -1,13 +1,13 @@
 ---
 layout: default
 permalink: "/tutoring/"
-title: "Tutors | Unlimited Tutoring with Austin Coding Academy"
-description: ""
 redirect_from: []
+head_title: "Tutors | Unlimited Tutoring with {{ key_settings.school }}"
+description: ""
 ---
 {% for _page in site.pages %}
   {% if _page.tutors %}
-    {% assign tutors = _page.tutors[site.key] %}
+    {% assign tutors = _page[site.key] %}
   {% endif %}
 {% endfor %}
 

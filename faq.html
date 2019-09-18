@@ -1,11 +1,11 @@
 ---
 layout: default
 permalink: "/faq/"
+head_title: Frequently Asked Questions | {{ key_settings.school }} FAQ
+description: 'Answers to frequently asked questions: Have a question about {{ key_settings.school
+  }}? Find help and useful links in our FAQ section.'
+redirect_from: []
 austincodingacademy:
-  title: Frequently Asked Questions | Austin Coding Academy FAQ
-  description: 'Answers to frequently asked questions: Have a question about Austin
-    Coding Academy? Find help and useful links in our FAQ section.'
-  redirect_from: []
   categories:
   - title: Frequently Asked Questions
     faqs:
@@ -133,10 +133,6 @@ austincodingacademy:
         recorded, and students are expected to watch class recordings and makeup missing
         work.
 lubbockcodingacademy:
-  title: Frequently Asked Questions | Lubbock Coding Academy FAQ
-  description: 'Answers to frequently asked questions: Have a question about Lubbock
-    Coding Academy? Find help and useful links in our FAQ section.'
-  redirect_from: []
   categories:
   - title: Frequently Asked Questions
     faqs:
@@ -176,10 +172,6 @@ lubbockcodingacademy:
         to buy a mac if you have a functional Windows machine. We do discourage Chromebooks
         and Tablets.
 texastechuniversitycodingacademy:
-  title: Frequently Asked Questions | Austin Coding Academy FAQ
-  description: 'Answers to frequently asked questions: Have a question about Austin
-    Coding Academy? Find help and useful links in our FAQ section.'
-  redirect_from: []
   categories:
   - title: Frequently Asked Questions
     faqs:
@@ -314,16 +306,16 @@ texastechuniversitycodingacademy:
   {% for category in city.categories %}
     <div class="my-10">
       <h2 class="font-family-alt mb-6 text-center display-5">
-        {{category.title}}
+        {{ category.title | liquify }}
       </h2>
       <amp-accordion disable-session-states>
         {% for faq in category.faqs %}
           <section class="mb-3">
             <h4 class="display-7 bg-light mb-0 px-2 p-1 rounded-top">
-              {{faq.question}}
+              {{ faq.question | liquify }}
             </h4>
             <p class="text-default px-2 py-1 border border-top-0 rounded-bottom">
-              {{faq.answer}}
+              {{ faq.answer | liquify }}
             </p>
           </section>
         {% endfor %}

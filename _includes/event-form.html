@@ -5,7 +5,7 @@
   {% endif %}
 {% endfor %}
 <a
-  class="btn btn-round bg-purple text-white hover-white"
+  class="btn btn-round bg-primary-dark text-white hover-white"
   on="tap:event-lightbox"
   role="button"
   tabindex="-1"
@@ -24,7 +24,7 @@
 >
   <form
     class="col-6 col-md-6 col-sm-10 col-xs-10 px-11 pt-6 mt-6 mx-auto"
-    action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/5346fc1c-3703-49e4-98bb-c35f5a055d0e"
+    action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/5346fc1c-3703-49e4-98bb-c35f5a055d0e"
     target="_top"
     on="tap:event-lightbox.open"
     method="POST"
@@ -34,10 +34,10 @@
     <div class="form-container">
       <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
       <!-- ! need name values, come from hubspot -->
-      <input name="event_name" type="hidden" value="{{include.event_name}}">
+      <input name="event_name" type="hidden" value="{{ include.event_name | liquify }}">
       <input name="hs_lead_status" type="hidden" value="NEW">
-      <input name="page_name" type="hidden" value="{{page.title}} ({{include.event_date}})">
-      <input name="page_uri" type="hidden" value="{{key_settings.url}}{{page.url}}">
+      <input name="page_name" type="hidden" value="{{ page.title | liquify }} ({{ include.event_date | liquify }})">
+      <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ page.url }}">
       <input name="hutk" type="hidden" value="">
 
       <div class="row center-form">
@@ -122,12 +122,12 @@
         <!-- End Input -->
 
         <div class="col-12 d-flex flex-column justify-content-end">
-          {% include referral-question.html id="referral-cg" %}
+          {% include referral-question.html %}
         </div>
 
         <!-- Input -->
         <div class="col-12 d-flex align-items-end justify-content-center form-group mt-3">
-          <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
+          <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
             Submit
           </button>
         </div>

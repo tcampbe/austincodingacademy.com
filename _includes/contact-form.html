@@ -6,7 +6,7 @@
 {% endfor %}
 {% if page.contact_lightbox %}
 <a href="#"
-  class="btn btn-round text-white bg-purple hover-white mx-auto"
+  class="btn btn-round text-white bg-primary-dark hover-white mx-auto"
   on="tap:contact-lightbox"
   role="button"
   tabindex="0"
@@ -27,7 +27,7 @@
 {% endif %}
 
 <form
-  action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{key_settings.contact_form_guid}}"
+  action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.contact_form_guid }}"
   method="POST"
   target="_top"
 >
@@ -39,8 +39,8 @@
   >
     <input name="lifecyclestage" type="hidden" value="lead">
     <input name="hs_lead_status" type="hidden" value="NEW">
-    <input name="page_name" type="hidden" value="{{page.title}}">
-    <input name="page_uri" type="hidden" value="{{key_settings.url}}{{site.baseurl}}{{page.url}}">
+    <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+    <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}">
     <input name="hutk" type="hidden" value="">
     <div class="row center-form">
       <!-- Input -->
@@ -159,12 +159,12 @@
       <!-- End Input -->
 
       <div class="col-12 mb-4">
-        {% include referral-question.html id="referral-contact" %}
+        {% include referral-question.html %}
       </div>
       <div class="text-center col-sm-12 mb-4">
         <button
           type="submit"
-          class="text-white btn btn-round bg-purple hover-white"
+          class="text-white btn btn-round bg-primary-dark hover-white"
         >
           Send
         </button>

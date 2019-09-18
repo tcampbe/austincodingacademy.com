@@ -5,16 +5,16 @@
 {% for course in page.courses %}
 <div class="mx-auto mb-5">
   <h5>
-    {{ course.code }}: <b>{{ course.title }}</b>
+    {{ course.code }}: <b>{{ course.title | liquify }}</b>
   </h5>
   {% for section in course.sections %}
   <div class="row border shadow rounded my-2 align-items-center">
     <div class="col-6 col-md-3 my-4">
       {{ section.start | date: "%b %e" }} - {{ section.end | date: "%b %e" }}
     </div>
-    <div class="col-6 col-md-3 my-4">{{ section.weekdays }}</div>
-    <div class="col-6 col-md-2 my-4">{{ section.time }}</div>
-    <div class="col-6 col-md-4 my-4">{{ section.campus }}</div>
+    <div class="col-6 col-md-3 my-4">{{ section.weekdays | liquify }}</div>
+    <div class="col-6 col-md-2 my-4">{{ section.time | liquify }}</div>
+    <div class="col-6 col-md-4 my-4">{{ section.campus | liquify }}</div>
   </div>
   {% endfor %}
 </div>
