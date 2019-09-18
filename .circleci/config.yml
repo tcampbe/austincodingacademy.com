@@ -43,14 +43,17 @@ jobs:
                 yarn images
                 KEY=austincodingacademy.com yarn favicon
                 KEY=austincodingacademy.com yarn build
+                yarn optimize
                 # yarn encrypt
                 KEY=austincodingacademy.com PREVIEW='preview.' yarn deploy
                 KEY=lubbockcodingacademy.com yarn favicon
                 KEY=lubbockcodingacademy.com yarn build
+                yarn optimize
                 # yarn encrypt
                 KEY=lubbockcodingacademy.com PREVIEW='preview.' yarn deploy
                 KEY=texastechuniversitycodingacademy.com yarn favicon
                 KEY=texastechuniversitycodingacademy.com yarn build
+                yarn optimize
                 # yarn encrypt
                 KEY=texastechuniversitycodingacademy.com PREVIEW='preview.' yarn deploy
               fi
@@ -61,15 +64,18 @@ jobs:
                 KEY=austincodingacademy.com yarn sitemap
                 KEY=austincodingacademy.com yarn favicon
                 KEY=austincodingacademy.com yarn build
+                yarn optimize
                 sudo apt install rsync
                 rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
                 KEY=lubbockcodingacademy.com yarn sitemap
                 KEY=lubbockcodingacademy.com yarn favicon
                 KEY=lubbockcodingacademy.com yarn build
+                yarn optimize
                 KEY=lubbockcodingacademy.com yarn deploy
                 KEY=texastechuniversitycodingacademy.com yarn sitemap
                 KEY=texastechuniversitycodingacademy.com yarn favicon
                 KEY=texastechuniversitycodingacademy.com yarn build
+                yarn optimize
                 KEY=texastechuniversitycodingacademy.com yarn deploy
               fi
 

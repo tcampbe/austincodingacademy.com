@@ -21,9 +21,11 @@
     "build": "touch _includes/css.html && yarn css && yarn jekyll-build && yarn jekyll-build-amp",
     "jekyll-build": "bundle exec jekyll build --config _config.yml,_configs/$KEY.yml",
     "jekyll-build-amp": "bundle exec jekyll build --config _config.yml,_configs/$KEY.yml,_amp.yml --destination _site/amp/",
-    "css": "yarn jekyll-build && node _javascripts/postcss.js && cat assets/css/main.min.css > _includes/css.html"
+    "css": "yarn jekyll-build && node _javascripts/postcss.js && cat assets/css/main.min.css > _includes/css.html",
+    "optimize": "find _site -name \"*.html\" | while read fname; do npx amp optimize \"$fname\" > \"$fname-temp\" && mv \"$fname-temp\" \"$fname\"; done"
   },
   "devDependencies": {
+    "@ampproject/toolbox-cli": "^1.0.1",
     "@fortawesome/fontawesome-free": "^5.10.1",
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "bootstrap": "^4.3.1",
