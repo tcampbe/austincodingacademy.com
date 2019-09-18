@@ -81,6 +81,8 @@ fields:
       - type: text
         name: label
         label: label
+      config:
+        labelField: value
     - type: text
       name: placeholder
       label: placeholder
@@ -94,8 +96,8 @@ fields:
       name: medium_width
       label: medium_width
 - type: field_group
-  name: lubbockcodingaademy
-  label: lubbockcodingaademy
+  name: lubbockcodingacademy
+  label: lubbockcodingacademy
   fields:
   - type: field_group_list
     name: form_fields
