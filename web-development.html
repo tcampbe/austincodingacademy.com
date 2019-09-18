@@ -3,6 +3,7 @@ layout: default
 permalink: "/courses/web-development/"
 amp_components:
 - amp-carousel
+- amp-fx
 head_title: ''
 description: ''
 redirect_from:
@@ -412,7 +413,7 @@ texastechuniversitycodingacademy:
   <section class="pb-4 pt-2 container">
     <div class="row">
       {% for item in page.features %}
-        <div class="col-md-6 mb-5">
+        <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="col-md-6 mb-5">
           <div class="row">
             <div class="col-3 col-md-4 col-lg-3 p-0 d-flex justify-content-center align-items-center">
               <amp-img
@@ -442,15 +443,15 @@ texastechuniversitycodingacademy:
   <!-- htmllint preset="$previous" -->
   <div class="row flex-column align-items-center">
     <div class="col-md-8 p-0 pl-sm-5 d-flex">
-      <h2 class="font-family-alt display-5 mx-auto mt-2 mb-4 text-center text-sm-left">
+      <h2 amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt display-5 mx-auto mt-2 mb-4 text-center text-sm-left">
         Program Overview
       </h2>
     </div>
       <!-- overview blocks -->
-      <div class="container text-center text-sm-left">
+      <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="container text-center text-sm-left">
         {% for item in page.overview %}
           {% if item.odd %}
-            <div class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
+            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
               <div class="w-100 w-sm-50 m-0 mr-sm-4 text-white">
                 <h4>
                   {{ item.title | liquify }}
@@ -471,7 +472,7 @@ texastechuniversitycodingacademy:
               </div>
             </div>
           {% else %}
-            <div class="flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
+            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
               <div class="w-100 w-sm-50 p-0 pr-sm-4 my-auto">
                 <amp-img
                   layout="responsive"
@@ -499,13 +500,15 @@ texastechuniversitycodingacademy:
   </section>
 
   <section class="py-8 container">
-    <div class="font-family-alt w-100 mx-auto display-5 mb-4 pt-2 text-center text-sm-left">
+    <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt w-100 mx-auto display-5 mb-4 pt-2 text-center text-sm-left">
       Course Structure
     </div>
     <div class="row d-flex flex-column align-items-center">
       <!-- course cards start -->
       {% for course in school.courses %}
         <div
+          amp-fx="fade-in"
+          data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
           class="w-100 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded course-hover"
           style="min-height: 350px;"
         >
@@ -515,7 +518,7 @@ texastechuniversitycodingacademy:
             </div>
             <div>
               {% for item in settings.courses[course.code].list %}
-                <ul>
+                <ul amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">
                   <li>
                     {{ item | liquify }}
                   </li>
@@ -523,7 +526,11 @@ texastechuniversitycodingacademy:
               {% endfor %}
             </div>
           </div>
-          <div class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center">
+          <div
+            amp-fx="fade-in"
+            data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
+            class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center"
+          >
             {{ settings.courses[course.code].length | liquify }}
           </div>
         </div>
@@ -535,7 +542,7 @@ texastechuniversitycodingacademy:
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid {{ page.hero | liquify }}-gradient text-white py-8">
   <!-- htmllint preset="$previous" -->
-    <div class="row justify-content-center">
+    <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       <div class="col-md-8">
         {% include course-guide-form.html p_class="text-white" %}
       </div>
@@ -543,10 +550,10 @@ texastechuniversitycodingacademy:
   </section>
   {% endif %}
   <section class="container-fluid d-flex py-8 flex-column justify-content-center text-center">
-    <div class="font-family-alt display-5 mb-4">
+    <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt display-5 mb-4">
       Job Placement
     </div>
-    <div class="row justify-content-center">
+    <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       {% for item in page.job_placement.stats %}
         <div class="my-4 col-md-4 col-lg-4 col-sm-10">
           <div class="display-4 font-weight-bold my-2 font-family-alt">{{ item.stat | liquify }}</div>
@@ -557,12 +564,18 @@ texastechuniversitycodingacademy:
   </section>
 
   <section class="pt-4 container">
-    <div class="font-family-alt text-center text-sm-left display-6 w-100 mb-7 p-0 pl-sm-5 mx-0 mx-sm-auto">
+    <div
+      amp-fx="fade-in"
+      data-duration="600ms"
+      data-margin-start="1%"
+      data-margin-end="20%"
+      class="font-family-alt text-center display-6 w-100 w-sm-75 w-md-50 mx-auto mb-7"
+    >
       Graduate Job-Ready
     </div>
     <div class="row">
       {% for prop in page.job_placement.value_props %}
-        <div class="col-md-6 mb-5">
+        <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="col-md-6 mb-5">
           <div class="row">
             <div class="col-3 col-md-4 col-lg-3 d-flex p-0 justify-content-center align-items-center">
               <amp-img
@@ -587,11 +600,11 @@ texastechuniversitycodingacademy:
     </div>
   </section>
 
-  <section class="container-fluid py-8 bg-textured">
-    <div class="display-6 text-center text-white mb-6">
+  <section class="container-fluid py-8 bg-textured-2">
+    <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="display-6 text-center text-white mb-6">
       Student Outcomes
     </div>
-    <div class="mx-auto d-flex flex-wrap justify-content-between col-12 col-sm-10">
+    <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="mx-auto d-flex flex-wrap justify-content-between col-12 col-sm-10">
       {% for success in page.successes %}
         {% if success.learn_url %}
           <div class="card shadow mb-4 p-2 mx-auto" style="width: 18rem;">
@@ -631,17 +644,18 @@ texastechuniversitycodingacademy:
       {% endfor %}
     </div>
   </section>
-
-  {% include company-carousel.html %}
+  <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">
+    {% include company-carousel.html %}
+  </div>
   {% if school.tuition_options.size > 0 %}
     <section class="bg-textured">
       <div class="text-white m-0 pt-8 pb-2">
-        <div class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
+        <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
           Tuition
         </div>
         <div class="container">
           {% for option in school.tuition_options %}
-            <div class="row my-5">
+            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row my-5">
               <div class="col-md-8">
                 <h3 class="display-7 border-bottom">
                   {{ option.title | liquify }}
@@ -690,16 +704,16 @@ texastechuniversitycodingacademy:
       </div>
 
       <div class="pb-8 mt-4">
-        <div class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
+        <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
           <div class="card-body">
-            <div class="display-7 pb-4 text-center">
+            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="display-7 pb-4 text-center">
               Join our upcoming start date:
             </div>
-            <div class="shadow border">
+            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="shadow border">
               <div class="text-center display-6 pt-4">
                 {{ school.next_start_date | liquify }}
               </div>
-              <div class="text-center py-4">
+              <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="text-center py-4">
                 {% include btn-apply.html %}
               </div>
             </div>
@@ -712,10 +726,10 @@ texastechuniversitycodingacademy:
     <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
       <div class="col-md-8">
-        <h2 class="font-family-alt font-weight-bold text-center display-6">
+        <h2 amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt font-weight-bold text-center display-6">
           Still Have Questions?
         </h2>
-        <div class="mw-600 mx-auto p-2 p-md-0">
+        <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="mw-600 mx-auto p-2 p-md-0">
           <h5 class="mb-4 text-center">
             From choosing the right course to understanding course details, we're here
             to help.
