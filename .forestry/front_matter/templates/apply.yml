@@ -48,6 +48,13 @@ fields:
   - type: text
     name: medium_width
     label: medium_width
+  - name: options
+    type: field_group_list
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: options
 - type: field_group
   name: austincodingacademy
   label: austincodingacademy
