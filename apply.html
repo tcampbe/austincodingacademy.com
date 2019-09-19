@@ -7,6 +7,16 @@ head_title: Start Your Application | Apply Now at {{ key_settings.school }}
 description: Apply now to learn to code with {{ key_settings.school }} | Fill out
   your short application to get on the path to a career in web development.
 form_fields:
+- name: application_submission_url
+  label: ''
+  description: ''
+  type: hidden
+  value: "{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink }}"
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
 - name: lifecyclestage
   label: ''
   description: ''
@@ -37,7 +47,6 @@ form_fields:
   required: true
   small_width: "12"
   medium_width: "6"
-  options: []
 - name: lastname
   label: Last Name
   description: ''
@@ -175,24 +184,11 @@ form_fields:
   description: ''
   type: select
   value: ''
-  options:
-  - value: I'm researching coding bootcamps.
-    label: I'm researching coding bootcamps.
-  - value: I'm teaching myself to code, but I'm stuck.
-    label: I'm teaching myself to code, but I'm stuck.
-  - value: I'm interested in a career in tech.
-    label: I'm interested in a career in tech.
-  - value: I'm an entrepreneur with an idea.
-    label: I'm an entrepreneur with an idea.
-  - value: I'm looking for a college alternative.
-    label: I'm looking for a college alternative.
-  - value: I want to learn a new skill for my current job.
-    label: I want to learn a new skill for my current job.
+  options: []
   placeholder: Select your answer
   required: true
   small_width: "12"
   medium_width: "6"
-  options: []
 austincodingacademy:
   form_fields:
   - name: curriculum_track
