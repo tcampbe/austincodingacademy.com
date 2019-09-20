@@ -10,7 +10,7 @@
     "lint": "yarn lint-html && yarn lint-css",
     "test": "yarn lint",
     "pa11y": "pa11y-ci",
-    "images": "webpc -p assets/images/ && imagemin assets/images/* --out-dir=assets/images/ --plugin=imagemin-webp",
+    "images": "webpc -p assets/images/ -r && imagemin assets/images/* --out-dir=assets/images/ --plugin=imagemin-webp",
     "favicon": "yarn build && real-favicon generate _site/favicon.json faviconData.json assets/favicons/ && yarn favicon-inject",
     "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
     "sitemap": "./node_modules/.bin/sitemap-generator https://$(echo $KEY) -v",
