@@ -1,0 +1,9 @@
+{
+  "input": "_site/**/*.html",
+  "output": "_site",
+  "plugins": {
+    "posthtml-webp": {
+      "replaceExtension": true
+    }
+  }
+}
