@@ -1,4 +1,5 @@
 ---
+sites: [ austincodingacademy ]
 tags: []
 layout: post
 title: 'Austin Coding Academy Student Highlight: Lillian Situ'
@@ -16,8 +17,8 @@ excerpt: Every month we like to feature our outstanding students at Austin Codin
 img: "/assets/images/student-highlight-header-lillian-situ.png"
 redirect_from: []
 permalink: "/blog/student-highlight/lillian-situ/"
-height: 
-width: 
+height:
+width:
 date: '2019-04-02T14:42:59.000+00:00'
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
@@ -65,7 +66,7 @@ Initially, the flipped classroom model took some adjusting, but I found that I l
 
 Do the pre-work!! It's so helpful. And don't try to learn everything, rather try to learn _how_ to find the solution instead of memorizing the solution.
 
-**Where is your favorite place to code?**  
+**Where is your favorite place to code?**
 At home (I have a dual monitor set up) or a cozy coffee shop surrounded by other people furiously hacking away at their laptops.
 
 **What is your favorite thing you've programmed so far?**

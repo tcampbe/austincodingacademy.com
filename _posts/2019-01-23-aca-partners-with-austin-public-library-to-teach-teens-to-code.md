@@ -1,4 +1,5 @@
 ---
+sites: [ austincodingacademy ]
 title: Austin Coding Academy Partners with Austin Public Library to Teach Teens to
   Code
 created_at: 2018-10-11 05:00:00 +0000
@@ -16,7 +17,6 @@ description: Austin Coding Academy is committed to our local community. Read abo
   how we're teaming up with Austin Public Library to teach kids coding.
 redirect_from: []
 permalink: "/blog/announcements/austin-coding-academy-partners-with-austin-public-library-to-teach-teens-to-code/"
-
 ---
 On Monday night, Austin Coding Academy teamed up with [Austin Public Library](http://library.austintexas.gov/) to host a free coding event for local teenagers at the Central Library.
 

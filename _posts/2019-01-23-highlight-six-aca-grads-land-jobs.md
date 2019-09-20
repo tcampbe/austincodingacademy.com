@@ -1,4 +1,5 @@
 ---
+sites: [ austincodingacademy ]
 title: 'Highlight: Six Austin Coding Academy Graduates Land Jobs'
 created_at: 2018-12-05 06:00:00 +0000
 updated_at: 2019-01-23 06:00:00 +0000
