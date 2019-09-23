@@ -52,41 +52,6 @@ highlights:
   text: "All Austin Coding Academy students have access to unlimited tutoring. Choose whether you want to meet with a tutor in-person or via video chat, and book
     your session through our tutoring portal. Whether you need help on nights, weekends, or during the day – Austin Coding Academy tutors are here to help you work
     through your barriers."
-#modules:
-#- code: Module 1
-#  length: (Week 1 - Week 4)
-#  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
-#  sections:
-#  - start: May 29, 2019
-#    end: July 24, 2019
-#    weekdays: Mondays &amp; Wednesdays
-#    time: 6:30pm - 9:00pm
-#    name: Downtown (Capital Factory)
-#  - start: June 25, 2019
-#    end: August 22, 2019
-#    weekdays: Tuesdays &amp; Thursdays
-#    time: 6:30pm - 9:00pm
-#    campus: Highland (Highland Business Center)
-#- code: Module 2
-#  length: (Week 5 - Week 8)
-#  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta deserunt adipisci doloremque perspiciatis omnis quia cumque quidem vitae quasi?
-#  sections:
-#  - start: July 29, 2019
-#    end: September 25, 2019
-#    weekdays: Mondays &amp; Wednesdays
-#    time: 6:30pm - 9:00pm
-#    name: Downtown (Capital Factory)
-#    campus: Downtown Capital Factory Campus
-#  - start: August 27, 2019
-#    end: 'October 17, 2019 '
-#    weekdays: Tuesdays &amp; Thursdays
-#    time: 6:30pm - 9:00pm
-#    name: Highland (Highland Business Center)
-#    list:
-#    - Immersion in Object Oriented Programming (OOP)
-#    - Build Unit Testing + Test Driven Development (TDD)
-#    - Master Callbacks and Functional Programming
-#    - Interact with remote APIs and manipulate data
 
 about:
 - title: "WP Engine: The WordPress Digital Experience Platform"
@@ -166,7 +131,7 @@ role_sections:
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
-  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
+  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-55 display-sm-4 text-center">
     {{ page.hero_heading | liquify }}
     <p class="text-center display-7 text-white mt-2">
       {{ page.hero_subheading | liquify }}
@@ -267,34 +232,27 @@ role_sections:
     </div>
   </section>
 
-
-
   <section class="py-4 container">
     <h2 class="font-family-alt display-5 mx-auto mt-2 mb-4 text-center">
       Program Overview
     </h2>
-    <section class="container d-flex flex-column flex-sm-row py-8 justify-content-center align-items-center">
-      <div class="w-100 w-sm-50 p-0 pr-sm-4">
-        <div class="ml-2 font-family-alt display-6 mb-6">
-          Our Partnership with<br>
-          WP Engine
+    <section class="container d-flex flex-column py-8 justify-content-center align-items-center">
+        <div class="ml-2 w-100 font-family-alt display-6 mb-6">
+          Our Partnership with WP Engine
         </div>
-        <div class="mb-4 px-2 mb-sm-0">
+        <div class="mb-6 px-2 w-100">
           <amp-img
             layout="responsive"
             class="img-fluid shadow-black"
-            width="3535"
-            height="2146"
+            width="825"
+            height="343"
             src="{{ page.overview_img | liquify }}"
           >
           </amp-img>
         </div>
-      </div>
-      <div class="mx-0 mx-sm-auto px-2 pl-sm-4 w-100 w-sm-50">
         <div>
           {{ page.program_overview | liquify }}
         </div>
-      </div>
     </section>
     <div class="d-flex flex-column">
       <div class="text-left display-6 my-4 pl-0 pl-sm-2 font-family-alt">
@@ -317,35 +275,9 @@ role_sections:
     <!-- end overview blocks -->
   </section>
 
-  <!-- <section class="py-8 container">
-    <div class="font-family-alt display-6 mb-4 pt-2">
-      Course Structure
-    </div>
-    <div class="d-flex flex-column align-items-center mt-4">
-      <!-- course cards start -->
-      {% for module in page.modules %}
-        <div
-          class="bg-white mx-sm-auto border shadow mb-4 px-4 pt-4 pt-sm-0 d-flex flex-wrap align-items-center justify-content-between rounded"
-          style="min-height: 350px;"
-        >
-          <div>
-            <div class="mb-4 pl-2 pl-sm-0">
-              <strong class="display-6">{{ module.code | liquify }}</strong> <br>
-              <span class="display-7 text-grey">{{ module.length | liquify }}</span>
-            </div>
-            <div>
-              {{ module.text | liquify }}
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-      <!-- course cards end -->
-    </div>
-
-    <div class="d-flex justify-content-center mt-4">
-      {% include btn-apply.html href="/courses/wordpress-development/apply/" %}
-    </div>
-  </section> -->
+  <div class="d-flex justify-content-center mb-6">
+    {% include btn-apply.html href="/courses/wordpress-development/apply/" %}
+  </div>
 
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid py-8 {{ page.hero | liquify }}-gradient">
@@ -449,7 +381,7 @@ role_sections:
         <div class="display-5 font-family-alt text-white mb-1">
           {{ role.heading | liquify }}
         </div>
-        <a href="{{ role.url }}">Description from WP Engine</a>
+        <a href="{{ role.url }}" class="hover-white">Description from WP Engine</a>
       </div>
       <p class="text-white">
         {{ role.p1 | liquify }}
