@@ -18,14 +18,14 @@ cover_video:
   title: ACA Cover Video
   poster: "/assets/images/aca-intro-poster.jpg"
 stories:
-- src: https://player.vimeo.com/video/290925619
+- src_id: AVMkl06b5IE
   title: Lilian Situ video review of Austin Coding Academy
   quote: I've always been interested in programming and being able to create something
     so being able to take what I learned at ACA and get a job with it ... was one
     of the best decisions I've made.
   name: Lillian Situ
   position: Software Engineer, data.world
-- src: https://player.vimeo.com/video/290913789
+- src_id: pjSBt1LW9pc
   title: Greg Swan video review of Austin Coding Academy
   quote: ACA ... gave me a solid foundation of knowledge, taught me what not to do,
     and consistently reminded me that there was a job out there for me if I was willing
@@ -391,16 +391,17 @@ texastechuniversitycodingacademy:
           {% for story in page.stories %}
             <div class="col-xs-12 col-sm-12 col-md-6">
               <div class="mt-4">
-                <amp-iframe
-                  src="{{ story.src | liquify }}"
+                <amp-youtube
+                  data-videoid="{{ story.src_id }}"
                   width="266.656px"
                   height="150px"
-                  layout="responsive"
+                  tabindex="0"
+                  role="presentation"
                   sandbox="allow-scripts allow-same-origin"
-                  allowfullscreen
+                  layout="responsive"
                   title="{{ story.title | liquify }}"
                 >
-                </amp-iframe>
+                </amp-youtube>
               </div>
               <div class="mt-3 d-flex justify-content-center">
                 <blockquote class="blockquote w-75">
