@@ -315,6 +315,9 @@ a {
 
 #bg-404 {
   background-image: url(https://austincodingacademy.github.io/front/assets/svg/illustrations/error-404.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 45%;
 }
 
 .hero {
