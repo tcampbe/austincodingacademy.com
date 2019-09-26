@@ -392,9 +392,18 @@ a {
 #hero-blog {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-blog.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: 60% 0%;
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #hero-blog {
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+      url('/assets/images/hero-blog.jpg');
+    background-position: 0% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 #hero-landing {
