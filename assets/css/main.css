@@ -384,9 +384,19 @@ a {
 #hero-js {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-javascript.jpg');
-  background-position: top;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #hero-js {
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+      url('/assets/images/hero-javascript.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 #hero-blog {
