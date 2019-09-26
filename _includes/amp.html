@@ -160,6 +160,14 @@
 ></script>
 {% endif %}
 
+{% if page.amp_components contains 'amp-fx' %}
+<script
+  async
+  custom-element="amp-fx-collection"
+  src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"
+></script>
+{% endif %}
+
 
 {% if page.amp_components contains 'amp-fit-text' %}
 <script

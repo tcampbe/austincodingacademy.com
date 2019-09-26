@@ -20,46 +20,49 @@ texastechuniversitycodingacademy:
   {% endif %}
 {% endfor %}
 {% assign school = page[site.key] %}
-<div class="container-fluid py-10" style="background-color: black;">
-  <div class="row col-9 col-sm-10 col-md-9 mx-auto d-flex justify-content-center align-items-end">
-    {% for page in site.pages %}
-      {% if page.categories contains 'graduation' and page.projects[0].url and page.categories contains site.key %}
-        {% assign track = page.skills[0] | downcase %}
-        {% if track contains 'javascript' or track contains 'c#' or track contains 'csharp' or track contains '.net' or track contains 'web design' %}
-          <!-- Card Start -->
-          <div
-            class="col-12 col-sm-4 col-md-3 p-2"
-            style="height: 250px;"
-          >
-            <div class="w-100 px-1 h-100 py-2 d-flex flex-column rounded border align-items-center justify-content-between" style="min-height: 100%; box-shadow: 0px 0px 5px #fff;">
-              <div class="d-flex justify-content-center pb-2">
-                <!-- htmllint preset="none" -->
-                <amp-img width="150" height="150"
-                  layout="fixed"
-                  class="rounded-circle shadow-black px-2"
-                  src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
-                  alt="{{ page.fullname | liquify }}"
-                ></amp-img>
-                <!-- htmllint preset="$previous" -->
+
+<main class="mt-88 pt-10">
+  <div class="container-fluid py-10" style="background-color: black;">
+    <div class="row col-9 col-sm-10 col-md-9 mx-auto d-flex justify-content-center align-items-end">
+      {% for page in site.pages %}
+        {% if page.categories contains 'graduation' and page.projects[0].url and page.categories contains site.key %}
+          {% assign track = page.skills[0] | downcase %}
+          {% if track contains 'javascript' or track contains 'c#' or track contains 'csharp' or track contains '.net' or track contains 'web design' %}
+            <!-- Card Start -->
+            <div
+              class="col-12 col-sm-4 col-md-3 p-2"
+              style="height: 250px; min-width: 250px;"
+            >
+              <div class="w-100 px-1 h-100 py-2 d-flex flex-column rounded border align-items-center justify-content-between" style="min-height: 100%; box-shadow: 0px 0px 5px #fff;">
+                <div class="d-flex justify-content-center pb-2">
+                  <!-- htmllint preset="none" -->
+                  <amp-img width="150" height="150"
+                    layout="fixed"
+                    class="rounded-circle shadow-black px-2"
+                    src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
+                    alt="{{ page.fullname }}"
+                  ></amp-img>
+                  <!-- htmllint preset="$previous" -->
+                </div>
+                <h5 class="h6 m-0 text-white font-weight-bold">
+                  {{ page.fullname }}
+                </h5>
+                <a
+                  href="{{ page.projects[0].url }}"
+                  target="_blank"
+                  rel="noopener"
+                  class="d-flex justify-content-center"
+                >
+                  <small class="link-underlined hover-white text-white text-center">
+                    {{ page.projects[0].name }}
+                  </small>
+                </a>
               </div>
-              <h5 class="h6 m-0 text-white font-weight-bold">
-                {{ page.fullname | liquify }}
-              </h5>
-              <a
-                href="{{ page.projects[0].url }}"
-                target="_blank"
-                rel="noopener"
-                class="d-flex justify-content-center"
-              >
-                <small class="link-underlined hover-white text-white text-center">
-                  {{ page.projects[0].name | liquify }}
-                </small>
-              </a>
             </div>
-          </div>
-          <!-- Card End -->
+            <!-- Card End -->
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
-</div>
+</main>

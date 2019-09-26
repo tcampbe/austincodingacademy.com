@@ -13,7 +13,7 @@ austincodingacademy:
       description: With our new payment plan, you can get started with Austin Coding Academy
         for just $490 up-front. After you begin classes you’ll make bi-weekly payments of $235
         for 2 years. No interest and no penalty for prepayment!
-      price-header: Details
+      price_header: Details
       price: $490
       price2: $235
     - title: Pay Up Front (Savings Option)
@@ -21,13 +21,13 @@ austincodingacademy:
         when you choose to pay for the entire cost of the program up front. Instead
         of paying for the individual price of 4 web development courses, ($11,960),
         you’ll pay the reduced price of $10,960.
-      price-header: Total Price
+      price_header: Total Price
       price: "$10,960"
     - title: Pay-As-You-Go (Flexible Option)
       description: To provide a more flexible tuition option, we also offer a “pay-as-you-go”
         plan. Rather than paying for the entire cost of the program up front, you’re
         able to pay for each course when you take it, ($2,990/course).
-      price-header: Total Price
+      price_header: Total Price
       price: "$11,960"
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Austin Coding Academy’s
@@ -49,7 +49,7 @@ austincodingacademy:
         students to become developers and help them find a job, individual courses
         may be appropriate for students who already have a coding background or aren’t
         looking for a career as a web developer.
-      price-header: Course Price
+      price_header: Course Price
       price: "$2,990"
     - title: Electives
       description: Electives with Austin Coding Academy are coming soon. Stay tuned
@@ -65,18 +65,18 @@ lubbockcodingacademy:
       description: With our new payment plan, you can get started with Lubbock Coding Academy
         for just $490 up-front. After you begin classes you’ll make bi-weekly payments of $250
         for 9 months. No interest and no penalty for prepayment!
-      price-header: Details
+      price_header: Details
       price: $490
       price2: $250
     - title: Pay-As-You-Go (Flexible Option)
       description: You can pay one class at a time for $1,490. The tuition price covers one 8 week
         session. The cost of the entire program is $5,960.
-      price-header: Total Price
+      price_header: Total Price
       price: "$5,960"
     - title: Full Stack Web Development Program
       description: You can pay one class at a time for $1,490. The tuition price covers
         one 8 week session. The cost of the entire program is $5,960.
-      price-header: Total Price
+      price_header: Total Price
       price: "$5,960"
     - title: Financing (via Texas Tech Credit Union)
       description: Finance your tuition through Texas Tech Credit Union’s “Lubbock Coding Academy Loan”.
@@ -134,62 +134,65 @@ texastechuniversitycodingacademy:
           </a>
         </div>
       {% else %}
-      <div class="container-fluid bg-light text-center py-3 my-5">
-        <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-          {{ section.title | liquify }}
-        </h2>
-        <p class="m-0 mx-auto mw-600">
-          {{ section.description | liquify }}
-        </p>
-      </div>
-      <div class="container">
-        {% for option in section.options %}
-          <div class="row my-5">
-            <div class="col-md-8">
-              <h3 class="display-7 border-bottom">
-                {{ option.title | liquify }}
-              </h3>
-              <p>
-                {{ option.description | liquify }}
-              </p>
-            </div>
-            <div class="col-md-4 px-5">
-              {% if option.price-header == 'Details' %}
-                <div class="text-center">
-                  <h5>
-                    {{ option.price-header | liquify }}
-                  </h5>
-                  <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
-                    <div class="display-6">
-                      {{ option.price | liquify }} <span style="font-size: 1rem;">to start</span>
-                    </div>
-                    <div class="display-8">
-                      +<br>
-                      {{ option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
+        <div class="container-fluid bg-light text-center py-3 my-5">
+          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
+            {{ section.title | liquify }}
+          </h2>
+          <p class="m-0 mx-auto mw-600">
+            {{ section.description | liquify }}
+          </p>
+        </div>
+        <div class="container">
+          {% for option in section.options %}
+            <div class="row my-5">
+              <div class="col-md-8">
+                <h3 class="display-7 border-bottom">
+                  {{ option.title | liquify }}
+                </h3>
+                <p>
+                  {{ option.description | liquify }}
+                </p>
+              </div>
+              <div class="col-md-4 px-5">
+                {% if option.price_header == 'Details' %}
+                  <div class="text-center">
+                    <h5>
+                      {{ option.price_header | liquify }}
+                    </h5>
+                    <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
+                      <div class="display-6">
+                        {{ option.price | liquify }} <span style="font-size: 1rem;">to start</span>
+                      </div>
+                      <div class="display-8">
+                        +<br>
+                        {{ option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              {% elsif option.price %}
-                <div class="text-center">
-                  <h5>
-                    {{ option.price-header | liquify }}
-                  </h5>
-                  <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6">
-                    {{ option.price | liquify }}
-                  </p>
-                </div>
-              {% elsif option.cta %}
-                <div class="text-center">
-                  <h5>
-                    Learn More
-                  </h5>
-                  {{ option.cta | liquify }}
-                </div>
-              {% endif %}
+                {% elsif option.price %}
+                  <div class="text-center">
+                    <h5>
+                      {{ option.price_header | liquify }}
+                    </h5>
+                    <p
+                      class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6"
+                      style="min-width: 155px;"
+                    >
+                      {{ option.price | liquify }}
+                    </p>
+                  </div>
+                {% elsif option.cta %}
+                  <div class="text-center">
+                    <h5>
+                      Learn More
+                    </h5>
+                    {{ option.cta | liquify }}
+                  </div>
+                {% endif %}
+              </div>
             </div>
-          </div>
-        {% endfor %}
-      </div>
+          {% endfor %}
+        </div>
       {% endif %}
     </section>
   {% endfor %}
