@@ -367,9 +367,18 @@ a {
 #hero-corporate {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-corporate.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-position: 10% 50%;
+}
+
+@media (min-width: 768px) {
+  #hero-corporate {
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+      url('/assets/images/hero-corporate.jpg');
+    background-position: 50% -15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 #hero-js {
