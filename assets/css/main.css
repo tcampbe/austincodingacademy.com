@@ -335,9 +335,7 @@ a {
 #hero-index {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7)),
     url('/assets/images/hero-index.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 53% 0%;
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
