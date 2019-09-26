@@ -6,7 +6,7 @@
 {% endfor %}
 {% assign city = page[site.key] %}
 <div class="container mt-90 pt-1 pb-5">
-  <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-10">
+  <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-5">
     {{ page.heading | liquify }}
   </h2>
   <div class="row my-5 mx-auto d-flex justify-content-start">
@@ -50,10 +50,9 @@
         {% endfor %}
       </div>
     </div>
-    <div class="py-10 col-12 d-md-none" id="bio-section"></div>
     <div class="col-12 col-md">
       <h2 class="d-none d-lg-block text-center font-family-alt font-weight-bold display-5 mb-5">
-        {{ city.heading | default page.heading| liquify }}
+        {{ city.heading | default: page.heading | liquify }}
       </h2>
       <p class="mx-0 mx-sm-5 p-4 p-sm-5 rounded border shadow">
         <!-- htmllint preset="none" -->
