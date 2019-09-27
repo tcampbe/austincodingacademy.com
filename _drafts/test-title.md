@@ -18,4 +18,4 @@ author_email: ''
 ---
 Hello There
 
-the is a test
+the is a test.
