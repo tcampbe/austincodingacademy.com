@@ -3700,6 +3700,11 @@ ignore@^5.0.4, ignore@^5.1.1:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.2.tgz#e28e584d43ad7e92f96995019cc43b9e1ac49558"
   integrity sha512-vdqWBp7MyzdmHkkRWV5nY+PfGRbYbahfuvsBCh277tq+w9zyNi7h5CYJCK0kmzti9kU+O/cB7sE8HvKv6aXAKQ==
 
+image-size@^0.7.2:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.7.5.tgz#269f357cf5797cb44683dfa99790e54c705ead04"
+  integrity sha512-Hiyv+mXHfFEP7LzUL/llg9RwFxxY+o9N3JVLIeG5E7iFIFAalxvRU9UZthBdYDEVnzHMgjnKJPPpay5BWf1g9g==
+
 imagemin-cli@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/imagemin-cli/-/imagemin-cli-5.0.0.tgz#080673127bd2b6f7d99cd0bd4e39e95e79e2872a"
@@ -6329,6 +6334,12 @@ postcss@^7.0.14, postcss@^7.0.5:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
+posthtml-amp-img@kevincolten/posthtml-amp-img:
+  version "1.0.0"
+  resolved "https://codeload.github.com/kevincolten/posthtml-amp-img/tar.gz/58a3ce3c33623f82b6a3713127b3382d3a0c5772"
+  dependencies:
+    posthtml "^0.11.4"
+
 posthtml-cli@kevincolten/posthtml-cli#nested-paths:
   version "0.5.1"
   resolved "https://codeload.github.com/kevincolten/posthtml-cli/tar.gz/3bdbde2c62c2a26ddb170984205eb25ab53a6ee4"
@@ -6340,6 +6351,13 @@ posthtml-cli@kevincolten/posthtml-cli#nested-paths:
     merge-options "^1.0.1"
     posthtml "^0.11.4"
     to-camel-case "^1.0.0"
+
+posthtml-img-autosize@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/posthtml-img-autosize/-/posthtml-img-autosize-0.1.4.tgz#0c3d612ba5f6682ebfe344de89e57ffedb5da4ed"
+  integrity sha512-Fu6wgpjZ73QlxX3Pf51fgueY+b64p/LI20+p6dKGIhrSoS/mv1nqigF878x6/YOIFc657x6NCUIRvfDCyi43bA==
+  dependencies:
+    image-size "^0.7.2"
 
 posthtml-parser@^0.4.1:
   version "0.4.1"
