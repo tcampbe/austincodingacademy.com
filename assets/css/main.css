@@ -335,7 +335,7 @@ a {
 #hero-index {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7)),
     url('/assets/images/hero-index.jpg');
-  background-position: 53% 0%;
+  background-position: -820px 0px;
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
@@ -356,26 +356,18 @@ a {
   }
 }
 
-#hero-csharp {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
-    url('/assets/images/hero-csharp.jpg');
-  background-position: 50% 10%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 #hero-corporate {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-corporate.jpg');
   background-size: cover;
-  background-position: 10% 50%;
+  background-position: -20px 70px;
 }
 
 @media (min-width: 768px) {
   #hero-corporate {
     background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
       url('/assets/images/hero-corporate.jpg');
-    background-position: 50% -15%;
+    background-position: 0px 25px;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -402,7 +394,7 @@ a {
 #hero-blog {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-blog.jpg');
-  background-position: 60% 0%;
+  background-position: -330px 0px;
   background-size: cover;
 }
 
@@ -410,7 +402,7 @@ a {
   #hero-blog {
     background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
       url('/assets/images/hero-blog.jpg');
-    background-position: 0% 35%;
+    background-position: 0px 20px;
     background-repeat: no-repeat;
     background-size: cover;
   }
