@@ -335,9 +335,7 @@ a {
 #hero-index {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7)),
     url('/assets/images/hero-index.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: -820px 0px;
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
@@ -358,36 +356,56 @@ a {
   }
 }
 
-#hero-csharp {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
-    url('/assets/images/hero-csharp.jpg');
-  background-position: 50% 10%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 #hero-corporate {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-corporate.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-position: -20px 70px;
+}
+
+@media (min-width: 768px) {
+  #hero-corporate {
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+      url('/assets/images/hero-corporate.jpg');
+    background-position: 0px 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 #hero-js {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-javascript.jpg');
-  background-position: top;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #hero-js {
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+      url('/assets/images/hero-javascript.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 #hero-blog {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-blog.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: -330px 0px;
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #hero-blog {
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+      url('/assets/images/hero-blog.jpg');
+    background-position: 0px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 #hero-landing {
