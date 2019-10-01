@@ -2,7 +2,7 @@
 layout: resume #don't touch
 categories: [ hire, graduation, austincodingacademy ] # don't touch
 
-Fullname: Joseph Hauger
+fullname: Joseph Hauger
 jobtitle: JavaScript Developer
 
 location: Austin, TX
