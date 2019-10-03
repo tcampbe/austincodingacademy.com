@@ -17,3 +17,4 @@ package-lock.json
 _data/events.yml
 _data/tutors.yml
 *.map
+*.webp
