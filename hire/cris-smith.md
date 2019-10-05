@@ -1,5 +1,6 @@
+---
 layout: resume #don't touch
-categories: [ hire, graduation, austin ] # don't touch
+categories: [ hire, graduation, austincodingacademy ] # don't touch
 
 fullname: Cris Smith
 jobtitle: Freelance Software Developer
@@ -23,20 +24,20 @@ skills:
   - WebPack
   - REST APIs
 
-github:
+github: https://www.github.com/
 linkedin: https://www.linkedin.com/in/cris-smith-696b21191/
 
-email:cris.smith.fa@gmail.com
+email: cris.smith.fa@gmail.com
 phone: 941-544-3321
 
 workexperience:
-  - company: Sailing Vessel, Kwaheri, NY,NY
+  - company: Sailing Vessel, Kwaheri
     dates: 2015 - present
     title: Captain of Vessel
-    location: NY,NY
+    location: NY, NY
 
   - company: John Mirviss LTD
-    dates: Sept 2014 - May 2015
+    dates: Sep 2014 - May 2015
     title: Director
     location: NY, NY
 
@@ -47,7 +48,7 @@ workexperience:
 
 education:
   - name: Austin Coding Academy
-    dates: June 2018 - April 2019
+    dates: Jun 2018 - Apr 2019
     degree: Web Development
 
 education:
