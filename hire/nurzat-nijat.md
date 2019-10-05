@@ -50,6 +50,6 @@ education:
 projects:
   - name: Budget-Currency 2 in 1
     desc: In foreign country, track your budget and see how much you are spending in your country currency
-    url: https://github.com/SelenaSolis/budget-app-sn
+    url: https://budgetappsn.herokuapp.com/
 
 ---
