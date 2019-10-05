@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ graduation, hire, austincodingacademy ] # don't touch
+categories: [ hire, austincodingacademy ] # don't touch
 
 fullname: Kelly Nguyen
 jobtitle: JavaScript Developer
