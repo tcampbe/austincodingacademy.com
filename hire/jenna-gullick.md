@@ -54,7 +54,7 @@ education:
     degree: Bachelors of Exercise and Sports Science with All-Level Teacher's Certification
 
 projects:
-  - name: Grocery Budget Tracker
+  - name: Grocery Buddy
     desc: Grocery list that helps you stay under your budget
-    url: https://www.google.com/
+    url: https://grocery-buddy.herokuapp.com/
 ---
