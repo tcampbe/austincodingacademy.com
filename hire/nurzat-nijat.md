@@ -49,7 +49,7 @@ education:
 
 projects:
   - name: Budget App
-    desc: In foreign country, track your budget and see how much you are spending in your country currency
+    desc: "In foreign country, track your budget and see how much you are spending in your country currency"
     url: https://budgetappsn.herokuapp.com/
 
 ---
