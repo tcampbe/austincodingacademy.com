@@ -58,6 +58,6 @@ education:
 projects:
   - name: Austin AllNighter  
     desc: Food Ordering App
-    url: http://www.google.com/
+    url: https://austinallnighter.herokuapp.com/
 
 ---
