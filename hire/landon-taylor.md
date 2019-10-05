@@ -56,6 +56,6 @@ education:
 projects:
   - name: ETT Goggle Emulator
     desc: A virtual version of emotional transformation therapy goggles.
-    url: https://www.google.com/
+    url: https://veett.herokuapp.com/
 
 ---
