@@ -3,7 +3,7 @@ layout: resume #don't touch
 categories: [ hire, graduation, austincodingacademy ] # don't touch
 
 fullname: Selena Solis
-jobtitle: JavaScript Developer or C#/.NET Developer
+jobtitle: JavaScript Developer
 
 location: Austin, TX
 blurb: "Eager to use skills and strong math background to fill a software developer role."
@@ -54,7 +54,7 @@ education:
 
 projects:
   - name: Budget App
-    desc: In foreign country, track your budget and see how much you are spending in your country currency
+    desc: "In foreign country, track your budget and see how much you are spending in your country currency"
     url: https://budgetappsn.herokuapp.com/
 
 ---
