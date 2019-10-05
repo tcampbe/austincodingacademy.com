@@ -51,7 +51,6 @@ education:
     dates: Jun 2018 - Apr 2019
     degree: Web Development
 
-education:
   - name: George Washington University
     dates: 2004 - 2008
     degree: BA Asian Studies; BA Japanese Lang and Literature
