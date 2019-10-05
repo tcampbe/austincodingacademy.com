@@ -23,28 +23,28 @@ github: https://github.com/Awhitlock923
 linkedin: https://www.linkedin.com/in/austin-whitlock-84472a179/
 
 email: awhitlock923@gmail.com
-phone: (708) 990-8652
+phone: 708-990-8652
 website: https://pinkmilkmedia20191003043359.azurewebsites.net
 
 workexperience:
   - company: Providence Life Services
-    dates: October 2017 - January 2019
+    dates: Oct 2017 - Jan 2019
     title: Sos Chef
-    location: Tinley Park, IL
+    location: "Tinley Park, IL"
 
   - company: Ikea
-    dates: March 2019 - Current
+    dates: Mar 2019 - Current
     title: Ikea Food
-    location: Round Rock, TX
+    location: "Round Rock, TX"
 
 education:
   - name: Austin Coding Acaademy
-    dates: January 2019 - August 2019
+    dates: Jan 2019 - Aug 2019
     degree: Web Development
 
 projects:
   - name: Pink Milk Media
     desc: Creates Albums With Pictures
-    url: https://pinkmilkmedia20191003043359.azurewebsites.net
+    url: https://pinkmilkmedia20191003043359.azurewebsites.net/
 
 ---
