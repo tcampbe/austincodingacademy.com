@@ -25,7 +25,7 @@ skills:
 github: https://github.com/mikrdgz
 linkedin: https://www.linkedin.com/in/mikaela-rodriguez/
 
-email: mikaela.rodriguez@bigcommerce.com
+email: mikrdgz@gmail.com
 phone:
 website:
 
