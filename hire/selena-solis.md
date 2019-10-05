@@ -53,7 +53,7 @@ education:
     degree: Full-stack Javascript
 
 projects:
-  - name: Budget-Currency 2 in 1
+  - name: Budget App
     desc: In foreign country, track your budget and see how much you are spending in your country currency
     url: https://budgetappsn.herokuapp.com/
 
