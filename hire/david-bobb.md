@@ -48,8 +48,8 @@ education:
     degree: Web Development
 
 projects:
-  - name: Simple Kanban CRUD App
+  - name: Kanban App
     desc: A simple kanban board where users can CRUD tasks and to different project boards
-    url: https://www.google.com/
+    url: https://kanbancrud.herokuapp.com/
 
 ---

@@ -58,6 +58,6 @@ education:
 projects:
   - name: Sound Vibration App
     desc: multiple metal percussion instruments
-    url: https://www.google.com/
+    url: https://metalvibrations.herokuapp.com/
 
 ---

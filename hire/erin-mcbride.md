@@ -54,6 +54,6 @@ education:
 projects:
   - name: Critter – Running App
     desc: Personalized running app
-    url: https://www.google.com/
+    url: https://critterapp.herokuapp.com/
 
 ---
