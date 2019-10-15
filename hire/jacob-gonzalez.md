@@ -63,6 +63,6 @@ education:
 projects:
   - name: Smart Shop
     desc: grocery shopping list assistant
-    url: # link 
+    url: https://www.google.com/ 
 
 ---
