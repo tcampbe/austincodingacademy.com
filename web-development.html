@@ -82,18 +82,18 @@ successes:
 - name: Student Brian
   title: Software Engineer
   company: Dell
-  img_src: 
-  learn_url: 
+  img_src:
+  learn_url:
 - name: Student Jessica
   title: Web Developer
   company: IBM
-  img_src: 
-  learn_url: 
+  img_src:
+  learn_url:
 - name: Student Bobby
   title: UI Developer
   company: Indeed
-  img_src: 
-  learn_url: 
+  img_src:
+  learn_url:
 hero_text: Learn the most popular languages for making websites, web apps, games,
   animations, and mobile applications. In this track you'll learn front-end and back-end
   web development, some of today's most versatile and sought-after skills.
@@ -513,7 +513,13 @@ texastechuniversitycodingacademy:
           style="min-height: 350px;"
         >
           <div>
-            <div class="display-6 mb-4 pl-2 pl-sm-0">
+            <div
+              amp-fx="fade-in"
+              data-duration="600ms"
+              data-margin-start="1%"
+              data-margin-end="20%"
+              class="display-6 mb-4 pl-2 pl-sm-0"
+            >
               <strong>{{ course.code | liquify }}: {{ settings.courses[course.code].title | liquify }}</strong>
             </div>
             <div>
@@ -544,7 +550,7 @@ texastechuniversitycodingacademy:
   <!-- htmllint preset="$previous" -->
     <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html p_class="text-white" %}
+        {% include course-guide-form.html p_class="text-white" fade_fx="fade-in" fade_duration="600ms" margin_start="1%" margin_end="20%" %}
       </div>
     </div>
   </section>
