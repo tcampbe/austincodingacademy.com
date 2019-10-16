@@ -110,3 +110,5 @@ fields:
   - type: text
     name: rocketchat
     label: rocketchat
+pages:
+- tutors.html
