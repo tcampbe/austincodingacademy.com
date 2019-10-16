@@ -1,0 +1,112 @@
+---
+label: Tutors
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: head_title
+  label: head_title
+- type: text
+  name: description
+  label: description
+- type: list
+  name: redirect_from
+  label: redirect_from
+- type: list
+  name: amp_components
+  label: amp_components
+- type: boolean
+  name: tutors
+  label: tutors
+- type: field_group_list
+  name: austincodingacademy
+  label: austincodingacademy
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: id
+    label: id
+  - type: list
+    name: skills
+    label: skills
+  - type: text
+    name: email
+    label: email
+  - type: list
+    name: location
+    label: location
+  - type: text
+    name: calendar
+    label: calendar
+  - type: text
+    name: virtual
+    label: virtual
+  - type: text
+    name: rocketchat
+    label: rocketchat
+- type: field_group_list
+  name: lubbockcodingacademy
+  label: lubbockcodingacademy
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: id
+    label: id
+  - type: list
+    name: skills
+    label: skills
+  - type: text
+    name: limitation
+    label: limitation
+  - type: text
+    name: email
+    label: email
+  - type: list
+    name: location
+    label: location
+  - type: text
+    name: calendar
+    label: calendar
+  - type: text
+    name: virtual
+    label: virtual
+  - type: text
+    name: rocketchat
+    label: rocketchat
+- type: field_group_list
+  name: dell
+  label: dell
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: id
+    label: id
+  - type: list
+    name: skills
+    label: skills
+  - type: text
+    name: email
+    label: email
+  - type: list
+    name: location
+    label: location
+  - type: text
+    name: calendar
+    label: calendar
+  - type: text
+    name: virtual
+    label: virtual
+  - type: text
+    name: rocketchat
+    label: rocketchat
