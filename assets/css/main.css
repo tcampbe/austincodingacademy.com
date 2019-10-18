@@ -41,7 +41,6 @@
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: 400;
-  font-display: auto;
   src: url(/assets/fonts/fa-brands-400.eot);
   src: url(/assets/fonts/fa-brands-400.eot?#iefix) format('embedded-opentype'),
     url(/assets/fonts/fa-brands-400.woff2) format('woff2'),
@@ -55,7 +54,6 @@
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
-  font-display: auto;
   src: url(/assets/fonts/fa-regular-400.eot);
   src: url(/assets/fonts/fa-regular-400.eot?#iefix) format('embedded-opentype'),
     url(/assets/fonts/fa-regular-400.woff2) format('woff2'),
@@ -69,7 +67,6 @@
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
-  font-display: auto;
   src: url(/assets/fonts/fa-solid-900.eot);
   src: url(/assets/fonts/fa-solid-900.eot?#iefix) format('embedded-opentype'),
     url(/assets/fonts/fa-solid-900.woff2) format('woff2'),
@@ -324,10 +321,14 @@ a {
 
 #bg-404 {
   background-image: url(https://austincodingacademy.github.io/front/assets/svg/illustrations/error-404.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 45%;
 }
 
 .hero {
   min-height: 78vh;
+  width: 100vw;
   background-position: 0 -1px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -340,7 +341,7 @@ a {
 #hero-index {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7)),
     url('/assets/images/hero-index.jpg');
-  background-position: top;
+  background-position: -820px 0px;
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
@@ -361,41 +362,72 @@ a {
   }
 }
 
-#hero-csharp {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
-    url('/assets/images/hero-csharp.jpg');
-  background-position: 50% 10%;
-  background-size: cover;
-}
-
 #hero-corporate {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-corporate.jpg');
-  background-position: top;
+  background-size: cover;
+  background-position: -20px 70px;
+}
+
+@media (min-width: 768px) {
+  #hero-corporate {
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+      url('/assets/images/hero-corporate.jpg');
+    background-position: 0px 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 #hero-js {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-javascript.jpg');
-  background-position: top;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #hero-js {
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+      url('/assets/images/hero-javascript.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 #hero-blog {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-blog.jpg');
-  background-position: center;
+  background-position: -330px 0px;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #hero-blog {
+    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+      url('/assets/images/hero-blog.jpg');
+    background-position: 0px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 #hero-landing {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-landing.jpg');
   background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #hero-events {
   background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
     url('/assets/images/hero-landing.jpg');
   background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* CUSTOM GRADIENTS */

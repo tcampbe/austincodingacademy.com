@@ -12,6 +12,7 @@ amp_components:
 - amp-lightbox
 - amp-video
 - amp-youtube
+- amp-fx
 cover_video:
   src: "/assets/videos/aca-intro.webm"
   src_mp4: "/assets/videos/aca-intro.mp4"
@@ -25,6 +26,7 @@ stories:
     of the best decisions I've made.
   name: Lillian Situ
   position: Software Engineer, data.world
+  src: ''
 - src_id: pjSBt1LW9pc
   title: Greg Swan video review of Austin Coding Academy
   quote: ACA ... gave me a solid foundation of knowledge, taught me what not to do,
@@ -32,11 +34,9 @@ stories:
     to put in the work.
   name: Greg Swan
   position: Web Developer, Kinetic Theory
+  src: ''
 heading: Change Your Life With a New Career
 subheading: Part-time coding classes taught by local full-time developers
-lightbox_youtube:
-  src_id: UGW-v_uam4k
-  title: The Moment I Realized My Life Was Changed
 features:
 - heading: Flexible Schedule
   title: Keep Your Day Job While You Make a Career Change
@@ -44,7 +44,7 @@ features:
     learning to code fits your schedule. Benefit from a “flipped classroom” approach,
     with hands-on classes led by instructors who work as professional developers during
     the day.
-  img: calendar_white.png
+  img: calendar_yellow.png
   square: true
   alt: Calendar graphic
 - heading: Affordable Tuition
@@ -52,7 +52,7 @@ features:
   description: Cover your tuition by paying course-by-course or for the entire program
     up front, (and saving). Contact our admissions team to discuss how {{ key_settings.school
     }} can work for you.
-  img: wallet_white.png
+  img: wallet_red.png
   square: true
   alt: Wallet graphic
 - heading: Unlimited Tutoring
@@ -60,7 +60,7 @@ features:
   description: Stay on track with your coursework by taking advantage of free unlimited
     tutoring. You can book 1-on-1 help on your schedule or take advantage of weekend
     group tutoring at both of our campuses.
-  img: tutoring-white.png
+  img: tutoring_blue.png
   alt: Pencil graphic
   square: false
 - heading: Job Placement
@@ -69,18 +69,56 @@ features:
     taught by professional developers. Receive 1-on-1 attention from our Director
     of Job Placement. Build your resume, practice interviews, and more in our Job
     Placement Course.
-  img: suitcase_white.png
+  img: suitcase_green.png
   square: true
   alt: Suitcase graphic
 austincodingacademy:
-  nextStartDate: April 2nd
+  nextStartDate: October 21st
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
+  lightbox_youtube:
+    src_id: UGW-v_uam4k
+    title: The Moment I Realized My Life Was Changed
 lubbockcodingacademy:
-  nextStartDate: July 22nd
+  nextStartDate: October 15th
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
 texastechuniversitycodingacademy:
-  nextStartDate: April 2nd
+  nextStartDate: Early 2020
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
+  features:
+  - heading: Flexible Schedule
+    title: Keep Your Day Job While You Make a Career Change
+    description: In-person, part-time classes meet twice a week in the evenings, so
+      learning to code fits your schedule. Benefit from a “flipped classroom” approach,
+      with hands-on classes led by instructors who work as professional developers during
+      the day.
+    img: calendar_white.png
+    square: true
+    alt: Calendar graphic
+  - heading: Affordable Tuition
+    title: We Work with Our Students to Make Tuition Manageable
+    description: Cover your tuition by paying course-by-course or for the entire program
+      up front, (and saving). Contact our admissions team to discuss how {{ key_settings.school
+      }} can work for you.
+    img: wallet_white.png
+    square: true
+    alt: Wallet graphic
+  - heading: Unlimited Tutoring
+    title: ''
+    description: Stay on track with your coursework by taking advantage of free unlimited
+      tutoring. You can book 1-on-1 help on your schedule or take advantage of weekend
+      group tutoring at both of our campuses.
+    img: tutoring_white.png
+    alt: Pencil graphic
+    square: false
+  - heading: Job Placement
+    title: You’ll Learn Skills That Will Get You a Job
+    description: Develop skills that employers are looking for with our practical curriculum,
+      taught by professional developers. Receive 1-on-1 attention from our Director
+      of Job Placement. Build your resume, practice interviews, and more in our Job
+      Placement Course.
+    img: suitcase_white.png
+    square: true
+    alt: Suitcase graphic
 
 ---
 {% for _page in site.pages %}
@@ -143,123 +181,127 @@ texastechuniversitycodingacademy:
         >
           Learn More
         </a>
-        <a
-          class="btn cta-gradient text-white hover-white btn-round mr-2 d-none d-md-block"
-          on="tap:testimonial-lightbox"
-          tabindex="0"
-          rel="noopener"
-          >
-          <span class="hover-white text-white">
-            Hear From a Student
-          </span>
-        </a>
-        <!-- Lightbox Testimonial Video -->
-        {% assign testimonial = page.lightbox_youtube %}
-        <amp-lightbox
-          id="testimonial-lightbox"
-          class="lightbox"
-          layout="nodisplay"
-          on="tap:testimonial-lightbox.close"
-          tabindex="0"
-          role="dialog"
-        >
-          <div
-            class="w-75 w-sm-50 mx-auto mt-100"
-            on="tap:testimonial-lightbox.open"
+        {% if school.lightbox_youtube %}
+          <a
+            class="btn cta-gradient text-white hover-white btn-round mr-2 d-none d-md-block"
+            on="tap:testimonial-lightbox"
             tabindex="0"
-            role="button"
+            rel="noopener"
           >
-            <amp-youtube
-              data-videoid="{{ testimonial.src_id }}"
-              width="480"
-              height="270"
+            <span class="hover-white text-white">
+              Hear From a Student
+            </span>
+          </a>
+          <!-- Lightbox Testimonial Video -->
+          {% assign testimonial = school.lightbox_youtube %}
+          <amp-lightbox
+            id="testimonial-lightbox"
+            class="lightbox"
+            layout="nodisplay"
+            on="tap:testimonial-lightbox.close"
+            tabindex="0"
+            role="dialog"
+          >
+            <div
+              class="w-75 w-sm-50 mx-auto mt-100"
+              on="tap:testimonial-lightbox.open"
               tabindex="0"
-              role="presentation"
-              layout="responsive"
-              title="{{ testimonial.title | liquify }}"
-              autoplay
+              role="button"
             >
-            </amp-youtube>
-            <!-- CTA Form -->
-            <form
-              action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.cta_form_guid }}"
-              target="_top"
-              method="POST"
-              tabindex="-1"
-              role="form"
-              class="mt-2 w-100"
-            >
-              <input name="school" type="hidden" value="{{ key_settings.school }}">
-              <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
-              <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink }}">
-              <input name="hutk" type="hidden" value="">
-              <div class="form-container d-flex flex-column align-items-center">
-                <div class="d-flex justify-content-between w-100">
-                  <div class="w-50 mr-2">
-                    <label class="text-white" for="first-name">First Name:</label>
-                    <input
-                      id="first-name"
-                      class="form-control"
-                      name="firstname"
-                      type="text"
-                      placeholder="First Name"
-                      required data-msg="Please enter your first name."
-                      data-error-class="u-has-error"
-                      data-success-class="u-has-success"
-                    >
+              <amp-youtube
+                data-videoid="{{ testimonial.src_id }}"
+                width="480"
+                height="270"
+                tabindex="0"
+                role="presentation"
+                layout="responsive"
+                title="{{ testimonial.title | liquify }}"
+                autoplay
+              >
+              </amp-youtube>
+              <!-- CTA Form -->
+              <form
+                action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.cta_form_guid }}"
+                target="_top"
+                method="POST"
+                tabindex="-1"
+                role="form"
+                class="mt-2 w-100"
+              >
+                <input name="school" type="hidden" value="{{ key_settings.school }}">
+                <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
+                <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink }}">
+                <input name="hutk" type="hidden" value="">
+                <div class="form-container d-flex flex-column align-items-center">
+                  <div class="d-flex justify-content-between w-100">
+                    <div class="w-50 mr-2">
+                      <label class="text-white" for="first-name">First Name:</label>
+                      <input
+                        id="first-name"
+                        class="form-control"
+                        name="firstname"
+                        type="text"
+                        placeholder="First Name"
+                        required data-msg="Please enter your first name."
+                        data-error-class="u-has-error"
+                        data-success-class="u-has-success"
+                      >
+                    </div>
+                    <div class="w-50 ml-2">
+                      <label class="text-white" for="email">Last Name:</label>
+                      <input
+                        id="last-name"
+                        class="form-control"
+                        name="lastname"
+                        type="text"
+                        placeholder="Last Name"
+                        required data-msg="Please enter your last name."
+                        data-error-class="u-has-error"
+                        data-success-class="u-has-success"
+                      >
+                    </div>
                   </div>
-                  <div class="w-50 ml-2">
-                    <label class="text-white" for="email">Last Name:</label>
-                    <input
-                      id="last-name"
-                      class="form-control"
-                      name="lastname"
-                      type="text"
-                      placeholder="Last Name"
-                      required data-msg="Please enter your last name."
-                      data-error-class="u-has-error"
-                      data-success-class="u-has-success"
-                    >
+                  <div class="mt-2 d-flex justify-content-between w-100">
+                    <div class="w-50 mr-2">
+                      <label class="text-white" for="email">Email Address:</label>
+                      <input
+                        id="email"
+                        class="form-control"
+                        name="email"
+                        type="email"
+                        placeholder="Email"
+                        required data-msg="Please enter a valid email address."
+                        data-error-class="u-has-error"
+                        data-success-class="u-has-success"
+                      >
+                    </div>
+                    <div class="w-50 ml-2">
+                      <label class="text-white" for="phone">Phone Number:</label>
+                      <input
+                        id="phone"
+                        class="form-control"
+                        name="phone"
+                        type="phone"
+                        placeholder="Phone Number"
+                        required data-msg="Please enter a valid phone number."
+                        data-error-class="u-has-error"
+                        data-success-class="u-has-success"
+                      >
+                    </div>
                   </div>
+                  <button
+                    type="submit"
+                    class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white mt-4"
+                  >
+                    Get in Touch
+                  </button>
                 </div>
-                <div class="mt-2 d-flex justify-content-between w-100">
-                  <div class="w-50 mr-2">
-                    <label class="text-white" for="email">Email Address:</label>
-                    <input
-                      id="email"
-                      class="form-control"
-                      name="email"
-                      type="email"
-                      placeholder="Email"
-                      required data-msg="Please enter a valid email address."
-                      data-error-class="u-has-error"
-                      data-success-class="u-has-success"
-                    >
-                  </div>
-                  <div class="w-50 ml-2">
-                    <label class="text-white" for="phone">Phone Number:</label>
-                    <input
-                      id="phone"
-                      class="form-control"
-                      name="phone"
-                      type="phone"
-                      placeholder="Phone Number"
-                      required data-msg="Please enter a valid phone number."
-                      data-error-class="u-has-error"
-                      data-success-class="u-has-success"
-                    >
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white mt-4"
-                >
-                  Get in Touch
-                </button>
-              </div>
-            </form>
-          </div>
-        </amp-lightbox>
+              </form>
+            </div>
+          </amp-lightbox>
+        {% else %}
+          {% include btn-apply.html %}
+        {% endif %}
       </div>
     </div>
   </div>
@@ -325,7 +367,8 @@ texastechuniversitycodingacademy:
         Here's how:
       </p>
       <div>
-        {% for feature in page.features %}
+        {% assign features = school.features | default: page.features %}
+        {% for feature in features %}
           <div class="col-12">
             <div class="row d-flex justify-content-center align-items-center">
               <!-- Image -->
@@ -397,7 +440,6 @@ texastechuniversitycodingacademy:
                   height="150px"
                   tabindex="0"
                   role="presentation"
-                  sandbox="allow-scripts allow-same-origin"
                   layout="responsive"
                   title="{{ story.title | liquify }}"
                 >

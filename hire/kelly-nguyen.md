@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ graduation, hire, austincodingacademy ] # don't touch
+categories: [ hire, austincodingacademy ] # don't touch
 
 fullname: Kelly Nguyen
 jobtitle: JavaScript Developer
@@ -54,7 +54,7 @@ education:
     degree: Web Development
 
 projects:
-  - name: CarePortal
-    desc: This application serves to bolster the support of local organizations and provide to families in need by creating a catalogue of items available, donated by the community
-    url: https://google.com/
+  - name: WhereToNext
+    desc: Discover National Parks and fulfill your wanderlust dreams
+    url: https://where-to-next-np.herokuapp.com/
 ---

@@ -167,10 +167,9 @@ lubbockcodingacademy:
         and practice is paramount; as with learning a spoken language, if you don't
         use it you lose it.
     - question: What kind of computer do I need?
-      answer: Just about any Mac or Windows laptop built within the last five or six
-        years will do. If you have a choice, we recommend a Mac, but there's no need
-        to buy a mac if you have a functional Windows machine. We do discourage Chromebooks
-        and Tablets.
+      answer: Just about any Windows laptop built within the last five or six years
+        will do. Our curriculum centers around C# .Net, which works best on a Windows
+        machine. We do discourage Chromebooks and Tablets.
 texastechuniversitycodingacademy:
   categories:
   - title: Frequently Asked Questions
@@ -330,4 +329,25 @@ texastechuniversitycodingacademy:
       {% include contact-form.html %}
     </div>
   </section>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for category in city.categories %}
+          {% for faq in categories.faqs %}
+          {
+            "@type": "Question",
+            "name": "{{ faq.question | liquify }}"",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "{{ faq.answer | liquify }}"
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        {% endfor %}
+      ]
+    }
+  </script>
 </div>
