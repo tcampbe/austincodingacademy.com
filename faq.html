@@ -336,7 +336,7 @@ texastechuniversitycodingacademy:
       "@type": "FAQPage",
       "mainEntity": [
         {% for category in city.categories %}
-          {% for faq in categories.faqs %}
+          {% for faq in category.faqs %}
           {
             "@type": "Question",
             "name": "{{ faq.question | liquify }}"",
