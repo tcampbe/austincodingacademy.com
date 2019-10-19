@@ -1,13 +1,23 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- htmllint preset="$previous" -->
 <meta charset="utf-8" />
 <title>
-  {% assign key_page = page[site.key] %}
   {{ page.head_title | default: settings.head_title | liquify }}
 </title>
 
@@ -32,10 +42,10 @@
 <!-- htmllint preset="none" -->
 <style amp-custom>
   :root {
-    --primary-light: {{ key_settings.primary_light_color }};
-    --primary-dark: {{ key_settings.primary_dark_color }};
-    --secondary-light: {{ key_settings.secondary_light_color }};
-    --secondary-dark: {{ key_settings.secondary_dark_color }};
+    --primary-light: {{ school.primary_light_color | replace: 'rgb(', '' | replace: ')', '' }};
+    --primary-dark: {{ school.primary_dark_color | replace: 'rgb(', '' | replace: ')', '' }};
+    --secondary-light: {{ school.secondary_light_color | replace: 'rgb(', '' | replace: ')', '' }};
+    --secondary-dark: {{ school.secondary_dark_color | replace: 'rgb(', '' | replace: ')', '' }};
   }
   {% include css.html %}
 </style>
@@ -44,7 +54,7 @@
 {% include google-tag-manager-head.html %}
 
 {% if site.baseurl == '/amp' %}
-  <link rel="canonical" href="{{ key_settings.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ school.url }}{{ page.url }}">
 {% else %}
-  <link rel="amphtml" href="{{ key_settings.url }}/amp{{ page.url }}">
+  <link rel="amphtml" href="{{ school.url }}/amp{{ page.url }}">
 {% endif %}

@@ -1,16 +1,27 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="d-flex justify-content-center mt-3">
   <h2 class="mx-auto mb-5 display-6 font-family-alt font-weight-bold">
     We are located at:
   </h2>
 </div>
 <div class="row text-center">
-  {% for location in key_settings.locations %}
+  {% for location in school.locations %}
     <div class="col-12 col-md mt-5 mt-md-0">
       <div class="mb-2">
         <h5 class="font-weight-bold m-0">

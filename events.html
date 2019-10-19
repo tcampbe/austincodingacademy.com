@@ -2,19 +2,34 @@
 layout: default
 permalink: "/events/"
 redirect_from: []
-head_title: Events | {{ key_settings.school }}
+head_title: Events | {{ school.name }}
 amp_components:
 - amp-img
 - amp-lightbox
 heading: Upcoming Events
-subheading: Come join {{ key_settings.school }} at one of our next events! Whether you'd
+subheading: Come join {{ school.name }} at one of our next events! Whether you'd
   like a free introduction to coding, to attend an open house, network with us at
   one of our monthly happy hours, or anything else – check out our upcoming events
   for opportunities to meet and join our growing community.
 
 ---
-{% assign school = page[site.key] %}
-
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- htmllint preset="none" -->
 <div id="hero-events" class="bg-gradient py-5 py-md-11">
 <!-- htmllint preset="$previous" -->

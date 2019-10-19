@@ -4,9 +4,20 @@ layout: default
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- ========== MAIN ========== -->
 <main id="content" role="main" class="mt-90">
   <!-- Description Section -->
@@ -154,11 +165,11 @@ layout: default
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}"
+        "@id": "{{ school.url }}{{ site.baseurl }}{{ page.url }}"
       },
       "headline": "{{ page.title | liquify }}",
       "image": [
-        "{{ key_settings.url }}{{ page.img | liquify }}"
+        "{{ school.url }}{{ page.img | liquify }}"
         ],
       "datePublished": "{{ page.created_at }}",
       "dateModified": "{{ page.updated_at }}",
@@ -168,10 +179,10 @@ layout: default
       },
         "publisher": {
         "@type": "Organization",
-        "name": "{{ key_settings.school }}",
+        "name": "{{ school.name }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ key_settings.url }}/assets/images/logo-{{ site.key }}.png"
+          "url": "{{ school.url }}/assets/images/logo-{{ site.key }}.png"
         }
       },
       "description": "{{ page.excerpt | liquify }}"
