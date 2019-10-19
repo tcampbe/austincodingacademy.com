@@ -2,8 +2,8 @@
 layout: default
 permalink: "/courses/wordpress-development/apply/"
 redirect_from:
-head_title: "Start Your Application | Apply Now at {{ key_settings.school }}"
-description: "Apply now to learn to code with {{ key_settings.school }} | Fill out your short application to get on the path to a career in web development."
+head_title: "Start Your Application | Apply Now at {{ school.name }}"
+description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 process:
 - heading: process1
   text: Lorem ipsum dolor sit amet.
@@ -21,9 +21,20 @@ process:
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
@@ -53,7 +64,7 @@ process:
     <!-- Proccess Application End -->
     <form
       class="d-flex justify-content-center"
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.application_wp_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.application_wp_form_guid }}"
       method="POST"
       target="_top"
     >
@@ -61,7 +72,7 @@ process:
         <input name="lifecyclestage" type="hidden" value="opportunity">
         <input name="filled_out_application" type="hidden" value="true">
         <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
-        <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink | liquify }}">
+        <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.permalink | liquify }}">
         <input name="hutk" type="hidden" value="">
         <h2 class="display-6 mb-4">
           About You
@@ -352,14 +363,14 @@ process:
                 <option value="Search engine">
                   Search engine
                 </option>
-                <option value="{{ key_settings.school }} event">
-                  {{ key_settings.school }} event
+                <option value="{{ school.name }} event">
+                  {{ school.name }} event
                 </option>
-                <option value="{{ key_settings.school }} faculty / staff">
-                  {{ key_settings.school }} faculty / staff
+                <option value="{{ school.name }} faculty / staff">
+                  {{ school.name }} faculty / staff
                 </option>
-                <option value="{{ key_settings.school }} student / alumni">
-                  {{ key_settings.school }} student / alumni
+                <option value="{{ school.name }} student / alumni">
+                  {{ school.name }} student / alumni
                 </option>
                 <option value="News (TV, article)">
                   News (TV, article)

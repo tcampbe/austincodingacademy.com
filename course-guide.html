@@ -1,16 +1,27 @@
 ---
 layout: default
 permalink: "/course-guide/"
-head_title: "Course Guide | {{ key_settings.school }}"
+head_title: "Course Guide | {{ school.name }}"
 description: ""
 redirect_from: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="container mt-90 space-2">
   <div class="card-deck d-flex justify-content-center">
     <!-- Card -->
@@ -20,7 +31,7 @@ redirect_from: []
           <h1>Thank You</h1>
           <p>
             <a
-              href="/web/viewer.html?file={{ key_settings.course_guide | liquify }}"
+              href="/web/viewer.html?file={{ school.course_guide | liquify }}"
               target="_blank"
               rel="noopener"
             >

@@ -1,10 +1,22 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
-    {% assign key = _page[site.key] %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- htmllint preset="none" -->
 <small class="text-center {{ padding | default: px-md-10 | liquify }}">
-  By submitting your information, you agree to our <a class="{{ include.class | liquify }}" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> and <a class="{{ include.class | liquify }}" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>, and to receive marketing communications from {{ key_settings.school }}.
+  By submitting your information, you agree to our <a class="{{ include.class | liquify }}" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> and <a class="{{ include.class | liquify }}" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>, and to receive marketing communications from {{ school.name }}.
 </small>
 <!-- htmllint preset="$previous" -->

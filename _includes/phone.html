@@ -1,20 +1,31 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- htmllint preset="none" -->
 {% if site.baseurl == '/amp' %}
-<amp-analytics config="https://swappy.callrail.com/companies/{{ key_settings.callrail_company_id }}/amp-analytics.json?cid=CLIENT_ID(cid-scope-cookie-fallback-name)"></amp-analytics>
+<amp-analytics config="https://swappy.callrail.com/companies/{{ school.callrail_company_id }}/amp-analytics.json?cid=CLIENT_ID(cid-scope-cookie-fallback-name)"></amp-analytics>
 
 <span class="d-flex align-items-center">
   <span class="{{ include.icon_class }}" aria-hidden="true"></span>&nbsp;
-  <amp-call-tracking config="https://swappy.callrail.com/companies/{{ key_settings.callrail_company_id }}/amp-swap.json?t={{ key_settings.phone }}&cid=CLIENT_ID(cid-scope-cookie-fallback-name)">
-    <a class="{{ include.a_class }}" href="tel:{{ key_settings.phone }}">{{ key_settings.phone | phone_number }}</a>
+  <amp-call-tracking config="https://swappy.callrail.com/companies/{{ school.callrail_company_id }}/amp-swap.json?t={{ school.phone }}&cid=CLIENT_ID(cid-scope-cookie-fallback-name)">
+    <a class="{{ include.a_class }}" href="tel:{{ school.phone }}">{{ school.phone | phone_number }}</a>
   </amp-call-tracking>
 </span>
 {% else %}
-<span>{% if include.icon_class %}<span class="{{ include.icon_class }}" aria-hidden="true"></span>&nbsp;{% endif %}<a class="{{ include.a_class }}" href="tel:{{ key_settings.phone }}">{{ key_settings.phone | phone_number }}</a></span>
+<span>{% if include.icon_class %}<span class="{{ include.icon_class }}" aria-hidden="true"></span>&nbsp;{% endif %}<a class="{{ include.a_class }}" href="tel:{{ school.phone }}">{{ school.phone | phone_number }}</a></span>
 {% endif %}
 <!-- htmllint preset="$previous" -->

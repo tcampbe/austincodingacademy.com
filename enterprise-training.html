@@ -11,9 +11,10 @@ heading: Corporate Training
 head_title: ""
 description: ""
 features_heading: Utilize the Benefits of Upskilling
-features_description: Develop talent, empower your team, save time on hiring, and more through Upskilling. {{ key_settings.school }} will work with you to
+features_description: Develop talent, empower your team, save time on hiring, and more through Upskilling. {{ school.name }} will work with you to
   understand your training needs, develop curriculums, and train your employees in the technologies your business needs.
-austincodingacademy:
+schools:
+- key: austincodingacademy
   features:
     - heading: Develop Your Team’s Talent
       text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
@@ -62,7 +63,7 @@ austincodingacademy:
       - RESTful APIs
       - Web VR
       - Spring/Spring Boot
-lubbockcodingacademy:
+- key: lubbockcodingacademy
   features:
     - heading: Develop Your Team’s Talent
       text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
@@ -111,7 +112,7 @@ lubbockcodingacademy:
       - RESTful APIs
       - Web VR
       - Spring/Spring Boot
-texastechuniversitycodingacademy:
+- key: texastechuniversitycodingacademy
   features:
     - heading: Develop Your Team’s Talent
       text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
@@ -164,10 +165,20 @@ texastechuniversitycodingacademy:
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
-{% assign city = page[site.key] %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero d-flex flex-column align-items-center justify-content-center py-5 py-md-11">
@@ -192,7 +203,7 @@ texastechuniversitycodingacademy:
           {{ page.features_description | liquify }}
         </p>
       </div>
-      {% for item in city.features %}
+      {% for item in school.features %}
         <div class="col-md-6 mb-5">
           <div class="row">
             <div class="col-3 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
@@ -236,9 +247,9 @@ texastechuniversitycodingacademy:
     <section class="container">
       <div class="row pt-4 pb-3 d-flex flex-column align-items-center">
         <h2 class="text-center col-12 pt-6 pb-6 font-family-alt display-5">
-          {{ city.sections_heading | liquify }}
+          {{ school.sections_heading | liquify }}
         </h2>
-        {% for section in city.sections %}
+        {% for section in school.sections %}
           <section class="mw-850 mb-3">
             <div class="container-fluid py-3">
               <h2 class="mb-4 font-family-alt font-weight-bold">
@@ -271,7 +282,7 @@ texastechuniversitycodingacademy:
       Request Training Listings
     </h2>
     <p class="mw-600 mx-auto text-center mb-4">
-      Interested in learning with {{ key_settings.school }}? Request our training listings today and we’ll get in touch!
+      Interested in learning with {{ school.name }}? Request our training listings today and we’ll get in touch!
     </p>
     <form class="d-flex justify-content-center align-items-center"
       target="_top"
@@ -282,7 +293,7 @@ texastechuniversitycodingacademy:
         <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
         <input name="hs_lead_status" type="hidden" value="NEW">
         <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
-        <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ page.url }}">
+        <input name="page_uri" type="hidden" value="{{ school.url }}{{ page.url }}">
         <input name="hutk" type="hidden" value="">
 
         <div class="row center-form">

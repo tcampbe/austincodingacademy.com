@@ -1,9 +1,9 @@
 ---
 layout: default
 permalink: "/"
-head_title: "{{ key_settings.school }} | Learn to Code, Change Your Life"
+head_title: "{{ school.name }} | Learn to Code, Change Your Life"
 hero: index
-description: At {{ key_settings.school }}, we fit learning to code into your life
+description: At {{ school.name }}, we fit learning to code into your life
   with a flexible &amp; affordable array of options, all taught by current industry
   professionals. Don’t wait - embark on a new career today!
 redirect_from: []
@@ -50,7 +50,7 @@ features:
 - heading: Affordable Tuition
   title: We Work with Our Students to Make Tuition Manageable
   description: Cover your tuition by paying course-by-course or for the entire program
-    up front, (and saving). Contact our admissions team to discuss how {{ key_settings.school
+    up front, (and saving). Contact our admissions team to discuss how {{ school.name
     }} can work for you.
   img: wallet_red.png
   square: true
@@ -72,16 +72,17 @@ features:
   img: suitcase_green.png
   square: true
   alt: Suitcase graphic
-austincodingacademy:
+schools:
+- key: austincoding
   nextStartDate: October 21st
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
   lightbox_youtube:
     src_id: UGW-v_uam4k
     title: The Moment I Realized My Life Was Changed
-lubbockcodingacademy:
+- key: lubbockcodingacademy
   nextStartDate: October 15th
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
-texastechuniversitycodingacademy:
+- key: texastechuniversitycodingacademy
   nextStartDate: Early 2020
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
   features:
@@ -97,7 +98,7 @@ texastechuniversitycodingacademy:
   - heading: Affordable Tuition
     title: We Work with Our Students to Make Tuition Manageable
     description: Cover your tuition by paying course-by-course or for the entire program
-      up front, (and saving). Contact our admissions team to discuss how {{ key_settings.school
+      up front, (and saving). Contact our admissions team to discuss how {{ school.name
       }} can work for you.
     img: wallet_white.png
     square: true
@@ -124,10 +125,21 @@ texastechuniversitycodingacademy:
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
-{% assign school = page[site.key] %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 <div class="position-relative d-flex justify-content-center flex-column overflow-hidden">
   <div class="pl-3 pl-sm-6 ml-sm-4 py-7 pb-md-11 position-absolute z-20 d-flex justify-content-center">
     <div class="col-8 col-md-10 col-lg-10 pl-0">
@@ -168,7 +180,7 @@ texastechuniversitycodingacademy:
               OR
             </h4>
             <a class="my-5 btn btn-light btn-round mr-2 d-md-none"
-              href="tel:{{ key_settings.phone | liquify }}"
+              href="tel:{{ school.phone | liquify }}"
             >
               Call Us Now!
             </a>
@@ -221,16 +233,16 @@ texastechuniversitycodingacademy:
               </amp-youtube>
               <!-- CTA Form -->
               <form
-                action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.cta_form_guid }}"
+                action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.cta_form_guid }}"
                 target="_top"
                 method="POST"
                 tabindex="-1"
                 role="form"
                 class="mt-2 w-100"
               >
-                <input name="school" type="hidden" value="{{ key_settings.school }}">
+                <input name="school" type="hidden" value="{{ school.name }}">
                 <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
-                <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink }}">
+                <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.permalink }}">
                 <input name="hutk" type="hidden" value="">
                 <div class="form-container d-flex flex-column align-items-center">
                   <div class="d-flex justify-content-between w-100">
@@ -340,7 +352,7 @@ texastechuniversitycodingacademy:
       We Are Committed To Your Success
     </h2>
     <p class="mw-600 mx-auto text-center">
-      From learning to code, to landing your job, our team has your back. At {{ key_settings.school }}
+      From learning to code, to landing your job, our team has your back. At {{ school.name }}
       you can learn coding in a classroom setting that works with your busy schedule, and be a part of
       our community, supporting and inspiring each other to be more than just coders.
     </p>
@@ -416,7 +428,7 @@ texastechuniversitycodingacademy:
       </div>
     </div>
   </section>
-  {% if key_settings.course_guide %}
+  {% if school.course_guide %}
   <!-- Course Guide Form -->
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
     {% include course-guide-form.html %}

@@ -1,16 +1,27 @@
 ---
 layout: default
 permalink: "/student-grievances/"
-head_title: "Student Grievance Policy | {{ key_settings.school }}"
+head_title: "Student Grievance Policy | {{ school.name }}"
 description: ""
 redirect_from: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="container mw-850 mt-90 pt-1 pb-5">
   <div class="p-5 border">
     <h2 class="font-family-alt font-weight-bold display-5 text-center mb-5">
@@ -60,7 +71,7 @@ redirect_from: []
         <li>http://csc.twc.state.tx.us/</li>
       </ul>
       <p>
-        {{ key_settings.school }} and its affiliated schools operate with a certificate
+        {{ school.name }} and its affiliated schools operate with a certificate
         of Approval from the Texas Workforce Commission. The TWC-assigned school
         numbers are shown below. Our programs are approved by the Texas Workforce
         Commission.

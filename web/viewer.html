@@ -1,6 +1,23 @@
 ---
 permalink: "/web/viewer.html"
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!DOCTYPE html>
 <!--
 Copyright 2012 Mozilla Foundation
@@ -34,8 +51,7 @@ See https://github.com/adobe-type-tools/cmap-resources
       content="{{ city.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
     />
     <title>
-      {% assign city = page[site.key] %}
-      {{ city.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
+      {{ settings.title }}
     </title>
 
     <link rel="stylesheet" href="../assets/css/viewer.css">
