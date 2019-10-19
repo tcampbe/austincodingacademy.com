@@ -328,12 +328,11 @@ role_sections:
     <!-- end overview blocks -->
   </section>
 
-  <!-- <section class="py-8 container">
+  {% comment %} <section class="py-8 container">
     <div class="font-family-alt display-6 mb-4 pt-2">
       Course Structure
     </div>
     <div class="d-flex flex-column align-items-center mt-4">
-      <!-- course cards start -->
       {% for module in page.modules %}
         <div
           class="bg-white mx-sm-auto border shadow mb-4 px-4 pt-4 pt-sm-0 d-flex flex-wrap align-items-center justify-content-between rounded"
@@ -350,13 +349,12 @@ role_sections:
           </div>
         </div>
       {% endfor %}
-      <!-- course cards end -->
     </div>
 
     <div class="d-flex justify-content-center mt-4">
       {% include btn-apply.html href="/courses/wordpress-development/apply/" %}
     </div>
-  </section> -->
+  </section> {% endcomment %}
 
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid py-8 {{ page.hero | liquify }}-gradient">
@@ -526,6 +524,11 @@ role_sections:
   </section>
 
   {% for course in page.courses %}
+    {% for __course in settings.courses %}
+      {% if __course.code == _course.code %}
+        {% assign course = __course | hash_concat: _course %}
+      {% endif %}
+    {% endfor %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

@@ -33,11 +33,11 @@
             {% for location in school.locations %}
               <div class="my-2">
                 <a
-                  href="{{ location[1].url }}"
+                  href="{{ location.url }}"
                   class="d-flex text-white hover-white"
                 >
                   <i class="fas fa-map-marker-alt pt-1 hover-white text-white" aria-hidden="true"></i>
-                  <div class="hover-white text-white">&nbsp;{{ location[1].campus | liquify }}</div>
+                  <div class="hover-white text-white">&nbsp;{{ location.name | liquify }}</div>
                 </a>
               </div>
             {% endfor %}
@@ -115,10 +115,10 @@
       {% for location in school.locations %}
         {
           "@type": "PostalAddress",
-          "streetAddress": "{{ location[1].street | liquify }}",
-          "addressLocality": "{{ location[1].city }}",
-          "addressRegion": "{{ location[1].state | liquify }}",
-          "postalCode": "{{ location[1].postal }}",
+          "streetAddress": "{{ location.street | liquify }}",
+          "addressLocality": "{{ location.city }}",
+          "addressRegion": "{{ location.state | liquify }}",
+          "postalCode": "{{ location.postal }}",
           "addressCountry": "US"
         }{% unless forloop.last %},{% endunless %}
       {% endfor %}

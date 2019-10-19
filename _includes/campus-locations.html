@@ -25,15 +25,15 @@
     <div class="col-12 col-md mt-5 mt-md-0">
       <div class="mb-2">
         <h5 class="font-weight-bold m-0">
-          {{ location[1].campus | liquify }}
+          {{ location.name | liquify }}
         </h5>
         <small>
-          {{ location[1].street | liquify }}<br>
-          {{ location[1].city }}, {{ location[1].state | liquify }} {{ location[1].postal }}
+          {{ location.street | liquify }}<br>
+          {{ location.city }}, {{ location.state | liquify }} {{ location.postal }}
         </small>
       </div>
       <amp-iframe
-        src="{{ location[1].url }}"
+        src="{{ location.url }}"
         width="525"
         height="242"
         layout="responsive"

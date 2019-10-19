@@ -39,17 +39,17 @@ redirect_from: []
         <!-- htmllint preset="none" -->
         <a
           class="text-default"
-          href="{{ location[1].url }}"
+          href="{{ location.url }}"
           target="_blank"
           rel="noopener"
         >
         <!-- htmllint preset="$previous" -->
           <ul class="fa-ul">
             <li>
-              <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> {{ location[1].campus | liquify }}
+              <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> {{ location.name | liquify }}
             </li>
-            <li>{{ location[1].street | liquify }}</li>
-            <li>{{ location[1].city }}, {{ location[1].state | liquify }} {{ location[1].postal }}</li>
+            <li>{{ location.street | liquify }}</li>
+            <li>{{ location.city }}, {{ location.state | liquify }} {{ location.postal }}</li>
           </ul>
         </a>
       {% endfor %}
