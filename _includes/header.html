@@ -50,10 +50,15 @@
           {{ item.title | liquify }}
         </span>
         <ul class="list-unstyled text-left pl-3">
-          {% for track in school.tracks %}
+          {% for _track in school.tracks %}
+            {% for __track in settings.tracks %}
+              {% if _track == __track.name %}
+                {% assign track = __track %}
+              {% endif %}
+            {% endfor %}
             <li>
-              <a href="{{ settings.tracks[track].url }}" class="hover-white">
-                {{ settings.tracks[track].name | liquify }}
+              <a href="{{ track.url }}" class="hover-white">
+                {{ track.name | liquify }}
               </a>
             </li>
           {% endfor %}
@@ -144,13 +149,18 @@
                     {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
                   </span>
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
-                    {% for track in school.tracks %}
+                    {% for _track in school.tracks %}
+                      {% for __track in settings.tracks %}
+                        {% if _track == __track.name %}
+                          {% assign track = __track %}
+                        {% endif %}
+                      {% endfor %}
                       <li class="position-relative p-0 my-2">
                         <!-- htmllint preset="none" -->
-                        <a class="p-0" href="{{ settings.tracks[track].url }}">
+                        <a class="p-0" href="{{ track.url }}">
                           <!-- htmllint preset="$previous" -->
                           <span class="text-white hover-white">
-                            {{ settings.tracks[track].name | liquify }}
+                            {{ track.name | liquify }}
                           </span>
                         </a>
                       </li>
