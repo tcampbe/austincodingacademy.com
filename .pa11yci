@@ -26,9 +26,9 @@
     "http://localhost:4000/tuition/",
     "http://localhost:4000/tutoring/",
     "http://localhost:4000/tutors/",
-    "http://localhost:4000/web-development/",
+    "http://localhost:4000/courses/web-development/",
     "http://localhost:4000/web/",
-    "http://localhost:4000/wordpress-apply/"
-    "http://localhost:4000/wordpress-development/"
+    "http://localhost:4000/courses/wordpress-apply/"
+    "http://localhost:4000/courses/wp-engine-support-wordpress-fundamentals/"
   ]
 }
