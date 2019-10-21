@@ -39,19 +39,23 @@ program_overview: "Austin Coding Academy and WP Engine have partnered together t
   makes dozens of new hires annually to support their growing customer base.<br><br>
   Continue reading to learn more about the course curriculum, WP Engine, and the details of the support specialist role."
 overview_img: "/assets/images/wpengine2.jpg"
-highlights:
+
+overview:
 - title: Part-Time Classes
   text: "Classes meet twice weekly during the evenings from 6:30 – 9:00 pm, meaning that you don't have to give up your income while you train for a new career.
-    The entire WordPress program last 8 weeks, at the end of which you'll have all the tools necessary to either pursue a career as a WordPress developer,
-    or interview for a support role with WP Engine."
+    The entire course is 10-weeks in length, at the end of which you'll be guaranteed an interview with WP Engine, as well as have a strong understanding of core WordPress Fundamentals."
+  img_src: "/assets/images/wpengine3.jpg"
+  odd: true
 - title: Practical Curriculum
-  text: "Our project-based WordPress curriculum, taught by a professional developer, focuses on teaching the most important WordPress proficiencies through
-    building and troubleshooting your own real websites. In addition to developing your WordPress skills, the course will also cover customer/client interactions
-    and WP Engine support practices to prepare you for the opportunity to work as a Technical support specialist."
+  text: "Our project-based WordPress curriculum, taught by a professional WordPress Developer, focuses on teaching the most important WordPress proficiencies through
+    building and troubleshooting your own real websites. As you build your projects, you’ll gain a strong understanding of WordPress problems and issues that you’ll
+    be required to solve as a support specialist with WP Engine."
+  img_src: "/assets/images/wpengine4.jpg"
 - title: Unlimited Tutoring
-  text: "All Austin Coding Academy students have access to unlimited tutoring. Choose whether you want to meet with a tutor in-person or via video chat, and book
-    your session through our tutoring portal. Whether you need help on nights, weekends, or during the day – Austin Coding Academy tutors are here to help you work
-    through your barriers."
+  text: "All Austin Coding Academy students have access to unlimited tutoring. Choose whether you want to meet with a tutor in-person or via video chat, and book your session
+    through our tutoring portal. Whether you need help on nights, weekends, or during the day – Austin Coding Academy tutors are here to help you work through your barriers."
+  img_src: "/assets/images/wpengine5.jpg"
+  odd: true
 
 about:
 - title: "WP Engine: The WordPress Digital Experience Platform"
@@ -245,56 +249,50 @@ role_sections:
       Program Overview
     </h2>
     <section class="container d-flex flex-column py-8 justify-content-center align-items-center">
-        <div class="ml-2 w-100 font-family-alt display-6 mb-6">
-          Our Partnership with WP Engine
+      {% for item in page.overview %}
+        <div class="d-flex">
+          {% if item.odd %}
+            <div class="w-50">
+              <h3>
+                {{ item.title }}
+              </h3>
+              <p>
+                {{ item.text }}
+              </p>
+            </div>
+            <div class="w-50">
+              <amp-img
+                layout="responsive"
+                class="img-fluid"
+                width="3535"
+                height="2146"
+                src="{{ item.img_src | liquify }}"
+              >
+              </amp-img>
+            </div>
+          {% else %}
+            <div class="w-50">
+              <amp-img
+                layout="responsive"
+                class="img-fluid"
+                width="3535"
+                height="2146"
+                src="{{ item.img_src | liquify }}"
+              >
+              </amp-img>
+            </div>
+            <div class="w-50">
+              <h3>
+                {{ item.title }}
+              </h3>
+              <p>
+                {{ item.text }}
+              </p>
+            </div>
+          {% endif %}
         </div>
-        <div class="mb-6 px-2 w-100">
-          <amp-img
-            layout="responsive"
-            class="img-fluid shadow-black"
-            width="825"
-            height="343"
-            src="{{ page.overview_img | liquify }}"
-          >
-          </amp-img>
-        </div>
-        <div>
-          {{ page.program_overview | liquify }}
-        </div>
+      {% endfor %}
     </section>
-    <div class="d-flex flex-column">
-      <div class="text-left display-6 my-4 pl-0 pl-sm-2 font-family-alt">
-        Program Highlights
-      </div>
-      <!-- overview blocks -->
-      <div class="d-flex justify-content-between text-center flex-column flex-sm-row flex-wrap flex-md-nowrap">
-        {% for item in page.highlights %}
-          <div class="card shadow col-sm mx-auto mx-sm-2 pt-2 my-2">
-            <h4 class="mb-4">
-              {{ item.title | liquify }}
-            </h4>
-            <p>
-              {{ item.text | liquify }}
-            </p>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-    <!-- end overview blocks -->
-  </section>
-
-  <div class="d-flex justify-content-center mb-6">
-    {% include btn-apply.html href="/courses/wp-engine-support-wordpress-fundamentals/apply/" %}
-  </div>
-
-  <!-- htmllint preset="none" -->
-  <section id="course-guide" class="container-fluid py-8 {{ page.hero | liquify }}-gradient">
-  <!-- htmllint preset="$previous" -->
-    <div class="row justify-content-center">
-      <div class="col-md-8 text-white">
-        {% include course-guide-form.html p_class="text-white" %}
-      </div>
-    </div>
   </section>
 
   <!-- ABOUT -->
