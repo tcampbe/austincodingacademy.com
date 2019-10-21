@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: "/courses/wordpress-development/"
+permalink: "/courses/wp-engine-support-wordpress-fundamentals/"
 amp_components: ['amp-carousel']
 redirect_from: []
 hero: js
@@ -169,30 +169,17 @@ role_sections:
         <div class="mx-0 mx-sm-auto p-4 w-100 w-sm-50">
           {{ page.program_descript | liquify }}
         </div>
-        <div class="w-100 w-sm-50 d-flex flex-column align-items-center justify-content-center">
-          <!-- ACA -->
-          <div class="w-100 d-flex justify-content-around align-items-center mt-4">
-            <div class="ml-2 ml-sm-4" style="width: 100px;">
-              <amp-img
-                src="/assets/images/logo-austincodingacademy.png"
-                layout="responsive"
-                width="100px"
-                height="100px"
-                alt="austincodingacademy-logo"
-              >
-              </amp-img>
-            </div>
-            <!-- WP-ENGINE -->
-            <div style="width: 320px;">
-              <amp-img
-                src="/assets/images/wp-engine-horizontal.png"
-                layout="responsive"
-                width="720px"
-                height="185px"
-                alt="wp-engine-logo"
-              >
-              </amp-img>
-            </div>
+        <div class="w-100 w-sm-50 mt-4 d-flex flex-column align-items-center justify-content-center">
+          <!-- WP-ENGINE LOGO-->
+          <div style="min-width: 370px;">
+            <amp-img
+              src="/assets/images/wp-engine-horizontal.png"
+              layout="responsive"
+              width="720px"
+              height="185px"
+              alt="wp-engine-logo"
+            >
+            </amp-img>
           </div>
         </div>
       </div>
@@ -201,7 +188,7 @@ role_sections:
 
   <section class="container-fluid bg-textured text-white py-6">
     <div class="d-flex flex-column align-items-center justify-content-center text-center">
-      <h2 class="text-center display-5 font-family-alt py-6">
+      <h2 class="text-center display-5 font-family-alt py-6 mb-6">
         Why Learn WordPress?
       </h2>
     </div>
@@ -229,6 +216,16 @@ role_sections:
           </div>
         </div>
       {% endfor %}
+    </div>
+    <div class="d-flex justify-content-center">
+      <a
+        href="/web/viewer.html?file={{ key_settings.course_guide | liquify }}"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-round btn-outline-light my-4"
+      >
+        View Course Guide
+      </a>
     </div>
   </section>
 
@@ -273,9 +270,6 @@ role_sections:
       </div>
     </div>
     <!-- end overview blocks -->
-    <div class="d-flex justify-content-center pb-1 my-4">
-      {% include btn-apply.html href="/courses/wordpress-development/apply/" %}
-    </div>
   </section>
 
   <div class="d-flex justify-content-center mb-6">
