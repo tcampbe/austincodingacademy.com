@@ -3,15 +3,15 @@ layout: default
 permalink: "/apply/"
 redirect_from:
 - "/application"
-head_title: Start Your Application | Apply Now at {{ key_settings.school }}
-description: Apply now to learn to code with {{ key_settings.school }} | Fill out
+head_title: Start Your Application | Apply Now at {{ school.name }}
+description: Apply now to learn to code with {{ school.name }} | Fill out
   your short application to get on the path to a career in web development.
 form_fields:
 - name: application_submission_url
   label: ''
   description: ''
   type: hidden
-  value: "{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink }}"
+  value: "{{ school.url }}{{ site.baseurl }}{{ page.permalink }}"
   placeholder: ''
   required: ''
   small_width: ''
@@ -100,7 +100,7 @@ form_fields:
 - name: are_you_18_or_older_
   label: Will you be at least 18 by the time your classes begin?
   description: Please note that you must be at least 18 years old by the time your
-    classes begin to apply to {{ key_settings.school }}. You also must have a High
+    classes begin to apply to {{ school.name }}. You also must have a High
     School Diploma or GED.
   type: select
   value: ''
@@ -201,7 +201,8 @@ form_fields:
   required: true
   small_width: "12"
   medium_width: "6"
-austincodingacademy:
+schools:
+- key: austincodingacademy
   form_fields:
   - name: curriculum_track
     label: To which program are you applying?
@@ -235,7 +236,7 @@ austincodingacademy:
     required: true
     small_width: 12
     medium_width: 6
-lubbockcodingacademy:
+- key: lubbockcodingacademy
   form_fields:
   - name: date_of_birth1
     label: Date of Birth
@@ -247,16 +248,27 @@ lubbockcodingacademy:
     small_width: 12
     medium_width: 6
     options: []
-texastechuniversitycodingacademy:
+- key: texastechuniversitycodingacademy
   form_fields: []
 
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
@@ -264,12 +276,12 @@ texastechuniversitycodingacademy:
       Student Application
     </h2>
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.application_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.application_form_guid }}"
       method="POST"
       target="_top"
     >
       <div class="row p-5">
-        {% assign all_fields = page.form_fields | concat: page[site.key].form_fields %}
+        {% assign all_fields = page.form_fields | concat: school.form_fields %}
         {% include fields.html fields=all_fields %}
 
         <div class="col-12 mb-4">

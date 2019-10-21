@@ -2,12 +2,16 @@
 layout: default
 permalink: "/tutoring/"
 redirect_from: []
-head_title: "Tutors | Unlimited Tutoring with {{ key_settings.school }}"
+head_title: "Tutors | Unlimited Tutoring with {{ school.name }}"
 description: ""
 ---
 {% for _page in site.pages %}
   {% if _page.tutors %}
-    {% assign tutors = _page[site.key] %}
+    {% for _school in _page.schools %}
+      {% if _school.key == site.key %}
+        {% assign tutors = _school.tutors %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
 

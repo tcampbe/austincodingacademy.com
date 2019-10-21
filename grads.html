@@ -1,25 +1,28 @@
 ---
 layout: default
 permalink: "/grads/"
-head_title: "{{ key_settings.school }} | Graduate Projects"
-description: At {{ key_settings.school }}, we fit learning to code into your life
+head_title: "{{ school.name }} | Graduate Projects"
+description: At {{ school.name }}, we fit learning to code into your life
   with a flexible &amp; affordable array of options, all taught by current industry
   professionals. Don\’t wait - embark on a new career today!
-austincodingacademy:
-  grad_date: August 2019
-lubbockcodingacademy:
-  grad_date: ''
-texastechuniversitycodingacademy:
-  grad_date: ''
-
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
-{% assign school = page[site.key] %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <main class="mt-88 pt-10">
   <div class="container-fluid py-10" style="background-color: black;">

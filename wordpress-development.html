@@ -160,9 +160,20 @@ role_sections:
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
@@ -317,12 +328,11 @@ role_sections:
     <!-- end overview blocks -->
   </section>
 
-  <!-- <section class="py-8 container">
+  {% comment %} <section class="py-8 container">
     <div class="font-family-alt display-6 mb-4 pt-2">
       Course Structure
     </div>
     <div class="d-flex flex-column align-items-center mt-4">
-      <!-- course cards start -->
       {% for module in page.modules %}
         <div
           class="bg-white mx-sm-auto border shadow mb-4 px-4 pt-4 pt-sm-0 d-flex flex-wrap align-items-center justify-content-between rounded"
@@ -339,13 +349,12 @@ role_sections:
           </div>
         </div>
       {% endfor %}
-      <!-- course cards end -->
     </div>
 
     <div class="d-flex justify-content-center mt-4">
       {% include btn-apply.html href="/courses/wordpress-development/apply/" %}
     </div>
-  </section> -->
+  </section> {% endcomment %}
 
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid py-8 {{ page.hero | liquify }}-gradient">
@@ -515,6 +524,11 @@ role_sections:
   </section>
 
   {% for course in page.courses %}
+    {% for __course in settings.courses %}
+      {% if __course.code == _course.code %}
+        {% assign course = __course | hash_concat: _course %}
+      {% endif %}
+    {% endfor %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -532,13 +546,13 @@ role_sections:
           "endDate": "{{ section.end | liquify }}",
           "location": {
             "@type": "Place",
-            "name": "{{ key_settings.school }}",
+            "name": "{{ school.name }}",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "{{ key_settings.locations[section.campus].street | liquify }}",
-              "addressLocality": "{{ key_settings.locations[section.campus].city }}",
-              "addressRegion": "{{ key_settings.locations[section.campus].state | liquify }}",
-              "postalCode": "key_settings.locations[section.campus].postal",
+              "streetAddress": "{{ school.locations[section.campus].street | liquify }}",
+              "addressLocality": "{{ school.locations[section.campus].city }}",
+              "addressRegion": "{{ school.locations[section.campus].state | liquify }}",
+              "postalCode": "school.locations[section.campus].postal",
               "addressCountry": "US"
             }
           }
@@ -547,10 +561,10 @@ role_sections:
       ],
       "provider": {
         "@type": "Organization",
-        "name": "{{ key_settings.school }}",
+        "name": "{{ school.name }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ key_settings.url }}/assets/images/logo-{{ site.key }}.png"
+          "url": "{{ school.url }}/assets/images/logo-{{ site.key }}.png"
         }
       }
     }

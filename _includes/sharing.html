@@ -1,23 +1,34 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- OPEN GRAPH TAGS -->
-<meta property="og:title" content="{{ page[site.key].title | liquify }}">
+<meta property="og:title" content="{{ page.head_title | default: settings.head_title | liquify | liquify }}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{ key_settings.url }}{{ page.url }}">
+<meta property="og:url" content="{{ school.url }}{{ page.url }}">
 {% assign default_image = '/assets/images/logo-' | append: site.key | append: '.png' %}
 {% assign image = page.img | default: default_image %}
-<meta property="og:image" content="{{ key_settings.url | append: image }}">
-<meta property="og:description" content="{{ page[site.key].description | liquify }}">
-<meta property="og:site_name" content="{{ key_settings.school }}" />
+<meta property="og:image" content="{{ school.url | append: image }}">
+<meta property="og:description" content="{{ page.description | default: settings.description | liquify }}">
+<meta property="og:site_name" content="{{ school.name }}" />
 <meta property="og:locale" content="en_US" />
 <!-- TWITTER TAGS -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="{{ key_settings.twitter }}">
-<meta name="twitter:creator" content="{{ key_settings.twitter }}">
-<meta name="twitter:title" content="{{ page[site.key].title | liquify }}">
-<meta name="twitter:description" content="{{ page[site.key].description | liquify }}">
-<meta name="twitter:image" content="{{ key_settings.url | append: image }}">
+<meta name="twitter:site" content="{{ school.twitter }}">
+<meta name="twitter:creator" content="{{ school.twitter }}">
+<meta name="twitter:title" content="{{ page.head_title | default: settings.head_title | liquify | liquify }}">
+<meta name="twitter:description" content="{{ page.description | default: settings.description | liquify }}">
+<meta name="twitter:image" content="{{ school.url | append: image }}">
