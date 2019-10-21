@@ -1,8 +1,9 @@
 ---
 layout: default
 permalink: "/tuition/"
-head_title: Affordable Tuition | Software Engineering Classes at {{ key_settings.school }}
-austincodingacademy:
+head_title: Affordable Tuition | Software Engineering Classes at {{ school.name }}
+schools:
+- key: austincodingacademy
   sections:
   - title: Full Stack Web Development Track
     description: There are three ways our students are able to fund our core program.
@@ -54,7 +55,7 @@ austincodingacademy:
     - title: Electives
       description: Electives with Austin Coding Academy are coming soon. Stay tuned
         for updates on seminar courses on web design, C# .Net, and data science.
-lubbockcodingacademy:
+- key: lubbockcodingacademy
   sections:
   - title: Full Stack Web Development Track
     description: There are four courses ($1,490/course) in our Full Stack Web Development Track,
@@ -92,7 +93,7 @@ lubbockcodingacademy:
     url: "/apply"
     style: text-white btn btn-round bg-primary-dark hover-white center mt-4
 
-texastechuniversitycodingacademy:
+- key: texastechuniversitycodingacademy
   sections:
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Texas Tech University Coding Academy’s
@@ -103,7 +104,23 @@ texastechuniversitycodingacademy:
     style: text-white btn btn-round bg-primary-dark hover-white center mt-4
 
 ---
-{% assign city = page[site.key] %}
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <main class="mt-90 pt-1 pb-5">
   <div class="my-10 container">
@@ -114,7 +131,7 @@ texastechuniversitycodingacademy:
       We keep it simple.
     </p>
   </div>
-  {% for section in city.sections %}
+  {% for section in school.sections %}
     <section class="mt-5 mb-10">
       {% if section.button %}
         <div class="container-fluid text-center py-3 my-5">

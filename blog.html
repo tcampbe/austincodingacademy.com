@@ -2,8 +2,8 @@
 layout: default
 img: "/assets/images/hero-blog.jpg"
 permalink: "/blog/"
-head_title: Coding Blog | {{ key_settings.school }}
-description: Read the {{ key_settings.school }} blog to get the latest news and tips on coding bootcamps, learning to code, web development, JavaScript, C# and .NET, and career development.
+head_title: Coding Blog | {{ school.name }}
+description: Read the {{ school.name }} blog to get the latest news and tips on coding bootcamps, learning to code, web development, JavaScript, C# and .NET, and career development.
 hero: blog
 redirect_from: []
 amp_components: []
@@ -11,18 +11,29 @@ amp_components: []
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- htmllint preset="none" -->
 <div
   class="hero py-11 bg-gradient" id="hero-{{ page.hero | liquify }}">
   <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 px-1 p-md-0 text-white font-family-alt font-weight-bold display-4 text-center">
-    {{ key_settings.school }}
+    {{ school.name }}
   </h1>
   <p class="text-white text-center mx-auto px-4 px-md-0 mw-600">
-    Welcome to the {{ key_settings.school }} Blog. Read the latest news from the {{ key_settings.school }} team on web development, tech, what’s happening in the community, and more.
+    Welcome to the {{ school.name }} Blog. Read the latest news from the {{ school.name }} team on web development, tech, what’s happening in the community, and more.
   </p>
 </div>
 

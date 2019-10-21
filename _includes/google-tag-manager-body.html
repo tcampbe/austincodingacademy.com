@@ -1,15 +1,26 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- htmllint preset="none" -->
 {% if site.baseurl == '/amp' %}
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ key_settings.google_tag_manager_amp }}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ school.google_tag_manager_amp }}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
 {% else %}
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ key_settings.google_tag_manager }}"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ school.google_tag_manager }}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 {% endif %}

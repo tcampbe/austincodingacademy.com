@@ -1,17 +1,28 @@
 ---
 layout: default
 permalink: "/instructor-apply/"
-head_title: "Become an Instructor | Instructor Application - {{ key_settings.school }}"
-description: "Become a web development instructor with {{ key_settings.school }} | Teach
+head_title: "Become an Instructor | Instructor Application - {{ school.name }}"
+description: "Become a web development instructor with {{ school.name }} | Teach
   coding to the next generation of web developers."
 redirect_from: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="mt-90 pt-1 b-5 container">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
     <h2 class="font-family-alt my-10 display-5 text-center">
@@ -26,7 +37,7 @@ redirect_from: []
       <input name="lifecyclestage" type="hidden" value="opportunity">
       <input name="hutk" type="hidden" value="">
       <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
-      <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}">
+      <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
       <div class="mw-850 row">
         <!-- Input -->
         <div class="col-sm-6 mb-6">

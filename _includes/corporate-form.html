@@ -1,9 +1,20 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- htmllint preset="none" -->
 <a
   class="btn btn-round mt-2 btn-outline-light {{ include.class | liquify }}"
@@ -37,7 +48,7 @@
       <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
       <input name="hs_lead_status" type="hidden" value="NEW">
       <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
-      <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}">
+      <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
       <input name="hutk" type="hidden" value="">
 
       <div class="row center-form">

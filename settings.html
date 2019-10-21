@@ -6,10 +6,11 @@ instructor_form_guid: 83193d74-f3de-4679-91db-18ba46864fef
 corporate_trainings_form_guid: a000aab9-9870-4578-a496-2649ea46fb7e
 corporate_form_guid: b8fb52b4-28de-4133-920b-7f587724bb3d
 assignment_form_guid: 60651a89-8f76-427f-aaf6-13263bfd9c6b
-head_title: "{{ key_settings.school }} | Learn to Code, Change Your Life"
-description: At {{ key_settings.school }}, we fit learning to code into your life
+head_title: "{{ school.name }} | Learn to Code, Change Your Life"
+description: At {{ school.name }}, we fit learning to code into your life
   with a flexible &amp; affordable array of options, all taught by current industry
   professionals. Don’t wait - embark on a new career today!
+
 navigation:
   header:
   - title: Courses
@@ -53,98 +54,202 @@ navigation:
     url: "/new-student-referral"
   - title: Student Grievance Policy
     url: "/student-grievances"
+
 courses:
-  Web 101:
-    title: Intro to Web Development
-    description: Intro to Web Development
-    length: 8 weeks
-    list:
-    - HTML5 + all new HTML5 APIs
-    - CSS3 + Animations and Transitions
-    - Version Control Software - Git
-    - Responsive Web Design
-    - JavaScript Basics &amp; DOM Manipulation
-    - Input Control and Form Submissions
-  JS 211:
-    title: JavaScript Language Basics
-    description: JavaScript Language Basics
-    length: 8 weeks
-    list:
-    - Immersion in Object Oriented Programming (OOP)
-    - Build Unit Testing + Test Driven Development (TDD)
-    - Master Callbacks and Functional Programming
-    - Interact with remote APIs and manipulate data
-  JS 311:
-    title: Back-End JavaScript
-    description: Back-End JavaScript
-    length: 8 weeks
-    list:
-    - Shape your own SQL Database
-    - Serve Express.js routes
-    - Harness the power of Node.js
-    - MVC - Model, View, Controller
-    - Deploy your own Node Modules
-    - Learn to host, deploy and manage your web applications
-  JS 411:
-    title: Javascript Front-End
-    description: Javascript Front-End
-    length: 8 weeks
-    list:
-    - Build mobile apps with React &amp; React Native
-    - Maintain app state with Redux
-    - Build Production grade Apps with Webpack
-    - Handle Client-Side Routing
-    - Expand your knowledge of Git
-    - Deep-Dive into HTTPS protocol
-  C# 221:
-    title: Fundamentals of C#
-    length: 8 weeks
-    description: ''
-    list:
-    - Immersion in Object Oriented Programming (OOP)
-    - Build Unit Testing + Test Driven Development (TDD)
-    - Data Structures
-    - Algorithms
-    - SQL
-  C# 321:
-    title: ".NET Intermediate"
-    description: ''
-    length: 8 weeks
-    list:
-    - C#
-    - ".NET Framework"
-    - MVC Architecture
-    - Visual Studio
-    - Build Applications
-    - Test Applications
-  C# 421:
-    title: ".NET Advanced"
-    length: 8 weeks
-    list:
-    - ".NET Framework"
-    - MVC Architecture
-    - Security
-    - Deployment
-    - Hosting
-    - Angular.js
-  Job 501:
-    title: Job Placement Course
-    description: Job Placement Course
-    length: 4 weeks
-    list:
-    - Technical interview prep
-    - White-boarding practice and feedback
-    - Portfolio support
-    - Resume building
-    - Networking opportunities and strategies
-    - Job-finding strategies
+- code: Web 101
+  title: Intro to Web Development
+  description: Intro to Web Development
+  length: 8 weeks
+  list:
+  - HTML5 + all new HTML5 APIs
+  - CSS3 + Animations and Transitions
+  - Version Control Software - Git
+  - Responsive Web Design
+  - JavaScript Basics &amp; DOM Manipulation
+  - Input Control and Form Submissions
+- code: JS 211
+  title: JavaScript Language Basics
+  description: JavaScript Language Basics
+  length: 8 weeks
+  list:
+  - Immersion in Object Oriented Programming (OOP)
+  - Build Unit Testing + Test Driven Development (TDD)
+  - Master Callbacks and Functional Programming
+  - Interact with remote APIs and manipulate data
+- code: JS 311
+  title: Back-End JavaScript
+  description: Back-End JavaScript
+  length: 8 weeks
+  list:
+  - Shape your own SQL Database
+  - Serve Express.js routes
+  - Harness the power of Node.js
+  - MVC - Model, View, Controller
+  - Deploy your own Node Modules
+  - Learn to host, deploy and manage your web applications
+- code: JS 411
+  title: Javascript Front-End
+  description: Javascript Front-End
+  length: 8 weeks
+  list:
+  - Build mobile apps with React &amp; React Native
+  - Maintain app state with Redux
+  - Build Production grade Apps with Webpack
+  - Handle Client-Side Routing
+  - Expand your knowledge of Git
+  - Deep-Dive into HTTPS protocol
+- code: C# 221
+  title: Fundamentals of C#
+  length: 8 weeks
+  description: ''
+  list:
+  - Immersion in Object Oriented Programming (OOP)
+  - Build Unit Testing + Test Driven Development (TDD)
+  - Data Structures
+  - Algorithms
+  - SQL
+- code: C# 321
+  title: ".NET Intermediate"
+  description: ''
+  length: 8 weeks
+  list:
+  - C#
+  - ".NET Framework"
+  - MVC Architecture
+  - Visual Studio
+  - Build Applications
+  - Test Applications
+- code: C# 421
+  title: ".NET Advanced"
+  length: 8 weeks
+  list:
+  - ".NET Framework"
+  - MVC Architecture
+  - Security
+  - Deployment
+  - Hosting
+  - Angular.js
+- code: Job 501
+  title: Job Placement Course
+  description: Job Placement Course
+  length: 4 weeks
+  list:
+  - Technical interview prep
+  - White-boarding practice and feedback
+  - Portfolio support
+  - Resume building
+  - Networking opportunities and strategies
+  - Job-finding strategies
+
 tracks:
-  web:
-    url: "/courses/web-development"
-    name: Web Development
-  wordpress:
-    url: "/courses/wp-engine-support-wordpress-fundamentals"
-    name: WordPress Fundamentals
+- name: Web Development
+  url: "/courses/web-development"
+- name: WordPress Development
+  url: "/courses/wordpress-development"
+
+schools:
+- key: austincodingacademy
+  name: Austin Coding Academy
+  primary_light_color: rgb(0, 179, 209)
+  primary_dark_color: rgb(45, 47, 119)
+  secondary_light_color: rgb(130, 202, 156)
+  secondary_dark_color: rgb(0, 179, 209)
+  tracks:
+  - Web Development
+  url: https://austincodingacademy.com
+  phone: 15128278498
+  callrail_company_id: 915131377
+  google_tag_manager: GTM-TBH7GK
+  google_tag_manager_amp: GTM-KZ9XHND
+  contact_form_guid: 33cc0e23-1881-4874-a1d0-2c0307f20e41
+  cta_form_guid: cddbd037-925f-49ea-b55c-099c986ac822
+  course_guide_form_guid: 702969c4-4c75-4b99-b6d2-59d04d6ebd03
+  application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
+  twitter: https://twitter.com/austincoding
+  eventbrite: https://austincodingacademy.eventbrite.com
+  facebook: https://www.facebook.com/AustinCodingAcademy
+  instagram: https://www.instagram.com/austincodingacademy
+  course_guide: "/assets/documents/Austin-Coding-Academy-Course-Guide-Master.pdf"
+  locations:
+  - name: Capital Factory
+    street: 701 Brazos St, Ste 1616
+    city: Austin
+    state: TX
+    postal: 78701
+    url: https://goo.gl/maps/S27rc4Zkmfvpe2Ui8
+  - name: Highland Business Center
+    street: 314 E Highland Mall Blvd, Ste 114
+    city: Austin
+    state: TX
+    postal: 78752
+    url: https://goo.gl/maps/NssXRytdtdezgKft7
+- key: lubbockcodingacademy
+  name: Lubbock Coding Academy
+  primary_light_color: rgb(0, 179, 209)
+  primary_dark_color: rgb(45, 47, 119)
+  secondary_light_color: rgb(220, 240, 227)
+  secondary_dark_color: rgb(130, 202, 156)
+  tracks:
+  - Web Development
+  url: https://lubbockcodingacademy.com
+  phone: 18069055021
+  callrail_company_id: 740142126
+  google_tag_manager: GTM-KXWTBGW
+  google_tag_manager_amp: GTM-M22GBJ2
+  contact_form_guid: 57d346ec-7bfb-4bf4-b30f-5359a4683c08
+  application_form_guid: 3abd444f-ac31-4c9c-8448-c7f4c25eb9d7
+  course_guide_form_guid: 4bea04a4-c623-44c2-aee9-3186bb154f18
+  cta_form_guid: 21e581ad-e0aa-47b4-8c4c-d1e976a973da
+  twitter: https://twitter.com/lubbockcoding
+  eventbrite: https://lubbockcodingacademy.eventbrite.com
+  facebook: https://www.facebook.com/LubbockCodingAcademy
+  instagram: https://www.instagram.com/lubbockcodingacademy
+  course_guide: "/assets/documents/Lubbock-Coding-Academy-Course-Guide-Master.pdf"
+  locations:
+  - name: South Plains College - Lubbock Center
+    street: 3907 Avenue Q
+    city: Lubbock
+    state: TX
+    postal: 10019
+    url: https://goo.gl/maps/QQDwUZBinyaYXGV57
+- key: texastechuniversitycodingacademy
+  name: Texas Tech University Coding Academy
+  primary_light_color: rgb(204, 0, 0)
+  primary_dark_color: rgb(153, 0, 0)
+  secondary_light_color: rgb(239, 227, 185)
+  secondary_dark_color: rgb(203, 159, 91)
+  navigation:
+    header:
+    - title: Courses
+    - title: Contact Us
+      url: "/contact"
+    - title: Apply
+      url: "/apply"
+      class: btn btn-round text-white cta-gradient py-1 px-6
+    footer: []
+  tracks:
+  - Web Development
+  url: https://texastechuniversitycodingacademy.com
+  phone: "18302567665"
+  callrail_company_id: "457867625"
+  google_tag_manager: GTM-59P7KFG
+  google_tag_manager_amp: GTM-NXQMWW7
+  contact_form_guid: 33cc0e23-1881-4874-a1d0-2c0307f20e41
+  cta_form_guid: cddbd037-925f-49ea-b55c-099c986ac822
+  course_guide_form_guid: 702969c4-4c75-4b99-b6d2-59d04d6ebd03
+  application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
+  twitter: https://twitter.com/austincoding
+  eventbrite: https://austincodingacademy.eventbrite.com
+  facebook: https://www.facebook.com/AustinCodingAcademy
+  instagram: https://www.instagram.com/austincodingacademy
+  locations:
+  - name: Texas Tech University - Highland Lakes
+    street: 806 Steve Hawkins Pkwy
+    city: Marble Falls
+    state: TX
+    postal: 78654
+    url: https://goo.gl/maps/KM7Y6BcKmNJHxSNVA
+
 logos:
 - name: Indeed
   width: 721px
@@ -218,112 +323,4 @@ logos:
   width: 914px
   height: 408px
   src: "/assets/images/logo-onit.png"
-austincodingacademy:
-  school: Austin Coding Academy
-  primary_light_color: 0, 179, 209
-  primary_dark_color: 45, 47, 119
-  secondary_light_color: 130, 202, 156
-  secondary_dark_color: 0, 179, 209
-  tracks:
-  - web
-  - wordpress
-  url: https://austincodingacademy.com
-  phone: 15128278498
-  callrail_company_id: 915131377
-  google_tag_manager: GTM-TBH7GK
-  google_tag_manager_amp: GTM-KZ9XHND
-  contact_form_guid: 33cc0e23-1881-4874-a1d0-2c0307f20e41
-  cta_form_guid: cddbd037-925f-49ea-b55c-099c986ac822
-  course_guide_form_guid: 702969c4-4c75-4b99-b6d2-59d04d6ebd03
-  application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
-  twitter: https://twitter.com/austincoding
-  eventbrite: https://austincodingacademy.eventbrite.com
-  facebook: https://www.facebook.com/AustinCodingAcademy
-  instagram: https://www.instagram.com/austincodingacademy
-  course_guide: "/assets/documents/Austin-Coding-Academy-Course-Guide-Master.pdf"
-  locations:
-    downtown:
-      campus: Capital Factory
-      street: 701 Brazos St, Ste 1616
-      city: Austin
-      state: TX
-      postal: 78701
-      url: https://goo.gl/maps/S27rc4Zkmfvpe2Ui8
-    highland:
-      campus: Highland Business Center
-      street: 314 E Highland Mall Blvd, Ste 114
-      city: Austin
-      state: TX
-      postal: 78752
-      url: https://goo.gl/maps/NssXRytdtdezgKft7
-lubbockcodingacademy:
-  school: Lubbock Coding Academy
-  primary_light_color: 0, 179, 209
-  primary_dark_color: 45, 47, 119
-  secondary_light_color: '220,240,227'
-  secondary_dark_color: '130,202,156'
-  tracks:
-  - web
-  url: https://lubbockcodingacademy.com
-  phone: 18069055021
-  callrail_company_id: 740142126
-  google_tag_manager: GTM-KXWTBGW
-  google_tag_manager_amp: GTM-M22GBJ2
-  contact_form_guid: 57d346ec-7bfb-4bf4-b30f-5359a4683c08
-  application_form_guid: 3abd444f-ac31-4c9c-8448-c7f4c25eb9d7
-  course_guide_form_guid: 4bea04a4-c623-44c2-aee9-3186bb154f18
-  cta_form_guid: 21e581ad-e0aa-47b4-8c4c-d1e976a973da
-  twitter: https://twitter.com/lubbockcoding
-  eventbrite: https://lubbockcodingacademy.eventbrite.com
-  facebook: https://www.facebook.com/LubbockCodingAcademy
-  instagram: https://www.instagram.com/lubbockcodingacademy
-  course_guide: "/assets/documents/Lubbock-Coding-Academy-Course-Guide-Master.pdf"
-  locations:
-    lubbockcenter:
-      campus: South Plains College - Lubbock Center
-      street: 3907 Avenue Q
-      city: Lubbock
-      state: TX
-      postal: 10019
-      url: https://goo.gl/maps/QQDwUZBinyaYXGV57
-texastechuniversitycodingacademy:
-  school: Texas Tech University Coding Academy
-  primary_light_color: 204, 0, 0
-  primary_dark_color: 153, 0, 0
-  secondary_light_color: 239, 227, 185
-  secondary_dark_color: 203, 159, 91
-  navigation:
-    header:
-    - title: Courses
-    - title: Contact Us
-      url: "/contact"
-    - title: Apply
-      url: "/apply"
-      class: btn btn-round text-white cta-gradient py-1 px-6
-    footer:
-    - " "
-  tracks:
-  - web
-  url: https://texastechuniversitycodingacademy.com
-  phone: "18302567665"
-  callrail_company_id: "457867625"
-  google_tag_manager: GTM-59P7KFG
-  google_tag_manager_amp: GTM-NXQMWW7
-  contact_form_guid: 33cc0e23-1881-4874-a1d0-2c0307f20e41
-  cta_form_guid: cddbd037-925f-49ea-b55c-099c986ac822
-  course_guide_form_guid: 702969c4-4c75-4b99-b6d2-59d04d6ebd03
-  application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
-  twitter: https://twitter.com/austincoding
-  eventbrite: https://austincodingacademy.eventbrite.com
-  facebook: https://www.facebook.com/AustinCodingAcademy
-  instagram: https://www.instagram.com/austincodingacademy
-  locations:
-    highlandlakes:
-      campus: Texas Tech University - Highland Lakes
-      street: 806 Steve Hawkins Pkwy
-      city: Marble Falls
-      state: TX
-      postal: 78654
-      url: https://goo.gl/maps/KM7Y6BcKmNJHxSNVA
-
 ---

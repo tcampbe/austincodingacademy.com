@@ -1,9 +1,20 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 {% if page.contact_lightbox %}
 <a href="#"
   class="btn btn-round text-white bg-primary-dark hover-white mx-auto"
@@ -27,7 +38,7 @@
 {% endif %}
 
 <form
-  action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.contact_form_guid }}"
+  action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.contact_form_guid }}"
   method="POST"
   target="_top"
 >
@@ -40,7 +51,7 @@
     <input name="lifecyclestage" type="hidden" value="lead">
     <input name="hs_lead_status" type="hidden" value="NEW">
     <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
-    <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}">
+    <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
     <input name="hutk" type="hidden" value="">
     <div class="row center-form">
       <!-- Input -->

@@ -1,10 +1,21 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
-{% assign navigation = key_settings.navigation.header | default: settings.navigation.header %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% assign navigation = school.navigation.header | default: settings.navigation.header %}
 <amp-sidebar
   on="tap:sidebar.open"
   tabindex="-1"
@@ -39,10 +50,15 @@
           {{ item.title | liquify }}
         </span>
         <ul class="list-unstyled text-left pl-3">
-          {% for track in key_settings.tracks %}
+          {% for _track in school.tracks %}
+            {% for __track in settings.tracks %}
+              {% if _track == __track.name %}
+                {% assign track = __track %}
+              {% endif %}
+            {% endfor %}
             <li>
-              <a href="{{ settings.tracks[track].url }}" class="hover-white">
-                {{ settings.tracks[track].name | liquify }}
+              <a href="{{ track.url }}" class="hover-white">
+                {{ track.name | liquify }}
               </a>
             </li>
           {% endfor %}
@@ -83,12 +99,12 @@
             width="66px"
             height="66px"
             layout="fixed"
-            alt="{{ key_settings.school }} Home"
+            alt="{{ school.name }} Home"
             src="/assets/images/logo-{{ site.key }}-white.png"
             class="w-100"
           ></amp-img>
           <!-- htmllint preset="$previous" -->
-          <span class="sr-only">{{ key_settings.school }} Logo</span>
+          <span class="sr-only">{{ school.name }} Logo</span>
         </a>
         <!-- End Logo -->
         <!-- Responsive Toggle Button -->
@@ -133,13 +149,18 @@
                     {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
                   </span>
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
-                    {% for track in key_settings.tracks %}
+                    {% for _track in school.tracks %}
+                      {% for __track in settings.tracks %}
+                        {% if _track == __track.name %}
+                          {% assign track = __track %}
+                        {% endif %}
+                      {% endfor %}
                       <li class="position-relative p-0 my-2">
                         <!-- htmllint preset="none" -->
-                        <a class="p-0" href="{{ settings.tracks[track].url }}">
+                        <a class="p-0" href="{{ track.url }}">
                           <!-- htmllint preset="$previous" -->
                           <span class="text-white hover-white">
-                            {{ settings.tracks[track].name | liquify }}
+                            {{ track.name | liquify }}
                           </span>
                         </a>
                       </li>

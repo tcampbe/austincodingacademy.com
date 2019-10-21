@@ -125,9 +125,20 @@ role_sections:
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
@@ -444,6 +455,11 @@ role_sections:
   </section>
 
   {% for course in page.courses %}
+    {% for __course in settings.courses %}
+      {% if __course.code == _course.code %}
+        {% assign course = __course | hash_concat: _course %}
+      {% endif %}
+    {% endfor %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -461,13 +477,13 @@ role_sections:
           "endDate": "{{ section.end | liquify }}",
           "location": {
             "@type": "Place",
-            "name": "{{ key_settings.school }}",
+            "name": "{{ school.name }}",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "{{ key_settings.locations[section.campus].street | liquify }}",
-              "addressLocality": "{{ key_settings.locations[section.campus].city }}",
-              "addressRegion": "{{ key_settings.locations[section.campus].state | liquify }}",
-              "postalCode": "key_settings.locations[section.campus].postal",
+              "streetAddress": "{{ school.locations[section.campus].street | liquify }}",
+              "addressLocality": "{{ school.locations[section.campus].city }}",
+              "addressRegion": "{{ school.locations[section.campus].state | liquify }}",
+              "postalCode": "school.locations[section.campus].postal",
               "addressCountry": "US"
             }
           }
@@ -476,10 +492,10 @@ role_sections:
       ],
       "provider": {
         "@type": "Organization",
-        "name": "{{ key_settings.school }}",
+        "name": "{{ school.name }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ key_settings.url }}/assets/images/logo-{{ site.key }}.png"
+          "url": "{{ school.url }}/assets/images/logo-{{ site.key }}.png"
         }
       }
     }
