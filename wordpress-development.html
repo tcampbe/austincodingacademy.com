@@ -234,69 +234,68 @@ role_sections:
     </div>
     <div class="d-flex justify-content-center">
       <a
+        class="btn btn-round cta-gradient hover-white text-white my-4"
         href="/web/viewer.html?file={{ key_settings.course_guide | liquify }}"
         target="_blank"
         rel="noopener"
-        class="btn btn-round btn-outline-light my-4"
       >
-        View Course Guide
+        <span class="hover-white text-white">
+          View Course Guide
+        </span>
       </a>
     </div>
   </section>
 
-  <section class="py-4 container">
-    <h2 class="font-family-alt display-5 mx-auto mt-2 mb-4 text-center">
-      Program Overview
-    </h2>
-    <section class="container d-flex flex-column py-8 justify-content-center align-items-center">
-      {% for item in page.overview %}
-        <div class="d-flex">
-          {% if item.odd %}
-            <div class="w-50">
-              <h3>
-                {{ item.title }}
-              </h3>
-              <p>
-                {{ item.text }}
-              </p>
-            </div>
-            <div class="w-50">
-              <amp-img
-                layout="responsive"
-                class="img-fluid"
-                width="3535"
-                height="2146"
-                src="{{ item.img_src | liquify }}"
-              >
-              </amp-img>
-            </div>
-          {% else %}
-            <div class="w-50">
-              <amp-img
-                layout="responsive"
-                class="img-fluid"
-                width="3535"
-                height="2146"
-                src="{{ item.img_src | liquify }}"
-              >
-              </amp-img>
-            </div>
-            <div class="w-50">
-              <h3>
-                {{ item.title }}
-              </h3>
-              <p>
-                {{ item.text }}
-              </p>
-            </div>
-          {% endif %}
+  <section class="d-flex flex-column justify-content-center align-items-center">
+    {% for item in page.overview %}
+      {% if item.odd %}
+        <div class="d-flex flex-wrap-reverse">
+          <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
+            <h3>
+              {{ item.title }}
+            </h3>
+            <p>
+              {{ item.text }}
+            </p>
+          </div>
+          <div class="w-100 w-sm-50">
+            <amp-img
+              layout="responsive"
+              class="img-fluid"
+              width="3535"
+              height="2146"
+              src="{{ item.img_src | liquify }}"
+            >
+            </amp-img>
+          </div>
         </div>
-      {% endfor %}
-    </section>
+      {% else %}
+        <div class="d-flex flex-wrap flex-sm-row">
+          <div class="w-100 w-sm-50">
+            <amp-img
+              layout="responsive"
+              class="img-fluid"
+              width="3535"
+              height="2146"
+              src="{{ item.img_src | liquify }}"
+            >
+            </amp-img>
+          </div>
+          <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
+            <h3>
+              {{ item.title }}
+            </h3>
+            <p>
+              {{ item.text }}
+            </p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
   </section>
 
   <!-- ABOUT -->
-  <section class="container-fluid d-flex py-8 flex-column justify-content-center text-center">
+  <section class="container-fluid d-flex pt-0 py-sm-8 flex-column justify-content-center text-center">
     <div class="font-family-alt display-5 mb-4">
       About WP Engine
     </div>
