@@ -18,10 +18,12 @@
 <div class="row d-flex justify-content-center">
   <div class="col-sm-10 col-xs-10 mw-850">
     <h2
-      amp-fx="{{ include.fade_fx | liquify }}"
-      data-duration="{{ include.fade_duration | liquify }}"
-      data-margin-start="{{ include.margin_start | liquify }}"
-      data-margin-end="{{ include.margin_end | liquify }}"
+      {% if fade == true %}
+        amp-fx="fade-in"
+        data-duration="600ms"
+        data-margin-start="1%"
+        data-margin-end="20%"
+      {% endif %}
       class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7"
     >
       {% if page.permalink == "/web-development/" %}
@@ -31,10 +33,12 @@
     </h2>
     <!-- htmllint preset="none" -->
     <p
-      amp-fx="{{ include.fade_fx | liquify }}"
-      data-duration="{{ include.fade_duration | liquify }}"
-      data-margin-start="{{ include.margin_start | liquify }}"
-      data-margin-end="{{ include.margin_end | liquify }}"
+      {% if fade == true %}
+        amp-fx="fade-in"
+        data-duration="600ms"
+        data-margin-start="1%"
+        data-margin-end="20%"
+      {% endif %}
       class="mw-600 mx-auto {{ include.p_class | liquify  }} text-center mb-6"
     >
     <!-- htmllint preset="$previous" -->
@@ -42,17 +46,17 @@
       this whole process works, from how our programs are structured to how we can help you get
       a job in coding after you graduate.
     </p>
-    <div
-      amp-fx="{{ include.fade_fx | liquify }}"
-      data-duration="{{ include.fade_duration | liquify }}"
-      data-margin-start="{{ include.margin_start | liquify }}"
-      data-margin-end="{{ include.margin_end | liquify }}"
-      class="row"
-    >
+    <div class="row">
       <!-- Image -->
       <div class="d-flex flex-column justify-content-center mb-7 col-xs-11 col-sm-11 col-md-5 col-lg-5 mx-auto">
         <amp-img
           class="rounded border"
+          {% if fade == true %}
+            amp-fx="fade-in"
+            data-duration="600ms"
+            data-margin-start="1%"
+            data-margin-end="20%"
+          {% endif %}
           layout="responsive"
           width="579"
           height="756"
@@ -75,9 +79,25 @@
             <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
             <input name="hutk" type="hidden" value="">
 
-            <div class="row center-form">
+            <div
+              class="row center-form"
+              {% if fade == true %}
+                amp-fx="fade-in"
+                data-duration="600ms"
+                data-margin-start="1%"
+                data-margin-end="20%"
+              {% endif %}
+            >
               <!-- Input -->
-              <div class="col-6">
+              <div
+                class="col-6"
+                {% if fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
                 <div class="form-group">
                   <label for="first-name-cg" class="form-label">
                     First Name <span class="text-red-a">*</span>
@@ -97,7 +117,15 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-6">
+              <div
+                class="col-6"
+                {% if fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
                 <div class="form-group">
                   <label for="last-name-cg" class="form-label">
                     Last Name <span class="text-red-a">*</span>
@@ -117,7 +145,15 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-12">
+              <div
+                class="col-12"
+                {% if fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
                 <div class="form-group">
                   <label for="email-cg" class="form-label">
                     Email <span class="text-red-a">*</span>
@@ -137,7 +173,15 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-12">
+              <div
+                class="col-12"
+                {% if fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
                 <div class="form-group">
                   <label for="phone-cg" class="form-label">
                     Phone <span class="text-red-a">*</span>
@@ -156,12 +200,28 @@
               </div>
               <!-- End Input -->
 
-              <div class="col-12 d-flex flex-column justify-content-end">
+              <div
+                class="col-12 d-flex flex-column justify-content-end"
+                {% if fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
                 {% include referral-question.html %}
               </div>
 
               <!-- Input -->
-              <div class="col-12 d-flex flex-column justify-content-end form-group">
+              <div
+                class="col-12 d-flex flex-column justify-content-end form-group"
+                {% if fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
                 <label class="form-label" for="best-describes-cg">Which of these best describes you? <span class="text-red-a">*</span></label>
                 <select id="best-describes-cg" name="which_of_these_best_describes_you_" class="form-control" required>
                   <option disabled selected value="">Select your answer</option>
@@ -176,7 +236,15 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-12 d-flex align-items-end justify-content-center form-group">
+              <div
+                class="col-12 d-flex align-items-end justify-content-center form-group"
+                {% if fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
                 <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
                   View Guide
                 </button>
