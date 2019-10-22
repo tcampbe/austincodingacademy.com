@@ -24,10 +24,14 @@
       data-margin-end="{{ include.margin_end | liquify }}"
       class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7"
     >
-      {% if page.permalink == "/web-development/" %}
-        Want an In-Depth Look? <br>
+      {% if page.permalink == "/courses/wp-engine-support/" %}
+        See How It Works
+      {% else %}
+        {% if page.permalink == "/courses/web-development/" %}
+          Want an In-Depth Look? <br>
+        {% endif %}
+          Download Our Course Guide
       {% endif %}
-        Download Our Course Guide
     </h2>
     <!-- htmllint preset="none" -->
     <p
@@ -38,9 +42,14 @@
       class="mw-600 mx-auto {{ include.p_class | liquify  }} text-center mb-6"
     >
     <!-- htmllint preset="$previous" -->
+    {% if page.permalink == "/courses/wp-engine-support/" %}
+      Curious about how this course works? Download the WP Engine Support - WordPress Fundamentals
+      syllabus to see our week-by-week curriculum, tuition options, and more.
+    {% else %}
       Curious about what our classes entail? Download our course guide to get the rundown on how
       this whole process works, from how our programs are structured to how we can help you get
       a job in coding after you graduate.
+    {% endif %}
     </p>
     <div
       amp-fx="{{ include.fade_fx | liquify }}"
@@ -176,7 +185,7 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-12 d-flex align-items-end justify-content-center form-group">
+              <div class="col-12 mt-3 d-flex align-items-end justify-content-center form-group">
                 <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
                   View Guide
                 </button>
