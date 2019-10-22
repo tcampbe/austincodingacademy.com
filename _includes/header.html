@@ -56,11 +56,22 @@
                 {% assign track = __track %}
               {% endif %}
             {% endfor %}
-            <li>
-              <a href="{{ track.url }}" class="hover-white">
-                {{ track.name | liquify }}
-              </a>
-            </li>
+            {% if track.category %}
+              <li class="text-white">
+                {{ track.category | liquify }}
+              </li>
+              <li class="ml-3">
+                <a href="{{ track.url }}" class="hover-white">
+                  {{ track.name | liquify }}
+                </a>
+              </li>
+            {% else %}
+              <li>
+                <a href="{{ track.url }}" class="hover-white">
+                  {{ track.name | liquify }}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
       {% else %}
@@ -155,15 +166,32 @@
                           {% assign track = __track %}
                         {% endif %}
                       {% endfor %}
-                      <li class="position-relative p-0 my-2">
-                        <!-- htmllint preset="none" -->
-                        <a class="p-0" href="{{ track.url }}">
-                          <!-- htmllint preset="$previous" -->
-                          <span class="text-white hover-white">
-                            {{ track.name | liquify }}
+                      {% if track.category %}
+                        <li class="position-relative p-0 my-2">
+                          <span class="text-white">
+                            {{ track.category | liquify }}
                           </span>
-                        </a>
-                      </li>
+                        </li>
+                        <li class="position-relative p-0 my-2 ml-3">
+                          <!-- htmllint preset="none" -->
+                          <a class="p-0" href="{{ track.url }}">
+                            <!-- htmllint preset="$previous" -->
+                            <span class="text-white hover-white">
+                              {{ track.name | liquify }}
+                            </span>
+                          </a>
+                        </li>
+                      {% else %}
+                        <li class="position-relative p-0 my-2">
+                          <!-- htmllint preset="none" -->
+                          <a class="p-0" href="{{ track.url }}">
+                            <!-- htmllint preset="$previous" -->
+                            <span class="text-white hover-white">
+                              {{ track.name | liquify }}
+                            </span>
+                          </a>
+                        </li>
+                      {% endif %}
                     {% endfor %}
                   </ul>
                 {% else %}
