@@ -17,8 +17,9 @@
 {% endif %}
 <div class="row d-flex justify-content-center">
   <div class="col-sm-10 col-xs-10 mw-850">
+    <!-- htmllint preset="none" -->
     <h2
-      {% if fade == true %}
+      {% if include.fade == true %}
         amp-fx="fade-in"
         data-duration="600ms"
         data-margin-start="1%"
@@ -26,6 +27,7 @@
       {% endif %}
       class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7"
     >
+    <!-- htmllint preset="$previous" -->
       {% if page.permalink == "/web-development/" %}
         Want an In-Depth Look? <br>
       {% endif %}
@@ -33,7 +35,7 @@
     </h2>
     <!-- htmllint preset="none" -->
     <p
-      {% if fade == true %}
+      {% if include.fade == true %}
         amp-fx="fade-in"
         data-duration="600ms"
         data-margin-start="1%"
@@ -49,9 +51,10 @@
     <div class="row">
       <!-- Image -->
       <div class="d-flex flex-column justify-content-center mb-7 col-xs-11 col-sm-11 col-md-5 col-lg-5 mx-auto">
+        <!-- htmllint preset="none" -->
         <amp-img
           class="rounded border"
-          {% if fade == true %}
+          {% if include.fade == true %}
             amp-fx="fade-in"
             data-duration="600ms"
             data-margin-start="1%"
@@ -63,6 +66,7 @@
           src="/assets/images/{{ site.key }}-Course-Guide-Master-Table-Content.png"
           alt="What's inside our course guide"
         ></amp-img>
+        <!-- htmllint preset="$previous" -->
       </div>
       <!-- Form -->
       <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
@@ -79,25 +83,19 @@
             <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
             <input name="hutk" type="hidden" value="">
 
-            <div
-              class="row center-form"
-              {% if fade == true %}
-                amp-fx="fade-in"
-                data-duration="600ms"
-                data-margin-start="1%"
-                data-margin-end="20%"
-              {% endif %}
-            >
+            <div class="row center-form">
               <!-- Input -->
+              <!-- htmllint preset="none" -->
               <div
                 class="col-6"
-                {% if fade == true %}
+                {% if include.fade == true %}
                   amp-fx="fade-in"
                   data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
               >
+              <!-- htmllint preset="$previous" -->
                 <div class="form-group">
                   <label for="first-name-cg" class="form-label">
                     First Name <span class="text-red-a">*</span>
@@ -117,15 +115,17 @@
               <!-- End Input -->
 
               <!-- Input -->
+              <!-- htmllint preset="none" -->
               <div
                 class="col-6"
-                {% if fade == true %}
+                {% if include.fade == true %}
                   amp-fx="fade-in"
                   data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
               >
+              <!-- htmllint preset="$previous" -->
                 <div class="form-group">
                   <label for="last-name-cg" class="form-label">
                     Last Name <span class="text-red-a">*</span>
@@ -145,15 +145,17 @@
               <!-- End Input -->
 
               <!-- Input -->
+              <!-- htmllint preset="none" -->
               <div
                 class="col-12"
-                {% if fade == true %}
+                {% if include.fade == true %}
                   amp-fx="fade-in"
                   data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
               >
+              <!-- htmllint preset="$previous" -->
                 <div class="form-group">
                   <label for="email-cg" class="form-label">
                     Email <span class="text-red-a">*</span>
@@ -173,15 +175,17 @@
               <!-- End Input -->
 
               <!-- Input -->
+              <!-- htmllint preset="none" -->
               <div
                 class="col-12"
-                {% if fade == true %}
+                {% if include.fade == true %}
                   amp-fx="fade-in"
                   data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
               >
+              <!-- htmllint preset="$previous" -->
                 <div class="form-group">
                   <label for="phone-cg" class="form-label">
                     Phone <span class="text-red-a">*</span>
@@ -200,28 +204,32 @@
               </div>
               <!-- End Input -->
 
+              <!-- htmllint preset="none" -->
               <div
                 class="col-12 d-flex flex-column justify-content-end"
-                {% if fade == true %}
+                {% if include.fade == true %}
                   amp-fx="fade-in"
                   data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
               >
+              <!-- htmllint preset="$previous" -->
                 {% include referral-question.html %}
               </div>
 
               <!-- Input -->
+              <!-- htmllint preset="none" -->
               <div
                 class="col-12 d-flex flex-column justify-content-end form-group"
-                {% if fade == true %}
+                {% if include.fade == true %}
                   amp-fx="fade-in"
                   data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
               >
+              <!-- htmllint preset="$previous" -->
                 <label class="form-label" for="best-describes-cg">Which of these best describes you? <span class="text-red-a">*</span></label>
                 <select id="best-describes-cg" name="which_of_these_best_describes_you_" class="form-control" required>
                   <option disabled selected value="">Select your answer</option>
@@ -236,15 +244,17 @@
               <!-- End Input -->
 
               <!-- Input -->
+              <!-- htmllint preset="none" -->
               <div
                 class="col-12 d-flex align-items-end justify-content-center form-group"
-                {% if fade == true %}
+                {% if include.fade == true %}
                   amp-fx="fade-in"
                   data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
               >
+              <!-- htmllint preset="$previous" -->
                 <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
                   View Guide
                 </button>
