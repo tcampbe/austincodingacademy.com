@@ -167,12 +167,12 @@
                         {% endif %}
                       {% endfor %}
                       {% if track.category %}
-                        <li class="position-relative p-0 my-2">
+                        <li class="position-relative p-0 my-2 pb-1 border-bottom border-white">
                           <span class="text-white">
                             {{ track.category | liquify }}
                           </span>
                         </li>
-                        <li class="position-relative p-0 my-2 ml-3">
+                        <li class="position-relative p-0 my-2">
                           <!-- htmllint preset="none" -->
                           <a class="p-0" href="{{ track.url }}">
                             <!-- htmllint preset="$previous" -->

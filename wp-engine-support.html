@@ -204,7 +204,7 @@ role_sections:
         Why Learn WordPress?
       </h2>
     </div>
-    <div class="row">
+    <div class="row mb-6">
       {% for item in page.features %}
         <div class="col-md-6 mb-5">
           <div class="row">
@@ -228,18 +228,6 @@ role_sections:
           </div>
         </div>
       {% endfor %}
-    </div>
-    <div class="d-flex justify-content-center">
-      <a
-        class="btn btn-round cta-gradient hover-white text-white my-4"
-        href="/web/viewer.html?file={{ key_settings.course_guide | liquify }}"
-        target="_blank"
-        rel="noopener"
-      >
-        <span class="hover-white text-white">
-          About the Course
-        </span>
-      </a>
     </div>
   </section>
 
