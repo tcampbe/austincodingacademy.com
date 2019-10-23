@@ -69,6 +69,18 @@ fields:
   name: author_email
   label: Author Email
 pages:
+<<<<<<< HEAD
+- _posts/2019-09-17-texas-tech-university-austin-coding-academy-partner-to-launch-texas-tech-university-coding-academy.md
+- _posts/2019-01-23-coming-spring-2019-lubbock-coding-academy.md
+- _posts/2019-03-04-the-benefits-of-an-in-person-coding-bootcamp-vs-online-classes.md
+- _posts/2019-02-06-how-to-stop-multi-tasking-and-develop-focus-1.md
+- _posts/2019-01-23-new-in-2019-unlimited-tutoring-for-all-students.md
+- _posts/2019-01-23-highlight-six-aca-grads-land-jobs.md
+- _posts/2019-02-21-5-tips-to-help-you-learn-coding-faster.md
+- _posts/2019-02-21-what-are-companies-looking-for-in-a-web-developer-s-portfolio.md
+- _posts/2019-04-13-choose-a-coding-bootcamp-that-teaches-you-more-than-just-code.md
+- _posts/2019-04-11-20-tips-for-landing-your-first-job-in-web-development.md
+=======
 - _posts/2019-02-21-what-are-companies-looking-for-in-a-web-developer-s-portfolio.md
 - _posts/2019-04-11-20-tips-for-landing-your-first-job-in-web-development.md
 - _posts/2019-02-06-how-to-stop-multi-tasking-and-develop-focus-1.md
@@ -79,6 +91,7 @@ pages:
 - _posts/2019-01-23-new-in-2019-unlimited-tutoring-for-all-students.md
 - _posts/2019-01-23-highlight-six-aca-grads-land-jobs.md
 - _posts/2019-02-21-5-tips-to-help-you-learn-coding-faster.md
+>>>>>>> preview
 - _posts/2019-04-13-why-i-left-marketing-to-learn-coding-luke-stenis-austin-coding-academy-alumni-spotlight.md
 - _posts/2019-04-12-5-free-coding-websites-for-beginners-learn-how-to-code-without-the-cost.md
 - _posts/2019-04-16-7-characteristics-of-a-successful-web-developer.md
