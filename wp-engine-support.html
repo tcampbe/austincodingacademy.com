@@ -80,7 +80,7 @@ interview:
 
 role:
   heading: "About the Role"
-  url: '/'
+  url: 'https://wpengine.careers/customer-experience/'
   p1: "During the WordPress Development Course, you will also be learning valuable customer service skills. As a technical support specialist,
     you’ll be providing support to WP Engine customers primarily using live chat, but also over the phone and via support tickets."
   subheading: "What's Cool About This Job"
@@ -381,7 +381,14 @@ role_sections:
         <div class="display-5 font-family-alt text-white mb-1">
           {{ role.heading | liquify }}
         </div>
-        <a href="{{ role.url }}" class="hover-white">Description from WP Engine</a>
+        <a
+          href="{{ role.url }}"
+          class="hover-white"
+          target="_blank"
+          rel="noopener"
+        >
+          Description from WP Engine
+      </a>
       </div>
       <p class="text-white">
         {{ role.p1 | liquify }}
@@ -418,7 +425,7 @@ role_sections:
     <div class="container-fluid d-flex flex-row justify-content-center">
       <a class="btn cta-gradient hover-white btn-round mr-2 mr-sm-4 text-white d-flex justify-content-center" href="/courses/wp-engine-support-wordpress-fundamentals/apply">
         <span class="text-white hover-white">
-          Join the Program
+          Apply
         </span>
       </a>
       <a class="btn btn-round btn-outline-light ml-2 ml-sm-4 d-flex justify-content-center" href="/">
