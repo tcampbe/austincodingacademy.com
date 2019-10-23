@@ -271,6 +271,15 @@ a {
   font-size: 3rem;
 }
 
+.responsive-fa-icon {
+  display: inline-block
+}
+@media (max-width: 768px) {
+  .responsive-fa-icon {
+    display: none !important;
+  }
+}
+
 /* HEADER LINKS */
 
 .nav-item a:hover,

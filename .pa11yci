@@ -5,9 +5,10 @@
     "http://localhost:4000/404/",
     "http://localhost:4000/assignment/",
     "http://localhost:4000/contact/",
-    "http://localhost:4000/corporate-training/",
+    "http://localhost:4000/enterprise-training/",
     "http://localhost:4000/course-guide/",
     "http://localhost:4000/csharp/",
+    "http://localhost:4000/events/",
     "http://localhost:4000/faq/",
     "http://localhost:4000/financing/",
     "http://localhost:4000/grads/",
@@ -15,6 +16,7 @@
     "http://localhost:4000/hire/",
     "http://localhost:4000/instructor-apply/",
     "http://localhost:4000/instructors/",
+    "http://localhost:4000/instructors-apply/",
     "http://localhost:4000/javascript/",
     "http://localhost:4000/learn-to-code/",
     "http://localhost:4000/new-student-referral/",
@@ -24,8 +26,9 @@
     "http://localhost:4000/tuition/",
     "http://localhost:4000/tutoring/",
     "http://localhost:4000/tutors/",
-    "http://localhost:4000/web-development/",
+    "http://localhost:4000/courses/web-development/",
     "http://localhost:4000/web/",
-    "http://localhost:4000/wordpress/"
+    "http://localhost:4000/courses/wordpress-apply/"
+    "http://localhost:4000/courses/wp-engine-support-wordpress-fundamentals/"
   ]
 }

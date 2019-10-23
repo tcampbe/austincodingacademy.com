@@ -44,8 +44,7 @@ education:
     degree: C#/.NET Development
 
 projects:
-  - name: Smart Shop
-    desc: grocery shopping list assistant
-    url: https://www.google.com/
+  - name: FoodApp
+    url: https://foodapp20191018105016.azurewebsites.net/
 
 ---

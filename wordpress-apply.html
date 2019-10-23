@@ -1,58 +1,76 @@
 ---
 layout: default
-permalink: "/courses/wordpress-development/apply/"
+permalink: "/courses/wp-engine-support-wordpress-fundamentals/apply/"
 redirect_from:
-head_title: "Start Your Application | Apply Now at {{ key_settings.school }}"
-description: "Apply now to learn to code with {{ key_settings.school }} | Fill out your short application to get on the path to a career in web development."
+head_title: "Start Your Application | Apply Now at {{ school.name }}"
+description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 process:
-- heading: process1
-  text: Lorem ipsum dolor sit amet.
-  img_src: icon-databases.png
+- heading: Apply
+  text: Get started by filling out our application and setting up a call with our admissions team.
+  img_src: wp-apply.png
   img_width: 90px
-- heading: process2
-  text: Lorem ipsum dolor sit amet.
-  img_src: icon-frontend.png
+- item: null #for chevron icon
+- heading: Assignment
+  text: After speaking with our admissions team, you’ll be asked to complete a brief assignment.
+  img_src: wp-assignment.png
   img_width: 90px
-- heading: process3
-  text: Lorem ipsum dolor sit amet.
-  img_src: icon-javascript.png
-  img_width: 65px
+- item: null #for chevron icon
+- heading: Enroll
+  text: Once you’ve successfully completed your assignment, you’ll be able to begin class.
+  img_src: wp-enroll.png
+  img_width: 90px
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
-    <h2 class="font-family-alt my-10 display-5 text-center">
-      WordPress Development Course Application
+    <h2 class="font-family-alt my-10 display-5 display-55 text-center">
+      WP Engine Support Course Application
     </h2>
     <!-- Proccess Application -->
-    <div class="d-flex justify-content-around mb-4">
+    <div class="d-flex flex-column flex-sm-row justify-content-around align-items-center mb-4">
       {% for item in page.process %}
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <amp-img
-            width="{{ item.img_width }}"
-            height="80px"
-            layout="fixed"
-            src="/assets/images/{{ item.img_src | liquify }}"
-            alt=""
-          ></amp-img>
-          <h3>
-            {{ item.heading | liquify }}
-          </h3>
-          <p>
-            {{ item.text | liquify }}
-          </p>
-        </div>
+        {% assign mod = forloop.index | modulo: 2 %}
+        {% if mod == 1 %}
+          <div class="d-flex flex-column justify-content-center align-items-center col-12 col-sm-3">
+            <amp-img
+              width="{{ item.img_width }}"
+              height="80px"
+              layout="fixed"
+              src="/assets/images/{{ item.img_src }}"
+              alt=""
+            ></amp-img>
+            <h3>
+              {{ item.heading }}
+            </h3>
+            <p>
+              {{ item.text }}
+            </p>
+          </div>
+        {% else %}
+          <i class="fas fa-chevron-right responsive-fa-icon" style="font-size: 2rem;" aria-hidden="true"></i>
+        {% endif %}
       {% endfor %}
     </div>
     <!-- Proccess Application End -->
     <form
-      class="d-flex justify-content-center"
+      class="d-flex justify-content-center pt-4"
       action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.application_wp_form_guid }}"
       method="POST"
       target="_top"
@@ -61,7 +79,7 @@ process:
         <input name="lifecyclestage" type="hidden" value="opportunity">
         <input name="filled_out_application" type="hidden" value="true">
         <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
-        <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.permalink | liquify }}">
+        <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.permalink | liquify }}">
         <input name="hutk" type="hidden" value="">
         <h2 class="display-6 mb-4">
           About You
@@ -352,14 +370,14 @@ process:
                 <option value="Search engine">
                   Search engine
                 </option>
-                <option value="{{ key_settings.school }} event">
-                  {{ key_settings.school }} event
+                <option value="{{ school.name }} event">
+                  {{ school.name }} event
                 </option>
-                <option value="{{ key_settings.school }} faculty / staff">
-                  {{ key_settings.school }} faculty / staff
+                <option value="{{ school.name }} faculty / staff">
+                  {{ school.name }} faculty / staff
                 </option>
-                <option value="{{ key_settings.school }} student / alumni">
-                  {{ key_settings.school }} student / alumni
+                <option value="{{ school.name }} student / alumni">
+                  {{ school.name }} student / alumni
                 </option>
                 <option value="News (TV, article)">
                   News (TV, article)

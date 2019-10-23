@@ -1,9 +1,20 @@
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
-    {% assign key_settings = settings[site.key] %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="row d-flex justify-content-center">
   <div class="col-sm-10 col-xs-10 mw-850">
     <h2
@@ -13,10 +24,14 @@
       data-margin-end="{{ include.margin_end | liquify }}"
       class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7"
     >
-      {% if page.permalink == "/web-development/" %}
-        Want an In-Depth Look? <br>
+      {% if page.permalink == "/courses/wp-engine-support/" %}
+        See How It Works
+      {% else %}
+        {% if page.permalink == "/courses/web-development/" %}
+          Want an In-Depth Look? <br>
+        {% endif %}
+          Download Our Course Guide
       {% endif %}
-        Download Our Course Guide
     </h2>
     <!-- htmllint preset="none" -->
     <p
@@ -27,9 +42,14 @@
       class="mw-600 mx-auto {{ include.p_class | liquify  }} text-center mb-6"
     >
     <!-- htmllint preset="$previous" -->
+    {% if page.permalink == "/courses/wp-engine-support/" %}
+      Curious about how this course works? Download the WP Engine Support - WordPress Fundamentals
+      syllabus to see our week-by-week curriculum, tuition options, and more.
+    {% else %}
       Curious about what our classes entail? Download our course guide to get the rundown on how
       this whole process works, from how our programs are structured to how we can help you get
       a job in coding after you graduate.
+    {% endif %}
     </p>
     <div
       amp-fx="{{ include.fade_fx | liquify }}"
@@ -45,14 +65,14 @@
           layout="responsive"
           width="579"
           height="756"
-          src="/assets/images/{{ site.key }}-Course-Guide-Master-Table-Content.png"
+          src="/assets/images/{{ include.course_guide | default: site.key | liquify }}-Course-Guide-Master-Table-Content.png"
           alt="What's inside our course guide"
         ></amp-img>
       </div>
       <!-- Form -->
       <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
         <form
-          action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.course_guide_form_guid }}"
+          action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ include.course_guide_form_guid | default: school.course_guide_form_guid }}"
           target="_top"
           method="POST"
         >
@@ -61,7 +81,7 @@
             <input name="downloaded_a_courses_guide" type="hidden" value="true">
             <input name="hs_lead_status" type="hidden" value="NEW">
             <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
-            <input name="page_uri" type="hidden" value="{{ key_settings.url }}{{ site.baseurl }}{{ page.url }}">
+            <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
             <input name="hutk" type="hidden" value="">
 
             <div class="row center-form">
@@ -165,7 +185,7 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-12 d-flex align-items-end justify-content-center form-group">
+              <div class="col-12 mt-3 d-flex align-items-end justify-content-center form-group">
                 <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
                   View Guide
                 </button>
