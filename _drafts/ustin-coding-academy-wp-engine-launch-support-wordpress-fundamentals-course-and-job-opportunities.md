@@ -1,7 +1,7 @@
 ---
 tags: []
 layout: post
-title: USTIN CODING ACADEMY & WP ENGINE LAUNCH SUPPORT/WORDPRESS FUNDAMENTALS COURSE
+title: AUSTIN CODING ACADEMY & WP ENGINE LAUNCH SUPPORT/WORDPRESS FUNDAMENTALS COURSE
   AND JOB OPPORTUNITIES
 description: Course will teach students WordPress fundamentals & include guaranteed
   interview with WP Engine
@@ -15,8 +15,8 @@ excerpt: 'Austin Coding Academy and WP Engine today announced an ongoing collabo
 img: "/assets/images/aca-official-press-release-blog-header.png"
 redirect_from: []
 permalink: "/blog/press-release/austin-coding-academy-wp-engine-partnership/"
-height: 
-width: 
+height:
+width:
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 
@@ -52,5 +52,5 @@ _For more information, contact the above representatives, visit the WP Engine Su
 
 **About Austin Coding Academy:** Austin Coding Academy is Austin’s source for innovative tech talent and education. Our mission is to make careers in technology accessible to everyone through practical and equitable technical training, and to provide innovative solutions and training to tech companies. Learn more about ACA here: [https://austincodingacademy.com/](https://austincodingacademy.com/ "https://austincodingacademy.com/")
 
-**About WP Engine  
+**About WP Engine
 **WP Engine is the WordPress Digital Experience Platform that gives companies of all sizes the agility, performance, intelligence, and integrations they need to drive their business forward faster. WP Engine’s combination of tech innovation and an award-winning team of WordPress experts are trusted by over 120,000 customers across 150 countries to provide counsel and support, helping brands create world-class digital experiences. Founded in 2010, WP Engine is headquartered in Austin, Texas, and has offices in Brisbane, Australia; Limerick, Ireland; London, England; Omaha, Nebraska; San Antonio, Texas; and San Francisco, California.
