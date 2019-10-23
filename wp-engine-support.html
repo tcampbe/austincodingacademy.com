@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: "/courses/wp-engine-support/"
-amp_components: ['amp-carousel']
+amp_components: ['amp-carousel', amp-lightbox]
 redirect_from: []
 hero: js
 nav_href: "/courses/wp-engine-support/apply"
@@ -160,13 +160,25 @@ role_sections:
       <!-- htmllint preset="none" -->
       <a
         class="btn btn-round btn-outline-light {{ include.class | liquify }}"
-        on="tap:event-lightbox"
+        on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
       >
       <!-- htmllint preset="$previous" -->
         Learn More
       </a>
+      <!-- Learn More Lightbox -->
+      <amp-lightbox
+        id="course-guide-lightbox"
+        class="lightbox text-white"
+        layout="nodisplay"
+        scrollable
+        on="tap:course-guide-lightbox.close"
+        tabindex="0"
+        role="dialog"
+      >
+        {% include course-guide-form.html p_class="text-white" %}
+      </amp-lightbox>
     </div>
   </div>
 </div>
