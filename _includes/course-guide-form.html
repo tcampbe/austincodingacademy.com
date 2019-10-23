@@ -65,14 +65,14 @@
           layout="responsive"
           width="579"
           height="756"
-          src="/assets/images/{{ site.key }}-Course-Guide-Master-Table-Content.png"
+          src="/assets/images/{{ include.course_guide | default: site.key | liquify }}-Course-Guide-Master-Table-Content.png"
           alt="What's inside our course guide"
         ></amp-img>
       </div>
       <!-- Form -->
       <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
         <form
-          action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.course_guide_form_guid }}"
+          action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ include.course_guide_form_guid | default: school.course_guide_form_guid }}"
           target="_top"
           method="POST"
         >
