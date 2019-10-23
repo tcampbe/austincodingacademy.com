@@ -72,7 +72,7 @@
       <!-- Form -->
       <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
         <form
-          action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.course_guide_form_guid }}"
+          action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ include.form_guid | default: school.course_guide_form_guid }}"
           target="_top"
           method="POST"
         >
