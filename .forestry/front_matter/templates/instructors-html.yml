@@ -49,3 +49,5 @@ fields:
     - type: textarea
       name: bio
       label: bio
+pages:
+- instructors.html
