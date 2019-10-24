@@ -1,0 +1,51 @@
+---
+label: instructors.html
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: head_title
+  label: head_title
+- type: text
+  name: description
+  label: description
+- type: text
+  name: heading
+  label: heading
+- type: textarea
+  name: default_bio
+  label: default_bio
+- type: field_group_list
+  name: schools
+  label: schools
+  fields:
+  - type: text
+    name: key
+    label: key
+  - type: field_group_list
+    name: profiles
+    label: profiles
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: email
+      label: email
+    - type: text
+      name: linkedin
+      label: linkedin
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: campus
+      label: campus
+    - type: textarea
+      name: bio
+      label: bio
