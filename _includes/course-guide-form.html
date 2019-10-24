@@ -17,53 +17,69 @@
 {% endif %}
 <div class="row d-flex justify-content-center">
   <div class="col-sm-10 col-xs-10 mw-850">
+    <!-- htmllint preset="none" -->
     <h2
-      amp-fx="{{ include.fade_fx | liquify }}"
-      data-duration="{{ include.fade_duration | liquify }}"
-      data-margin-start="{{ include.margin_start | liquify }}"
-      data-margin-end="{{ include.margin_end | liquify }}"
+      {% if include.fade == true %}
+        amp-fx="fade-in"
+        data-duration="600ms"
+        data-margin-start="1%"
+        data-margin-end="20%"
+      {% endif %}
       class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7"
     >
-      {% if page.permalink == "/web-development/" %}
-        Want an In-Depth Look? <br>
+      {% if page.permalink == "/courses/wp-engine-support/" %}
+        See How It Works
+      {% else %}
+        {% if page.permalink == "/courses/web-development/" %}
+          Want an In-Depth Look? <br>
+        {% endif %}
+          Download Our Course Guide
       {% endif %}
-        Download Our Course Guide
     </h2>
     <!-- htmllint preset="none" -->
     <p
-      amp-fx="{{ include.fade_fx | liquify }}"
-      data-duration="{{ include.fade_duration | liquify }}"
-      data-margin-start="{{ include.margin_start | liquify }}"
-      data-margin-end="{{ include.margin_end | liquify }}"
+      {% if include.fade == true %}
+        amp-fx="fade-in"
+        data-duration="600ms"
+        data-margin-start="1%"
+        data-margin-end="20%"
+      {% endif %}
       class="mw-600 mx-auto {{ include.p_class | liquify  }} text-center mb-6"
     >
     <!-- htmllint preset="$previous" -->
+    {% if page.permalink == "/courses/wp-engine-support/" %}
+      Curious about how this course works? Download the WP Engine Support - WordPress Fundamentals
+      syllabus to see our week-by-week curriculum, tuition options, and more.
+    {% else %}
       Curious about what our classes entail? Download our course guide to get the rundown on how
       this whole process works, from how our programs are structured to how we can help you get
       a job in coding after you graduate.
+    {% endif %}
     </p>
-    <div
-      amp-fx="{{ include.fade_fx | liquify }}"
-      data-duration="{{ include.fade_duration | liquify }}"
-      data-margin-start="{{ include.margin_start | liquify }}"
-      data-margin-end="{{ include.margin_end | liquify }}"
-      class="row"
-    >
+    <div class="row">
       <!-- Image -->
       <div class="d-flex flex-column justify-content-center mb-7 col-xs-11 col-sm-11 col-md-5 col-lg-5 mx-auto">
+        <!-- htmllint preset="none" -->
         <amp-img
           class="rounded border"
+          {% if include.fade == true %}
+            amp-fx="fade-in"
+            data-duration="600ms"
+            data-margin-start="1%"
+            data-margin-end="20%"
+          {% endif %}
           layout="responsive"
           width="579"
           height="756"
-          src="/assets/images/{{ site.key }}-Course-Guide-Master-Table-Content.png"
+          src="/assets/images/{{ include.course_guide | default: site.key | liquify }}-Course-Guide-Master-Table-Content.png"
           alt="What's inside our course guide"
         ></amp-img>
+        <!-- htmllint preset="$previous" -->
       </div>
       <!-- Form -->
       <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
         <form
-          action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.course_guide_form_guid }}"
+          action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ include.course_guide_form_guid | default: school.course_guide_form_guid }}"
           target="_top"
           method="POST"
         >
@@ -77,7 +93,17 @@
 
             <div class="row center-form">
               <!-- Input -->
-              <div class="col-6">
+              <!-- htmllint preset="none" -->
+              <div
+                class="col-6"
+                {% if include.fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
+              <!-- htmllint preset="$previous" -->
                 <div class="form-group">
                   <label for="first-name-cg" class="form-label">
                     First Name <span class="text-red-a">*</span>
@@ -97,7 +123,17 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-6">
+              <!-- htmllint preset="none" -->
+              <div
+                class="col-6"
+                {% if include.fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
+              <!-- htmllint preset="$previous" -->
                 <div class="form-group">
                   <label for="last-name-cg" class="form-label">
                     Last Name <span class="text-red-a">*</span>
@@ -117,7 +153,17 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-12">
+              <!-- htmllint preset="none" -->
+              <div
+                class="col-12"
+                {% if include.fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
+              <!-- htmllint preset="$previous" -->
                 <div class="form-group">
                   <label for="email-cg" class="form-label">
                     Email <span class="text-red-a">*</span>
@@ -137,7 +183,17 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-12">
+              <!-- htmllint preset="none" -->
+              <div
+                class="col-12"
+                {% if include.fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
+              <!-- htmllint preset="$previous" -->
                 <div class="form-group">
                   <label for="phone-cg" class="form-label">
                     Phone <span class="text-red-a">*</span>
@@ -156,12 +212,32 @@
               </div>
               <!-- End Input -->
 
-              <div class="col-12 d-flex flex-column justify-content-end">
+              <!-- htmllint preset="none" -->
+              <div
+                class="col-12 d-flex flex-column justify-content-end"
+                {% if include.fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
+              <!-- htmllint preset="$previous" -->
                 {% include referral-question.html %}
               </div>
 
               <!-- Input -->
-              <div class="col-12 d-flex flex-column justify-content-end form-group">
+              <!-- htmllint preset="none" -->
+              <div
+                class="col-12 d-flex flex-column justify-content-end form-group"
+                {% if include.fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
+              <!-- htmllint preset="$previous" -->
                 <label class="form-label" for="best-describes-cg">Which of these best describes you? <span class="text-red-a">*</span></label>
                 <select id="best-describes-cg" name="which_of_these_best_describes_you_" class="form-control" required>
                   <option disabled selected value="">Select your answer</option>
@@ -176,7 +252,17 @@
               <!-- End Input -->
 
               <!-- Input -->
-              <div class="col-12 d-flex align-items-end justify-content-center form-group">
+              <!-- htmllint preset="none" -->
+              <div
+                class="col-12 d-flex align-items-end justify-content-center form-group"
+                {% if include.fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
+              <!-- htmllint preset="$previous" -->
                 <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
                   View Guide
                 </button>
