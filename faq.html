@@ -356,7 +356,7 @@ schools:
           {% for faq in category.faqs %}
             {
               "@type": "Question",
-              "name": "{{ faq.question | liquify }}"",
+              "name": "{{ faq.question | liquify }}",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "{{ faq.answer | liquify }}"
