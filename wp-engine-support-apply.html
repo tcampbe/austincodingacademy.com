@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: "/courses/wp-engine-support-wordpress-fundamentals/apply/"
+permalink: "/courses/wp-engine-support/apply/"
 redirect_from:
 head_title: "Start Your Application | Apply Now at {{ school.name }}"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
@@ -71,7 +71,7 @@ process:
     <!-- Proccess Application End -->
     <form
       class="d-flex justify-content-center pt-4"
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ key_settings.application_wp_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.application_form_guid }}"
       method="POST"
       target="_top"
     >
