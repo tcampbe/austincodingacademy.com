@@ -42,7 +42,7 @@
             ></amp-img>
             <!-- htmllint preset="$previous" -->
               <p class="p-1 text-center">
-                {% if profile.links %}
+                {% if profile.links.size > 0 %}
                   {% for link in profile.links %}
                     <a href="{{ link.link | liquify }}" target="_blank" rel="noopener">
                       <!-- htmllint preset="none" -->
