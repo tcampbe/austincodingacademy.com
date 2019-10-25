@@ -1,11 +1,10 @@
 ---
 layout: default
-permalink: "/courses/wp-engine-support/"
+permalink: "/courses/wordpress-fundamentals/"
 amp_components: ['amp-carousel', amp-lightbox]
 redirect_from: []
 hero: js
-hero_heading: WP Engine Support
-hero_subheading: WordPress Fundamentals
+hero_heading: WordPress Fundamentals
 hero_text: "WordPress powers over one-third of all websites on the internet. In this course you'll learn the fundamentals of this powerful customer management system (CMS) and
   develop the skills to be a Technical Support Specialist with WP Engine – one of the industry leaders in managed WordPress hosting and the premier WordPress Digital Experience Platform."
 next_start_date: Tuesday, August 27th
@@ -40,17 +39,17 @@ overview:
 - title: Part-Time Classes
   text: "Classes meet twice weekly during the evenings from 6:30 – 9:00 pm, meaning that you don't have to give up your income while you train for a new career.
     The entire course is 10-weeks in length, at the end of which you'll be guaranteed an interview with WP Engine, as well as have a strong understanding of core WordPress Fundamentals."
-  img_src: "/assets/images/wpengine3.jpg"
+  img_src: "/assets/images/cap-factory-web-dev.jpg"
   odd: true
 - title: Practical Curriculum
   text: "Our project-based WordPress curriculum, taught by a professional WordPress Developer, focuses on teaching the most important WordPress proficiencies through
     building and troubleshooting your own real websites. As you build your projects, you’ll gain a strong understanding of WordPress problems and issues that you’ll
     be required to solve as a support specialist with WP Engine."
-  img_src: "/assets/images/wpengine4.jpg"
+  img_src: "/assets/images/cap-factory-web-dev-2.jpg"
 - title: Unlimited Tutoring
   text: "All Austin Coding Academy students have access to unlimited tutoring. Choose whether you want to meet with a tutor in-person or via video chat, and book your session
     through our tutoring portal. Whether you need help on nights, weekends, or during the day – Austin Coding Academy tutors are here to help you work through your barriers."
-  img_src: "/assets/images/wpengine5.jpg"
+  img_src: "/assets/images/cap-factory-web-dev-3.jpg"
   odd: true
 
 about:
@@ -79,7 +78,7 @@ interview:
 
 role:
   heading: "About the Role"
-  url: 'https://wpengine.careers/customer-experience/'
+  learn_more_url: 'https://wpengine.careers/customer-experience/'
   p1: "During the WordPress Development Course, you will also be learning valuable customer service skills. As a technical support specialist,
     you’ll be providing support to WP Engine customers primarily using live chat, but also over the phone and via support tickets."
   subheading: "What's Cool About This Job"
@@ -90,36 +89,6 @@ role:
     is to develop you to your full potential and work with you through each stage of your career. WP Engine likes to promote
     people within their business, and many of those folks started out in technical support. Talent is recognized and rewarded
     at WP Engine. If you are a self-motivator seeking a challenge and can think outside the box, then this role is for you!"
-
-role_sections:
-- title: Your Impact
-  bullets:
-  - You will be the face of WP Engine and have an opportunity to deliver a world-class experience with every interaction with customers on live contact
-    channels of chat and phone.
-  - You’ll get to apply creative problem-solving techniques to identify and solve the source of problems while keeping customers happy and engaged.
-  - Demonstrate commitment to continuous learning, to grow technical knowledge to better support customers as well as strengthening your own technical skillset.
-  - Help maintain a great team and working environment by assisting fellow team members. WP Engine is a global inclusive team that works together!
-  - Demonstrate a positive attitude when faced with change, working with your teammates and with customers.
-- title: Skills & Requirements for the Role
-  bullets:
-  - "Positive Energy and enthusiasm. You believe in WP Engine's values."
-  - "Ideally, 1-2 years experience working in technical support or a customer service position."
-  - "Technical Aptitude: You demonstrate a keen knowledge of, and passion for, web technology or digital experiences. You are someone who learns quickly and takes ownership of your personal development."
-  - "Effective Troubleshooting Skills: You demonstrate strong root cause analysis skills, through effective troubleshooting skills and you are able to quickly identify problems and solutions. You work well in a collaborative troubleshooting environment, while at the same time you can also work autonomously to arrive at the right solution for customers."
-  - "Communication Skills: You have strong written and verbal communication skills, with a strong command of the English language. Ability to accurately type 40 - 60 words per minute. You have the ability to establish a professional, friendly, and empathetic dialogue with customers."
-  - "Excellent Organizational Skills: You’re a great multitasker. You can handle multiple requests at once and have an understanding of prioritization."
-  - "Team Focus: Effectively work in a team environment that uses cross-collaboration and teamwork to solve issues. You enjoy working with others, demonstrate a willingness and ability to share your knowledge with peers and others."
-  - "Customer Inspired: Demonstrate customer focus in every interaction with WP Engine customers. You actively listen and leave customers feeling supported and understood."
-  - "Adaptable: You are resilient and adapt to the changing business and landscape in the tech world."
-- title: Perks & Benefits
-  bullets:
-  - Be yourself. Casual Dress code.
-  - Giving back. Company volunteer/fundraising activities.
-  - Free lunches, snacks & drinks,
-  - Market Competitive Compensation.
-  - Stock Options (Every employee is an owner in the company)
-  - Awesome Benefits! 100% Paid Employee Medical Insurance and other health coverage, including dental and vision, dependent on regional availability (Dental, and Vision).
-  - Transportation (paid parking or commuter reimbursement).
 
 ---
 {% for _page in site.pages %}
@@ -144,16 +113,13 @@ role_sections:
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-55 display-sm-4 text-center">
     {{ page.hero_heading | liquify }}
-    <p class="text-center display-7 text-white mt-2">
-      {{ page.hero_subheading | liquify }}
-    </p>
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
     {{ page.hero_text | liquify }}
   </p>
   <div class="d-flex mt-4 align-items-center justify-content-center">
     <div class="mr-2">
-      {% include btn-apply.html href="/courses/wp-engine-support/apply/" %}
+      {% include btn-apply.html href="/courses/wordpress-fundamentals/apply/" %}
     </div>
     <div class="ml-2">
       <!-- htmllint preset="none" -->
@@ -177,7 +143,7 @@ role_sections:
         tabindex="0"
         role="dialog"
       >
-        {% include course-guide-form.html p_class="text-white" course_guide="WP-Engine-Support" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
+        {% include course-guide-form.html p_class="text-white" course_guide="WordPress-Fundamentals" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
       </amp-lightbox>
     </div>
   </div>
@@ -296,7 +262,7 @@ role_sections:
   <!-- htmllint preset="$previous" -->
     <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html p_class="text-white" course_guide="WP-Engine-Support" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
+        {% include course-guide-form.html p_class="text-white" course_guide="WordPress-Fundamentals" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
       </div>
     </div>
   </section>
@@ -389,18 +355,8 @@ role_sections:
     <!-- ABOUT THIS ROLE -->
     {% assign role = page.role %}
     <div class="container py-8">
-      <div class="mb-4">
-        <div class="display-5 font-family-alt text-white mb-1">
-          {{ role.heading | liquify }}
-        </div>
-        <a
-          href="{{ role.url }}"
-          class="hover-white"
-          target="_blank"
-          rel="noopener"
-        >
-          Description from WP Engine
-      </a>
+      <div class="display-5 font-family-alt text-white mb-5">
+        {{ role.heading | liquify }}
       </div>
       <p class="text-white">
         {{ role.p1 | liquify }}
@@ -416,32 +372,16 @@ role_sections:
           {{ role.p3 | liquify }}
         </p>
       </div>
-      <div class="my-2">
-        {% for role in page.role_sections %}
-          <div class="my-4">
-            <div class="display-7 mb-3 text-white">
-              {{ role.title | liquify }}
-            </div>
-            <ul class="fa-ul mb-2 text-white">
-              {% for bullet in role.bullets %}
-                <li class="mb-1">
-                  <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet | liquify }}
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% endfor %}
-      </div>
     </div>
 
     <div class="container-fluid d-flex flex-row justify-content-center">
-      <a class="btn cta-gradient hover-white btn-round mr-2 mr-sm-4 text-white d-flex justify-content-center" href="/courses/wp-engine-support-wordpress-fundamentals/apply">
+      <a
+        class="btn cta-gradient hover-white btn-round mr-2 mr-sm-4 text-white d-flex justify-content-center"
+        href="{{ role.learn_more_url }}"
+      >
         <span class="text-white hover-white">
-          Apply
+          Learn More
         </span>
-      </a>
-      <a class="btn btn-round btn-outline-light ml-2 ml-sm-4 d-flex justify-content-center" href="/">
-        About WP Engine
       </a>
     </div>
   </section>

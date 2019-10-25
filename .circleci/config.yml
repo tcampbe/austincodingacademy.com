@@ -31,7 +31,7 @@ jobs:
             - node_modules
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
-      # - run: yarn test
+      - run: yarn test
       - run: node _javascripts/events.js
       - run: node _javascripts/tutoring.js
       - deploy:
@@ -83,7 +83,7 @@ workflows:
   version: 2
   commit:
     jobs:
-     - build:
+      - build:
         filters:
           branches:
             ignore: gh-pages
