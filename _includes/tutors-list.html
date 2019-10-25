@@ -260,7 +260,7 @@
                 height="100px"
                 layout="fixed"
                 class="rounded-circle"
-                src="https://gravatar.com/avatar/{{ tutor.email | downcase | md5 }}?s=100&r=pg&d=retro"
+                src="https://gravatar.com/avatar/{{ tutor.gravatar_email | downcase | md5 }}?s=100&r=pg&d=retro"
                 alt="{{ name | liquify }}"
               ></amp-img>
               <!-- htmllint preset="$previous" -->
@@ -287,7 +287,7 @@
               <a href="{{ tutor.rocketchat | liquify }}" rel="noopener" target="_blank">
                 <i class="display-7 fab fa-rocketchat"></i>
               </a>
-              <a href="mailto:{{ tutor.email }}" rel="noopener" target="_blank" class="ml-3">
+              <a href="mailto:{{ tutor.gravatar_email }}" rel="noopener" target="_blank" class="ml-3">
                 <i class="display-7 fas fa-envelope"></i>
               </a>
             {% else %}
