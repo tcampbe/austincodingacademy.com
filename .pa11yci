@@ -28,7 +28,7 @@
     "http://localhost:4000/tutors/",
     "http://localhost:4000/courses/web-development/",
     "http://localhost:4000/web/",
-    "http://localhost:4000/courses/wordpress-apply/"
-    "http://localhost:4000/courses/wp-engine-support-wordpress-fundamentals/"
+    "http://localhost:4000/courses/wordpress-fundamentals/apply/"
+    "http://localhost:4000/courses/wordpress-fundamentals/"
   ]
 }
