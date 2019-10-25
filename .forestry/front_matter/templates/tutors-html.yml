@@ -44,8 +44,8 @@ fields:
       name: skills
       label: skills
     - type: text
-      name: email
-      label: email
+      name: gravatar_email
+      label: gravatar_email
     - type: list
       name: location
       label: location
