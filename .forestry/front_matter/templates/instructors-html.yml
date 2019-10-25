@@ -35,8 +35,8 @@ fields:
       name: name
       label: name
     - type: text
-      name: email
-      label: email
+      name: gravatar_email
+      label: gravatar_email
     - type: text
       name: linkedin
       label: linkedin
