@@ -25,7 +25,7 @@ _FOR IMMEDIATE RELEASE: 10/28/2019_
 
 ***
 
-**_Austin, TX – October 2019:_** _Austin Coding Academy (ACA) and WP Engine today announced an ongoing collaboration to launch an in-person “WordPress Fundamentals” course to train students in core WordPress elements and develop the technical proficiencies necessary to become a technical support specialist with WP Engine. In addition to providing this technical training, WP Engine will guarantee an interview with every student who completes the course to explore career possibilities with WP Engine. Qualified graduates will interview at WP Engine for an L1 Support Technician position. All WP Engine employees will enjoy competitive compensation, health benefits, paid time off, family leave, 401k with match, equity, ongoing training & development and much more._
+**_Austin, TX – October 2019:_** _Austin Coding Academy (ACA) and WP Engine today announced an ongoing collaboration to launch an in-person_ [_WordPress Fundamentals course_](https://austincodingacademy.com/courses/wordpress-fundamentals/) _to train students in core WordPress elements and develop the technical proficiencies necessary to become a technical support specialist with WP Engine. In addition to providing this technical training, WP Engine will guarantee an interview with every student who completes the course to explore career possibilities with WP Engine. Qualified graduates will interview at WP Engine for an L1 Support Technician position. All WP Engine employees will enjoy competitive compensation, health benefits, paid time off, family leave, 401k with match, equity, ongoing training & development and much more._
 
 _Central to Austin Coding Academy’s mission is continuing to increase access to careers in technology in Austin through thoughtful technical training and to create innovative employment and training solutions for tech companies. “This course, in collaboration with WP Engine, is an opportunity to train for an in-demand skill while also providing students with a unique opportunity to launch their career with a top tech company here in Austin,” says Austin Coding Academy CEO, Chris Lofton. “We’re also excited to collaborate with WP Engine to provide an innovative hiring solution to fuel their continued growth.”_
 
@@ -37,7 +37,7 @@ _WP Engine and Austin Coding Academy will be launching the first WordPress Funda
 * _Unlimited tutoring included in tuition for all students_
 * _A practical, project-based curriculum that covers a wide range of WordPress fundamentals, as well as the opportunity to interface with WP Engine Recruiters and interview for a Technical Support role_
 
-_For more information, contact the above representatives, visit the WordPress Fundamentals Course Page or join Austin Coding Academy and WP Engine at the WordPress Fundamentals Launch Event on Thursday, November 14th at WP Engine (504 Lavaca St, Austin, TX 78701)._
+_For more information, contact the above representatives, visit the_ [_WordPress Fundamentals Course Page_](https://austincodingacademy.com/courses/wordpress-fundamentals/) _or join Austin Coding Academy and WP Engine at the_ [_WordPress Fundamentals Launch Event_](https://www.eventbrite.com/e/austin-coding-academywp-engine-launch-event-happy-hour-wp-engine-tickets-78066889167) _on Thursday, November 14th at WP Engine (504 Lavaca St, Austin, TX 78701)._
 
 ***
 
