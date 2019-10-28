@@ -5,8 +5,8 @@ title: AUSTIN CODING ACADEMY & WP ENGINE LAUNCH WORDPRESS FUNDAMENTALS COURSE AN
   JOB OPPORTUNITIES
 description: Course will teach students WordPress fundamentals & include guaranteed
   interview with WP Engine
-created_at: 2019-10-24T13:00:00.000+00:00
-updated_at: 2019-10-24T13:00:00.000+00:00
+created_at: 2019-10-28 11:00:00 -0500
+updated_at: 2019-10-28 11:00:00 -0500
 categories: []
 excerpt: 'Austin Coding Academy and WP Engine today announced an ongoing collaboration
   to launch an in-person “WordPress Fundamentals” course to train students in the
