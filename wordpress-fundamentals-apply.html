@@ -59,7 +59,7 @@ process:
             <h3>
               {{ item.heading }}
             </h3>
-            <p>
+            <p class="text-center">
               {{ item.text }}
             </p>
           </div>
@@ -325,7 +325,10 @@ process:
                 Do You Own a Laptop? <span class="text-red-a">*</span>
               </label>
               <select id="do-you-own-a-laptop" name="do_you_own_a_laptop" class="form-control">
-                <option value="Yes (a Chromebook)" disabled selected>
+                <option value="" disabled selected>
+                  Select your answer
+                </option>
+                <option value="Yes (a Chromebook)">
                   Yes (a Chromebook)
                 </option>
                 <option value="Yes (a Mac or Windows machine Pre-2012)">
@@ -336,6 +339,9 @@ process:
                 </option>
                 <option value="Yes (other)">
                   Yes (other)
+                </option>
+                <option value="No">
+                  No
                 </option>
               </select>
             </div>
@@ -349,7 +355,7 @@ process:
                 How did you hear About Austin Coding Academy? <span class="text-red-a">*</span>
               </label>
               <select id="hear-about-us" name="how_did_you_hear_about_us" class="form-control">
-              <option value="" disabled selected>
+                <option value="" disabled selected>
                   Select your answer
                 </option>
                 <option value="Facebook">
@@ -427,6 +433,9 @@ process:
                 When Would You Like to Begin Class? <span class="text-red-a">*</span>
               </label>
               <select id="begin-class" name="when_would_you_like_to_begin_class" class="form-control">
+                <option value="" disabled selected>
+                  Select your answer
+                </option>
                 <option value="As Soon as Possible">
                   As Soon as Possible
                 </option>
