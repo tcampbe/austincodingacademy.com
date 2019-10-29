@@ -21,7 +21,7 @@ author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 
 ---
-_FOR IMMEDIATE RELEASE: 10/24/2019_
+_FOR IMMEDIATE RELEASE: 10/28/2019_
 
 ***
 
