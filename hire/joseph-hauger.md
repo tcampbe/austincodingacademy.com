@@ -14,6 +14,7 @@ skills:
   - JavaScript
   - Node.js
   - React
+  - React Native
   - Redux
   - Express.js
   - HTML
