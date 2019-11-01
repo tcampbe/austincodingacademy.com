@@ -12,14 +12,12 @@ process:
   time: (~ 5 Minutes)
   img_width: 70
   img_height: 70
-- item: null #for chevron icon
 - heading: Assignment
   text: After speaking with our admissions team, you’ll be asked to complete a brief assignment.
   img_src: '/assets/images/wp-assignment.png'
   time: (~ 1-2 Hours)
   img_width: 70
   img_height: 70
-- item: null #for chevron icon
 - heading: Acceptance Decision
   text: Once you’ve successfully completed your assignment, you’ll be able to begin class.
   img_src: '/assets/images/wp-enroll.png'
@@ -112,9 +110,9 @@ form_fields:
         asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and have
         at least a high school diploma or GED to enroll in one of our courses/programs.
       </p>
-    <div class="d-flex col-10 mb-4">
+    <div class="d-flex col-10 mb-4 justify-content-between">
       {% for process in page.process %}
-        <div>
+        <div class="col-3">
           <amp-img
             width="{{ process.img_width }}"
             height="{{ process.img_height }}"
@@ -124,11 +122,11 @@ form_fields:
             alt="{{ process.name | liquify }}"
           ></amp-img>
           <div>
-            <div class="text-center">
+            <div class="text-center mb-2">
               {{ process.heading }}
             </div>
-            <div class="text-center">
-              {{ process.time }}
+            <div class="text-center mb-2">
+              <small>{{ process.time }}</small>
             </div>
           </div>
           <div class="text-center">
