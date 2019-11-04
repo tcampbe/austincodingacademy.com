@@ -1,0 +1,160 @@
+---
+layout: default
+permalink: "/apply/"
+redirect_from:
+next_page_href: "/apply2"
+head_title: "Start Your Application | Apply Now at {{ school.name }}"
+description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
+process:
+- heading: Apply
+  text: Get started by filling out our application and setting up a call with our admissions team.
+  img_src: '/assets/images/wp-apply.png'
+  time: (~ 5 Minutes)
+  img_width: 70
+  img_height: 70
+- heading: Assignment
+  text: After speaking with our admissions team, you’ll be asked to complete a brief assignment.
+  img_src: '/assets/images/wp-assignment.png'
+  time: (~ 1-2 Hours)
+  img_width: 70
+  img_height: 70
+- heading: Acceptance Decision
+  text: Once you’ve successfully completed your assignment, you’ll be able to begin class.
+  img_src: '/assets/images/wp-enroll.png'
+  time:
+  img_width: 70
+  img_height: 70
+
+form_fields:
+- name: firstname
+  label: First Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: First Name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: lastname
+  label: Last Name
+  description: ''
+  type: text
+  value: ''
+  placeholder: Last Name
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: phone
+  label: Phone
+  description: ''
+  type: tel
+  value: ''
+  placeholder: "(***)***-****"
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: email
+  label: Email
+  description: ''
+  type: email
+  value: ''
+  placeholder: name@example.com
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: curriculum_track
+  label: To which program are you applying?
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: Full Stack JavaScript Track
+    label: Full-Stack Web Development Track
+  - value: WordPress Fundamentals
+    label: WordPress Fundamentals
+  placeholder: Select your answer
+  required: true
+  small_width: 12
+  medium_width: 12
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="container mt-90 pt-1 pb-5">
+  <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
+    <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
+      Start Your Application
+    </h2>
+    <!-- Proccess Application -->
+      <p class="text-center col-12 col-sm-10">
+        Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will be
+        asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and have
+        at least a high school diploma or GED to enroll in one of our courses/programs.
+      </p>
+    <div class="d-sm-flex col-12 col-sm-10 mb-4 justify-content-between">
+      {% for process in page.process %}
+        <div class="col-12 col-sm-3 mx-auto">
+          <amp-img
+            width="{{ process.img_width }}"
+            height="{{ process.img_height }}"
+            layout="responsive"
+            class="w-75 w-sm-100 mx-auto h-auto mw-10r"
+            src="{{ process.img_src | liquify }}"
+            alt="{{ process.name | liquify }}"
+          ></amp-img>
+          <div>
+            <h3 class="text-center font-weight-bold mb-2">
+              {{ process.heading }}
+            </h3>
+            <p class="text-center mb-2">
+              <small>{{ process.time }}</small>
+            </p>
+          </div>
+          <p class="text-center">
+            {{ process.text }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- Proccess Application End -->
+    <form
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.application_form_guid }}"
+      method="POST"
+      target="_top"
+    >
+      <div class="row p-5">
+        {% assign all_fields = page.form_fields %}
+        {% include fields.html fields=all_fields %}
+
+        <div class="col-12 mb-4 d-flex justify-content-center">
+          <!-- htmllint preset="none" -->
+          <a class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" href="{{ page.next_page_href | liquify }}">
+          <!-- htmllint preset="$previous" -->
+            <span class="hover-white text-white">
+              Continue Application
+            </span>
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
