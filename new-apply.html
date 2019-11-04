@@ -2,7 +2,7 @@
 layout: default
 permalink: "/apply/"
 redirect_from:
-href: "/apply?pg=2"
+next_page_href: "/apply2"
 head_title: "Start Your Application | Apply Now at {{ school.name }}"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 process:
@@ -147,7 +147,7 @@ form_fields:
 
         <div class="col-12 mb-4 d-flex justify-content-center">
           <!-- htmllint preset="none" -->
-          <a class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" href="{{ page.href | liquify }}">
+          <a class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" href="{{ page.next_page_href | liquify }}">
           <!-- htmllint preset="$previous" -->
             <span class="hover-white text-white">
               Continue Application
