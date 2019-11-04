@@ -1,42 +1,31 @@
 ---
 layout: default
-# permalink: "/apply/"
+permalink: "/apply/"
 redirect_from:
-- "/application"
-head_title: Start Your Application | Apply Now at {{ school.name }}
-description: Apply now to learn to code with {{ school.name }} | Fill out
-  your short application to get on the path to a career in web development.
+next_page_href: "/apply/2"
+head_title: "Start Your Application | Apply Now at {{ school.name }}"
+description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
+process:
+- heading: Apply
+  text: Get started by filling out our application and setting up a call with our admissions team.
+  img_src: '/assets/images/wp-apply.png'
+  time: (~ 5 Minutes)
+  img_width: 70
+  img_height: 70
+- heading: Assignment
+  text: After speaking with our admissions team, you’ll be asked to complete a brief assignment.
+  img_src: '/assets/images/wp-assignment.png'
+  time: (~ 1-2 Hours)
+  img_width: 70
+  img_height: 70
+- heading: Acceptance Decision
+  text: Once you’ve successfully completed your assignment, you’ll be able to begin class.
+  img_src: '/assets/images/wp-enroll.png'
+  time:
+  img_width: 70
+  img_height: 70
+
 form_fields:
-- name: application_submission_url
-  label: ''
-  description: ''
-  type: hidden
-  value: "{{ school.url }}{{ site.baseurl }}{{ page.permalink }}"
-  placeholder: ''
-  required: ''
-  small_width: ''
-  medium_width: ''
-  options: []
-- name: lifecyclestage
-  label: ''
-  description: ''
-  type: hidden
-  value: opportunity
-  placeholder: ''
-  required: ''
-  small_width: ''
-  medium_width: ''
-  options: []
-- name: filled_out_application
-  label: ''
-  description: ''
-  type: hidden
-  value: true
-  placeholder: ''
-  required: ''
-  small_width: ''
-  medium_width: ''
-  options: []
 - name: firstname
   label: First Name
   description: ''
@@ -45,8 +34,8 @@ form_fields:
   options: []
   placeholder: First Name
   required: true
-  small_width: "12"
-  medium_width: "6"
+  small_width: 12
+  medium_width: 6
 - name: lastname
   label: Last Name
   description: ''
@@ -54,8 +43,8 @@ form_fields:
   value: ''
   placeholder: Last Name
   required: true
-  small_width: "12"
-  medium_width: "6"
+  small_width: 12
+  medium_width: 6
   options: []
 - name: phone
   label: Phone
@@ -64,8 +53,8 @@ form_fields:
   value: ''
   placeholder: "(***)***-****"
   required: true
-  small_width: "12"
-  medium_width: "6"
+  small_width: 12
+  medium_width: 6
   options: []
 - name: email
   label: Email
@@ -74,189 +63,29 @@ form_fields:
   value: ''
   placeholder: name@example.com
   required: true
-  small_width: "12"
-  medium_width: "6"
+  small_width: 12
+  medium_width: 6
   options: []
-- name: city
-  label: Your Current City
-  description: ''
-  type: text
-  value: ''
-  placeholder: City
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options: []
-- name: state
-  label: State
-  description: ''
-  type: text
-  value: ''
-  placeholder: ST
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options: []
-- name: are_you_18_or_older_
-  label: Will you be at least 18 by the time your classes begin?
-  description: Please note that you must be at least 18 years old by the time your
-    classes begin to apply to {{ school.name }}. You also must have a High
-    School Diploma or GED.
-  type: select
-  value: ''
-  options:
-  - value: true
-    label: 'Yes'
-  - value: false
-    label: 'No'
-  placeholder: Select One
-  required: true
-  small_width: "12"
-  medium_width: "12"
-- name: current_occupation1
-  label: Current Occupation or Job Title
-  description: ''
-  type: text
-  value: ''
-  placeholder: Your current job title
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options: []
-- name: current_company1
-  label: Current Company
-  description: ''
-  type: text
-  value: ''
-  placeholder: Please enter your current company
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options: []
-- name: college_or_school_attended1
-  label: Last School Attended
-  description: ''
-  type: text
-  value: ''
-  placeholder: The last school you attended
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options: []
-- name: what_experience_if_any_do_you_have_in_coding_currently_
-  label: What experience do you have in coding?
+- name: curriculum_track
+  label: To which program are you applying?
   description: ''
   type: select
   value: ''
   options:
-  - value: None at all!
-    label: None at all!
-  - value: I've dabbled with some online tutorials
-    label: I've dabbled with some online tutorials.
-  - value: Solid fundamentals but not ready for a job
-    label: Solid fundamentals but not ready for a job.
-  - value: I'm a professional developer
-    label: Professional developer, gaining more skills.
+  - value: Full Stack JavaScript Track
+    label: Full-Stack Web Development Track
+  - value: WordPress Fundamentals
+    label: WordPress Fundamentals
   placeholder: Select your answer
   required: true
-  small_width: "12"
-  medium_width: "6"
-- name: how_do_you_intend_to_pay_for_the_course_
-  label: How do you intend to pay for the course?
-  description: ''
-  type: select
-  value: ''
-  options:
-  - value: I'll be paying on my own.
-    label: Paying on my own
-  - value: Planning to finance
-    label: I'm planning to finance tuition.
-  - value: Employer will be paying / reimbursing
-    label: My employer will be paying/reimbursing me.
-  - value: Other
-    label: Other
-  placeholder: Select your answer
-  required: true
-  small_width: "12"
-  medium_width: "6"
-- name: which_of_these_best_describes_you_
-  label: Which of these best describes you?
-  description: ''
-  type: select
-  value: ''
-  options:
-  - value: "I'm researching coding bootcamps"
-    label: "I'm researching coding bootcamps"
-  - value: "I'm teaching myself to code but I'm stuck"
-    label: "I'm teaching myself to code but I'm stuck"
-  - value: "I'm interested in a career in tech"
-    label: "I'm interested in a career in tech"
-  - value: "I'm an entrepreneur with an idea"
-    label: "I'm an entrepreneur with an idea"
-  - value: "I'm looking for a college alternative"
-    label: "I'm looking for a college alternative"
-  - value: "I want to learn a new skill for my current job"
-    label: "I want to learn a new skill for my current job"
-  placeholder: Select your answer
-  required: true
-  small_width: "12"
-  medium_width: "6"
-schools:
-- key: austincodingacademy
-  form_fields:
-  - name: curriculum_track
-    label: To which program are you applying?
-    description: ''
-    type: select
-    value: ''
-    options:
-    - value: Full Stack JavaScript Track
-      label: Full-Stack Web Development Track
-    - value: WordPress Fundamentals
-      label: WordPress Fundamentals
-    placeholder: Select your answer
-    required: true
-    small_width: 12
-    medium_width: 6
-  - name: campus_interest_new
-    label: Which campus are you interested in?
-    description: ''
-    type: select
-    value: ''
-    options:
-    - value: Austin
-      label: Downtown - Capital Factory
-    - value: Austin - North
-      label: Central - Highland
-    - value: Either campus works!
-      label: Either campus works!
-    - value: Remote
-      label: Remote (Outside of Austin)
-    placeholder: Select your answer
-    required: true
-    small_width: 12
-    medium_width: 6
-- key: lubbockcodingacademy
-  form_fields:
-  - name: date_of_birth1
-    label: Date of Birth
-    description: ''
-    type: date
-    value: ''
-    placeholder: ''
-    required: true
-    small_width: 12
-    medium_width: 6
-    options: []
-- key: texastechuniversitycodingacademy
-  form_fields: []
-
+  small_width: 12
+  medium_width: 12
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key ==  site.key%}
+      {% if _school.key == site.key %}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}
@@ -271,27 +100,59 @@ schools:
 {% endif %}
 
 <div class="container mt-90 pt-1 pb-5">
-  <div class="my-10 px-4 p-lg-0 border mx-auto">
-    <h2 class="font-family-alt my-10 display-5 text-center">
-      Student Application
+  <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
+    <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
+      Start Your Application
     </h2>
+    <!-- Proccess Application -->
+      <p class="text-center col-12 col-sm-10">
+        Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will be
+        asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and have
+        at least a high school diploma or GED to enroll in one of our courses/programs.
+      </p>
+    <div class="d-sm-flex col-12 col-sm-10 mb-4 justify-content-between">
+      {% for process in page.process %}
+        <div class="col-12 col-sm-3 mx-auto">
+          <amp-img
+            width="{{ process.img_width }}"
+            height="{{ process.img_height }}"
+            layout="responsive"
+            class="w-75 w-sm-100 mx-auto h-auto mw-10r"
+            src="{{ process.img_src | liquify }}"
+            alt="{{ process.name | liquify }}"
+          ></amp-img>
+          <div>
+            <h3 class="text-center font-weight-bold mb-2">
+              {{ process.heading }}
+            </h3>
+            <p class="text-center mb-2">
+              <small>{{ process.time }}</small>
+            </p>
+          </div>
+          <p class="text-center">
+            {{ process.text }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- Proccess Application End -->
     <form
       action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.application_form_guid }}"
       method="POST"
       target="_top"
     >
       <div class="row p-5">
-        {% assign all_fields = page.form_fields | concat: school.form_fields %}
+        {% assign all_fields = page.form_fields %}
         {% include fields.html fields=all_fields %}
 
-        <div class="col-12 mb-4">
-          {% include referral-question.html %}
-        </div>
-
         <div class="col-12 mb-4 d-flex justify-content-center">
-          <button class="btn btn-round text-white bg-primary-dark" type="Submit">
-            Submit
-          </button>
+          <!-- htmllint preset="none" -->
+          <a class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" href="{{ page.next_page_href | liquify }}">
+          <!-- htmllint preset="$previous" -->
+            <span class="hover-white text-white">
+              Continue Application
+            </span>
+          </a>
         </div>
       </div>
     </form>
