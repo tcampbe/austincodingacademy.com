@@ -3,6 +3,8 @@
     "http://localhost:4000/",
     "http://localhost:4000/blog/",
     "http://localhost:4000/404/",
+    "http://localhost:4000/apply/",
+    "http://localhost:4000/apply/2/",
     "http://localhost:4000/assignment/",
     "http://localhost:4000/contact/",
     "http://localhost:4000/enterprise-training/",
