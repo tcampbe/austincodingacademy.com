@@ -8,6 +8,16 @@ description: Apply now to learn to code with {{ school.name }} | Fill out
   your short application to get on the path to a career in web development.
 
 form_fields:
+- name: email
+  label: ''
+  description: ''
+  type: hidden
+  value: ''
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
 - name: application_submission_url
   label: ''
   description: ''
@@ -356,7 +366,7 @@ schools:
       Start by telling us a little bit about yourself
     </h5>
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.application_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.wordpress_form_guid }}"
       method="POST"
       target="_top"
     >
@@ -382,3 +392,13 @@ schools:
     </form>
   </div>
 </div>
+
+<script>
+  window.onload = function() {
+    var index = window.location.href.indexOf('?email=');
+    var email = window.location.href.slice(index + 7);
+    console.log(email)
+    document.getElementsByName[0] = email;
+    console.log('name attr for hidden email field', document.getElementsByName[0])
+  }
+</script>
