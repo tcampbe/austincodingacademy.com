@@ -186,7 +186,9 @@
 
   <!-- Filters -->
   {% unless include.marketing %}
-    <h4 class="pt-5">Filters</h4>
+    <h4 class="pt-5">
+      Filters
+    </h4>
     <div class="d-flex flex-row justify-content-around pb-5">
       <!-- Location -->
       <div class="w-50">
@@ -200,6 +202,7 @@
           class="form-control"
         >
         <!-- htmllint preset="$previous" -->
+        {% if school.name == 'Austin Coding Academy' %}
           <option value="any" selected>
             Select Location
           </option>
@@ -209,6 +212,14 @@
           <option value="austinDowntown">
             Downtown Campus
           </option>
+        {% else %}
+          <option value="any" selected>
+            Select Location
+          </option>
+          <option value="southPlains">
+            South Plains Community College
+          </option>
+        {% endif %}
         </select>
       </div>
 
