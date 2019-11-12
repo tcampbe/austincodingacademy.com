@@ -1,6 +1,7 @@
 <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
 <input name="page_uri" type="hidden" value="{{ school.url | liquify }}{{ site.baseurl | liquify }}{{ page.permalink }}">
 <input name="hutk" type="hidden" value="">
+<input name="redirect_url" type="hidden" value="{{ include.redirect_url }}">
 <!-- htmllint preset="none" -->
 {% for field in include.fields %}
   {% if field.type == "hidden" %}
