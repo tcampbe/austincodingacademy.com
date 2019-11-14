@@ -48,6 +48,8 @@
         tabindex="-1"
         role="form"
       >
+        {% assign all_fields = page.form_fields %}
+        {% include fields.html fields=all_fields %}
         <input name="lifecyclestage" type="hidden" value="lead">
         <input name="hs_lead_status" type="hidden" value="NEW">
         <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
