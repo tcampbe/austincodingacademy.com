@@ -218,7 +218,7 @@ scholarship:
   </section>
 
   {% assign scholarship = page.scholarship %}
-  <section class="container-fluid d-flex py-8 flex-column justify-content-center align-items-center bg-textured">
+  <section class="container-fluid d-flex py-6 flex-column justify-content-center align-items-center bg-textured">
     <div class="col-md-8 d-flex flex-column align-items-center justify-content-center">
       <h2 class="text-center display-5 font-family-alt py-6 text-white">
         {{ scholarship.heading | liquify }}
@@ -254,73 +254,71 @@ scholarship:
       </p>
     </div>
   </section>
-
-  <!-- SEAN'S CODE HERE -->
-    <!-- PROCESS -->
-    <section class="container my-8 d-flex flex-column justify-content-center">
-        {% assign process = page.app_process %}
-        <div class="display-5 font-family-alt py-8 text-center">
-          {{ process.heading }}
+  <!-- PROCESS -->
+  <section class="container d-flex flex-column justify-content-center">
+    {% assign process = page.app_process %}
+    <div class="display-5 font-family-alt py-8 text-center">
+      {{ process.heading }}
+    </div>
+    {% assign sections = process.sections %}
+    {% for item in sections %}
+      <div class="py-5">
+        <div class="display-7 font-family-alt mb-5">
+          {{ item.subheading | liquify }}
         </div>
-        {% assign sections = process.sections %}
-        {% for item in sections %}
-          <div class="py-5">
-            <div class="display-7 font-family-alt mb-5">
-              {{ item.subheading | liquify }}
-            </div>
-            <p class="text-center text-md-left">
-              {{ item.text | liquify }}
-            </p>
-          </div>
-        {% endfor %}
-      </section>
-
-      <!-- Timeline -->
-      {% assign timeline = page.timeline %}
-      <div class="container py-8">
-        <div class="mb-4 d-flex flex-column justify-content-center">
-          <div class="display-5 font-family-alt py-8 text-center">
-            {{ timeline.heading }}
-          </div>
-        </div>
-        <ul class="fa-ul mb-2">
-          {% for bullet in timeline.bullets %}
-            <li class="mb-1">
-              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
-            </li>
-          {% endfor %}
-        </ul>
+        <p class="text-center text-md-left">
+          {{ item.text | liquify }}
+        </p>
       </div>
+    {% endfor %}
+  </section>
 
-      <section class="container py-8">
-        {% assign eligibility = page.eligibility %}
-        <div class="display-5 font-family-alt py-8 text-center">
-          {{ eligibility.heading }}
-        </div>
-        {% assign sections = eligibility.sections %}
-        {% for section in sections %}
-          <div class="py-8 text-center px-8">
-            {{ section.descript }}
-          </div>
-          <ul class="fa-ul mb-2">
-            {% for bullet in section.bullets %}
-              <li class="mb-1">
-                <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
-              </li>
-            {% endfor %}
-          </ul>
-        {% endfor %}
-      </section>
-
-      <div class="text-center">
-        {% include btn-apply.html %}
+  <!-- Timeline -->
+  {% assign timeline = page.timeline %}
+  <section class="container py-8">
+    <div class="mb-4 d-flex flex-column justify-content-center">
+      <div class="display-5 font-family-alt pb-6 text-center">
+        {{ timeline.heading }}
       </div>
+    </div>
+    <ul class="fa-ul mb-2">
+      {% for bullet in timeline.bullets %}
+        <li class="mb-1">
+          <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-  <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5 border-bottom">
-    <h2 class="display-5 font-family-alt py-6">
+  <section class="container py-8">
+    {% assign eligibility = page.eligibility %}
+    <div class="display-5 font-family-alt text-center">
+      {{ eligibility.heading }}
+    </div>
+    {% assign sections = eligibility.sections %}
+    {% for section in sections %}
+      <div class="py-8 text-center px-8">
+        {{ section.descript }}
+      </div>
+      <ul class="fa-ul mb-2">
+        {% for bullet in section.bullets %}
+          <li class="mb-1">
+            <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </section>
+
+  <div class="text-center">
+    {% include btn-apply.html %}
+  </div>
+
+  <section class="container col-xs-11 col-sm-11 mx-auto pt-3 pb-5 border-bottom">
+    <h2 class="display-5 font-family-alt py-6 text-center">
       Disclaimer
     </h2>
-    <p>
+    <p class="text-center mx-4">
       Austin Coding Academy is proud to be an equal opportunity educational
       institution. We are committed to equal opportunity regardless of race,
       color, ancestry, religion, sex, national origin, sexual orientation, age,
@@ -329,11 +327,11 @@ scholarship:
   </section>
 
   <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5">
-      <div class="container mw-600">
-        <h3 class="font-family-alt font-weight-bold text-center display-5">
-          Questions?
-        </h3>
-        {% include contact-form.html %}
-      </div>
-    </section>
+    <div class="container mw-600">
+      <h3 class="font-family-alt font-weight-bold text-center display-5">
+        Questions?
+      </h3>
+      {% include contact-form.html %}
+    </div>
+  </section>
 </main>
