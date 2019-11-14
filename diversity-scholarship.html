@@ -2,27 +2,23 @@
 layout: default
 permalink: "/diversity-scholarship/"
 amp_components:
-- amp-img
+- amp-carousel
+- amp-lightbox
 redirect_from: []
 hero: js
-hero_heading: WordPress Fundamentals
-hero_text:
-program_descript: Austin Coding Academy's WordPress Fundamentals Course is part of
-  a unique partnership with WP Engine, a global leader in managed WordPress hosting.
-  This 10-week, in-depth program is designed to prepare students for a guaranteed
-  interview with WP Engine’s customer support team. Students will learn how to solve
-  common WordPress issues through practical projects, while also developing a working
-  knowledge of WordPress fundamentals.
-
-program_overview: Austin Coding Academy and WP Engine have partnered together to develop
-  a WordPress curriculum that teaches the most important core technical proficiencies
-  that WordPress developers use today, as well as the customer service and support
-  skills necessary to work as a technical support specialist with WP Engine.<br><br>
-  All students who complete the course with Austin Coding Academy are guaranteed an
-  interview with WP Engine for the role of support specialist – a position for which
-  WP Engine makes dozens of new hires annually to support their growing customer base.<br><br>
-  Continue reading to learn more about the course curriculum, WP Engine, and the details
-  of the support specialist role.
+hero_heading: Austin Coding Academy Diversity Scholarship
+hero_text: Austin Coding Academy is excited to be accepting applications for our 2020
+  Diversity Scholarship! This scholarship will cover tuition, in-full, for our Full
+  Stack Web Development Program, with the recipient starting class in January 2020.
+  Continue reading for more information on the application process and timeline,
+  eligibility, and more.
+scholarship_descript: November 19th - December 11th, we will be accepting applications
+  to our Annual Diversity Scholarship from candidates who are ready to take control of
+  their own destiny. This scholarship will cover the full cost of tuition, textbook,
+  and tutoring for our Full Stack Web Development Program. Applicants must be ready to
+  enroll in class beginning in January, and commit to completing the entire 32-week
+  program. Applicants can choose to attend classes at either our Capital Factory Campus
+  (January 14th) or our Highland Campus (January 27th).
 
 app_process:
   heading: Scholarship Application Process
@@ -76,6 +72,50 @@ eligibility:
     - Preference given to students with financial need
     - The recipient will be selected by a Selection Committee of 5-7 distinguished and independent individuals in the field of technology. The deliberations of the Selection Committee
       will be confidential and independent of Austin Coding Academy
+overview:
+- title: Tech’s Diversity Problem
+  text: The current makeup of the tech industry fails to represent the cultural makeup
+    and trends of Austin, Texas and the United States as a whole. Our world is becoming
+    more diverse by the day, and as tech plays an increasingly important role in
+    shaping it, the tech workforce should represent this shift. Austin Coding Academy
+    is committed to a diverse and representative tech workforce for the future.
+  img_src: "/assets/images/4GSM0.jpg"
+  odd: true
+- title: Implications for the Future
+  text: The tech industry is instrumental in driving changes in our everyday life –
+    from social networking, to smart homes and cars, to creating solutions to the
+    biggest challenges we face in society. A tech workforce that truly represents how
+    diverse we are, makes sure that all perspectives are considered in the solutions
+    that we create.
+  img_src: "/assets/images/collaboration.jpg"
+- title: What We’re Doing to Help
+  text: Since being founded in 2014, Austin Coding Academy has maintained a commitment
+    to accessibility and affordability. Our Diversity Scholarship is another effort
+    to make sure that we are promoting accessibility and diversity in tech, by making
+    our transformative education available to even more well-qualified candidates.
+  img_src: "/assets/images/coding-tutoring-session.jpg"
+  odd: true
+scholarship:
+  heading: About this Scholarship
+  img_src: "/assets/images/coding-tutoring-session.jpg"
+  p1: November 19th - December 11th, we will be accepting applications to our
+    Annual Diversity Scholarship from candidates who are ready to take control
+    of their own destiny. This scholarship will cover the full cost of tuition,
+    textbook, and tutoring for our Full Stack Web Development Program. Applicants
+    must be ready to enroll in class beginning in January, and commit to completing
+    the entire 32-week program. Applicants can choose to attend classes at either our
+    Capital Factory Campus (January 14th) or our Highland Campus (January 27th).
+  p2: The recipient of the scholarship will enroll into Austin Coding Academy’s
+    32-week Full Stack Web Development Program, beginning on either January 14th or
+    27th, 2020. Upon completion of the program, the awardee will take our 4-week Job
+    Placement course, that gives graduates the necessary tools to land their first
+    role. Austin Coding Academy is committed to helping our students make the
+    transition into tech and put their newfound skills to work. In this course,
+    students will learn how to construct a resume, cultivate their web presence,
+    approach the interview process with confidence, and more.
+  p3: We’re looking for candidates who have grit, determination and who are interested
+    in pursuing a career in tech -- no coding or tech background is required. To apply,
+    please read all of the details below and then submit your application.
 
 ---
 {% for _page in site.pages %}
@@ -123,131 +163,177 @@ eligibility:
     </div>
   </div>
 </div>
+    </div>
+  </div>
+</div>
+
 <main>
-  <!-- PROCESS -->
-  <section class="container my-8 d-flex flex-column justify-content-center">
-    {% assign process = page.app_process %}
-    <div class="display-5 font-family-alt py-8 text-center">
-      {{ process.heading }}
-    </div>
-    {% assign sections = process.sections %}
-    {% for item in sections %}
-      <div class="py-5">
-        <div class="display-7 font-family-alt mb-5">
-          {{ item.subheading | liquify }}
+
+  <section class="d-flex flex-column justify-content-center align-items-center">
+    {% for item in page.overview %}
+      {% if item.odd %}
+        <div class="d-flex flex-wrap-reverse">
+          <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
+            <h3>
+              {{ item.title }}
+            </h3>
+            <p>
+              {{ item.text }}
+            </p>
+          </div>
+          <div class="w-100 w-sm-50">
+            <amp-img
+              layout="responsive"
+              class="img-fluid"
+              width="3535"
+              height="2146"
+              src="{{ item.img_src | liquify }}"
+            >
+            </amp-img>
+          </div>
         </div>
-        <p class="text-center text-md-left">
-          {{ item.text | liquify }}
-        </p>
-      </div>
-    {% endfor %}
-  </section>
-
-  <!-- Timeline -->
-  {% assign timeline = page.timeline %}
-  <div class="container py-8">
-    <div class="mb-4 d-flex flex-column justify-content-center">
-      <div class="display-5 font-family-alt py-8 text-center">
-        {{ timeline.heading }}
-      </div>
-    </div>
-    <ul class="fa-ul mb-2">
-      {% for bullet in timeline.bullets %}
-        <li class="mb-1">
-          <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <section class="container py-8">
-    {% assign eligibility = page.eligibility %}
-    <div class="display-5 font-family-alt py-8 text-center">
-      {{ eligibility.heading }}
-    </div>
-    {% assign sections = eligibility.sections %}
-    {% for section in sections %}
-      <div class="py-8 text-center px-8">
-        {{ section.descript }}
-      </div>
-      <ul class="fa-ul mb-2">
-        {% for bullet in section.bullets %}
-          <li class="mb-1">
-            <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
-          </li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
-  </section>
-
-  <div class="text-center">
-    {% include btn-apply.html %}
-  </div>
-
-  <section id="contact" class="container-fluid py-11">
-    <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
-      <div class="d-none d-md-inline col-md-2 mw-10r"></div>
-      <div class="col-md-8">
-        <h2 class="font-family-alt font-weight-bold text-center display-6">
-          Still Have Questions?
-        </h2>
-        <div class="mw-600 mx-auto p-2 p-md-0">
-          <h5 class="mb-4 text-center">
-            From choosing the right course to understanding course details, we're here
-            to help.
-          </h5>
-          {% include contact-form.html %}
+      {% else %}
+        <div class="d-flex flex-wrap flex-sm-row">
+          <div class="w-100 w-sm-50">
+            <amp-img
+              layout="responsive"
+              class="img-fluid"
+              width="3535"
+              height="2146"
+              src="{{ item.img_src | liquify }}"
+            >
+            </amp-img>
+          </div>
+          <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
+            <h3>
+              {{ item.title }}
+            </h3>
+            <p>
+              {{ item.text }}
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="d-none d-md-inline col-md-2"></div>
-    </div>
-  </section>
-
-  {% for course in page.courses %}
-    {% for __course in settings.courses %}
-      {% if __course.code == _course.code %}
-        {% assign course = __course | hash_concat: _course %}
       {% endif %}
     {% endfor %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "{{ course.title | liquify }}",
-      "courseCode": "{{ course.code | liquify }}",
-      "description": "{{ course.description | liquify }}",
-      "hasCourseInstance": [
-        {% for section in course.sections %}
-        {
-          "@type": "CourseInstance",
-          "name": "{{ course.title | liquify }}",
-          "description": "{{ course.description | liquify }}",
-          "startDate": "{{ section.start | liquify }}",
-          "endDate": "{{ section.end | liquify }}",
-          "location": {
-            "@type": "Place",
-            "name": "{{ school.name }}",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "{{ school.locations[section.campus].street | liquify }}",
-              "addressLocality": "{{ school.locations[section.campus].city }}",
-              "addressRegion": "{{ school.locations[section.campus].state | liquify }}",
-              "postalCode": "school.locations[section.campus].postal",
-              "addressCountry": "US"
-            }
-          }
-        }{% unless forloop.last %},{% endunless %}
+  </section>
+
+  {% assign scholarship = page.scholarship %}
+  <section class="container-fluid d-flex py-8 flex-column justify-content-center align-items-center bg-textured">
+    <div class="col-md-8 d-flex flex-column align-items-center justify-content-center">
+      <h2 class="text-center display-5 font-family-alt py-6 text-white">
+        {{ scholarship.heading | liquify }}
+      </h2>
+    </div>
+
+    <div class="container flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
+      <div class="w-100 w-sm-50 p-0 pr-sm-4 my-auto">
+        <amp-img
+          layout="responsive"
+          class="img-fluid shadow-black"
+          width="3535"
+          height="2146"
+          src="{{ scholarship.img_src | liquify }}"
+        >
+        </amp-img>
+      </div>
+      <div class="w-100 w-sm-50 m-0 ml-sm-4">
+        <h4 class="text-white">
+          {{ scholarship.title | liquify }}
+        </h4>
+        <p class="text-white">
+          {{ scholarship.p1 | liquify }}
+        </p>
+      </div>
+    </div>
+    <div class="container py-8">
+      <p class="text-white">
+        {{ scholarship.p2 | liquify }}
+      </p>
+      <p class="text-white">
+        {{ scholarship.p3 | liquify }}
+      </p>
+    </div>
+  </section>
+
+  <!-- SEAN'S CODE HERE -->
+    <!-- PROCESS -->
+    <section class="container my-8 d-flex flex-column justify-content-center">
+        {% assign process = page.app_process %}
+        <div class="display-5 font-family-alt py-8 text-center">
+          {{ process.heading }}
+        </div>
+        {% assign sections = process.sections %}
+        {% for item in sections %}
+          <div class="py-5">
+            <div class="display-7 font-family-alt mb-5">
+              {{ item.subheading | liquify }}
+            </div>
+            <p class="text-center text-md-left">
+              {{ item.text | liquify }}
+            </p>
+          </div>
         {% endfor %}
-      ],
-      "provider": {
-        "@type": "Organization",
-        "name": "{{ school.name }}",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ school.url }}/assets/images/logo-{{ site.key }}.png"
-        }
-      }
-    }
-    </script>
-  {% endfor %}
+      </section>
+
+      <!-- Timeline -->
+      {% assign timeline = page.timeline %}
+      <div class="container py-8">
+        <div class="mb-4 d-flex flex-column justify-content-center">
+          <div class="display-5 font-family-alt py-8 text-center">
+            {{ timeline.heading }}
+          </div>
+        </div>
+        <ul class="fa-ul mb-2">
+          {% for bullet in timeline.bullets %}
+            <li class="mb-1">
+              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <section class="container py-8">
+        {% assign eligibility = page.eligibility %}
+        <div class="display-5 font-family-alt py-8 text-center">
+          {{ eligibility.heading }}
+        </div>
+        {% assign sections = eligibility.sections %}
+        {% for section in sections %}
+          <div class="py-8 text-center px-8">
+            {{ section.descript }}
+          </div>
+          <ul class="fa-ul mb-2">
+            {% for bullet in section.bullets %}
+              <li class="mb-1">
+                <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </section>
+
+      <div class="text-center">
+        {% include btn-apply.html %}
+      </div>
+
+  <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5 border-bottom">
+    <h2 class="display-5 font-family-alt py-6">
+      Disclaimer
+    </h2>
+    <p>
+      Austin Coding Academy is proud to be an equal opportunity educational
+      institution. We are committed to equal opportunity regardless of race,
+      color, ancestry, religion, sex, national origin, sexual orientation, age,
+      citizenship, marital status, disability, gender identity or Veteran status.
+    </p>
+  </section>
+
+  <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5">
+      <div class="container mw-600">
+        <h3 class="font-family-alt font-weight-bold text-center display-5">
+          Questions?
+        </h3>
+        {% include contact-form.html %}
+      </div>
+    </section>
 </main>
