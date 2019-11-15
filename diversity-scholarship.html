@@ -19,7 +19,6 @@ scholarship_descript: November 19th - December 11th, we will be accepting applic
   enroll in class beginning in January, and commit to completing the entire 32-week
   program. Applicants can choose to attend classes at either our Capital Factory Campus
   (January 14th) or our Highland Campus (January 27th).
-
 app_process:
   heading: Scholarship Application Process
   sections:
@@ -164,22 +163,18 @@ scholarship:
     </div>
   </div>
 </div>
-    </div>
-  </div>
-</div>
 
 <main>
-
   <section class="d-flex flex-column justify-content-center align-items-center">
     {% for item in page.overview %}
       {% if item.odd %}
         <div class="d-flex flex-wrap-reverse">
           <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
             <h3>
-              {{ item.title }}
+              {{ item.title | liquify }}
             </h3>
             <p>
-              {{ item.text }}
+              {{ item.text | liquify }}
             </p>
           </div>
           <div class="w-100 w-sm-50">
@@ -207,10 +202,10 @@ scholarship:
           </div>
           <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
             <h3>
-              {{ item.title }}
+              {{ item.title | liquify }}
             </h3>
             <p>
-              {{ item.text }}
+              {{ item.text | liquify }}
             </p>
           </div>
         </div>
@@ -285,43 +280,44 @@ scholarship:
     <ul class="fa-ul mb-2">
       {% for bullet in timeline.bullets %}
         <li class="mb-1">
-          <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
+          <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet | liquify }}
         </li>
       {% endfor %}
     </ul>
   </section>
-
+  <!-- Eligibility -->
+  <!-- htmllint preset="none" -->
   <section class="container py-8">
     {% assign eligibility = page.eligibility %}
     <div class="display-5 font-family-alt text-center">
-      {{ eligibility.heading }}
+      {{ eligibility.heading | liquify }}
     </div>
     {% assign sections = eligibility.sections %}
     {% for section in sections %}
       <div class="py-8 text-center px-8">
-        {{ section.descript }}
+        {{ section.descript | liquify }}
       </div>
       <ul class="fa-ul mb-2">
         {% for bullet in section.bullets %}
           {% if bullet.bullets %}
             <li class="mb-1">
-              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet }}
+              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
               {% for bullet in bullet.bullets %}
                 <li class="ml-4">
-                  <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet }}
+                  <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
                 </li>
               {% endfor %}
             </li>
           {% else %}
             <li class="mb-1">
-              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet }}
+              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
             </li>
           {% endif %}
         {% endfor %}
       </ul>
     {% endfor %}
   </section>
-
+  <!-- htmllint preset="$previous" -->
   <div class="text-center">
     {% include btn-apply.html href="/diversity-scholarship/apply" %}
   </div>
