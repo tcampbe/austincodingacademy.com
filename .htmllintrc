@@ -18,5 +18,6 @@
   "attr-req-value": false,
   "title-max-len": false,
   "line-no-trailing-whitespace": false,
-  "spec-char-escape": false
+  "spec-char-escape": false,
+  "attr-quote-style": false
 }

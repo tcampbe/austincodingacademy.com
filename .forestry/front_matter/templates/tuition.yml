@@ -1,0 +1,51 @@
+---
+label: tuition
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: head_title
+  label: head_title
+- type: field_group_list
+  name: schools
+  label: schools
+  fields:
+  - type: text
+    name: key
+    label: key
+  - type: field_group_list
+    name: sections
+    label: sections
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: textarea
+      name: description
+      label: description
+    - type: field_group_list
+      name: options
+      label: options
+      fields:
+      - type: text
+        name: title
+        label: title
+      - type: textarea
+        name: description
+        label: description
+      - type: text
+        name: price_header
+        label: price_header
+      - type: text
+        name: price
+        label: price
+      - type: text
+        name: price2
+        label: price2
+pages:
+- tuition.html
