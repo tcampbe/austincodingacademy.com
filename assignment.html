@@ -56,6 +56,9 @@ resources:
         target="_top"
         method="POST"
       >
+        <!-- htmllint preset="none" -->
+        <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/”>
+        <!-- htmllint preset="$previous" -->
         <div class="form-container">
           <div class="row center-form mb-4">
             <!-- Input -->
