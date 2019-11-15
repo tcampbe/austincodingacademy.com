@@ -1,439 +1,157 @@
 ---
 layout: default
 permalink: "/apply/"
-title: "Start Your Application | Apply Now at Austin Coding Academy"
-description: "Apply now to learn to code with Austin Coding Academy | Fill out your
-  short application to get on the path to a career in web development."
-form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
 redirect_from:
-- "/application"
+next_page_href: "/apply/2"
+head_title: "Start Your Application | Apply Now at {{ school.name }}"
+description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
+process:
+- heading: Apply
+  text: Get started by filling out our application and setting up a call with our admissions team.
+  img_src: '/assets/images/wp-apply.png'
+  time: (~ 5 Minutes)
+  img_width: 70
+  img_height: 70
+- heading: Assignment
+  text: After speaking with our admissions team, you’ll be asked to complete a brief assignment.
+  img_src: '/assets/images/wp-assignment.png'
+  time: (~ 1-2 Hours)
+  img_width: 70
+  img_height: 70
+- heading: Acceptance Decision
+  text: Once you’ve successfully completed your assignment, you’ll be able to begin class.
+  img_src: '/assets/images/wp-enroll.png'
+  time:
+  img_width: 70
+  img_height: 70
 
+form_fields:
+- name: firstname
+  label: First Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: First Name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: lastname
+  label: Last Name
+  description: ''
+  type: text
+  value: ''
+  placeholder: Last Name
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: phone
+  label: Phone
+  description: ''
+  type: tel
+  value: ''
+  placeholder: "(***)***-****"
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: email
+  label: Email
+  description: ''
+  type: email
+  value: ''
+  placeholder: name@example.com
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: curriculum_track
+  label: To which program are you applying?
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: Full Stack JavaScript Track
+    label: Full-Stack Web Development Track
+  - value: WordPress Fundamentals
+    label: WordPress Fundamentals
+  placeholder: Select your answer
+  required: true
+  small_width: 12
+  medium_width: 12
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 <div class="container mt-90 pt-1 pb-5">
-  <div class="my-10 px-4 p-lg-0 border mx-auto">
-    <h2 class="font-family-alt my-10 display-5 text-center">
-      Student Application
+  <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
+    <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
+      Start Your Application
     </h2>
+    <!-- Proccess Application -->
+      <p class="text-center col-12 col-sm-10">
+        Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will be
+        asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and have
+        at least a high school diploma or GED to enroll in one of our courses/programs.
+      </p>
+    <div class="d-sm-flex col-12 col-sm-10 mb-4 justify-content-between">
+      {% for process in page.process %}
+        <div class="col-12 col-sm-3 mx-auto">
+          <amp-img
+            width="{{ process.img_width }}"
+            height="{{ process.img_height }}"
+            layout="responsive"
+            class="w-75 w-sm-100 mx-auto h-auto mw-10r"
+            src="{{ process.img_src | liquify }}"
+            alt="{{ process.name | liquify }}"
+          ></amp-img>
+          <div>
+            <h3 class="text-center font-weight-bold mb-2">
+              {{ process.heading }}
+            </h3>
+            <p class="text-center mb-2">
+              <small>{{ process.time }}</small>
+            </p>
+          </div>
+          <p class="text-center">
+            {{ process.text }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
     <form
-      class="d-flex justify-content-center"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{page.form_guid}}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.wordpress_form_guid }}"
       method="POST"
       target="_top"
     >
-      <div class="form-container">
-        <input name="lifecyclestage" type="hidden" value="opportunity">
-        <input name="filled_out_application" type="hidden" value="true">
-        <input name="page_name" type="hidden" value="{{page.title}}">
-        <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.url}}">
-        <input name="hutk" type="hidden" value="">
-        <div class="mw-850 row">
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="firstname" class="form-label">
-                First Name <span class="text-red-a">*</span>
-              </label>
+      <div class="row p-5">
+        {% assign all_fields = page.form_fields %}
+        {% include fields.html fields=all_fields %}
 
-              <input
-                type="text"
-                id="firstname"
-                class="form-control"
-                name="firstname"
-                placeholder="First name"
-                aria-label="First name"
-                required
-                data-msg="Please enter your first name."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="lastname" class="form-label">
-                Last Name <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                type="text"
-                id="lastname"
-                class="form-control"
-                name="lastname"
-                placeholder="Last name"
-                aria-label="Last name"
-                required
-                data-msg="Please enter your last name."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="phone" class="form-label">
-                Phone <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                type="tel"
-                id="phone"
-                class="form-control"
-                name="phone"
-                placeholder="(***)***-****"
-                aria-label="(***)***-****"
-                required
-                data-msg="Please enter your phone number."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="email" class="form-label">
-                Email <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                type="email"
-                id="email"
-                class="form-control"
-                name="email"
-                placeholder="name@example.com"
-                aria-label="name@example.com"
-                required
-                data-msg="Please enter a valid email address."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="city" class="form-label">
-                Your Current City <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                id="city"
-                type="text"
-                class="form-control"
-                name="city"
-                placeholder="City"
-                aria-label="City"
-                required
-                data-msg="Please enter the city in which you live."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="state" class="form-label">
-                State <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                id="state"
-                type="text"
-                class="form-control"
-                name="state"
-                placeholder="ST"
-                aria-label="ST"
-                required
-                data-msg="Please enter your state."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="js-form-message mb-6 col-sm-12 form-group">
-            <label class="form-label" for="yes">
-              Will you be at least 18 by the time your classes begin?
-              <span class="text-red-a">*</span>
-            </label>
-
-            <p class="small">
-              Please note that you must be at least 18 years old by the time your
-              classes begin to apply to Austin Coding Academy. You also must have a
-              High School Diploma or GED.
-            </p>
-
-            <div id="age">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="are_you_18_or_older_"
-                  id="yes"
-                  value="true"
-                  aria-label="You must be 18 or older to begin classes"
-                  required
-                  data-msg="Please indicate whether you will be 18 or older when classes begin"
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                />
-                <label class="form-check-label" for="yes">Yes</label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  id="no"
-                  name="are_you_18_or_older_"
-                  value="false"
-                />
-                <label class="form-check-label" for="no">No</label>
-              </div>
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="current-occupation1" class="form-label">
-                Current Occupation or Job Title<span class="text-red-a">*</span>
-              </label>
-
-              <input
-                id="current-occupation1"
-                type="text"
-                class="form-control"
-                name="current_occupation1"
-                placeholder="Your current job title"
-                aria-label="Your current job title"
-                required
-                data-msg="Please enter your current job title."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="current-company1" class="form-label">
-                Current Company <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                id="current-company1"
-                type="text"
-                class="form-control"
-                name="current_company1"
-                placeholder="Your current company"
-                aria-label="Your current company"
-                required
-                data-msg="Please enter your current company."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-        <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="college-or-school-attended1" class="form-label">
-                Last School Attended <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                id="college-or-school-attended1"
-                type="text"
-                class="form-control"
-                name="college_or_school_attended1"
-                placeholder="The last school you attended"
-                aria-label="Last school attended"
-                required
-                data-msg="Please enter the last school you attended."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="coding-experience" class="form-label">
-                What experience do you have in coding?
-                <span class="text-red-a">*</span>
-              </label>
-
-              <select id="coding-experience" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
-                <option value="" disabled selected>
-                  Select your answer
-                </option>
-                <option value="None at all!">
-                  None at all!
-                </option>
-                <option value="I've dabbled with some online tutorials">
-                  I've dabbled with some online tutorials.
-                </option>
-                <option value="Solid fundamentals but not ready for a job">
-                  Solid fundamentals but not ready for a job.
-                </option>
-                <option value="I'm a professional developer">
-                  Professional developer, gaining more skills.
-                </option>
-              </select>
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="curriculum-track" class="form-label">
-                To which program are you applying?
-                <span class="text-red-a">*</span>
-              </label>
-
-              <select id="curriculum-track" name="curriculum_track" class="form-control">
-                <option value="" disabled selected>
-                  Select your answer
-                </option>
-                <option value="Full Stack JavaScript Track">
-                  Full-Stack JavaScript Track</option>
-                <option value="Full Stack C# .NET Track">
-                  Full-Stack C# .NET Track
-                </option>
-                <option value="Individual Classes">
-                  Individual Classes
-                </option>
-                <option value="I'm not sure!">
-                  I'm not sure yet!
-                </option>
-              </select>
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="campus-interest" class="form-label">
-                Which campus are you interested in?
-                <span class="text-red-a">*</span>
-              </label>
-
-              <select id="campus-interest" name="campus_interest_new" class="form-control">
-                <option value="" disabled selected>
-                  Select your answer
-                </option>
-                <option value="Austin">
-                  Downtown - Capital Factory (JavaScript only)
-                </option>
-                <option value="Austin - North">
-                  Central - Highland
-                </option>
-                <option value="Any campus">
-                  Either campus works!
-                </option>
-                <option value="Remote">
-                  Remote (Outside of Austin)
-                </option>
-              </select>
-            </div>
-          </div>
-          <!-- End Input -->
-          <div class="col-sm-6 mb-4">
-            {% include referral-question.html id="referral-apply" %}
-          </div>
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-6">
-            <div class="js-form-message form-group">
-              <label for="how-pay" class="form-label">
-                How do you intend to pay for the course?
-                <span class="text-red-a">*</span>
-              </label>
-
-              <select id="how-pay" name="how_do_you_intend_to_pay_for_the_course_" class="form-control">
-                <option value="" disabled selected>
-                  Select your answer
-                </option>
-                <option value="Paying on my own">
-                  I'll be paying on my own.
-                </option>
-                <option value="Planning to finance">
-                  I'm planning to finance tuition.
-                </option>
-                <option value="Employer will be paying / reimbursing">
-                  My employer will be paying/reimbursing me.
-                </option>
-                <option value="Other">
-                  Other
-                </option>
-              </select>
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-12 mb-6">
-            <div class="js-form-message form-group">
-              <label for="best-describes" class="form-label">
-                Which of these best describes you?
-                <span class="text-red-a">*</span>
-              </label>
-
-              <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control">
-                <option value="" disabled selected>
-                  Select your answer
-                </option>
-                <option value="I'm researching coding bootcamps.">
-                  I'm researching coding bootcamps.</option>
-                <option value="I'm teaching myself to code, but I'm stuck.">
-                  I'm teaching myself to code, but I'm stuck.
-                </option>
-                <option value="I'm interested in a career in tech.">
-                  I'm interested in switching to a career in tech.
-                </option>
-                <option value="I'm an entrepreneur with an idea.">
-                  I'm an entrepreneur with an idea.
-                </option>
-                <option value="I'm looking for a college alternative.">
-                  I'm looking for a college alternative.
-                </option>
-                <option value="I want to learn a new skill for my current job.">
-                  I want to learn a new skill for my current job.
-                </option>
-              </select>
-            </div>
-          </div>
-          <!-- End Input -->
-          <div class="col-12 mb-4 d-flex justify-content-center">
-            <button class="btn btn-round text-white bg-purple" type="Submit">
-              Submit
-            </button>
-          </div>
+        <div class="col-12 mb-4 d-flex justify-content-center">
+          <!-- htmllint preset="none" -->
+          <a class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" href="{{ page.next_page_href | liquify }}">
+          <!-- htmllint preset="$previous" -->
+            <span class="hover-white text-white">
+              Continue Application
+            </span>
+          </a>
         </div>
       </div>
       <amp-recaptcha-input
@@ -451,4 +169,18 @@ redirect_from:
       </div>
     </div>
   </div>
+  <div class="form">
+  </div>
 </div>
+      <script charset="utf-8" type="text/javascript" src="js.hsforms.net/forms/v2.js"></script>
+      <!--[if lte IE 8]>
+      <script charset="utf-8" type="text/javascript" src="js.hsforms.net/forms/v2-legacy.js"></script>
+      <![endif]-->
+      <script charset="utf-8" type="text/javascript" src="js.hsforms.net/forms/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          portalId: "4009818",
+          formId: "8fb40a43-8ebf-4f5e-8a4a-6e72ecec56ab",
+          target: '.form'
+        });
+      </script>

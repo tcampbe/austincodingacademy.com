@@ -1,99 +1,71 @@
 ---
+layout: default
 permalink: "/grads/"
-title: "Austin Coding Academy | Graduate Projects"
-description: ""
+head_title: "{{ school.name }} | Graduate Projects"
+description: At {{ school.name }}, we fit learning to code into your life
+  with a flexible &amp; affordable array of options, all taught by current industry
+  professionals. Don\’t wait - embark on a new career today!
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      name="description"
-      content="{{ page.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-
-    <title>
-      {{ page.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
-    </title>
-
-    <link
-      rel="stylesheet"
-      href="https://austincodingacademy.github.io/front/assets/css/theme.css"
-    >
-    <link
-      rel="stylesheet"
-      href="/assets/css/main.css"
-    >
-
-    {% include amp.html %}
-
-    {% include favicon.html %}
-
-    {{ page.head }}
-  </head>
-
-  <body>
-    <header class="container-fluid bg-gradient text-white py-2 m-0">
-      <h3 class="pl-10 font-family-alt">
-        April 2019 Graduates
-      </h3>
-    </header>
-    <div class="container-fluid bg-dark background-logo py-10">
-      <div class="row d-flex justify-content-center align-items-end">
-        {% for page in site.pages %}
-          {% if page.categories contains 'graduation' and page.projects[0].url %}
-            {% assign track = page.skills[0] %}
-            {% if track == 'JavaScript' or track == 'C# .NET' or track == 'C#' or track == '.NET' or track == 'Web Design' %}
-              <div class="col-12 col-md-3 px-2 mb-4">
+<main class="mt-88 pt-10">
+  <div class="container-fluid py-10" style="background-color: black;">
+    <div class="row col-9 col-sm-10 col-md-9 mx-auto d-flex justify-content-center align-items-end">
+      {% for page in site.pages %}
+        {% if page.categories contains 'graduation' and page.projects[0].url and page.categories contains site.key %}
+          {% assign track = page.skills[0] | downcase %}
+          {% if track contains 'javascript' or track contains 'c#' or track contains 'csharp' or track contains '.net' or track contains 'web design' %}
+            <!-- Card Start -->
+            <div
+              class="col-12 col-sm-4 col-md-3 p-2"
+              style="height: 250px; min-width: 250px;"
+            >
+              <div class="w-100 px-1 h-100 py-2 d-flex flex-column rounded border align-items-center justify-content-between" style="min-height: 100%; box-shadow: 0px 0px 5px #fff;">
                 <div class="d-flex justify-content-center pb-2">
                   <!-- htmllint preset="none" -->
                   <amp-img width="150" height="150"
                     layout="fixed"
-                    class="rounded-circle shadow-black"
+                    class="rounded-circle shadow-black px-2"
                     src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
                     alt="{{ page.fullname }}"
                   ></amp-img>
                   <!-- htmllint preset="$previous" -->
                 </div>
-                <div class="text-center text-white bg-dark shadow-black rounded d-flex flex-column justify-content-between align-items-center py-2 px-1 w-75 mx-auto">
-                  <h5 class="h6 m-0">
-                    {{ page.fullname }}
-                  </h5>
-                  <a href="{{ page.projects[0].url }}" target="_blank" rel="noopener">
-                    <small class="text-white link-underlined">
-                      {{ page.projects[0].name }}
-                    </small>
-                  </a>
-                  <h5 class="h6 m-0 mt-2">
-                    <!-- htmllint preset="none" -->
-                    <span class="badge p-2 rounded bg-blue">
-                      {{ page.skills[0] }}
-                    </span>
-                    <!-- htmllint preset="$previous" -->
-                  </h5>
-                </div>
+                <h5 class="h6 m-0 text-white font-weight-bold">
+                  {{ page.fullname }}
+                </h5>
+                <a
+                  href="{{ page.projects[0].url }}"
+                  target="_blank"
+                  rel="noopener"
+                  class="d-flex justify-content-center"
+                >
+                  <small class="link-underlined hover-white text-white text-center">
+                    {{ page.projects[0].name }}
+                  </small>
+                </a>
               </div>
-            {% endif %}
+            </div>
+            <!-- Card End -->
           {% endif %}
-        {% endfor %}
-      </div>
+        {% endif %}
+      {% endfor %}
     </div>
-    <div class="text-center border-top bg-purple py-3 w-100">
-      <p class="small text-white-70 mb-0">
-        © Austin Coding Academy 2019. All rights reserved.<br/>
-        <a class="text-white" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> | <a class="text-white" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>
-      </p>
-    </div>
-  </body>
-</html>
+  </div>
+</main>

@@ -1,6 +1,23 @@
-{% if page.contactLightbox %}
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if page.contact_lightbox %}
 <a href="#"
-  class="btn btn-round text-white bg-purple hover-white mx-auto"
+  class="btn btn-round text-white bg-primary-dark hover-white mx-auto"
   on="tap:contact-lightbox"
   role="button"
   tabindex="0"
@@ -18,174 +35,172 @@
   role="dialog"
 >
   <div class="container px-5 pt-5 text-white">
-{% endif %}
+    {% endif %}
 
-<form
-  action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/33cc0e23-1881-4874-a1d0-2c0307f20e41"
-  method="POST"
-  target="_top"
->
-  <div
-    class="form-container"
-    on="tap:contact-lightbox.open"
-    tabindex="-1"
-    role="form"
-  >
-    <input name="lifecyclestage" type="hidden" value="lead">
-    <input name="hs_lead_status" type="hidden" value="NEW">
-    <input name="page_name" type="hidden" value="{{page.title}}">
-    <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.url}}">
-    <input name="hutk" type="hidden" value="">
-    <div class="row center-form">
-      <!-- Input -->
-      <div class="col-sm-6 mb-4">
-        <div class="js-form-message">
-          <label for="first-name-contact" class="form-label">
-            First Name <span class="text-red-a">*</span>
-          </label>
+    <form
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.contact_form_guid }}"
+      method="POST"
+      target="_top"
+    >
+      <div
+        class="form-container"
+        on="tap:contact-lightbox.open"
+        tabindex="-1"
+        role="form"
+      >
+        <input name="lifecyclestage" type="hidden" value="lead">
+        <input name="hs_lead_status" type="hidden" value="NEW">
+        <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+        <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
+        <input name="hutk" type="hidden" value="">
+        <div class="row center-form">
+          <!-- Input -->
+          <div class="col-sm-6 mb-4">
+            <div class="js-form-message">
+              <label for="first-name-contact" class="form-label">
+                First Name <span class="text-red-a">*</span>
+              </label>
 
-          <input
-            id="first-name-contact"
-            type="text"
-            class="form-control"
-            name="firstname"
-            placeholder="First Name"
-            aria-label="Your name"
-            required
-            data-msg="Please enter your first name."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
+              <input
+                id="first-name-contact"
+                type="text"
+                class="form-control"
+                name="firstname"
+                placeholder="First Name"
+                aria-label="Your name"
+                required
+                data-msg="Please enter your first name."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 mb-4">
+            <div class="js-form-message">
+              <label for="last-name-contact" class="form-label">
+                Last Name <span class="text-red-a">*</span>
+              </label>
+
+              <input
+                id="last-name-contact"
+                type="text"
+                class="form-control"
+                name="lastname"
+                placeholder="Last Name"
+                aria-label="Your last name"
+                required
+                data-msg="Please enter your last name."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 mb-4">
+            <div class="js-form-message">
+              <label for="email-contact" class="form-label">
+                Email <span class="text-red-a">*</span>
+              </label>
+
+              <input
+                id="email-contact"
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="Email"
+                aria-label="Your email address"
+                required
+                data-msg="Please enter a valid email address."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 mb-4">
+            <div class="js-form-message">
+              <label for="phone-contact" class="form-label">
+                Phone <span class="text-red-a">*</span>
+              </label>
+
+              <input
+                id="phone-contact"
+                type="text"
+                class="form-control"
+                name="phone"
+                placeholder="Phone"
+                aria-label="Your phone number"
+                required
+                data-msg="Please enter your phone number."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="js-form-message mb-4 col-sm-12">
+            <label for="message-contact" class="form-label">
+              Message <span class="text-red-a">*</span>
+            </label>
+
+            <div class="input-group">
+              <textarea
+                id="message-contact"
+                class="form-control"
+                rows="4"
+                name="message"
+                placeholder="Enter your questions or comments here"
+                aria-label="Enter your questions or comments here"
+                required
+                data-msg="Please enter a message."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              ></textarea>
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <div class="col-12 mb-4">
+            {% include referral-question.html %}
+          </div>
+          <div class="text-center col-sm-12 mb-4">
+            <button
+              type="submit"
+              class="text-white btn btn-round bg-primary-dark hover-white"
+            >
+              Send
+            </button>
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            {% include data-agreement.html %}
+          </div>
         </div>
       </div>
-      <!-- End Input -->
-
-      <!-- Input -->
-      <div class="col-sm-6 mb-4">
-        <div class="js-form-message">
-          <label for="last-name-contact" class="form-label">
-            Last Name <span class="text-red-a">*</span>
-          </label>
-
-          <input
-            id="last-name-contact"
-            type="text"
-            class="form-control"
-            name="lastname"
-            placeholder="Last Name"
-            aria-label="Your last name"
-            required
-            data-msg="Please enter your last name."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
+      <div class="text-center">
+        <div submit-error>
+          <template type="amp-mustache">
+            <p class="text-red-a">There was an error with your request. Please try again.</p>
+          </template>
         </div>
       </div>
-      <!-- End Input -->
+      <amp-recaptcha-input
+        layout="nodisplay"
+        name="recaptcha-contact"
+        data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
+        data-action="homepage">
+      </amp-recaptcha-input>
+    </form>
 
-      <!-- Input -->
-      <div class="col-sm-6 mb-4">
-        <div class="js-form-message">
-          <label for="email-contact" class="form-label">
-            Email <span class="text-red-a">*</span>
-          </label>
-
-          <input
-            id="email-contact"
-            type="email"
-            class="form-control"
-            name="email"
-            placeholder="Email"
-            aria-label="Your email address"
-            required
-            data-msg="Please enter a valid email address."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
-        </div>
-      </div>
-      <!-- End Input -->
-
-      <!-- Input -->
-      <div class="col-sm-6 mb-4">
-        <div class="js-form-message">
-          <label for="phone-contact" class="form-label">
-            Phone <span class="text-red-a">*</span>
-          </label>
-
-          <input
-            id="phone-contact"
-            type="text"
-            class="form-control"
-            name="phone"
-            placeholder="Phone"
-            aria-label="Your phone number"
-            required
-            data-msg="Please enter your phone number."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
-        </div>
-      </div>
-      <!-- End Input -->
-
-      <!-- Input -->
-      <div class="js-form-message mb-4 col-sm-12">
-        <label for="message-contact" class="form-label">
-          Message <span class="text-red-a">*</span>
-        </label>
-
-        <div class="input-group">
-          <textarea
-            id="message-contact"
-            class="form-control"
-            rows="4"
-            name="message"
-            placeholder="Enter your questions or comments here"
-            aria-label="Enter your questions or comments here"
-            required
-            data-msg="Please enter a message."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          ></textarea>
-        </div>
-      </div>
-      <!-- End Input -->
-      <div class="col-12 mb-4">
-        {% include referral-question.html id="referral-contact" %}
-      </div>
-      <div class="text-center col-sm-12 mb-4">
-        <button
-          type="submit"
-          class="text-white btn btn-round bg-purple hover-white"
-        >
-          Send
-        </button>
-      </div>
-      <div class="col-12 d-flex flex-column justify-content-center">
-        {% include data-agreement.html %}
-      </div>
-    </div>
-  </div>
-
-  <div class="text-center">
-    <div submit-error>
-      <template type="amp-mustache">
-        <p class="text-red-a">There was an error with your request. Please try again.</p>
-      </template>
-    </div>
-  </div>
-
-  <amp-recaptcha-input
-    layout="nodisplay"
-    name="recaptcha-contact"
-    data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
-    data-action="homepage">
-  </amp-recaptcha-input>
-
-</form>
-
-{% if page.contactLightbox %}
+    {% if page.contact_lightbox %}
   </div>
 </amp-lightbox>
 {% endif %}

@@ -1,12 +1,14 @@
 ---
 new_page_extension: md
 auto_deploy: true
-admin_path: ''
+admin_path: "/admin/"
 webhook_url: 
 sections:
 - type: jekyll-posts
   label: Posts
   create: all
+  templates:
+  - post
 - type: jekyll-pages
   label: Pages
   create: all
@@ -15,19 +17,14 @@ public_path: "/assets/images"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
-instant_preview: true
 build:
-  preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
-    --config _configs/default.yml
-  publish_command: bundle exec jekyll build -d _site
   preview_env:
   - JEKYLL_ENV=staging
-  - RUBY_VERSION=2.6.2
-  publish_env:
-  - JEKYLL_ENV=production
   preview_output_directory: _site
-  output_directory: _site
-  instant_preview_command: node postcss.js && echo '<style amp-custom>' > _includes/css.html
-    && cat assets/css/main.min.css >> _includes/css.html && echo '</style>' >> _includes/css.html"
-    && bundle exec jekyll serve --config _configs/default.yml --host 0.0.0.0 --port
-    8080 -d _site
+  install_dependencies_command: yarn && bundle install --path vendor/bundle
+  preview_docker_image: forestryio/ruby:2.6-node10
+  mount_path: "/srv"
+  instant_preview_command: node _javascripts/postcss.js && cat assets/css/main.min.css
+    > _includes/css.html && bundle exec jekyll serve --drafts --unpublished --future
+    -d _site --config _config.yml,_configs/austincodingacademy.com.yml --port 8080
+    --host 0.0.0.0

@@ -1,5 +1,22 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="container mt-90 pt-1 pb-5">
-  {% if page.permalink == "/tutoring/" %}
+  {% if include.marketing %}
     <amp-lightbox
       id="apply-now-lightbox"
       class="lightbox pt-10"
@@ -9,24 +26,24 @@
       tabindex="0"
       role="dialog"
     >
-      <div class="container" on="tap:apply-now-lightbox.open" tabindex="0">
+      <div class="container" on="tap:apply-now-lightbox.open" role="button" tabindex="0">
         <h2 class="font-family-alt font-weight-bold text-center display-5 mt-6 mb-0 p-5 text-white">
           Download Our Course Guide
         </h2>
       </div>
       <form class="d-flex justify-content-center align-items-center"
         target="_top"
-        action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
+        action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.course_guide_form_guid }}"
         method="POST">
         <div class="form-container px-5 px-lg-11 mx-lg-11">
           <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
           <input name="downloaded_a_courses_guide" type="hidden" value="true">
           <input name="hs_lead_status" type="hidden" value="NEW">
-          <input name="page_name" type="hidden" value="{{page.title}}">
-          <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
+          <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+          <input name="page_uri" type="hidden" value="{{ school.url }}{{ page.url }}">
           <input name="hutk" type="hidden" value="">
 
-          <div class="row center-form px-5 pb-3" on="tap:apply-now-lightbox.open" tabindex="0">
+          <div class="row center-form px-5 pb-3" on="tap:apply-now-lightbox.open" role="button" tabindex="0">
             <!-- Input -->
             <div class="col-sm-6">
               <div class="form-group">
@@ -53,7 +70,7 @@
             </div>
             <!-- End Input -->
             <div class="col-sm-6 d-flex flex-column justify-content-end text-white">
-              {% include referral-question.html id="referral-tutors" %}
+              {% include referral-question.html %}
             </div>
 
             <!-- Input -->
@@ -73,7 +90,7 @@
 
             <!-- Input -->
             <div class="col-12 d-flex align-items-end justify-content-center form-group">
-              <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
+              <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
                 View Guide
               </button>
             </div>
@@ -94,13 +111,13 @@
       </form>
     </amp-lightbox>
   {% endif %}
-  <h2 class="font-family-alt font-weight-bold text-center display-5 mt-10">
+  <h2 class="font-family-alt font-weight-bold text-center display-5 mt-10 mb-4">
     Tutoring
   </h2>
   <h5 class="text-center mb-5 mx-auto">
-    Austin Coding Academy offers unlimited tutoring to students and graduates!
+    {{ school.name }} offers unlimited tutoring to students and graduates!
   </h5>
-  <div class="row mb-10">
+  <div class="row mb-10 mt-6">
     <div class="col-md">
       <h4 class="font-weight-bold">
         One-on-One Tutoring
@@ -140,7 +157,7 @@
         </li>
         <li class="mb-2">
           <span class="fa-li"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-          Sundays: 3pm - 6pm
+          Sundays: 10am - 4pm
         </li>
         <li>
           <span class="fa-li"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
@@ -149,104 +166,185 @@
       </ul>
     </div>
   </div>
-  <div class="row">
-    <!-- Tutors -->
-    {% for tutor in site.menus.tutors %}
-      {% if page.permalink == "/tutoring/" %}
-        {% assign splitName = tutor.name | split: " " %}
-        {% assign name = splitName[0] %}
-      {% else %}
-        {% assign name = tutor.name %}
-      {% endif %}
-      <div class="col-6 col-md-3 mb-3">
-        <div class="card text-center shadow">
-          <div class="p-3 d-flex flex-column justify-content-between">
-            <!-- Team -->
-            <div>
-              <div class="mx-auto mb-3">
-                <!-- htmllint preset="none" -->
-                <amp-img
-                  width="100px"
-                  height="100px"
-                  layout="fixed"
-                  class="rounded-circle"
-                  src="http://gravatar.com/avatar/{{ tutor.email | downcase | md5 }}?s=100&r=pg&d=retro"
-                  alt="{{tutor.name}}"
-                ></amp-img>
-                <!-- htmllint preset="$previous" -->
-              </div>
-              <h5 class="mb-0">
-                {{ name }}
-              </h5>
-              <p class="small m-0">
-                {% for skill in tutor.skills %}
-                  {{skill}}{% unless skill == tutor.skills.last %} | {% endunless %}
-                {% endfor %}
-              </p>
-              {% unless page.permalink == "/tutoring/" %}
-                <p class="small my-1">
-                  <i>{{tutor.limitation}}</i>
-                </p>
-              {% endunless %}
-            </div>
-            <!-- End Team -->
 
-            <!-- Contact -->
-            <div class="mt-2">
-              {% if page.permalink == "/tutors/" %}
-                <a href="{{tutor.rocketchat}}" rel="noopener" target="_blank">
-                  <i class="display-7 fab fa-rocketchat" aria-hidden="true"></i>
-                  <span class="sr-only">Message on RocketChat</span>
-                </a>
-                <a href="mailto:{{tutor.email}}" rel="noopener" target="_blank" class="ml-3">
-                  <i class="display-7 fas fa-envelope" aria-hidden="true"></i>
-                  <span class="sr-only">Send email</span>
-                </a>
-              {% else %}
-                <a href="#" on="tap:apply-now-lightbox.open" tabindex="0">
-                  <i class="display-7 fab fa-rocketchat" aria-hidden="true"></i>
-                  <span class="sr-only">Link to RocketChat</span>
-                </a>
-                <a href="#" on="tap:apply-now-lightbox.open" tabindex="0" class="ml-3">
-                  <i class="display-7 fas fa-envelope" aria-hidden="true"></i>
-                  <span class="sr-only">Link to email</span>
-                </a>
-              {% endif %}
-            </div>
-            <!-- End Contact -->
-          </div>
+  <!-- Video -->
+  {% unless include.marketing %}
+  <div class="col-sm-12 mt-6">
+    <amp-iframe
+      src="https://player.vimeo.com/video/333657043"
+      width="525"
+      height="242"
+      layout="responsive"
+      sandbox="allow-scripts allow-same-origin"
+      frameborder="0"
+      class="mb-6"
+      allowfullscreen>
+    </amp-iframe>
+  </div>
+  {% endunless %}
 
-          <hr class="my-0">
-          {% unless page.permalink == "/tutoring/" %}
-            <!-- htmllint preset="none" -->
-            <a class="{% unless tutor.calendar %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{tutor.calendar}}" target="_blank">
-            <!-- htmllint preset="$previous" -->
-              <span class="far fa-calendar-alt mr-2" aria-hidden="true"></span>
-              Schedule Tutoring
-            </a>
-            <!-- htmllint preset="none" -->
-            <a class="{% unless tutor.virtual %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{tutor.virtual}}" target="_blank">
-            <!-- htmllint preset="$previous" -->
-              <span class="fa fa-chalkboard-teacher mr-2" aria-hidden="true"></span>
-              Virtual Classroom
-            </a>
-          {% else %}
-            <a href="#" on="tap:apply-now-lightbox.open" tabindex="0"
-              class="btn btn-sm u-btn-primary--air transition-3d-hover"
-            >
-              <span class="far fa-calendar-alt mr-2" aria-hidden="true"></span>
-              Schedule Tutoring
-            </a>
-            <a href="#" on="tap:apply-now-lightbox.open" tabindex="0"
-              class="btn btn-sm u-btn-primary--air transition-3d-hover"
-            >
-              <span class="fa fa-chalkboard-teacher mr-2" aria-hidden="true"></span>
-              Virtual Classroom
-            </a>
-          {% endunless %}
-        </div>
+
+  <!-- Filters -->
+  {% unless include.marketing %}
+    <h4 class="pt-5">
+      Filters
+    </h4>
+    <div class="d-flex flex-row justify-content-around pb-5">
+      <!-- Location -->
+      <div class="w-50">
+        <label class="form-label">
+          By Location:
+        </label>
+        <!-- htmllint preset="none" -->
+        <select
+          on="change:AMP.setState({ location: event.value })"
+          tabindex="0"
+          class="form-control"
+        >
+        <!-- htmllint preset="$previous" -->
+        {% if school.name == 'Austin Coding Academy' %}
+          <option value="any" selected>
+            Select Location
+          </option>
+          <option value="austinNorth">
+            North Campus
+          </option>
+          <option value="austinDowntown">
+            Downtown Campus
+          </option>
+        {% else %}
+          <option value="any" selected>
+            Select Location
+          </option>
+          <option value="southPlains">
+            South Plains Community College
+          </option>
+        {% endif %}
+        </select>
       </div>
-    {% endfor %}
-    <!-- End Tutors -->
+
+      <!-- Date Picker -->
+      <div class="ml-1 w-50">
+        <label class="form-label">
+          By Date:
+        </label>
+        <!-- htmllint preset="none" -->
+        <amp-date-picker
+          mode="overlay"
+          tabindex="0"
+          on="select:AMP.setState({selectedDate: event.date})"
+          input-selector="[name=tutoringDate]"
+        >
+        <!-- htmllint preset="$previous" -->
+          <input type="text"
+            name="tutoringDate"
+            tabindex="0"
+            class="form-control"
+          />
+        </amp-date-picker>
+      </div>
+    </div>
+  {% endunless %}
+<div class="row d-flex justify-content-center">
+  <!-- Tutors -->
+  {% for tutor in include.tutors %}
+    {% if include.marketing %}
+      {% assign splitName = tutor.name | split: " " %}
+      {% assign name = splitName[0] %}
+    {% else %}
+      {% assign name = tutor.name %}
+    {% endif %}
+    {% assign id = tutor.id | downcase %}
+    <div
+      class="col-sm-6 col-md-4 col-lg-3 mb-3"
+      id="tutor-{{ id | liquify }}"
+      [hidden]="!( (!location || ['{{ tutor.location | join: "','" | liquify }}'].includes(location)) && (!selectedDate || ['{{ site.data.tutors[id].availableDates | map: 'date' | join: "', '"}}'].includes(selectedDate)))"
+    >
+      <div class="card text-center shadow" id="{{ name | liquify }}">
+        <div class="p-3 d-flex flex-column justify-content-between">
+          <!-- Team -->
+          <div>
+            <div class="mx-auto mb-3">
+              <!-- htmllint preset="none" -->
+              <amp-img
+                width="100px"
+                height="100px"
+                layout="fixed"
+                class="rounded-circle"
+                src="https://gravatar.com/avatar/{{ tutor.gravatar_email | downcase | md5 }}?s=100&r=pg&d=retro"
+                alt="{{ name | liquify }}"
+              ></amp-img>
+              <!-- htmllint preset="$previous" -->
+            </div>
+            <h5 class="mb-0">
+              {{ name | liquify }}
+            </h5>
+            <p class="small m-0">
+              {% for skill in tutor.skills %}
+                {{ skill }}{% unless forloop.last == true %} | {% endunless %}
+              {% endfor %}
+            </p>
+            {% unless include.marketing %}
+              <p class="small my-1">
+                <i>{{ tutor.limitation | liquify }}</i>
+              </p>
+            {% endunless %}
+          </div>
+          <!-- End Team -->
+
+          <!-- Contact -->
+          <div class="mt-2">
+            {% unless include.marketing %}
+              <a href="{{ tutor.rocketchat | liquify }}" rel="noopener" target="_blank">
+                <i class="display-7 fab fa-rocketchat"></i>
+              </a>
+              <a href="mailto:{{ tutor.gravatar_email }}" rel="noopener" target="_blank" class="ml-3">
+                <i class="display-7 fas fa-envelope"></i>
+              </a>
+            {% else %}
+              <a href="#" on="tap:apply-now-lightbox.open" tabindex="0">
+                <i class="display-7 fab fa-rocketchat"></i>
+              </a>
+              <a href="#" on="tap:apply-now-lightbox.open" tabindex="0" class="ml-3">
+                <i class="display-7 fas fa-envelope"></i>
+              </a>
+            {% endunless %}
+          </div>
+          <!-- End Contact -->
+        </div>
+
+        <hr class="my-0">
+
+        {% unless include.marketing %}
+          <!-- htmllint preset="none" -->
+          <a class="{% unless tutor.calendar %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{ tutor.calendar | liquify }}" target="_blank">
+          <!-- htmllint preset="$previous" -->
+            <span class="far fa-calendar-alt mr-2"></span>
+            Schedule Tutoring
+          </a>
+          <!-- htmllint preset="none" -->
+          <a class="{% unless tutor.virtual %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{ tutor.virtual }}" target="_blank">
+          <!-- htmllint preset="$previous" -->
+            <span class="fa fa-chalkboard-teacher mr-2"></span>
+            Virtual Classroom
+          </a>
+        {% else %}
+          <a href="#" on="tap:apply-now-lightbox.open" tabindex="0"
+            class="btn btn-sm u-btn-primary--air transition-3d-hover"
+          >
+            <span class="far fa-calendar-alt mr-2"></span>
+            Schedule Tutoring
+          </a>
+          <a href="#" on="tap:apply-now-lightbox.open" tabindex="0"
+            class="btn btn-sm u-btn-primary--air transition-3d-hover"
+          >
+            <span class="fa fa-chalkboard-teacher mr-2"></span>
+            Virtual Classroom
+          </a>
+        {% endunless %}
+      </div>
+    </div>
+  {% endfor %}
+  <!-- End Tutors -->
   </div>
 </div>

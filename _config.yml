@@ -1,10 +1,4 @@
 baseurl: ""
-url: "https://austincodingacademy.com"
-form_url: "https://4runw89p71.execute-api.us-west-1.amazonaws.com/latest/hubspot"
-hubspot_portal_id: 4009818
-phone: (512) 827-8498
-
-# Build settings
 markdown: kramdown
 theme: minima
 plugins:
@@ -12,9 +6,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-menus
   - liquid-md5
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -23,12 +14,15 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - favicon.json
   - faviconData.json
   - package.json
   - yarn.lock
   - README.md
+  - '*.orig'
+  - '*.log'
+
+include:
+  - .nojekyll
 
 permalink: /blog/:categories/:title/
-
-categories: [ hiregraduationuate, landing ]
+categories: [ hire, graduate, landing ]

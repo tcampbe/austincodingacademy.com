@@ -16,5 +16,7 @@
   "tag-close": true,
   "tag-name-match": true,
   "attr-req-value": false,
-  "title-max-len": false
+  "title-max-len": false,
+  "line-no-trailing-whitespace": false,
+  "spec-char-escape": false
 }

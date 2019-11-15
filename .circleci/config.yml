@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     docker:
@@ -32,31 +32,58 @@ jobs:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       - run: yarn test
-      - run: node events.js
-      - run: node tutoring.js
+      - run: node _javascripts/events.js
+      - run: node _javascripts/tutoring.js
       - deploy:
           name: Deploy
           command: |
               if [ "${CIRCLE_BRANCH}" == "preview" ]; then
-              git config --global user.email "kevin@austincodingacademy.com"
-              git config --global user.name "Kevin Colten"
-              yarn deploy
-              yarn preview
+                git config --global user.email "kevin@austincodingacademy.com"
+                git config --global user.name "Kevin Colten"
+                yarn images
+                KEY=austincodingacademy.com yarn favicon
+                KEY=austincodingacademy.com yarn build
+                yarn optimize
+                # yarn encrypt
+                KEY=austincodingacademy.com PREVIEW='preview.' yarn deploy
+                KEY=lubbockcodingacademy.com yarn favicon
+                KEY=lubbockcodingacademy.com yarn build
+                yarn optimize
+                # yarn encrypt
+                KEY=lubbockcodingacademy.com PREVIEW='preview.' yarn deploy
+                KEY=texastechuniversitycodingacademy.com yarn favicon
+                KEY=texastechuniversitycodingacademy.com yarn build
+                yarn optimize
+                # yarn encrypt
+                KEY=texastechuniversitycodingacademy.com PREVIEW='preview.' yarn deploy
               fi
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              git config --global user.email "kevin@austincodingacademy.com"
-              git config --global user.name "Kevin Colten"
-              yarn sitemap
-              yarn deploy
-              sudo apt install rsync
-              rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
+                git config --global user.email "kevin@austincodingacademy.com"
+                git config --global user.name "Kevin Colten"
+                yarn images
+                KEY=austincodingacademy.com yarn sitemap
+                KEY=austincodingacademy.com yarn favicon
+                KEY=austincodingacademy.com yarn build
+                yarn optimize
+                sudo apt install rsync
+                rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
+                KEY=lubbockcodingacademy.com yarn sitemap
+                KEY=lubbockcodingacademy.com yarn favicon
+                KEY=lubbockcodingacademy.com yarn build
+                yarn optimize
+                KEY=lubbockcodingacademy.com yarn deploy
+                KEY=texastechuniversitycodingacademy.com yarn sitemap
+                KEY=texastechuniversitycodingacademy.com yarn favicon
+                KEY=texastechuniversitycodingacademy.com yarn build
+                yarn optimize
+                KEY=texastechuniversitycodingacademy.com yarn deploy
               fi
 
 workflows:
   version: 2
   commit:
     jobs:
-     - build:
+      - build:
         filters:
           branches:
             ignore: gh-pages

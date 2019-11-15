@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ graduation, hire ] # don't touch
+categories: [ hire, austincodingacademy] # don't touch
 
 fullname: Terry Roberts
 jobtitle: Clinical Administrator
@@ -25,21 +25,21 @@ linkedin: https://www.linkedin.com/in/terryroberts
 email: terryjbroberts@yahoo.com
 website: https://mt-ctb-ourvolunteernetwork.azurewebsites.net
 workplace: AFFA
-phone: (512) 593-2019
+phone:
 
 workexperience:
   - company: Austin Coding Academy
-    logo: 
+    logo:
     dates: March 3rd - Present
     title: Clinical Administrator
     location: San Antonio, TX
-  - company: PCI 
-    logo: 
+  - company: PCI
+    logo:
     dates: February 2018 - Feburary 2019
-    title: Inside sales 
+    title: Inside sales
     location: San Antonio, TX
   - company: Legend Kia
-    logo: 
+    logo:
     dates: January 2015 - Feb 2017
     title: car Salesmen
     location: San Antonio, TX
@@ -54,5 +54,5 @@ projects:
   - name: OurVolunteerNetwork.net
     desc: An easy to you hub for volunteers and Organizations to use to hire volunteers for work that needs to be done.
     url: https://mt-ctb-ourvolunteernetwork.azurewebsites.net
- 
+
 ---

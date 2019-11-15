@@ -1,11 +1,28 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
 <link rel="manifest" href="/assets/favicons/site.webmanifest">
 <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
 <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Austin Coding Academy">
-<meta name="application-name" content="Austin Coding Academy">
+<meta name="apple-mobile-web-app-title" content="{{ school.name }}">
+<meta name="application-name" content="{{ school.name }}">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="/assets/favicons/mstile-144x144.png">
 <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">

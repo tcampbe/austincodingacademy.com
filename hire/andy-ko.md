@@ -1,14 +1,14 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation ] # don't touch
+categories: [ hire, austincodingacademy] # don't touch
 
 fullname: Andy Ko
 
-location: 
-blurb: 
+location:
+blurb:
 
 skills:
-  - C# .NET
+  - C#/.NET
   - Node.js
   - React
   - Redux
@@ -20,11 +20,11 @@ skills:
   - Git/GitHub
   - REST APIs
 
-github: 
-linkedin: 
+github:
+linkedin:
 
-email: 
-website: 
+email:
+website:
 workplace:
 phone:
 
@@ -34,6 +34,6 @@ education:
 
 projects:
   - name: Review My Product
-    desc: 
+    desc:
     url: https://reviewmyproduct.azurewebsites.net
 ---

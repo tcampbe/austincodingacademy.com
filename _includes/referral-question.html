@@ -1,13 +1,30 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!-- Input -->
 <div class="form-group">
   <!-- htmllint preset="none" -->
-  <label class="form-label" for="{{include.id}}">
+  <label class="form-label" for="how_did_you_hear_about_us">
   <!-- htmllint preset="$previous" -->
     How did you hear about us? <span class="text-red-a">*</span>
   </label>
 
   <!-- htmllint preset="none" -->
-  <select id="{{include.id}}" name="how_did_you_hear_about_us" class="form-control">
+  <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" class="form-control">
   <!-- htmllint preset="$previous" -->
 
     <option value="" disabled selected>
@@ -38,16 +55,16 @@
       Search engine
     </option>
 
-    <option value="ACA event">
-      ACA event
+    <option value="{{ school.name }} event">
+      {{ school.name }} event
     </option>
 
-    <option value="ACA faculty / staff">
-      ACA faculty / staff
+    <option value="{{ school.name }} faculty / staff">
+      {{ school.name }} faculty / staff
     </option>
 
-    <option value="ACA student / alumni">
-      ACA student / alumni
+    <option value="{{ school.name }} student / alumni">
+      {{ school.name }} student / alumni
     </option>
 
     <option value="News (TV, article)">

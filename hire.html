@@ -1,17 +1,34 @@
 ---
 layout: default
 permalink: "/hire/"
-title: "Hire a Graduate | Austin Coding Academy"
+head_title: "Hire a Graduate | {{ school.name }}"
 description: ""
 ---
-
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="container mt-90 pt-1 pb-5">
   <h2 class="font-family-alt font-weight-bold text-center display-5 my-10">
-    Hire an Austin Coding Academy Graduate
+    Hire A Graduate
   </h2>
   <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
     {% for page in site.pages %}
-      {% if page.categories contains 'hire' and page.projects[0].url and page.skills[0] == 'JavaScript' or page.skills[0] contains 'C#' or page.skills[0] contains '.NET' %}
+      {% assign track = page.skills[0] | downcase %}
+      {% if page.categories contains 'hire' and page.categories contains site.key %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
           <div class="card shadow">
             <div class="card-header">
@@ -21,31 +38,31 @@ description: ""
                   layout="responsive"
                   class="img-fluid w-100 rounded photo-hover"
                   src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=400&r=pg&d=retro"
-                  alt="Gravatar for {{ page.fullname }}"
+                  alt="Gravatar for {{ page.fullname | liquify }}"
                 ></amp-img>
                 <!-- htmllint preset="$previous" -->
               </a>
             </div>
             <div class="card-body text-center px-1">
               <a href="{{ page.url }}">
-                <h5>{{ page.fullname }}</h5>
+                <h5>{{ page.fullname | liquify }}</h5>
               </a>
               <div class="row">
                 <div class="col pr-0 d-flex flex-column align-items-center justify-content-around">
-                  {% assign skills = page.skills | slice:0, 3 %}
+                  {% assign skills = page.skills | slice: 0, 3 %}
                   {% for skill in skills %}
-                    <div class="badge bg-purple text-white font-weight-medium rounded m-1 p-1">
-                      {{skill}}
+                    <div class="badge bg-primary-dark text-white font-weight-medium rounded m-1 p-1">
+                      {{ skill }}
                       <span class="sr-only">top skill</span>
                     </div>
                   {% endfor %}
                 </div>
                 <div class="col pl-0 d-flex flex-column align-items-center justify-content-around border-left">
-                  <a href="{{ page.github }}" target="_blank" rel="noopener">
+                  <a href="{{ page.github | liquify }}" target="_blank" rel="noopener">
                     <i class="text-dark display-6 fab fa-github mb-2" aria-hidden="true"></i>
                     <span class="sr-only">Link to GitHub</span>
                   </a>
-                  <a href="{{ page.linkedin }}" target="_blank" rel="noopener">
+                  <a href="{{ page.linkedin | liquify }}" target="_blank" rel="noopener">
                     <i class="text-dark display-6 fab fa-linkedin" aria-hidden="true"></i>
                     <span class="sr-only">Link to LinkedIn</span>
                   </a>

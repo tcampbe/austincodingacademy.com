@@ -1,0 +1,60 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+<!-- htmllint preset="$previous" -->
+<meta charset="utf-8" />
+<title>
+  {{ page.head_title | default: settings.head_title | liquify }}
+</title>
+
+<meta
+  name="description"
+  content="{{ page.description | default: settings.description | liquify }}"
+/>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+{% include favicon.html %}
+
+{% include sharing.html %}
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+/>
+
+{% include amp.html %}
+
+<!-- htmllint preset="none" -->
+<style amp-custom>
+  :root {
+    --primary-light: {{ school.primary_light_color | replace: 'rgb(', '' | replace: ')', '' }};
+    --primary-dark: {{ school.primary_dark_color | replace: 'rgb(', '' | replace: ')', '' }};
+    --secondary-light: {{ school.secondary_light_color | replace: 'rgb(', '' | replace: ')', '' }};
+    --secondary-dark: {{ school.secondary_dark_color | replace: 'rgb(', '' | replace: ')', '' }};
+  }
+  {% include css.html %}
+</style>
+<!-- htmllint preset="$previous" -->
+
+{% include google-tag-manager-head.html %}
+
+{% if site.baseurl == '/amp' %}
+  <link rel="canonical" href="{{ school.url }}{{ page.url }}">
+{% else %}
+  <link rel="amphtml" href="{{ school.url }}/amp{{ page.url }}">
+{% endif %}

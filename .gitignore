@@ -9,8 +9,12 @@ node_modules
 .DS_Store
 *.orig
 assets/css/main.min.css
+assets/css/main.min.css.map
 _includes/css.html
+assets/css/main.min.css.map
 package-lock.json
 .env
 _data/events.yml
-assets/tutoring.json
+_data/tutors.yml
+*.map
+*.webp

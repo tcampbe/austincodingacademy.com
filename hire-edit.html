@@ -1,17 +1,24 @@
 ---
 layout: default
 permalink: "/hire-edit/"
-title: "Austin Coding Academy | Hire an ACA Graduate"
+head_title: "{{ school.name }} | Hire an {{ school.name }} Graduate"
 description: ""
 ---
-
 <div class="container mt-90 pt-1 pb-5">
   <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
     {% for page in site.pages %}
-      {% if page.layout == 'resume' %}
+      {% if page.layout == 'resume' and page.categories contains site.key %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 text-center">
-          <a href="https://github.com/AustinCodingAcademy/austincodingacademy.com/edit/preview/{{page.path}}" target="_blank" rel="noopener">
-            {% unless page.categories contains 'hire' and page.projects[0].url and page.skills[0] == 'JavaScript' or page.skills[0] == 'C# .NET' %} 🚧 {% endunless %} Edit This Page {% unless page.categories contains 'hire' and page.projects[0].url and page.skills[0] == 'JavaScript' or page.skills[0] == 'C# .NET' %} 🚧 {% endunless %}
+          <a href="https://github.com/AustinCodingAcademy/austincodingacademy.com/edit/preview/{{ page.path }}" target="_blank" rel="noopener">
+            {% assign track = page.skills[0] | downcase %}
+            {%
+              if page.categories contains 'hire' and page.projects[0].url and
+              track contains 'javascript' or track contains 'c#' or track contains 'csharp' or track contains '.net' or track contains 'web design'
+            %}
+              Edit This Page
+            {% else %}
+              🚧 Edit This Page 🚧
+            {% endif %}
           </a>
           <div class="card shadow">
             <div class="card-header">
@@ -21,31 +28,31 @@ description: ""
                   layout="responsive"
                   class="img-fluid w-100 rounded photo-hover"
                   src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=400&r=pg&d=retro"
-                  alt="Gravatar for {{ page.fullname }}"
+                  alt="Gravatar for {{ page.fullname | liquify }}"
                 ></amp-img>
                 <!-- htmllint preset="$previous" -->
               </a>
             </div>
             <div class="card-body text-center px-1">
               <a href="{{ page.url }}">
-                <h5>{{ page.fullname }}</h5>
+                <h5>{{ page.fullname | liquify }}</h5>
               </a>
               <div class="row">
                 <div class="col pr-0 d-flex flex-column align-items-center justify-content-around">
                   {% assign skills = page.skills | slice:0, 3 %}
                   {% for skill in skills %}
-                    <div class="badge bg-purple text-white font-weight-medium rounded m-1 p-1">
-                      {{skill}}
+                    <div class="badge bg-primary-dark text-white font-weight-medium rounded m-1 p-1">
+                      {{ skill }}
                       <span class="sr-only">top skill</span>
                     </div>
                   {% endfor %}
                 </div>
                 <div class="col pl-0 d-flex flex-column align-items-center justify-content-around border-left">
-                  <a href="{{ page.github }}" target="_blank" rel="noopener">
+                  <a href="{{ page.github | liquify }}" target="_blank" rel="noopener">
                     <i class="text-dark display-6 fab fa-github mb-2" aria-hidden="true"></i>
                     <span class="sr-only">Link to GitHub</span>
                   </a>
-                  <a href="{{ page.linkedin }}" target="_blank" rel="noopener">
+                  <a href="{{ page.linkedin | liquify }}" target="_blank" rel="noopener">
                     <i class="text-dark display-6 fab fa-linkedin" aria-hidden="true"></i>
                     <span class="sr-only">Link to LinkedIn</span>
                   </a>

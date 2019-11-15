@@ -1,41 +1,58 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="container mt-90 pt-1 pb-5">
-  <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-10">
-    {{ page.heading }}
+  <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-5 my-5">
+    {{ page.heading | liquify }}
   </h2>
   <div class="row my-5 mx-auto d-flex justify-content-start">
     <div class="col-12 col-lg">
       <div class="row">
-        {% for profile in page.profiles %}
+        {% for profile in school.profiles %}
           <div class="col-4 p-1">
             <!-- htmllint preset="none" -->
             <amp-img
               width="200"
               height="200"
               layout="responsive"
-              class="img-fluid w-100 rounded photo-hover"
+              class="img-fluid rounded photo-hover"
               src="https://gravatar.com/avatar/{{ profile.email | downcase | md5 }}?s=400&r=pg&d=retro"
-              alt="{{ profile.name }}"
-              title="{{ profile.name }}"
+              alt="{{ profile.name | liquify }}"
+              title="{{ profile.name | liquify }}"
               on="tap:AMP.setState({
-                selectedBio:'{{profile.bio}}',
-                selectedName:'{{profile.name}}',
-                selectedTitle:'{{profile.title}}'
-              }),bio-section.scrollTo(duration=200)"
+                selectedBio:'{{ profile.bio | liquify }}',
+                selectedName:'{{ profile.name | liquify }}',
+                selectedTitle:'{{ profile.title | liquify }}'
+              })"
               tabindex="0"
             ></amp-img>
             <!-- htmllint preset="$previous" -->
               <p class="p-1 text-center">
-                {% if profile.links %}
+                {% if profile.links.size > 0 %}
                   {% for link in profile.links %}
-                    <a href="{{ link.link }}" target="_blank" rel="noopener">
+                    <a href="{{ link.link | liquify }}" target="_blank" rel="noopener">
                       <!-- htmllint preset="none" -->
-                      <i style="color: {{ link.hex }}" class="mx-1 {{ link.icon }}" aria-hidden="true"></i>
+                      <i style="color: {{ link.hex | liquify }}" class="mx-1 {{ link.icon | liquify }}" aria-hidden="true"></i>
                       <!-- htmllint preset="$previous" -->
                     </a>
                   {% endfor %}
                 {% else %}
-                  <a href="{{ profile.linkedin }}" target="_blank" rel="noopener">
-                    {{ profile.name }}
+                  <a href="{{ profile.linkedin | liquify }}" target="_blank" rel="noopener">
+                    {{ profile.name | liquify }}
                   </a>
                 {% endif %}
               </p>
@@ -43,17 +60,16 @@
         {% endfor %}
       </div>
     </div>
-    <div class="py-10 col-12 d-md-none" id="bio-section"></div>
     <div class="col-12 col-md">
       <h2 class="d-none d-lg-block text-center font-family-alt font-weight-bold display-5 mb-5">
-        {{ page.heading }}
+        {{ school.heading | default: page.heading | liquify }}
       </h2>
-      <p class="mx-5 p-5 rounded border shadow">
+      <p class="mx-0 mx-sm-5 p-4 p-sm-5 rounded border shadow">
         <!-- htmllint preset="none" -->
-        <span class="d-block font-weight-bold text-center" [text]="selectedName">About ACA</span>
+        <span class="d-block font-weight-bold text-center" [text]="selectedName">About {{ school.name }}</span>
         <small class="d-block font-weight-bold text-center mb-3" [text]="selectedTitle"></small>
         <span [text]="selectedBio">
-          {{ page.defaultBio }}
+          {{ school.default_bio | default: page.default_bio | liquify }}
         </span>
         <!-- htmllint preset="$previous" -->
       </p>

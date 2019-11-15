@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: "/dell-tutors/"
+redirect_from: []
+head_title: ""
+description: ""
+---
+{% for _page in site.pages %}
+  {% if _page.tutors %}
+    {% for _school in _page.schools %}
+      {% if _school.key == 'dell' %}
+        {% assign tutors = _school.tutors %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% include tutors-list.html tutors=tutors %}

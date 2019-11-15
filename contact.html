@@ -1,11 +1,27 @@
 ---
 layout: default
 permalink: "/contact/"
-title: "Contact Austin Coding Academy | Programming Classes in Austin"
-description: "Questions, comments or concerns? From classes to financing to your next
-  steps, we’ll help us find the answers. Contact us today!"
+head_title: "Contact {{ school.name }} | Programming Classes Near You"
+description: "Questions, comments or concerns? From classes to financing to your next steps, we’ll help you find the answers. Contact us today!"
 redirect_from: []
 ---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <div class="container mt-90 pt-1 pb-5">
   <h2 class="font-family-alt font-weight-bold text-center display-5 my-10">
     Contact Us
@@ -13,41 +29,30 @@ redirect_from: []
   <div class="row">
     <div class="col-sm-6 mb-4">
       <p class="mb-4">
+        <!-- htmllint preset="none" -->
         Have you stopped by our <a href="/faq">FAQ Page</a>? We might have already
+        <!-- htmllint preset="$previous" -->
         answered your question, but if not, don’t hesitate to fill out this form or
-        give us a call 9am - 6pm Monday - Friday at
-        <span style="flex-wrap: nowrap">(512) 827-8498</span>
+        give us a call 9am - 6pm Monday - Friday at {% include phone.html a_class="flex-nowrap"%}
       </p>
-      <a
-        class="text-default"
-        href="https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641"
-        target="_blank"
-        rel="noopener"
-      >
-        <ul class="fa-ul">
-          <li>
-            <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> Downtown
-          </li>
-          <li>(Capital Factory)</li>
-          <li>701 Brazos St, Ste 1616,</li>
-          <li>Austin, TX 78701</li>
-        </ul>
-      </a>
-      <a
-        class="text-default"
-        href="https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185"
-        target="_blank"
-        rel="noopener"
-      >
-        <ul class="fa-ul">
-          <li>
-            <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> North Austin
-          </li>
-          <li>(Highland)</li>
-          <li>314 E Highland Mall Blvd, Ste 114</li>
-          <li>Austin, TX 78752</li>
-        </ul>
-      </a>
+      {% for location in school.locations %}
+        <!-- htmllint preset="none" -->
+        <a
+          class="text-default"
+          href="{{ location.url }}"
+          target="_blank"
+          rel="noopener"
+        >
+        <!-- htmllint preset="$previous" -->
+          <ul class="fa-ul">
+            <li>
+              <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> {{ location.name | liquify }}
+            </li>
+            <li>{{ location.street | liquify }}</li>
+            <li>{{ location.city }}, {{ location.state | liquify }} {{ location.postal }}</li>
+          </ul>
+        </a>
+      {% endfor %}
     </div>
     <div class="col-xs-12 col-sm-6">
       {% include contact-form.html %}

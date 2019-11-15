@@ -1,0 +1,24 @@
+<nav class="position-absolute scrolling-nav" id="scrolling-menu">
+  <!-- htmllint preset="none" -->
+  <ul class="list-unstyled text-white bg-white border-{{ page.trackColor | liquify }} rounded p-1 pointer-events-auto">
+    {% for item in site.menus.scrolling %}
+      <li id="header-{{ item.id | liquify }}" class="sidenav-item pb-3 position-relative">
+        <p
+          on="tap:{{ item.id | liquify }}.scrollTo(duration=300)"
+          class="px-2 m-0 border-y-padding"
+          tabindex="-1"
+        >
+          {{ item.name | liquify }}
+        </h5>
+        <p on="tap:{{ item.id | liquify }}.scrollTo(duration=300)"
+          id="{{ item.id | liquify }}-selected"
+          tabindex="-1"
+          class="border-{{ page.trackColor | liquify }} border-x-none w-100 position-absolute sidenav-selected px-2 m-0"
+        >
+          {{ item.name | liquify }}
+      </p>
+      </li>
+    {% endfor %}
+  </ul>
+  <!-- htmllint preset="$previous" -->
+</nav>

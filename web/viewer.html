@@ -1,3 +1,23 @@
+---
+permalink: "/web/viewer.html"
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 <!DOCTYPE html>
 <!--
 Copyright 2012 Mozilla Foundation
@@ -23,15 +43,15 @@ See https://github.com/adobe-type-tools/cmap-resources
 <html dir="ltr" mozdisallowselectionprint>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
     <meta name="google" content="notranslate">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta
       name="description"
-      content="{{ page.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
+      content="{{ city.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
     />
     <title>
-      {{ page.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
+      {{ settings.title }}
     </title>
 
     <link rel="stylesheet" href="../assets/css/viewer.css">
@@ -56,13 +76,13 @@ See https://github.com/adobe-type-tools/cmap-resources
         <div id="toolbarSidebar">
           <div class="splitToolbarButton toggled">
             <button id="viewThumbnail" class="toolbarButton toggled" title="Show Thumbnails" tabindex="2" data-l10n-id="thumbs">
-               <span data-l10n-id="thumbs_label">Thumbnails</span>
+              <span data-l10n-id="thumbs_label">Thumbnails</span>
             </button>
             <button id="viewOutline" class="toolbarButton" title="Show Document Outline (double-click to expand/collapse all items)" tabindex="3" data-l10n-id="document_outline">
-               <span data-l10n-id="document_outline_label">Document Outline</span>
+              <span data-l10n-id="document_outline_label">Document Outline</span>
             </button>
             <button id="viewAttachments" class="toolbarButton" title="Show Attachments" tabindex="4" data-l10n-id="attachments">
-               <span data-l10n-id="attachments_label">Attachments</span>
+              <span data-l10n-id="attachments_label">Attachments</span>
             </button>
           </div>
         </div>
@@ -247,7 +267,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                   <div class="splitToolbarButtonSeparator"></div>
                   <button id="zoomIn" class="toolbarButton zoomIn" title="Zoom In" tabindex="22" data-l10n-id="zoom_in">
                     <span data-l10n-id="zoom_in_label">Zoom In</span>
-                   </button>
+                  </button>
                 </div>
                 <span id="scaleSelectContainer" class="dropdownToolbarButton">
                   <select id="scaleSelect" title="Zoom" tabindex="23" data-l10n-id="zoom">
