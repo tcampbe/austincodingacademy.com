@@ -5,6 +5,171 @@ head_title: "Become an Instructor | Instructor Application - {{ school.name }}"
 description: "Become a web development instructor with {{ school.name }} | Teach
   coding to the next generation of web developers."
 redirect_from: []
+form_fields:
+- name: firstname
+  label: First Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: Your first name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: lastname
+  label: Last Name
+  description: ''
+  type: text
+  value: ''
+  placeholder: Your last name
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: phone
+  label: Phone
+  description: ''
+  type: tel
+  value: ''
+  placeholder: Your phone number
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: email
+  label: Email
+  description: ''
+  type: email
+  value: ''
+  placeholder: Your email address
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: city
+  label: Your current city
+  description: ''
+  type: text
+  value: ''
+  placeholder: Your Current City
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: currento_ccupation1
+  label: Your Current Occupation
+  description: ''
+  type: text
+  value: ''
+  placeholder: Your current occupation
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: current-company1
+  label: Your current company
+  description: ''
+  type: text
+  value: ''
+  placeholder: Your current company
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: college_or_school_attended1
+  label: Last school attended
+  description: ''
+  type: text
+  value: ''
+  placeholder: The last school you attended
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: "which_course_are_you_applying_to_teach"
+  label: "Which course are you applying to teach for?"
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: 101 Intro to Web
+    label: 101 Intro to Web
+  - value: JS 211 - JavaScript Basics
+    label: JS 211 - JavaScript Basics
+  - value: JS 311 - Front-End JavaScript
+    label: JS 311 - Front-End JavaScript
+  - value: JS 411 - Back-End Javascript
+    label: JS 411 - Back-End Javascript
+  - value: "C# .NET 221 - C# Basics"
+    label: "C# .NET 221 - C# Basics"
+  - value: "C# .NET 321 - .NET Framework"
+    label: "C# .NET 321 - .NET Framework"
+  - value: "C# .NET 421 - Advanced .NET + React.js"
+    label: "C# .NET 421 - Advanced .NET + React.js"
+  placeholder: Please select
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: github_profile
+  label: GitHub Profile
+  description: ''
+  type: text
+  value: ''
+  placeholder: Please enter your github profile link.
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: what_s_your_current_experience_in_coding_
+  label: What experience do you have in coding already?
+  description: ''
+  type: text
+  value: ''
+  placeholder: Your coding experience
+  required: true
+  small_width: 12
+  medium_width: 12
+  options: []
+- name: what_should_we_know_about_your_teaching_style_1
+  label: What should we know about your teaching style?
+  description: ''
+  type: text
+  value: ''
+  placeholder: Please describe your teaching style.
+  required: true
+  small_width: 12
+  medium_width: 12
+  options: []
+- name: why_do_you_want_to_teach_1
+  label: Why do you want to teach?
+  description: ''
+  type: text
+  value: ''
+  placeholder: Your reason to teach
+  required: true
+  small_width: 12
+  medium_width: 12
+  options: []
+- name: "which_factor_is_most_important"
+  label: "When deciding on a coding school to teach at, which is the biggest factor for you?"
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: Curriculum
+    label: Curriculum
+  - value: Schedule
+    label: Schedule
+  - value: Teaching Methodology
+    label: Teaching Methodology
+  - value: JS 411 - Back-End Javascript
+    label: JS 411 - Back-End Javascript
+  - value: Culture Fit
+    label: Culture Fit
+  placeholder: Please select
+  required: true
+  small_width: 12
+  medium_width: 6
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -29,263 +194,13 @@ redirect_from: []
       Instructor Application
     </h2>
     <form
-      target="_top"
-      class="d-flex justify-content-center"
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.instructor_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.wordpress_form_guid }}"
       method="POST"
-    >
-      <input name="lifecyclestage" type="hidden" value="opportunity">
-      <input name="hutk" type="hidden" value="">
-      <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
-      <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
-      <!-- htmllint preset="none" -->
-      <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/”>
-      <!-- htmllint preset="$previous" -->
-      <div class="mw-850 row">
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="firstname" class="form-label">
-              First Name <span class="text-red-a">*</span>
-            </label>
-
-            <input type="text" id="firstname" class="form-control" name="firstname" placeholder="Your first name"
-              aria-label="Your first name" required data-msg="Please enter your first name." data-error-class="u-has-error"
-              data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="lastname" class="form-label">
-              Last Name <span class="text-red-a">*</span>
-            </label>
-
-            <input type="text" id="lastname" class="form-control" name="lastname" placeholder="Your last name" aria-label="Your last name"
-              required data-msg="Please enter you last name." data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="phone" class="form-label">
-              Phone <span class="text-red-a">*</span>
-            </label>
-
-            <input type="tel" id="phone" class="form-control" name="phone" placeholder="Your phone number" aria-label="Your phone number"
-              required data-msg="Please enter your phone number." data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="email" class="form-label">
-              Email <span class="text-red-a">*</span>
-            </label>
-
-            <input type="email" id="email" class="form-control" name="email" placeholder="Your email address" aria-label="Your email address"
-              required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="city" class="form-label">
-              Your Current City <span class="text-red-a">*</span>
-            </label>
-
-            <input id="city" type="text" class="form-control" name="city" placeholder="Your current city" aria-label="Your current city"
-              required data-msg="Please enter the city in which you live." data-error-class="u-has-error"
-              data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="current-occupation1" class="form-label">
-              Current Occupation
-              <span class="text-red-a">*</span>
-            </label>
-
-            <input id="current-occupation1" type="text" class="form-control" name="current_occupation1" placeholder="Your current occupation"
-              aria-label="Your current occupation" required data-msg="Please enter your current occupation."
-              data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="current-company1" class="form-label">
-              Current Company <span class="text-red-a">*</span>
-            </label>
-
-            <input
-              id="current-company1"
-              type="text"
-              class="form-control"
-              name="current_company1"
-              placeholder="Your current company"
-              aria-label="Your current company"
-              required
-              data-msg="Please enter your current company."
-              data-error-class="u-has-error"
-              data-success-class="u-has-success"
-            />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="college-or-school-attended1" class="form-label">
-              Last School Attended <span class="text-red-a">*</span>
-            </label>
-
-            <input id="college-or-school-attended1" type="text" class="form-control" name="college_or_school_attended1"
-              placeholder="The last school you attended" aria-label="Last school attended" required data-msg="Please enter the last school you attended."
-              data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="program" class="form-label">
-              Which course are you applying to teach for?
-              <span class="text-red-a">*</span>
-            </label>
-
-            <select id="program" name="which_course_are_you_applying_to_teach_" class="form-control">
-              <option value disabled selected>
-                Please select
-              </option>
-              <option value="101 Intro to Web">
-                101 Intro to Web
-              </option>
-              <option value="JS 211 - JavaScript Basics">
-                JS 211 - JavaScript Basics
-              </option>
-              <option value="JS 311 - Front-End JavaScript">
-                JS 311 - Front-End JavaScript
-              </option>
-              <option value="JS 411 - Back-End Javascript">
-                JS 411 - Back-End Javascript
-              </option>
-              <option value="C# .NET 221 - C# Basics">
-                C# .NET 221 - C# Basics
-              </option>
-              <option value="C# .NET 321 - .NET Framework">
-                C# .NET 321 - .NET Framework
-              </option>
-              <option value="C# .NET 421 - Advanced .NET + React.js">
-                C# .NET 421 - Advanced .NET + React.js
-              </option>
-            </select>
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label for="github" class="form-label">
-              GitHub Profile
-              <span class="text-red-a">*</span>
-            </label>
-
-            <input id="github" type="text" class="form-control" name="github_profile" placeholder="https://github.com/AustinCodingAcademy"
-              aria-label="github" required data-msg="Please enter your github profile link." data-error-class="u-has-error"
-              data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-12 mb-6">
-          <div class="js-form-message form-group">
-            <label for="coding-experience" class="form-label">
-              What experience do you have in coding already?
-              <span class="text-red-a">*</span>
-            </label>
-
-            <input id="coding-experience" type="text" class="form-control" name="what_s_your_current_experience_in_coding_" placeholder="Your coding experience"
-              aria-label="Your coding experience" required data-msg="Please describe your coding experience."
-              data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-12 mb-6">
-          <div class="js-form-message form-group">
-            <label for="teaching-style" class="form-label">
-              What should we know about your teaching style?
-              <span class="text-red-a">*</span>
-            </label>
-
-            <input id="teaching-style" type="text" class="form-control" name="what_should_we_know_about_your_teaching_style_1" placeholder="Your teaching style"
-              aria-label="Your teaching style" required data-msg="Please describe your teaching style." data-error-class="u-has-error"
-              data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-12 mb-6">
-          <div class="js-form-message form-group">
-            <label for="why-teach" class="form-label">
-              Why do you want to teach?
-              <span class="text-red-a">*</span>
-            </label>
-
-            <input id="why-teach" type="text" class="form-control" name="why_do_you_want_to_teach_1" placeholder="Your reason to teach"
-              aria-label="Your reason to teach" required data-msg="Please describe why you want to teach."
-              data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 mb-6">
-          <div class="js-form-message form-group">
-            <label class="form-label" for="important-value">
-              When deciding on a coding school to teach at, which is the biggest factor for you?
-              <span class="text-red-a">*</span>
-            </label>
-            <select id="important-value" name="which_factor_is_most_important" class="form-control">
-              <option value disabled selected>
-                Please select
-              </option>
-              <option value="Curriculum">
-                Curriculum
-              </option>
-              <option value="Schedule">
-                Schedule
-              </option>
-              <option value="Teaching Methodology">
-                Teaching Methodology
-              </option>
-              <option value="Culture Fit">
-                Culture Fit
-              </option>
-            </select>
-          </div>
-        </div>
-        <!-- End Input -->
+      class="d-flex justify-content-center"
+      >
+      <div class="row mw-850">
+        {% assign all_fields = page.form_fields %}
+        {% include fields.html fields=all_fields redirect_url="" %}
         <div class="col-sm-6 mb-4">
           {% include referral-question.html %}
         </div>
