@@ -1,9 +1,9 @@
 ---
 layout: default
-permalink: "/apply/"
+permalink: "/diversity-scholarship/apply/"
 redirect_from:
 next_page_href: "/apply/2"
-head_title: "Start Your Application | Apply Now at {{ school.name }}"
+head_title: "Diversity Scholarship Application"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 process:
 - heading: Apply
@@ -85,7 +85,7 @@ form_fields:
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key == site.key %}
+      {% if _school.key ==  site.key%}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}
@@ -99,4 +99,4 @@ form_fields:
   {% endfor %}
 {% endif %}
 
-{% include apply.html %}
+{% include apply.html diversity=true %}

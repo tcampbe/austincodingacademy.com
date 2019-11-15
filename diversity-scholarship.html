@@ -54,24 +54,25 @@ eligibility:
   - descript: "Eligibility for the Austin Coding Academy Diversity Scholarship is determined based on a variety of factors.
       Students applying for the scholarship must meet the following requirements to be considered for the Diversity Scholarship:"
     bullets:
-    - Read through all portions of this page thoroughly
-    - Submit the Diversity Scholarship Application by Wednesday, December 11th
-    - Complete a 15-minute phone interview with an Austin Coding Academy admissions representative by Thursday, December 12th
-    - Be available to interview with the independent Diversity Scholarship Committee on Tuesday, Dec. 17, 2019
-    - "Be prepared to enroll in Austin Coding Academy’s Full Stack Web Development Program, beginning:"
-    #  - January 14th @ Austin Coding Academy - Capital Factory
-    #  - January 27th @ Austin Coding Academy - Highland
-    - January 27th @ Austin Coding Academy - Highland
-    - Meet in-person attendance requirements for Austin Coding Academy classes, as regulated by the Texas Workforce Commission
-    - Intend to complete a full web development track at Austin Coding Academy within a year - note that if you drop a class, you’ll be charged for the portion of the class you completed
-    - Intend to pursue a career in technology upon graduating from Austin Coding Academy
-    - Engage in the promotion of future Austin Coding Academy Diversity initiatives and be willing to volunteer to bring technical education to diverse communities
+    - bullet: Read through all portions of this page thoroughly
+    - bullet: Submit the Diversity Scholarship Application by Wednesday, December 11th
+    - bullet: Complete a 15-minute phone interview with an Austin Coding Academy admissions representative by Thursday, December 12th
+    - bullet: Be available to interview with the independent Diversity Scholarship Committee on Tuesday, Dec. 17, 2019
+    - bullet: "Be prepared to enroll in Austin Coding Academy’s Full Stack Web Development Program, beginning:"
+      bullets:
+      - bullet: January 14th @ Austin Coding Academy - Capital Factory
+      - bullet: January 27th @ Austin Coding Academy - Highland
+    - bullet: January 27th @ Austin Coding Academy - Highland
+    - bullet: Meet in-person attendance requirements for Austin Coding Academy classes, as regulated by the Texas Workforce Commission
+    - bullet: Intend to complete a full web development track at Austin Coding Academy within a year - note that if you drop a class, you’ll be charged for the portion of the class you completed
+    - bullet: Intend to pursue a career in technology upon graduating from Austin Coding Academy
+    - bullet: Engage in the promotion of future Austin Coding Academy Diversity initiatives and be willing to volunteer to bring technical education to diverse communities
   - descript: "The Diversity Scholarship application is open to all, but the Selection Committee will consider key components when determining eligibility and fit, including:"
     bullets:
-    - Preference given to students who have shown a commitment to groups that are underrepresented in technology
-    - Preference given to students with financial need
-    - The recipient will be selected by a Selection Committee of 5-7 distinguished and independent individuals in the field of technology. The deliberations of the Selection Committee
-      will be confidential and independent of Austin Coding Academy
+    - bullet: Preference given to students who have shown a commitment to groups that are underrepresented in technology
+    - bullet: Preference given to students with financial need
+    - bullet: The recipient will be selected by a Selection Committee of 5-7 distinguished and independent individuals in the field of technology. The deliberations of the Selection Committee
+        will be confidential and independent of Austin Coding Academy
 overview:
 - title: Tech’s Diversity Problem
   text: The current makeup of the tech industry fails to represent the cultural makeup
@@ -146,7 +147,7 @@ scholarship:
   </p>
   <div class="d-flex mt-4 align-items-center justify-content-center">
     <div class="mr-2">
-      {% include btn-apply.html href="/courses/wordpress-fundamentals/apply/" %}
+      {% include btn-apply.html href="/diversity-scholarship/apply" %}
     </div>
     <div class="ml-2">
       <!-- htmllint preset="none" -->
@@ -302,16 +303,27 @@ scholarship:
       </div>
       <ul class="fa-ul mb-2">
         {% for bullet in section.bullets %}
-          <li class="mb-1">
-            <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
-          </li>
+          {% if bullet.bullets %}
+            <li class="mb-1">
+              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet }}
+              {% for bullet in bullet.bullets %}
+                <li class="ml-4">
+                  <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet }}
+                </li>
+              {% endfor %}
+            </li>
+          {% else %}
+            <li class="mb-1">
+              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet }}
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
     {% endfor %}
   </section>
 
   <div class="text-center">
-    {% include btn-apply.html %}
+    {% include btn-apply.html href="/diversity-scholarship/apply" %}
   </div>
 
   <section class="container col-xs-11 col-sm-11 mx-auto pt-3 pb-5 border-bottom">
