@@ -57,14 +57,18 @@ subheading: Come join {{ school.name }} at one of our next events! Whether you'd
                   class="mr-0 px-0 mr-sm-4 mb-2 mb-sm-0 col-12 col-sm-6 rounded"
                   style="min-width: 220px;"
                 >
+                  <!-- htmllint preset="none" -->
                   <amp-img
                     width="{{ event.width | default: 400 }}"
                     height="{{ event.height | default: 200 }}"
                     layout="responsive"
                     class="img-fluid rounded my-auto"
-                    src="{{ event.img }}"
+                    {% if event.img %}
+                      src="{{ event.img }}"
+                    {% endif %}
                     alt="{{ event.name }}"
                   ></amp-img>
+                  <!-- htmllint preset="none" -->
                 </div>
                 <div class="mx-auto">
                   {% assign name = event.name | split: " | " %}

@@ -154,20 +154,21 @@ form_fields:
           </a>
         </div>
       </div>
+      <amp-recaptcha-input
+        layout="nodisplay"
+        name="recaptcha-apply"
+        data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
+        data-action="homepage">
+      </amp-recaptcha-input>
     </form>
+    <div class="text-center">
+      <div submit-error>
+        <template type="amp-mustache">
+          <p class="text-danger">There was an error with your request. Please try again.</p>
+        </template>
+      </div>
+    </div>
   </div>
   <div class="form">
   </div>
 </div>
-      <script charset="utf-8" type="text/javascript" src="js.hsforms.net/forms/v2.js"></script>
-      <!--[if lte IE 8]>
-      <script charset="utf-8" type="text/javascript" src="js.hsforms.net/forms/v2-legacy.js"></script>
-      <![endif]-->
-      <script charset="utf-8" type="text/javascript" src="js.hsforms.net/forms/v2.js"></script>
-      <script>
-        hbspt.forms.create({
-          portalId: "4009818",
-          formId: "8fb40a43-8ebf-4f5e-8a4a-6e72ecec56ab",
-          target: '.form'
-        });
-      </script>
