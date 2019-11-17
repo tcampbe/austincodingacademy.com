@@ -161,6 +161,97 @@ schools:
       - RESTful APIs
       - Web VR
       - Spring/Spring Boot
+form_fields:
+- name: firstname
+  label: First Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: First name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: lastname
+  label: Last Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: Last name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: phone
+  label: Phone
+  description: ''
+  type: phone
+  value: ''
+  placeholder: Phone
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: email
+  label: Email
+  description: ''
+  type: email
+  value: ''
+  placeholder: Email
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: city
+  label: City
+  description: ''
+  type: text
+  value: ''
+  placeholder: City
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: state
+  label: State
+  description: ''
+  type: text
+  value: ''
+  placeholder: State
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: jobtitle
+  label: Current role
+  description: ''
+  type: text
+  value: ''
+  placeholder: Current role
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: company
+  label: Company
+  description: ''
+  type: text
+  value: ''
+  placeholder: Company
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: what_technologies_would_you_like_to_train_for_
+  label: What technologies would you like to train for?
+  description: ''
+  type: textarea
+  value: ''
+  placeholder: Enter your questions or comments here
+  required: true
+  small_width: 12
+  medium_width: 12
+  options: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -284,6 +375,31 @@ schools:
     <p class="mw-600 mx-auto text-center mb-4">
       Interested in learning with {{ school.name }}? Request our training listings today and we’ll get in touch!
     </p>
+    <!-- NEW FORM -->
+    <form class="d-flex justify-content-center align-items-center"
+    target="_top"
+    action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.corporate_trainings_form_guid }}"
+    method="POST"
+    >
+      <div class="form-container mw-850 px-5 px-lg-0">
+          <div class="row center-form">
+
+            {% assign all_fields = page.form_fields %}
+            {% include fields.html fields=all_fields %}
+            <div class="col-12 d-flex align-items-end justify-content-center form-group">
+              <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
+                Submit
+              </button>
+            </div>
+            <div class="col-12">
+              {% include data-agreement.html %}
+            </div>
+        </div>
+      </div>
+    </form>
+
+
+    <!-- OLD FORM -->
     <form class="d-flex justify-content-center align-items-center"
       target="_top"
       action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.corporate_trainings_form_guid }}"
