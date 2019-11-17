@@ -1,5 +1,6 @@
 <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
 <input name="page_uri" type="hidden" value="{{ school.url | liquify }}{{ site.baseurl | liquify }}{{ page.permalink }}">
+<input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 <input name="hutk" type="hidden" value="">
 <!-- htmllint preset="none" -->
 {% for field in include.fields %}
