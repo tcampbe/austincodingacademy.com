@@ -529,8 +529,8 @@ schools:
       >
       <div class="row mw-850">
         {% assign all_fields = school.form_fields %}
-        <div class="col-sm-6 mb-4"></div>
-          {% include fields.html fields=all_fields %}
+        {% include fields.html fields=all_fields %}
+        <div class="col-sm-6 mb-4">
           {% include referral-question.html %}
         </div>
         <div class="col-12 mb-4 d-flex justify-content-center">
