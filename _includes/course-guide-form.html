@@ -226,7 +226,6 @@
               <!-- htmllint preset="$previous" -->
                 {% include referral-question.html %}
               </div>
-
               <!-- Input -->
               <!-- htmllint preset="none" -->
               <div
@@ -271,7 +270,7 @@
               <!-- End Input -->
 
               {% if page.categories contains 'landing' %}
-                <div class="col-12 d-flex justify-content-center">
+                <div class="col-12">
                   {% include data-agreement.html %}
                 </div>
               {% endif %}
@@ -284,9 +283,14 @@
               </div>
             </div>
           </div>
+          <amp-recaptcha-input
+            layout="nodisplay"
+            name="recaptcha_response"
+            data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
+            data-action="homepage">
+          </amp-recaptcha-input>
         </form>
         <!-- End Form -->
-
       </div>
     </div>
   </div>

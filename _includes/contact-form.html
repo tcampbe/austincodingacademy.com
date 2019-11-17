@@ -182,7 +182,7 @@
               Send
             </button>
           </div>
-          <div class="col-12 d-flex justify-content-center">
+          <div class="col-12">
             {% include data-agreement.html %}
           </div>
         </div>
@@ -194,6 +194,12 @@
           </template>
         </div>
       </div>
+      <amp-recaptcha-input
+        layout="nodisplay"
+        name="recaptcha_response"
+        data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
+        data-action="homepage">
+      </amp-recaptcha-input>
     </form>
 
     {% if page.contact_lightbox %}
