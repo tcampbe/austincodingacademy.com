@@ -56,6 +56,8 @@
         <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
         <input name="hutk" type="hidden" value="">
         <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/">
+        <input name="school" type="hidden" value="{{ school.name }}">
+        <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
         <div class="row center-form">
           <!-- Input -->
           <div class="col-sm-6 mb-4">
@@ -183,7 +185,7 @@
               Send
             </button>
           </div>
-          <div class="col-12 d-flex justify-content-center">
+          <div class="col-12">
             {% include data-agreement.html %}
           </div>
         </div>
@@ -195,6 +197,12 @@
           </template>
         </div>
       </div>
+      <amp-recaptcha-input
+        layout="nodisplay"
+        name="recaptcha_response"
+        data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
+        data-action="homepage">
+      </amp-recaptcha-input>
     </form>
 
     {% if page.contact_lightbox %}

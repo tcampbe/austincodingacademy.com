@@ -296,6 +296,8 @@ schools:
         <input name="page_uri" type="hidden" value="{{ school.url }}{{ page.url }}">
         <input name="hutk" type="hidden" value="">
         <input name="redirect_url" type="hidden" value="https://austincodingacademy.com/web/viewer.html?file=/assets/documents/ACA-Employee-Training.pdf">
+        <input name="school" type="hidden" value="{{ school.name }}">
+        <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 
         <div class="row center-form">
           <!-- Input -->
@@ -432,7 +434,7 @@ schools:
           </div>
           <!-- End Input -->
 
-          <div class="col-12 d-flex justify-content-center">
+          <div class="col-12">
             {% include data-agreement.html %}
           </div>
         </div>
