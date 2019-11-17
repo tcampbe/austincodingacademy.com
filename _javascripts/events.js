@@ -22,8 +22,10 @@ const fetchEvents = async () => {
     ).events;
     const austinEvents = eventsJson.filter(event => event.organizer_id === '10937668459' && event.listed);
     const lubbockEvents = eventsJson.filter(event => event.organizer_id === '18046524539' && event.listed);
+    const ttuEvents = eventsJson.filter(event => event.organizer_id === '27138169661' && event.listed);
     console.log(`Found ${austinEvents.length} Austin events.`)
     console.log(`Found ${lubbockEvents.length} Lubbock events.`)
+    console.log(`Found ${ttuEvents.length} TTU events.`)
     venues = await Promise.all(uniq(eventsJson.map(event => event.venue_id)).map(venueId =>
       fetch(`https://www.eventbriteapi.com/v3/venues/${venueId}`, { headers })
     ));
@@ -34,7 +36,8 @@ const fetchEvents = async () => {
 
     const events = {
       'austincodingacademy': austinEvents.map(event => parseEvent(event)),
-      'lubbockcodingacademy': lubbockEvents.map(event => parseEvent(event))
+      'lubbockcodingacademy': lubbockEvents.map(event => parseEvent(event)),
+      'texastechuniversitycodingacademy': ttuEvents.map(event => parseEvent(event))
     };
 
     writeFileSync('_data/events.yml', safeDump(events));

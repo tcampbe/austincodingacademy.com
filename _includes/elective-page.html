@@ -74,6 +74,7 @@
           <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
           <input name="page_uri" type="hidden" value="{{ school.url }}{{ page.url }}">
           <input name="hutk" type="hidden" value="">
+          <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 
           <div class="row center-form">
             <!-- Input -->
@@ -159,7 +160,7 @@
               </button>
             </div>
             <!-- End Input -->
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12">
               {% include data-agreement.html %}
             </div>
           </div>
