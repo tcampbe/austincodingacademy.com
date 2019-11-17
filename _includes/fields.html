@@ -27,6 +27,24 @@
         </select>
       </div>
     </div>
+  {% elsif field.type == 'textarea' %}
+    <div class="mb-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }}">
+      <div class="form-group">
+        <label for="{{ field.name | liquify }}" class="form-label">
+          {{ field.label }}
+          <span class="text-red-a">*</span>
+        </label>
+        <small>{{ field.description | liquify }}</small>
+        <textarea 
+          id="{{ field.name | liquify }}" 
+          class="form-control" 
+          name="{{ field.name | liquify }}" 
+          rows="4"
+          placeholder="{{ field.placeholder | liquify }}"
+          aria-label="{{ field.label | liquify }}"
+        ></textarea>
+      </div>
+    </div>
   {% else %}
     <div class="mb-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }}">
       <div class="form-group">
