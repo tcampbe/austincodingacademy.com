@@ -1,28 +1,25 @@
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
     {% if include.diversity %}
-      <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
-        Diversity Scholarship Application
+      <h2 class="font-family-alt my-5 my-sm-5 display-5 display-55 text-center col-12 col-sm-10">
+        APPLICATION PAGE 1
       </h2>
+      <div class="d-flex flex-column align-items-center">
+        <p class="display-6 text-center col-12">
+          Diversity Scholarship Appliction<br>
+        </p>
+      </div>
     {% else %}
       <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
         Start Your Application
       </h2>
     {% endif %}
     <!-- Proccess Application -->
-    {% if include.diversity %}
-      <p class="text-center col-12 col-sm-10">
-        Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will be
-        asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and have
-        at least a high school diploma or GED to enroll in one of our courses/programs.
-      </p>
-    {% else %}
-      <p class="text-center col-12 col-sm-10">
-        Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will be
-        asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and have
-        at least a high school diploma or GED to enroll in one of our courses/programs.
-      </p>
-    {% endif %}
+    <p class="text-center col-12 col-sm-10">
+      Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will
+      be asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and
+      have at least a high school diploma or GED to enroll in one of our courses/programs.
+    </p>
     <div class="d-sm-flex col-12 col-sm-10 mb-4 justify-content-between">
       {% for process in page.process %}
         <div class="col-12 col-sm-3 mx-auto">

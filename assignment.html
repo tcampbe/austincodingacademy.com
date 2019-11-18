@@ -167,64 +167,7 @@ resources:
               </div>
             </div>
             <!-- End Input -->
-            <div class="col-12">
-              <h2 class="mx-auto mb-4 w-100">
-                Coding Assignment
-              </h2>
-              <!-- Coding Challenge -->
-              <p class="px-4 px-md-0">
-                {{ page.challenge_descript1 | liquify }}
-              </p>
-              <p class="mb-6 px-4 px-md-0">
-                {{ page.challenge_descript2 | liquify }}
-              </p>
-            </div>
-            <div class="mb-6">
-              <ul class="fa-ul m-0">
-                {% for resource in page.resources %}
-                  <li class="mb-1">
-                    <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>
-                    <a href="{{ resource.url }}" target="_blank" rel="noopener">{{ resource.name | liquify }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-
-            <div class="js-form-message mb-6 col-sm-12">
-              <div class="w-100 mx-auto mb-6">
-                <amp-img
-                  src="{{ page.img_src | liquify }}"
-                  width="2000px"
-                  height="620px"
-                  layout="responsive"
-                  class="img-fluid w-100"
-                  alt="coding challenge codepen"
-                  title="coding challenge codepen"
-                  tabindex="0"
-                >
-                </amp-img>
-              </div>
-
-              <label for="code-challenge" class="form-label flex-wrap">
-                Describe in 1-2 paragraphs what the code above is creating. <span class="text-red-a">*</span>
-              </label>
-
-              <div class="input-group">
-                <textarea
-                  id="code-challenge"
-                  class="form-control"
-                  rows="10"
-                  name="coding_assignment_answer"
-                  placeholder="1-2 paragraphs"
-                  aria-label="Coding Challenge Question"
-                  required
-                  data-msg="Please enter a response."
-                  data-error-class="u-has-error"
-                  data-success-class="u-has-success"
-                ></textarea>
-              </div>
-            </div>
-            <!-- End Challenge -->
+            {% include challenge.html %}
 
             {% if page.categories contains 'landing' %}
               <div class="col-12 d-flex justify-content-center">

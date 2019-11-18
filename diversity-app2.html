@@ -79,6 +79,17 @@ form_fields:
   required: true
   small_width: 12
   medium_width: 12
+
+challenge_descript1: "Take a look at the picture below showing HTML, CSS, and JavaScript.  In the space provided,
+  please describe in 1-2 paragraphs what the code displayed in the picture is creating."
+challenge_descript2: "This is not a test of your coding knowledge. You are encouraged to use online resources to find answers that you don't know —
+  as a developer that will be an important part of your job! Here are some resources we recommend using:"
+img_src: /assets/images/coding-assignment.png
+resources:
+- name: What is the web?
+  url: https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g
+- name: Codepen
+  url: https://codepen.io/austincoding/pen/ELabMz
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -99,73 +110,16 @@ form_fields:
 {% endif %}
 
 <div class="container mt-90 pt-1 pb-5">
-    <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
-      <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
-        Diversity Scholarship Application<br>
-        <span class="text-grey">
-          <small>(Continued)</small>
-        </span>
-      </h2>
-      <!-- Proccess Application -->
-      {% if include.diversity %}
-        <p class="text-center col-12 col-sm-10">
-          Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will be
-          asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and have
-          at least a high school diploma or GED to enroll in one of our courses/programs.
-        </p>
-      {% else %}
-        <p class="text-center col-12 col-sm-10">
-          Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will be
-          asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and have
-          at least a high school diploma or GED to enroll in one of our courses/programs.
-        </p>
-      {% endif %}
-      <div class="d-sm-flex col-12 col-sm-10 mb-4 justify-content-between">
-        {% for process in page.process %}
-          <div class="col-12 col-sm-3 mx-auto">
-            <amp-img
-              width="{{ process.img_width }}"
-              height="{{ process.img_height }}"
-              layout="responsive"
-              class="w-75 w-sm-100 mx-auto h-auto mw-10r"
-              src="{{ process.img_src | liquify }}"
-              alt="{{ process.name | liquify }}"
-            ></amp-img>
-            <div>
-              <h3 class="text-center font-weight-bold mb-2">
-                {{ process.heading }}
-              </h3>
-              <p class="text-center mb-2">
-                <small>{{ process.time }}</small>
-              </p>
-            </div>
-            <p class="text-center">
-              {{ process.text }}
-            </p>
-          </div>
-        {% endfor %}
-      </div>
-      <form
-        action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.wordpress_form_guid }}"
-        method="POST"
-        target="_top"
-      >
-        <div class="row p-5">
-          {% assign all_fields = page.form_fields %}
-          {% include fields.html fields=all_fields %}
-
-          <div class="col-12 mb-4 d-flex justify-content-center">
-            <!-- htmllint preset="none" -->
-            <a class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}">
-            <!-- htmllint preset="$previous" -->
-              <span class="hover-white text-white">
-                Continue Application
-              </span>
-            </a>
-          </div>
-        </div>
-      </form>
+  <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
+    <h2 class="font-family-alt my-5 my-sm-5 display-5 display-55 text-center col-12 col-sm-10">
+      APPLICATION PAGE 2
+    </h2>
+    <div class="d-flex flex-column align-items-center">
+      <p class="display-6 text-center col-12">
+        Diversity Scholarship Appliction<br>
+        <span class="text-grey small">(Continued)</span>
+      </p>
     </div>
-    <div class="form">
-    </div>
+    {% include challenge.html %}
   </div>
+</div>
