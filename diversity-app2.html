@@ -35,16 +35,7 @@ form_fields:
   small_width: 12
   medium_width: 6
   options: []
-- name: email
-  label: Email
-  description: ''
-  type: email
-  value: ''
-  placeholder: name@example.com
-  required: true
-  small_width: 12
-  medium_width: 6
-  options: []
+# select field
 - name: curriculum_track
   label: To which program are you applying?
   description: ''
@@ -59,6 +50,48 @@ form_fields:
   required: true
   small_width: 12
   medium_width: 12
+# text fields
+- name:
+  label: What makes you the best candidate for the ACA Diversity Scholarship and how have you shown your commitment to underrepresented groups in tech? (Answer in 200-400 words)*
+  description: ''
+  type: text
+  value: ''
+  placeholder: City
+  required: true
+  small_width: "12"
+  medium_width: "6"
+  options: []
+- name:
+  label: What is an obstacle that you've encountered in life and how have you overcome it? (Answer in 200-400 words)*
+  description: ''
+  type: text
+  value: ''
+  placeholder:
+  required: true
+  small_width: "12"
+  medium_width: "6"
+  options: []
+- name:
+  label: How do you intend to use your coding skills after you graduate? (Answer in less than 200 words)
+  description: ''
+  type: text
+  value: ''
+  placeholder:
+  required: true
+  small_width: "12"
+  medium_width: "6"
+  options: []
+# coding assignment
+- name:
+  label: Coding Assignment Answer
+  description: ''
+  type: text
+  value: ''
+  placeholder:
+  required: true
+  small_width: "12"
+  medium_width: "6"
+  options: []
 
 challenge_descript1: "Take a look at the picture below showing HTML, CSS, and JavaScript.  In the space provided,
   please describe in 1-2 paragraphs what the code displayed in the picture is creating."
@@ -108,7 +141,6 @@ resources:
           <label for="email" class="form-label">
             Email <span class="text-red-a">*</span>
           </label>
-
           <input
             type="email"
             id="email"
@@ -124,6 +156,98 @@ resources:
         </div>
       </div>
       <!-- End Input -->
+      <!-- Input -->
+      <div class="col-sm-6 mb-6">
+        <div class="js-form-message form-group">
+          <label for="email" class="form-label">
+            Check the boxes that apply to your ethnicity (check all that apply) (optional)
+          </label>
+          <!-- CHECKBOXES -->
+        </div>
+      </div>
+      <!-- End Input -->
+      <!-- Input -->
+      <div class="col-sm-6 mb-6">
+        <div class="js-form-message form-group">
+          <label for="email" class="form-label">
+            Are you a veteran of the US Military?
+          </label>
+          <select id="coding-experience" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
+            <option value="" disabled selected>
+              Please Select
+            </option>
+            <option value="Yes">
+              Yes
+            </option>
+            <option value="No">
+              No.
+            </option>
+          </select>
+        </div>
+      </div>
+      <!-- End Input -->
+      <!-- Input -->
+      <div class="col-sm-6 mb-6">
+        <div class="js-form-message form-group">
+          <label for="email" class="form-label">
+            What is your current yearly income? <span class="text-red-a">*</span>
+          </label>
+          <select id="coding-experience" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
+            <option value="" disabled selected>
+              Please Select
+            </option>
+            <option value="Yes">
+              Yes
+            </option>
+            <option value="No">
+              No.
+            </option>
+          </select>
+        </div>
+      </div>
+      <!-- End Input -->
+      <!-- Input -->
+      <div class="col-sm-6 mb-6">
+        <div class="js-form-message form-group">
+          <label for="email" class="form-label">
+            How would you describe your current credit score?<span class="text-red-a">*</span>
+          </label>
+          <select id="coding-experience" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
+            <option value="" disabled selected>
+              Please Select
+            </option>
+            <option value="Yes">
+              Yes
+            </option>
+            <option value="No">
+              No.
+            </option>
+          </select>
+        </div>
+      </div>
+      <!-- End Input -->
+      <!-- Input -->
+      <div class="col-sm-6 mb-6">
+        <div class="js-form-message form-group">
+          <label for="email" class="form-label">
+            If you do not receive the ACA Diversity Scholarship, would you still be interested in/able to take classes? (We do offer financing)<span class="text-red-a">*</span>
+          </label>
+          <select id="coding-experience" name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
+            <option value="" disabled selected>
+              Please Select
+            </option>
+            <option value="Yes">
+              Yes
+            </option>
+            <option value="No">
+              No.
+            </option>
+          </select>
+        </div>
+      </div>
+      <!-- End Input -->
+      {% assign text_fields = page.form_fields %}
+      {% include fields.html fields=text_fields %}
       {% include data-agreement.html %}
     </form>
 
