@@ -73,7 +73,7 @@ features:
   square: true
   alt: Suitcase graphic
 schools:
-- key: austincoding
+- key: austincodingacademy
   nextStartDate: October 21st
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
   lightbox_youtube:
@@ -195,13 +195,13 @@ schools:
         </a>
         {% if school.lightbox_youtube %}
           <a
-            class="btn cta-gradient text-white hover-white btn-round mr-2 d-none d-md-block"
+            class="btn cta-gradient text-white hover-white btn-round mr-2 d-block d-md-none"
             on="tap:testimonial-lightbox"
             tabindex="0"
             rel="noopener"
           >
             <span class="hover-white text-white">
-              Hear From a Student
+              Testimonial
             </span>
           </a>
           <!-- Lightbox Testimonial Video -->
@@ -244,6 +244,8 @@ schools:
                 <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
                 <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.permalink }}">
                 <input name="hutk" type="hidden" value="">
+                <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
+
                 <div class="form-container d-flex flex-column align-items-center">
                   <div class="d-flex justify-content-between w-100">
                     <div class="w-50 mr-2">
@@ -307,6 +309,9 @@ schools:
                   >
                     Get in Touch
                   </button>
+                  <div class="col-12">
+                    {% include data-agreement.html %}
+                  </div>
                 </div>
               </form>
             </div>
@@ -482,7 +487,7 @@ schools:
         Come Meet Us at Our Next Event
       </h2>
       {% include events.html limit=3 %}
-      <div class="mx-auto mt-4">
+      <div class="mx-auto mt-4 text-center">
         <a class="hover-white" href="/events">Visit our events page to see more upcoming events!</a>
       </div>
     </div>

@@ -87,9 +87,16 @@
             <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
             <input name="downloaded_a_courses_guide" type="hidden" value="true">
             <input name="hs_lead_status" type="hidden" value="NEW">
-            <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+            <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
             <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
             <input name="hutk" type="hidden" value="">
+            {% if include.course_guide %}
+              <input name="redirect_url" type="hidden" value="https://austincodingacademy.com/web/viewer.html?file=../assets/documents/{{ include.course_guide }}-Course-Guide-Master.pdf">
+            {% else %}
+              <input name="redirect_url" type="hidden" value="https://austincodingacademy.com/web/viewer.html?file=../assets/documents/{{ school.name | join: "-" }}-Course-Guide-Master.pdf">
+            {% endif %}
+            <input name="school" type="hidden" value="{{ school.name }}">
+            <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 
             <div class="row center-form">
               <!-- Input -->
@@ -225,7 +232,6 @@
               <!-- htmllint preset="$previous" -->
                 {% include referral-question.html %}
               </div>
-
               <!-- Input -->
               <!-- htmllint preset="none" -->
               <div
@@ -269,11 +275,9 @@
               </div>
               <!-- End Input -->
 
-              {% if page.categories contains 'landing' %}
-                <div class="col-12 d-flex justify-content-center">
-                  {% include data-agreement.html %}
-                </div>
-              {% endif %}
+              <div class="col-12">
+                {% include data-agreement.html %}
+              </div>
             </div>
             <div class="text-center">
               <div submit-error>
@@ -285,7 +289,6 @@
           </div>
         </form>
         <!-- End Form -->
-
       </div>
     </div>
   </div>

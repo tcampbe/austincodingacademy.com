@@ -2,6 +2,7 @@
 settings: true
 form_url: https://4runw89p71.execute-api.us-west-1.amazonaws.com/latest/hubspot
 hubspot_portal_id: 4009818
+wordpress_form_guid: 8fb40a43-8ebf-4f5e-8a4a-6e72ecec56ab
 instructor_form_guid: 83193d74-f3de-4679-91db-18ba46864fef
 corporate_trainings_form_guid: a000aab9-9870-4578-a496-2649ea46fb7e
 corporate_form_guid: b8fb52b4-28de-4133-920b-7f587724bb3d
@@ -35,7 +36,7 @@ navigation:
   - title: Student Portal
     url: https://campus.{{ site.key }}.com
   - title: Apply
-    url: "{% if page.nav_href %}{{ page.nav_href }}{% else %}/apply{% endif %}"
+    url: "/apply"
     class: btn btn-round text-white cta-gradient py-1 px-6
   footer:
   - title: Hack Overflow
