@@ -33,7 +33,7 @@ form_fields:
   placeholder: name@example.com
   required: true
   small_width: 12
-  medium_width: 6
+  medium_width: 10
   options: []
 # select field
 - name: curriculum_track
@@ -49,7 +49,7 @@ form_fields:
   placeholder: Select your answer
   required: true
   small_width: 12
-  medium_width: 12
+  medium_width: 10
 # text fields
 - name:
   label: What makes you the best candidate for the ACA Diversity Scholarship and how have you shown your commitment to underrepresented groups in tech? (Answer in 200-400 words)*
@@ -58,8 +58,8 @@ form_fields:
   value: ''
   placeholder: City
   required: true
-  small_width: "12"
-  medium_width: "6"
+  small_width: 12
+  medium_width: 10
   options: []
 - name:
   label: What is an obstacle that you've encountered in life and how have you overcome it? (Answer in 200-400 words)*
@@ -68,8 +68,8 @@ form_fields:
   value: ''
   placeholder:
   required: true
-  small_width: "12"
-  medium_width: "6"
+  small_width: 12
+  medium_width: 10
   options: []
 - name:
   label: How do you intend to use your coding skills after you graduate? (Answer in less than 200 words)
@@ -78,8 +78,8 @@ form_fields:
   value: ''
   placeholder:
   required: true
-  small_width: "12"
-  medium_width: "6"
+  small_width: 12
+  medium_width: 10
   options: []
 # coding assignment
 - name:
@@ -89,8 +89,8 @@ form_fields:
   value: ''
   placeholder:
   required: true
-  small_width: "12"
-  medium_width: "6"
+  small_width: 12
+  medium_width: 10
   options: []
 
 challenge_descript1: "Take a look at the picture below showing HTML, CSS, and JavaScript.  In the space provided,
@@ -247,8 +247,10 @@ resources:
       </div>
       <!-- End Input -->
       {% assign text_fields = page.form_fields %}
-      {% include fields.html fields=text_fields %}
-      {% include data-agreement.html %}
+      <div class="d-flex flex-column align-items-center">
+        {% include fields.html fields=text_fields %}
+        {% include data-agreement.html %}
+      </div>
     </form>
 
     <!-- FORM END -->
