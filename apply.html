@@ -2,7 +2,6 @@
 layout: default
 permalink: "/apply/"
 redirect_from:
-next_page_href: "/apply/2"
 head_title: "Start Your Application | Apply Now at {{ school.name }}"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 process:
@@ -142,7 +141,7 @@ form_fields:
     >
       <div class="row p-5">
         {% assign all_fields = page.form_fields %}
-        {% assign redirect_url = school.url | append: "/apply/two" %}
+        {% assign redirect_url = school.url | append: "/apply2" %}
         {% include fields.html fields=all_fields redirect_url=redirect_url %}
 
         <div class="col-12 mb-4 d-flex justify-content-center">
