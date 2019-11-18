@@ -25,32 +25,12 @@ process:
   img_height: 70
 
 form_fields:
-- name: firstname
-  label: First Name
+- name: email
+  label: Email
   description: ''
-  type: text
+  type: email
   value: ''
-  options: []
-  placeholder: First Name
-  required: true
-  small_width: 12
-  medium_width: 6
-- name: lastname
-  label: Last Name
-  description: ''
-  type: text
-  value: ''
-  placeholder: Last Name
-  required: true
-  small_width: 12
-  medium_width: 6
-  options: []
-- name: phone
-  label: Phone
-  description: ''
-  type: tel
-  value: ''
-  placeholder: "(***)***-****"
+  placeholder: name@example.com
   required: true
   small_width: 12
   medium_width: 6
@@ -120,6 +100,7 @@ resources:
         <span class="text-grey small">(Continued)</span>
       </p>
     </div>
+    {% include fields.html fields=all_fields %}
     {% include challenge.html %}
   </div>
 </div>
