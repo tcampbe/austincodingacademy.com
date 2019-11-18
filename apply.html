@@ -155,12 +155,9 @@ form_fields:
           </button>
         </div>
       </div>
-      <amp-recaptcha-input
-        layout="nodisplay"
-        name="recaptcha-apply"
-        data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
-        data-action="homepage">
-      </amp-recaptcha-input>
+      <div class="col-12">
+        {% include data-agreement.html %}
+      </div>
     </form>
     <div class="text-center">
       <div submit-error>

@@ -52,7 +52,7 @@
         {% include fields.html fields=all_fields %}
         <input name="lifecyclestage" type="hidden" value="lead">
         <input name="hs_lead_status" type="hidden" value="NEW">
-        <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+        <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
         <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
         <input name="hutk" type="hidden" value="">
         <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/">
@@ -197,12 +197,6 @@
           </template>
         </div>
       </div>
-      <amp-recaptcha-input
-        layout="nodisplay"
-        name="recaptcha_response"
-        data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
-        data-action="homepage">
-      </amp-recaptcha-input>
     </form>
 
     {% if page.contact_lightbox %}

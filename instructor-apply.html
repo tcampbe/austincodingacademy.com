@@ -36,7 +36,7 @@ redirect_from: []
     >
       <input name="lifecyclestage" type="hidden" value="opportunity">
       <input name="hutk" type="hidden" value="">
-      <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+      <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
       <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
       <!-- htmllint preset="none" -->
       <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/”>

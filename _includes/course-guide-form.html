@@ -87,7 +87,7 @@
             <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
             <input name="downloaded_a_courses_guide" type="hidden" value="true">
             <input name="hs_lead_status" type="hidden" value="NEW">
-            <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+            <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
             <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
             <input name="hutk" type="hidden" value="">
             {% if include.course_guide %}
@@ -275,11 +275,9 @@
               </div>
               <!-- End Input -->
 
-              {% if page.categories contains 'landing' %}
-                <div class="col-12">
-                  {% include data-agreement.html %}
-                </div>
-              {% endif %}
+              <div class="col-12">
+                {% include data-agreement.html %}
+              </div>
             </div>
             <div class="text-center">
               <div submit-error>
@@ -289,12 +287,6 @@
               </div>
             </div>
           </div>
-          <amp-recaptcha-input
-            layout="nodisplay"
-            name="recaptcha_response"
-            data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
-            data-action="homepage">
-          </amp-recaptcha-input>
         </form>
         <!-- End Form -->
       </div>
