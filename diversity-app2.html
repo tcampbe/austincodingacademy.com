@@ -54,7 +54,7 @@ form_fields:
 - name:
   label: What makes you the best candidate for the ACA Diversity Scholarship and how have you shown your commitment to underrepresented groups in tech? (Answer in 200-400 words)*
   description: ''
-  type: text
+  type: textarea
   value: ''
   placeholder: City
   required: true
@@ -64,7 +64,7 @@ form_fields:
 - name:
   label: What is an obstacle that you've encountered in life and how have you overcome it? (Answer in 200-400 words)*
   description: ''
-  type: text
+  type: textarea
   value: ''
   placeholder:
   required: true
@@ -74,7 +74,7 @@ form_fields:
 - name:
   label: How do you intend to use your coding skills after you graduate? (Answer in less than 200 words)
   description: ''
-  type: text
+  type: textarea
   value: ''
   placeholder:
   required: true
@@ -85,7 +85,7 @@ form_fields:
 - name:
   label: Coding Assignment Answer
   description: ''
-  type: text
+  type: textarea
   value: ''
   placeholder:
   required: true
@@ -134,9 +134,14 @@ resources:
       </p>
     </div>
     <!-- FORM START -->
-    <form action="">
+    <form
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings. }}"
+      method="POST"
+      target="_top"
+      class="d-flex flex-column align-items-center"
+    >
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-12 col-sm-10 mb-6">
         <div class="js-form-message form-group">
           <label for="email" class="form-label">
             Email <span class="text-red-a">*</span>
@@ -157,7 +162,7 @@ resources:
       </div>
       <!-- End Input -->
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-12 col-sm-10 mb-6">
         <div class="js-form-message form-group">
           <label for="email" class="form-label">
             Check the boxes that apply to your ethnicity (check all that apply) (optional)
@@ -167,53 +172,53 @@ resources:
             type="checkbox"
             name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
             value="American Indian/Alaska Native"
-          > "American Indian/Alaska Native"<br>
+          > &nbsp;American Indian/Alaska Native<br>
           <input
             type="checkbox"
             name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
             value="Asian"
-          > "Asian"<br>
+          > &nbsp;Asian<br>
           <input
             type="checkbox"
             name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
             value="Black or African American"
-          > "Black or African American"<br>
+          > &nbsp;Black or African American<br>
           <input
             type="checkbox"
             name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
             value="Hispanic or Latinx"
-          > "Hispanic or Latinx"<br>
+          > &nbsp;Hispanic or Latinx<br>
           <input
             type="checkbox"
             name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
             value="Native Hawaiian or other Pacific Islander"
-          > "Native Hawaiian or other Pacific Islander"<br>
+          > &nbsp;Native Hawaiian or other Pacific Islander<br>
           <input
             type="checkbox"
             name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
             value="White"
-          > "White"<br>
+          > &nbsp;White<br>
           <input
             type="checkbox"
             name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
             value="Other"
-          > "Other"<br>
+          > &nbsp;Other<br>
           <input
             type="checkbox"
             name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
             value="Two or More"
-          > "Two or More"<br>
+          > &nbsp;Two or More<br>
           <input
             type="checkbox"
             name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
             value="Prefer not to say"
-          > "Prefer not to say"<br>
+          > &nbsp;Prefer not to say<br>
           <!-- END CHECKBOXES -->
         </div>
       </div>
       <!-- End Input -->
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-12 col-sm-10 mb-6">
         <div class="js-form-message form-group">
           <label for="email" class="form-label">
             Are you a veteran of the US Military?
@@ -236,7 +241,7 @@ resources:
       </div>
       <!-- End Input -->
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-12 col-sm-10 mb-6">
         <div class="js-form-message form-group">
           <label for="email" class="form-label">
             What is your current yearly income? <span class="text-red-a">*</span>
@@ -274,7 +279,7 @@ resources:
       </div>
       <!-- End Input -->
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-12 col-sm-10 mb-6">
         <div class="js-form-message form-group">
           <label for="email" class="form-label">
             How would you describe your current credit score?<span class="text-red-a">*</span>
@@ -294,7 +299,7 @@ resources:
       </div>
       <!-- End Input -->
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-12 col-sm-10 mb-6">
         <div class="js-form-message form-group">
           <label for="email" class="form-label">
             If you do not receive the Austin Coding Academy Diversity Scholarship, would you be interested in/able to take classes? (We do offer payment plan options)<span class="text-red-a">*</span>
@@ -314,13 +319,17 @@ resources:
       </div>
       <!-- End Input -->
       {% assign text_fields = page.form_fields %}
-      <div class="d-flex flex-column align-items-center">
+      <div class="row d-flex justify-content-center p-5">
         {% include fields.html fields=text_fields %}
-        {% include data-agreement.html %}
+        <div class="col-10 text-center">
+          {% include data-agreement.html %}
+        </div>
       </div>
     </form>
 
     <!-- FORM END -->
-    {% include challenge.html %}
+    <div class="col-10 mx-auto">
+      {% include challenge.html %}
+    </div>
   </div>
 </div>
