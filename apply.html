@@ -142,16 +142,17 @@ form_fields:
     >
       <div class="row p-5">
         {% assign all_fields = page.form_fields %}
-        {% include fields.html fields=all_fields redirect_url="https://acaappointment.as.me/schedule.php?appointmentType=3203565" %}
+        {% assign redirect_url = school.url | append: "/apply/2" %}
+        {% include fields.html fields=all_fields redirect_url=redirect_url %}
 
         <div class="col-12 mb-4 d-flex justify-content-center">
           <!-- htmllint preset="none" -->
-          <a class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" href="{{ page.next_page_href | liquify }}">
+          <button class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" type="submit">
           <!-- htmllint preset="$previous" -->
             <span class="hover-white text-white">
               Continue Application
             </span>
-          </a>
+          </button>
         </div>
       </div>
       <amp-recaptcha-input
@@ -168,7 +169,5 @@ form_fields:
         </template>
       </div>
     </div>
-  </div>
-  <div class="form">
   </div>
 </div>
