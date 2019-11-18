@@ -100,7 +100,34 @@ resources:
         <span class="text-grey small">(Continued)</span>
       </p>
     </div>
-    {% include fields.html fields=all_fields %}
+    <!-- FORM START -->
+    <form action="">
+      <!-- Input -->
+      <div class="col-sm-6 mb-6">
+        <div class="js-form-message form-group">
+          <label for="email" class="form-label">
+            Email <span class="text-red-a">*</span>
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            name="email"
+            placeholder="name@example.com"
+            aria-label="name@example.com"
+            required
+            data-msg="Please enter a valid email address."
+            data-error-class="u-has-error"
+            data-success-class="u-has-success"
+          />
+        </div>
+      </div>
+      <!-- End Input -->
+      {% include data-agreement.html %}
+    </form>
+
+    <!-- FORM END -->
     {% include challenge.html %}
   </div>
 </div>
