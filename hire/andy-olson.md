@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ graduation, lubbockcodingacademy] # don't touch
+categories: [ ] # don't touch
 
 fullname: Andy Olson
 jobtitle: Web Developer
