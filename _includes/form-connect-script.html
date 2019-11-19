@@ -17,6 +17,6 @@
     const search = window.location.search;
     const hashesObj = decodeURLParams(search);
     const email = hashesObj['email'];
-    document.querySelector("input[name='email']").value = email;
+    document.querySelector("input[name='email'][type='hidden']").value = email;
   }
 </script>
