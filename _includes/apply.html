@@ -11,28 +11,13 @@
         <div class="pb-4">
           <h3>Diversity Scholarship Timeline</h3>
         </div>
+        {% assign timeline = page.timeline%}
+        {% for item in timeline %}
         <div class="py-6 py-sm-0 d-flex flex-column justify-content-center">
-          <h4 class="border-bottom">Submit Your Application (Deadline: December 11th)</h4>
-          <p>The Diversity Scholarship application is 2 pages long and consists of a 
-            couple of short answer questions and a short “open-book” coding assignment. 
-            After you finish the application, you will be asked to schedule a phone 
-            interview with one of our admissions representatives.</p>
+          <h4 class="border-bottom">{{ item.title }}</h4>
+          <p>{{ item.text }}</p>
         </div>
-        <div class="py-6 py-sm-0 d-flex flex-column justify-content-center">
-          <h4 class="border-bottom">15-Minute Phone Interview (Deadline: December 12th)</h4>
-          <p>During your scheduled phone interview an Austin Coding Academy admissions 
-            representative will review your application, answer any questions you may 
-            have about the program or scholarship process, give you information about 
-            our program, and get to know your goals with learning to code.</p>
-        </div>
-        <div class="py-6 py-sm-0 d-flex flex-column justify-content-center">
-          <h4 class="border-bottom">In-Person Interview with Finalists (December 17th)</h4>
-          <p>3 Finalists for the Diversity Scholarship will be announced on Friday, 
-            December 13th. Finalists will be required to be available to attend an 
-            in-person interview on the evening on Tuesday, December 17th. An independent 
-            panel will select the finalist who will receive the Diversity Scholarship, to be 
-            applied to Austin Coding Academy’s Full Stack Web Development Program.</p>
-        </div>
+        {% endfor %}
       </div>
       
       {% else %}
