@@ -2,7 +2,6 @@
 layout: default
 permalink: "/apply/"
 redirect_from:
-next_page_href: "/apply/2"
 head_title: "Start Your Application | Apply Now at {{ school.name }}"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 process:
@@ -66,20 +65,6 @@ form_fields:
   small_width: 12
   medium_width: 6
   options: []
-- name: curriculum_track
-  label: To which program are you applying?
-  description: ''
-  type: select
-  value: ''
-  options:
-  - value: Full Stack JavaScript Track
-    label: Full-Stack Web Development Track
-  - value: WordPress Fundamentals
-    label: WordPress Fundamentals
-  placeholder: Select your answer
-  required: true
-  small_width: 12
-  medium_width: 12
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -136,15 +121,36 @@ form_fields:
       {% endfor %}
     </div>
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.wordpress_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.preapplication_form_guid }}"
       method="POST"
       target="_top"
     >
       <div class="row p-5">
         {% assign all_fields = page.form_fields %}
-        {% assign redirect_url = school.url | append: "/apply/2" %}
+        {% assign redirect_url = school.url | append: "/apply-two" %}
         {% include fields.html fields=all_fields redirect_url=redirect_url %}
-
+        {% if school.tracks.size > 1 %}
+          <div class="mb-6 col-12">
+            <div class="form-group">
+              <label for="curriculum_track" class="form-label">
+                To which program are you applying?
+                <span class="text-red-a">*</span>
+              </label>
+              <select id="curriculum_track" name="curriculum_track" class="form-control" required>
+                <option value="" disabled selected>
+                  Select your answer
+                </option>
+                {% for track in school.tracks %}
+                  <option value="{{ track }}">
+                    {{ track }}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        {% else %}
+          <input type="hidden" value="{{ school.tracks[0] }}" />
+        {% endif %}
         <div class="col-12 mb-4 d-flex justify-content-center">
           <!-- htmllint preset="none" -->
           <button class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" type="submit">
