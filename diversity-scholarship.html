@@ -59,7 +59,7 @@ eligibility:
     - bullet: Complete a 15-minute phone interview with an Austin Coding Academy admissions representative by Thursday, December 12th
     - bullet: Be available to interview with the independent Diversity Scholarship Committee on Tuesday, Dec. 17, 2019
     - bullet: "Be prepared to enroll in Austin Coding Academy’s Full Stack Web Development Program, beginning:"
-      bullets:
+      sub_bullets:
       - bullet: January 14th @ Austin Coding Academy - Capital Factory
       - bullet: January 27th @ Austin Coding Academy - Highland
     - bullet: January 27th @ Austin Coding Academy - Highland
@@ -170,10 +170,10 @@ scholarship:
       {% if item.odd %}
         <div class="d-flex flex-wrap-reverse">
           <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
-            <h3>
+            <h3 class="text-center text-sm-right">
               {{ item.title | liquify }}
             </h3>
-            <p>
+            <p class="text-center text-sm-right">
               {{ item.text | liquify }}
             </p>
           </div>
@@ -201,10 +201,10 @@ scholarship:
             </amp-img>
           </div>
           <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
-            <h3>
+            <h3 class="text-center text-sm-left">
               {{ item.title | liquify }}
             </h3>
-            <p>
+            <p class="text-center text-sm-left">
               {{ item.text | liquify }}
             </p>
           </div>
@@ -258,7 +258,7 @@ scholarship:
     </div>
     {% assign sections = process.sections %}
     {% for item in sections %}
-      <div class="py-5">
+      <div class="py-5 text-center">
         <div class="display-7 font-family-alt mb-5">
           {{ item.subheading | liquify }}
         </div>
@@ -299,11 +299,11 @@ scholarship:
       </div>
       <ul class="fa-ul mb-2">
         {% for bullet in section.bullets %}
-          {% if bullet.bullets %}
+          {% if bullet.sub_bullets %}
             <li class="mb-1">
               <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
-              {% for bullet in bullet.bullets %}
-                <li class="ml-4">
+              {% for bullet in bullet.sub_bullets %}
+                <li class="ml-4 mb-2">
                   <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
                 </li>
               {% endfor %}
