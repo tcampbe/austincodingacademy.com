@@ -82,16 +82,16 @@ form_fields:
   medium_width: 10
   options: []
 # coding assignment
-- name:
-  label: Coding Assignment Answer
-  description: ''
-  type: textarea
-  value: ''
-  placeholder:
-  required: true
-  small_width: 12
-  medium_width: 10
-  options: []
+#- name:
+#  label: Coding Assignment Answer
+#  description: ''
+#  type: textarea
+#  value: ''
+#  placeholder:
+#  required: true
+#  small_width: 12
+#  medium_width: 10
+#  options: []
 
 challenge_descript1: "Take a look at the picture below showing HTML, CSS, and JavaScript.  In the space provided,
   please describe in 1-2 paragraphs what the code displayed in the picture is creating."
@@ -323,15 +323,39 @@ resources:
       {% assign text_fields = page.form_fields %}
       <div class="row d-flex justify-content-center p-5">
         {% include fields.html fields=text_fields %}
-        <div class="col-10 text-center">
+      </div>
+      <!-- CODING CHALLENGE -->
+      <div class="col-10">
+        {% include challenge.html %}
+        <label for="code-challenge" class="form-label flex-wrap">
+          Describe in 1-2 paragraphs what the code above is creating. <span class="text-red-a">*</span>
+        </label>
+        <div class="input-group">
+          <textarea
+            id="code-challenge"
+            class="form-control"
+            rows="10"
+            name="coding_assignment_answer"
+            placeholder="1-2 paragraphs"
+            aria-label="Coding Challenge Question"
+            required
+            data-msg="Please enter a response."
+            data-error-class="u-has-error"
+            data-success-class="u-has-success"
+          ></textarea>
+        </div>
+      </div>
+      <div class="col-10 my-4 d-flex flex-column align-items-center">
+        <button class="btn btn-round text-white bg-primary-dark mb-4" type="Submit">
+          Submit
+        </button>
+        <div class="col-12 d-flex flex-column align-items-center">
           {% include data-agreement.html %}
         </div>
       </div>
+      <!-- END CODING CHALLENGE -->
     </form>
 
     <!-- FORM END -->
-    <div class="col-10 mx-auto">
-      {% include challenge.html %}
-    </div>
   </div>
 </div>

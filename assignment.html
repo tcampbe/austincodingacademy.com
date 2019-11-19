@@ -171,6 +171,20 @@ resources:
             </div>
             <!-- End Input -->
             {% include challenge.html %}
+            <div class="input-group">
+              <textarea
+                id="code-challenge"
+                class="form-control"
+                rows="10"
+                name="coding_assignment_answer"
+                placeholder="1-2 paragraphs"
+                aria-label="Coding Challenge Question"
+                required
+                data-msg="Please enter a response."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              ></textarea>
+            </div>
 
             {% if page.categories contains 'landing' %}
               <div class="col-12">
