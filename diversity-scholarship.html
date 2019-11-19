@@ -169,10 +169,10 @@ scholarship:
       {% if item.odd %}
         <div class="d-flex flex-wrap-reverse">
           <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
-            <h3>
+            <h3 class="text-center text-sm-right">
               {{ item.title | liquify }}
             </h3>
-            <p>
+            <p class="text-center text-sm-right">
               {{ item.text | liquify }}
             </p>
           </div>
@@ -200,10 +200,10 @@ scholarship:
             </amp-img>
           </div>
           <div class="w-100 w-sm-50 px-6 py-6 py-sm-0 d-flex flex-column justify-content-center">
-            <h3>
+            <h3 class="text-center text-sm-left">
               {{ item.title | liquify }}
             </h3>
-            <p>
+            <p class="text-center text-sm-left">
               {{ item.text | liquify }}
             </p>
           </div>
@@ -257,7 +257,7 @@ scholarship:
     </div>
     {% assign sections = process.sections %}
     {% for item in sections %}
-      <div class="py-5">
+      <div class="py-5 text-center">
         <div class="display-7 font-family-alt mb-5">
           {{ item.subheading | liquify }}
         </div>
