@@ -141,180 +141,182 @@ resources:
       class="d-flex flex-column align-items-center"
     >
       <!-- Input -->
-      <div class="col-12 col-sm-10 mb-6">
-        <div class="js-form-message form-group">
-          <label for="email" class="form-label">
-            Email <span class="text-red-a">*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            class="form-control"
-            name="email"
-            placeholder="name@example.com"
-            aria-label="name@example.com"
-            required
-            data-msg="Please enter a valid email address."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
+      <div class="col-12 d-flex flex-column align-items-center">
+        <div class="col-12 col-sm-10 mb-6">
+          <div class="js-form-message form-group">
+            <label for="email" class="form-label">
+              Email <span class="text-red-a">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              name="email"
+              placeholder="name@example.com"
+              aria-label="name@example.com"
+              required
+              data-msg="Please enter a valid email address."
+              data-error-class="u-has-error"
+              data-success-class="u-has-success"
+            />
+          </div>
         </div>
-      </div>
-      <!-- End Input -->
-      <!-- Input -->
-      <div class="col-12 col-sm-10 mb-6">
-        <div class="js-form-message form-group">
-          <label for="email" class="form-label">
-            Check the boxes that apply to your ethnicity (check all that apply) (optional)
-          </label>
-          <!-- CHECKBOXES -->
-          <input
-            type="checkbox"
-            name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-            value="American Indian/Alaska Native"
-          > &nbsp;American Indian/Alaska Native<br>
-          <input
-            type="checkbox"
-            name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-            value="Asian"
-          > &nbsp;Asian<br>
-          <input
-            type="checkbox"
-            name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-            value="Black or African American"
-          > &nbsp;Black or African American<br>
-          <input
-            type="checkbox"
-            name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-            value="Hispanic or Latinx"
-          > &nbsp;Hispanic or Latinx<br>
-          <input
-            type="checkbox"
-            name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-            value="Native Hawaiian or other Pacific Islander"
-          > &nbsp;Native Hawaiian or other Pacific Islander<br>
-          <input
-            type="checkbox"
-            name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-            value="White"
-          > &nbsp;White<br>
-          <input
-            type="checkbox"
-            name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-            value="Other"
-          > &nbsp;Other<br>
-          <input
-            type="checkbox"
-            name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-            value="Two or More"
-          > &nbsp;Two or More<br>
-          <input
-            type="checkbox"
-            name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-            value="Prefer not to say"
-          > &nbsp;Prefer not to say<br>
-          <!-- END CHECKBOXES -->
+        <!-- End Input -->
+        <!-- Input -->
+        <div class="col-12 col-sm-10 mb-6">
+          <div class="js-form-message form-group">
+            <label for="email" class="form-label">
+              Check the boxes that apply to your ethnicity (check all that apply) (optional)
+            </label>
+            <!-- CHECKBOXES -->
+            <input
+              type="checkbox"
+              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
+              value="American Indian/Alaska Native"
+            > &nbsp;American Indian/Alaska Native<br>
+            <input
+              type="checkbox"
+              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
+              value="Asian"
+            > &nbsp;Asian<br>
+            <input
+              type="checkbox"
+              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
+              value="Black or African American"
+            > &nbsp;Black or African American<br>
+            <input
+              type="checkbox"
+              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
+              value="Hispanic or Latinx"
+            > &nbsp;Hispanic or Latinx<br>
+            <input
+              type="checkbox"
+              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
+              value="Native Hawaiian or other Pacific Islander"
+            > &nbsp;Native Hawaiian or other Pacific Islander<br>
+            <input
+              type="checkbox"
+              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
+              value="White"
+            > &nbsp;White<br>
+            <input
+              type="checkbox"
+              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
+              value="Other"
+            > &nbsp;Other<br>
+            <input
+              type="checkbox"
+              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
+              value="Two or More"
+            > &nbsp;Two or More<br>
+            <input
+              type="checkbox"
+              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
+              value="Prefer not to say"
+            > &nbsp;Prefer not to say<br>
+            <!-- END CHECKBOXES -->
+          </div>
         </div>
-      </div>
-      <!-- End Input -->
-      <!-- Input -->
-      <div class="col-12 col-sm-10 mb-6">
-        <div class="js-form-message form-group">
-          <label for="email" class="form-label">
-            Are you a veteran of the US Military?
-          </label>
-          <select name="are_you_a_veteran_of_the_us_military_" class="form-control">
-            <option value="" disabled selected>
-              Please Select
-            </option>
-            <option value="Yes">
-              Yes
-            </option>
-            <option value="No">
-              No.
-            </option>
-            <option value="Prefer not to say">
-              Prefer not to say
-            </option>
-          </select>
+        <!-- End Input -->
+        <!-- Input -->
+        <div class="col-12 col-sm-10 mb-6">
+          <div class="js-form-message form-group">
+            <label for="email" class="form-label">
+              Are you a veteran of the US Military?
+            </label>
+            <select name="are_you_a_veteran_of_the_us_military_" class="form-control">
+              <option value="" disabled selected>
+                Please Select
+              </option>
+              <option value="Yes">
+                Yes
+              </option>
+              <option value="No">
+                No.
+              </option>
+              <option value="Prefer not to say">
+                Prefer not to say
+              </option>
+            </select>
+          </div>
         </div>
-      </div>
-      <!-- End Input -->
-      <!-- Input -->
-      <div class="col-12 col-sm-10 mb-6">
-        <div class="js-form-message form-group">
-          <label for="email" class="form-label">
-            What is your current yearly income? <span class="text-red-a">*</span>
-          </label>
-          <select name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_" class="form-control">
-            <option value="" disabled selected>
-              Please Select
-            </option>
-            <option value="Unemployed">
-              Unemployed
-            </option>
-            <option value="$0 – $15,000">
-              $0 – $15,000
-            </option>
-            <option value="$15,000 – $25,000">
-              $15,000 – $25,000
-            </option>
-            <option value="$25,000 – $35,000">
-              $25,000 – $35,000
-            </option>
-            <option value="$35,000 – $45,000">
-              $35,000 – $45,000
-            </option>
-            <option value="$45,000 – $60,000">
-              $45,000 – $60,000
-            </option>
-            <option value="$60,000 – $90,000">
-              $60,000 – $90,000
-            </option>
-            <option value="> $90,000">
-              > $90,000
-            </option>
-          </select>
+        <!-- End Input -->
+        <!-- Input -->
+        <div class="col-12 col-sm-10 mb-6">
+          <div class="js-form-message form-group">
+            <label for="email" class="form-label">
+              What is your current yearly income? <span class="text-red-a">*</span>
+            </label>
+            <select name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_" class="form-control">
+              <option value="" disabled selected>
+                Please Select
+              </option>
+              <option value="Unemployed">
+                Unemployed
+              </option>
+              <option value="$0 – $15,000">
+                $0 – $15,000
+              </option>
+              <option value="$15,000 – $25,000">
+                $15,000 – $25,000
+              </option>
+              <option value="$25,000 – $35,000">
+                $25,000 – $35,000
+              </option>
+              <option value="$35,000 – $45,000">
+                $35,000 – $45,000
+              </option>
+              <option value="$45,000 – $60,000">
+                $45,000 – $60,000
+              </option>
+              <option value="$60,000 – $90,000">
+                $60,000 – $90,000
+              </option>
+              <option value="> $90,000">
+                > $90,000
+              </option>
+            </select>
+          </div>
         </div>
-      </div>
-      <!-- End Input -->
-      <!-- Input -->
-      <div class="col-12 col-sm-10 mb-6">
-        <div class="js-form-message form-group">
-          <label for="email" class="form-label">
-            How would you describe your current credit score?<span class="text-red-a">*</span>
-          </label>
-          <select name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
-            <option value="" disabled selected>
-              Please Select
-            </option>
-            <option value="Yes">
-              Yes
-            </option>
-            <option value="No">
-              No.
-            </option>
-          </select>
+        <!-- End Input -->
+        <!-- Input -->
+        <div class="col-12 col-sm-10 mb-6">
+          <div class="js-form-message form-group">
+            <label for="email" class="form-label">
+              How would you describe your current credit score?<span class="text-red-a">*</span>
+            </label>
+            <select name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
+              <option value="" disabled selected>
+                Please Select
+              </option>
+              <option value="Yes">
+                Yes
+              </option>
+              <option value="No">
+                No.
+              </option>
+            </select>
+          </div>
         </div>
-      </div>
-      <!-- End Input -->
-      <!-- Input -->
-      <div class="col-12 col-sm-10 mb-6">
-        <div class="js-form-message form-group">
-          <label for="email" class="form-label">
-            If you do not receive the Austin Coding Academy Diversity Scholarship, would you be interested in/able to take classes? (We do offer payment plan options)<span class="text-red-a">*</span>
-          </label>
-          <select id="coding-experience" name="a_full_track_at_aca_costs_12_000_if_you_do_not_receive_the_aca_diversity_scholarship_would_you_stil" class="form-control">
-            <option disabled selected>
-              Please Select
-            </option>
-            <option value="Yes">
-              Yes
-            </option>
-            <option value="No">
-              No.
-            </option>
-          </select>
+        <!-- End Input -->
+        <!-- Input -->
+        <div class="col-12 col-sm-10 mb-6">
+          <div class="js-form-message form-group">
+            <label for="email" class="form-label">
+              If you did not receive the Austin Coding Academy Diversity Scholarship, would you be interested in/able to take classes? (We do offer payment plan options)<span class="text-red-a">*</span>
+            </label>
+            <select id="coding-experience" name="a_full_track_at_aca_costs_12_000_if_you_do_not_receive_the_aca_diversity_scholarship_would_you_stil" class="form-control">
+              <option disabled selected>
+                Please Select
+              </option>
+              <option value="Yes">
+                Yes
+              </option>
+              <option value="No">
+                No.
+              </option>
+            </select>
+          </div>
         </div>
       </div>
       <!-- End Input -->
