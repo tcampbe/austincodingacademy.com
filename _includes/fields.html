@@ -1,6 +1,8 @@
-<input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+<input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
 <input name="page_uri" type="hidden" value="{{ school.url | liquify }}{{ site.baseurl | liquify }}{{ page.permalink }}">
+<input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 <input name="hutk" type="hidden" value="">
+<input name="redirect_url" type="hidden" value="{{ include.redirect_url }}">
 <!-- htmllint preset="none" -->
 {% for field in include.fields %}
   {% if field.type == "hidden" %}
@@ -13,7 +15,7 @@
           <span class="text-red-a">*</span>
         </label>
         <small>{{ field.description | liquify }}</small>
-        <select id="{{ field.name | liquify }}" name="{{ field.name | liquify }}" class="form-control">
+        <select id="{{ field.name | liquify }}" name="{{ field.name | liquify }}" class="form-control" {% if field.required %}required{% endif %}>
           <option value="" disabled selected>
             {{ field.placeholder | liquify }}
           </option>

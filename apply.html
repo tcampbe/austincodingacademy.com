@@ -2,7 +2,6 @@
 layout: default
 permalink: "/apply/"
 redirect_from:
-next_page_href: "/apply/2"
 head_title: "Start Your Application | Apply Now at {{ school.name }}"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 process:
@@ -66,20 +65,6 @@ form_fields:
   small_width: 12
   medium_width: 6
   options: []
-- name: curriculum_track
-  label: To which program are you applying?
-  description: ''
-  type: select
-  value: ''
-  options:
-  - value: Full Stack JavaScript Track
-    label: Full-Stack Web Development Track
-  - value: WordPress Fundamentals
-    label: WordPress Fundamentals
-  placeholder: Select your answer
-  required: true
-  small_width: 12
-  medium_width: 12
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}

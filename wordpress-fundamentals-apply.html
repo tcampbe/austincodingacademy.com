@@ -78,9 +78,11 @@ process:
       <div class="form-container">
         <input name="lifecyclestage" type="hidden" value="opportunity">
         <input name="filled_out_application" type="hidden" value="true">
-        <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+        <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
         <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.permalink | liquify }}">
         <input name="hutk" type="hidden" value="">
+        <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
+
         <h2 class="display-6 mb-4">
           About You
         </h2>

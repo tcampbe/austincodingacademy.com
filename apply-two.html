@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: "/apply/2"
+permalink: "/apply-two/"
 redirect_from:
 - "/application"
 head_title: Start Your Application | Apply Now at {{ school.name }}
@@ -366,13 +366,13 @@ schools:
       Start by telling us a little bit about yourself
     </h5>
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.wordpress_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.application_form_guid }}"
       method="POST"
       target="_top"
     >
       <div class="row p-5">
         {% assign about_fields = page.form_fields %}
-        {% include fields.html fields=about_fields %}
+        {% include fields.html fields=about_fields redirect_url="https://acaappointment.as.me/schedule.php?appointmentType=3203565" %}
 
         <div class="col-12 my-5">
           <h2 class="text-center font-weight-bold mb-5">
@@ -391,6 +391,9 @@ schools:
         <div class="col-12 d-flex justify-content-center">
           {% include data-agreement.html %}
         </div>
+      </div>
+      <div class="col-12">
+        {% include data-agreement.html %}
       </div>
     </form>
   </div>

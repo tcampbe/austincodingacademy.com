@@ -32,7 +32,7 @@ layout: default
     ></amp-img>
     <div class="w-lg-80 mx-auto space-top-1">
       <h1 class="font-weight-bold">
-        {{ page.title | liquify }}
+        {{ page.head_title | liquify }}
       </h1>
       <div class="row my-4">
         <div class="col col-md-8 pt-md-2">
@@ -73,7 +73,7 @@ layout: default
               <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
-                  href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&quote={{ page.title | replace: ' ', '%20' | liquify }}"
+                  href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&quote={{ page.head_title | replace: ' ', '%20' | liquify }}"
                   title="Share on Facebook"
                   target="_blank">
                   <amp-img
@@ -89,7 +89,7 @@ layout: default
               <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
-                  href="https://twitter.com/intent/tweet?source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&text={{ page.title | replace: ' ', '%20' | liquify }}:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
+                  href="https://twitter.com/intent/tweet?source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&text={{ page.head_title | replace: ' ', '%20' | liquify }}:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
                   target="_blank"
                   title="Tweet">
                   <amp-img
@@ -105,7 +105,7 @@ layout: default
               <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
-                  href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&title={{ page.title | replace: ' ', '%20' | liquify }}&summary=desc&source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
+                  href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&title={{ page.head_title | replace: ' ', '%20' | liquify }}&summary=desc&source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
                   target="_blank"
                   title="Share on LinkedIn">
                   <amp-img
@@ -121,7 +121,7 @@ layout: default
               <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
-                  href="mailto:?subject={{ page.title | replace: ' ', '%20' | liquify }}&body=desc:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
+                  href="mailto:?subject={{ page.head_title | replace: ' ', '%20' | liquify }}&body=desc:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
                   target="_blank"
                   title="Send email">
                   <amp-img
@@ -167,7 +167,7 @@ layout: default
         "@type": "WebPage",
         "@id": "{{ school.url }}{{ site.baseurl }}{{ page.url }}"
       },
-      "headline": "{{ page.title | liquify }}",
+      "headline": "{{ page.head_title | liquify }}",
       "image": [
         "{{ school.url }}{{ page.img | liquify }}"
         ],

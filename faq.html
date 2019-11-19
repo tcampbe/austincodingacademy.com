@@ -1,10 +1,9 @@
-<!-- htmllint preset="none" -->
 ---
 layout: default
 permalink: "/faq/"
 head_title: Frequently Asked Questions | {{ school.name }} FAQ
-description: 'Answers to frequently asked questions: Have a question about {{ school.name
-  }}? Find help and useful links in our FAQ section.'
+description: 'Answers to frequently asked questions: Have a question about
+  {{ school.name }}? Find help and useful links in our FAQ section.'
 redirect_from: []
 schools:
 - key: austincodingacademy
@@ -300,12 +299,11 @@ schools:
         recorded, and students are expected to watch class recordings and makeup missing
         work.
 ---
-<!-- htmllint preset="$previous" -->
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key ==  site.key%}
+      {% if _school.key == site.key %}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}
