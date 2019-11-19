@@ -278,52 +278,54 @@ scholarship:
   </section>
   <!-- Eligibility -->
   <!-- htmllint preset="none" -->
-  <section class="container py-8">
-    {% assign eligibility = page.eligibility %}
-    <div class="display-5 font-family-alt text-center">
-      {{ eligibility.heading | liquify }}
-    </div>
-    {% assign sections = eligibility.sections %}
-    {% for section in sections %}
-      <div class="py-8 text-center px-8">
-        {{ section.descript | liquify }}
+  <div class="bg-textured">
+    <section class="container text-white py-8">
+      {% assign eligibility = page.eligibility %}
+      <div class="display-5 font-family-alt text-center">
+        {{ eligibility.heading | liquify }}
       </div>
-      <ul class="fa-ul mb-2">
-        {% for bullet in section.bullets %}
-          {% if bullet.sub_bullets %}
-            <li class="mb-1">
-              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
-              {% for bullet in bullet.sub_bullets %}
-                <li class="ml-4 mb-2">
-                  <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
-                </li>
-              {% endfor %}
-            </li>
-          {% else %}
-            <li class="mb-1">
-              <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    {% endfor %}
-  </section>
-  <!-- htmllint preset="$previous" -->
-  <div class="text-center">
-    {% include btn-apply.html href="/diversity-scholarship/apply" %}
-  </div>
+      {% assign sections = eligibility.sections %}
+      {% for section in sections %}
+        <div class="py-8 text-center px-8">
+          {{ section.descript | liquify }}
+        </div>
+        <ul class="fa-ul mb-2">
+          {% for bullet in section.bullets %}
+            {% if bullet.sub_bullets %}
+              <li class="mb-1">
+                <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
+                {% for bullet in bullet.sub_bullets %}
+                  <li class="ml-4 mb-2">
+                    <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
+                  </li>
+                {% endfor %}
+              </li>
+            {% else %}
+              <li class="mb-1">
+                <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet.bullet | liquify }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </section>
+    <!-- htmllint preset="$previous" -->
+    <div class="text-center">
+      {% include btn-apply.html href="/diversity-scholarship/apply" %}
+    </div>
 
-  <section class="container col-xs-11 col-sm-11 mx-auto pt-3 pb-5 border-bottom">
-    <h2 class="display-5 font-family-alt py-6 text-center">
-      Disclaimer
-    </h2>
-    <p class="text-center mx-4">
-      Austin Coding Academy is proud to be an equal opportunity educational
-      institution. We are committed to equal opportunity regardless of race,
-      color, ancestry, religion, sex, national origin, sexual orientation, age,
-      citizenship, marital status, disability, gender identity or Veteran status.
-    </p>
-  </section>
+    <section class="container mx-auto pt-3 pb-5 border-bottom">
+      <h2 class="display-5 font-family-alt py-6 text-center text-white">
+        Disclaimer
+      </h2>
+      <p class="text-white text-center mx-4">
+        Austin Coding Academy is proud to be an equal opportunity educational
+        institution. We are committed to equal opportunity regardless of race,
+        color, ancestry, religion, sex, national origin, sexual orientation, age,
+        citizenship, marital status, disability, gender identity or Veteran status.
+      </p>
+    </section>
+  </div>
 
   <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5">
     <div class="container mw-600">
