@@ -19,7 +19,7 @@
         </div>
         {% endfor %}
       </div>
-      
+
       {% else %}
       <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
         Start Your Application
@@ -61,25 +61,25 @@
       method="POST"
       target="_top"
     >
-      <div class="row p-5">
-        {% assign all_fields = page.form_fields %}
-        {% include fields.html fields=all_fields %}
+      <div class="col-12 col-sm-10 mx-auto">
+        <div class="row d-flex justify-content-center p-5">
+          {% assign all_fields = page.form_fields %}
+          {% include fields.html fields=all_fields %}
 
-        <div class="col-12 mb-4 d-flex flex-column align-items-center">
-          <!-- htmllint preset="none" -->
-          <a class="mb-4 btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" href="{{ page.next_page_href | liquify }}">
-          <!-- htmllint preset="$previous" -->
-            <span class="hover-white text-white">
-              Continue Application
-            </span>
-          </a>
-          <div class="col-12 d-flex flex-column align-items-center">
-            {% include data-agreement.html %}
+          <div class="mb-4 d-flex flex-column align-items-center">
+            <!-- htmllint preset="none" -->
+            <a class="mb-4 btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" href="{{ page.next_page_href | liquify }}">
+            <!-- htmllint preset="$previous" -->
+              <span class="hover-white text-white">
+                Continue Application
+              </span>
+            </a>
+            <div class="d-flex flex-column align-items-center">
+              {% include data-agreement.html %}
+            </div>
           </div>
         </div>
       </div>
     </form>
-  </div>
-  <div class="form">
   </div>
 </div>
