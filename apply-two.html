@@ -388,34 +388,12 @@ schools:
             Submit
           </button>
         </div>
-      </div>
-      <div class="col-12">
-        {% include data-agreement.html %}
+        <div class="col-12 d-flex flex-column align-items-center">
+          {% include data-agreement.html %}
+        </div>
       </div>
     </form>
   </div>
 </div>
 
-<script>
-  const decodeURLParams = search => {
-    const hashes = search.slice(search.indexOf("?") + 1).split("&");
-    return hashes.reduce((params, hash) => {
-      const split = hash.indexOf("=");
-      if (split < 0) {
-        return Object.assign(params, {
-          [hash]: null
-        });
-      };
-      const key = hash.slice(0, split);
-      const val = hash.slice(split + 1);
-      return Object.assign(params, { [key]: decodeURIComponent(val) });
-    }, {});
-  };
-
-  window.onload = function() {
-    const search = window.location.search;
-    const hashesObj = decodeURLParams(search);
-    const email = hashesObj['email'];
-    document.querySelector("input[name='email']").value = email;
-  }
-</script>
+{% include form-connect-script.html %}

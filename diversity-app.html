@@ -1,0 +1,122 @@
+---
+layout: default
+permalink: "/diversity-scholarship/apply/"
+redirect_from:
+next_page_href: "/diversity-scholarship/apply/2"
+head_title: "Diversity Scholarship Application"
+description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
+hide_apply: 'd-none'
+process:
+- heading: Apply
+  text: Get started by filling out our application and setting up a call with our admissions team.
+  img_src: '/assets/images/wp-apply.png'
+  time: (~ 5 Minutes)
+  img_width: 70
+  img_height: 70
+- heading: Assignment
+  text: After speaking with our admissions team, you’ll be asked to complete a brief assignment.
+  img_src: '/assets/images/wp-assignment.png'
+  time: (~ 1-2 Hours)
+  img_width: 70
+  img_height: 70
+- heading: Acceptance Decision
+  text: Once you’ve successfully completed your assignment, you’ll be able to begin class.
+  img_src: '/assets/images/wp-enroll.png'
+  time:
+  img_width: 70
+  img_height: 70
+
+form_fields:
+- name: firstname
+  label: First Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: First Name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: lastname
+  label: Last Name
+  description: ''
+  type: text
+  value: ''
+  placeholder: Last Name
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: phone
+  label: Phone
+  description: ''
+  type: tel
+  value: ''
+  placeholder: "(***)***-****"
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: email
+  label: Email
+  description: ''
+  type: email
+  value: ''
+  placeholder: name@example.com
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: curriculum_track
+  label: To which program are you applying?
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: Full Stack JavaScript Track
+    label: Full-Stack Web Development Track
+  - value: WordPress Fundamentals
+    label: WordPress Fundamentals
+  placeholder: Select your answer
+  required: true
+  small_width: 12
+  medium_width: 12
+timeline:
+- title: "Submit Your Application (Deadline: December 11th)"
+  text: The Diversity Scholarship application is 2 pages long and consists of a
+    couple of short answer questions and a short “open-book” coding assignment.
+    After you finish the application, you will be asked to schedule a phone
+    interview with one of our admissions representatives.
+- title: "15-Minute Phone Interview (Deadline: December 12th)"
+  text: During your scheduled phone interview an Austin Coding Academy admissions
+    representative will review your application, answer any questions you may
+    have about the program or scholarship process, give you information about
+    our program, and get to know your goals with learning to code.
+- title: "In-Person Interview with Finalists (December 17th)"
+  text: 3 Finalists for the Diversity Scholarship will be announced on Friday,
+    December 13th. Finalists will be required to be available to attend an
+    in-person interview on the evening on Tuesday, December 17th. An independent
+    panel will select the finalist who will receive the Diversity Scholarship, to be
+    applied to Austin Coding Academy’s Full Stack Web Development Program.
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% include apply.html diversity=true %}
+
+{% include form-connect-script.html %}
