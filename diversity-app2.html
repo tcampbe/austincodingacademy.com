@@ -27,33 +27,93 @@ process:
   img_height: 70
 
 form_fields:
-- name: email
-  label: Email
-  description: ''
-  type: email
-  value: ''
-  placeholder: name@example.com
-  required: true
-  small_width: 12
-  medium_width: 10
-  options: []
-# select field
-- name: curriculum_track
-  label: To which program are you applying?
+# select fields
+- name: check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_
+  label: Select the option that most accurately describes your Ethnicity
   description: ''
   type: select
   value: ''
   options:
-  - value: Full Stack JavaScript Track
-    label: Full-Stack Web Development Track
-  - value: WordPress Fundamentals
-    label: WordPress Fundamentals
+  - value: "American Indian/Alaska Native (American Indian/Alaska Native)"
+    label: "American Indian/Alaska Native (American Indian/Alaska Native)"
+  - value: "Asian (Asian)"
+    label: "Asian (Asian)"
+  - value: "Black or African American (Black or African American)"
+    label: "Black or African American (Black or African American)"
+  - value: "Hispanic or Latinx (Hispanic or Latinx)"
+    label: "Hispanic or Latinx (Hispanic or Latinx)"
+  - value: "Native Hawaiian or other Pacific Islander (Native Hawaiian or other Pacific Islander)"
+    label: "Native Hawaiian or other Pacific Islander (Native Hawaiian or other Pacific Islander)"
+  - value: "White (White)"
+    label: "White (White)"
+  - value: "Other (Other)"
+    label: "Other (Other)"
+  - value: "Two or More (Two or More)"
+    label: "Two or More (Two or More)"
+  - value: "Prefer not to say (Prefer not to say)"
+    label: "Prefer not to say (Prefer not to say)"
   placeholder: Select your answer
+  required: false
+  small_width: 12
+  medium_width: 10
+- name: are_you_a_veteran_of_the_us_military_
+  label: Are you a veteran of the US Military?
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: Yes
+    label: Yes
+  - value: No
+    label: No
+  - value: Prefer Not to Say
+    label: Prefer Not to Say
+  placeholder: Please Select
+  required: true
+  small_width: 12
+  medium_width: 10
+- name: check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_
+  label: What is your current yearly income?
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: "Unemployed (Unemployed)"
+    label: "Unemployed (Unemployed)"
+  - value: "$0 – $15,000 ($0 – $15,000)"
+    label: "$0 – $15,000 ($0 – $15,000)"
+  - value: "$15,000 – $25,000 ($15,000 – $25,000)"
+    label: "$15,000 – $25,000 ($15,000 – $25,000)"
+  - value: "$25,000 – $35,000 ($25,000 – $35,000)"
+    label: "$25,000 – $35,000 ($25,000 – $35,000)"
+  - value: "$35,000 – $45,000 ($35,000 – $45,000)"
+    label: "$35,000 – $45,000 ($35,000 – $45,000)"
+  - value: "$45,000 – $60,000 ($45,000 – $60,000)"
+    label: "$45,000 – $60,000 ($45,000 – $60,000)"
+  - value: "$60,000 – $90,000 ($60,000 – $90,000)"
+    label: "$60,000 – $90,000 ($60,000 – $90,000)"
+  - value: "> $90,000 (> $90,000)"
+    label: "> $90,000 (> $90,000)"
+  placeholder: Please Select
+  required: true
+  small_width: 12
+  medium_width: 10
+- name: a_full_track_at_aca_costs_12_000_if_you_do_not_receive_the_aca_diversity_scholarship_would_you_stil
+  label: If you did not receive the Austin Coding Academy Diversity Scholarship, would you be interested in/able to take classes? (We do offer payment plan options)
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: Yes
+    label: Yes
+  - value: No
+    label: No
+  placeholder: Please Select
   required: true
   small_width: 12
   medium_width: 10
 # text fields
-- name:
+- name: what_makes_you_the_best_candidate_for_the_aca_diversity_scholarship_answer_in_200_400_words_
   label: What makes you the best candidate for the ACA Diversity Scholarship and how have you shown your commitment to underrepresented groups in tech? (Answer in 200-400 words)*
   description: ''
   type: textarea
@@ -63,7 +123,7 @@ form_fields:
   small_width: 12
   medium_width: 10
   options: []
-- name:
+- name: what_is_an_obstacle_that_you_ve_encountered_in_life_and_how_have_you_overcome_it_answer_in_200_400_
   label: What is an obstacle that you've encountered in life and how have you overcome it? (Answer in 200-400 words)*
   description: ''
   type: textarea
@@ -73,7 +133,7 @@ form_fields:
   small_width: 12
   medium_width: 10
   options: []
-- name:
+- name: how_do_you_intend_to_use_your_coding_skills_after_you_graduate_answer_in_less_than_400_words_
   label: How do you intend to use your coding skills after you graduate? (Answer in less than 200 words)
   description: ''
   type: textarea
@@ -116,13 +176,10 @@ resources:
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
     <h2 class="font-family-alt my-5 my-sm-5 display-5 display-55 text-center col-12 col-sm-10">
-      APPLICATION PAGE 2
+      Diversity Scholarship Application
     </h2>
-    <div class="d-flex flex-column align-items-center">
-      <p class="display-6 text-center col-12">
-        Diversity Scholarship Appliction<br>
-        <span class="text-grey small">(Continued)</span>
-      </p>
+    <div class="d-flex flex-column align-items-center display-6 text-center col-12 mb-4">
+      <span class="text-grey">(Continued)</span>
     </div>
     <!-- FORM START -->
     <form
@@ -131,190 +188,9 @@ resources:
       target="_top"
       class="d-flex flex-column align-items-center"
     >
-      <input name="redirect_url" type="hidden" value="{{ page.redirect_url }}">
-      <!-- Input -->
-      <div class="col-12 d-flex flex-column align-items-center">
-        <div class="col-12 col-sm-10 mb-6">
-          <div class="js-form-message form-group">
-            <label for="email" class="form-label">
-              Email <span class="text-red-a">*</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              class="form-control"
-              name="email"
-              placeholder="name@example.com"
-              aria-label="name@example.com"
-              required
-              data-msg="Please enter a valid email address."
-              data-error-class="u-has-error"
-              data-success-class="u-has-success"
-            />
-          </div>
-        </div>
-        <!-- End Input -->
-        <!-- Input -->
-        <div class="col-12 col-sm-10 mb-6">
-          <div class="js-form-message form-group">
-            <label for="email" class="form-label">
-              Check the boxes that apply to your ethnicity (check all that apply) (optional)
-            </label>
-            <!-- CHECKBOXES -->
-            <input
-              type="checkbox"
-              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-              value="American Indian/Alaska Native"
-            > &nbsp;American Indian/Alaska Native<br>
-            <input
-              type="checkbox"
-              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-              value="Asian"
-            > &nbsp;Asian<br>
-            <input
-              type="checkbox"
-              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-              value="Black or African American"
-            > &nbsp;Black or African American<br>
-            <input
-              type="checkbox"
-              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-              value="Hispanic or Latinx"
-            > &nbsp;Hispanic or Latinx<br>
-            <input
-              type="checkbox"
-              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-              value="Native Hawaiian or other Pacific Islander"
-            > &nbsp;Native Hawaiian or other Pacific Islander<br>
-            <input
-              type="checkbox"
-              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-              value="White"
-            > &nbsp;White<br>
-            <input
-              type="checkbox"
-              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-              value="Other"
-            > &nbsp;Other<br>
-            <input
-              type="checkbox"
-              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-              value="Two or More"
-            > &nbsp;Two or More<br>
-            <input
-              type="checkbox"
-              name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_"
-              value="Prefer not to say"
-            > &nbsp;Prefer not to say<br>
-            <!-- END CHECKBOXES -->
-          </div>
-        </div>
-        <!-- End Input -->
-        <!-- Input -->
-        <div class="col-12 col-sm-10 mb-6">
-          <div class="js-form-message form-group">
-            <label for="email" class="form-label">
-              Are you a veteran of the US Military?
-            </label>
-            <select name="are_you_a_veteran_of_the_us_military_" class="form-control">
-              <option value="" disabled selected>
-                Please Select
-              </option>
-              <option value="Yes">
-                Yes
-              </option>
-              <option value="No">
-                No
-              </option>
-              <option value="Prefer not to say">
-                Prefer not to say
-              </option>
-            </select>
-          </div>
-        </div>
-        <!-- End Input -->
-        <!-- Input -->
-        <div class="col-12 col-sm-10 mb-6">
-          <div class="js-form-message form-group">
-            <label for="email" class="form-label">
-              What is your current yearly income? <span class="text-red-a">*</span>
-            </label>
-            <select name="check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_" class="form-control">
-              <option value="" disabled selected>
-                Please Select
-              </option>
-              <option value="Unemployed">
-                Unemployed
-              </option>
-              <option value="$0 – $15,000">
-                $0 – $15,000
-              </option>
-              <option value="$15,000 – $25,000">
-                $15,000 – $25,000
-              </option>
-              <option value="$25,000 – $35,000">
-                $25,000 – $35,000
-              </option>
-              <option value="$35,000 – $45,000">
-                $35,000 – $45,000
-              </option>
-              <option value="$45,000 – $60,000">
-                $45,000 – $60,000
-              </option>
-              <option value="$60,000 – $90,000">
-                $60,000 – $90,000
-              </option>
-              <option value="> $90,000">
-                > $90,000
-              </option>
-            </select>
-          </div>
-        </div>
-        <!-- End Input -->
-        <!-- Input -->
-        <div class="col-12 col-sm-10 mb-6">
-          <div class="js-form-message form-group">
-            <label for="email" class="form-label">
-              How would you describe your current credit score?<span class="text-red-a">*</span>
-            </label>
-            <select name="what_experience_if_any_do_you_have_in_coding_currently_" class="form-control">
-              <option value="" disabled selected>
-                Please Select
-              </option>
-              <option value="Yes">
-                Yes
-              </option>
-              <option value="No">
-                No.
-              </option>
-            </select>
-          </div>
-        </div>
-        <!-- End Input -->
-        <!-- Input -->
-        <div class="col-12 col-sm-10 mb-6">
-          <div class="js-form-message form-group">
-            <label for="email" class="form-label">
-              If you did not receive the Austin Coding Academy Diversity Scholarship, would you be interested in/able to take classes? (We do offer payment plan options)<span class="text-red-a">*</span>
-            </label>
-            <select id="coding-experience" name="a_full_track_at_aca_costs_12_000_if_you_do_not_receive_the_aca_diversity_scholarship_would_you_stil" class="form-control">
-              <option disabled selected>
-                Please Select
-              </option>
-              <option value="Yes">
-                Yes
-              </option>
-              <option value="No">
-                No.
-              </option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <!-- End Input -->
       {% assign text_fields = page.form_fields %}
       <div class="row d-flex justify-content-center p-5">
-        {% include fields.html fields=text_fields %}
+        {% include fields.html fields=text_fields redirect_url=page.redirect_url %}
       </div>
       <!-- CODING CHALLENGE -->
       <div class="col-10">

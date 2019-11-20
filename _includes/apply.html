@@ -2,15 +2,13 @@
   <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
     {% if include.diversity %}
       <h2 class="font-family-alt my-5 my-sm-5 display-5 display-55 text-center col-12 col-sm-10">
-        APPLICATION PAGE 1
+        Diversity Scholarship Application
       </h2>
-      <p class="display-6 text-center col-12">
-        Diversity Scholarship Appliction<br>
-      </p>
       <div class="px-6 py-4 col-12 col-sm-10 d-flex flex-column align-items-start">
-        <div class="pb-4">
-          <h3>Diversity Scholarship Timeline</h3>
-        </div>
+        <p class="text-center mx-auto">
+          Start your Diversity Scholarship Application by filling out our 2-page application form. To be considered
+          for the Austin Coding Academy Diversity Scholarship, please be aware of the following timeline:
+        </p>
         {% assign timeline = page.timeline%}
         {% for item in timeline %}
         <div class="py-6 py-sm-0 d-flex flex-column justify-content-center">
@@ -20,42 +18,43 @@
         {% endfor %}
       </div>
 
-      {% else %}
+    {% else %}
       <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
         Start Your Application
       </h2>
-    {% endif %}
-    <!-- Proccess Application -->
-    <p class="text-center col-12 col-sm-10">
-      Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will
-      be asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and
-      have at least a high school diploma or GED to enroll in one of our courses/programs.
-    </p>
-    <div class="d-sm-flex col-12 col-sm-10 mb-4 justify-content-between">
-      {% for process in page.process %}
-        <div class="col-12 col-sm-3 mx-auto">
-          <amp-img
-            width="{{ process.img_width }}"
-            height="{{ process.img_height }}"
-            layout="responsive"
-            class="w-75 w-sm-100 mx-auto h-auto mw-10r"
-            src="{{ process.img_src | liquify }}"
-            alt="{{ process.name | liquify }}"
-          ></amp-img>
-          <div>
-            <h3 class="text-center font-weight-bold mb-2">
-              {{ process.heading }}
-            </h3>
-            <p class="text-center mb-2">
-              <small>{{ process.time }}</small>
+      <!-- Proccess Application -->
+      <p class="text-center col-12 col-sm-10">
+        Our application is 2 pages long and will take 5 minutes to complete. Once you submit your application you will
+        be asked to schedule a phone call with an admissions advisor. All students must be at least 18 years of age and
+        have at least a high school diploma or GED to enroll in one of our courses/programs.
+      </p>
+      <div class="d-sm-flex col-12 col-sm-10 mb-4 justify-content-between">
+        {% for process in page.process %}
+          <div class="col-12 col-sm-3 mx-auto">
+            <amp-img
+              width="{{ process.img_width }}"
+              height="{{ process.img_height }}"
+              layout="responsive"
+              class="w-75 w-sm-100 mx-auto h-auto mw-10r"
+              src="{{ process.img_src | liquify }}"
+              alt="{{ process.name | liquify }}"
+            ></amp-img>
+            <div>
+              <h3 class="text-center font-weight-bold mb-2">
+                {{ process.heading }}
+              </h3>
+              <p class="text-center mb-2">
+                <small>{{ process.time }}</small>
+              </p>
+            </div>
+            <p class="text-center">
+              {{ process.text }}
             </p>
           </div>
-          <p class="text-center">
-            {{ process.text }}
-          </p>
-        </div>
-      {% endfor %}
-    </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
     <form
       action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.wordpress_form_guid }}"
       method="POST"
@@ -65,6 +64,17 @@
         <div class="row d-flex justify-content-center p-5">
           {% assign all_fields = page.form_fields %}
           {% include fields.html fields=all_fields %}
+
+          {% if include.diversity %}
+            <div class="col-12 my-5">
+              <h2 class="text-center font-weight-bold mb-5">
+                Education &amp; Work Experience
+              </h2>
+            </div>
+
+            {% assign edu_work_fields = page.edu_work_fields %}
+            {% include fields.html fields=edu_work_fields %}
+          {% endif %}
 
           <div class="mb-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
