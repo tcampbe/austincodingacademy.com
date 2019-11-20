@@ -2,7 +2,7 @@
 layout: default
 permalink: "/diversity-scholarship/apply-two"
 redirect_from:
-- "/diversity-scholarship/application/2"
+- "/diversity-scholarship/application-two"
 redirect_url: https://acaappointment.as.me/schedule.php?appointmentType=3203565
 head_title: "Diversity Scholarship Application Page 2"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
@@ -241,7 +241,8 @@ resources:
     >
       {% assign text_fields = page.form_fields %}
       <div class="row d-flex justify-content-center p-5">
-        {% include fields.html fields=text_fields redirect_url=page.redirect_url %}
+        {% assign redirect_url = page.redirect_url %}
+        {% include fields.html fields=text_fields redirect_url=redirect_url %}
       </div>
       <!-- CODING CHALLENGE -->
       <div class="col-12 col-sm-10">
