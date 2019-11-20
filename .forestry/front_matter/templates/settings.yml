@@ -207,3 +207,8 @@ fields:
   - type: file
     name: src
     label: src
+- name: diversity_scholarship_application_page_1
+  type: text
+  config:
+    required: false
+  label: Diversity Scholarship Application Page 1
