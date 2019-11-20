@@ -2,6 +2,7 @@
 layout: default
 permalink: "/diversity-scholarship/apply/2"
 redirect_from:
+- "/diversity-scholarship/application/2"
 redirect_url: https://acaappointment.as.me/schedule.php?appointmentType=3203565
 head_title: "Diversity Scholarship Application Page 2"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
@@ -203,7 +204,7 @@ resources:
         {% include fields.html fields=text_fields redirect_url=page.redirect_url %}
       </div>
       <!-- CODING CHALLENGE -->
-      <div class="col-10">
+      <div class="col-12 col-sm-10">
         {% include challenge.html %}
         <label for="code-challenge" class="form-label flex-wrap">
           Describe in 1-2 paragraphs what the code above is creating. <span class="text-red-a">*</span>
@@ -223,7 +224,7 @@ resources:
           ></textarea>
         </div>
       </div>
-      <div class="col-10 my-4 d-flex flex-column align-items-center">
+      <div class="col-12 col-sm-10 my-4 d-flex flex-column align-items-center">
         <button class="btn btn-round text-white bg-primary-dark mb-4" type="Submit">
           Submit
         </button>
