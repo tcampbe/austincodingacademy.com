@@ -72,6 +72,32 @@ form_fields:
   required: true
   small_width: 12
   medium_width: 10
+- name: check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_
+  label: What is your current yearly income?
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: "Unemployed (Unemployed)"
+    label: "Unemployed (Unemployed)"
+  - value: "$0 – $15,000 ($0 – $15,000)"
+    label: "$0 – $15,000 ($0 – $15,000)"
+  - value: "$15,000 – $25,000 ($15,000 – $25,000)"
+    label: "$15,000 – $25,000 ($15,000 – $25,000)"
+  - value: "$25,000 – $35,000 ($25,000 – $35,000)"
+    label: "$25,000 – $35,000 ($25,000 – $35,000)"
+  - value: "$35,000 – $45,000 ($35,000 – $45,000)"
+    label: "$35,000 – $45,000 ($35,000 – $45,000)"
+  - value: "$45,000 – $60,000 ($45,000 – $60,000)"
+    label: "$45,000 – $60,000 ($45,000 – $60,000)"
+  - value: "$60,000 – $90,000 ($60,000 – $90,000)"
+    label: "$60,000 – $90,000 ($60,000 – $90,000)"
+  - value: "> $90,000 (> $90,000)"
+    label: "> $90,000 (> $90,000)"
+  placeholder: Please Select
+  required: true
+  small_width: 12
+  medium_width: 10
 - name: a_full_track_at_aca_costs_12_000_if_you_do_not_receive_the_aca_diversity_scholarship_would_you_stil
   label: If you did not receive the Austin Coding Academy Diversity Scholarship, would you be interested in/able to take classes? (We do offer payment plan options)
   description: ''
@@ -87,7 +113,7 @@ form_fields:
   small_width: 12
   medium_width: 10
 # text fields
-- name:
+- name: what_makes_you_the_best_candidate_for_the_aca_diversity_scholarship_answer_in_200_400_words_
   label: What makes you the best candidate for the ACA Diversity Scholarship and how have you shown your commitment to underrepresented groups in tech? (Answer in 200-400 words)*
   description: ''
   type: textarea
@@ -97,7 +123,7 @@ form_fields:
   small_width: 12
   medium_width: 10
   options: []
-- name:
+- name: what_is_an_obstacle_that_you_ve_encountered_in_life_and_how_have_you_overcome_it_answer_in_200_400_
   label: What is an obstacle that you've encountered in life and how have you overcome it? (Answer in 200-400 words)*
   description: ''
   type: textarea
@@ -107,7 +133,7 @@ form_fields:
   small_width: 12
   medium_width: 10
   options: []
-- name:
+- name: how_do_you_intend_to_use_your_coding_skills_after_you_graduate_answer_in_less_than_400_words_
   label: How do you intend to use your coding skills after you graduate? (Answer in less than 200 words)
   description: ''
   type: textarea
@@ -162,10 +188,9 @@ resources:
       target="_top"
       class="d-flex flex-column align-items-center"
     >
-      <input name="redirect_url" type="hidden" value="{{ page.redirect_url }}">
       {% assign text_fields = page.form_fields %}
       <div class="row d-flex justify-content-center p-5">
-        {% include fields.html fields=text_fields %}
+        {% include fields.html fields=text_fields redirect_url=page.redirect_url %}
       </div>
       <!-- CODING CHALLENGE -->
       <div class="col-10">
