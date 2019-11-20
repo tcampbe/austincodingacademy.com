@@ -1,0 +1,58 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<section>
+  <div class="col-12">
+    <h2 class="mx-auto mb-4 w-100">
+      Coding Assignment
+    </h2>
+    <!-- Coding Challenge -->
+    <p>
+      {{ page.challenge_descript1 | liquify }}
+    </p>
+    <p class="mb-6">
+      {{ page.challenge_descript2 | liquify }}
+    </p>
+  </div>
+  <div class="mb-6">
+    <ul class="fa-ul m-0">
+      {% for resource in page.resources %}
+        <li class="mb-1">
+          <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>
+          <a href="{{ resource.url }}" target="_blank" rel="noopener">{{ resource.name | liquify }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="js-form-message mb-6 col-sm-12">
+    <div class="w-100 mx-auto mb-6">
+      <amp-img
+        src="{{ page.img_src | liquify }}"
+        width="2000px"
+        height="620px"
+        layout="responsive"
+        class="img-fluid w-100"
+        alt="coding challenge codepen"
+        title="coding challenge codepen"
+        tabindex="0"
+      >
+      </amp-img>
+    </div>
+  </div>
+</section>

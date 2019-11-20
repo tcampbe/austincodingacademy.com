@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ ] # don't touch
+categories: [ lubbockcodingacademy ] # don't touch
 
 fullname: Kellyn Barnes
 jobtitle: Web Developer
