@@ -249,7 +249,7 @@ scholarship:
     </div>
     {% assign sections = process.sections %}
     {% for item in sections %}
-      <div class="py-5 text-center">
+      <div class="py-5">
         <div class="display-7 font-family-alt mb-5">
           {{ item.subheading | liquify }}
         </div>
@@ -275,6 +275,9 @@ scholarship:
         </li>
       {% endfor %}
     </ul>
+    <div class="text-center mt-10 mb-2">
+      {% include btn-apply.html href="/diversity-scholarship/apply" %}
+    </div>
   </section>
   <!-- Eligibility -->
   <!-- htmllint preset="none" -->
@@ -310,9 +313,6 @@ scholarship:
       {% endfor %}
     </section>
     <!-- htmllint preset="$previous" -->
-    <div class="text-center">
-      {% include btn-apply.html href="/diversity-scholarship/apply" %}
-    </div>
 
     <section class="container mx-auto pt-3 pb-5 border-bottom">
       <h2 class="display-5 font-family-alt py-6 text-center text-white">
