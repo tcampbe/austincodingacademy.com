@@ -28,6 +28,46 @@ process:
   img_height: 70
 
 form_fields:
+- name: email
+  label: ''
+  description: ''
+  type: hidden
+  value: ''
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
+- name: application_submission_url
+  label: ''
+  description: ''
+  type: hidden
+  value: "{{ school.url }}{{ site.baseurl }}{{ page.permalink }}"
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
+- name: lifecyclestage
+  label: ''
+  description: ''
+  type: hidden
+  value: opportunity
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
+- name: filled_out_application
+  label: ''
+  description: ''
+  type: hidden
+  value: true
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
 - name: curriculum_track
   label: ''
   description: ''
