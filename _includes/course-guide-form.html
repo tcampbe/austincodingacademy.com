@@ -44,7 +44,7 @@
         data-margin-start="1%"
         data-margin-end="20%"
       {% endif %}
-      class="mw-600 mx-auto {{ include.p_class | liquify  }} text-center mb-6"
+      class="mw-600 mx-auto {{ include.text_class | liquify  }} text-center mb-6"
     >
     <!-- htmllint preset="$previous" -->
     {% if page.permalink == "/courses/wordpress-fundamentals/" %}
@@ -276,7 +276,10 @@
               <!-- End Input -->
 
               <div class="col-12">
-                {% include data-agreement.html %}
+                {% capture text_class %}
+                  {{ include.text_class }}
+                {% endcapture %}
+                {% include data-agreement.html text_class=text_class %}
               </div>
             </div>
             <div class="text-center">

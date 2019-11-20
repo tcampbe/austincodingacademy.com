@@ -161,7 +161,6 @@ role:
         on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
-        href="#"
       >
       <!-- htmllint preset="$previous" -->
         Learn More
@@ -169,14 +168,14 @@ role:
       <!-- Learn More Lightbox -->
       <amp-lightbox
         id="course-guide-lightbox"
-        class="lightbox text-white"
+        class="lightbox text-white mt-10 mt-sm-0 pb-8 pb-sm-0 pt-6 pt-sm-0 px-4 px-sm-0"
         layout="nodisplay"
         scrollable
         on="tap:course-guide-lightbox.close"
         tabindex="0"
         role="dialog"
       >
-        {% include course-guide-form.html p_class="text-white" course_guide="/assets/documents/WordPress-Fundamentals-Course-Guide-Master.pdf" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
+        {% include course-guide-form.html text_class="text-white" course_guide="WordPress-Fundamentals" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
       </amp-lightbox>
     </div>
   </div>
@@ -295,7 +294,7 @@ role:
   <!-- htmllint preset="$previous" -->
     <div class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html p_class="text-white" course_guide="/assets/documents/WordPress-Fundamentals-Course-Guide-Master.pdf" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
+        {% include course-guide-form.html text_class="text-white" course_guide="WordPress-Fundamentals" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
       </div>
     </div>
   </section>
