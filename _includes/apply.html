@@ -86,12 +86,10 @@
 
           <div class="mb-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
-            <a class="mb-4 btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}" href="{{ page.next_page_href | liquify }}">
+            <button class="mb-4 btn cta-gradient hover-white text-white hover-white btn-round {{ include.class | liquify }}" >
             <!-- htmllint preset="$previous" -->
-              <span class="hover-white text-white">
-                Continue Application
-              </span>
-            </a>
+              Continue Application
+            </button>
             <div class="d-flex flex-column align-items-center">
               {% include data-agreement.html %}
             </div>
