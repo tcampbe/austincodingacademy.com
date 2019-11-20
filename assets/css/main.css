@@ -649,6 +649,16 @@ nav ul ul li {
   }
 }
 
+/* FORMS */
+
+select:invalid {
+  color: grey;
+}
+
+::-webkit-datetime-edit {
+  color: grey;
+}
+
 /* LIGHTBOX FORMS */
 
 .lightbox {
