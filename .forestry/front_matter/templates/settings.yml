@@ -212,5 +212,10 @@ fields:
   config:
     required: false
   label: Diversity Scholarship Application Page 1
+- name: diversity_scholarship_application_page_2
+  type: text
+  config:
+    required: false
+  label: Diversity Scholarship Application Page 2
 pages:
 - settings.html
