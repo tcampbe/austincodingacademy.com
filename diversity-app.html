@@ -2,6 +2,9 @@
 layout: default
 permalink: "/diversity-scholarship/apply/"
 redirect_from:
+- "/diversity-scholarship/apply/1/"
+- "/diversity-scholarship/application/"
+- "/diversity-scholarship/application/1/"
 next_page_href: "/diversity-scholarship/apply/2"
 head_title: "Diversity Scholarship Application"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
@@ -27,6 +30,16 @@ process:
   img_height: 70
 
 form_fields:
+- name: firstname
+  label: First Name
+  description: ''
+  type: hidden
+  value: ''
+  options: []
+  placeholder: First Name
+  required: true
+  small_width: 12
+  medium_width: 6
 - name: firstname
   label: First Name
   description: ''
@@ -67,20 +80,6 @@ form_fields:
   small_width: 12
   medium_width: 6
   options: []
-- name: curriculum_track
-  label: To which program are you applying?
-  description: ''
-  type: select
-  value: ''
-  options:
-  - value: Full Stack JavaScript Track
-    label: Full-Stack Web Development Track
-  - value: WordPress Fundamentals
-    label: WordPress Fundamentals
-  placeholder: Select your answer
-  required: true
-  small_width: 12
-  medium_width: 12
 - name: email
   label: ''
   description: ''
@@ -297,26 +296,6 @@ form_fields:
     label: 'Radio'
   - value: 'Other'
     label: 'Other'
-- name: when_would_you_like_to_begin_class
-  label: When would you like to begin class?
-  description: ''
-  type: select
-  value: ''
-  placeholder: Select your answer
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options:
-  - value: 'As Soon as Possible'
-    label: 'As Soon as Possible'
-  - value: '2 - 4 Weeks'
-    label: '2 - 4 Weeks'
-  - value: '1 - 3 Months'
-    label: '1 - 3 Months'
-  - value: '3 - 6 Months'
-    label: '3 - 6 Months'
-  - value: '> 6 Months'
-    label: '> 6 Months'
 - name: do-you-own-a-laptop
   label: Do you own a laptop?
   description: ''
@@ -326,25 +305,12 @@ form_fields:
   required: true
   small_width: "12"
   medium_width: "6"
+  class: "d-flex flex-column justify-content-end"
   options:
-  - value: true
+  - value: True
     label: 'Yes'
-  - value: false
+  - value: False
     label: 'No'
-- name: how_do_you_intend_to_pay_for_the_course_
-  label: How do you intend to pay for the course?
-  description: ''
-  type: select
-  value: ''
-  options:
-  - value: I'll be paying on my own.
-    label: Paying on my own
-  - value: Planning to finance
-    label: I'm planning to finance tuition.
-  - value: Employer will be paying / reimbursing
-    label: My employer will be paying/reimbursing me.
-  - value: Other
-    label: Other
   placeholder: Select your answer
   required: true
   small_width: "12"

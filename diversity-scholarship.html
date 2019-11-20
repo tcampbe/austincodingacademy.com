@@ -6,7 +6,7 @@ amp_components:
 - amp-lightbox
 hide_apply: 'd-none'
 redirect_from: []
-hero: div
+hero: diversity
 hero_heading1: Austin Coding Academy
 hero_heading2: Diversity Scholarship
 hero_text: Austin Coding Academy is excited to be accepting applications for our 2020
@@ -214,7 +214,7 @@ scholarship:
     </div>
 
     <div class="container flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
-      <div class="w-100 w-sm-50 p-0 pr-sm-4 my-auto">
+      <div class="w-100 w-sm-50 p-0 pr-sm-4 mt-4 my-sm-auto">
         <amp-img
           layout="responsive"
           class="img-fluid shadow-black"
@@ -225,15 +225,15 @@ scholarship:
         </amp-img>
       </div>
       <div class="w-100 w-sm-50 m-0 ml-sm-4">
-        <h3 class="text-white">
+        <h3 class="text-white text-center text-sm-left">
           {{ scholarship.subheading | liquify }}
         </h3>
-        <p class="text-white">
+        <p class="text-white my-4 my-sm-0">
           {{ scholarship.p1 | liquify }}
         </p>
       </div>
     </div>
-    <div class="container py-8">
+    <div class="container py-4 py-sm-8">
       <p class="text-white">
         {{ scholarship.p2 | liquify }}
       </p>
@@ -251,7 +251,7 @@ scholarship:
     {% assign sections = process.sections %}
     {% for item in sections %}
       <div class="py-5">
-        <div class="display-7 font-family-alt mb-5">
+        <div class="display-7 font-family-alt mb-5 text-center text-sm-left">
           {{ item.subheading | liquify }}
         </div>
         <p class="text-center text-md-left">
@@ -316,10 +316,10 @@ scholarship:
     <!-- htmllint preset="$previous" -->
 
     <section class="container mx-auto pt-3 pb-5 border-bottom">
-      <h2 class="display-5 font-family-alt py-6 text-center text-white">
+      <h2 class="display-7 text-center text-sm-left font-family-alt pt-0 pb-6 py-sm-6 text-white">
         Disclaimer
       </h2>
-      <p class="text-white text-center mx-4">
+      <p class="text-white text-center text-sm-left mx-0 mx-sm-4">
         Austin Coding Academy is proud to be an equal opportunity educational
         institution. We are committed to equal opportunity regardless of race,
         color, ancestry, religion, sex, national origin, sexual orientation, age,

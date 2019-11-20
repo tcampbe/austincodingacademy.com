@@ -2,6 +2,7 @@
 layout: default
 permalink: "/diversity-scholarship/apply/2"
 redirect_from:
+- "/diversity-scholarship/application/2"
 redirect_url: https://acaappointment.as.me/schedule.php?appointmentType=3203565
 head_title: "Diversity Scholarship Application Page 2"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
@@ -27,6 +28,16 @@ process:
   img_height: 70
 
 form_fields:
+- name: curriculum_track
+  label: ''
+  description: ''
+  type: hidden
+  value: Full Stack JavaScript Track
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
 # select fields
 - name: check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_
   label: Select the option that most accurately describes your Ethnicity
@@ -34,24 +45,24 @@ form_fields:
   type: select
   value: ''
   options:
-  - value: "American Indian/Alaska Native (American Indian/Alaska Native)"
-    label: "American Indian/Alaska Native (American Indian/Alaska Native)"
-  - value: "Asian (Asian)"
-    label: "Asian (Asian)"
-  - value: "Black or African American (Black or African American)"
-    label: "Black or African American (Black or African American)"
-  - value: "Hispanic or Latinx (Hispanic or Latinx)"
-    label: "Hispanic or Latinx (Hispanic or Latinx)"
-  - value: "Native Hawaiian or other Pacific Islander (Native Hawaiian or other Pacific Islander)"
-    label: "Native Hawaiian or other Pacific Islander (Native Hawaiian or other Pacific Islander)"
-  - value: "White (White)"
-    label: "White (White)"
-  - value: "Other (Other)"
-    label: "Other (Other)"
-  - value: "Two or More (Two or More)"
-    label: "Two or More (Two or More)"
-  - value: "Prefer not to say (Prefer not to say)"
-    label: "Prefer not to say (Prefer not to say)"
+  - value: "American Indian/Alaska Native"
+    label: "American Indian/Alaska Native"
+  - value: "Asian"
+    label: "Asian"
+  - value: "Black or African American"
+    label: "Black or African American"
+  - value: "Hispanic or Latinx"
+    label: "Hispanic or Latinx"
+  - value: "Native Hawaiian or other Pacific Islander"
+    label: "Native Hawaiian or other Pacific Islander"
+  - value: "White"
+    label: "White"
+  - value: "Other"
+    label: "Other"
+  - value: "Two or More"
+    label: "Two or More"
+  - value: "Prefer not to say"
+    label: "Prefer not to say"
   placeholder: Select your answer
   required: false
   small_width: 12
@@ -118,7 +129,7 @@ form_fields:
   description: ''
   type: textarea
   value: ''
-  placeholder: City
+  placeholder:
   required: true
   small_width: 12
   medium_width: 10
@@ -175,7 +186,7 @@ resources:
 
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
-    <h2 class="font-family-alt my-5 my-sm-5 display-5 display-55 text-center col-12 col-sm-10">
+    <h2 class="font-family-alt mt-5 mb-3 display-5 display-55 text-center col-12 col-sm-10">
       Diversity Scholarship Application
     </h2>
     <div class="d-flex flex-column align-items-center display-6 text-center col-12 mb-4">
@@ -193,7 +204,7 @@ resources:
         {% include fields.html fields=text_fields redirect_url=page.redirect_url %}
       </div>
       <!-- CODING CHALLENGE -->
-      <div class="col-10">
+      <div class="col-12 col-sm-10">
         {% include challenge.html %}
         <label for="code-challenge" class="form-label flex-wrap">
           Describe in 1-2 paragraphs what the code above is creating. <span class="text-red-a">*</span>
@@ -213,7 +224,7 @@ resources:
           ></textarea>
         </div>
       </div>
-      <div class="col-10 my-4 d-flex flex-column align-items-center">
+      <div class="col-12 col-sm-10 my-4 d-flex flex-column align-items-center">
         <button class="btn btn-round text-white bg-primary-dark mb-4" type="Submit">
           Submit
         </button>
