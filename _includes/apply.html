@@ -54,12 +54,18 @@
         {% endfor %}
       </div>
     {% endif %}
-
+    <!-- htmllint preset="none" -->
     <form
+      {% if page.permalink == "/diversity-scholarship/apply/" %}
       action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.application_form_guid }}"
+      {% else %}
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.preapplication_form_guid }}"
+      {% endif %}
       method="POST"
       target="_top"
     >
+    <!-- htmllint preset="$previous" -->
+
       <div class="col-12 col-sm-10 mx-auto">
         <div class="row d-flex justify-content-center p-5">
           {% assign all_fields = page.form_fields %}
