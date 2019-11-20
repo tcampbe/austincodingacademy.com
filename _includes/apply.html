@@ -56,11 +56,7 @@
     {% endif %}
     <!-- htmllint preset="none" -->
     <form
-      {% if include.diversity %}
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.application_form_guid }}"
-      {% else %}
       action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.preapplication_form_guid }}"
-      {% endif %}
       method="POST"
       target="_top"
     >
