@@ -8,7 +8,7 @@
   {% if field.type == "hidden" %}
     <input name="{{ field.name | liquify }}" type="{{ field.type | liquify }}" value="{{ field.value | append: '' | liquify }}">
   {% elsif field.type == 'select' %}
-    <div class="mb-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }} {{ field.class }}">
+    <div class="mb-3 mb-sm-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }} {{ field.class }}">
       <div class="form-group">
         <label for="{{ field.name | liquify }}" class="form-label">
           {{ field.label }}
@@ -28,7 +28,7 @@
       </div>
     </div>
     {% elsif field.type == 'textarea' %}
-      <div class="mb-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }} {{ field.class }}">
+      <div class="mb-3 mb-sm-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }} {{ field.class }}">
         <div class="form-group">
           <label for="{{ field.name | liquify }}" class="form-label">
             {{ field.label }}
@@ -46,7 +46,7 @@
         </div>
       </div>
     {% else %}
-    <div class="mb-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }} {{ field.class }}">
+    <div class="mb-3 mb-sm-6 col-12 col-sm-{{ field.small_width }} col-md-{{ field.medium_width }} {{ field.class }}">
       <div class="form-group">
         <label for="{{ field.name | liquify }}" class="form-label">
           {{ field.label }}
