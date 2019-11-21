@@ -9,7 +9,7 @@
           Start your Diversity Scholarship Application by filling out our 2-page application form. To be considered
           for the Austin Coding Academy Diversity Scholarship, please be aware of the following timeline:
         </p>
-        {% assign timeline = page.timeline%}
+        {% assign timeline = page.timeline %}
         {% for item in timeline %}
         <div class="py-6 py-sm-0 d-flex flex-column justify-content-center">
           <h4 class="border-bottom">{{ item.title }}</h4>
@@ -62,19 +62,21 @@
 
       <div class="col-12 col-sm-10 mx-auto">
         <div class="row d-flex justify-content-center p-5">
-          {% assign all_fields = page.form_fields %}
-          {% include fields.html fields=all_fields redirect_url=include.redirect_url %}
-
           {% if include.diversity %}
+            {% assign all_fields = page.form_fields %}
+            {% assign redirect_url = school.url | append: "/diversity-scholarship/apply-two" %}
+            {% include fields.html fields=all_fields %}
             <div class="col-12 my-5">
               <h2 class="text-center font-weight-bold mb-5">
                 Education &amp; Work Experience
               </h2>
             </div>
-
             {% assign edu_work_fields = page.edu_work_fields %}
-            {% assign redirect_url = school.url | append: "/diversity-scholarship/apply-two" %}
-            {% include fields.html fields=edu_work_fields %}
+            {% include fields.html fields=edu_work_fields redirect_url=redirect_url %}
+          {% else %}
+            {% assign all_fields = page.form_fields %}
+            {% assign redirect_url = school.url | append: "/apply-two" %}
+            {% include fields.html fields=all_fields redirect_url=redirect_url %}
           {% endif %}
 
           <div class="mb-4 d-flex flex-column align-items-center">
