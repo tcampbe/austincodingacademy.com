@@ -55,7 +55,7 @@
       </div>
     {% endif %}
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.preapplication_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ include.form_guid }}"
       method="POST"
       target="_top"
     >
@@ -63,8 +63,7 @@
       <div class="col-12 col-sm-10 mx-auto">
         <div class="row d-flex justify-content-center p-5">
           {% assign all_fields = page.form_fields %}
-          {% assign redirect_url = school.url | append: "/apply-two" %}
-          {% include fields.html fields=all_fields redirect_url=redirect_url %}
+          {% include fields.html fields=all_fields redirect_url=include.redirect_url %}
 
           {% if include.diversity %}
             <div class="col-12 my-5">
