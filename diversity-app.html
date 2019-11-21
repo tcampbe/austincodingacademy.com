@@ -406,4 +406,5 @@ timeline:
   {% endfor %}
 {% endif %}
 
-{% include apply.html diversity=true %}
+{% assign redirect_url = school.url | append: "/diversity-scholarship/apply-two" %}
+{% include apply.html diversity=true form_guid=settings.diversity_scholarship_application_page_1 redirect_url=redirect_url %}
