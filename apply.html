@@ -87,4 +87,5 @@ form_fields:
   {% endfor %}
 {% endif %}
 
-{% include apply.html %}
+{% assign redirect_url = school.url | append: "/apply-two" %}
+{% include apply.html form_guid=settings.preapplication_form_guid redirect_url=redirect_url %}
