@@ -65,14 +65,14 @@
           {% if include.diversity %}
             {% assign all_fields = page.form_fields %}
             {% assign redirect_url = school.url | append: "/diversity-scholarship/apply-two" %}
-            {% include fields.html fields=all_fields %}
+            {% include fields.html fields=all_fields redirect_url=redirect_url %}
             <div class="col-12 my-5">
               <h2 class="text-center font-weight-bold mb-5">
                 Education &amp; Work Experience
               </h2>
             </div>
             {% assign edu_work_fields = page.edu_work_fields %}
-            {% include fields.html fields=edu_work_fields redirect_url=redirect_url %}
+            {% include fields.html fields=edu_work_fields %}
           {% else %}
             {% assign all_fields = page.form_fields %}
             {% assign redirect_url = school.url | append: "/apply-two" %}
