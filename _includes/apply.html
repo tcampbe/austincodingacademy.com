@@ -62,9 +62,6 @@
 
       <div class="col-12 col-sm-10 mx-auto">
         <div class="row d-flex justify-content-center p-5">
-          {% assign all_fields = page.form_fields %}
-          {% include fields.html fields=all_fields redirect_url=include.redirect_url %}
-
           {% if include.diversity %}
             {% assign all_fields = page.form_fields %}
             {% assign redirect_url = school.url | append: "/diversity-scholarship/apply-two" %}
