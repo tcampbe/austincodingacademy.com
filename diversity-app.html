@@ -5,7 +5,6 @@ redirect_from:
 - "/diversity-scholarship/apply/1/"
 - "/diversity-scholarship/application/"
 - "/diversity-scholarship/application/1/"
-next_page_href: "/diversity-scholarship/apply-two"
 head_title: "Diversity Scholarship Application"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 hide_apply: 'd-none'
@@ -406,5 +405,5 @@ timeline:
   {% endfor %}
 {% endif %}
 
-{% assign redirect_url = school.url | append: "/diversity-scholarship/apply-two" %}
+{% assign redirect_url = school.url | append: "/diversity-scholarship/apply-two/" %}
 {% include apply.html diversity=true form_guid=settings.diversity_scholarship_application_page_1 redirect_url=redirect_url %}
