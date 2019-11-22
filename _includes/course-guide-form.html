@@ -91,7 +91,7 @@
             <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
             <input name="hutk" type="hidden" value="">
             {% if include.course_guide %}
-              <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ include.course_guide }}">
+              <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ include.course_guide_href }}">
             {% else %}
               <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ school.course_guide }}">
             {% endif %}
