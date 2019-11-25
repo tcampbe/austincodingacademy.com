@@ -1,3 +1,4 @@
+---
 layout: resume #don't touch
 categories: [ hire, graduation, lubbockcodingacademy ] #don't touch
 # You can change anything in quotation marks, and that will show up on your profile.
@@ -53,3 +54,4 @@ projects:
   - name: "" # project title
     desc: "" # short description of what project does
     url: "" # link to your deployed project
+---
