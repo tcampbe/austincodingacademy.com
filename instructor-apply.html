@@ -7,7 +7,6 @@ description: "Become a web development instructor with {{ school.name }} | Teach
 redirect_from: []
 schools:
 - key: austincodingacademy
-  redirect: https://austincodingacademy.com/thank-you/
   form_fields:
   - name: firstname
     label: First Name
@@ -166,7 +165,6 @@ schools:
     small_width: 12
     medium_width: 6
 - key: lubbockcodingacademy
-  redirect: https://lubbockcodingacademy.com/thank-you/
   form_fields:
   - name: firstname
     label: First Name
@@ -331,7 +329,6 @@ schools:
     small_width: 12
     medium_width: 6
 - key: texastechuniversitycodingacademy
-  redirect: https://texastechuniversitycodingacademy.com/thank-you/
   form_fields:
   - name: firstname
     label: First Name
@@ -520,19 +517,19 @@ schools:
       Instructor Application
     </h2>
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.wordpress_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.instructor_form_guid }}"
       method="POST"
       class="d-flex justify-content-center"
       >
+      <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/">
       <div class="row mw-850">
         {% assign all_fields = school.form_fields %}
-        {% assign redirect = school.redirect %}
-        {% include fields.html fields=all_fields redirect_url=redirect %}
+        {% include fields.html fields=all_fields %}
         <div class="col-sm-6 mb-3 mb-sm-6 d-flex flex-column justify-content-end">
           {% include referral-question.html %}
         </div>
         <div class="col-12 mb-4 d-flex justify-content-center">
-          <button class="btn btn-round text-white hover-white bg-primary-dark" type="Submit">
+          <button class="btn btn-round text-white hover-white bg-primary-dark" type="submit">
             Submit
           </button>
         </div>
