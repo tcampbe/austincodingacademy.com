@@ -36,7 +36,7 @@ phone: "575-602-4802"
 workexperience:
   - company: "Walmart"
     dates: "Febuary 2015 - Current"
-    title: "Pharmacy Technician
+    title: "Pharmacy Technician"
     location: "Lubbock, TX"
 
   - company: "Sodexo"
