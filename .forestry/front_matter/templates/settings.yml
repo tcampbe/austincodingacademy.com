@@ -1,0 +1,221 @@
+---
+label: Settings
+hide_body: true
+fields:
+- type: boolean
+  name: settings
+  label: settings
+- type: text
+  name: form_url
+  label: form_url
+- type: number
+  name: hubspot_portal_id
+  label: hubspot_portal_id
+- type: datetime
+  name: preapplication_form_guid
+  label: preapplication_form_guid
+- type: text
+  name: application_form_guid
+  label: application_form_guid
+- type: text
+  name: instructor_form_guid
+  label: instructor_form_guid
+- type: text
+  name: corporate_trainings_form_guid
+  label: corporate_trainings_form_guid
+- type: text
+  name: corporate_form_guid
+  label: corporate_form_guid
+- type: text
+  name: diversity_form_guid
+  label: diversity_form_guid
+- type: text
+  name: assignment_form_guid
+  label: assignment_form_guid
+- type: text
+  name: head_title
+  label: head_title
+- type: textarea
+  name: description
+  label: description
+- type: field_group
+  name: navigation
+  label: navigation
+  fields:
+  - type: field_group_list
+    name: header
+    label: header
+    fields:
+    - type: text
+      name: title
+      label: title
+  - type: field_group_list
+    name: footer
+    label: footer
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: url
+      label: url
+- type: field_group_list
+  name: courses
+  label: courses
+  fields:
+  - type: text
+    name: code
+    label: code
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+  - type: text
+    name: length
+    label: length
+  - type: list
+    name: list
+    label: list
+- type: field_group_list
+  name: tracks
+  label: tracks
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: category
+    label: category
+  - type: text
+    name: url
+    label: url
+- type: field_group_list
+  name: schools
+  label: schools
+  fields:
+  - type: text
+    name: key
+    label: key
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: primary_light_color
+    label: primary_light_color
+  - type: text
+    name: primary_dark_color
+    label: primary_dark_color
+  - type: text
+    name: secondary_light_color
+    label: secondary_light_color
+  - type: text
+    name: secondary_dark_color
+    label: secondary_dark_color
+  - type: field_group
+    name: navigation
+    label: navigation
+    fields:
+    - type: field_group_list
+      name: header
+      label: header
+      fields:
+      - type: text
+        name: title
+        label: title
+  - type: list
+    name: tracks
+    label: tracks
+  - type: text
+    name: url
+    label: url
+  - type: number
+    name: phone
+    label: phone
+  - type: number
+    name: callrail_company_id
+    label: callrail_company_id
+  - type: text
+    name: google_tag_manager
+    label: google_tag_manager
+  - type: text
+    name: google_tag_manager_amp
+    label: google_tag_manager_amp
+  - type: text
+    name: contact_form_guid
+    label: contact_form_guid
+  - type: text
+    name: cta_form_guid
+    label: cta_form_guid
+  - type: text
+    name: course_guide_form_guid
+    label: course_guide_form_guid
+  - type: text
+    name: application_form_guid
+    label: application_form_guid
+  - type: text
+    name: twitter
+    label: twitter
+  - type: text
+    name: eventbrite
+    label: eventbrite
+  - type: text
+    name: facebook
+    label: facebook
+  - type: text
+    name: instagram
+    label: instagram
+  - type: file
+    name: course_guide
+    label: course_guide
+  - type: field_group_list
+    name: locations
+    label: locations
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: street
+      label: street
+    - type: text
+      name: city
+      label: city
+    - type: text
+      name: state
+      label: state
+    - type: number
+      name: postal
+      label: postal
+    - type: text
+      name: url
+      label: url
+- type: field_group_list
+  name: logos
+  label: logos
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: width
+    label: width
+  - type: text
+    name: height
+    label: height
+  - type: file
+    name: src
+    label: src
+- name: diversity_scholarship_application_page_1
+  type: text
+  config:
+    required: false
+  label: Diversity Scholarship Application Page 1
+- name: diversity_scholarship_application_page_2
+  type: text
+  config:
+    required: false
+  label: Diversity Scholarship Application Page 2
+pages:
+- settings.html

@@ -44,7 +44,7 @@
         data-margin-start="1%"
         data-margin-end="20%"
       {% endif %}
-      class="mw-600 mx-auto {{ include.p_class | liquify  }} text-center mb-6"
+      class="mw-600 mx-auto {{ include.text_class | liquify  }} text-center mb-6"
     >
     <!-- htmllint preset="$previous" -->
     {% if page.permalink == "/courses/wordpress-fundamentals/" %}
@@ -91,9 +91,9 @@
             <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
             <input name="hutk" type="hidden" value="">
             {% if include.course_guide %}
-              <input name="redirect_url" type="hidden" value="https://austincodingacademy.com/web/viewer.html?file=../assets/documents/{{ include.course_guide }}-Course-Guide-Master.pdf">
+              <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ include.course_guide }}">
             {% else %}
-              <input name="redirect_url" type="hidden" value="https://austincodingacademy.com/web/viewer.html?file=../assets/documents/{{ school.name | join: "-" }}-Course-Guide-Master.pdf">
+              <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ school.course_guide }}">
             {% endif %}
             <input name="school" type="hidden" value="{{ school.name }}">
             <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
@@ -276,7 +276,10 @@
               <!-- End Input -->
 
               <div class="col-12">
-                {% include data-agreement.html %}
+                {% capture text_class %}
+                  {{ include.text_class }}
+                {% endcapture %}
+                {% include data-agreement.html text_class=text_class %}
               </div>
             </div>
             <div class="text-center">
