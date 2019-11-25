@@ -528,7 +528,7 @@ schools:
         {% assign all_fields = school.form_fields %}
         {% assign redirect = school.redirect %}
         {% include fields.html fields=all_fields redirect_url=redirect %}
-        <div class="col-sm-6 mb-4">
+        <div class="col-sm-6 mb-3 mb-sm-6 d-flex flex-column justify-content-end">
           {% include referral-question.html %}
         </div>
         <div class="col-12 mb-4 d-flex justify-content-center">
