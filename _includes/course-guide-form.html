@@ -44,7 +44,7 @@
         data-margin-start="1%"
         data-margin-end="20%"
       {% endif %}
-      class="mw-600 mx-auto {{ include.p_class | liquify  }} text-center mb-6"
+      class="mw-600 mx-auto {{ include.text_class | liquify  }} text-center mb-6"
     >
     <!-- htmllint preset="$previous" -->
     {% if page.permalink == "/courses/wordpress-fundamentals/" %}
@@ -87,9 +87,15 @@
             <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
             <input name="downloaded_a_courses_guide" type="hidden" value="true">
             <input name="hs_lead_status" type="hidden" value="NEW">
-            <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+            <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
             <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
             <input name="hutk" type="hidden" value="">
+            {% if include.course_guide %}
+              <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ include.course_guide }}">
+            {% else %}
+              <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ school.course_guide }}">
+            {% endif %}
+            <input name="school" type="hidden" value="{{ school.name }}">
             <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 
             <div class="row center-form">
@@ -269,11 +275,12 @@
               </div>
               <!-- End Input -->
 
-              {% if page.categories contains 'landing' %}
-                <div class="col-12">
-                  {% include data-agreement.html %}
-                </div>
-              {% endif %}
+              <div class="col-12">
+                {% capture text_class %}
+                  {{ include.text_class }}
+                {% endcapture %}
+                {% include data-agreement.html text_class=text_class %}
+              </div>
             </div>
             <div class="text-center">
               <div submit-error>
@@ -283,12 +290,6 @@
               </div>
             </div>
           </div>
-          <amp-recaptcha-input
-            layout="nodisplay"
-            name="recaptcha_response"
-            data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
-            data-action="homepage">
-          </amp-recaptcha-input>
         </form>
         <!-- End Form -->
       </div>

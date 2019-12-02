@@ -204,7 +204,7 @@ schools:
                       </div>
                     </div>
                   </div>
-                {% elsif option.price %}
+                {% elsif option.price.size > 0 %}
                   <div class="text-center">
                     <h5>
                       {{ option.price_header | liquify }}

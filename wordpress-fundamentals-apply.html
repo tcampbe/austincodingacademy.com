@@ -2,8 +2,10 @@
 layout: default
 permalink: "/courses/wordpress-fundamentals/apply/"
 redirect_from:
+redirect_url: https://acaappointment.as.me/schedule.php?appointmentType=3203565
 head_title: "Start Your Application | Apply Now at {{ school.name }}"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
+hide_apply: 'd-none'
 process:
 - heading: Apply
   text: Get started by filling out our application and setting up a call with our admissions team.
@@ -71,14 +73,15 @@ process:
     <!-- Proccess Application End -->
     <form
       class="d-flex justify-content-center pt-4"
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.application_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.preapplication_form_guid }}"
       method="POST"
       target="_top"
     >
       <div class="form-container">
+        <input name="redirect_url" type="hidden" value="{{ page.redirect_url }}">
         <input name="lifecyclestage" type="hidden" value="opportunity">
         <input name="filled_out_application" type="hidden" value="true">
-        <input name="page_name" type="hidden" value="{{ page.title | liquify }}">
+        <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
         <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.permalink | liquify }}">
         <input name="hutk" type="hidden" value="">
         <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
@@ -186,8 +189,8 @@ process:
                   type="text"
                   class="form-control"
                   name="zip"
-                  placeholder="zip code"
-                  aria-label="zip code"
+                  placeholder="Zip Code"
+                  aria-label="Zip Code"
                   required
                 />
               </div>
@@ -202,7 +205,7 @@ process:
                 </label>
                 <input
                   id="date-of-birth"
-                  type="text"
+                  type="date"
                   class="form-control"
                   name="date_of_birth1"
                   placeholder="Date of Birth"
@@ -226,8 +229,11 @@ process:
               <label for="current-occupation-wp" class="form-label">
                 Highest Level of Education Completed<span class="text-red-a">*</span>
               </label>
-              <select id="education-level" name="highest_level_of_education_completed" class="form-control">
-                <option value="High School Diploma/GED" disabled selected>
+              <select id="education-level" name="highest_level_of_education_completed" class="form-control" required>
+                <option value="" disabled selected>
+                  Please Select
+                </option>
+                <option value="High School Diploma/GED">
                   High School Diploma/GED
                 </option>
                 <option value="Some College, No Degree">
@@ -326,7 +332,7 @@ process:
               <label for="do-you-own-a-laptop" class="form-label">
                 Do You Own a Laptop? <span class="text-red-a">*</span>
               </label>
-              <select id="do-you-own-a-laptop" name="do_you_own_a_laptop" class="form-control">
+              <select id="do-you-own-a-laptop" name="do_you_own_a_laptop" class="form-control" required>
                 <option value="" disabled selected>
                   Select your answer
                 </option>
@@ -356,7 +362,7 @@ process:
               <label for="hear-about-us" class="form-label">
                 How did you hear About Austin Coding Academy? <span class="text-red-a">*</span>
               </label>
-              <select id="hear-about-us" name="how_did_you_hear_about_us" class="form-control">
+              <select id="hear-about-us" name="how_did_you_hear_about_us" class="form-control" required>
                 <option value="" disabled selected>
                   Select your answer
                 </option>
@@ -407,7 +413,7 @@ process:
               <label for="payment" class="form-label">
                 How Do You Intend to Pay for the Course? <span class="text-red-a">*</span>
               </label>
-              <select id="payment" name="how_do_you_intend_to_pay_for_the_course_" class="form-control">
+              <select id="payment" name="how_do_you_intend_to_pay_for_the_course_" class="form-control" required>
                 <option value="" disabled selected>
                   Select your answer
                 </option>
@@ -434,7 +440,7 @@ process:
               <label for="begin-class" class="form-label">
                 When Would You Like to Begin Class? <span class="text-red-a">*</span>
               </label>
-              <select id="begin-class" name="when_would_you_like_to_begin_class" class="form-control">
+              <select id="begin-class" name="when_would_you_like_to_begin_class" class="form-control" required>
                 <option value="" disabled selected>
                   Select your answer
                 </option>
