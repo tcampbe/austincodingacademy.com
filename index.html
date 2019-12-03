@@ -78,11 +78,11 @@ schools:
   start_dates:
   - location: Capital Factory Campus
     date: January 14th
-    days: Tuesday / Thursday
+    days: Tuesday/Thursday
     time: 6:30 - 9:00pm
   - location: Highland Campus
     date: January 27th
-    days: Monday / Wednesday
+    days: Monday/Wednesday
     time: 6:30 - 9:00pm
   lightbox_youtube:
     src_id: UGW-v_uam4k
@@ -394,24 +394,27 @@ schools:
       <div class="display-6 mt-8 text-center">
         Our Upcoming Start Dates
       </div>
-      <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-between container">
+      <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
       {% for start_date in start_dates %}
         <!-- htmllint preset="none" -->
-        <div class="w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
+        <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
         <!-- htmllint preset="$previous" -->
           <div class="display-7 mb-4 text-center">
             {{ start_date.location }}
           </div>
-          <div class="card shadow-black mx-auto mw-350 p-2">
+          <div class="card shadow-black mx-auto p-2">
             <div class="card-body">
               <div class="display-6 pb-4 text-center">
                 {{ start_date.date }}
               </div>
               <div class="shadow border text-center py-4">
-                <div class="text-center display-7">
+                <div class="display-7 text-center mb-3">
+                  Classes Meet:
+                </div>
+                <div>
                   {{ start_date.days }}
                 </div>
-                <div class="my-3">
+                <div class="mb-3">
                   {{ start_date.time }}
                 </div>
                 {% include btn-apply.html %}
