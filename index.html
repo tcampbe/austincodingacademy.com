@@ -421,6 +421,10 @@ schools:
         </div>
       {% endfor %}
       </div>
+    {% else %}
+      <div class="d-flex justify-content-center">
+        {% include btn-apply.html %}
+      </div>
     {% endif %}
     <!-- start date boxes end -->
   </section>
