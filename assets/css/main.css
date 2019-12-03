@@ -557,12 +557,12 @@ a {
   max-width: 600px;
 }
 
-.mw-400 {
-  width: 400px;
-}
-
 .mw-450 {
   max-width: 450px;
+}
+
+.mw-350 {
+  max-width: 350px;
 }
 
 .mw-22r {
