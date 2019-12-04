@@ -74,17 +74,41 @@ features:
   alt: Suitcase graphic
 schools:
 - key: austincodingacademy
-  nextStartDate: October 21st
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
+  start_dates:
+  - location: Capital Factory Campus
+    date: January 14th
+    days: Tuesday/Thursday
+    time: 6:30 - 9:00pm
+  - location: Highland Campus
+    date: January 27th
+    days: Monday/Wednesday
+    time: 6:30 - 9:00pm
   lightbox_youtube:
     src_id: UGW-v_uam4k
     title: The Moment I Realized My Life Was Changed
 - key: lubbockcodingacademy
-  nextStartDate: October 15th
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
-- key: texastechuniversitycodingacademy
-  nextStartDate: Early 2020
+  start_dates:
+  - location:
+    date:
+    days:
+    time:
+  - location:
+    date:
+    days:
+    time:
+  - key: texastechuniversitycodingacademy
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
+  start_dates:
+  - location:
+    date:
+    days:
+    time:
+  - location:
+    date:
+    days:
+    time:
   features:
   - heading: Flexible Schedule
     title: Keep Your Day Job While You Make a Career Change
@@ -361,13 +385,51 @@ schools:
       you can learn coding in a classroom setting that works with your busy schedule, and be a part of
       our community, supporting and inspiring each other to be more than just coders.
     </p>
-    <p class="mw-600 mx-auto text-center mb-4">
+    <p class="mw-600 mx-auto text-center pb-4">
       <b>Ready when you are.</b>
     </p>
-    <!-- Apply Button -->
-    <div class="d-flex justify-content-center">
-      {% include btn-apply.html %}
-    </div>
+    <!-- start date boxes -->
+    {% assign start_dates = school.start_dates %}
+    {% if start_dates[0].date %}
+      <div class="display-6 mt-8 text-center">
+        Our Upcoming Start Dates
+      </div>
+      <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
+      {% for start_date in start_dates %}
+        <!-- htmllint preset="none" -->
+        <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
+        <!-- htmllint preset="$previous" -->
+          <div class="display-7 mb-4 text-center">
+            {{ start_date.location }}
+          </div>
+          <div class="card shadow-black mx-auto p-2">
+            <div class="card-body">
+              <div class="display-6 pb-4 text-center">
+                {{ start_date.date }}
+              </div>
+              <div class="shadow border text-center py-4">
+                <div class="display-7 text-center mb-3">
+                  Classes Meet:
+                </div>
+                <div>
+                  {{ start_date.days }}
+                </div>
+                <div class="mb-3">
+                  {{ start_date.time }}
+                </div>
+                {% include btn-apply.html %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    {% else %}
+      <div class="d-flex justify-content-center">
+        {% include btn-apply.html %}
+      </div>
+    {% endif %}
+    <!-- start date boxes end -->
   </section>
 
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
