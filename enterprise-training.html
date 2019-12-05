@@ -377,9 +377,9 @@ form_fields:
     </p>
     <!-- NEW FORM -->
     <form class="d-flex justify-content-center align-items-center"
-    target="_top"
-    action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.corporate_trainings_form_guid }}"
-    method="POST"
+      target="_top"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.corporate_trainings_form_guid }}"
+      method="POST"
     >
       <div class="form-container mw-850 px-5 px-lg-0">
           <div class="row center-form">
@@ -395,6 +395,7 @@ form_fields:
             {% include data-agreement.html %}
           </div>
         </div>
+      </div>
     </form>
   </section>
 </main>

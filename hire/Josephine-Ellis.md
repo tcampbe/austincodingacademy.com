@@ -4,10 +4,10 @@ categories: [ hire, graduation, lubbockcodingacademy ] #don't touch
 # You can change anything in quotation marks, and that will show up on your profile.
 
 fullname: "Josephine Ellis"
-jobtitle: "Full-Stacked Developer"
+jobtitle: "Full-Stack Developer"
 
 location: "Lubbock, TX"
-blurb: "I am a new devloper looking for a place to use my skills and continue to grow. " # Write what you'd like potential employers to know about you, and your story of how you became passionate for coding as a career.
+blurb: "I am a new devloper looking for a place to use my skills and continue to grow." # Write what you'd like potential employers to know about you, and your story of how you became passionate for coding as a career.
 
 # first item must be JavaScript or C# or .NET or C#/.NET
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
