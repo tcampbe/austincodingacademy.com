@@ -1,0 +1,282 @@
+---
+layout: default
+permalink: "/diversity-scholarship/apply-two/"
+redirect_from:
+- "/diversity-scholarship/application-two/"
+redirect_url: https://acaappointment.as.me/schedule.php?appointmentType=3203565
+head_title: "Diversity Scholarship Application Page 2"
+description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
+hide_apply: 'd-none'
+process:
+- heading: Apply
+  text: Get started by filling out our application and setting up a call with our admissions team.
+  img_src: '/assets/images/wp-apply.png'
+  time: (~ 5 Minutes)
+  img_width: 70
+  img_height: 70
+- heading: Assignment
+  text: After speaking with our admissions team, you’ll be asked to complete a brief assignment.
+  img_src: '/assets/images/wp-assignment.png'
+  time: (~ 1-2 Hours)
+  img_width: 70
+  img_height: 70
+- heading: Acceptance Decision
+  text: Once you’ve successfully completed your assignment, you’ll be able to begin class.
+  img_src: '/assets/images/wp-enroll.png'
+  time:
+  img_width: 70
+  img_height: 70
+
+form_fields:
+- name: email
+  label: ''
+  description: ''
+  type: hidden
+  value: ''
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
+- name: application_submission_url
+  label: ''
+  description: ''
+  type: hidden
+  value: "{{ school.url }}{{ site.baseurl }}{{ page.permalink }}"
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
+- name: lifecyclestage
+  label: ''
+  description: ''
+  type: hidden
+  value: opportunity
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
+- name: filled_out_application
+  label: ''
+  description: ''
+  type: hidden
+  value: true
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
+- name: curriculum_track
+  label: ''
+  description: ''
+  type: hidden
+  value: Full Stack JavaScript Track
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
+# select fields
+- name: check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_
+  label: Select the option that most accurately describes your Ethnicity
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: "American Indian/Alaska Native"
+    label: "American Indian/Alaska Native"
+  - value: "Asian"
+    label: "Asian"
+  - value: "Black or African American"
+    label: "Black or African American"
+  - value: "Hispanic or Latinx"
+    label: "Hispanic or Latinx"
+  - value: "Native Hawaiian or other Pacific Islander"
+    label: "Native Hawaiian or other Pacific Islander"
+  - value: "White"
+    label: "White"
+  - value: "Other"
+    label: "Other"
+  - value: "Two or More"
+    label: "Two or More"
+  - value: "Prefer not to say"
+    label: "Prefer not to say"
+  placeholder: Select your answer
+  required: false
+  small_width: 12
+  medium_width: 10
+- name: are_you_a_veteran_of_the_us_military_
+  label: Are you a veteran of the US Military?
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: "Yes"
+    label: "Yes"
+  - value: "No"
+    label: "No"
+  - value: "Prefer not to say"
+    label: "Prefer not to say"
+  placeholder: Please Select
+  required: true
+  small_width: 12
+  medium_width: 10
+- name: check_the_boxes_that_apply_to_your_ethnicity_check_all_that_apply_
+  label: What is your current yearly income?
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: "Unemployed"
+    label: "Unemployed"
+  - value: "$0 – $15,000"
+    label: "$0 – $15,000"
+  - value: "$15,000 – $25,000"
+    label: "$15,000 – $25,000"
+  - value: "$25,000 – $35,000"
+    label: "$25,000 – $35,000"
+  - value: "$35,000 – $45,000"
+    label: "$35,000 – $45,000"
+  - value: "$45,000 – $60,000"
+    label: "$45,000 – $60,000"
+  - value: "$60,000 – $90,000"
+    label: "$60,000 – $90,000"
+  - value: "> $90,000"
+    label: "> $90,000"
+  placeholder: Please Select
+  required: true
+  small_width: 12
+  medium_width: 10
+- name: a_full_track_at_aca_costs_12_000_if_you_do_not_receive_the_aca_diversity_scholarship_would_you_stil
+  label: If you did not receive the Austin Coding Academy Diversity Scholarship, would you be interested in/able to take classes? (We do offer payment plan options)
+  description: ''
+  type: select
+  value: ''
+  options:
+  - value: "Yes"
+    label: "Yes"
+  - value: "No"
+    label: "No"
+  placeholder: Please Select
+  required: true
+  small_width: 12
+  medium_width: 10
+# text fields
+- name: what_makes_you_the_best_candidate_for_the_aca_diversity_scholarship_answer_in_200_400_words_
+  label: What makes you the best candidate for the ACA Diversity Scholarship and how have you shown your commitment to underrepresented groups in tech? (Answer in 200-400 words)
+  description: ''
+  type: textarea
+  value: ''
+  placeholder:
+  required: true
+  small_width: 12
+  medium_width: 10
+  options: []
+- name: what_is_an_obstacle_that_you_ve_encountered_in_life_and_how_have_you_overcome_it_answer_in_200_400_
+  label: What is an obstacle that you've encountered in life and how have you overcome it? (Answer in 200-400 words)
+  description: ''
+  type: textarea
+  value: ''
+  placeholder:
+  required: true
+  small_width: 12
+  medium_width: 10
+  options: []
+- name: how_do_you_intend_to_use_your_coding_skills_after_you_graduate_answer_in_less_than_400_words_
+  label: How do you intend to use your coding skills after you graduate? (Answer in less than 200 words)
+  description: ''
+  type: textarea
+  value: ''
+  placeholder:
+  required: true
+  small_width: 12
+  medium_width: 10
+  options: []
+
+challenge_descript1: "Take a look at the picture below showing HTML, CSS, and JavaScript.  In the space provided,
+  please describe in 1-2 paragraphs what the code displayed in the picture is creating."
+challenge_descript2: "This is not a test of your coding knowledge. You are encouraged to use online resources to find answers that you don't know —
+  as a developer that will be an important part of your job! Here are some resources we recommend using:"
+img_src: /assets/images/coding-assignment.png
+resources:
+- name: What is the web?
+  url: https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g
+- name: Codepen
+  url: https://codepen.io/austincoding/pen/ELabMz
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key ==  site.key%}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="container mt-90 pt-1 pb-5">
+  <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
+    <h2 class="font-family-alt mt-5 mb-3 display-5 display-55 text-center col-12 col-sm-10">
+      Diversity Scholarship Application
+    </h2>
+    <div class="d-flex flex-column align-items-center display-6 text-center col-12 mb-4">
+      <span class="text-grey">(Continued)</span>
+    </div>
+    <!-- FORM START -->
+    <form
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.diversity_scholarship_application_page_2 }}"
+      method="POST"
+      target="_top"
+      class="d-flex flex-column align-items-center"
+    >
+      {% assign text_fields = page.form_fields %}
+      <div class="row d-flex justify-content-center p-5">
+        {% assign redirect_url = page.redirect_url %}
+        {% include fields.html fields=text_fields redirect_url=redirect_url %}
+      </div>
+      <!-- CODING CHALLENGE -->
+      <div class="col-12 col-sm-10">
+        {% include challenge.html %}
+        <label for="code-challenge" class="form-label flex-wrap">
+          Describe in 1-2 paragraphs what the code above is creating. <span class="text-red-a">*</span>
+        </label>
+        <div class="input-group">
+          <textarea
+            id="code-challenge"
+            class="form-control"
+            rows="10"
+            name="coding_assignment_answer"
+            placeholder="1-2 paragraphs"
+            aria-label="Coding Challenge Question"
+            required
+            data-msg="Please enter a response."
+            data-error-class="u-has-error"
+            data-success-class="u-has-success"
+          ></textarea>
+        </div>
+      </div>
+      <div class="col-12 col-sm-10 my-4 d-flex flex-column align-items-center">
+        <button class="btn btn-round text-white bg-primary-dark mb-4" type="Submit">
+          Submit
+        </button>
+        <div class="col-12 d-flex flex-column align-items-center">
+          {% include data-agreement.html %}
+        </div>
+      </div>
+      <!-- END CODING CHALLENGE -->
+    </form>
+    <!-- FORM END -->
+  </div>
+</div>
+
+{% include form-connect-script.html %}

@@ -16,9 +16,15 @@
   {% endfor %}
 {% endif %}
 <!-- htmllint preset="none" -->
-<p class="small text-center {{ padding | default: px-md-10 | liquify }}">
+<p class="small text-center {{ padding | default: px-md-10 | liquify }} {{ include.text_class }}">
   By submitting your information, you agree to our <a class="{{ include.class | liquify }}" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> and <a class="{{ include.class | liquify }}" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>, and to receive marketing communications from {{ school.name }}.
 </p>
+<amp-recaptcha-input
+  layout="nodisplay"
+  name="recaptcha_response"
+  data-sitekey="6LfApY8UAAAAADYQCJkSM5EQUdx57tzrMp1XFUm6"
+  data-action="homepage">
+</amp-recaptcha-input>
 <!-- htmllint preset="$previous" -->
 <p class="small text-muted text-center">
   This site is protected by reCAPTCHA and the Google
