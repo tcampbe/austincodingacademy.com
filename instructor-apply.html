@@ -521,11 +521,11 @@ schools:
       method="POST"
       class="d-flex justify-content-center"
       >
-      <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/">
       <div class="row mw-850">
         {% assign all_fields = school.form_fields %}
-        {% include fields.html fields=all_fields %}
-        <div class="col-sm-6 mb-3 mb-sm-6 d-flex flex-column justify-content-end">
+        {% assign redirect = school.redirect %}
+        {% include fields.html fields=all_fields redirect_url=redirect %}
+        <div class="col-sm-6 mb-4">
           {% include referral-question.html %}
         </div>
         <div class="col-12 mb-4 d-flex justify-content-center">
