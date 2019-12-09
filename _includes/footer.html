@@ -94,31 +94,32 @@
   </div>
 </footer>
 <!-- ========== END FOOTER ========== -->
-
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "{{ school.name }}",
-    "url": "{{ school.url }}",
-    "priceRange": "$2990",
-    "logo": "{{ school.url }}/assets/images/logo-{{ site.key }}.png",
-    "image": {
-      "@type": "ImageObject",
-      "url": "{{ school.url }}/assets/images/header-index.jpg"
-    },
-    "telephone": "{{ school.phone | phone_number }}",
-    "address": [
-      {% for location in school.locations %}
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "{{ location.street | liquify }}",
-          "addressLocality": "{{ location.city }}",
-          "addressRegion": "{{ location.state | liquify }}",
-          "postalCode": "{{ location.postal }}",
-          "addressCountry": "US"
-        }{% unless forloop.last %},{% endunless %}
-      {% endfor %}
-    ]
-  }
+{% unless page.structured_data == false %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ school.name }}",
+      "url": "{{ school.url }}",
+      "priceRange": "$2990",
+      "logo": "{{ school.url }}/assets/images/logo-{{ site.key }}.png",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ school.url }}/assets/images/header-index.jpg"
+      },
+      "telephone": "{{ school.phone | phone_number }}",
+      "address": [
+        {% for location in school.locations %}
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ location.street | liquify }}",
+            "addressLocality": "{{ location.city }}",
+            "addressRegion": "{{ location.state | liquify }}",
+            "postalCode": "{{ location.postal }}",
+            "addressCountry": "US"
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
   </script>
+{% endunless %}
