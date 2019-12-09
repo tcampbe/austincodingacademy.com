@@ -4,6 +4,7 @@ permalink: "/courses/web-development/"
 amp_components:
 - amp-carousel
 - amp-fx
+- amp-recaptcha-input
 head_title: ''
 description: ''
 redirect_from:
@@ -344,7 +345,7 @@ schools:
         layout="nodisplay"
         scrollable
         on="tap:course-guide-lightbox.close"
-        tabindex="0"
+        tabindex="-1"
         role="dialog"
       >
         {% include course-guide-form.html lightbox=true text_class="text-white" %}
