@@ -15,7 +15,8 @@
     {% endif %}
   {% endfor %}
 {% endif %}
-<div class="row d-flex justify-content-center">
+<div
+  class="row d-flex justify-content-center">
   <div class="col-sm-10 col-xs-10 mw-850">
     <!-- htmllint preset="none" -->
     <h2
@@ -25,7 +26,7 @@
         data-margin-start="1%"
         data-margin-end="20%"
       {% endif %}
-      class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7"
+      class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7 {% if include.lightbox %}d-none{% endif %}"
     >
       {% if page.permalink == "/courses/wordpress-fundamentals/" %}
         See How It Works
@@ -56,7 +57,14 @@
       a job in coding after you graduate.
     {% endif %}
     </p>
-    <div class="row">
+    <div
+      class="row"
+      {% if include.lightbox %}
+        on="tap:course-guide-lightbox.open"
+        tabindex="-1"
+        role="form"
+      {% endif %}
+    >
       <!-- Image -->
       <div class="d-flex flex-column justify-content-center mb-7 col-xs-11 col-sm-11 col-md-5 col-lg-5 mx-auto">
         <!-- htmllint preset="none" -->
@@ -90,11 +98,7 @@
             <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
             <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
             <input name="hutk" type="hidden" value="">
-            {% if include.course_guide %}
-              <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ include.course_guide_href }}">
-            {% else %}
-              <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ school.course_guide }}">
-            {% endif %}
+            <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ include.course_guide_href | default: school.course_guide }}">
             <input name="school" type="hidden" value="{{ school.name }}">
             <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 
