@@ -4,6 +4,7 @@ permalink: "/courses/web-development/"
 amp_components:
 - amp-carousel
 - amp-fx
+- amp-recaptcha-input
 head_title: ''
 description: ''
 redirect_from:
@@ -330,7 +331,7 @@ schools:
       <!-- htmllint preset="none" -->
       <a
         class="btn btn-round btn-outline-light {{ include.class | liquify }}"
-        on="tap:event-lightbox"
+        on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
       >
@@ -338,6 +339,17 @@ schools:
         Course Guide
       </a>
     </div>
+      <amp-lightbox
+        id="course-guide-lightbox"
+        class="lightbox text-white mt-10 mt-sm-0 pb-8 pb-sm-0 pt-6 pt-sm-0 px-4 px-sm-0"
+        layout="nodisplay"
+        scrollable
+        on="tap:course-guide-lightbox.close"
+        tabindex="-1"
+        role="dialog"
+      >
+        {% include course-guide-form.html lightbox=true text_class="text-white" %}
+      </amp-lightbox>
     {% endif %}
     <div class="ml-2">{% include btn-apply.html %}</div>
   </div>
