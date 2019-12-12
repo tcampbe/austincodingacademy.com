@@ -6,6 +6,59 @@ amp_components:
 head_title: "Contact {{ school.name }} | Programming Classes Near You"
 description: "Questions, comments or concerns? From classes to financing to your next steps, we’ll help you find the answers. Contact us today!"
 redirect_from: []
+redirect_url: "{{ school.url }}/thank-you/"
+contact_form_fields: 
+- name: firstname
+  label: First Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: First Name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: lastname
+  label: Last Name
+  description: ''
+  type: text
+  value: ''
+  placeholder: Last Name
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: email
+  label: Email
+  description: ''
+  type: email
+  value: ''
+  placeholder: "Email"
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: phone
+  label: Phone
+  description: ''
+  type: tel
+  value: ''
+  placeholder: "(***)***-****"
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: message
+  label: Message
+  description: ''
+  type: textarea
+  value: ''
+  placeholder: "Enter your questions or comments here"
+  required: true
+  small_width: 12
+  medium_width: 12
+  options: []
+
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -57,7 +110,6 @@ redirect_from: []
       {% endfor %}
     </div>
     <div class="col-xs-12 col-sm-6">
-      {% include contact-form.html %}
-    </div>
+      {% include contact-form.html contact_fields=page.contact_form_fields redirect_url=page.redirect_url %}    </div>
   </div>
 </div>

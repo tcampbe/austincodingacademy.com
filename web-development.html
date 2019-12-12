@@ -307,6 +307,10 @@ schools:
       {% endif %}
     {% endfor %}
   {% endif %}
+  {% if _page.contact_form_fields %}
+    {% assign contact_form_fields=_page.contact_form_fields%}
+    {% assign redirect_url=_page.redirect_url %}
+  {% endif %}
 {% endfor %}
 {% if page.schools %}
   {% for _school in page.schools %}
@@ -707,7 +711,14 @@ schools:
             From choosing the right course to understanding course details, we're here
             to help.
           </h5>
-          {% include contact-form.html %}
+          <!-- {% for _page in site.pages %}
+            {% if _page.contact_form_fields %}
+              {% assign contact_form_fields=_page.contact_form_fields%}
+              {% assign redirect_url=_page.redirect_url %}
+            {% endif %}
+          {% endfor %} -->
+          {% include contact-form.html contact_fields=contact_form_fields redirect_url=redirect_url %}    
+        </div>
         </div>
       </div>
       <div class="d-none d-md-inline col-md-2"></div>

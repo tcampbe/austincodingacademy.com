@@ -310,6 +310,10 @@ schools:
       {% endif %}
     {% endfor %}
   {% endif %}
+  {% if _page.contact_form_fields %}
+    {% assign contact_form_fields=_page.contact_form_fields%}
+    {% assign redirect_url=_page.redirect_url %}
+  {% endif %}
 {% endfor %}
 {% if page.schools %}
   {% for _school in page.schools %}
@@ -344,8 +348,8 @@ schools:
       Still Have Questions?
     </h2>
     <div class="d-flex flex-column justify-content-center">
-      {% include contact-form.html %}
-    </div>
+        {% include contact-form.html contact_fields=contact_form_fields redirect_url=redirect_url %}    
+      </div>
   </section>
 
   <script type="application/ld+json">
