@@ -55,6 +55,6 @@ education:
 projects:
   - name: "Lubbock Local Resaurant Locator" # project title
     desc: "I am in the process of developing a website to help search and review restraunts in the lubbock area" # short description of what project does
-    url: "" # link to your deployed project
+    url: "https://lubbocklocalrestaurantapi.azurewebsites.net/profile" # link to your deployed project
 
 ---
