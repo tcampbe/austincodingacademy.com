@@ -2,7 +2,7 @@
 layout: default
 permalink: "/scheduling/"
 amp_components: []
-redirect_from: ''
+redirect_from:
 header_text: Scheduling
 ---
 
@@ -10,7 +10,7 @@ header_text: Scheduling
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key ==  site.key%}
+      {% if _school.key == site.key %}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}
@@ -31,12 +31,12 @@ header_text: Scheduling
     </h1>
   </div>
   <!-- htmllint preset="none" -->
-  <iframe
+  <!-- <iframe
     src="{{ settings.acuity_scheduling_src }}"
     width="100%"
     height="800"
     frameBorder="0">
-  </iframe>
+  </iframe> -->
   <!-- htmllint preset="$previous" -->
   <script
     src="https://embed.acuityscheduling.com/js/embed.js"
