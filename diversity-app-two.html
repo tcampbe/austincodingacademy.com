@@ -1,6 +1,8 @@
 ---
 layout: default
 permalink: "/diversity-scholarship/apply-two/"
+amp_components:
+- amp-recaptcha-input
 redirect_from:
 - "/diversity-scholarship/application-two/"
 redirect_url: "{{ school.url }}/scheduling"
@@ -210,7 +212,7 @@ resources:
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key ==  site.key%}
+      {% if _school.key == site.key %}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}

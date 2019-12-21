@@ -11,6 +11,9 @@ fields:
 - type: number
   name: hubspot_portal_id
   label: hubspot_portal_id
+- type: text
+  name: acuity_scheduling_src
+  label: acuity_scheduling_src
 - type: datetime
   name: preapplication_form_guid
   label: preapplication_form_guid

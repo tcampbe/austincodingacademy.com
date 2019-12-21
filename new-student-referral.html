@@ -101,7 +101,7 @@ schools:
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key ==  site.key%}
+      {% if _school.key == site.key %}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}
@@ -169,7 +169,7 @@ schools:
       Questions?
     </h2>
     <p class="px-2 p-sm-0 mx-auto">
-      Have additional questions about the Referral Program? Email <a href="mailto:info@{{ site.key }}codingacademy.com" rel="noopener" target="_blank">info@{{ site.key }}codingacademy.com</a>
+      Have additional questions about the Referral Program? Email <a href="mailto:info@{{ site.key }}.com" rel="noopener" target="_blank">info@{{ site.key }}.com</a>
       with the subject line "Referral Program" with your question, and a member of the {{ school.name }} team will get back to you with an answer!
     </p>
   </div>
