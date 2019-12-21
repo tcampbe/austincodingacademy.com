@@ -124,7 +124,24 @@ role:
     people within their business, and many of those folks started out in technical
     support. Talent is recognized and rewarded at WP Engine. If you are a self-motivator
     seeking a challenge and can think outside the box, then this role is for you!
-
+schools:
+- key: austincodingacademy
+  tuition_options:
+  - title: Pay Up Front
+    description: The total cost of the WordPress Fundamentals Course is $1,990.
+      Reserve your spot in class by making a $490 deposit once accepted, and pay
+      your remaining tuition by February 10th to start class.
+    price_header: Total Price
+    price: "$1,900"
+    price2: ""
+  - title: Payment Plan
+    description: Take advantage of our payment plan option to make tuition more
+      manageable. Make your $490 deposit before the start of class and make weekly
+      payments of $155 for 10 weeks to cover the cost of tuition. There is a $60
+      payment plan fee included in the cost of tuition. No interest or penalty for
+      prepayment.
+    price_header: Total Price
+    price: "$2,050"
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -419,7 +436,8 @@ role:
       </div>
     </div>
 
-    <div class="container-fluid d-flex flex-row justify-content-center">
+    <!-- LEARN MORE -->
+    <div class="container-fluid d-flex flex-row justify-content-center mb-6">
       <a
         class="btn cta-gradient hover-white btn-round mr-2 mr-sm-4 text-white d-flex justify-content-center"
         href="{{ role.learn_more_url }}"
@@ -429,6 +447,9 @@ role:
         </span>
       </a>
     </div>
+
+    <!-- TUITION -->
+    {% include tuition-section.html %}
   </section>
 
   <section id="contact" class="container-fluid py-11">
