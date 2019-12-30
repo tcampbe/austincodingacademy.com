@@ -1,9 +1,11 @@
 ---
 layout: default
 permalink: "/diversity-scholarship/apply-two/"
+amp_components:
+- amp-recaptcha-input
 redirect_from:
 - "/diversity-scholarship/application-two/"
-redirect_url: https://acaappointment.as.me/schedule.php?appointmentType=3203565
+redirect_url: "{{ school.url }}/scheduling"
 head_title: "Diversity Scholarship Application Page 2"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 hide_apply: 'd-none'
@@ -210,7 +212,7 @@ resources:
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key ==  site.key%}
+      {% if _school.key == site.key %}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}

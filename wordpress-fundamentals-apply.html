@@ -2,7 +2,7 @@
 layout: default
 permalink: "/courses/wordpress-fundamentals/apply/"
 redirect_from:
-redirect_url: https://acaappointment.as.me/schedule.php?appointmentType=3203565
+redirect_url: "{{ school.url }}/scheduling"
 head_title: "Start Your Application | Apply Now at {{ school.name }}"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 hide_apply: 'd-none'
@@ -78,7 +78,7 @@ process:
       target="_top"
     >
       <div class="form-container">
-        <input name="redirect_url" type="hidden" value="{{ page.redirect_url }}">
+        <!-- <input name="redirect_url" type="hidden" value="{{ page.redirect_url }}"> -->
         <input name="lifecyclestage" type="hidden" value="opportunity">
         <input name="filled_out_application" type="hidden" value="true">
         <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
