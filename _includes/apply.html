@@ -1,22 +1,6 @@
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
-    {% if include.diversity %}
-      <h2 class="font-family-alt my-5 my-sm-5 display-5 display-55 text-center col-12 col-sm-10">
-        {{ page.heading }}
-      </h2>
-      <div class="px-6 py-4 col-12 col-sm-10 d-flex flex-column align-items-start">
-        <p class="text-center mx-auto mb-0 mb-sm-6">
-          {{ page.app_descript }}
-        </p>
-        {% assign timeline = page.timeline %}
-        {% for item in timeline %}
-        <div class="py-6 py-sm-0 d-flex flex-column justify-content-center">
-          <h4 class="border-bottom">{{ item.title }}</h4>
-          <p>{{ item.text }}</p>
-        </div>
-        {% endfor %}
-      </div>
-    {% else %}
+    
       <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
         {{ page.heading }}
       </h2>
@@ -49,7 +33,6 @@
           </div>
         {% endfor %}
       </div>
-    {% endif %}
     <form
       action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ include.form_guid }}"
       method="POST"
@@ -57,22 +40,9 @@
     >
       <div class="col-12 col-sm-10 mx-auto">
         <div class="row d-flex justify-content-center p-5">
-          {% if include.diversity %}
-            {% assign all_fields = page.form_fields %}
-            {% assign redirect_url = school.url | append: "/diversity-scholarship/apply-two" %}
-            {% include fields.html fields=all_fields redirect_url=redirect_url %}
-            <div class="col-12 my-5">
-              <h2 class="text-center font-weight-bold mb-5">
-                Education &amp; Work Experience
-              </h2>
-            </div>
-            {% assign edu_work_fields = page.edu_work_fields %}
-            {% include fields.html fields=edu_work_fields %}
-          {% else %}
             {% assign all_fields = page.form_fields %}
             {% assign redirect_url = school.url | append: "/apply-two" %}
             {% include fields.html fields=all_fields redirect_url=redirect_url %}
-          {% endif %}
           <div class="mb-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
             <button class="mb-4 btn cta-gradient hover-white text-white hover-white btn-round {{ include.class | liquify }}" >

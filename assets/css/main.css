@@ -439,23 +439,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#hero-diversity {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
-    url('/assets/images/div-school-hero.jpg');
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (min-width: 768px) {
-  #hero-diversity {
-    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
-      url('/assets/images/div-school-hero.jpg');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
 
 /* CUSTOM GRADIENTS */
 
