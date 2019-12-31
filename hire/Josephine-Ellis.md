@@ -55,8 +55,8 @@ education:
     degree: "Web Development"
 
 projects:
-  - name: "" # project title
+  - name: "Lubbock Local Restaurants" # project title
     desc: "" # short description of what project does
-    url: "" # link to your deployed project
+    url: "https://lubbocklocalrestaurantapi.azurewebsites.net/profile" # link to your deployed project
 
 ---

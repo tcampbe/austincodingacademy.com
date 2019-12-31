@@ -14,6 +14,7 @@ hero_text: WordPress powers over one-third of all websites on the internet. In t
   (CMS) and develop the skills to either pursue a career in WordPress development
   or be a Technical Support Specialist with WP Engine – one of the industry leaders
   in managed WordPress hosting and the premier WordPress Digital Experience Platform.
+start_date_header: "Join our upcoming start date:"
 next_start_date: February 2020
 program_descript: Austin Coding Academy's WordPress Fundamentals Course is part of
   a unique partnership with WP Engine, a global leader in managed WordPress hosting.
@@ -123,13 +124,30 @@ role:
     people within their business, and many of those folks started out in technical
     support. Talent is recognized and rewarded at WP Engine. If you are a self-motivator
     seeking a challenge and can think outside the box, then this role is for you!
-
+schools:
+- key: austincodingacademy
+  tuition_options:
+  - title: Pay Up Front
+    description: The total cost of the WordPress Fundamentals Course is $1,990.
+      Reserve your spot in class by making a $490 deposit once accepted, and pay
+      your remaining tuition by February 10th to start class.
+    price_header: Total Price
+    price: "$1,900"
+    price2: ""
+  - title: Payment Plan
+    description: Take advantage of our payment plan option to make tuition more
+      manageable. Make your $490 deposit before the start of class and make weekly
+      payments of $155 for 10 weeks to cover the cost of tuition. There is a $60
+      payment plan fee included in the cost of tuition. No interest or penalty for
+      prepayment.
+    price_header: Total Price
+    price: "$2,050"
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key ==  site.key%}
+      {% if _school.key == site.key %}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}
@@ -185,9 +203,20 @@ role:
 <main>
   <section class="py-8 container">
     <div class="pb-8">
-      <div class="text-center font-family-alt display-5 py-6">
-        Class Starts: February 10th
-      </div>
+      <div class="pb-8 mt-4">
+          <div class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
+            <div class="card-body">
+              <div class="display-7 pb-4 text-center">
+                {{ page.start_date_header }}
+              </div>
+              <div class="shadow border">
+                <div class="text-center display-6 py-4">
+                  {{ page.next_start_date | liquify }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       <div class="d-flex justify-space-between flex-column flex-sm-row">
         <div class="mx-0 mx-sm-auto p-4 w-100 w-sm-50">
           {{ page.program_descript | liquify }}
@@ -407,7 +436,8 @@ role:
       </div>
     </div>
 
-    <div class="container-fluid d-flex flex-row justify-content-center">
+    <!-- LEARN MORE -->
+    <div class="container-fluid d-flex flex-row justify-content-center mb-6">
       <a
         class="btn cta-gradient hover-white btn-round mr-2 mr-sm-4 text-white d-flex justify-content-center"
         href="{{ role.learn_more_url }}"
@@ -417,6 +447,9 @@ role:
         </span>
       </a>
     </div>
+
+    <!-- TUITION -->
+    {% include tuition-section.html %}
   </section>
 
   <section id="contact" class="container-fluid py-11">

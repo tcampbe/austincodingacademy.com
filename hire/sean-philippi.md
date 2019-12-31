@@ -14,7 +14,7 @@ linkedin: https://www.linkedin.com/in/seanphilippi
 email: sean.philippi@gmail.com
 website: https://github.com/seanphilippi
 workplace: Austin Coding Academy
-phone: 
+phone:
 skills:
 - JavaScript
 - React.js

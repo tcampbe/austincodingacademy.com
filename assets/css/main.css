@@ -317,6 +317,16 @@ a {
   transform: scale(1.003);
 }
 
+/* MESSAGE BAR */
+
+.fixed-banner {
+  position: fixed;
+  top: 82px;
+  right: 0;
+  left: 0;
+  z-index: 1020;
+}
+
 /* HERO IMAGES */
 
 #bg-404 {
@@ -428,23 +438,6 @@ a {
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
-}
-#hero-diversity {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
-    url('/assets/images/div-school-hero.jpg');
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (min-width: 768px) {
-  #hero-diversity {
-    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
-      url('/assets/images/div-school-hero.jpg');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 }
 
 /* CUSTOM GRADIENTS */
