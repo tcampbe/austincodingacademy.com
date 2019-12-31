@@ -83,18 +83,18 @@ successes:
 - name: Student Brian
   title: Software Engineer
   company: Dell
-  img_src: 
-  learn_url: 
+  img_src:
+  learn_url:
 - name: Student Jessica
   title: Web Developer
   company: IBM
-  img_src: 
-  learn_url: 
+  img_src:
+  learn_url:
 - name: Student Bobby
   title: UI Developer
   company: Indeed
-  img_src: 
-  learn_url: 
+  img_src:
+  learn_url:
 hero_text: Learn the most popular languages for making websites, web apps, games,
   animations, and mobile applications. In this track you'll learn front-end and back-end
   web development, some of today's most versatile and sought-after skills.
@@ -302,7 +302,7 @@ schools:
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key ==  site.key%}
+      {% if _school.key == site.key %}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}
@@ -619,63 +619,8 @@ schools:
   </div>
   {% if school.tuition_options.size > 0 %}
     <section class="bg-textured">
-      <div class="text-white m-0 pt-8 pb-2">
-        <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt text-center w-75 mx-auto display-5 mb-4">
-          Tuition
-        </div>
-        <div class="container">
-          {% for option in school.tuition_options %}
-            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row my-5">
-              <div class="col-md-8">
-                <h3 class="display-7 border-bottom">
-                  {{ option.title | liquify }}
-                </h3>
-                <p class="text-white">
-                  {{ option.description | liquify }}
-                </p>
-              </div>
-              <div class="col-md-4 px-5">
-                {% if option.price_header == 'Details' %}
-                  <div class="text-center">
-                    <h5>
-                      {{ option.price_header | liquify }}
-                    </h5>
-                    <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
-                      <div class="display-6 text-white">
-                        {{ option.price | liquify }} <span style="font-size: 1rem;"></span>
-                      </div>
-                      <div class="display-8 text-white">
-                        +<br>
-                        {{ option.price2 }}<span style="font-size: 12px;"> / 2 weeks</span>
-                      </div>
-                    </div>
-                  </div>
-                {% elsif option.price %}
-                  <div class="text-center">
-                    <h5>
-                      {{ option.price_header | liquify }}
-                    </h5>
-                    <p
-                      class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6 text-white"
-                      style="min-width: 155px;"
-                    >
-                      {{ option.price | liquify }}
-                    </p>
-                  </div>
-                {% elsif option.cta %}
-                  <div class="text-center text-white">
-                    <h5>
-                      Learn More
-                    </h5>
-                    {{ option.cta | liquify }}
-                  </div>
-                {% endif %}
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-
+      <!-- TUITION -->
+      {% include tuition-section.html %}
       <div class="pb-8 mt-4">
         <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="card shadow-black w-75 w-sm-50 w-md-50 w-lg-50 mx-auto mw-450">
           <div class="card-body">

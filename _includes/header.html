@@ -2,7 +2,7 @@
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
-      {% if _school.key ==  site.key%}
+      {% if _school.key == site.key %}
         {% assign school = _school %}
       {% endif %}
     {% endfor %}
@@ -25,7 +25,7 @@
   layout="nodisplay"
   side="right"
 >
-  
+
   {% for item in navigation %}
     <div
       class="mt-4"
@@ -138,11 +138,9 @@
             {% for item in navigation %}
               <li class="nav-item u-header__nav-item ml-5 pb-2">
               {% if item.links %}
-                <!-- <a tabindex="0"> -->
-                  <span class="text-white hover-white">
-                    {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
-                  </span>
-                <!-- </a> -->
+                <span class="text-white hover-white">
+                  {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
+                </span>
                 <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
                   {% for link in item.links %}
                     <li class="position-relative p-0 my-2">
@@ -199,7 +197,7 @@
                   <!-- htmllint preset="none" -->
                   <!-- {% if page.type %}
                     {% assign something = 'd-none' %}
-                  
+
                   {% endif %} -->
                   <a class="{{ item.class | liquify }} hover-white {% if page.hide_apply and item.title == 'Apply' %} {{ page.hide_apply }}{% endif%}" href="{{ item.url | liquify }}">
                   <!-- htmllint preset="$previous" -->
