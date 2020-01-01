@@ -96,8 +96,6 @@
             <input name="downloaded_a_courses_guide" type="hidden" value="true">
             <input name="hs_lead_status" type="hidden" value="NEW">
             <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
-            <input name="page_uri" type="hidden" value="{{ school.url }}{{ site.baseurl }}{{ page.url }}">
-            <input name="hutk" type="hidden" value="">
             <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ include.course_guide_href | default: school.course_guide }}">
             <input name="school" type="hidden" value="{{ school.name }}">
             <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
