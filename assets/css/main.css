@@ -327,6 +327,14 @@ a {
   z-index: 1020;
 }
 
+.banner-link {
+  color: white;
+}
+
+.banner-link:hover {
+  color: rgba(var(--primary-dark), 1);
+}
+
 /* HERO IMAGES */
 
 #bg-404 {
