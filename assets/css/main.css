@@ -327,11 +327,11 @@ a {
   z-index: 1020;
 }
 
-.banner-link {
+.promo-link {
   color: white;
 }
 
-.banner-link:hover {
+.promo-link:hover {
   color: rgba(var(--primary-dark), 1);
 }
 
