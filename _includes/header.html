@@ -214,4 +214,7 @@
     </div>
   </div>
 </header>
+{% if settings.banner.message.size > 0 %}
+  {% include banner.html %}
+{% endif %}
 <!-- ========== END HEADER ========== -->
