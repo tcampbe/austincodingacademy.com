@@ -328,11 +328,11 @@ a {
 }
 
 .promo-link {
-  color: white;
+  color: rgba(var(--primary-dark), 1);
 }
 
 .promo-link:hover {
-  color: rgba(var(--primary-dark), 1);
+  color: white;
 }
 
 /* HERO IMAGES */

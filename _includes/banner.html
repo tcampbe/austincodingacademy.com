@@ -16,7 +16,7 @@
   {% endfor %}
 {% endif %}
 
-{% assign banner = settings.banner %}
+{% assign banner = page.banner %}
 <!-- htmllint preset="none" -->
 <div class="text-center py-1 fixed-banner bg-{{ banner.bg_color }}">
   <span class="text-{{ banner.text_color }}">{{ banner.message }}</span>
