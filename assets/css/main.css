@@ -327,12 +327,12 @@ a {
   z-index: 1020;
 }
 
-.promo-link {
-  color: white;
+.banner-link {
+  color: rgba(var(--primary-dark), 1);
 }
 
-.promo-link:hover {
-  color: rgba(var(--primary-dark), 1);
+.banner-link:hover {
+  color: white;
 }
 
 /* HERO IMAGES */
