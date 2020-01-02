@@ -317,6 +317,24 @@ a {
   transform: scale(1.003);
 }
 
+/* MESSAGE BAR */
+
+.fixed-banner {
+  position: fixed;
+  top: 82px;
+  right: 0;
+  left: 0;
+  z-index: 1020;
+}
+
+.banner-link {
+  color: white;
+}
+
+.banner-link:hover {
+  color: rgba(var(--primary-dark), 1);
+}
+
 /* HERO IMAGES */
 
 #bg-404 {
