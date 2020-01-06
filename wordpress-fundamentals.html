@@ -8,6 +8,11 @@ amp_components:
 - amp-recaptcha-input
 redirect_from: []
 hero: js
+phone: 5129569278
+banner:
+  message: "<a class='promo-link' href='tel:{{ page.phone | liquify }}'>Call us at 512-956-9278</a> to learn more about our upcoming WordPress Fundamentals Course!"
+  bg_color: 'blue'
+  text_color: 'white'
 hero_heading: WordPress Fundamentals
 hero_text: WordPress powers over one-third of all websites on the internet. In this
   course, you'll learn the fundamentals of this powerful content management system
@@ -413,31 +418,31 @@ schools:
         </p>
       </div>
     </div>
-
-    <!-- ABOUT THIS ROLE -->
+  </section>
+  <!-- ABOUT THE ROLE -->
+  <section>
     {% assign role = page.role %}
     <div class="container py-8">
-      <div class="display-5 font-family-alt text-white mb-5">
+      <div class="display-5 font-family-alt mb-5">
         {{ role.heading | liquify }}
       </div>
-      <p class="text-white">
+      <p>
         {{ role.p1 | liquify }}
       </p>
       <div class="mb-2">
-        <div class="display-7 mb-4 text-white">
+        <div class="display-7 mt-4 mb-5">
           {{ role.subheading | liquify }}
         </div>
-        <p class="text-white">
+        <p>
           {{ role.p2 | liquify }}
         </p>
-        <p class="text-white">
+        <p>
           {{ role.p3 | liquify }}
         </p>
       </div>
     </div>
-
     <!-- LEARN MORE -->
-    <div class="container-fluid d-flex flex-row justify-content-center mb-6">
+    <div class="container-fluid d-flex flex-row justify-content-center pb-4 mb-6">
       <a
         class="btn cta-gradient hover-white btn-round mr-2 mr-sm-4 text-white d-flex justify-content-center"
         href="{{ role.learn_more_url }}"
@@ -447,8 +452,9 @@ schools:
         </span>
       </a>
     </div>
-
-    <!-- TUITION -->
+  </section>
+  <!-- TUITION -->
+  <section class="bg-textured pb-3">
     {% include tuition-section.html %}
   </section>
 

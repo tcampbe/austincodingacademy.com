@@ -195,10 +195,6 @@
                   </ul>
                 {% else %}
                   <!-- htmllint preset="none" -->
-                  <!-- {% if page.type %}
-                    {% assign something = 'd-none' %}
-
-                  {% endif %} -->
                   <a class="{{ item.class | liquify }} hover-white {% if page.hide_apply and item.title == 'Apply' %} {{ page.hide_apply }}{% endif%}" href="{{ item.url | liquify }}">
                   <!-- htmllint preset="$previous" -->
                     <span class="text-white hover-white">{{ item.title | liquify }}</span>
@@ -214,4 +210,7 @@
     </div>
   </div>
 </header>
+{% if page.banner.message.size > 0 %}
+  {% include banner.html %}
+{% endif %}
 <!-- ========== END HEADER ========== -->

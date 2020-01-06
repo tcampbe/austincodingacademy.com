@@ -12,6 +12,15 @@ redirect_from:
 - "/javascript/"
 - "/csharp/"
 hero: js
+phone: 5129569278
+banner:
+  message: "<a class='promo-link' href='tel:{{ page.phone | liquify }}'>Call us at 512-956-9278</a> to learn more about our upcoming Full Stack Web Development Program!"
+  bg_color: 'blue'
+  text_color: 'white'
+hero_heading: Full Stack Web Development
+hero_text: Learn the most popular languages for making websites, web apps, games,
+  animations, and mobile applications. In this track you'll learn front-end and back-end
+  web development, some of today's most versatile and sought-after skills.
 overview:
 - title: In the Classroom
   odd: true
@@ -95,9 +104,6 @@ successes:
   company: Indeed
   img_src:
   learn_url:
-hero_text: Learn the most popular languages for making websites, web apps, games,
-  animations, and mobile applications. In this track you'll learn front-end and back-end
-  web development, some of today's most versatile and sought-after skills.
 features:
 - heading: The World’s Top Programming Languages
   text: These languages and frameworks are in the top technologies used, with JavaScript
@@ -320,7 +326,7 @@ schools:
 <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-55 display-sm-4 text-center">
-    Full Stack Web Development
+    {{ page.hero_heading | liquify }}
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
     {{ page.hero_text | liquify }}
