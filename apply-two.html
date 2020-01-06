@@ -192,40 +192,6 @@ form_fields:
   small_width: "12"
   medium_width: "6"
   options: []
-- name: how_did_you_hear_about_austin_coding_academy
-  label: How did you hear about Austin Coding Academy?
-  description: ''
-  type: select
-  value: ''
-  placeholder: Select your answer
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options:
-  - value: 'Facebook'
-    label: 'Facebook'
-  - value: 'Instagram'
-    label: 'Instagram'
-  - value: 'Twitter'
-    label: 'Twitter'
-  - value: 'LinkedIn'
-    label: 'LinkedIn'
-  - value: 'Friend / Family'
-    label: 'Friend / Family'
-  - value: 'Search engine'
-    label: 'Search engine'
-  - value: '{{ school.name }} event'
-    label: '{{ school.name }} event'
-  - value: '{{ school.name }} faculty / staff'
-    label: '{{ school.name }} faculty / staff'
-  - value: '{{ school.name }} student / alumni'
-    label: '{{ school.name }} student / alumni'
-  - value: 'News (TV, article)'
-    label: 'News (TV, article)'
-  - value: 'Radio'
-    label: 'Radio'
-  - value: 'Other'
-    label: 'Other'
 - name: when_would_you_like_to_begin_class
   label: When would you like to begin class?
   description: ''
@@ -376,7 +342,9 @@ schools:
         {% assign about_fields = page.form_fields %}
         {% assign redirect_url = school.url | append: "/scheduling" %}
         {% include fields.html fields=about_fields redirect_url=redirect_url %}
-
+        <div class="col-md-6 mb-4">
+          {% include referral-question.html %}
+        </div>
         <div class="col-12 my-5">
           <h2 class="text-center font-weight-bold mb-5">
             Education &amp; Work Experience
