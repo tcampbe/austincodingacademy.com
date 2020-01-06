@@ -20,10 +20,10 @@ navigation:
     url: "/tuition"
   - title: For Companies
     url: "/enterprise-training"
+  - title: Events
+    url: "/events"
   - title: About Us
     links:
-    - title: Events
-      url: "/events"
     - title: FAQ
       url: "/faq"
     - title: Our Team
@@ -161,6 +161,8 @@ schools:
     - title: Courses
     - title: Tuition
       url: "/tuition"
+    - title: Events
+      url: "/events"
     - title: About Us
       links:
       - title: For Companies
@@ -212,6 +214,18 @@ schools:
     state: TX
     postal: 78752
     url: https://goo.gl/maps/NssXRytdtdezgKft7
+  start_dates:
+  - location: Capital Factory Campus
+    course: Full Stack Web Development
+    date: January 14th
+    days: Tuesday/Thursday
+    time: 6:30 - 9:00pm
+  - location: Highland Campus
+    course: Wordpress Fundamentals
+    date: February 10th
+    days: Monday/Wednesday
+    time: 6:30 - 9:00pm
+  announcement: Call us at <a class='promo-link' href='tel:{{ school.phone | phone_number }}'>{{ school.phone | phone_number }}</a> to learn more about our upcoming WordPress Fundamentals Course!
 - key: lubbockcodingacademy
   name: Lubbock Coding Academy
   primary_light_color: rgb(0, 179, 209)

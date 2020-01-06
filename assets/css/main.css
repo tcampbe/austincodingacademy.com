@@ -815,3 +815,26 @@ ul.share-buttons img {
 .z-auto {
   z-index: auto;
 }
+
+@each $color in primary-light, primary-dark, secondary-light,
+  secondary-dark
+{
+  .bg-$(color) {
+    background-color: rgba(var(--$(color)), 1);
+    color: #ffffff;
+  }
+  .bg-$(color) a {
+    color: #ffffff;
+  }
+  .bg-$(color) a:hover {
+    opacity: 0.7;
+  }
+  .text-$(color) {
+    color: rgba(var(--$(color)), 1);
+  }
+  @for $i from 10 to 90 by 10 {
+    .bg-$(color)-$(i) {
+      background-color: rgba(var(--$(color)), 0.$(i));
+    }
+  }
+}

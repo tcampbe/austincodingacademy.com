@@ -76,40 +76,13 @@ features:
 schools:
 - key: austincodingacademy
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
-  start_dates:
-  - location: Capital Factory Campus
-    date: January 14th
-    days: Tuesday/Thursday
-    time: 6:30 - 9:00pm
-  - location: Highland Campus
-    date: January 27th
-    days: Monday/Wednesday
-    time: 6:30 - 9:00pm
   lightbox_youtube:
     src_id: UGW-v_uam4k
     title: The Moment I Realized My Life Was Changed
 - key: lubbockcodingacademy
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
-  start_dates:
-  - location:
-    date:
-    days:
-    time:
-  - location:
-    date:
-    days:
-    time:
-  - key: texastechuniversitycodingacademy
+- key: texastechuniversitycodingacademy
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
-  start_dates:
-  - location:
-    date:
-    days:
-    time:
-  - location:
-    date:
-    days:
-    time:
   features:
   - heading: Flexible Schedule
     title: Keep Your Day Job While You Make a Career Change
@@ -408,7 +381,7 @@ schools:
               </div>
               <div class="shadow border text-center py-4">
                 <div class="display-7 text-center mb-3">
-                  Classes Meet:
+                  {{ start_date.course }}
                 </div>
                 <div>
                   {{ start_date.days }}
