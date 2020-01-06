@@ -193,7 +193,7 @@ form_fields:
   medium_width: "6"
   options: []
 - name: how_did_you_hear_about_austin_coding_academy
-  label: How did you hear about Austin Coding Academy?
+  label: 'How did you hear about {{ school.name }}'
   description: ''
   type: select
   value: ''
@@ -368,7 +368,7 @@ schools:
       Start by telling us a little bit about yourself
     </h5>
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.application_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.application_form_guid }}"
       method="POST"
       target="_top"
     >
