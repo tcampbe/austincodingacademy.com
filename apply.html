@@ -32,62 +32,171 @@ process:
   time:
   img_width: 70
   img_height: 70
-
-form_fields:
-- name: firstname
-  label: First Name
-  description: ''
-  type: text
-  value: ''
-  options: []
-  placeholder: First Name
-  required: true
-  small_width: 12
-  medium_width: 6
-- name: lastname
-  label: Last Name
-  description: ''
-  type: text
-  value: ''
-  placeholder: Last Name
-  required: true
-  small_width: 12
-  medium_width: 6
-  options: []
-- name: phone
-  label: Phone
-  description: ''
-  type: tel
-  value: ''
-  placeholder: "(***)***-****"
-  required: true
-  small_width: 12
-  medium_width: 6
-  options: []
-- name: email
-  label: Email
-  description: ''
-  type: email
-  value: ''
-  placeholder: name@example.com
-  required: true
-  small_width: 12
-  medium_width: 6
-  options: []
-- name: curriculum_track
-  label: To which program are you applying?
-  description: ''
-  type: select
-  value: ''
-  options:
-  - value: Full Stack JavaScript Track
-    label: Full-Stack Web Development Track
-  - value: WordPress Fundamentals
-    label: WordPress Fundamentals
-  placeholder: Select your answer
-  required: true
-  small_width: 12
-  medium_width: 12
+schools:
+- key: austincodingacademy
+  form_fields:
+  - name: firstname
+    label: First Name
+    description: ''
+    type: text
+    value: ''
+    options: []
+    placeholder: First Name
+    required: true
+    small_width: 12
+    medium_width: 6
+  - name: lastname
+    label: Last Name
+    description: ''
+    type: text
+    value: ''
+    placeholder: Last Name
+    required: true
+    small_width: 12
+    medium_width: 6
+    options: []
+  - name: phone
+    label: Phone
+    description: ''
+    type: tel
+    value: ''
+    placeholder: "(***)***-****"
+    required: true
+    small_width: 12
+    medium_width: 6
+    options: []
+  - name: email
+    label: Email
+    description: ''
+    type: email
+    value: ''
+    placeholder: name@example.com
+    required: true
+    small_width: 12
+    medium_width: 6
+    options: []
+  - name: curriculum_track
+    label: To which program are you applying?
+    description: ''
+    type: select
+    value: ''
+    options:
+    - value: Full Stack JavaScript Track
+      label: Full-Stack Web Development Track
+    - value: WordPress Fundamentals
+      label: WordPress Fundamentals
+    placeholder: Select your answer
+    required: true
+    small_width: 12
+    medium_width: 12
+- key: lubbockcodingacademy
+  form_fields:
+  - name: firstname
+    label: First Name
+    description: ''
+    type: text
+    value: ''
+    options: []
+    placeholder: First Name
+    required: true
+    small_width: 12
+    medium_width: 6
+  - name: lastname
+    label: Last Name
+    description: ''
+    type: text
+    value: ''
+    placeholder: Last Name
+    required: true
+    small_width: 12
+    medium_width: 6
+    options: []
+  - name: phone
+    label: Phone
+    description: ''
+    type: tel
+    value: ''
+    placeholder: "(***)***-****"
+    required: true
+    small_width: 12
+    medium_width: 6
+    options: []
+  - name: email
+    label: Email
+    description: ''
+    type: email
+    value: ''
+    placeholder: name@example.com
+    required: true
+    small_width: 12
+    medium_width: 6
+    options: []
+  - name: curriculum_track
+    label: To which program are you applying?
+    description: ''
+    type: hidden
+    value: 'Full Stack Web Development'
+    required: true
+    small_width: 12
+    medium_width: 12 
+  - name: zollege_school_new_
+    label: ''
+    description: ''
+    type: hidden
+    value: Lubbock Coding Academy
+    required: true
+    small_width: 12
+    medium_width: 12 
+- key: texastechuniversitycodingacademy
+  form_fields:
+  - name: firstname
+    label: First Name
+    description: ''
+    type: text
+    value: ''
+    options: []
+    placeholder: First Name
+    required: true
+    small_width: 12
+    medium_width: 6
+  - name: lastname
+    label: Last Name
+    description: ''
+    type: text
+    value: ''
+    placeholder: Last Name
+    required: true
+    small_width: 12
+    medium_width: 6
+    options: []
+  - name: phone
+    label: Phone
+    description: ''
+    type: tel
+    value: ''
+    placeholder: "(***)***-****"
+    required: true
+    small_width: 12
+    medium_width: 6
+    options: []
+  - name: email
+    label: Email
+    description: ''
+    type: email
+    value: ''
+    placeholder: name@example.com
+    required: true
+    small_width: 12
+    medium_width: 6
+    options: []
+  - name: curriculum_track
+    label: To which program are you applying?
+    description: ''
+    type: hidden
+    value: 'Full Stack Web Development'
+    required: true
+    small_width: 12
+    medium_width: 12 
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -106,6 +215,5 @@ form_fields:
     {% endif %}
   {% endfor %}
 {% endif %}
-
 {% assign redirect_url = school.url | append: "/apply-two" %}
-{% include apply.html form_guid=settings.preapplication_form_guid redirect_url=redirect_url %}
+{% include apply.html form_guid=school.preapplication_form_guid redirect_url=redirect_url %}
