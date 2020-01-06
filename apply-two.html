@@ -340,7 +340,7 @@ schools:
     >
       <div class="row p-5">
         {% assign about_fields = page.form_fields %}
-        {% assign redirect_url = school.url | append: "/scheduling" %}
+        {% assign redirect_url = school.url | append: "/apply/scheduling" %}
         {% include fields.html fields=about_fields redirect_url=redirect_url %}
         <div class="col-md-6 mb-4">
           {% include referral-question.html %}
