@@ -194,6 +194,11 @@ fields:
     - type: text
       name: url
       label: url
+  - name: announcement
+    type: text
+    config:
+      required: false
+    label: announcement
 - type: field_group_list
   name: logos
   label: logos
