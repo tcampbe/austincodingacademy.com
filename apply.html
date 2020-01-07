@@ -132,21 +132,11 @@ schools:
     medium_width: 6
     options: []
   - name: curriculum_track
-    label: To which program are you applying?
-    description: ''
     type: hidden
     value: 'Full Stack Web Development'
-    required: true
-    small_width: 12
-    medium_width: 12 
   - name: zollege_school_new_
-    label: ''
-    description: ''
     type: hidden
     value: Lubbock Coding Academy
-    required: true
-    small_width: 12
-    medium_width: 12 
 - key: texastechuniversitycodingacademy
   form_fields:
   - name: firstname
@@ -190,13 +180,9 @@ schools:
     medium_width: 6
     options: []
   - name: curriculum_track
-    label: To which program are you applying?
-    description: ''
     type: hidden
     value: 'Full Stack Web Development'
     required: true
-    small_width: 12
-    medium_width: 12 
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -216,4 +202,4 @@ schools:
   {% endfor %}
 {% endif %}
 {% assign redirect_url = school.url | append: "/apply-two" %}
-{% include apply.html form_guid=school.preapplication_form_guid redirect_url=redirect_url %}
+{% include apply.html redirect_url=redirect_url %}
