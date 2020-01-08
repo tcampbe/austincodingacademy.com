@@ -1,6 +1,5 @@
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
-    
       <h2 class="font-family-alt my-5 my-sm-10 display-5 display-55 text-center col-12 col-sm-10">
         {{ page.heading }}
       </h2>
@@ -34,13 +33,13 @@
         {% endfor %}
       </div>
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ include.form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.preapplication_form_guid }}"
       method="POST"
       target="_top"
     >
       <div class="col-12 col-sm-10 mx-auto">
         <div class="row d-flex justify-content-center p-5">
-            {% assign all_fields = page.form_fields %}
+            {% assign all_fields = school.form_fields %}
             {% assign redirect_url = school.url | append: "/apply-two" %}
             {% include fields.html fields=all_fields redirect_url=redirect_url %}
           <div class="mb-4 d-flex flex-column align-items-center">
