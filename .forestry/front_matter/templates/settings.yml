@@ -199,6 +199,38 @@ fields:
     config:
       required: false
     label: announcement
+  - name: start_dates
+    type: field_group_list
+    fields:
+    - name: location
+      type: text
+      config:
+        required: false
+      label: location
+    - name: course
+      type: text
+      config:
+        required: false
+      label: course
+    - name: date
+      type: datetime
+      label: date
+      description: ''
+      config:
+        required: false
+        date_format: 
+        time_format: 
+        display_utc: false
+    - name: time
+      type: text
+      config:
+        required: false
+      label: time
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: start_dates
 - type: field_group_list
   name: logos
   label: logos
