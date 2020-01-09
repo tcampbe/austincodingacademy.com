@@ -213,14 +213,15 @@ fields:
         required: false
       label: course
     - name: date
-      type: datetime
-      label: date
-      description: ''
+      type: text
       config:
         required: false
-        date_format: 
-        time_format: 
-        display_utc: false
+      label: date
+    - name: days
+      type: text
+      config:
+        required: false
+      label: days
     - name: time
       type: text
       config:
