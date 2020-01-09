@@ -230,7 +230,7 @@ fields:
     config:
       min: 
       max: 
-      labelField: 
+      labelField: date
     label: start_dates
 - type: field_group_list
   name: logos
