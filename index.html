@@ -3,9 +3,9 @@ layout: default
 permalink: "/"
 head_title: "{{ school.name }} | Learn to Code, Change Your Life"
 hero: index
-description: At {{ school.name }}, we fit learning to code into your life
-  with a flexible &amp; affordable array of options, all taught by current industry
-  professionals. Don’t wait - embark on a new career today!
+description: At {{ school.name }}, we fit learning to code into your life with a flexible
+  &amp; affordable array of options, all taught by current industry professionals.
+  Don’t wait - embark on a new career today!
 redirect_from: []
 amp_components:
 - amp-carousel
@@ -76,47 +76,23 @@ features:
 schools:
 - key: austincodingacademy
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
-  start_dates:
-  - location: Capital Factory Campus
-    date: January 14th
-    days: Tuesday/Thursday
-    time: 6:30 - 9:00pm
-  - location: Highland Campus
-    date: January 27th
-    days: Monday/Wednesday
-    time: 6:30 - 9:00pm
   lightbox_youtube:
     src_id: UGW-v_uam4k
     title: The Moment I Realized My Life Was Changed
 - key: lubbockcodingacademy
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
-  start_dates:
-  - location:
-    date:
-    days:
-    time:
-  - location:
-    date:
-    days:
-    time:
-  - key: texastechuniversitycodingacademy
+  lightbox_youtube:
+    src_id: ''
+    title: ''
+- key: texastechuniversitycodingacademy
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
-  start_dates:
-  - location:
-    date:
-    days:
-    time:
-  - location:
-    date:
-    days:
-    time:
   features:
   - heading: Flexible Schedule
     title: Keep Your Day Job While You Make a Career Change
     description: In-person, part-time classes meet twice a week in the evenings, so
       learning to code fits your schedule. Benefit from a “flipped classroom” approach,
-      with hands-on classes led by instructors who work as professional developers during
-      the day.
+      with hands-on classes led by instructors who work as professional developers
+      during the day.
     img: calendar_white.png
     square: true
     alt: Calendar graphic
@@ -138,13 +114,16 @@ schools:
     square: false
   - heading: Job Placement
     title: You’ll Learn Skills That Will Get You a Job
-    description: Develop skills that employers are looking for with our practical curriculum,
-      taught by professional developers. Receive 1-on-1 attention from our Director
-      of Job Placement. Build your resume, practice interviews, and more in our Job
-      Placement Course.
+    description: Develop skills that employers are looking for with our practical
+      curriculum, taught by professional developers. Receive 1-on-1 attention from
+      our Director of Job Placement. Build your resume, practice interviews, and more
+      in our Job Placement Course.
     img: suitcase_white.png
     square: true
     alt: Suitcase graphic
+  lightbox_youtube:
+    src_id: ''
+    title: ''
 
 ---
 {% for _page in site.pages %}
@@ -407,8 +386,8 @@ schools:
                 {{ start_date.date }}
               </div>
               <div class="shadow border text-center py-4">
-                <div class="display-7 text-center mb-3">
-                  Classes Meet:
+                <div class="display-7 text-center mb-3 px-2">
+                  {{ start_date.course }}
                 </div>
                 <div>
                   {{ start_date.days }}

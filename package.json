@@ -74,5 +74,9 @@
         "_includes/css.html"
       ]
     }
+  },
+  "dependencies": {
+    "postcss-each": "^0.10.0",
+    "postcss-for": "^2.1.1"
   }
 }

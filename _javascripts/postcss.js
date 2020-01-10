@@ -1,15 +1,15 @@
 const postcss = require('postcss')
-const { readFileSync, writeFileSync } = require('fs')
-const atImport = require('postcss-import')
-const purgecss = require('@fullhuman/postcss-purgecss')
-const cssnano = require('cssnano');
-const amp = require('postcss-amp');
+const { readFileSync, writeFileSync, existsSync } = require('fs')
+
+if (!existsSync('./_includes/css.html')) writeFileSync('./_includes/css.html', '');
 
 postcss([
-  atImport,
-  amp,
-  purgecss({ content: ['./_site/**/*.html'] }),
-  cssnano({ preset: ['advanced', { discardComments: { removeAll: true }}]}),
+  require('postcss-import'),
+  require('postcss-each'),
+  require('postcss-for'),
+  require('postcss-amp'),
+  require('@fullhuman/postcss-purgecss')({ content: ['./_site/**/*.html'] }),
+  require('cssnano')({ preset: ['advanced', { discardComments: { removeAll: true }}]}),
 ])
   .process(
     readFileSync('assets/css/main.css'),
