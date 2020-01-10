@@ -8,19 +8,41 @@
     {% endfor %}
   {% endif %}
 {% endfor %}
-{% if page.schools %}
-  {% for _school in page.schools %}
-    {% if _school.key == site.key %}
-      {% assign school = school | hash_concat: _school %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
 <!-- htmllint preset="none" -->
 {% if site.baseurl == '/amp' %}
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ school.google_tag_manager_amp }}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ settings.google_tag_manager_amp }}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+<amp-analytics type="gtag" data-credentials="include">
+  <script type="application/json">
+  {
+    "vars" : {
+      "gtag_id": "{{ school.google_analytics }}",
+      "config" : {
+        "{{ school.google_analytics }}": { "groups": "default" }
+      }
+    }
+  }
+  </script>
+</amp-analytics>
+<!-- Facebook Pixel Analytics tracking -->
+<amp-analytics type="facebookpixel" id="facebook-pixel">
+  <script type="application/json">
+    {
+      "vars": {
+        "pixelId": "{{ settings.facebook_pixel }}"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+  </script>
+</amp-analytics>
+<!-- End Facebook Pixel Analytics example -->
 {% else %}
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ school.google_tag_manager }}"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ settings.google_tag_manager }}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 {% endif %}
