@@ -11,6 +11,21 @@ fields:
 - type: number
   name: hubspot_portal_id
   label: hubspot_portal_id
+- name: google_tag_manager
+  type: text
+  config:
+    required: false
+  label: google_tag_manager
+- name: google_tag_manager_amp
+  type: text
+  config:
+    required: false
+  label: google_tag_manager_amp
+- name: facebook_pixel
+  type: text
+  config:
+    required: false
+  label: facebook_pixel
 - type: text
   name: acuity_scheduling_src
   label: acuity_scheduling_src
@@ -140,11 +155,11 @@ fields:
     name: callrail_company_id
     label: callrail_company_id
   - type: text
-    name: google_tag_manager
-    label: google_tag_manager
+    name: google_analytics
+    label: google_analytics
   - type: text
-    name: google_tag_manager_amp
-    label: google_tag_manager_amp
+    name: reddit_pixel
+    label: reddit_pixel
   - type: text
     name: contact_form_guid
     label: contact_form_guid
