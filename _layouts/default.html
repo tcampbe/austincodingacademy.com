@@ -30,5 +30,8 @@
     {{ content }}
 
     {% include footer.html %}
+    {% if site.baseurl != '/amp' %}
+      {% include clean-javascripts.html %}
+    {% endif %}
   </body>
 </html>
