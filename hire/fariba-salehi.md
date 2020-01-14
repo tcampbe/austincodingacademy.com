@@ -6,7 +6,7 @@ fullname: Fariba Salehi
 jobtitle: Web Development
 
 location: Austin, TX
-blurb: "JavaScript – SQL - HTML – CSS - Git/GitHub”
+blurb: "JavaScript – SQL - HTML – CSS - Git/GitHub"
 
 # first item must be C# or .NET or C#/.NET
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
@@ -21,7 +21,7 @@ skills:
   - WebPack
   - REST APIs
 
-github: https://github.com/artinsepanta/resume/blob/master/Fariba%20Salehi.pdf
+github: https://github.com/artinsepanta
 linkedin: https://www.linkedin.com/in/faribasalehi
 
 email: faribasalehi.az@gmail.com
@@ -42,7 +42,7 @@ education:
 
   - name: Psychology & exceptional children education
     degree: Master of arts
-  
+
 projects:
   - name: Services Provided to homeless by NGOs
     desc: very short description of your project
