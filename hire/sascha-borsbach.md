@@ -1,6 +1,6 @@
 ---
 layout: resume # don't touch
-categories: [graduation, austincodingacademy] # don't touch
+categories: [hire, graduation, austincodingacademy] # don't touch
 
 fullname: Sascha a.k.a Alex
 jobtitle: Borsbach
