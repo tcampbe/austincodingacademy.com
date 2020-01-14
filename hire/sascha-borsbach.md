@@ -2,8 +2,8 @@
 layout: resume # don't touch
 categories: [hire, graduation, austincodingacademy] # don't touch
 
-fullname: Sascha a.k.a Alex
-jobtitle: Borsbach
+fullname: Sascha a.k.a Alex Borsbach
+jobtitle: Web Developer
 
 location: Round Rock, TX
 blurb: ""
