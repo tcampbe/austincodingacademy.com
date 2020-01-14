@@ -31,19 +31,19 @@ phone: 512-623-0716
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
 workexperience:
-  - company:
+  - company: State Built
     dates: Februrary 2017 - Present
-    title: State Built | Lead Front End Dev
+    title: Lead Front End Dev
     location: Austin, TX
 
-  - company:
+  - company: Jenn's Copy and Binding
     dates: June 2016 - Februrary 2017
-    title: Jenn's Copy and Binding | Store Manager
+    title: Store Manager
     location: Austin, TX
 
-  - company:
+  - company: Kerby Lane Café
     dates: April 2014 - June 2016
-    title: Kerby Lane Café | Server Trainer
+    title: Server Trainer
     location: Austin, TX
 
 education:
@@ -54,12 +54,12 @@ education:
 projects:
   - name: Swatchit
     desc: A place to store colors
-    url: swatchit.io
+    url: https://swatchit.io/
 
 projects:
   - name: Franklin Building Supply
     desc: A statamic theme I built with easy to use componants for FBS
-    url: franklinbuildingsupply.com
+    url: https://www.franklinbuildingsupply.com/
 
 projects:
   - name: Nulyph
