@@ -46,5 +46,4 @@ projects:
   - name: Funraiser
     desc: An app for students, parents, and teachers to keep track of school volunteer hours
     url: https://austincodingacademy.com/
-
 ---
