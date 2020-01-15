@@ -178,6 +178,11 @@ fields:
   - type: text
     name: eventbrite
     label: eventbrite
+  - name: linkedin
+    type: text
+    config:
+      required: false
+    label: linkedin
   - type: text
     name: facebook
     label: facebook
