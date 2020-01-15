@@ -8,6 +8,7 @@ jobtitle: JavaScript Developer
 location: Austin, TX
 blurb: "I'm a new developer with a passion for building and improving front-end and back-end applications."
 
+skills:
   - ReactJS
   - SQL
   - NodeJS
