@@ -24,7 +24,7 @@ skills:
 github: https://github.com/artinsepanta
 linkedin: https://www.linkedin.com/in/faribasalehi
 
-email: faribasalehi.az@gmail.com
+email: faribasalehi@hotmail.com
 phone: 480-455-9791
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
