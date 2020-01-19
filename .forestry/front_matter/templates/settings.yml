@@ -166,6 +166,11 @@ fields:
   - type: text
     name: cta_form_guid
     label: cta_form_guid
+  - name: preapplication_form_guid
+    type: text
+    config:
+      required: false
+    label: preapplication_form_guid
   - type: text
     name: course_guide_form_guid
     label: course_guide_form_guid
@@ -178,6 +183,11 @@ fields:
   - type: text
     name: eventbrite
     label: eventbrite
+  - name: linkedin
+    type: text
+    config:
+      required: false
+    label: linkedin
   - type: text
     name: facebook
     label: facebook

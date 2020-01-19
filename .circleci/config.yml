@@ -52,11 +52,11 @@ jobs:
                 yarn optimize
                 # yarn encrypt
                 KEY=lubbockcodingacademy.com PREVIEW='preview.' yarn deploy
-                KEY=texastechuniversitycodingacademy.com yarn favicon
-                KEY=texastechuniversitycodingacademy.com yarn build
+                KEY=texastechcodingacademy.com yarn favicon
+                KEY=texastechcodingacademy.com yarn build
                 yarn optimize
                 # yarn encrypt
-                KEY=texastechuniversitycodingacademy.com PREVIEW='preview.' yarn deploy
+                KEY=texastechcodingacademy.com PREVIEW='preview.' yarn deploy
               fi
               if [ "${CIRCLE_BRANCH}" == "master" ]; then
                 git config --global user.email "kevin@austincodingacademy.com"
@@ -73,11 +73,11 @@ jobs:
                 KEY=lubbockcodingacademy.com yarn build
                 yarn optimize
                 KEY=lubbockcodingacademy.com yarn deploy
-                KEY=texastechuniversitycodingacademy.com yarn sitemap
-                KEY=texastechuniversitycodingacademy.com yarn favicon
-                KEY=texastechuniversitycodingacademy.com yarn build
+                KEY=texastechcodingacademy.com yarn sitemap
+                KEY=texastechcodingacademy.com yarn favicon
+                KEY=texastechcodingacademy.com yarn build
                 yarn optimize
-                KEY=texastechuniversitycodingacademy.com yarn deploy
+                KEY=texastechcodingacademy.com yarn deploy
               fi
 
 workflows:
