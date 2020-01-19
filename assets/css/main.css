@@ -357,14 +357,14 @@ a {
 
 /* filter over video */
 #hero-index {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7)),
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
     url('/assets/images/hero-index.jpg');
   background-position: -820px 0px;
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
   #hero-index {
-    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7)),
+    background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
       url('/assets/images/hero-index.jpg');
     background-position: top;
     height: 100vh;
@@ -373,7 +373,7 @@ a {
 
 @media (min-width: 768px) {
   #hero-index {
-    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-dark), 0.7));
+    background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7));
     opacity: 0.8;
     position: absolute;
     width: 100%;
@@ -381,7 +381,7 @@ a {
 }
 
 #hero-corporate {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
     url('/assets/images/hero-corporate.jpg');
   background-size: cover;
   background-position: -20px 70px;
@@ -389,7 +389,7 @@ a {
 
 @media (min-width: 768px) {
   #hero-corporate {
-    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+    background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
       url('/assets/images/hero-corporate.jpg');
     background-position: 0px 25px;
     background-repeat: no-repeat;
@@ -398,7 +398,7 @@ a {
 }
 
 #hero-js {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
     url('/assets/images/hero-javascript.jpg');
   background-position: right;
   background-repeat: no-repeat;
@@ -407,7 +407,7 @@ a {
 
 @media (min-width: 768px) {
   #hero-js {
-    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+    background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
       url('/assets/images/hero-javascript.jpg');
     background-position: top;
     background-repeat: no-repeat;
@@ -416,7 +416,7 @@ a {
 }
 
 #hero-blog {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
     url('/assets/images/hero-blog.jpg');
   background-position: -330px 0px;
   background-size: cover;
@@ -424,7 +424,7 @@ a {
 
 @media (min-width: 768px) {
   #hero-blog {
-    background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+    background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
       url('/assets/images/hero-blog.jpg');
     background-position: 0px 20px;
     background-repeat: no-repeat;
@@ -433,7 +433,7 @@ a {
 }
 
 #hero-landing {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
     url('/assets/images/hero-landing.jpg');
   background-position: top right;
   background-repeat: no-repeat;
@@ -441,7 +441,7 @@ a {
 }
 
 #hero-events {
-  background: linear-gradient(rgba(var(--primary-dark), 0.7), rgba(var(--primary-light), 0.7)),
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
     url('/assets/images/hero-landing.jpg');
   background-position: top right;
   background-repeat: no-repeat;
