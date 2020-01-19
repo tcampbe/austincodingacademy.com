@@ -37,7 +37,7 @@ const fetchEvents = async () => {
     const events = {
       'austincodingacademy': austinEvents.map(event => parseEvent(event)),
       'lubbockcodingacademy': lubbockEvents.map(event => parseEvent(event)),
-      'texastechuniversitycodingacademy': ttuEvents.map(event => parseEvent(event))
+      'texastechcodingacademy': ttuEvents.map(event => parseEvent(event))
     };
 
     writeFileSync('_data/events.yml', safeDump(events));
