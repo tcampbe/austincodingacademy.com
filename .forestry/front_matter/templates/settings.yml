@@ -119,18 +119,6 @@ fields:
   - type: text
     name: name
     label: name
-  - type: text
-    name: primary_light_color
-    label: primary_light_color
-  - type: text
-    name: primary_dark_color
-    label: primary_dark_color
-  - type: text
-    name: secondary_light_color
-    label: secondary_light_color
-  - type: text
-    name: secondary_dark_color
-    label: secondary_dark_color
   - type: field_group
     name: navigation
     label: navigation
@@ -257,6 +245,36 @@ fields:
       max: 
       labelField: date
     label: start_dates
+  - name: primary_light_color
+    type: color
+    label: primary_light_color
+    config:
+      required: false
+      color_format: RGB
+  - name: primary_dark_color
+    type: color
+    label: primary_dark_color
+    config:
+      required: false
+      color_format: RGB
+  - name: secondary_light_color
+    type: color
+    label: secondary_light_color
+    config:
+      required: false
+      color_format: RGB
+  - name: secondary_dark_color
+    type: color
+    label: secondary_dark_color
+    config:
+      required: false
+      color_format: RGB
+  - name: hero_overlay_color
+    type: color
+    label: hero_overlay_color
+    config:
+      required: false
+      color_format: RGB
 - type: field_group_list
   name: logos
   label: logos
