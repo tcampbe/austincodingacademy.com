@@ -26,6 +26,11 @@ fields:
   config:
     required: false
   label: facebook_pixel
+- name: linkedin_pixel
+  type: text
+  config:
+    required: false
+  label: linkedin_pixel
 - type: text
   name: acuity_scheduling_src
   label: acuity_scheduling_src
