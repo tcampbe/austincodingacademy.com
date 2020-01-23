@@ -5,10 +5,6 @@
     "posthtml-img-autosize": {
       "root": "./",
       "processEmptySize": true
-    },
-    "posthtml-amp-img": {},
-    "posthtml-webp": {
-      "replaceExtension": true
     }
   }
 }

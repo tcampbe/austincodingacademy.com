@@ -35,6 +35,7 @@ jobs:
       - run: mkdir _data
       - run: node _javascripts/events.js
       - run: node _javascripts/tutoring.js
+      - run: deploy.sh
       - deploy:
           name: Deploy
           command: |
