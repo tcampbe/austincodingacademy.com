@@ -16,7 +16,8 @@ img: "/assets/images/what-are-companies-looking-for-in-your-web-developers-portf
 date: 2019-02-21 14:16:21 -0600
 redirect_from: []
 permalink: "/blog/web-development/what-are-companies-looking-for-in-a-web-developers-portfolio/"
-
+school_keys:
+- austincodingacademy
 ---
 If you’re just starting out on your path as a developer without much or any experience to show off in your portfolio, the road ahead may seem daunting. Your portfolio is more than a showcase of projects and work samples. Your portfolio is your digital space that invites hiring managers to learn more about you and how you would be a great fit in their company and culture.
 

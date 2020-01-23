@@ -15,12 +15,11 @@ excerpt: "Software companies, start-ups, and tech giants aren't just looking for
 img: "/assets/images/collaboration-stock-photo.jpg"
 redirect_from: []
 permalink: "/blog/web-development/choose-a-coding-bootcamp-that-teaches-you-more-than-just-code/"
-width: "5472"
-height: "3648"
 author_name: Luke Stenis
 author_email: ethanstenis@gmail.com
 date: 2019-04-13 13:57:29 -0500
-
+school_keys:
+- austincodingacademy
 ---
 [_Luke Stenis_](https://www.linkedin.com/in/ethanstenis/) _graduated from Austin Coding Academy’s Full Stack Web Development program in 2016. Upon graduating, Luke landed a role as an “Implementation Engineer” with Austin-based content production company,_ [_Invodo_](https://www.invodo.com/)_. During his time at Invodo, Luke also worked as an instructor at ACA, teaching the 10-week “Intro to Web Development” course._
 

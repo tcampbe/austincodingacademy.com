@@ -28,7 +28,7 @@ title: Blog
 {% endif %}
 <!-- htmllint preset="none" -->
 <div
-  class="hero py-11 bg-gradient" id="hero-{{ page.hero | liquify }}">
+  class="hero py-5 bg-gradient" id="hero-{{ page.hero | liquify }}">
   <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 px-1 p-md-0 text-white font-family-alt font-weight-bold display-4 text-center">
     {{ school.name }}
@@ -43,28 +43,30 @@ title: Blog
   <div class="container my-10">
     <div class="row">
       {% for post in site.posts %}
-        <div class="col-12 col-md-6 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
-          <article class="card border-0">
-            <div class="card-body p-0">
-              <a href="{{ post.url }}">
-                <div class="mb-5">
-                  <amp-img width="{{ post.width | default:345 }}px" height="{{ post.height | default:172.5 }}px" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
-                </div>
-              </a>
-              <small class="d-block text-secondary mb-1">
-                {{ blog.date }}
-              </small>
-              <a href="{{ post.url }}">
-                <h2 class="h5">
-                  {{ post.title | liquify }}
-                </h2>
-              </a>
-              <p>
-                {{ post.excerpt | liquify }}
-              </p>
-            </div>
-          </article>
-        </div>
+        {% if post.school_keys contains school.key %}
+          <div class="col-12 col-md-6 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
+            <article class="card border-0">
+              <div class="card-body p-0">
+                <a href="{{ post.url }}">
+                  <div class="mb-5">
+                    <amp-img width="{{ post.width | default:345 }}px" height="{{ post.height | default:172.5 }}px" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
+                  </div>
+                </a>
+                <small class="d-block text-secondary mb-1">
+                  {{ blog.date }}
+                </small>
+                <a href="{{ post.url }}">
+                  <h2 class="h5">
+                    {{ post.title | liquify }}
+                  </h2>
+                </a>
+                <p>
+                  {{ post.excerpt | liquify }}
+                </p>
+              </div>
+            </article>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>

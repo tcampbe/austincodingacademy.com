@@ -15,7 +15,8 @@ excerpt: 'As the Austin tech scene continues to appeal to job seekers and people
   switch.'
 img: "/assets/images/making-a-career-switch-without-technical-experience-graphic.png"
 date: 2019-02-21 13:58:04 -0600
-
+school_keys:
+- austincodingacademy
 ---
 The tech industry seems to be holding steady as the place to be for job seekers and people looking to switch careers these days. Between the high job security, exciting work culture, competitive pay, and (in some cases) extremely generous and creative perks, tech companies make an excellent case for learning to code.
 

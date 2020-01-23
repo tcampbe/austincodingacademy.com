@@ -16,11 +16,10 @@ excerpt: 'This month, we caught up with ACA graduate Greg Swan, who accepted a j
 img: "/assets/images/student-highlight-header-greg-swan.png"
 redirect_from: []
 permalink: "/blog/student-highlight/greg-swan/"
-height: 
-width: 
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
-
+school_keys:
+- austincodingacademy
 ---
 # Get to know Austin Coding Academy graduate Greg Swan
 

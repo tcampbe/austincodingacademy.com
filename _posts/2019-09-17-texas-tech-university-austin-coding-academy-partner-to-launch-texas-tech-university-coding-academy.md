@@ -16,11 +16,10 @@ excerpt: Texas Tech University and Austin Coding Academy (ACA) today announced a
 img: "/assets/images/aca-official-press-release-blog-header.png"
 redirect_from: []
 permalink: "/blog/press-release/texas-tech-and-austin-coding-academy-partner-to-launch-texas-tech-university-coding-academy/"
-height:
-width:
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
-
+school_keys:
+- austincodingacademy
 ---
 _FOR IMMEDIATE RELEASE: 9/17/2019_
 

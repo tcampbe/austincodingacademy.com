@@ -12,7 +12,8 @@ excerpt: Austin Coding Academy is partnering with Lyft, one of Austin’s most p
   drivers who make our city more accessible to all.
 layout: post
 description: ''
-
+school_keys:
+- austincodingacademy
 ---
 Austin Coding Academy is partnering [with Lyft](https://sites.google.com/lyft.com/lyftaustinonboarding/driver-deals/education), one of Austin’s most popular ride-sharing apps, in an effort to make its classes more accessible to the same drivers who make our city more accessible to all.
 

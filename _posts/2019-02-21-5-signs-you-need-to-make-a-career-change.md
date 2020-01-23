@@ -8,13 +8,12 @@ created_at: 2018-04-04 05:00:00 +0000
 updated_at: 2019-02-21 06:00:00 +0000
 categories:
 - career-development
-excerpt: |2-
-
-
+excerpt: |
   The average American spends at least 40 hours a week at work for several decades. A career represents too much of your lifespan for it to be something that makes you miserable. While the thought of making such a huge overhaul may be daunting, here are some signs it’s time to take a leap and move into a new career path.
 img: "/assets/images/5-signs-you-need-to-change-careers.png"
 date: 2019-02-21 20:32:26 +0000
-
+school_keys:
+- austincodingacademy
 ---
 On Sunday nights, what do you generally feel about the week ahead of you? Are you energized, enthusiastic, and ready to hit the ground running on Monday morning? Or do you feel mopey, exhausted, and full of dread? If you fall into the second camp, it may be time to make a change.
 
@@ -44,4 +43,4 @@ A career should be about so much more than just paying the bills. It should fill
 
 ## Get started now
 
-If you feel stuck, uninspired, and undervalued in your job, the thought of making a big transition into a new career might fill you with a mixture of excitement and fear. [Accomplishing ambitious goals](https://blog.austincodingacademy.com/how-to-achieve-big-goals-this-year) isn’t easy, but the effort involved in building a career that makes you feel challenged, appreciated, and engaged is worth it.
+If you feel stuck, uninspired, and undervalued in your job, the thought of making a big transition into a new career might fill you with a mixture of excitement and fear. [Accomplishing ambitious goals](https://austincodingacademy.com/blog/how-to-achieve-big-goals-this-year) isn’t easy, but the effort involved in building a career that makes you feel challenged, appreciated, and engaged is worth it.

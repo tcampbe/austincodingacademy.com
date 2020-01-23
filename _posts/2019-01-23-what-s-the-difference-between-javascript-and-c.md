@@ -22,7 +22,8 @@ excerpt: 'At Austin Coding Academy, we currently offer two separate tracks for o
 layout: post
 redirect_from: []
 permalink: "/blog/web-development/whats-the-difference-between-javascript-and-csharp/"
-
+school_keys:
+- austincodingacademy
 ---
 If you’re considering making the leap into a career in coding, there are so many factors to consider: should I get a bachelor’s degree in Computer Science or enroll in a coding school? Should I take an online class, an in-person class, or a remote class? And what language or specialty should I invest my time in learning?
 
@@ -119,7 +120,7 @@ Taking in all this information can feel like drinking water from a firehose. A g
 
 Here are some resources to connect you with working programmers:
 
-* Hear from former students: [Stephanie](https://blog.austincodingacademy.com/get-to-know-aca-graduate-stephanie-singler), [Lillian](https://blog.austincodingacademy.com/student-highlight-12/19), [Jon](https://blog.austincodingacademy.com/student-project-highlight-jon-gorman).
+* Hear from former students: [Stephanie](https://austincodingacademy.com/blog/get-to-know-aca-graduate-stephanie-singler), [Lillian](https://austincodingacademy.com/blog/student-highlight-12/19), [Jon](https://austincodingacademy.com/blog/student-project-highlight-jon-gorman).
 * [Go to local coding events](https://www.eventbrite.com/o/austin-coding-academy-10937668459) to pick the brains of other developers and/or to get some hands-on experience.
 * Subscribe to the ACA blog to learn about the industry and see student stories.
 

@@ -18,7 +18,7 @@
 <!-- htmllint preset="$previous" -->
 <meta charset="utf-8" />
 <title>
-  {{ page.head_title | default: settings.head_title | liquify }}
+  {{ page.head_title | default: page.title | liquify }}
 </title>
 
 <meta

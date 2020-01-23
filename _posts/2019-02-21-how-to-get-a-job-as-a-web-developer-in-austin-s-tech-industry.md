@@ -16,7 +16,8 @@ img: "/assets/images/5-ways-to-get-a-job-as-a-web-developer.png"
 date: 2019-02-21 14:59:29 -0600
 redirect_from: []
 permalink: "/blog/web-development/how-to-get-a-job-as-a-web-developer-in-austin-tech-industry/"
-
+school_keys:
+- austincodingacademy
 ---
 Looking for your first web development job in Austin can seem extremely daunting. This is especially true if you are new to town and don't have a built-in network of friends to help you get a foot in the door at a tech company.
 
@@ -80,7 +81,7 @@ GitHub has a great resource of [front-end developer interview questions](http://
 Here are two resources to get you started:
 
 * [A video](https://www.youtube.com/watch?v=iI6jiwoqxg4) about how to prepare for a job interview
-* [What hiring managers want to see in a portfolio](https://blog.austincodingacademy.com/what-are-hiring-managers-looking-for-in-a-developers-portfolio)
+* [What hiring managers want to see in a portfolio](https://austincodingacademy.com/blog/what-are-hiring-managers-looking-for-in-a-developers-portfolio)
 
 ## Bonus: Paid Internships
 

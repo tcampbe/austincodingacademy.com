@@ -425,7 +425,6 @@ a {
   #hero-blog {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
       url('/assets/images/hero-blog.jpg');
-    background-position: 0px 20px;
     background-repeat: no-repeat;
     background-size: cover;
   }

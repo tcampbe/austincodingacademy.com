@@ -17,11 +17,10 @@ excerpt: "Since coding academies have become an increasingly visible part of the
 img: "/assets/images/4-ways-a-coding-bootcamp-graphic.png"
 redirect_from: []
 permalink: "/blog/web-development/4-ways-a-coding-bootcamp-is-worth-it/"
-height:
-width:
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
-
+school_keys:
+- austincodingacademy
 ---
 ### What’s After Graduation? 4 Ways a Coding Boot Camp Is Worth It
 

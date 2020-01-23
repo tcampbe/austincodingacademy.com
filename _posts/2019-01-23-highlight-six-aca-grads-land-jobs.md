@@ -16,7 +16,8 @@ excerpt: 'It''s a great time for job placement at Austin Coding Academy! Here ar
 img: "/assets/images/six-austin-coding-academy-grads-land-jobs.png"
 redirect_from: []
 permalink: "/blog/announcements/six-austin-coding-academy-graduates-land-jobs/"
-
+school_keys:
+- austincodingacademy
 ---
 It's a great time for job placement at Austin Coding Academy! Tech in Austin is booming and at ACA we're not only focused on giving our students the best possible coding education, but also to provide our students all of the skills necessary to be successful developers when they leave our program.
 
@@ -46,7 +47,7 @@ Nathan graduated from the Full Stack Javascript track with ACA in July of 2018. 
 
 Paul is set to graduate from ACA's Full Stack Javascript track within the next couple of weeks. He has already accepted a position as a React Native Developer with [The Helper Bees](https://www.thehelperbees.com/), an Austin-based startup.
 
-Not only are our grads landing jobs, but we're more committed than ever to make sure that every grad who leaves our program is job-ready. Our first ever Job Placement Course wrapped up a few weeks ago. The course is 4 weeks long and free to all graduates of our program. Led by Edsel Rivera, a Technical Recruiter at Dosh, the course covered everything from building a resume and LinkedIn presence to whiteboarding and technical interviews. You can [learn more](https://blog.austincodingacademy.com/qa-with-our-new-job-placement-director-edsel-rivera) about the Job Placement course, which is now a permanent part of the ACA curriculum, here.
+Not only are our grads landing jobs, but we're more committed than ever to make sure that every grad who leaves our program is job-ready. Our first ever Job Placement Course wrapped up a few weeks ago. The course is 4 weeks long and free to all graduates of our program. Led by Edsel Rivera, a Technical Recruiter at Dosh, the course covered everything from building a resume and LinkedIn presence to whiteboarding and technical interviews. You can [learn more](https://austincodingacademy.com/blog/qa-with-our-new-job-placement-director-edsel-rivera) about the Job Placement course, which is now a permanent part of the ACA curriculum, here.
 
 ## Want to follow in ACA grads' footsteps?
 

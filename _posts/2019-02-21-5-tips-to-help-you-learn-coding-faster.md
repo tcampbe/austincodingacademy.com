@@ -15,13 +15,14 @@ excerpt: 'Mastering a new skill can take years of focus and practice. But what i
   Here are five things to try to learn programming faster.'
 img: "/assets/images/5-tips-to-master-programming-faster.png"
 date: 2019-02-21 20:22:14 +0000
-
+school_keys:
+- austincodingacademy
 ---
 Mastering a new skill can take years of focus and practice. But what if you want to speed things up a little? When it comes to getting a job as a developer, you may not want to wait years to get started. Good news: there are some things you can do in your spare time every day that will help you get better in less time. Here are five things to try to learn programming faster.
 
 ### 1. Practice every day on real projects
 
-As with any other job, having hands-on experience is a must. Whether it’s for your own personal website, or a project for a close friend or family member, try to find actual assignments to give yourself for practice. When you get to flex your coding muscles on things that will actually live on the internet, you put yourself into an [immersive environment](https://blog.austincodingacademy.com/how-the-principles-of-language-learning-can-help-you-code-better), giving you a better chance to become fluent quickly.
+As with any other job, having hands-on experience is a must. Whether it’s for your own personal website, or a project for a close friend or family member, try to find actual assignments to give yourself for practice. When you get to flex your coding muscles on things that will actually live on the internet, you put yourself into an [immersive environment](https://austincodingacademy.com/blog/how-the-principles-of-language-learning-can-help-you-code-better), giving you a better chance to become fluent quickly.
 
 ### 2. Use free coding websites for tutorials and projects
 

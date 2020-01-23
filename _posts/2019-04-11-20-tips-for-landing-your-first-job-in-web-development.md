@@ -15,12 +15,11 @@ excerpt: While there are many paths to a coding career, those who are successful
 img: "/assets/images/conference-room-stock-photo.jpg"
 redirect_from: []
 permalink: "/blog/web-development/20-tips-for-landing-your-first-job-in-web-development/"
-height: ''
-width: ''
 date: 2019-04-11 20:29:00 +0000
 author_name: Luke Stenis
 author_email: ethanstenis@gmail.com
-
+school_keys:
+- austincodingacademy
 ---
 [_Luke Stenis_](https://www.linkedin.com/in/ethanstenis/) _graduated from Austin Coding Academy's Full Stack Web Development program in 2016. Upon graduating, Luke landed a role as an "Implementation Engineer" with Austin-based content production company,_ [_Invodo_](https://www.invodo.com/)_. During his time at Invodo, Luke also worked as an instructor at ACA, teaching the 10-week "Intro to Web Development" course._
 

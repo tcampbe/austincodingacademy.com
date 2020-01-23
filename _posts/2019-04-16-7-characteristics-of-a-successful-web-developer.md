@@ -14,12 +14,11 @@ excerpt: 'Great code doesn’t always translate into a great hire. While it defi
 img: "/assets/images/7-characteristics-of-a-successful-web-developer.png"
 redirect_from: []
 permalink: "/blog/web-development/7-characteristics-of-a-successful-web-developer/"
-height: ''
-width: ''
 author_name: Luke Stenis
 author_email: ethanstenis@gmail.com
 date: 2019-04-16 12:53:50 -0500
-
+school_keys:
+- austincodingacademy
 ---
 [_Luke Stenis_](https://www.linkedin.com/in/ethanstenis/) _graduated from Austin Coding Academy’s Full Stack Web Development program in 2016. Upon graduating, Luke landed a role as an “Implementation Engineer” with Austin-based content production company,_ [_Invodo_](https://www.invodo.com/)_. During his time at Invodo, Luke also worked as an instructor at ACA, teaching the 10-week “Intro to Web Development” course._
 

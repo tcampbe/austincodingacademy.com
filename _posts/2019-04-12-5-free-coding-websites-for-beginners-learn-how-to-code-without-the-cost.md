@@ -13,12 +13,11 @@ excerpt: Whether you are looking to advance your career, supplement your skill s
 img: "/assets/images/woman-computer-coffee-shop-stock-photo.jpg"
 redirect_from: []
 permalink: "/blog/web-development/5-free-coding-websites-for-beginners/"
-height: ''
-width: ''
 author_name: Luke Stenis
 author_email: ethanstenis@gmail.com
 date: 2019-04-12 22:43:48 -0500
-
+school_keys:
+- austincodingacademy
 ---
 [_Luke Stenis_](https://www.linkedin.com/in/ethanstenis/) _graduated from Austin Coding Academy’s Full Stack Web Development program in 2016. Upon graduating, Luke landed a role as an “Implementation Engineer” with Austin-based content production company,_ [_Invodo_](https://www.invodo.com/)_. During his time at Invodo, Luke also worked as an instructor at ACA, teaching the 10-week “Intro to Web Development” course._
 

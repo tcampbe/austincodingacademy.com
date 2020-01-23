@@ -14,7 +14,8 @@ excerpt: If you’re just starting to consider pursuing a career as a developer,
   a position?
 layout: post
 description: ''
-
+school_keys:
+- austincodingacademy
 ---
 If you’re just starting to consider pursuing a career as a developer, you’ve probably done your fair share of research. What does a typical day look like? How much money can I expect to make? What do I need to learn before I can apply for a position?
 
@@ -30,7 +31,7 @@ To get a job as a developer, you could opt for an expensive four-year education�
 
 Students enrolled in a four-year degree program are generally unable to get their education while also holding down a full-time job. Between unusual course schedules, group projects, and study time for a wide variety of courses, most full-time college students can’t also be full-time employees.
 
-Students in coding schools like Austin Coding Academy, on the other hand, are able to [continue working in their full-time jobs while taking classes in the evenings](https://blog.austincodingacademy.com/how-to-manage-time-effectively-when-you-dont-have-much-of-it). Many ACA students have said that this factor gave them the peace of mind and financial flexibility to take the leap. In just two nights a week, ACA students get the education they need to transition out of their current day jobs and into their dream careers as full-time developers.
+Students in coding schools like Austin Coding Academy, on the other hand, are able to [continue working in their full-time jobs while taking classes in the evenings](https://austincodingacademy.com/blog/how-to-manage-time-effectively-when-you-dont-have-much-of-it). Many ACA students have said that this factor gave them the peace of mind and financial flexibility to take the leap. In just two nights a week, ACA students get the education they need to transition out of their current day jobs and into their dream careers as full-time developers.
 
 ## Smaller Class Sizes
 
@@ -58,7 +59,7 @@ At the end of a four-year college education, students are rewarded with a diplom
 
 At the end of an ACA education, sure, there’s a certificate. But more importantly, our students leave with a professional network, an impressive portfolio demonstrating their new skills, and the support of our well-connected staff to help them find a job as a developer shortly after graduation.
 
-[**Recent ACA graduate Stephanie had multiple job offers within a month of graduation— listen to her experience in her own words.**](https://blog.austincodingacademy.com/get-to-know-aca-graduate-stephanie-singler)
+[**Recent ACA graduate Stephanie had multiple job offers within a month of graduation— listen to her experience in her own words.**](https://austincodingacademy.com/blog/get-to-know-aca-graduate-stephanie-singler)
 
 At Austin Coding Academy, we’re committed to providing the best possible return on our students’ investments. When students enroll at ACA to get on the path to their dream jobs, we’re with them every step of the way— from the first class through to a new career (and beyond).
 
@@ -68,6 +69,6 @@ That’s why we make it a priority to help our graduates find high-paying jobs i
 
 If you’re ready to make a career change to get into a challenging, exciting, dynamic role in the tech sector, it’s important to remember that a computer science degree is not the only way to get there. An Austin Coding Academy education can get you the same results in less time, for less money, and without the risk involved in quitting your full-time job to enroll in school. Our knowledgeable and supportive staff will ensure that your coursework reflects what’s needed in the real world right now, so you can be sure that you’ve got the most in-demand skills in the job market.
 
-If you’d like to learn more, [download our course guide](https://info.austincodingacademy.com/get-a-free-course-guide) and/or contact us today— we’d be happy to answer any of your questions or schedule time to give you an in-person tour of either of our campuses. Not living in Austin? We’ve got you! [Our remote classes](https://blog.austincodingacademy.com/why-acas-remote-classroom-is-a-better-choice) provide the same quality instruction you’d get in person.
+If you’d like to learn more, [download our course guide](https://info.austincodingacademy.com/get-a-free-course-guide) and/or contact us today— we’d be happy to answer any of your questions or schedule time to give you an in-person tour of either of our campuses. Not living in Austin? We’ve got you! [Our remote classes](https://austincodingacademy.com/blog/why-acas-remote-classroom-is-a-better-choice) provide the same quality instruction you’d get in person.
 
 [**Ready to take the next step toward your dream career? Our next session starts August 20. Apply here.**](https://austincodingacademy.com/apply/)

@@ -12,12 +12,11 @@ excerpt: Curious about what the C# programming language can do? Here is a short 
 img: "/assets/images/computer-on-table-stock-photo.jpg"
 redirect_from: []
 permalink: "/blog/2017/05/17/5-awesome-apps-you-can-create-with-c-sharp/"
-height: ''
-width: ''
 author_name: Luke Stenis
 author_email: ethanstenis@gmail.com
 date: 2019-04-13 13:16:59 -0500
-
+school_keys:
+- austincodingacademy
 ---
 _This post is written by Austin Coding Academy graduate and former instructor, Luke Stenis._
 

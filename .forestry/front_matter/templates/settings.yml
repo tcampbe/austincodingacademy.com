@@ -55,9 +55,6 @@ fields:
 - type: text
   name: assignment_form_guid
   label: assignment_form_guid
-- type: text
-  name: head_title
-  label: head_title
 - type: textarea
   name: description
   label: description

@@ -15,11 +15,10 @@ excerpt: 'Austin Coding Academy and WP Engine today announced an ongoing collabo
 img: "/assets/images/aca-official-press-release-blog-header.png"
 redirect_from: []
 permalink: "/blog/press-release/austin-coding-academy-wp-engine-partnership/"
-height: 
-width: 
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
-
+school_keys:
+- austincodingacademy
 ---
 _FOR IMMEDIATE RELEASE: 10/28/2019_
 

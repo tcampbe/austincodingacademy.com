@@ -14,11 +14,10 @@ excerpt: Austin Coding Academy recently added a 4-week job placement course, cov
   director of the course and Technical Recruiter at Dosh about why teaching more than
   just coding is important.
 img: "/assets/images/austin-coding-academy-job-placement-class.jpg"
-width: 2016
-height: 1512
 redirect_from: []
 permalink: "/blog/career-development/new-job-placement-course-q-a/"
-
+school_keys:
+- austincodingacademy
 ---
 Austin Coding Academy recently added a 4-week job placement course to our curriculum which covers everything from resume-building to getting an offer, and is available to all students who complete their full ACA track. In keeping with our mission, the course is taught by a full-time industry professional, Edsel Rivera who is a Technical Recruiter at [Dosh](http://www.dosh.cash/) by day.
 
