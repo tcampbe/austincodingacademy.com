@@ -3,8 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.1-node-browsers
-
-    working_directory: ~/repo
+    parallelism: 6
 
     steps:
       - checkout
@@ -14,12 +13,28 @@ jobs:
             - v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
             - v1-gem-cache-{{ arch }}-{{ .Branch }}-
             - v1-gem-cache-{{ arch }}-
+      - run:
+          name: Configure Bundler
+          command: |
+            BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")
+            echo "export BUNDLER_VERSION=$BUNDLER_VERSION" >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler -v $BUNDLER_VERSION
       - run: bundle install --path ~/.bundle && bundle clean
       - save_cache:
           paths:
             - ~/.bundle
           key: v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-
+      - run:
+          name: Configure Node
+          command: |
+            set +e
+            touch $BASH_ENV
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+            echo 'nvm install v8.16.0' >> $BASH_ENV
+            echo 'nvm alias default v8.16.0' >> $BASH_ENV
       - restore_cache:
           keys:
             - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
@@ -31,55 +46,10 @@ jobs:
             - node_modules
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
-      - run: yarn test
       - run: mkdir _data
       - run: node _javascripts/events.js
       - run: node _javascripts/tutoring.js
       - run: deploy.sh
-      - deploy:
-          name: Deploy
-          command: |
-              if [ "${CIRCLE_BRANCH}" == "preview" ]; then
-                git config --global user.email "kevin@austincodingacademy.com"
-                git config --global user.name "Kevin Colten"
-                yarn images
-                KEY=austincodingacademy.com yarn favicon
-                KEY=austincodingacademy.com yarn build
-                yarn optimize
-                # yarn encrypt
-                KEY=austincodingacademy.com PREVIEW='preview.' yarn deploy
-                KEY=lubbockcodingacademy.com yarn favicon
-                KEY=lubbockcodingacademy.com yarn build
-                yarn optimize
-                # yarn encrypt
-                KEY=lubbockcodingacademy.com PREVIEW='preview.' yarn deploy
-                KEY=texastechcodingacademy.com yarn favicon
-                KEY=texastechcodingacademy.com yarn build
-                yarn optimize
-                # yarn encrypt
-                KEY=texastechcodingacademy.com PREVIEW='preview.' yarn deploy
-              fi
-              if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                git config --global user.email "kevin@austincodingacademy.com"
-                git config --global user.name "Kevin Colten"
-                yarn images
-                KEY=austincodingacademy.com yarn sitemap
-                KEY=austincodingacademy.com yarn favicon
-                KEY=austincodingacademy.com yarn build
-                yarn optimize
-                sudo apt install rsync
-                rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
-                KEY=lubbockcodingacademy.com yarn sitemap
-                KEY=lubbockcodingacademy.com yarn favicon
-                KEY=lubbockcodingacademy.com yarn build
-                yarn optimize
-                KEY=lubbockcodingacademy.com yarn deploy
-                KEY=texastechcodingacademy.com yarn sitemap
-                KEY=texastechcodingacademy.com yarn favicon
-                KEY=texastechcodingacademy.com yarn build
-                yarn optimize
-                KEY=texastechcodingacademy.com yarn deploy
-              fi
 
 workflows:
   version: 2
