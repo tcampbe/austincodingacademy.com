@@ -246,8 +246,8 @@ fields:
         required: false
       label: time
     config:
-      min: 
-      max: 
+      min:
+      max:
       labelField: date
     label: start_dates
   - name: primary_light_color
@@ -280,6 +280,85 @@ fields:
     config:
       required: false
       color_format: RGB
+  - type: field_group_list
+    name: instructors
+    label: instructors
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: gravatar_email
+      label: gravatar_email
+    - type: text
+      name: linkedin
+      label: linkedin
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: campus
+      label: campus
+    - type: textarea
+      name: bio
+      label: bio
+  - type: field_group_list
+    name: team
+    label: team
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: email
+      label: email
+    - type: textarea
+      name: bio
+      label: bio
+    - type: field_group_list
+      name: links
+      label: links
+      fields:
+      - type: text
+        name: link
+        label: link
+      - type: text
+        name: icon
+        label: icon
+      - type: text
+        name: hex
+        label: hex
+  - type: field_group_list
+    name: tutors
+    label: tutors
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: id
+      label: id
+    - type: list
+      name: skills
+      label: skills
+    - type: text
+      name: email
+      label: email
+    - type: list
+      name: location
+      label: location
+    - type: text
+      name: calendar
+      label: calendar
+    - type: text
+      name: virtual
+      label: virtual
+    - type: text
+      name: rocketchat
+      label: rocketchat
 - type: field_group_list
   name: logos
   label: logos

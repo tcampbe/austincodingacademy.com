@@ -391,7 +391,6 @@ a {
   #hero-corporate {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
       url('/assets/images/hero-corporate.jpg');
-    background-position: 0px 25px;
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -6,15 +6,29 @@ amp_components:
 redirect_from: []
 head_title: ""
 description: ""
+title: Dell Tutors
+tutors:
+  - name: Dana
+    id: ''
+    skills:
+    - Web 101
+    gravatar_email: ''
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/?appointmentType=10179656
+    virtual: ''
+    rocketchat: ''
+    email: ''
+  - name: Isaiah
+    id: ''
+    skills:
+    - Web 101
+    gravatar_email: ''
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/?appointmentType=10179645
+    virtual: ''
+    rocketchat: ''
+    email: ''
 ---
-{% for _page in site.pages %}
-  {% if _page.tutors %}
-    {% for _school in _page.schools %}
-      {% if _school.key == 'dell' %}
-        {% assign tutors = _school.tutors %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
-
-{% include tutors-list.html tutors=tutors %}
+{% include tutors-list.html tutors=page.tutors %}

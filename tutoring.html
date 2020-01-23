@@ -6,15 +6,115 @@ amp_components:
 redirect_from: []
 head_title: "Tutors | Unlimited Tutoring with {{ school.name }}"
 description: ""
+title: Tutoring
 ---
 {% for _page in site.pages %}
-  {% if _page.tutors %}
-    {% for _school in _page.schools %}
-      {% if _school.key == site.key %}
-        {% assign tutors = _school.tutors %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
+{% if _page.tutors %}
+{% for _school in _page.schools %}
+{% if _school.key == site.key %}
+{% assign school = _school %}
+{% endif %}
+{% endfor %}
+{% endif %}
 {% endfor %}
 
-{% include tutors-list.html marketing=true tutors=tutors %}
+<div class="container mt-90 pt-1 pb-5">
+  <h2 class="font-family-alt font-weight-bold text-center display-5 mb-4">
+    Tutoring
+  </h2>
+  <h5 class="text-center mb-5 mx-auto">
+    {{ school.name }} offers unlimited tutoring to students and graduates!
+  </h5>
+
+  <amp-lightbox id="apply-now-lightbox" class="lightbox pt-10" layout="nodisplay" scrollable
+    on="tap:apply-now-lightbox.close" tabindex="0" role="dialog">
+    <div class="container" on="tap:apply-now-lightbox.open" role="button" tabindex="0">
+      <h2 class="font-family-alt font-weight-bold text-center display-5 mt-6 mb-0 p-5 text-white">
+        Download Our Course Guide
+      </h2>
+    </div>
+    <form class="d-flex justify-content-center align-items-center" target="_top"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.course_guide_form_guid }}"
+      method="POST">
+      <div class="form-container px-5 px-lg-11 mx-lg-11">
+        <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
+        <input name="downloaded_a_courses_guide" type="hidden" value="true">
+        <input name="hs_lead_status" type="hidden" value="NEW">
+        <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
+        <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
+
+        <div class="row center-form px-5 pb-3" on="tap:apply-now-lightbox.open" role="button" tabindex="0">
+          <!-- Input -->
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="first-name" class="form-label text-white">
+                Name <span class="text-red-a">*</span>
+              </label>
+
+              <input id="first-name" type="text" class="form-control" name="firstname" placeholder="Name"
+                aria-label="Your name" required data-msg="Please enter your name." data-error-class="u-has-error"
+                data-success-class="u-has-success" />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="email" class="form-label text-white">
+                Email <span class="text-red-a">*</span>
+              </label>
+
+              <input id="email" type="email" class="form-control" name="email" placeholder="Email"
+                aria-label="Your email address" required data-msg="Please enter a valid email address."
+                data-error-class="u-has-error" data-success-class="u-has-success" />
+            </div>
+          </div>
+          <!-- End Input -->
+          <div class="col-sm-6 d-flex flex-column justify-content-end text-white">
+            {% include referral-question.html %}
+          </div>
+
+          <!-- Input -->
+          <div class="col-sm-6 d-flex flex-column justify-content-end form-group">
+            <label class="form-label text-white" for="best-describes">Which of these best describes you? <span
+                class="text-red-a">*</span></label>
+            <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
+              <option disabled selected value="">Select your answer</option>
+              <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
+              <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck
+              </option>
+              <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
+              <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
+              <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
+              <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current
+                job</option>
+            </select>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-12 d-flex align-items-end justify-content-center form-group">
+            <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
+              View Guide
+            </button>
+          </div>
+          <!-- End Input -->
+          <div class="col-12 text-white">
+            {% include data-agreement.html %}
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <div submit-error>
+          <template type="amp-mustache">
+            <p class="text-red-a">There was an error with your request. Please try again.</p>
+          </template>
+        </div>
+      </div>
+    </form>
+  </amp-lightbox>
+
+  {% include tutors-list.html marketing=true tutors=school.tutors %}
+</div>
