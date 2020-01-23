@@ -55,11 +55,11 @@ workflows:
   version: 2
   commit:
     jobs:
-      - build:
+    - build:
         filters:
           branches:
             ignore: gh-pages
-  hourly:
+  daily:
     triggers:
       - schedule:
           cron: "0 * * * *"
