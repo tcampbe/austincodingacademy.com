@@ -48,7 +48,8 @@
     --secondary-dark: {{ school.secondary_dark_color | replace: 'rgb(', '' | replace: ')', '' }};
     --hero-overlay: {{ school.hero_overlay_color | replace: 'rgb(', '' | replace: ')', '' }};
   }
-  {% include css.html %}
+  {% capture css %}{% file_exists _includes/css.html %}{% endcapture %}
+  {% if css == "true" %}{% include css.html %}{% endif %}
 </style>
 <!-- htmllint preset="$previous" -->
 
