@@ -55,6 +55,12 @@ fields:
 - type: text
   name: assignment_form_guid
   label: assignment_form_guid
+- name: pdf_viewer_url
+  type: text
+  config:
+    required: false
+  label: pdf_viewer_url
+  hidden: true
 - type: textarea
   name: description
   label: description
@@ -179,6 +185,16 @@ fields:
   - type: text
     name: url
     label: url
+  - name: logo
+    type: file
+    config:
+      maxSize: 250
+    label: logo
+  - name: seal
+    type: file
+    config:
+      maxSize: 250
+    label: seal
   - type: number
     name: phone
     label: phone
@@ -228,6 +244,11 @@ fields:
   - type: file
     name: course_guide
     label: course_guide
+  - name: course_guide_img
+    type: file
+    config:
+      maxSize: 250
+    label: course_guide_img
   - type: field_group_list
     name: locations
     label: locations
