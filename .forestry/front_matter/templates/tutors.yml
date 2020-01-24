@@ -41,3 +41,5 @@ fields:
       schema:
         format: html-blocks
     label: tutoring_instructions
+pages:
+- tutors.html
