@@ -24,7 +24,7 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
       yarn jekyll-build-amp
       yarn optimize
       if [ "${CIRCLE_BRANCH}" == "preview" ]; then yarn encrypt; fi
-      if [ "${KEY}" == "austincodingacademy.com" ]
+      if [[ "${KEY}" == "austincodingacademy.com" ]] && [[ "${CIRCLE_BRANCH}" == "master" ]]
       then
         sudo apt install rsync
         rsync -a --delete -e "ssh -o StrictHostKeyChecking=no" _site/ root@134.209.57.190:/usr/share/nginx/html
