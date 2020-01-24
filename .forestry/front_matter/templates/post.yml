@@ -44,7 +44,7 @@ fields:
 - type: text
   name: img
   label: Featured Image
-  description: "/assets/images/name.png"
+  description: "/assets/uploads/name.png"
   config:
     required: true
 - type: tag_list

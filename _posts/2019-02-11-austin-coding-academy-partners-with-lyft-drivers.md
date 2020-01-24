@@ -3,7 +3,7 @@ tags: []
 title: Austin Coding Academy Partners with Lyft Drivers
 created_at: 2018-10-03 05:00:00 +0000
 updated_at: 2018-10-03 05:00:00 +0000
-img: "/assets/images/ACAlyft.png"
+img: "/assets/uploads/ACAlyft.png"
 categories:
 - announcements
 date: 2019-02-11 21:17:37 +0000
@@ -31,7 +31,7 @@ Improving accessibility to drivers who have already demonstrated a commitment to
 
 Sean Philippi has excelled as a student at ACA, where he’s on track to graduate as a full-stack Javascript developer in December of this year. As a Lyft driver and now an ACA student, Sean embodies the extra level of commitment necessary to thrive in a challenging environment.
 
-<amp-img width="340px" height="340px" layout="fixed" src="/assets/images/sean_philippi.png" alt="Sean Philippi, Lyft driver & ACA student"></amp-img>
+<amp-img width="340px" height="340px" layout="fixed" src="/assets/uploads/sean_philippi.png" alt="Sean Philippi, Lyft driver & ACA student"></amp-img>
 
 **_“I find the courses to be well-paced and challenging. I am very grateful for having discovered ACA.”_**
 

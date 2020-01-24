@@ -12,7 +12,7 @@ excerpt: 'Austin Coding Academy and WP Engine today announced an ongoing collabo
   to launch an in-person “WordPress Fundamentals” course to train students in the
   technical proficiencies necessary to become a technical support specialist with
   WP Engine and provide a guaranteed interview. Learn more:'
-img: "/assets/images/aca-official-press-release-blog-header.png"
+img: "/assets/uploads/aca-official-press-release-blog-header.png"
 redirect_from: []
 permalink: "/blog/press-release/austin-coding-academy-wp-engine-partnership/"
 author_name: Austin Coding Academy

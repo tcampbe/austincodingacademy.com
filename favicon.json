@@ -18,7 +18,7 @@
   {% endfor %}
 {% endif %}
 {
-  "masterPicture": "assets/images/logo-{{site.key}}-favicon.png",
+  "masterPicture": "assets/uploads/logo-{{site.key}}-favicon.png",
   "iconsPath": "/assets/favicons/",
   "design": {
     "ios": {

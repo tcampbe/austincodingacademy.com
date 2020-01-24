@@ -14,7 +14,7 @@ excerpt: The thought of changing careers is exciting to many people at one time 
   But that excitement can vanish if you’re afraid changing careers is too risky or
   complicated. Here are some strategies that can help you make a transition while
   minimizing risk.
-img: "/assets/images/what-to-do-when-you-want-to-change-careers.png"
+img: "/assets/uploads/what-to-do-when-you-want-to-change-careers.png"
 date: 2019-02-21 15:32:48 -0600
 school_keys:
 - austincodingacademy

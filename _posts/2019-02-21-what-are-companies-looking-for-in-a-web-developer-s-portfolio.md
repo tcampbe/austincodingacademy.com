@@ -12,7 +12,7 @@ excerpt: If you’re just starting out on your path as a developer without much 
   experience to show off in your portfolio, the road ahead may seem daunting. So what
   makes a great developer portfolio? Let’s take a closer look at the important elements
   that make up a solid developer portfolio that will land you an interview.
-img: "/assets/images/what-are-companies-looking-for-in-your-web-developers-portfolio.png"
+img: "/assets/uploads/what-are-companies-looking-for-in-your-web-developers-portfolio.png"
 date: 2019-02-21 14:16:21 -0600
 redirect_from: []
 permalink: "/blog/web-development/what-are-companies-looking-for-in-a-web-developers-portfolio/"

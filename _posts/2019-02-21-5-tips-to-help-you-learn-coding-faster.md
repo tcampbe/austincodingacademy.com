@@ -13,7 +13,7 @@ excerpt: 'Mastering a new skill can take years of focus and practice. But what i
   you may not want to wait years to get started. Good news: there are some things
   you can do in your spare time every day that will help you get better in less time.
   Here are five things to try to learn programming faster.'
-img: "/assets/images/5-tips-to-master-programming-faster.png"
+img: "/assets/uploads/5-tips-to-master-programming-faster.png"
 date: 2019-02-21 20:22:14 +0000
 school_keys:
 - austincodingacademy

@@ -24,20 +24,20 @@ overview:
     career transition while continuing to support yourself. Led by instructors who
     work as professional web developers, classes focus on in-depth, practical projects
     that prepare you for success in your new career.
-  img_src: "/assets/images/cap-factory-web-dev.jpg"
+  img_src: "/assets/uploads/cap-factory-web-dev.jpg"
 - title: Outside of Class
   text: Students are expected to utilize their e-textbook, unlimited tutoring, and
     organized group study sessions to practice course material outside of class –
     part of our flipped classroom approach. By studying outside of class, students
     can use class time to build their projects and get feedback from their instructor.
-  img_src: "/assets/images/cap-factory-web-dev-2.jpg"
+  img_src: "/assets/uploads/cap-factory-web-dev-2.jpg"
 - title: Job Readiness
   odd: true
   text: "{{ school.name }}’s Full Stack Web Development Track is designed to take
     students from no experience to job ready in under a year. After graduating, students
     continue to receive support in finding their first job from our Job Placement
     Course, Director of Job Placement, and various hiring partners."
-  img_src: "/assets/images/cap-factory-web-dev-3.jpg"
+  img_src: "/assets/uploads/cap-factory-web-dev-3.jpg"
 job_placement:
   stats:
   - stat: 89%
@@ -73,17 +73,17 @@ successes:
 - name: Luke Stenis
   title: Analytics Implementation Engineer
   company: Pluralsight
-  img_src: "/assets/images/luke-stenis-headshot.jpeg"
+  img_src: "/assets/uploads/luke-stenis-headshot.jpeg"
   learn_url: https://austincodingacademy.com/blog/alumni-spotlight/luke-stenis/why-i-left-marketing-to-learn-coding/
 - name: Lillian Situ
   title: Software Engineer
   company: data.world
-  img_src: "/assets/images/lillian-situ-headshot.jpeg"
+  img_src: "/assets/uploads/lillian-situ-headshot.jpeg"
   learn_url: https://austincodingacademy.com/blog/student-highlight/lillian-situ/
 - name: Greg Swan
   title: Web Application Developer
   company: OpenSymmetry
-  img_src: "/assets/images/greg-swan-headshot.jpeg"
+  img_src: "/assets/uploads/greg-swan-headshot.jpeg"
   learn_url: https://austincodingacademy.com/blog/student-highlight/greg-swan/
 - name: Student Brian
   title: Software Engineer
@@ -381,7 +381,7 @@ schools:
                 width="{{ item.img_width }}"
                 height="80px"
                 layout="fixed"
-                src="/assets/images/{{ item.img_src | liquify }}"
+                src="/assets/uploads/{{ item.img_src | liquify }}"
                 alt=""
               ></amp-img>
             </div>
@@ -554,7 +554,7 @@ schools:
                 width="{{ prop.img_width }}"
                 height="80px"
                 layout="fixed"
-                src="/assets/images/{{ prop.img_src | liquify }}"
+                src="/assets/uploads/{{ prop.img_src | liquify }}"
                 alt=""
               ></amp-img>
             </div>
@@ -707,7 +707,7 @@ schools:
         "name": "{{ school.name }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ school.url }}/assets/images/logo-{{ site.key }}.png"
+          "url": "{{ school.url }}/assets/uploads/logo-{{ site.key }}.png"
         }
       }
     }

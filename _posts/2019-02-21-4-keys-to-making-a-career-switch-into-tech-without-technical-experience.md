@@ -13,7 +13,7 @@ excerpt: 'As the Austin tech scene continues to appeal to job seekers and people
   don’t have any technical job experience. Will anyone even hire me?”. While technical
   skills are important, there are other ways you can prepare yourself for a career
   switch.'
-img: "/assets/images/making-a-career-switch-without-technical-experience-graphic.png"
+img: "/assets/uploads/making-a-career-switch-without-technical-experience-graphic.png"
 date: 2019-02-21 13:58:04 -0600
 school_keys:
 - austincodingacademy

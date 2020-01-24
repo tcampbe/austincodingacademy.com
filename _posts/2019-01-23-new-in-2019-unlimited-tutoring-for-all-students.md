@@ -12,7 +12,7 @@ categories:
 excerpt: At Austin Coding Academy, we take pride in providing our students an unmatched
   level of support and community. One element of student support that we're most proud
   of having available in 2019 is unlimited tutoring for all ACA students.
-img: "/assets/images/coding-tutoring-session.jpg"
+img: "/assets/uploads/coding-tutoring-session.jpg"
 redirect_from: []
 permalink: "/blog/announcements/unlimited-tutoring-for-austin-coding-academy-students/"
 school_keys:

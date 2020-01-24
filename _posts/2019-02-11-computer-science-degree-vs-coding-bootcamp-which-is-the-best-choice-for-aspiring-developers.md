@@ -4,7 +4,7 @@ title: 'Computer Science Degree vs. Coding Bootcamp: Which Is the Best Choice fo
   Aspiring Developers?'
 created_at: 2018-07-24 05:00:00 +0000
 updated_at: 2019-02-11 06:00:00 +0000
-img: "/assets/images/cs-degree-vs-aca.png"
+img: "/assets/uploads/cs-degree-vs-aca.png"
 categories:
 - web-development
 date: 2019-02-11 21:28:54 +0000

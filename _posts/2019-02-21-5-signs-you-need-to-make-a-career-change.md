@@ -10,7 +10,7 @@ categories:
 - career-development
 excerpt: |
   The average American spends at least 40 hours a week at work for several decades. A career represents too much of your lifespan for it to be something that makes you miserable. While the thought of making such a huge overhaul may be daunting, here are some signs it’s time to take a leap and move into a new career path.
-img: "/assets/images/5-signs-you-need-to-change-careers.png"
+img: "/assets/uploads/5-signs-you-need-to-change-careers.png"
 date: 2019-02-21 20:32:26 +0000
 school_keys:
 - austincodingacademy

@@ -14,7 +14,7 @@ excerpt: "Since coding academies have become an increasingly visible part of the
   graduating every year. With so much new popularity, it's fair to ask if a coding
   boot camp is worth it. In fact, we’re going to ask it (and explore it) even more
   directly:\n\n"
-img: "/assets/images/4-ways-a-coding-bootcamp-graphic.png"
+img: "/assets/uploads/4-ways-a-coding-bootcamp-graphic.png"
 redirect_from: []
 permalink: "/blog/web-development/4-ways-a-coding-bootcamp-is-worth-it/"
 author_name: Austin Coding Academy

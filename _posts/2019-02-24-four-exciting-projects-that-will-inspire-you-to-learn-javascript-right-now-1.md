@@ -13,7 +13,7 @@ excerpt: 'JavaScript (JS) is the most commonly-used coding language for develope
   fast to run, and works across most platforms, including all modern web browsers.
   Let’s look at some impressive projects that might inspire you to start learning
   JavaScript now:'
-img: "/assets/images/learn-javascript-four-projects.png"
+img: "/assets/uploads/learn-javascript-four-projects.png"
 redirect_from: []
 permalink: "/blog/javascript/four-exciting-projects-that-will-inspire-you-to-learn-javascript/"
 date: 2019-02-24 14:14:48 -0600

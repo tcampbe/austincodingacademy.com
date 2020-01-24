@@ -13,7 +13,7 @@ excerpt: 'This month, we caught up with ACA graduate Greg Swan, who accepted a j
   as a Web Developer at Kinetic Theory in Austin after finishing the JavaScript track.
   Greg now works as a Web Application Developer with OpenSymmetry. Here''s what he
   had to say about his experience as an Austin Coding Academy student:'
-img: "/assets/images/student-highlight-header-greg-swan.png"
+img: "/assets/uploads/student-highlight-header-greg-swan.png"
 redirect_from: []
 permalink: "/blog/student-highlight/greg-swan/"
 author_name: Austin Coding Academy

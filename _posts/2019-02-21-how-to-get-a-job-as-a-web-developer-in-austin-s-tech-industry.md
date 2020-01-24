@@ -12,7 +12,7 @@ excerpt: 'Looking for your first web development job in Austin can seem extremel
   daunting. This is especially true if you are new to town and don''t have a built-in
   network of friends to help you get you foot in the door at a tech company. Fear
   not! We’ve rounded up some great resources and to help. Take a look:'
-img: "/assets/images/5-ways-to-get-a-job-as-a-web-developer.png"
+img: "/assets/uploads/5-ways-to-get-a-job-as-a-web-developer.png"
 date: 2019-02-21 14:59:29 -0600
 redirect_from: []
 permalink: "/blog/web-development/how-to-get-a-job-as-a-web-developer-in-austin-tech-industry/"

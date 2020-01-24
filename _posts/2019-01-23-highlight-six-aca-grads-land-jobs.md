@@ -13,7 +13,7 @@ excerpt: 'It''s a great time for job placement at Austin Coding Academy! Here ar
   six of our graduates who have landed or have already started in full-time developer
   roles in recent months! We couldn''t be more proud of the hard work that they''ve
   put in to get to this point. Check them out:'
-img: "/assets/images/six-austin-coding-academy-grads-land-jobs.png"
+img: "/assets/uploads/six-austin-coding-academy-grads-land-jobs.png"
 redirect_from: []
 permalink: "/blog/announcements/six-austin-coding-academy-graduates-land-jobs/"
 school_keys:

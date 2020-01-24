@@ -13,7 +13,7 @@ excerpt: Austin Coding Academy recently added a 4-week job placement course, cov
   everything from resume-building, to getting interviewing. We talked to Edsel Rivera
   director of the course and Technical Recruiter at Dosh about why teaching more than
   just coding is important.
-img: "/assets/images/austin-coding-academy-job-placement-class.jpg"
+img: "/assets/uploads/austin-coding-academy-job-placement-class.jpg"
 redirect_from: []
 permalink: "/blog/career-development/new-job-placement-course-q-a/"
 school_keys:

@@ -9,7 +9,7 @@ updated_at: 2019-04-08 00:00:00 -0500
 categories: []
 excerpt: Curious about what the C# programming language can do? Here is a short introduction
   to C# and five amazing apps you can build with this technology stack.
-img: "/assets/images/computer-on-table-stock-photo.jpg"
+img: "/assets/uploads/computer-on-table-stock-photo.jpg"
 redirect_from: []
 permalink: "/blog/2017/05/17/5-awesome-apps-you-can-create-with-c-sharp/"
 author_name: Luke Stenis

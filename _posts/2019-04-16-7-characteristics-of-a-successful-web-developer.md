@@ -11,7 +11,7 @@ excerpt: 'Great code doesn’t always translate into a great hire. While it defi
   helps, there is more to being a successful web developer than a mind rich in technical
   knowledge. Here are seven characteristics common in web developers - other than
   technical skills - who are successful at their job:'
-img: "/assets/images/7-characteristics-of-a-successful-web-developer.png"
+img: "/assets/uploads/7-characteristics-of-a-successful-web-developer.png"
 redirect_from: []
 permalink: "/blog/web-development/7-characteristics-of-a-successful-web-developer/"
 author_name: Luke Stenis
@@ -42,7 +42,7 @@ Great code doesn’t always translate into a great hire. While it definitely hel
 
 ## A passion for knowledge
 
-<amp-img width="300px" height="150px" layout="fixed" src="/assets/images/blog-5-31-17-2.jpg" alt=""></amp-img>
+<amp-img width="300px" height="150px" layout="fixed" src="/assets/uploads/blog-5-31-17-2.jpg" alt=""></amp-img>
 
 Technology is always evolving, and the skills and abilities needed in today’s tech scene can get outdated quickly. It’s important to have a passion for learning and the desire to keep up with the latest trends. As newer versions of languages, libraries and frameworks roll out, you will be expected to not only know these changes, but be a subject matter expert within your company. Don’t confuse this with technical skills - you can still love to learn without being the sharpest crayon in the box.
 
@@ -50,7 +50,7 @@ This goes beyond a willingness to educate yourself. You should embrace the inevi
 
 ## Great teammate
 
-<amp-img width="300px" height="150px" layout="fixed" src="/assets/images/blog-5-31-17-3.jpg" alt=""></amp-img>
+<amp-img width="300px" height="150px" layout="fixed" src="/assets/uploads/blog-5-31-17-3.jpg" alt=""></amp-img>
 
 A web developer rarely works alone. Good software is commonly built by a whole development team comprised of many dynamic roles. Being able to take on a team mentality can be critical to the success of a project.
 
@@ -58,7 +58,7 @@ Outside of the immediate team, web developers will also be expected to work with
 
 ## Creative problem solver
 
-<amp-img width="300px" height="150px" layout="fixed" src="/assets/images/blog-5-31-17-4.jpg" alt=""></amp-img>
+<amp-img width="300px" height="150px" layout="fixed" src="/assets/uploads/blog-5-31-17-4.jpg" alt=""></amp-img>
 
 Developing code for a software program or designing website from scratch is incredibly difficult – much like trying to solve a complex math equation or write a novel. A great developer thrives on finding ways to make things work, no matter the challenge, and sometimes needs to get creative to find a working solution. You want to try to avoid the phrase “It can’t be done” when you are pitched a new project.
 
@@ -66,7 +66,7 @@ A great working knowledge of the language or framework you are using is a must. 
 
 ## Ability to plan for everything
 
-<amp-img width="300px" height="150px" layout="fixed" src="/assets/images/blog-5-31-17-5.jpg" alt=""></amp-img>
+<amp-img width="300px" height="150px" layout="fixed" src="/assets/uploads/blog-5-31-17-5.jpg" alt=""></amp-img>
 
 Rather than jumping head-first into a project, a wise and cautious web developer will first learn as much as possible about the desired end product. Once this step is completed, the developer will then plan out the entire structure of the project before typing out one line of code.
 
@@ -74,7 +74,7 @@ This is a critical step - as one little oversight can throw a project deadline o
 
 ## Great debugging skills
 
-<amp-img width="300px" height="150px" layout="fixed" src="/assets/images/blog-5-31-17-6.jpg" alt=""></amp-img>
+<amp-img width="300px" height="150px" layout="fixed" src="/assets/uploads/blog-5-31-17-6.jpg" alt=""></amp-img>
 
 In my current job, I identify and solve issues on large, e-commerce websites. Basically, I help fix bad code written by their in-house developers that they couldn’t solve themselves. What I found more shocking than how simple the mistakes are – was how often the developers themselves did not know how to properly debug their own mistakes.
 
@@ -82,7 +82,7 @@ Writing and developing code is only part of a web developer’s job. They are al
 
 ## “Accelerated Failure” Mentality
 
-<amp-img width="300px" height="150px" layout="fixed" src="/assets/images/blog-5-31-17-7.jpg" alt=""></amp-img>
+<amp-img width="300px" height="150px" layout="fixed" src="/assets/uploads/blog-5-31-17-7.jpg" alt=""></amp-img>
 
 “Fail Fast”, “Fail Better”, “Fail Forward” are all popular mantras used by startups and tech giants in Silicon Valley. If you aren’t failing, you aren’t learning.
 
@@ -90,7 +90,7 @@ Rarely does code get written correctly the first time. This is why we plan for e
 
 ## Business Sense
 
-<amp-img width="300px" height="150px" layout="fixed" src="/assets/images/blog-5-31-17-8.jpg" alt=""></amp-img>
+<amp-img width="300px" height="150px" layout="fixed" src="/assets/uploads/blog-5-31-17-8.jpg" alt=""></amp-img>
 
 A great developer can look beyond the project they are working on and see the big picture for the business. A savvy business sense can lead to new applications or automated processes focused on more saving time and money for a company.
 

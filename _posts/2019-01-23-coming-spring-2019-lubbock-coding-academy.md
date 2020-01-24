@@ -12,7 +12,7 @@ categories:
 excerpt: 'Austin Coding Academy is excited to announce the formation of Lubbock Coding
   Academy in partnership with Lubbock Economic Development Alliance (LEDA), South
   Plains College, and Texas Tech University. Read more:'
-img: "/assets/images/lubbock-coding-academy-coming-spring-2019.png"
+img: "/assets/uploads/lubbock-coding-academy-coming-spring-2019.png"
 redirect_from: []
 permalink: "/blog/announcements/coming-in-2019-lubbock-coding-academy/"
 school_keys:

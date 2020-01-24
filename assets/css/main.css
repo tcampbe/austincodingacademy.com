@@ -358,14 +358,14 @@ a {
 /* filter over video */
 #hero-index {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/images/hero-index.jpg');
+    url('/assets/uploads/hero-index.jpg');
   background-position: -820px 0px;
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
   #hero-index {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/images/hero-index.jpg');
+      url('/assets/uploads/hero-index.jpg');
     background-position: top;
     height: 100vh;
   }
@@ -382,7 +382,7 @@ a {
 
 #hero-corporate {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/images/hero-corporate.jpg');
+    url('/assets/uploads/hero-corporate.jpg');
   background-size: cover;
   background-position: -20px 70px;
 }
@@ -390,7 +390,7 @@ a {
 @media (min-width: 768px) {
   #hero-corporate {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/images/hero-corporate.jpg');
+      url('/assets/uploads/hero-corporate.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -398,7 +398,7 @@ a {
 
 #hero-js {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/images/hero-javascript.jpg');
+    url('/assets/uploads/hero-javascript.jpg');
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -407,7 +407,7 @@ a {
 @media (min-width: 768px) {
   #hero-js {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/images/hero-javascript.jpg');
+      url('/assets/uploads/hero-javascript.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -416,7 +416,7 @@ a {
 
 #hero-blog {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/images/hero-blog.jpg');
+    url('/assets/uploads/hero-blog.jpg');
   background-position: -330px 0px;
   background-size: cover;
 }
@@ -424,7 +424,7 @@ a {
 @media (min-width: 768px) {
   #hero-blog {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/images/hero-blog.jpg');
+      url('/assets/uploads/hero-blog.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -432,7 +432,7 @@ a {
 
 #hero-landing {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/images/hero-landing.jpg');
+    url('/assets/uploads/hero-landing.jpg');
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -440,7 +440,7 @@ a {
 
 #hero-events {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/images/hero-landing.jpg');
+    url('/assets/uploads/hero-landing.jpg');
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -469,7 +469,7 @@ a {
 /* new index page backgrounds */
 .bg-textured {
   background-color: rgba(var(--primary-dark), 1);
-  background-image:url('/assets/images/bg-textured.svg');
+  background-image:url('/assets/uploads/bg-textured.svg');
 }
 
 .border-blue {
@@ -511,11 +511,11 @@ a {
 
 /* carousel nav buttons */
 .amp-carousel-button-prev {
-  background: white url(/assets/images/left_blue_arrow.svg);
+  background: white url(/assets/uploads/left_blue_arrow.svg);
 }
 
 .amp-carousel-button-next {
-  background: white url(/assets/images/right_blue_arrow.svg);
+  background: white url(/assets/uploads/right_blue_arrow.svg);
 }
 
 /* no longer used, but may be used again */
@@ -531,7 +531,7 @@ a {
   border: 3px;
   border-style: solid;
   border-color: transparent;
-  border-image-source: url(/assets/images/apply-button.svg);
+  border-image-source: url(/assets/uploads/apply-button.svg);
   border-image-repeat: stretch stretch;
   border-image-slice: 21;
   border-image-width: 182px;
@@ -784,7 +784,7 @@ ul.share-buttons img {
 
 .background-logo {
   min-height: 100vh;
-  background-image: url('/assets/images/ACA-logo-white-large.png');
+  background-image: url('/assets/uploads/ACA-logo-white-large.png');
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;

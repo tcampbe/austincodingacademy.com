@@ -12,7 +12,7 @@ excerpt: While there are many paths to a coding career, those who are successful
   a similar method for landing their first job in web development. As a fledgling
   techie, you can land your first job by following in the footsteps of coders before
   you, and use these twenty tips for success in the job market.
-img: "/assets/images/conference-room-stock-photo.jpg"
+img: "/assets/uploads/conference-room-stock-photo.jpg"
 redirect_from: []
 permalink: "/blog/web-development/20-tips-for-landing-your-first-job-in-web-development/"
 date: 2019-04-11 20:29:00 +0000

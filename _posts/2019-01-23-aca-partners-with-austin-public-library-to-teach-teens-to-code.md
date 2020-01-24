@@ -4,7 +4,7 @@ title: Austin Coding Academy Partners with Austin Public Library to Teach Teens 
 created_at: 2018-10-11 05:00:00 +0000
 updated_at: 2018-10-11 05:00:00 +0000
 date: 2019-01-23 19:36:58 +0000
-img: "/assets/images/ACA-APL-Glitch-Teen-Coding.png"
+img: "/assets/uploads/ACA-APL-Glitch-Teen-Coding.png"
 tags:
 - learn to code
 categories:
