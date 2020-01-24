@@ -7,6 +7,9 @@ fields:
   label: layout
   hidden: true
 - type: text
+  name: title
+  label: title
+- type: text
   name: permalink
   label: permalink
 - type: text
@@ -22,9 +25,6 @@ fields:
   name: amp_components
   label: amp_components
   hidden: true
-- type: text
-  name: title
-  label: title
 - type: field_group_list
   name: schools
   label: schools
