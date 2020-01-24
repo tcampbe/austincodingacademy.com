@@ -69,6 +69,16 @@ fields:
     - type: text
       name: title
       label: title
+    - name: url
+      type: text
+      config:
+        required: false
+      label: url
+    - name: class
+      type: text
+      config:
+        required: false
+      label: class
   - type: field_group_list
     name: footer
     label: footer
@@ -135,6 +145,34 @@ fields:
       - type: text
         name: title
         label: title
+      - name: url
+        type: text
+        config:
+          required: false
+        label: url
+      - name: class
+        type: text
+        config:
+          required: false
+        label: class
+    - name: footer
+      type: field_group_list
+      fields:
+      - name: title
+        type: text
+        config:
+          required: false
+        label: title
+      - name: url
+        type: text
+        config:
+          required: false
+        label: url
+      config:
+        min: 
+        max: 
+        labelField: 
+      label: footer
   - type: list
     name: tracks
     label: tracks
