@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.1-node-browsers
-    parallelism: 1gaa
+    parallelism: 6
 
     steps:
       - checkout
@@ -46,13 +46,15 @@ jobs:
             - node_modules
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
+      # - run: yarn test
       - run: ./deploy.sh
+
 
 workflows:
   version: 2
   commit:
     jobs:
-    - build:
+     - build:
         filters:
           branches:
             ignore: gh-pages
