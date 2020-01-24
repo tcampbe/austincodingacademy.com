@@ -7,7 +7,7 @@ const createRepo = async name => {
   try {
     if (!repos.includes(name)) {
       await octokit.repos.createInOrg({
-        org: 'VandelayEducation',
+        org: 'AustinCodingAcademy',
         name: name,
         private: true,
         homepage: `https://${name}`
@@ -16,7 +16,7 @@ const createRepo = async name => {
     }
     if (!repos.includes(`preview.${name}`)) {
       await octokit.repos.createInOrg({
-        org: 'VandelayEducation',
+        org: 'AustinCodingAcademy',
         name: `preview.${name}`,
         private: true,
         homepage: `https://preview.${name}`
@@ -46,7 +46,7 @@ const listRepos = async (page) => {
   try {
     while (!allRepos) {
       const response = await octokit.repos.listForOrg({
-        org: "VandelayEducation",
+        org: "AustinCodingAcademy",
         type: "all",
         per_page: 100,
         page
