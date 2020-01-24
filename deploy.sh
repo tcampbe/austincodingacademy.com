@@ -4,6 +4,9 @@ git config --global user.email "kevin@austincodingacademy.com"
 git config --global user.name "Kevin Colten"
 if [ "${CIRCLE_BRANCH}" == "preview" ]; then export JEKYLL_ENV='preview.'; fi
 if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; then
+  mkdir _data
+  node _javascripts/events.js
+  node _javascripts/tutoring.js
   yarn images
   yarn configs
   node _javascripts/github.js
