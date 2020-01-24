@@ -175,9 +175,9 @@ fields:
           required: false
         label: url
       config:
-        min: 
-        max: 
-        labelField: 
+        min:
+        max:
+        labelField:
       label: footer
   - type: list
     name: tracks
@@ -198,6 +198,10 @@ fields:
   - type: number
     name: phone
     label: phone
+    config:
+      min: '10000000000'
+      max: '19999999999'
+      step:
   - type: number
     name: callrail_company_id
     label: callrail_company_id
@@ -305,8 +309,8 @@ fields:
         required: false
       label: time
     config:
-      min: 
-      max: 
+      min:
+      max:
       labelField: date
     label: start_dates
   - name: primary_light_color
