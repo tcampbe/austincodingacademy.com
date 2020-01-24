@@ -118,6 +118,9 @@ fields:
   - type: text
     name: key
     label: key
+  - type: boolean
+    name: active
+    label: active
   - type: text
     name: name
     label: name
@@ -243,8 +246,8 @@ fields:
         required: false
       label: time
     config:
-      min: 
-      max: 
+      min:
+      max:
       labelField: date
     label: start_dates
   - name: primary_light_color
