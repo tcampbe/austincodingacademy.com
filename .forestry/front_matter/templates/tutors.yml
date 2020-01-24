@@ -5,6 +5,7 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: text
   name: permalink
   label: permalink
@@ -20,6 +21,7 @@ fields:
 - type: list
   name: amp_components
   label: amp_components
+  hidden: true
 - type: text
   name: title
   label: title
@@ -30,6 +32,12 @@ fields:
   - type: text
     name: key
     label: key
-  - type: textarea
-    name: tutoring_instructions
+  - name: tutoring_instructions
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: html-blocks
     label: tutoring_instructions
