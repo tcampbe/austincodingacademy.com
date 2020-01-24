@@ -10,17 +10,17 @@ hide_apply: 'd-none'
 process:
 - heading: Apply
   text: Get started by filling out our application and setting up a call with our admissions team.
-  img_src: wp-apply.png
+  img_src: /assets/uploads/wp-apply.png
   img_width: 90px
 - item: null #for chevron icon
 - heading: Assignment
   text: After speaking with our admissions team, you’ll be asked to complete a brief assignment.
-  img_src: wp-assignment.png
+  img_src: /assets/uploads/wp-assignment.png
   img_width: 90px
 - item: null #for chevron icon
 - heading: Enroll
   text: Once you’ve successfully completed your assignment, you’ll be able to begin class.
-  img_src: wp-enroll.png
+  img_src: /assets/uploads/wp-enroll.png
   img_width: 90px
 ---
 {% for _page in site.pages %}
@@ -56,8 +56,8 @@ process:
               width="{{ item.img_width }}"
               height="80px"
               layout="fixed"
-              src="/assets/uploads/{{ item.img_src }}"
-              alt=""
+              src="{{ item.img_src }}"
+              alt="alt img {{ forloop.index }}"
             ></amp-img>
             <h3>
               {{ item.heading }}

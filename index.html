@@ -46,7 +46,7 @@ features:
     learning to code fits your schedule. Benefit from a “flipped classroom” approach,
     with hands-on classes led by instructors who work as professional developers during
     the day.
-  img: calendar_yellow.png
+  img: /assets/uploads/calendar_yellow.png
   square: true
   alt: Calendar graphic
 - heading: Affordable Tuition
@@ -54,7 +54,7 @@ features:
   description: Cover your tuition by paying course-by-course or for the entire program
     up front, (and saving). Contact our admissions team to discuss how {{ school.name
     }} can work for you.
-  img: wallet_red.png
+  img: /assets/uploads/wallet_red.png
   square: true
   alt: Wallet graphic
 - heading: Unlimited Tutoring
@@ -62,7 +62,7 @@ features:
   description: Stay on track with your coursework by taking advantage of free unlimited
     tutoring. You can book 1-on-1 help on your schedule or take advantage of weekend
     group tutoring at both of our campuses.
-  img: tutoring_blue.png
+  img: /assets/uploads/tutoring_blue.png
   alt: Pencil graphic
   square: false
 - heading: Job Placement
@@ -71,7 +71,7 @@ features:
     taught by professional developers. Receive 1-on-1 attention from our Director
     of Job Placement. Build your resume, practice interviews, and more in our Job
     Placement Course.
-  img: suitcase_green.png
+  img: /assets/uploads/suitcase_green.png
   square: true
   alt: Suitcase graphic
 schools:
@@ -94,7 +94,7 @@ schools:
       learning to code fits your schedule. Benefit from a “flipped classroom” approach,
       with hands-on classes led by instructors who work as professional developers
       during the day.
-    img: calendar_white.png
+    img: /assets/uploads/calendar_white.png
     square: true
     alt: Calendar graphic
   - heading: Affordable Tuition
@@ -102,7 +102,7 @@ schools:
     description: Cover your tuition by paying course-by-course or for the entire program
       up front, (and saving). Contact our admissions team to discuss how {{ school.name
       }} can work for you.
-    img: wallet_white.png
+    img: /assets/uploads/wallet_white.png
     square: true
     alt: Wallet graphic
   - heading: Unlimited Tutoring
@@ -110,7 +110,7 @@ schools:
     description: Stay on track with your coursework by taking advantage of free unlimited
       tutoring. You can book 1-on-1 help on your schedule or take advantage of weekend
       group tutoring at both of our campuses.
-    img: tutoring_white.png
+    img: /assets/uploads/tutoring_white.png
     alt: Pencil graphic
     square: false
   - heading: Job Placement
@@ -119,7 +119,7 @@ schools:
       curriculum, taught by professional developers. Receive 1-on-1 attention from
       our Director of Job Placement. Build your resume, practice interviews, and more
       in our Job Placement Course.
-    img: suitcase_white.png
+    img: /assets/uploads/suitcase_white.png
     square: true
     alt: Suitcase graphic
   lightbox_youtube:
@@ -440,7 +440,7 @@ schools:
                     height="80px"
                     layout="responsive"
                     class="w-100"
-                    src="/assets/uploads/{{ feature.img | liquify }}"
+                    src="{{ feature.img | liquify }}"
                     alt="{{ feature.alt | liquify }}"
                   ></amp-img>
                 </div>
@@ -454,7 +454,7 @@ schools:
                     height="60px"
                     layout="responsive"
                     class="w-100"
-                    src="/assets/uploads/{{ feature.img | liquify }}"
+                    src="{{ feature.img | liquify }}"
                     alt="{{ feature.alt | liquify }}"
                   ></amp-img>
                 </div>

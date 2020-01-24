@@ -101,7 +101,7 @@
     "name": "{{ school.name }}",
     "url": "{{ school.url }}",
     "priceRange": "$2990",
-    "logo": "{{ school.url }}/assets/uploads/logo-{{ site.key }}.png",
+    "logo": "{{ school.url | append: school.logo }}",
     "image": {
       "@type": "ImageObject",
       "url": "{{ school.url }}/assets/uploads/header-index.jpg"

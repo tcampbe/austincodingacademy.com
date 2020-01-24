@@ -168,7 +168,7 @@ layout: default
       },
       "headline": "{{ page.head_title | liquify }}",
       "image": [
-        "{{ school.url }}{{ page.img | liquify }}"
+        "{{ school.url | append: page.img | liquify }}"
         ],
       "datePublished": "{{ page.created_at }}",
       "dateModified": "{{ page.updated_at }}",
@@ -181,7 +181,7 @@ layout: default
         "name": "{{ school.name }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ school.url }}/assets/uploads/logo-{{ site.key }}.png"
+          "url": "{{ school.url | append: school.logo }}"
         }
       },
       "description": "{{ page.excerpt | liquify }}"

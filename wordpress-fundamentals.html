@@ -7,6 +7,9 @@ amp_components:
 - amp-lightbox
 - amp-img
 - amp-recaptcha-input
+course_guide_img: /assets/uploads/WordPress-Fundamentals-Course-Guide-Master-Table-Content.png
+course_guide: /assets/documents/WordPress-Fundamentals-Course-Guide-Master.pdf
+course_guide_form_guid: b742c715-7280-4cae-bb5a-5f47b31266fa
 redirect_from: []
 hero: js
 hero_heading: WordPress Fundamentals
@@ -27,24 +30,24 @@ features:
 - heading: The World's Most Popular Website Building Platform
   text: WordPress is the world’s most-used website building platform. With over 75,000,000
     WordPress sites on the web, there are millions of reasons to learn WordPress.
-  img_src: icon-website-white.png
+  img_src: /assets/uploads/icon-website-white.png
   img_width: 65px
 - heading: Jobs – From Tech to Freelance
   text: Learning WordPress opens up a variety of jobs – from an internal developer
     at a tech company or startup to a freelance developer working on the projects
     you choose.
-  img_src: icon-techjobs-white.png
+  img_src: /assets/uploads/icon-techjobs-white.png
   img_width: 90px
 - heading: Increase Your Earning Potential
   text: As a support specialist with WP Engine, you’ll be able to earn a competitive
     salary, benefits, and the opportunity for promotion within one of Austin’s fastest
     growing tech companies.
-  img_src: icon-increaseearnings-white.png
+  img_src: /assets/uploads/icon-increaseearnings-white.png
   img_width: 90px
 - heading: Work for One of Austin's Premier Tech Companies
   text: All graduates of this course are guaranteed an interview with one of Austin’s
     fastest-growing tech companies, WP Engine as a technical support specialist.
-  img_src: icon-interview-white.png
+  img_src: /assets/uploads/icon-interview-white.png
   img_width: 90px
 program_overview: Austin Coding Academy and WP Engine have partnered together to develop
   a WordPress curriculum that teaches the most important core technical proficiencies
@@ -194,7 +197,7 @@ schools:
         tabindex="0"
         role="dialog"
       >
-        {% include course-guide-form.html lightbox=true text_class="text-white" course_guide="WordPress-Fundamentals" course_guide_href="/assets/documents/WordPress-Fundamentals-Course-Guide-Master.pdf" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
+        {% include course-guide-form.html lightbox=true text_class="text-white" course_guide_img=page.course_guide_img course_guide_href=page.course_guide course_guide_form_guid=page.course_guide_form_guid %}
       </amp-lightbox>
     </div>
   </div>
@@ -253,8 +256,8 @@ schools:
                 width="{{ item.img_width }}"
                 height="80px"
                 layout="fixed"
-                src="/assets/uploads/{{ item.img_src | liquify }}"
-                alt=""
+                src="{{ item.img_src | liquify }}"
+                alt="alt img {{ forloop.index }}"
               ></amp-img>
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
@@ -324,7 +327,7 @@ schools:
   <!-- htmllint preset="$previous" -->
     <div class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html text_class="text-white" course_guide="WordPress-Fundamentals" course_guide_href="/assets/documents/WordPress-Fundamentals-Course-Guide-Master.pdf" course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
+        {% include course-guide-form.html text_class="text-white" course_guide_href=page.course_guide course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
       </div>
     </div>
   </section>
@@ -513,7 +516,7 @@ schools:
         "name": "{{ school.name }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ school.url }}/assets/uploads/logo-{{ site.key }}.png"
+          "url": "{{ school.url | append: school.logo }}"
         }
       }
     }
