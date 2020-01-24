@@ -1,0 +1,35 @@
+---
+label: Tutors
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: head_title
+  label: head_title
+- type: text
+  name: description
+  label: description
+- type: list
+  name: redirect_from
+  label: redirect_from
+- type: list
+  name: amp_components
+  label: amp_components
+- type: text
+  name: title
+  label: title
+- type: field_group_list
+  name: schools
+  label: schools
+  fields:
+  - type: text
+    name: key
+    label: key
+  - type: textarea
+    name: tutoring_instructions
+    label: tutoring_instructions
