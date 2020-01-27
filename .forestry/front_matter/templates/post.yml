@@ -41,12 +41,6 @@ fields:
   config:
     required: true
   default: post
-- type: text
-  name: img
-  label: Featured Image
-  description: "/assets/uploads/name.png"
-  config:
-    required: true
 - type: tag_list
   name: redirect_from
   label: Redirect From
@@ -69,6 +63,11 @@ fields:
     min: 
     max: 
   label: school_keys
+- name: img
+  type: file
+  config:
+    maxSize: 250
+  label: Featured Image
 pages:
 - _posts/2019-01-23-aca-partners-with-austin-public-library-to-teach-teens-to-code.md
 - _posts/2019-01-23-coming-spring-2019-lubbock-coding-academy.md
