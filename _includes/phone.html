@@ -30,6 +30,6 @@
   {% if include.icon_class %}
     <span class="{{ include.icon_class }}" aria-hidden="true"></span>&nbsp;
   {% endif %}
-  <a class="{{ include.a_class }}" href="tel:{{ school.phone }}"><span class="text-white hover-white">{{ school.phone | phone_number }}</span></a></span>
+  <a class="{{ include.a_class }}" href="tel:{{ school.phone }}"><span>{{ school.phone | phone_number }}</span></a></span>
 {% endif %}
 <!-- htmllint preset="$previous" -->
