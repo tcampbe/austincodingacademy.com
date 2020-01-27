@@ -56,18 +56,19 @@ fields:
   description: "/blog/title-here-with-dashes-nothing-special"
   config:
     required: true
-- type: number
-  name: height
-  label: Height
-- type: number
-  name: width
-  label: Width
 - type: text
   name: author_name
   label: Author Name
 - type: text
   name: author_email
   label: Author Email
+- name: school_keys
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: school_keys
 pages:
 - _posts/2019-01-23-aca-partners-with-austin-public-library-to-teach-teens-to-code.md
 - _posts/2019-01-23-coming-spring-2019-lubbock-coding-academy.md
