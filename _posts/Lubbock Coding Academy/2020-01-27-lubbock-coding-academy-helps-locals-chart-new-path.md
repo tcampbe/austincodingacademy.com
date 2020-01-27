@@ -13,7 +13,8 @@ redirect_from: []
 permalink: "/blog/news/lubbock-coding-academy-helps-locals-chart-new-path/"
 author_name: Lubbock Coding Academy
 author_email: info@lubbockcodingacademy.com
-school_keys: []
+school_keys:
+- lubbockcodingacademy
 img: "/assets/uploads/lca-blog-first-post.png"
 
 ---
