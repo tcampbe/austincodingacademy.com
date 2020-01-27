@@ -48,13 +48,13 @@ workexperience:
     title: Product Leader
     location: Austin, TX
 
-education: Full Stack JavaScript
+education:
   - name: Austin Coding Acaademy
     dates: Apr 2019 - Feb 2020
-    degree: Web Development
+    degree: Full Stack JavaScript Web Development
 
-projects: Full-stack web app build in JavaScript using React.
+projects:
   - name: dailyBOOST
-    desc: The Application helps the user "boost" their Daily Energy Levels.
+    desc: The Application helps the user "boost" their Daily Energy Levels. Full-stack web app build in JavaScript using React.
     url: https://github.com/AnnaGD/DailyBoost
 ---
