@@ -5,6 +5,7 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: text
   name: permalink
   label: permalink
@@ -14,6 +15,7 @@ fields:
 - type: list
   name: amp_components
   label: amp_components
+  hidden: true
 - type: text
   name: head_title
   label: head_title
