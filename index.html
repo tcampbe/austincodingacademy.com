@@ -161,6 +161,7 @@ schools:
           on="tap:call-us"
           role="button"
           tabindex="0"
+          href="#"
         >
           Get More Info
         </button>
@@ -195,6 +196,7 @@ schools:
           class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
           href="/courses/web-development"
           rel="noopener"
+          href="#"
         >
           Learn More
         </a>
@@ -411,7 +413,7 @@ schools:
     <!-- start date boxes end -->
   </section>
 
-  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
+  <section class="mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
     <div class="mx-auto mw-850">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Why Choose Us?
@@ -474,7 +476,7 @@ schools:
       </div>
     </div>
   </section>
-  {% if school.course_guide %}
+  {% if school.course_guide != '' %}
   <!-- Course Guide Form -->
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
     {% include course-guide-form.html %}

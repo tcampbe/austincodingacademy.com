@@ -41,10 +41,10 @@ overview:
 job_placement:
   stats:
   - stat: 89%
-    descript: of {{ school.name }} graduates are employed as web developers within
+    descript: of our graduates are employed as web developers within
       6 months.
   - stat: "$62,247"
-    descript: The average salary for an entry level web developer in Austin, TX.
+    descript: The average salary for an entry level web developer in Texas.
   value_props:
   - heading: Practical Curriculum
     text: Our courses are designed to teach you relevant skills through practical
@@ -328,7 +328,7 @@ schools:
     {{ page.hero_text | liquify }}
   </p>
   <div class="d-flex mt-4 align-items-center justify-content-center">
-    {% if school.course_guide %}
+    {% if school.course_guide != '' %}
     <div class="mr-2">
       <!-- htmllint preset="none" -->
       <a
@@ -336,6 +336,7 @@ schools:
         on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
+        href="#"
       >
       <!-- htmllint preset="$previous" -->
         Course Guide
@@ -510,7 +511,7 @@ schools:
       <!-- course cards end -->
     </div>
   </section>
-  {% if school.course_guide %}
+  {% if school.course_guide != '' %}
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid {{ page.hero | liquify }}-gradient text-white py-8">
   <!-- htmllint preset="$previous" -->

@@ -108,40 +108,31 @@
   </div>
   <div class="u-header__section bg-textured py-2">
   <!-- htmllint preset="$previous" -->
-    <div class="container px-md-0 px-lg-3">
+    <div class="container-fluid px-md-0 px-lg-1">
       <!-- Nav -->
-      <nav
-        class="navbar navbar-expand-lg u-header__navbar u-header__navbar--no-space"
-      >
-        <!-- Logo -->
-        <a
-          class="navbar-logo d-flex"
-          href="/"
-          aria-label="Logo"
-        >
-          <!-- htmllint preset="none" -->
-          <amp-img
-            width="66px"
-            height="66px"
-            layout="fixed"
-            alt="{{ school.name }} Home"
-            src="{{ school.url | append: school.logo }}"
-            class="w-100"
-          ></amp-img>
-          <!-- htmllint preset="$previous" -->
-          <span class="sr-only">{{ school.name }} Logo</span>
-        </a>
-        <!-- End Logo -->
-        <!-- Responsive Toggle Button -->
-        <button
-          class="btn btn-link text-white d-flex justify-content-end d-lg-none"
-          on="tap:sidebar.open"
-          tabindex="0"
-          role="button"
-        >
-          <i class="fas fa-bars fa-2x" aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
-        </button>
-        <!-- End Responsive Toggle Button -->
+      <nav class="navbar navbar-expand-lg u-header__navbar u-header__navbar--no-space flex-row flex-wrap container">
+        <div class="flex-grow-1 d-flex justify-content-between">
+          <div style="max-width: 350px; max-height: 90px;" class="flex-grow-1">
+            <!-- Logo -->
+            <a class="navbar-logo flex-grow-1" href="/" aria-label="Logo">
+              <!-- htmllint preset="none" -->
+              <amp-img layout="fixed" alt="{{ school.name }} Home" src="{{ school.logo }}" height="90"></amp-img>
+              <!-- htmllint preset="$previous" -->
+              <span class="sr-only">{{ school.name }} Logo</span>
+            </a>
+            <!-- End Logo -->
+          </div>
+
+          <!-- Responsive Toggle Button -->
+          <div class="d-flex flex-grow-0 align-items-center">
+            <button class="btn btn-link d-flex text-white bg-brand-primary-dark justify-content-end d-lg-none"
+              on="tap:sidebar.open" tabindex="0" role="button">
+              <i class="fas fa-bars fa-2x" aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
+            </button>
+          </div>
+
+          <!-- End Responsive Toggle Button -->
+        </div>
 
         <!-- Navigation -->
         <div id="nav-bar"

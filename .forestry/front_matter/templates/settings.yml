@@ -175,9 +175,9 @@ fields:
           required: false
         label: url
       config:
-        min: 
-        max: 
-        labelField: 
+        min:
+        max:
+        labelField:
       label: footer
   - type: list
     name: tracks
@@ -201,7 +201,7 @@ fields:
     config:
       min: '10000000000'
       max: '19999999999'
-      step: 
+      step:
   - type: number
     name: callrail_company_id
     label: callrail_company_id
@@ -211,6 +211,9 @@ fields:
   - type: text
     name: reddit_pixel
     label: reddit_pixel
+  - type: text
+    name: eventbrite_id
+    label: eventbrite_id
   - type: text
     name: contact_form_guid
     label: contact_form_guid
@@ -309,8 +312,8 @@ fields:
         required: false
       label: time
     config:
-      min: 
-      max: 
+      min:
+      max:
       labelField: date
     label: start_dates
   - name: primary_light_color
