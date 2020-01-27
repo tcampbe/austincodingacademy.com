@@ -5,6 +5,7 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: text
   name: permalink
   label: permalink
@@ -50,3 +51,5 @@ fields:
       - type: text
         name: price2
         label: price2
+pages:
+- tuition.html
