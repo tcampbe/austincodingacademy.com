@@ -200,7 +200,7 @@ fields:
     label: phone
     config:
       min: '10000000000'
-      max: '19999999999'
+      max: ''
       step: 
   - type: number
     name: callrail_company_id
@@ -237,6 +237,11 @@ fields:
   - type: text
     name: eventbrite
     label: eventbrite
+  - name: acuity_scheduling_src
+    type: text
+    config:
+      required: false
+    label: acuity_scheduling_src
   - name: linkedin
     type: text
     config:
