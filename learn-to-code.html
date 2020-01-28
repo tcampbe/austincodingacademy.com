@@ -1,0 +1,85 @@
+---
+layout: default
+permalink: "/learn-to-code/"
+amp_components:
+- amp-vimeo
+- amp-accordian
+- amp-sidebar
+- amp-iframe
+head_title: "Learn To Code"
+description: "Our self guided lessons to familiarize yourself with coding."
+redirect_from: []
+title: Learn to Code
+learn_to_code:
+- id: 1
+  section: Intro to Coding
+  sub_header: "In this lesson, you will learn what is coding is, and the difference
+    between the two."
+  codepen: https://codepen.io/keithakritselis/pen/xxxmVgx
+  description: "While both the terms are synonymous with each other and are often used interchangeably, they are quite different from each other. Coding simply means writing codes from one language to another such as from English to Java. It’s less intimidating and less intensive. Programming, on the other hand,means to program a machine with a set of instructions to run."
+  video_id: 272841691
+  topics:
+  - First Program
+  - Then Code
+  - Getting Started
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="pt-1 pb-5">
+    <button class="hamburger" on"tap:lessons.toggle"></button>
+    <amp-sidebar id="lessons">
+        <amp-accordian>
+            <section>
+                <h6><a>What is Coding?</a></h6>
+                <p>First Program</p>
+                <p>Then Code</p>
+                <p>Getting Started</p>
+            </section>
+            <section>
+                <h6><a>Coding Languages</a></h6>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>Javascript</p>
+                <p>Other Languages<p/>
+            </section>
+        </amp-accordian>
+    </amp-sidebar>
+    <h2 class="font-family-alt text-indigo font-weight-light text-center display-5 my-10"><small>What is Coding</small></h2>
+    <div class="row">
+        <div class="col-6 pr-1">
+            <amp-vimeo
+                data-videoid="272841691"
+                layout="responsive"
+                heights="100%"
+                autoplay
+            >
+            </amp-vimeo>
+        </div>
+        <div class="col-6 pl-1">
+            <amp-iframe
+                height="495"
+                width="883"
+                layout="responsive"
+                sandbox="allow-scripts allow-same-origin"
+                src="https://codepen.io/keithakritselis/pen/xxxmVgx"
+            >
+            </amp-iframe>
+        </div>
+    </div>
+</div>
