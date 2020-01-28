@@ -1,15 +1,16 @@
 const fetch = require('node-fetch');
 const { DateTime } = require('luxon');
 const { safeDump } = require('js-yaml');
-const { writeFileSync } = require('fs');
+const { readFileSync, writeFileSync } = require('fs');
 const { stringify } = require('qs');
 const { uniq, keyBy } = require('lodash');
+const fm = require('front-matter');
 const { EVENTBRITE_OATH_TOKEN } = process.env;
 const headers = {
   'Authorization': `Bearer ${EVENTBRITE_OATH_TOKEN}`,
   'Accept': 'application/json'
 }
-let venues;
+let venues = [];
 
 const fetchEvents = async () => {
   try {
@@ -20,26 +21,24 @@ const fetchEvents = async () => {
         status: 'live'
       })}`, { headers })).json()
     ).events;
-    const austinEvents = eventsJson.filter(event => event.organizer_id === '10937668459' && event.listed);
-    const lubbockEvents = eventsJson.filter(event => event.organizer_id === '18046524539' && event.listed);
-    const ttuEvents = eventsJson.filter(event => event.organizer_id === '27138169661' && event.listed);
-    console.log(`Found ${austinEvents.length} Austin events.`)
-    console.log(`Found ${lubbockEvents.length} Lubbock events.`)
-    console.log(`Found ${ttuEvents.length} TTU events.`)
-    venues = await Promise.all(uniq(eventsJson.map(event => event.venue_id)).map(venueId =>
-      fetch(`https://www.eventbriteapi.com/v3/venues/${venueId}`, { headers })
-    ));
 
-    venues = await Promise.all(venues.map(venue => venue.json()))
+    const uniqueVenues = uniq(eventsJson.map(event => event.venue_id)).filter(venueId => venueId);
+    for (let i = 0; i < uniqueVenues.length; i++) {
+      const venue = await (await fetch(`https://www.eventbriteapi.com/v3/venues/${uniqueVenues[i]}`, { headers })).json();
+      venues.push(venue)
+    }
+
     console.log(`Fetched ${venues.length} venues.`)
     venues = keyBy(venues, 'id');
-
-    const events = {
-      'austincodingacademy': austinEvents.map(event => parseEvent(event)),
-      'lubbockcodingacademy': lubbockEvents.map(event => parseEvent(event)),
-      'texastechcodingacademy': ttuEvents.map(event => parseEvent(event))
-    };
-
+    const events = {};
+    const schools = fm(readFileSync('./settings.html', 'utf-8')).attributes.schools
+    .filter(school => school.eventbrite_id)
+    .map(school => ({ key: school.key, eventbriteId: school.eventbrite_id }));
+    schools.forEach(school => {
+      events[school.key] = eventsJson
+        .filter(event => event.organizer_id === school.eventbriteId && event.listed)
+        .map(event => parseEvent(event))
+    })
     writeFileSync('_data/events.yml', safeDump(events));
   } catch (error) {
     console.error(error);
@@ -58,8 +57,8 @@ const parseEvent = event => ({
   published_date_time: event.published,
   end_date_time: event.end.local,
   img: event.logo && event.logo.url,
-  height: event.logo && event.logo.crop_mask.height,
-  width: event.logo && event.logo.crop_mask.width,
+  height: event.logo && event.logo.crop_mask && event.logo.crop_mask.height,
+  width: event.logo && event.logo.crop_mask && event.logo.crop_mask.width,
   ...venues[event.venue_id] ? {
     venue_name: venues[event.venue_id].name,
     venue_address: [venues[event.venue_id].address.address_1, venues[event.venue_id].address.address_2].filter(x => x).join(', '),

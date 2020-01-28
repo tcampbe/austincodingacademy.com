@@ -32,7 +32,7 @@ phone: 512-788-1671
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
-workexperience: 11 yrs in Sales & Marketing
+workexperience:
   - company: Liaison Creative + Marketing
     dates: July 2018 - Present
     title: Studio Coordinator
@@ -48,13 +48,13 @@ workexperience: 11 yrs in Sales & Marketing
     title: Product Leader
     location: Austin, TX
 
-education: Full Stack JavaScript
+education:
   - name: Austin Coding Acaademy
     dates: Apr 2019 - Feb 2020
-    degree: Web Development
+    degree: Full Stack JavaScript Web Development
 
-projects: Full-stack web app build in JavaScript using React.  
+projects:
   - name: dailyBOOST
-    desc: The Application helps the user "boost" their Daily Energy Levels.
-    url: https://austincodingacademy.com/
+    desc: The Application helps the user "boost" their Daily Energy Levels. Full-stack web app build in JavaScript using React.
+    url: https://github.com/AnnaGD/DailyBoost
 ---

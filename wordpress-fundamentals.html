@@ -183,6 +183,7 @@ schools:
         on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
+        href="#"
       >
       <!-- htmllint preset="$previous" -->
         Learn More
@@ -327,7 +328,7 @@ schools:
   <!-- htmllint preset="$previous" -->
     <div class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html text_class="text-white" course_guide_href=page.course_guide course_guide_form_guid="b742c715-7280-4cae-bb5a-5f47b31266fa" %}
+        {% include course-guide-form.html text_class="text-white" course_guide_href=page.course_guide course_guide_form_guid=page.course_guide_form_guid %}
       </div>
     </div>
   </section>

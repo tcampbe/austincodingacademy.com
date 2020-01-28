@@ -23,7 +23,7 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
       yarn jekyll-build
       yarn jekyll-build-amp
       yarn optimize
-      # if [ "${CIRCLE_BRANCH}" == "preview" ]; then yarn encrypt; fi
+      if [ "${CIRCLE_BRANCH}" == "preview" ]; then yarn encrypt; fi
       if [[ "${KEY}" == "austincodingacademy.com" ]] && [[ "${CIRCLE_BRANCH}" == "master" ]]
       then
         sudo apt install rsync
