@@ -56,5 +56,5 @@ education:
 projects:
   - name: dailyBOOST
     desc: The Application helps the user "boost" their Daily Energy Levels. Full-stack web app build in JavaScript using React.
-    url: https://github.com/AnnaGD/DailyBoost
+    url: https://dailyboost.appspot.com/
 ---
