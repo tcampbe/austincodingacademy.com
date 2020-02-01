@@ -1,0 +1,45 @@
+---
+label: Tutors
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+- type: text
+  name: title
+  label: title
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: head_title
+  label: head_title
+- type: text
+  name: description
+  label: description
+- type: list
+  name: redirect_from
+  label: redirect_from
+- type: list
+  name: amp_components
+  label: amp_components
+  hidden: true
+- type: field_group_list
+  name: schools
+  label: schools
+  fields:
+  - type: text
+    name: key
+    label: key
+  - name: tutoring_instructions
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: tutoring_instructions
+pages:
+- tutors.html

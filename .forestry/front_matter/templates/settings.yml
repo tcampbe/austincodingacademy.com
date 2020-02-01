@@ -85,24 +85,6 @@ fields:
       config:
         required: false
       label: class
-    - name: links
-      type: field_group_list
-      fields:
-      - name: title
-        type: text
-        config:
-          required: false
-        label: title
-      - name: url
-        type: text
-        config:
-          required: false
-        label: url
-      config:
-        min: 
-        max: 
-        labelField: 
-      label: links
   - type: field_group_list
     name: footer
     label: footer
@@ -179,24 +161,6 @@ fields:
         config:
           required: false
         label: class
-      - name: links
-        type: field_group_list
-        fields:
-        - name: title
-          type: text
-          config:
-            required: false
-          label: title
-        - name: url
-          type: text
-          config:
-            required: false
-          label: url
-        config:
-          min: 
-          max: 
-          labelField: 
-        label: links
     - name: footer
       type: field_group_list
       fields:
