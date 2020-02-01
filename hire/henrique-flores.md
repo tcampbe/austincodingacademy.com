@@ -52,8 +52,8 @@ education:
     degree: Web Development
 
 projects:
-  - name: Final Project
-    desc: TBA
-    url: https://austincodingacademy.com/
+  - name: Guardian Angel
+    desc: Keep your community safe with friends in a simple post or comments
+    url: https://storage.googleapis.com/guardinangel/index.html
 
 ---
