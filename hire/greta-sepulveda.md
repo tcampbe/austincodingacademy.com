@@ -63,6 +63,10 @@ education:
     degree: Web Development
 
 projects:
+  - name: Bahia Buzz
+    desc: Discover once-in-a-lifetime experiences in Bahía De Banderas, Mexico
+    url: http://www.bahiabuzz.com/
+
   - name: Tic Tac Toe
     desc: Built with js
     url: https://github.com/MariaGretaSepulveda/javascript-workbook/blob/gh-pages/03week/ticTacToe.js
