@@ -49,5 +49,5 @@ education:
 projects:
   - name: Cryptofuse
     desc: Cryptocurrency mutual fund using a Blockchain wallet
-    url: www.cryptofuse-react.herokuapp.com
+    url: https://cryptofuse-react.herokuapp.com
 ---
