@@ -62,5 +62,5 @@ education:
 projects:
   - name: PawzDown
     desc: This app will help you stay up to date on your favorite dog parks.
-    url: https://www.pawzdown.com/
+    url: https://kind-kalam-31d2be.netlify.com/
 ---
