@@ -27,7 +27,7 @@ skills:
 github: https://github.com/AnnaGD
 linkedin: https://www.linkedin.com/in/anna-goncharova/
 
-email: anna9oncharova@gmail.com
+email: anna.gonch.liaison@gmail.com
 phone: 512-788-1671
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
@@ -56,5 +56,5 @@ education:
 projects:
   - name: dailyBOOST
     desc: The Application helps the user "boost" their Daily Energy Levels. Full-stack web app build in JavaScript using React.
-    url: https://github.com/AnnaGD/DailyBoost
+    url: https://dailyboost.appspot.com/
 ---
