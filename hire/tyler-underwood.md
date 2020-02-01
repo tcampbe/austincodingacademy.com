@@ -62,7 +62,7 @@ projects:
     url: https://www.franklinbuildingsupply.com/
 
 projects:
-  - name: Nulyph
+  - name: Nu-lyph
     desc: My final project for ACA
     url: http://capstone-project-4503.appspot.com/
 ---
