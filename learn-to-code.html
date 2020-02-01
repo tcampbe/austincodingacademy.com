@@ -15,13 +15,13 @@ learn_to_code:
   section: Intro to Coding
   sub_header: "In this lesson, you will learn what is coding is, and the difference
     between the two."
-  codepen: https://codepen.io/keithakritselis/pen/xxxmVgx
+  codepen: "https://codepen.io/keithakritselis/pen/xxxmVgx"
   description: "While both the terms are synonymous with each other and are often used interchangeably, they are quite different from each other. Coding simply means writing codes from one language to another such as from English to Java. It’s less intimidating and less intensive. Programming, on the other hand,means to program a machine with a set of instructions to run."
   video_id: 272841691
   topics:
-  - First Program
-  - Then Code
-  - Getting Started
+    - First Program
+    - Then Code
+    - Getting Started
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -42,7 +42,7 @@ learn_to_code:
 {% endif %}
 
 <div class="pt-1 pb-5">
-    <button class="hamburger" on"tap:lessons.toggle"></button>
+    <button on="tap:lessons.toggle"><i class="fas fa-bars"></button>
     <amp-sidebar id="lessons">
         <amp-accordian>
             <section>
@@ -66,8 +66,8 @@ learn_to_code:
             <amp-vimeo
                 data-videoid="272841691"
                 layout="responsive"
-                heights="100%"
-                autoplay
+                width="500"
+                height="281"
             >
             </amp-vimeo>
         </div>
@@ -82,4 +82,5 @@ learn_to_code:
             </amp-iframe>
         </div>
     </div>
+    <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
 </div>
