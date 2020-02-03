@@ -20,7 +20,7 @@ skills:
 github: https://github.com/pmzarate
 linkedin: https://www.linkedin.com/in/pmzarate
 
-email: pmzarate@yahoo.com
+email: patriciamarakzarate@gmail.com
 phone: (512)844-6449
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
@@ -47,8 +47,8 @@ education:
     degree: Web Development
 
 projects:
-  - name: ATXcrement.com
-    desc: my version of the infamous SFO app "SnapCrap" - ATX style
-    url: https://austincodingacademy.com/
+  - name: Alert ATX
+    desc: Final project app
+    url: https://www.alertatx.com/
 
 ---
