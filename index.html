@@ -354,6 +354,9 @@ schools:
       <p>This browser does not support the video element.</p>
     </div>
   </amp-video>
+  {% if site.key == 'circlecoding' and site.baseurl != '/amp'%}
+    {% include matrix.html %}
+  {% endif %}
 </div>
 
 <main>
