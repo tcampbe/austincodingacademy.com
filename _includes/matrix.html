@@ -13,8 +13,6 @@
     color: #2fb45a;
     font-family: monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 0.15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 0.15em; /* Adjust as needed */
   }
@@ -22,12 +20,13 @@
   /* DEMO-SPECIFIC STYLES */
   .typewriter .first {
     animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap;
   }
 
   /* DEMO-SPECIFIC STYLES */
   .typewriter .second {
-    animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite,
-      move 5s ease-in-out;
+    animation: move 5s ease-in-out;
   }
 
   /* The typing effect */
@@ -187,8 +186,41 @@
   .de {
     -webkit-animation-delay: 3s;
   }
+
+  @media (max-width: 1200px) {
+    legend {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+    h1, .h1 {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+    h2, .h2 {
+        font-size: calc(1.325rem + 0.9vw);
+    }
+    h3, .h3 {
+        font-size: calc(1.3rem + 0.6vw);
+    }
+    h4, .h4 {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+    .display-1 {
+        font-size: calc(1.725rem + 5.7vw);
+    }
+    .display-2 {
+        font-size: calc(1.675rem + 5.1vw);
+    }
+    .display-3 {
+        font-size: calc(1.575rem + 3.9vw);
+    }
+    .display-4 {
+        font-size: calc(1.475rem + 2.7vw);
+    }
+    .close {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+  }
 </style>
-<div class="position-absolute matrix-container z-30 d-none d-md-block">
+<div class="position-absolute matrix-container" style="z-index: 30">
 
   <div class="matrix">
     <div class="d1 c1 de" style="left:6%;">circl<span>e</span>codingaca<span>d</span>emy</div>
@@ -210,7 +242,7 @@
   </div>
 
   <div class="typewriter-container">
-    <div class="typewriter">
+    <div class="typewriter container">
       <h1 class="first">Wake up, Dallas.</h1>
       <h1 class="second">Circle Coding Academy has you.</h1>
       <br />
