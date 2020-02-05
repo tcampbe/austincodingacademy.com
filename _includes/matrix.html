@@ -1,0 +1,219 @@
+<style>
+  .typewriter-container {
+    background: #000;
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+    animation: fade-out 10s ease-in-out;
+    animation-fill-mode: forwards;
+    height: 100%;
+  }
+
+  .typewriter h1 {
+    color: #2fb45a;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+  }
+
+  /* DEMO-SPECIFIC STYLES */
+  .typewriter .first {
+    animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  }
+
+  /* DEMO-SPECIFIC STYLES */
+  .typewriter .second {
+    animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite,
+      move 5s ease-in-out;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+
+  @keyframes move {
+    90%,
+    100% {
+      opacity: 1;
+    }
+    0% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* rain */
+
+  @font-face {
+    font-family: 'Katakana';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Katakana'),
+      url(/assets/fonts/MoonBeams-katakana_.TTF) format('truetype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+      U+FEFF, U+FFFD;
+    font-display: swap;
+  }
+
+  .matrix-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .matrix-container .matrix {
+    position: absolute;
+    /* 			margin: 1em auto; */
+    font-family: monospace;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    background-image: -webkit-gradient(
+      linear,
+      0% 90%,
+      0% 100%,
+      from(rgba(0, 255, 0, 0)),
+      to(rgba(0, 255, 0, 0.1))
+    );
+    color: rgba(0, 255, 0, 0.7);
+    text-shadow: rgba(255, 255, 255, 0.8) 0px 0px 4px;
+    /* 			position: relative;	 */
+    animation: fade-out 15s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes fall {
+    from {
+      top: -250px;
+    }
+    to {
+      top: 300px;
+    }
+  }
+
+  .matrix-container .matrix div {
+    /* writing-mode: tb-rl; - ughh. doesn't work */
+    position: absolute;
+    top: 0;
+    /* arrearance */
+    -webkit-transform-origin: 0%;
+    -webkit-transform: rotate(90deg);
+
+    /* animation */
+    -webkit-animation-name: fall, fade;
+    -webkit-animation-iteration-count: infinite; /* use 0 to infinite */
+    -webkit-animation-direction: normal; /* default is normal. use 'alternate' to reverse direction */
+    -webkit-animation-timing-function: ease-out;
+  }
+  .matrix-container  .matrix span {
+    color: rgb(0, 255, 0);
+    text-shadow: rgb(255, 255, 255) 0px 0px 5px;
+  }
+  .f1 {
+    font-size: 1.2em;
+  }
+  .f2 {
+    font-size: 0.9em;
+  }
+  .c1 {
+    color: rgba(0, 255, 0, 0.5);
+  }
+  .d1 {
+    -webkit-animation-duration: 4s;
+  }
+  .d2 {
+    -webkit-animation-duration: 6s;
+  }
+  .d3 {
+    -webkit-animation-duration: 8s;
+  }
+  .d4 {
+    -webkit-animation-duration: 10s;
+  }
+  .de {
+    -webkit-animation-delay: 3s;
+  }
+</style>
+<div class="position-absolute matrix-container z-30 d-none d-md-block">
+
+  <div class="matrix">
+    <div class="d1 c1 de" style="left:6%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d3 f1" style="left:12%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d1 f2 c1" style="left:18%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d2 f1" style="left:24%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d4 c3 de" style="left:30%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d2 c1" style="left:36%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d3 f2 c1" style="left:36%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d1 c1" style="left:42%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d3 de" style="left:48%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d4 f1" style="left:54%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d2 de" style="left:60%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d3 f2" style="left:66%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d1 f1" style="left:72%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d4 c1" style="left:78%">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d2 de" style="left:84%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+    <div class="d1 c1 de" style="left:90%;">circl<span>e</span>codingaca<span>d</span>emy</div>
+  </div>
+
+  <div class="typewriter-container">
+    <div class="typewriter">
+      <h1 class="first">Wake up, Dallas.</h1>
+      <h1 class="second">Circle Coding Academy has you.</h1>
+      <br />
+    </div>
+  </div>
+</div>

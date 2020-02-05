@@ -354,36 +354,8 @@ schools:
       <p>This browser does not support the video element.</p>
     </div>
   </amp-video>
-  {% if site.key == 'circlecoding' %}
-  <div class="position-absolute matrix-container z-30 d-none d-md-block">
-
-    <div class="matrix">
-      <div class="d1 c1 de" style="left:6%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d3 f1" style="left:12%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d1 f2 c1" style="left:18%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d2 f1" style="left:24%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d4 c3 de" style="left:30%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d2 c1" style="left:36%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d3 f2 c1" style="left:36%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d1 c1" style="left:42%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d3 de" style="left:48%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d4 f1" style="left:54%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d2 de" style="left:60%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d3 f2" style="left:66%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d1 f1" style="left:72%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d4 c1" style="left:78%">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d2 de" style="left:84%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-      <div class="d1 c1 de" style="left:90%;">circl<span>e</span>codingaca<span>d</span>emy</div>
-    </div>
-
-    <div class="typewriter-container">
-      <div class="typewriter">
-        <h1 class="first">Wake up, Dallas.</h1>
-        <h1 class="second">Circle Coding Academy has you.</h1>
-        <br />
-      </div>
-    </div>
-  </div>
+  {% if site.key == 'circlecoding' and site.baseurl != '/amp'%}
+    {% include matrix.html %}
   {% endif %}
 </div>
 
