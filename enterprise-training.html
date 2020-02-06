@@ -245,6 +245,96 @@ corporate_form_fields:
   required: false
   small_width: 12
   medium_width: 12
+form_fields:
+- name: firstname
+  label: First Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: First name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: lastname
+  label: Last Name
+  description: ''
+  type: text
+  value: ''
+  placeholder: Last name
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: phone
+  label: Phone
+  description: ''
+  type: tel
+  value: ''
+  placeholder: Phone
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: email
+  label: Email
+  description: ''
+  type: email
+  value: ''
+  placeholder: Email
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: city
+  label: City
+  description: ''
+  type: text
+  value: ''
+  placeholder: City
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: state
+  label: State/Region
+  description: ''
+  type: text
+  value: ''
+  placeholder: State
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: jobtitle
+  label: Current role
+  description: ''
+  type: text
+  value: ''
+  placeholder: Current role
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: company
+  label: Company
+  description: ''
+  type: text
+  value: ''
+  placeholder: Company
+  required: true
+  small_widht: 12
+  medium_width: 6
+  options: []
+- name: what_technologies_would_you_like_to_train_for_
+  label: What technologies would you like to train for?
+  description: ''
+  type: textarea
+  value: ''
+  placeholder: Enter your questions or comments here
+  required: false
+  small_width: 12
+  medium_width: 12
+  options: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -382,132 +472,9 @@ corporate_form_fields:
         <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 
         <div class="row center-form">
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="first-name-interest" class="form-label">
-                First Name <span class="text-red">*</span>
-              </label>
-
-              <input id="first-name-interest" type="text" class="form-control" name="firstname" placeholder="First name" aria-label="First name"
-                required data-msg="Please enter your first name." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="last-name" class="form-label">
-                Last Name <span class="text-red">*</span>
-              </label>
-
-              <input id="last-name" type="text" class="form-control" name="lastname" placeholder="Last name" aria-label="Last name"
-                required data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="phone" class="form-label">
-                Phone <span class="text-red">*</span>
-              </label>
-
-              <input id="phone" type="phone" class="form-control" name="phone" placeholder="Phone" aria-label="Phone"
-              required data-msg="Please enter a valid phone number." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="email" class="form-label">
-                Email <span class="text-red">*</span>
-              </label>
-
-              <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="Your email address"
-              required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="city" class="form-label">
-                City <span class="text-red">*</span>
-              </label>
-
-              <input id="city" type="text" class="form-control" name="city" placeholder="City" aria-label="City"
-                required data-msg="Please enter your city." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="state" class="form-label">
-                State/Region <span class="text-red">*</span>
-              </label>
-
-              <input id="state" type="text" class="form-control" name="state" placeholder="State" aria-label="State"
-                required data-msg="Please enter your state." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="current-role" class="form-label">
-                Current role <span class="text-red">*</span>
-              </label>
-
-              <input id="current-role" type="text" class="form-control" name="jobtitle" placeholder="Current role" aria-label="Current role"
-                required data-msg="Please enter the name of your current role." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="company" class="form-label">
-                Company <span class="text-red">*</span>
-              </label>
-
-              <input id="company" type="text" class="form-control" name="company" placeholder="Company" aria-label="Company"
-                required data-msg="Please enter the name of your company." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="js-form-message mb-4 col-sm-12">
-            <label for="message" class="form-label">
-              What technologies would you like to train for?
-            </label>
-
-            <div class="input-group">
-              <textarea
-                id="message"
-                class="form-control"
-                rows="4"
-                name="what_technologies_would_you_like_to_train_for_"
-                placeholder="Enter your questions or comments here"
-                aria-label="Enter your questions or comments here"
-                data-msg="Please enter a message."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              ></textarea>
-            </div>
-          </div>
-          <!-- End Input -->
-
+          
+          {% include fields.html fields=page.form_fields %}
+          
           <!-- Input -->
           <div class="col-12 d-flex align-items-end justify-content-center form-group">
             <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
