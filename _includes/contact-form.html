@@ -48,18 +48,27 @@
         tabindex="-1"
         role="form"
       >
-        {% assign all_fields = page.form_fields %}
-        {% include fields.html fields=all_fields %}
+
         <input name="lifecyclestage" type="hidden" value="lead">
         <input name="hs_lead_status" type="hidden" value="NEW">
-        <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
-        <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/">
+        <!-- <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}"> -->
+        <!-- <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/"> -->
         <input name="school" type="hidden" value="{{ school.name }}">
-        <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
+        <!-- <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" /> -->
         <div class="row center-form">
+
+          {% for _page in site.pages %}
+            {% if _page.name == 'contact.html' %}
+              {% assign contact = _page %}
+            {% endif %}
+          {% endfor %}
+          {% assign all_fields = contact.form_fields %}
+          {% include fields.html fields=all_fields %}
+
           <!-- Input -->
           <div class="col-sm-6 mb-4">
             <div class="js-form-message">
+
               <label for="first-name-contact" class="form-label">
                 First Name <span class="text-red-a">*</span>
               </label>
