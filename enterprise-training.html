@@ -164,6 +164,87 @@ schools:
       - RESTful APIs
       - Web VR
       - Spring/Spring Boot
+corporate_form_fields:
+- name: firstname
+  label: First Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: First Name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: lastname
+  label: Last Name
+  description: ''
+  type: text
+  value: ''
+  placeholder: Last Name
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: company
+  label: Company
+  description: ''
+  type: text
+  value: ''
+  placeholder: Company
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: phone
+  label: Phone
+  description: ''
+  type: tel
+  value: ''
+  placeholder: Phone
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: email
+  label: Email
+  description: ''
+  type: email
+  value: ''
+  placeholder: Email
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: which_of_these_best_describes_you_
+  label: What training are you interested in?
+  description: ''
+  type: select
+  value: ''
+  placeholder: Select your answer
+  required: true
+  small_width: 12
+  medium_width: 6
+  options:
+  - value: I'm researching coding bootcamps
+    label: I'm researching coding bootcamps
+  - value: I'm teaching myself to code but I'm stuck
+    label: I'm teaching myself to code but I'm stuck
+  - value: I'm interested in a career in tech
+    label: I'm interested in a career in tech
+  - value: I'm an entrepreneur with an idea 
+    label: I'm an entrepreneur with an idea
+  - value: I'm looking for a college alternative 
+    label: I'm looking for a college alternative
+  - value: I want to learn a new skill for my          current job 
+    label: I want to learn a new skill for my current job
+- name: message
+  label: Message
+  description: ''
+  type: textarea
+  value: ''
+  placeholder: Enter your questions or comments here
+  required: false
+  small_width: 12
+  medium_width: 12
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
