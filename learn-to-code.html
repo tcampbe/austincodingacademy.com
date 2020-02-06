@@ -1,0 +1,99 @@
+---
+layout: default
+permalink: "/learn-to-code/"
+amp_components:
+- amp-vimeo
+- amp-accordian
+- amp-sidebar
+- amp-iframe
+head_title: "Learn To Code"
+description: "Our self guided lessons to familiarize yourself with coding."
+redirect_from: []
+title: Learn to Code
+learn_to_code:
+- id: 1
+  section: Intro to Coding
+  sub_header: "In this lesson, you will learn what is coding is, and the difference
+    between the two."
+  codepen: "https://codepen.io/keithakritselis/pen/xxxmVgx"
+  description: "While both the terms are synonymous with each other and are often used interchangeably, they are quite different from each other. Coding simply means writing codes from one language to another such as from English to Java. It’s less intimidating and less intensive. Programming, on the other hand,means to program a machine with a set of instructions to run."
+  video_id: 272841691
+  topics:
+    - First Program
+    - Then Code
+    - Getting Started
+---
+{% comment %} {% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %} {% endcomment %}
+
+<div>
+    <h2 class="font-family-alt text-indigo font-weight-light text-center display-5 my-5"><small>What is Coding</small></h2>
+    <p class="text-center text-gray-dark mb-0">In this lesson, you will learn what coding is, what programming is, and the difference between the two.</p>
+    <i class="fas fa-bars fa-2x ml-5 mb-5" on="tap:lessons.toggle"></i>
+    <amp-sidebar id="lessons">
+        <amp-accordian>
+            <section>
+                <h6><a>What is Coding?</a></h6>
+                <p>First Program</p>
+                <p>Then Code</p>
+                <p>Getting Started</p>
+            </section>
+            <section>
+                <h6><a>Coding Languages</a></h6>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>Javascript</p>
+                <p>Other Languages<p/>
+            </section>
+        </amp-accordian>
+    </amp-sidebar>
+    <div class="container-fluid m-0 p-0">
+      <div class="row no-gutters align-items-center">
+        <div class="float-left">
+          <i class="fas fa-angle-left fa-3x"></i>
+        </div>
+        <div class="col mr-1">
+            <amp-vimeo
+                data-videoid="272841691"
+                layout="responsive"
+                height="292"
+                width="520"
+            >
+            </amp-vimeo>
+            <p>Previous: <span>Intro to Coding</span></p>
+        </div>
+        <div class="col ml-1">
+            <amp-iframe
+                layout="responsive"
+                height="292"
+                width="520"
+                sandbox="allow-scripts allow-same-origin"
+                src="https://codepen.io/keithakritselis/pen/xxxmVgx"
+            >
+            </amp-iframe>
+            <p class="text-right">Next: <span>Coding Languages</span></p>
+        </div>
+        <div class="float-right">
+          <i class="fas fa-angle-right fa-3x"></i>
+        </div>
+      </div>
+    </div>
+    <div class="text-wrap text-wrap text-center mx-auto w-75 my-5">While both the terms are synonymous with each other and are often used interchangeably, they are quite different from each other. Coding simply means writing codes from one language to another such as from English to Java. It’s less intimidating and less intensive. Programming, on the other hand, means to program a machine with a set of instructions to run.</div>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
+</div>
