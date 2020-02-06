@@ -48,129 +48,22 @@
         tabindex="-1"
         role="form"
       >
-        {% assign all_fields = page.form_fields %}
-        {% include fields.html fields=all_fields %}
+
         <input name="lifecyclestage" type="hidden" value="lead">
         <input name="hs_lead_status" type="hidden" value="NEW">
-        <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
-        <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/">
+        <!-- <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}"> -->
+        <!-- <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/"> -->
         <input name="school" type="hidden" value="{{ school.name }}">
-        <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
+        <!-- <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" /> -->
         <div class="row center-form">
-          <!-- Input -->
-          <div class="col-sm-6 mb-4">
-            <div class="js-form-message">
-              <label for="first-name-contact" class="form-label">
-                First Name <span class="text-red-a">*</span>
-              </label>
 
-              <input
-                id="first-name-contact"
-                type="text"
-                class="form-control"
-                name="firstname"
-                placeholder="First Name"
-                aria-label="Your name"
-                required
-                data-msg="Please enter your first name."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-4">
-            <div class="js-form-message">
-              <label for="last-name-contact" class="form-label">
-                Last Name <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                id="last-name-contact"
-                type="text"
-                class="form-control"
-                name="lastname"
-                placeholder="Last Name"
-                aria-label="Your last name"
-                required
-                data-msg="Please enter your last name."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-4">
-            <div class="js-form-message">
-              <label for="email-contact" class="form-label">
-                Email <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                id="email-contact"
-                type="email"
-                class="form-control"
-                name="email"
-                placeholder="Email"
-                aria-label="Your email address"
-                required
-                data-msg="Please enter a valid email address."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 mb-4">
-            <div class="js-form-message">
-              <label for="phone-contact" class="form-label">
-                Phone <span class="text-red-a">*</span>
-              </label>
-
-              <input
-                id="phone-contact"
-                type="text"
-                class="form-control"
-                name="phone"
-                placeholder="Phone"
-                aria-label="Your phone number"
-                required
-                data-msg="Please enter your phone number."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="js-form-message mb-4 col-sm-12">
-            <label for="message-contact" class="form-label">
-              Message <span class="text-red-a">*</span>
-            </label>
-
-            <div class="input-group">
-              <textarea
-                id="message-contact"
-                class="form-control"
-                rows="4"
-                name="message"
-                placeholder="Enter your questions or comments here"
-                aria-label="Enter your questions or comments here"
-                required
-                data-msg="Please enter a message."
-                data-error-class="u-has-error"
-                data-success-class="u-has-success"
-              ></textarea>
-            </div>
-          </div>
-          <!-- End Input -->
+          {% for _page in site.pages %}
+            {% if _page.name == 'contact.html' %}
+              {% assign contact = _page %}
+            {% endif %}
+          {% endfor %}
+          {% assign all_fields = contact.form_fields %}
+          {% include fields.html fields=all_fields %}
 
           <div class="col-12 mb-4">
             {% include referral-question.html %}
