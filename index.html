@@ -3,9 +3,10 @@ layout: default
 permalink: "/"
 head_title: "{{ school.name }} | Learn to Code, Change Your Life"
 hero: index
-description: At {{ school.name }}, we fit learning to code into your life
-  with a flexible &amp; affordable array of options, all taught by current industry
-  professionals. Don’t wait - embark on a new career today!
+title: Homepage
+description: At {{ school.name }}, we fit learning to code into your life with a flexible
+  &amp; affordable array of options, all taught by current industry professionals.
+  Don’t wait - embark on a new career today!
 redirect_from: []
 amp_components:
 - amp-carousel
@@ -15,10 +16,10 @@ amp_components:
 - amp-fx
 - amp-recaptcha-input
 cover_video:
-  src: "/assets/videos/aca-intro.webm"
-  src_mp4: "/assets/videos/aca-intro.mp4"
+  src: "/assets/uploads/aca-intro.webm"
+  src_mp4: "/assets/uploads/aca-intro.mp4"
   title: ACA Cover Video
-  poster: "/assets/images/aca-intro-poster.jpg"
+  poster: "/assets/uploads/aca-intro-poster.jpg"
 stories:
 - src_id: AVMkl06b5IE
   title: Lilian Situ video review of Austin Coding Academy
@@ -45,7 +46,7 @@ features:
     learning to code fits your schedule. Benefit from a “flipped classroom” approach,
     with hands-on classes led by instructors who work as professional developers during
     the day.
-  img: calendar_yellow.png
+  img: /assets/uploads/calendar_yellow.png
   square: true
   alt: Calendar graphic
 - heading: Affordable Tuition
@@ -53,7 +54,7 @@ features:
   description: Cover your tuition by paying course-by-course or for the entire program
     up front, (and saving). Contact our admissions team to discuss how {{ school.name
     }} can work for you.
-  img: wallet_red.png
+  img: /assets/uploads/wallet_red.png
   square: true
   alt: Wallet graphic
 - heading: Unlimited Tutoring
@@ -61,7 +62,7 @@ features:
   description: Stay on track with your coursework by taking advantage of free unlimited
     tutoring. You can book 1-on-1 help on your schedule or take advantage of weekend
     group tutoring at both of our campuses.
-  img: tutoring_blue.png
+  img: /assets/uploads/tutoring_blue.png
   alt: Pencil graphic
   square: false
 - heading: Job Placement
@@ -70,54 +71,30 @@ features:
     taught by professional developers. Receive 1-on-1 attention from our Director
     of Job Placement. Build your resume, practice interviews, and more in our Job
     Placement Course.
-  img: suitcase_green.png
+  img: /assets/uploads/suitcase_green.png
   square: true
   alt: Suitcase graphic
 schools:
 - key: austincodingacademy
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
-  start_dates:
-  - location: Capital Factory Campus
-    date: January 14th
-    days: Tuesday/Thursday
-    time: 6:30 - 9:00pm
-  - location: Highland Campus
-    date: January 27th
-    days: Monday/Wednesday
-    time: 6:30 - 9:00pm
   lightbox_youtube:
     src_id: UGW-v_uam4k
     title: The Moment I Realized My Life Was Changed
 - key: lubbockcodingacademy
   schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
-  start_dates:
-  - location:
-    date:
-    days:
-    time:
-  - location:
-    date:
-    days:
-    time:
-  - key: texastechuniversitycodingacademy
+  lightbox_youtube:
+    src_id: ''
+    title: ''
+- key: texastechcodingacademy
   schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
-  start_dates:
-  - location:
-    date:
-    days:
-    time:
-  - location:
-    date:
-    days:
-    time:
   features:
   - heading: Flexible Schedule
     title: Keep Your Day Job While You Make a Career Change
     description: In-person, part-time classes meet twice a week in the evenings, so
       learning to code fits your schedule. Benefit from a “flipped classroom” approach,
-      with hands-on classes led by instructors who work as professional developers during
-      the day.
-    img: calendar_white.png
+      with hands-on classes led by instructors who work as professional developers
+      during the day.
+    img: /assets/uploads/calendar_white.png
     square: true
     alt: Calendar graphic
   - heading: Affordable Tuition
@@ -125,7 +102,7 @@ schools:
     description: Cover your tuition by paying course-by-course or for the entire program
       up front, (and saving). Contact our admissions team to discuss how {{ school.name
       }} can work for you.
-    img: wallet_white.png
+    img: /assets/uploads/wallet_white.png
     square: true
     alt: Wallet graphic
   - heading: Unlimited Tutoring
@@ -133,18 +110,21 @@ schools:
     description: Stay on track with your coursework by taking advantage of free unlimited
       tutoring. You can book 1-on-1 help on your schedule or take advantage of weekend
       group tutoring at both of our campuses.
-    img: tutoring_white.png
+    img: /assets/uploads/tutoring_white.png
     alt: Pencil graphic
     square: false
   - heading: Job Placement
     title: You’ll Learn Skills That Will Get You a Job
-    description: Develop skills that employers are looking for with our practical curriculum,
-      taught by professional developers. Receive 1-on-1 attention from our Director
-      of Job Placement. Build your resume, practice interviews, and more in our Job
-      Placement Course.
-    img: suitcase_white.png
+    description: Develop skills that employers are looking for with our practical
+      curriculum, taught by professional developers. Receive 1-on-1 attention from
+      our Director of Job Placement. Build your resume, practice interviews, and more
+      in our Job Placement Course.
+    img: /assets/uploads/suitcase_white.png
     square: true
     alt: Suitcase graphic
+  lightbox_youtube:
+    src_id: ''
+    title: ''
 
 ---
 {% for _page in site.pages %}
@@ -181,6 +161,7 @@ schools:
           on="tap:call-us"
           role="button"
           tabindex="0"
+          href="#"
         >
           Get More Info
         </button>
@@ -215,6 +196,7 @@ schools:
           class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
           href="/courses/web-development"
           rel="noopener"
+          href="#"
         >
           Learn More
         </a>
@@ -372,6 +354,9 @@ schools:
       <p>This browser does not support the video element.</p>
     </div>
   </amp-video>
+  {% if site.key == 'circlecoding' and site.baseurl != '/amp'%}
+    {% include matrix.html %}
+  {% endif %}
 </div>
 
 <main>
@@ -407,8 +392,8 @@ schools:
                 {{ start_date.date }}
               </div>
               <div class="shadow border text-center py-4">
-                <div class="display-7 text-center mb-3">
-                  Classes Meet:
+                <div class="display-7 text-center mb-3 px-2">
+                  {{ start_date.course }}
                 </div>
                 <div>
                   {{ start_date.days }}
@@ -431,7 +416,7 @@ schools:
     <!-- start date boxes end -->
   </section>
 
-  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
+  <section class="mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
     <div class="mx-auto mw-850">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Why Choose Us?
@@ -460,7 +445,7 @@ schools:
                     height="80px"
                     layout="responsive"
                     class="w-100"
-                    src="/assets/images/{{ feature.img | liquify }}"
+                    src="{{ feature.img | liquify }}"
                     alt="{{ feature.alt | liquify }}"
                   ></amp-img>
                 </div>
@@ -474,7 +459,7 @@ schools:
                     height="60px"
                     layout="responsive"
                     class="w-100"
-                    src="/assets/images/{{ feature.img | liquify }}"
+                    src="{{ feature.img | liquify }}"
                     alt="{{ feature.alt | liquify }}"
                   ></amp-img>
                 </div>
@@ -494,7 +479,7 @@ schools:
       </div>
     </div>
   </section>
-  {% if school.course_guide %}
+  {% if school.course_guide != '' %}
   <!-- Course Guide Form -->
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
     {% include course-guide-form.html %}
@@ -549,7 +534,7 @@ schools:
       </h2>
       {% include events.html limit=3 %}
       <div class="mx-auto mt-4 text-center">
-        <a class="hover-white" href="/events">Visit our events page to see more upcoming events!</a>
+        <a class="hover-white" href="/events/">Visit our events page to see more upcoming events!</a>
       </div>
     </div>
   </section>

@@ -45,7 +45,7 @@
         data-margin-start="1%"
         data-margin-end="20%"
       {% endif %}
-      class="mw-600 mx-auto {{ include.text_class | liquify  }} text-center mb-6"
+      class="mw-600 mx-auto {{ include.text_class | liquify  }} text-center mb-6 text-white"
     >
     <!-- htmllint preset="$previous" -->
     {% if page.permalink == "/courses/wordpress-fundamentals/" %}
@@ -79,7 +79,7 @@
           layout="responsive"
           width="579"
           height="756"
-          src="/assets/images/{{ include.course_guide | default: site.key | liquify }}-Course-Guide-Master-Table-Content.png"
+          src="{{ include.course_guide_img | default: school.course_guide_img }}"
           alt="What's inside our course guide"
         ></amp-img>
         <!-- htmllint preset="$previous" -->
@@ -96,7 +96,7 @@
             <input name="downloaded_a_courses_guide" type="hidden" value="true">
             <input name="hs_lead_status" type="hidden" value="NEW">
             <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
-            <input name="redirect_url" type="hidden" value="{{ school.url }}/web/viewer.html?file=..{{ include.course_guide_href | default: school.course_guide }}">
+            <input name="redirect_url" type="hidden" value="{{ settings.pdf_viewer_url | liquify }}{{ include.course_guide_href | default: school.course_guide }}">
             <input name="school" type="hidden" value="{{ school.name }}">
             <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 

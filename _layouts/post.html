@@ -26,8 +26,7 @@ layout: default
       src="{{ page.img | liquify }}"
       class="w-100 w-lg-80 mx-auto"
       layout="responsive"
-      width="{{ page.width | default:345 }}px"
-      height="{{ page.height | default:172.5 }}px"
+      height="172"
       alt="{{ page.alt | liquify }}"
     ></amp-img>
     <div class="w-lg-80 mx-auto space-top-1">
@@ -78,7 +77,7 @@ layout: default
                   target="_blank">
                   <amp-img
                     alt="Share on Facebook"
-                    src="/assets/images/Facebook.svg"
+                    src="/assets/uploads/Facebook.svg"
                     layout="fixed"
                     width="32px"
                     height="32px"
@@ -94,7 +93,7 @@ layout: default
                   title="Tweet">
                   <amp-img
                     alt="Tweet"
-                    src="/assets/images/Twitter.svg"
+                    src="/assets/uploads/Twitter.svg"
                     layout="fixed"
                     width="32px"
                     height="32px"
@@ -110,7 +109,7 @@ layout: default
                   title="Share on LinkedIn">
                   <amp-img
                     alt="Share on LinkedIn"
-                    src="/assets/images/LinkedIn.svg"
+                    src="/assets/uploads/LinkedIn.svg"
                     layout="fixed"
                     width="32px"
                     height="32px"
@@ -126,7 +125,7 @@ layout: default
                   title="Send email">
                   <amp-img
                     alt="Send email"
-                    src="/assets/images/Email.svg"
+                    src="/assets/uploads/Email.svg"
                     layout="fixed"
                     width="32px"
                     height="32px"
@@ -169,7 +168,7 @@ layout: default
       },
       "headline": "{{ page.head_title | liquify }}",
       "image": [
-        "{{ school.url }}{{ page.img | liquify }}"
+        "{{ school.url | append: page.img | liquify }}"
         ],
       "datePublished": "{{ page.created_at }}",
       "dateModified": "{{ page.updated_at }}",
@@ -182,7 +181,7 @@ layout: default
         "name": "{{ school.name }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ school.url }}/assets/images/logo-{{ site.key }}.png"
+          "url": "{{ school.url | append: school.logo }}"
         }
       },
       "description": "{{ page.excerpt | liquify }}"

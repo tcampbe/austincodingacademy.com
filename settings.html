@@ -1,61 +1,75 @@
 ---
 settings: true
+title: Settings
 form_url: https://4runw89p71.execute-api.us-west-1.amazonaws.com/latest/hubspot
 hubspot_portal_id: 4009818
-acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=3203565
-preapplication_form_guid: 8fb40a43-8ebf-4f5e-8a4a-6e72ecec56ab
-application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
+google_tag_manager: GTM-TBH7GK
+google_tag_manager_amp: GTM-KZ9XHND
+facebook_pixel: "656599271106549"
 instructor_form_guid: 83193d74-f3de-4679-91db-18ba46864fef
 corporate_trainings_form_guid: a000aab9-9870-4578-a496-2649ea46fb7e
 corporate_form_guid: b8fb52b4-28de-4133-920b-7f587724bb3d
 assignment_form_guid: 60651a89-8f76-427f-aaf6-13263bfd9c6b
-head_title: "{{ school.name }} | Learn to Code, Change Your Life"
+acuity_scheduling_src: ''
+preapplication_form_guid: 
+application_form_guid: ''
+diversity_form_guid: ''
+linkedin_pixel: "1650922"
+pdf_viewer_url: "{{ school.url }}/web/viewer.html?file=.."
 description: At {{ school.name }}, we fit learning to code into your life with a flexible
   &amp; affordable array of options, all taught by current industry professionals.
-  Don’t wait - embark on a new career today!
+  Don't wait - embark on a new career today!
 navigation:
   header:
   - title: Courses
+    url: ''
+    class: ''
   - title: Tuition
-    url: "/tuition"
+    url: "/tuition/"
+    class: ''
   - title: For Companies
-    url: "/enterprise-training"
+    url: "/enterprise-training/"
+    class: ''
+  - title: Events
+    url: "/events/"
+    class: ''
   - title: About Us
     links:
-    - title: Events
-      url: "/events"
     - title: FAQ
-      url: "/faq"
+      url: "/faq/"
     - title: Our Team
-      url: "/team"
+      url: "/team/"
     - title: Our Instructors
-      url: "/instructors"
+      url: "/instructors/"
     - title: Contact Us
-      url: "/contact"
+      url: "/contact/"
     - title: Blog
-      url: https://austincodingacademy.com/blog/
+      url: "/blog/"
+    url: ''
+    class: ''
   - title: Student Portal
     url: https://campus.{{ site.key }}.com
+    class: ''
   - title: Apply
-    url: "/apply"
+    url: "/apply/"
     class: btn btn-round text-white cta-gradient py-1 px-6
   footer:
   - title: Hack Overflow
     url: https://austincodingacademy.com/forum
   - title: Upcoming Events
-    url: "/events"
+    url: "/events/"
   - title: Tutoring
-    url: "/tutoring"
+    url: "/tutoring/"
   - title: Become an Instructor
-    url: "/instructor-apply"
+    url: "/instructor-apply/"
   - title: Graduating Class
-    url: "/grads"
+    url: "/grads/"
   - title: Hire a Graduate
-    url: "/hire"
+    url: "/hire/"
   - title: Student Referral
-    url: "/new-student-referral"
+    url: "/new-student-referral/"
   - title: Student Grievance Policy
-    url: "/student-grievances"
+    url: "/student-grievances/"
 courses:
 - code: Web 101
   title: Intro to Web Development
@@ -150,55 +164,173 @@ tracks:
   category: Individual Courses
   url: "/courses/wordpress-fundamentals"
 schools:
+- key: circlecoding
+  name: Circle Coding Academy
+  navigation:
+    header:
+    - title: Courses
+      url: ''
+      class: ''
+    - title: Tuition
+      url: "/tuition/"
+      class: ''
+    - title: Events
+      url: "/events/"
+      class: ''
+    - title: About Us
+      links:
+      - title: Contact Us
+        url: "/contact/"
+      url: ''
+      class: ''
+    - title: Apply
+      url: "/apply/"
+      class: btn btn-round text-white cta-gradient py-1 px-6
+    footer:
+    - title: Becoming an Instructor
+      url: "/instructor-apply/"
+    - title: Upcoming Events
+      url: "/events/"
+    - title: Student Referral
+      url: "/new-student-referral/"
+  active: true
+  tracks:
+  - Full Stack Web Development
+  url: https://circlecoding.com
+  phone: 12142471477
+  callrail_company_id: 946317831
+  eventbrite_id: "28751871049"
+  google_analytics: UA-68821515-9
+  reddit_pixel: t2_5cddgwie
+  contact_form_guid: aeb56290-0aaf-4010-a67b-08c29aa51e8f
+  cta_form_guid: ''
+  preapplication_form_guid: a197ed88-4805-4fb4-9c19-0d12c0dfe5a1
+  course_guide_form_guid: 91791c9a-37d2-4d8f-b880-730ceada0335
+  application_form_guid: 23f08e9e-5a11-42d9-b912-9202932e7c14
+  twitter: ''
+  eventbrite: https://www.eventbrite.com/o/circle-coding-academy-28751871049
+  linkedin: ''
+  facebook: https://www.facebook.com/CircleCodingAcademy/
+  instagram: https://www.instagram.com/circlecodingacademy/
+  course_guide: "/assets/uploads/CCA_CourseGuide_2020-1.pdf"
+  locations:
+  - name: CENTRL Office Downtown Dallas
+    street: '750 North St. Paul Street Suite #200'
+    city: Dallas
+    state: TX
+    postal: 75201
+    url: https://centrloffice.com/
+  announcement: ''
+  start_dates:
+  - location: CENTRL Office Campus
+    course: Full Stack Web Development
+    date: April 13
+    days: Monday/Wednesday
+    time: 6:30 - 9:00pm
+  primary_light_color: rgb(78, 188, 231)
+  primary_dark_color: rgb(0, 0, 0)
+  secondary_light_color: rgb(207, 222, 98)
+  secondary_dark_color: rgb(78, 188, 231)
+  hero_overlay_color: rgb(0, 0, 0)
+  instructors: []
+  team:
+  - name: Chris Lofton
+    title: CEO
+    email: clofton@circleeducation.com
+    bio: Chris Lofton graduated from Texas State University with a B.S. in Psychology
+      and began teaching middle school math in San Antonio, TX with Teach For America
+      and KIPP. Through these educational institutions, Chris experienced the power
+      of project-based learning and began to see a path towards improving our education
+      system. While working for the University of Texas, Chris studied with Austin
+      Coding Academy (Now Circle Coding Academy). After his class, he was hired as
+      the Director of Academics, managing all curriculum and instructors, and became
+      the CEO in April of 2017. Chris lives in Austin with his wife and 2-year-old
+      daughter.
+    links:
+    - link: https://www.linkedin.com/in/chris-lofton-83997431/
+      icon: ''
+      hex: ''
+  - name: Dan Cumming
+    title: Director of Partnerships
+    email: dan@circlecoding.com
+    bio: As a humble hustler, I’ve grown with Circle Coding Academy over the last
+      three years holding several roles wherever I could add value to the school and
+      to the students. I graduated with a Journalism BS from University of Richmond
+      (go Spiders!), and got my professional start with sales and leadership. I’ve
+      traveled coast-to-coast on my motorcycle several times, which led me to find
+      a true home in Texas since 2014. I’m all about connecting, so say hello!
+    links:
+    - link: ''
+      icon: ''
+      hex: ''
+  tutors: []
+  logo: "/assets/uploads/CCA_Logo_White@3x.png"
+  seal: "/assets/uploads/cca_seal.png"
+  course_guide_img: "/assets/uploads/CCA Course Guide preview.png"
+  acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=12870386
 - key: austincodingacademy
+  active: true
   name: Austin Coding Academy
+  preapplication_form_guid: 8fb40a43-8ebf-4f5e-8a4a-6e72ecec56ab
+  application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
+  acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=3203565
   primary_light_color: rgb(0, 179, 209)
   primary_dark_color: rgb(45, 47, 119)
   secondary_light_color: rgb(130, 202, 156)
   secondary_dark_color: rgb(0, 179, 209)
+  hero_overlay_color: rgb(45, 47, 119)
   navigation:
     header:
     - title: Courses
+      url: ''
+      class: ''
     - title: Tuition
-      url: "/tuition"
+      url: "/tuition/"
+      class: ''
+    - title: Events
+      url: "/events/"
+      class: ''
     - title: About Us
       links:
       - title: For Companies
         url: "/enterprise-training"
-      - title: Events
-        url: "/events"
       - title: FAQ
-        url: "/faq"
+        url: "/faq/"
       - title: Our Team
-        url: "/team"
+        url: "/team/"
       - title: Our Instructors
-        url: "/instructors"
+        url: "/instructors/"
       - title: Contact Us
-        url: "/contact"
+        url: "/contact/"
       - title: Blog
-        url: https://austincodingacademy.com/blog/
+        url: "/blog/"
+      url: ''
+      class: ''
     - title: Student Portal
       url: https://campus.{{ site.key }}.com
+      class: ''
     - title: Apply
-      url: "/apply"
+      url: "/apply/"
       class: btn btn-round text-white cta-gradient py-1 px-6
+    footer: []
   tracks:
   - Full Stack Web Development
   - WordPress Fundamentals
   url: https://austincodingacademy.com
   phone: 15128278498
   callrail_company_id: 915131377
-  google_tag_manager: GTM-TBH7GK
-  google_tag_manager_amp: GTM-KZ9XHND
+  google_analytics: UA-68821515-1
+  reddit_pixel: t2_38d8or3c
+  eventbrite_id: "10937668459"
   contact_form_guid: 33cc0e23-1881-4874-a1d0-2c0307f20e41
   cta_form_guid: cddbd037-925f-49ea-b55c-099c986ac822
   course_guide_form_guid: 702969c4-4c75-4b99-b6d2-59d04d6ebd03
-  application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
   twitter: https://twitter.com/austincoding
   eventbrite: https://austincodingacademy.eventbrite.com
   facebook: https://www.facebook.com/AustinCodingAcademy
   instagram: https://www.instagram.com/austincodingacademy
   course_guide: "/assets/documents/Austin-Coding-Academy-Course-Guide-Master.pdf"
+  course_guide_img: "/assets/uploads/austincodingacademy-Course-Guide-Master-Table-Content.png"
   locations:
   - name: Capital Factory
     street: 701 Brazos St, Ste 1616
@@ -212,21 +344,491 @@ schools:
     state: TX
     postal: 78752
     url: https://goo.gl/maps/NssXRytdtdezgKft7
+  start_dates:
+  - location: Highland Campus
+    course: Wordpress Fundamentals
+    date: February 10th
+    days: Monday/Wednesday
+    time: 6:30 - 9:00pm
+  - location: Capital Factory Campus
+    course: Full Stack Web Development
+    date: February 17th
+    days: Monday/Wednesday
+    time: 6:30 - 9:00pm
+  announcement: Call us at <a class='promo-link' href='tel:{{ school.phone | phone_number
+    }}'>{{ school.phone | phone_number }}</a> to learn more about our upcoming WordPress
+    Fundamentals Course!
+  linkedin: ''
+  instructors:
+  - name: Dinh Huynh
+    email: dinh@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/dinhhuynh/
+    title: JS 211
+    campus: Highland
+    bio: Dinh has worked as a software engineer at SCCI since March 2017 and has worked
+      as a developer at Spredfast.
+    gravatar_email: ''
+  - name: Keith Kritselis
+    email: keith@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/keith-kritselis/
+    title: Web 101
+    campus: Downtown
+    bio: Keith is president and co-founder of K &amp; T Manufacturing and has been
+      a contract instructor for programming schools since September 2014.
+    gravatar_email: ''
+  - name: Emily Anne Moses
+    email: emily@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/emilyannemoses/
+    title: JS 211
+    campus: Downtown
+    bio: Emily is a freelance developer who has worked at Home Depot and GreyMeta.
+    gravatar_email: ''
+  - name: Juan Rodriguez
+    email: juan.j.rodriguez2@gmail.com
+    linkedin: https://www.linkedin.com/in/juanrod1/
+    title: Web 101
+    campus: Highland
+    bio: Juan has been a developer at L7 Informatics since August 2018 and has worked
+      as a developer for MediaScience and DCR Point-of-Sale Systems.
+    gravatar_email: ''
+  - name: Yousif Seedhom
+    email: yousif@austincodingacadey.com
+    linkedin: https://www.linkedin.com/in/yousifs/
+    title: C# 221
+    campus: Highland
+    bio: Yousif has been a senior software engineer at Pulselight since November 2013
+      and before that at Open Sky Software.
+    gravatar_email: ''
+  - name: Matt Viteri
+    email: matt@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/mxviteri/
+    title: JS 311
+    campus: Highland
+    bio: Matt began at Volusion in July 2017 as a senior software engineer and now
+      works as a software engineering manager.
+    gravatar_email: ''
+  - name: Jon Woo
+    email: jon@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/jon-woo-3a28175a/
+    title: JS 311
+    campus: Downtown
+    bio: Jon has worked at CDK Global as a software developer since January 2019 and
+      has been an instructor at multiple coding schools since January 2014.
+    gravatar_email: ''
+  - name: Erik Zambrano
+    email: erik@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/e-zambrano/
+    title: ".NET 321"
+    campus: Highland
+    bio: Erik has been a front-end engineer at Gartner since September 2018. Before
+      that he was a software engineer at General Motors.
+    gravatar_email: ''
+  team:
+  - name: Chris Lofton
+    title: CEO
+    email: clofton@austincodingacademy.com
+    bio: Chris Lofton graduated from Texas State University with a B.S. in Psychology
+      and began teaching middle school math in San Antonio, TX with Teach For America
+      and KIPP. Through these educational institutions, Chris experienced the power
+      of project-based learning and began to see a path towards improving our education
+      system. While working for the University of Texas, Chris studied with Austin
+      Coding Academy. After his class, he was hired as the Director of Academics,
+      managing all curriculum and instructors, and became the CEO in April of 2017.
+      Chris lives in Austin with his wife and 2-year-old daughter.
+    links:
+    - link: mailto:clofton@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/chris-lofton-83997431/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+  - name: Kevin Colten
+    title: CTO + Lead Instructor
+    email: kevin@austincodingacademy.com
+    bio: 'A life-learner and new technology enthusiast, Kevin works hard at the things
+      he loves: programming, teaching, and learning. As a software developer of more
+      than six years and a teacher of more than ten, he has combined his teaching
+      experience and passion for coding to help create an accessible, living, and
+      relevant curriculum aimed to open up the tech industry to those determined to
+      break in.'
+    links:
+    - link: mailto:kevin@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://kevincolten.com
+      icon: fas fa-home
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/kevincolten/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+    - link: https://github.com/kevincolten
+      icon: fab fa-github
+      hex: "#303133"
+  - name: Dan Cumming
+    title: Director of Placement &amp; Partnerships
+    email: dan@austincodingacademy.com
+    bio: As a humble hustler, I&#8217;ve grown with Austin Coding Academy over the
+      last three years holding several roles wherever I could add value to the school
+      and to the students. I graduated with a Journalism BS from University of Richmond
+      (go Spiders!), and got my professional start with sales and leadership. I&#8217;ve
+      traveled coast-to-coast on my motorcycle several times, which led me to find
+      a true home here in Austin in 2014. I&#8217;m all about connecting, so say hello!
+    links:
+    - link: mailto:dan@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/daniel-cumming/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+  - name: Nai Obeid
+    title: Compliance &amp; Design
+    email: nai@austincodingacademy.com
+    bio: I&#8217;m a graphic designer from Lebanon. I moved here 9 years ago for a
+      new adventure and I&#8217;ve been lucky to call Austin home since. When I&#8217;m
+      not at work, I&#8217;m usually at one of Austin&#8217;s many amazing coffee
+      shops, making art or planning my next trip or both. Creating beautiful things
+      is my passion. Being at ACA allows me to do what I love everyday, surrounded
+      by the best team.
+    links:
+    - link: mailto:nai@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://naio-experimental.tumblr.com/
+      icon: fas fa-home
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/dotthenai/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+    - link: https://www.instagram.com/naio.design/
+      icon: fab fa-instagram
+      hex: "#f00075"
+  - name: Clayton Berger
+    title: Senior Academic Manager
+    email: clayton@austincodingacademy.com
+    bio: Artistic flair paired with technical deftness. I&#8217;m a teacher turned
+      programmer that loves code and wants all of my students to fall in-love with
+      it too. My mission at ACA is make everyone around me better by making myself
+      better each day!
+    links:
+    - link: mailto:clayton@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://linkedin.com/in/claytonrberger
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+    - link: https://github.com/hipperger
+      icon: fab fa-github
+      hex: "#303133"
+  - name: Zecharias Mengis
+    title: Digital Marketing Specialist
+    email: zech@austincodingacademy.com
+    bio: I&#8217;m Zech, the marketing lead at Austin Coding Academy. I graduated
+      from Northwestern University in 2018 and my continued passion for learning led
+      me to move to Austin after graduation to join a marketing apprenticeship program.
+      In addition to spending my evenings developing my marketing skills, I&#8217;m
+      also currently taking ACA&#8217;s Full Stack JavaScript class. Outside of work
+      I love watching and playing soccer, reading about tech and business, and traveling!
+    links:
+    - link: mailto:zech@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/zechariasmengis/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+  - name: Daniel Mutter
+    title: Campus Director
+    email: dmutter@austincodingacademy.com
+    bio: I am a full-time teacher and aspiring developer. I use my experience as a
+      teacher and ACA graduate to provide support for student growth and instructor
+      development. It is an absolute pleasure to work with the dedicated students
+      and instructors at ACA.
+    links:
+    - link: mailto:dmutter@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/daniel-mutter-775a8354/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+    - link: https://github.com/dmuttz
+      icon: fab fa-github
+      hex: "#303133"
+  - name: Sean Philippi
+    title: Web Development Intern
+    email: sean.philippi@gmail.com
+    bio: I started ACA&#8217;s Full-Stack Javascript program back in April of 2018
+      and have been excited about programming ever since! I love continually learning
+      and helping others learn. I enjoy art (film and music especially), psychology,
+      philosophy, and experiencing constant growth. I&#8217;m so excited to be working
+      with a startup with admirable and ambitious goals. I&#8217;ve always been interested
+      in unique approaches to education and enjoy being able to contribute and be
+      apart of an accessible and constantly improving program.
+    links:
+    - link: mailto:sean@austincodginacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/seanphilippi
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+    - link: https://github.com/seanphilippi
+      icon: fab fa-github
+      hex: "#303133"
+  - name: Georgina Elizondo Griffin
+    title: Admissions Representative
+    email: georgina@austincodingacademy.com
+    bio: I moved to the States from Mexico when I was 3 years old, and have grown
+      up in Texas ever since. I grew up with a lot of travel and adventure and was
+      taught by my father how to ski and scuba dive. I graduated from UT Austin in
+      2015, married a software engineer and now am a mom of a needy dog and an ambivalent
+      cat. I&#8217;m fascinated by the tech scene in Austin and love the opportunity
+      to collaborate with innovative people and teams. I&#8217;m happy to be working
+      with ACA and contributing to this amazing and supportive community!
+    links:
+    - link: mailto:georgina@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/georgina-elizondo/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+  tutors:
+  - name: Eddie Crochet
+    id: "8858762"
+    skills:
+    - Web 101
+    - C# 221
+    - ".Net 321"
+    limitation: 
+    gravatar_email: eddiecrochet1994@gmail.com
+    location:
+    - any
+    - austinNorth
+    - austinDowntown
+    calendar: https://acaappointment.as.me/schedule.php?calendarID=2705640
+    virtual: https://meet.google.com/ixh-phuz-tre
+    rocketchat: https://chat.austincodingacademy.com/direct/eddiecrochet-939
+    email: ''
+  - name: Gabe Flores
+    id: "9935070"
+    skills:
+    - Web 101
+    - JS 211
+    - JS 311
+    - JS 411
+    gravatar_email: jflores353@gmail.com
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/?calendarID=2932736
+    virtual: https://meet.google.com/cyb-qjve-zsv
+    rocketchat: https://chat.austincodingacademy.com/direct/gabeflores-958
+    email: ''
+  - name: Wes Garbee
+    id: "10004148"
+    skills:
+    - Web 101
+    - C# 221
+    - ".Net 321"
+    gravatar_email: wgarbee@gmail.com
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/?calendarID=2946352
+    virtual: https://meet.google.com/nrm-efsq-vra
+    rocketchat: https://chat.austincodingacademy.com/direct/wes.g.garbee
+    email: ''
+  - name: Joseph Hauger
+    id: "11633790"
+    skills:
+    - Web 101
+    - JS 211
+    - JS 311
+    - JS 41
+    gravatar_email: joseph.hauger@gmail.com
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/?calendarID=3313110
+    virtual: https://meet.google.com/yge-onis-dqq
+    rocketchat: https://chat.austincodingacademy.com/direct/josephhauger-1208
+    email: ''
+  - name: Grant Kee
+    id: "11906329"
+    skills:
+    - Web 101
+    - JS 211
+    - JS 311
+    - JS 411
+    gravatar_email: grant.d.kee@gmail.com
+    location:
+    - any
+    - austinNorth
+    - austinDowntown
+    calendar: https://acaappointment.as.me/?calendarID=3374637
+    virtual: https://meet.google.com/izk-uxfh-fhx
+    rocketchat: https://chat.austincodingacademy.com/direct/grantkee-1322
+    email: ''
+  - name: Sky Mendes
+    id: "11156726"
+    skills:
+    - Web 101
+    gravatar_email: skymendesross@gmail.com
+    location:
+    - any
+    - austinDowntown
+    - austinNorth
+    calendar: https://acaappointment.as.me/?calendarID=3192771
+    virtual: https://meet.google.com/iom-amef-qjc
+    rocketchat: https://chat.austincodingacademy.com/direct/skymendes-1123
+    email: ''
+  - name: Sean Philippi
+    id: "8858776"
+    skills:
+    - JS 211
+    - JS 311
+    - JS 411
+    limitation: 
+    gravatar_email: sean.philippi@gmail.com
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/schedule.php?calendarID=2705627
+    virtual: https://meet.google.com/gee-rmgn-ocm
+    rocketchat: https://chat.austincodingacademy.com/direct/sean.philippi
+    email: ''
+  - name: Darwin Risser
+    id: "9916197"
+    skills:
+    - Web 101
+    - JS 211
+    - JS 311
+    - JS 411
+    gravatar_email: risser.darwin@gmail.com
+    location:
+    - any
+    - austinNorth
+    calendar: https://acaappointment.as.me/?calendarID=2928936
+    virtual: https://meet.google.com/znv-fowt-rcm
+    rocketchat: https://chat.austincodingacademy.com/direct/risser.darwin
+    email: ''
+  - name: Emilio Sanchez
+    id: "11141953"
+    skills:
+    - Web 101
+    - JS 211
+    - JS 311
+    - JS 411
+    gravatar_email: sanchez.emilio483@gmail.com
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/?calendarID=3188939
+    virtual: https://meet.google.com/yxu-czvr-bsv
+    rocketchat: https://chat.austincodingacademy.com/direct/emiliosanchez-1176
+    email: ''
+  - name: Landon Taylor
+    id: "11905941"
+    skills:
+    - Web 101
+    - JS 211
+    - JS 311
+    - JS 411
+    gravatar_email: landon.autumn.taylor@gmail.com
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/?calendarID=3374524
+    virtual: https://meet.google.com/hei-swxg-kwk
+    rocketchat: https://chat.austincodingacademy.com/direct/LandonTaylor
+    email: ''
+  - name: Blaise Angoma
+    id: "9259748"
+    skills:
+    - C# Students &amp; Grads
+    - JS Grads Only
+    limitation: 
+    gravatar_email: angomablaise@gmail.com
+    location:
+    - any
+    - austinNorth
+    - austinDowntown
+    calendar: https://acaappointment.as.me/schedule.php?calendarID=2795465
+    virtual: https://meet.google.com/gmk-eciw-rpc
+    rocketchat: https://chat.austincodingacademy.com/direct/blaiseangoma-1285
+    email: ''
+  - name: Olamide Kolawole
+    id: "9299635"
+    skills:
+    - C# Students &amp; Grads
+    - JS Grads Only
+    limitation: 
+    gravatar_email: olamshin@gmail.com
+    location:
+    - any
+    - austinNorth
+    - austinDowntown
+    calendar: https://acaappointment.as.me/?calendarID=2803756
+    virtual: https://meet.google.com/ogc-dsza-fkr
+    rocketchat: https://chat.austincodingacademy.com/direct/olamidekolawole-1293
+    email: ''
+  - name: Matt Cameron
+    id: "8181476"
+    skills:
+    - Full-stack mentor
+    limitation: Graduates Only
+    gravatar_email: cameron.matt@gmail.com
+    location:
+    - any
+    - austinNorth
+    - austinDowntown
+    calendar: https://acaappointment.as.me/?calendarID=2550362
+    virtual: https://meet.google.com/asu-mond-ypy
+    rocketchat: https://chat.austincodingacademy.com/direct/matthewcameron-917
+    email: ''
+  - name: Greg Swan
+    id: "9299558"
+    skills:
+    - JS full-stack
+    limitation: Graduates Only
+    gravatar_email: greg.c.swan@gmail.com
+    location:
+    - any
+    - austinNorth
+    - austinDowntown
+    calendar: https://acaappointment.as.me/?calendarID=2803741
+    virtual: https://meet.google.com/cyf-cqkg-fzj
+    rocketchat: https://chat.austincodingacademy.com/direct/greg.swan
+    email: ''
+  - name: Eric Barrs
+    id: "8069545"
+    skills:
+    - Web 101
+    - JS 211
+    - JS 311
+    limitation: 
+    gravatar_email: eric@austincodingacademy.com
+    location:
+    - any
+    - austinNorth
+    - austinDowntown
+    calendar: https://acaappointment.as.me/?calendarID=2522414
+    virtual: https://meet.google.com/dvg-kciy-jty
+    rocketchat: https://chat.austincodingacademy.com/direct/ericbarrs-913
+    email: ''
+  logo: "/assets/uploads/logo-austincodingacademy-white.png"
+  seal: "/assets/uploads/logo-austincodingacademy-favicon.png"
 - key: lubbockcodingacademy
+  active: true
   name: Lubbock Coding Academy
+  preapplication_form_guid: e40c6fe8-61cd-4525-a873-b46568074d03
+  application_form_guid: 95ceb42a-faf8-4f23-90dc-445de0a61d29
+  acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=8404561
   primary_light_color: rgb(0, 179, 209)
   primary_dark_color: rgb(45, 47, 119)
   secondary_light_color: rgb(220, 240, 227)
   secondary_dark_color: rgb(130, 202, 156)
+  hero_overlay_color: rgb(45, 47, 119)
   tracks:
   - Full Stack Web Development
   url: https://lubbockcodingacademy.com
   phone: 18069055021
   callrail_company_id: 740142126
-  google_tag_manager: GTM-KXWTBGW
-  google_tag_manager_amp: GTM-M22GBJ2
+  google_analytics: UA-68821515-5
+  reddit_pixel: t2_5cb0tnx7
+  eventbrite_id: "18046524539"
   contact_form_guid: 57d346ec-7bfb-4bf4-b30f-5359a4683c08
-  application_form_guid: 3abd444f-ac31-4c9c-8448-c7f4c25eb9d7
   course_guide_form_guid: 4bea04a4-c623-44c2-aee9-3186bb154f18
   cta_form_guid: 21e581ad-e0aa-47b4-8c4c-d1e976a973da
   twitter: https://twitter.com/lubbockcoding
@@ -234,6 +836,7 @@ schools:
   facebook: https://www.facebook.com/LubbockCodingAcademy
   instagram: https://www.instagram.com/lubbockcodingacademy
   course_guide: "/assets/documents/Lubbock-Coding-Academy-Course-Guide-Master.pdf"
+  course_guide_img: "/assets/uploads/lubbockcodingacademy-Course-Guide-Master-Table-Content.png"
   locations:
   - name: South Plains College - Lubbock Center
     street: 3907 Avenue Q
@@ -243,36 +846,252 @@ schools:
     url: https://goo.gl/maps/QQDwUZBinyaYXGV57
   navigation:
     header: []
-- key: texastechuniversitycodingacademy
-  name: Texas Tech University Coding Academy
+    footer: []
+  announcement: ''
+  start_dates: []
+  linkedin: ''
+  instructors:
+  - name: Denise Bostwick
+    email: denise@lubbockcodingacademy.com
+    linkedin: https://www.linkedin.com/in/denise-bostwick-80b29714/
+    title: Instructor
+    campus: ''
+    bio: I am currently a software developer at Tyler Technologies. Some of my past
+      careers have been professional court reporter, software support, quality assurance,
+      and massage therapy.
+    gravatar_email: ''
+  - name: Cory Carlson
+    title: Instructor
+    email: corycarlson209@gmail.com
+    bio: Cory is a .Net Developer and Automation Team Lead at SitePro, Inc. in Lubbock,
+      Tx where he helps the team create and maintain automation software for oil field
+      saltwater disposals. He has over 4 years of professional programming experience
+      and is a full stack engineer and a Microsoft Certified Professional.
+    links: ''
+    linkedin: https://www.linkedin.com/in/cory-carlson-728818110/
+    campus: ''
+    gravatar_email: ''
+  - name: Robin Dillard
+    email: robin@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/robindillard/
+    title: Instructor
+    campus: ''
+    bio: Full-stack web developer and project manager with a passion for learning
+      new technologies, sharing knowledge, and mocha cappuccino.
+    gravatar_email: ''
+  - name: Jordan Woodruff
+    email: jordan@austincodingacademy.com
+    linkedin: ''
+    title: Instructor
+    campus: ''
+    bio: Jordan Woodruff is a born and raised Lubbock, TX native who graduated from
+      Texas Tech University with a degree in Computer Science. When not instructing
+      Jordan works on Utility Billing Software as a full time developer, where he
+      enjoys writing clean code and helping other developers solve problems by providing
+      knowledge and experience.
+    gravatar_email: ''
+  - name: Jeffrey Zheng
+    email: jeffreyzheng360@gmail.com
+    linkedin: https://www.linkedin.com/in/jeffrey-zheng-572b3698/
+    title: Instructor
+    campus: ''
+    bio: Jeffrey graduated from Texas Tech University with a Master&#8217;s degree
+      in Computer Science in 2004 and a Master&#8217;s degree in Statistics in 2013,
+      and he has been working on his doctoral degree in Computer Science as a part-time
+      student since 2014. He has been working in web development since 2004 using
+      technologies including ASP.NET/C#, MS SQL Server, HTML, CSS, JavaScript, etc.
+      Jeffrey enjoys teaching and has taught various undergraduate courses in the
+      Computer Science department at TTU.
+    gravatar_email: ''
+  tutors:
+  - name: Ari Cohen
+    id: "12986490"
+    skills:
+    - Mentor
+    email: 'scohe001@ucr.edu '
+    location:
+    - southPlains
+    calendar: https://acaappointment.as.me/?appointmentType=12986490
+    virtual: https://meet.google.com/hno-vbsf-qqs
+    rocketchat: "@Ari-Cohen"
+  - name: Amy Troutman
+    id: "12815678"
+    skills:
+    - Web 101
+    - C# 221
+    email: amyrtroutman@gmail.com
+    location:
+    - southPlains
+    calendar: https://acaappointment.as.me/?calendarID=3579323
+    virtual: https://meet.google.com/xkt-gjzv-skc
+    rocketchat: https://chat.austincodingacademy.com/direct/amytroutman-1479
+  - name: Anthony Perez
+    id: "12508495"
+    skills:
+    - Web 101
+    - C# 221
+    - ".Net 321"
+    gravatar_email: antrp93@gmail.com
+    location:
+    - any
+    - southPlains
+    calendar: https://acaappointment.as.me/?calendarID=3510262
+    virtual: https://meet.google.com/xmd-whtm-veg
+    rocketchat: https://chat.austincodingacademy.com/direct/anthonyperez-1373
+    email: ''
+  - name: Steven Schoor
+    id: "11929350"
+    skills:
+    - Web 101
+    - C# 221
+    - ".Net 321"
+    gravatar_email: steven_schoor@yahoo.com
+    location:
+    - any
+    - southPlains
+    calendar: https://acaappointment.as.me/?calendarID=3380476
+    virtual: https://meet.google.com/ihn-awgr-ahf
+    rocketchat: https://chat.austincodingacademy.com/direct/stevenschoor-1214
+    email: ''
+  - name: Lindsay Wilson
+    id: "11324082"
+    skills:
+    - Web 101
+    - C# 221
+    gravatar_email: lindsay.89@outlook.com
+    location:
+    - any
+    - southPlains
+    calendar: https://acaappointment.as.me/?calendarID=3237866
+    virtual: https://meet.google.com/ium-axum-djx
+    rocketchat: https://chat.austincodingacademy.com/direct/lindsaywilson-1324
+    email: ''
+  - name: Johnny Reina
+    id: "10233633"
+    skills:
+    - Mentor
+    limitation: advanced students only
+    gravatar_email: johnny.r.reina@gmail.com
+    location:
+    - any
+    - southPlains
+    calendar: https://acaappointment.as.me/?calendarID=2992556
+    virtual: https://meet.google.com/swm-maog-rak
+    rocketchat: https://chat.austincodingacademy.com/direct/johnny.reina
+    email: ''
+  team:
+  - name: Chris Lofton
+    title: CEO
+    email: clofton@austincodingacademy.com
+    bio: Chris Lofton graduated from Texas State University with a B.S. in Psychology
+      and began teaching middle school math in San Antonio, TX with Teach For America
+      and KIPP. Through these educational institutions, Chris experienced the power
+      of project-based learning and began to see a path towards improving our education
+      system. While working for the University of Texas, Chris studied with Austin
+      Coding Academy. After his class, he was hired as the Director of Academics,
+      managing all curriculum and instructors, and became the CEO in April of 2017.
+      Chris lives in Austin with his wife and 2-year-old daughter.
+    links:
+    - link: mailto:clofton@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/chris-lofton-83997431/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+  - name: Kevin Colten
+    title: CTO + Lead Instructor
+    email: kevin@austincodingacademy.com
+    bio: 'A life-learner and new technology enthusiast, Kevin works hard at the things
+      he loves: programming, teaching, and learning. As a software developer of more
+      than six years and a teacher of more than ten, he has combined his teaching
+      experience and passion for coding to help create an accessible, living, and
+      relevant curriculum aimed to open up the tech industry to those determined to
+      break in.'
+    links:
+    - link: mailto:kevin@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://kevincolten.com
+      icon: fas fa-home
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/kevincolten/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+    - link: https://github.com/kevincolten
+      icon: fab fa-github
+      hex: "#303133"
+  - name: Chris Troutman
+    title: Campus Director
+    email: ctroutman@austincodingacademy.com
+    bio: Chris Troutman has worked professionally in digital publishing and web marketing
+      since 2009 at large corporate organizations, independent marketing firms, and
+      nonprofit state organizations. Specifically, he has experience as a digital
+      project manager and site admin, managing web and social media projects for multiple
+      fortune 500 companies as well as overseeing the content management of multiple
+      large public and client facing web sites. Troutman’s background is in journalism,
+      where he was an accomplished freelance writer, weekly local news journalist,
+      and eventually started the video blog BeerTownAustin and then the quarterly
+      print magazine, Austin Beer Guide. Troutman possesses a MFA in Mass Comm and
+      Journalism with an emphasis in new media.
+    links:
+    - link: mailto:ctroutman@lubbockcodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/christroutman/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+  - name: Gabe Schrade
+    title: Marketing & Admissions Specialist
+    email: gabe@lubbockcodingacademy.com
+    bio: Hi, I`m Gabe! I moved to Texas to play football for Texas State University
+      and have been here ever since! I`ve always been a people person, and technology
+      has enabled me to meet so many people in Central Texas, Lubbock and beyond!
+      I`m so excited about where coding and technology could take you!
+    links:
+    - link: mailto:gabe@lubbockcodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+  logo: "/assets/uploads/logo-lubbockcodingacademy-white.png"
+  seal: "/assets/uploads/logo-austincodingacademy-favicon.png"
+- key: texastechcodingacademy
+  active: true
+  name: Texas Tech Coding Academy
+  application_form_guid: cae31901-c97c-4293-8d10-1dae30ef64bf
   primary_light_color: rgb(204, 0, 0)
   primary_dark_color: rgb(153, 0, 0)
   secondary_light_color: rgb(239, 227, 185)
   secondary_dark_color: rgb(203, 159, 91)
+  hero_overlay_color: rgb(52,58,64)
   navigation:
     header:
     - title: Courses
+      url: ''
+      class: ''
+    - title: Events
+      url: "/events/"
+      class: ''
     - title: Contact Us
-      url: "/contact"
+      url: "/contact/"
+      class: ''
     - title: Apply
-      url: "/apply"
+      url: "/apply/"
       class: btn btn-round text-white cta-gradient py-1 px-6
     footer: []
   tracks:
   - Full Stack Web Development
-  url: https://texastechuniversitycodingacademy.com
+  url: https://texastechcodingacademy.com
   phone: 18302567665
   callrail_company_id: 457867625
-  google_tag_manager: GTM-59P7KFG
-  google_tag_manager_amp: GTM-NXQMWW7
-  contact_form_guid: 33cc0e23-1881-4874-a1d0-2c0307f20e41
+  google_analytics: UA-68821515-6
+  reddit_pixel: ''
+  eventbrite_id: "27138169661"
+  contact_form_guid: e7ad2277-669b-4baa-8932-d3b933241ac9
   cta_form_guid: cddbd037-925f-49ea-b55c-099c986ac822
-  course_guide_form_guid: 702969c4-4c75-4b99-b6d2-59d04d6ebd03
-  application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
-  twitter: https://twitter.com/austincoding
-  eventbrite: https://austincodingacademy.eventbrite.com
-  facebook: https://www.facebook.com/AustinCodingAcademy
-  instagram: https://www.instagram.com/austincodingacademy
+  course_guide_form_guid: '084862f2-c78d-4530-a519-959d5801138c'
+  twitter: https://twitter.com/TexasTechCoding
+  eventbrite: https://texastechcodingacademy.eventbrite.com
+  facebook: https://www.facebook.com/Texas-Tech-University-Coding-Academy-102081964548121/
+  instagram: https://www.instagram.com/ttucodingacademy/
   locations:
   - name: Texas Tech University - Highland Lakes
     street: 806 Steve Hawkins Pkwy
@@ -280,79 +1099,169 @@ schools:
     state: TX
     postal: 78654
     url: https://goo.gl/maps/KM7Y6BcKmNJHxSNVA
-  course_guide: ''
+  course_guide: "/assets/uploads/texastechuniversitycodingacademy-Course-Guide-Master-Table-Content.png"
+  course_guide_img: "/assets/uploads/texastechcodingacademy-Course-Guide-Master-Table-Content.png"
+  announcement: ''
+  start_dates:
+  - location: Texas Tech University - Highland Lakes
+    course: Full Stack Web Development
+    days: Monday/Wednesday
+    date: June 1st
+    time: 6:30 - 9:00pm
+  linkedin: ''
+  preapplication_form_guid: '084862f2-c78d-4530-a519-959d5801138c'
+  instructors: []
+  team:
+  - name: Chris Lofton
+    title: CEO
+    email: clofton@austincodingacademy.com
+    bio: Chris Lofton graduated from Texas State University with a B.S. in Psychology
+      and began teaching middle school math in San Antonio, TX with Teach For America
+      and KIPP. Through these educational institutions, Chris experienced the power
+      of project-based learning and began to see a path towards improving our education
+      system. While working for the University of Texas, Chris studied with Austin
+      Coding Academy. After his class, he was hired as the Director of Academics,
+      managing all curriculum and instructors, and became the CEO in April of 2017.
+      Chris lives in Austin with his wife and 2-year-old daughter.
+    links:
+    - link: mailto:clofton@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/chris-lofton-83997431/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+  - name: Kevin Colten
+    title: CTO + Lead Instructor
+    email: kevin@austincodingacademy.com
+    bio: 'A life-learner and new technology enthusiast, Kevin works hard at the things
+      he loves: programming, teaching, and learning. As a software developer of more
+      than six years and a teacher of more than ten, he has combined his teaching
+      experience and passion for coding to help create an accessible, living, and
+      relevant curriculum aimed to open up the tech industry to those determined to
+      break in.'
+    links:
+    - link: mailto:kevin@austincodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://kevincolten.com
+      icon: fas fa-home
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/kevincolten/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+    - link: https://github.com/kevincolten
+      icon: fab fa-github
+      hex: "#303133"
+  - name: Jake Quintanilla
+    title: Campus Director
+    email: jake@austincodingacademy.com
+    bio: Jake is the Campus Director for Lubbock Coding Academy. Prior to helping
+      establish our program, Jake worked in the Advertising industry working with
+      clients such as Coca-Cola, Philips Electronics, Nike, MillerCoors, State Farm,
+      and multiple other brands on their digital marketing platforms. His experience
+      leans more towards Project/Product management with experience in Graphic/UX/UI
+      Design. Along with serving as Lubbock Coding Academy&#8217;s Campus Director,
+      Jake is working on a Dual-Graduate degree at Texas Tech University.
+    links:
+    - link: mailto:jake@lubbockcodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+  - name: Chris Troutman
+    title: Director of Operations
+    email: ctroutman@austincodingacademy.com
+    bio: Chris Troutman has worked professionally in digital publishing and web marketing
+      since 2009 at large corporate organizations, independent marketing firms, and
+      nonprofit state organizations. Specifically, he has experience as a digital
+      project manager and site admin, managing web and social media projects for multiple
+      fortune 500 companies as well as overseeing the content management of multiple
+      large public and client facing web sites. Troutman’s background is in journalism,
+      where he was an accomplished freelance writer, weekly local news journalist,
+      and eventually started the video blog BeerTownAustin and then the quarterly
+      print magazine, Austin Beer Guide. Troutman possesses a MFA in Mass Comm and
+      Journalism with an emphasis in new media.
+    links:
+    - link: mailto:ctroutman@lubbockcodingacademy.com
+      icon: fas fa-at
+      hex: "#303133"
+    - link: https://www.linkedin.com/in/christroutman/
+      icon: fab fa-linkedin
+      hex: "#0077b5"
+  tutors: []
+  logo: "/assets/uploads/logo-texastechcodingacademy.png"
+  seal: "/assets/uploads/logo-texastechcodingacademy-favicon.png"
+  acuity_scheduling_src: ''
 logos:
 - name: Indeed
   width: 721px
   height: 225px
-  src: "/assets/images/logo-indeed.png"
+  src: "/assets/uploads/logo-indeed.png"
 - name: Big Commerce
   width: 1853px
   height: 799px
-  src: "/assets/images/logo-big-commerce.png"
+  src: "/assets/uploads/logo-big-commerce.png"
 - name: Dell
   width: 1600px
   height: 1600px
-  src: "/assets/images/logo-dell.png"
+  src: "/assets/uploads/logo-dell.png"
 - name: Microsoft
   width: 1590px
   height: 561px
-  src: "/assets/images/logo-microsoft.png"
+  src: "/assets/uploads/logo-microsoft.png"
 - name: Facebook
   width: 1720px
   height: 360px
-  src: "/assets/images/logo-facebook.png"
+  src: "/assets/uploads/logo-facebook.png"
 - name: Walmart
   width: 1280px
   height: 320px
-  src: "/assets/images/logo-walmart.png"
+  src: "/assets/uploads/logo-walmart.png"
 - name: IBM
   width: 4460px
   height: 1940px
-  src: "/assets/images/logo-ibm.png"
+  src: "/assets/uploads/logo-ibm.png"
 - name: Dosh
   width: 645px
   height: 340px
-  src: "/assets/images/logo-dosh.png"
+  src: "/assets/uploads/logo-dosh.png"
 - name: Oracle
   width: 400px
   height: 400px
-  src: "/assets/images/logo-oracle.png"
+  src: "/assets/uploads/logo-oracle.png"
 - name: Adobe
   width: 256px
   height: 256px
-  src: "/assets/images/logo-adobe.png"
+  src: "/assets/uploads/logo-adobe.png"
 - name: Moove-It
   width: 960px
   height: 142px
-  src: "/assets/images/logo-mooveit.png"
+  src: "/assets/uploads/logo-mooveit.png"
 - name: Pluralsight
   width: 750px
   height: 450px
-  src: "/assets/images/logo-pluralsight.png"
+  src: "/assets/uploads/logo-pluralsight.png"
 - name: Flosports
   width: 1270px
   height: 145px
-  src: "/assets/images/logo-flosports.png"
+  src: "/assets/uploads/logo-flosports.png"
 - name: Cloud Imperium
   width: 400px
   height: 282px
-  src: "/assets/images/logo-cloud-imperium.png"
+  src: "/assets/uploads/logo-cloud-imperium.png"
 - name: Silvercar
   width: 768px
   height: 139px
-  src: "/assets/images/logo-silvercar.png"
+  src: "/assets/uploads/logo-silvercar.png"
 - name: VersaSuite
   width: 300px
   height: 127px
-  src: "/assets/images/logo-versasuite.png"
+  src: "/assets/uploads/logo-versasuite.png"
 - name: OneSpot
   width: 960px
   height: 560px
-  src: "/assets/images/logo-onespot.png"
+  src: "/assets/uploads/logo-onespot.png"
 - name: Onit
   width: 914px
   height: 408px
-  src: "/assets/images/logo-onit.png"
+  src: "/assets/uploads/logo-onit.png"
 
 ---

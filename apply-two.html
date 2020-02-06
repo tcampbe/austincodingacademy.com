@@ -8,7 +8,7 @@ redirect_from:
 head_title: Start Your Application | Apply Now at {{ school.name }}
 description: Apply now to learn to code with {{ school.name }} | Fill out
   your short application to get on the path to a career in web development.
-
+title: Application Step 2
 form_fields:
 - name: email
   label: ''
@@ -192,40 +192,6 @@ form_fields:
   small_width: "12"
   medium_width: "6"
   options: []
-- name: how_did_you_hear_about_austin_coding_academy
-  label: How did you hear about Austin Coding Academy?
-  description: ''
-  type: select
-  value: ''
-  placeholder: Select your answer
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options:
-  - value: 'Facebook'
-    label: 'Facebook'
-  - value: 'Instagram'
-    label: 'Instagram'
-  - value: 'Twitter'
-    label: 'Twitter'
-  - value: 'LinkedIn'
-    label: 'LinkedIn'
-  - value: 'Friend / Family'
-    label: 'Friend / Family'
-  - value: 'Search engine'
-    label: 'Search engine'
-  - value: '{{ school.name }} event'
-    label: '{{ school.name }} event'
-  - value: '{{ school.name }} faculty / staff'
-    label: '{{ school.name }} faculty / staff'
-  - value: '{{ school.name }} student / alumni'
-    label: '{{ school.name }} student / alumni'
-  - value: 'News (TV, article)'
-    label: 'News (TV, article)'
-  - value: 'Radio'
-    label: 'Radio'
-  - value: 'Other'
-    label: 'Other'
 - name: when_would_you_like_to_begin_class
   label: When would you like to begin class?
   description: ''
@@ -246,7 +212,7 @@ form_fields:
     label: '3 - 6 Months'
   - value: '> 6 Months'
     label: '> 6 Months'
-- name: do-you-own-a-laptop
+- name: do_you_own_a_laptop
   label: Do you own a laptop?
   description: ''
   type: select
@@ -337,7 +303,7 @@ schools:
   form_fields: []
 - key: lubbockcodingacademy
   form_fields: []
-- key: texastechuniversitycodingacademy
+- key: texastechcodingacademy
   form_fields: []
 
 ---
@@ -368,15 +334,14 @@ schools:
       Start by telling us a little bit about yourself
     </h5>
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.application_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.application_form_guid }}"
       method="POST"
       target="_top"
     >
       <div class="row p-5">
         {% assign about_fields = page.form_fields %}
-        {% assign redirect_url = school.url | append: "/scheduling" %}
+        {% assign redirect_url = school.url | append: "/apply/scheduling" %}
         {% include fields.html fields=about_fields redirect_url=redirect_url %}
-
         <div class="col-12 my-5">
           <h2 class="text-center font-weight-bold mb-5">
             Education &amp; Work Experience
@@ -398,5 +363,3 @@ schools:
     </form>
   </div>
 </div>
-
-{% include form-connect-script.html %}

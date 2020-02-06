@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: "/courses/web-development/"
+title: Courses - Web Development
 amp_components:
 - amp-carousel
 - amp-fx
@@ -12,11 +13,6 @@ redirect_from:
 - "/javascript/"
 - "/csharp/"
 hero: js
-phone: 5129569278
-banner:
-  message: "<a class='promo-link' href='tel:{{ page.phone | liquify }}'>Call us at 512-956-9278</a> to learn more about our upcoming Full Stack Web Development Program!"
-  bg_color: 'blue'
-  text_color: 'white'
 hero_heading: Full Stack Web Development
 hero_text: Learn the most popular languages for making websites, web apps, games,
   animations, and mobile applications. In this track you'll learn front-end and back-end
@@ -28,66 +24,66 @@ overview:
     career transition while continuing to support yourself. Led by instructors who
     work as professional web developers, classes focus on in-depth, practical projects
     that prepare you for success in your new career.
-  img_src: "/assets/images/cap-factory-web-dev.jpg"
+  img_src: "/assets/uploads/cap-factory-web-dev.jpg"
 - title: Outside of Class
   text: Students are expected to utilize their e-textbook, unlimited tutoring, and
     organized group study sessions to practice course material outside of class –
     part of our flipped classroom approach. By studying outside of class, students
     can use class time to build their projects and get feedback from their instructor.
-  img_src: "/assets/images/cap-factory-web-dev-2.jpg"
+  img_src: "/assets/uploads/cap-factory-web-dev-2.jpg"
 - title: Job Readiness
   odd: true
   text: "{{ school.name }}’s Full Stack Web Development Track is designed to take
     students from no experience to job ready in under a year. After graduating, students
     continue to receive support in finding their first job from our Job Placement
     Course, Director of Job Placement, and various hiring partners."
-  img_src: "/assets/images/cap-factory-web-dev-3.jpg"
+  img_src: "/assets/uploads/cap-factory-web-dev-3.jpg"
 job_placement:
   stats:
   - stat: 89%
-    descript: of {{ school.name }} graduates are employed as web developers within
+    descript: of our graduates are employed as web developers within
       6 months.
   - stat: "$62,247"
-    descript: The average salary for an entry level web developer in Austin, TX.
+    descript: The average salary for an entry level web developer in Texas.
   value_props:
   - heading: Practical Curriculum
     text: Our courses are designed to teach you relevant skills through practical
       application. Learn in-demand technologies by building real-life projects with
       feedback from professional developers.
-    img_src: icon-curriculum.png
+    img_src: /assets/uploads/icon-curriculum.png
     img_width: 90px
   - heading: Director of Job Placement
     text: Receive one-on-one attention from our Director of Job Placement, who provides
       resume feedback, sets up interviews and events with companies, helps with applying,
       and more.
-    img_src: icon-director-of-placement.png
+    img_src: /assets/uploads/icon-director-of-placement.png
     img_width: 90px
   - heading: Job Placement Course
     text: Hone your online presence, resume, and interview skills in our 4-week job
       placement course. This course is led by both a professional developer and a
       recruiter and is free to all {{ school.name }} graduates.
-    img_src: icon-grad-course.png
+    img_src: /assets/uploads/icon-grad-course.png
     img_width: 90px
   - heading: Hiring Partnerships
     text: "{{ school.name }} maintains working relationships with a host of local
       companies that depend on our graduates to fill open web development positions."
-    img_src: icon-jobs.png
+    img_src: /assets/uploads/icon-jobs.png
     img_width: 90px
 successes:
 - name: Luke Stenis
   title: Analytics Implementation Engineer
   company: Pluralsight
-  img_src: "/assets/images/luke-stenis-headshot.jpeg"
+  img_src: "/assets/uploads/luke-stenis-headshot.jpeg"
   learn_url: https://austincodingacademy.com/blog/alumni-spotlight/luke-stenis/why-i-left-marketing-to-learn-coding/
 - name: Lillian Situ
   title: Software Engineer
   company: data.world
-  img_src: "/assets/images/lillian-situ-headshot.jpeg"
+  img_src: "/assets/uploads/lillian-situ-headshot.jpeg"
   learn_url: https://austincodingacademy.com/blog/student-highlight/lillian-situ/
 - name: Greg Swan
   title: Web Application Developer
   company: OpenSymmetry
-  img_src: "/assets/images/greg-swan-headshot.jpeg"
+  img_src: "/assets/uploads/greg-swan-headshot.jpeg"
   learn_url: https://austincodingacademy.com/blog/student-highlight/greg-swan/
 - name: Student Brian
   title: Software Engineer
@@ -109,32 +105,32 @@ features:
   text: These languages and frameworks are in the top technologies used, with JavaScript
     being the world’s most-used programming language, with nearly 70% of the world’s
     developers using JS in their work according to Stack Overflow.
-  img_src: icon-javascript.png
+  img_src: /assets/uploads/icon-javascript.png
   img_width: 65px
 - heading: Design Engaging, Responsive Front-Ends
   text: 'Discover the power of JavaScript: a language used by nearly every website
     on the internet to display, animate, and make webpages come to life.'
-  img_src: icon-frontend.png
+  img_src: /assets/uploads/icon-frontend.png
   img_width: 90px
 - heading: Use {{ school.backend }} to Build Powerful Back-Ends
   text: Learn how to collect and process data using {{ school.backend }} – and also
     how to manage databases with SQL.
-  img_src: icon-databases.png
+  img_src: /assets/uploads/icon-databases.png
   img_width: 90px
 - heading: Tap Into The Tech Scene
   text: As the most in-demand language for small to mid-level companies, {{ school.backend
     }} and Javascript powers the thriving start-up scene, with new jobs opportunities
     arising daily.
-  img_src: icon-jobs.png
+  img_src: /assets/uploads/icon-jobs.png
   img_width: 90px
 schools:
 - key: austincodingacademy
-  next_start_date: Tuesday, January 14th
+  next_start_date: Monday, February 17th
   backend: Node.js/Express.js
   courses:
   - code: Web 101
     sections:
-    - start: May 29, 2019
+    - start: May 29, 2019klksldkfs
       end: July 24, 2019
       weekdays: Mondays &amp; Wednesdays
       time: 6:30pm - 9:00pm
@@ -332,7 +328,7 @@ schools:
     {{ page.hero_text | liquify }}
   </p>
   <div class="d-flex mt-4 align-items-center justify-content-center">
-    {% if school.course_guide %}
+    {% if school.course_guide != '' %}
     <div class="mr-2">
       <!-- htmllint preset="none" -->
       <a
@@ -340,6 +336,7 @@ schools:
         on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
+        href="#"
       >
       <!-- htmllint preset="$previous" -->
         Course Guide
@@ -385,8 +382,8 @@ schools:
                 width="{{ item.img_width }}"
                 height="80px"
                 layout="fixed"
-                src="/assets/images/{{ item.img_src | liquify }}"
-                alt=""
+                src="{{ item.img_src | liquify }}"
+                alt="alt img {{ forloop.index }}"
               ></amp-img>
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
@@ -514,7 +511,7 @@ schools:
       <!-- course cards end -->
     </div>
   </section>
-  {% if school.course_guide %}
+  {% if school.course_guide != '' %}
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid {{ page.hero | liquify }}-gradient text-white py-8">
   <!-- htmllint preset="$previous" -->
@@ -558,8 +555,8 @@ schools:
                 width="{{ prop.img_width }}"
                 height="80px"
                 layout="fixed"
-                src="/assets/images/{{ prop.img_src | liquify }}"
-                alt=""
+                src="{{ prop.img_src | liquify }}"
+                alt="alt img {{ forloop.index }}"
               ></amp-img>
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
@@ -711,7 +708,7 @@ schools:
         "name": "{{ school.name }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ school.url }}/assets/images/logo-{{ site.key }}.png"
+          "url": "{{ school.url | append: school.logo }}"
         }
       }
     }

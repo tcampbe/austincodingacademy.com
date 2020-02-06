@@ -33,7 +33,7 @@
       role="dialog"
       tabindex="-1"
     >
-      {% if item.links %}
+      {% if item.links.size > 0 %}
         <span class="h5 text-white bg-dark py-1 mb-2" tabindex="0">
           {{ item.title | liquify }}
         </span>
@@ -90,45 +90,49 @@
 
 <!-- htmllint preset="none" -->
 <header id="header"
-  class="fixed-top u-header--navbar-bg w-100"
+  class="u-header--navbar-bg w-100 z-20"
 >
-  <div id="header-background" class="bg-primary-dark d-block position-absolute w-100 h-100"></div>
-  <div class="u-header__section bg-primary-dark py-2">
+  <div class="py-1 bg-primary-dark border-bottom border-white">
+    <div class="container d-flex justify-content-end">
+      {% include phone.html a_class="text-white" icon_class="fas fa-phone text-white" %}
+      <a class="text-white ml-3" target="_blank" rel="noopener" href="{{ school.facebook }}">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a class="text-white ml-3" target="_blank" rel="noopener" href="{{ school.twitter }}">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="text-white ml-3" target="_blank" rel="noopener" href="{{ school.instagram }}">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+  <div class="u-header__section bg-textured py-2">
   <!-- htmllint preset="$previous" -->
-    <div class="container px-md-0 px-lg-3">
+    <div class="container-fluid px-md-0 px-lg-1">
       <!-- Nav -->
-      <nav
-        class="navbar navbar-expand-lg u-header__navbar u-header__navbar--no-space"
-      >
-        <!-- Logo -->
-        <a
-          class="navbar-logo d-flex"
-          href="/"
-          aria-label="Logo"
-        >
-          <!-- htmllint preset="none" -->
-          <amp-img
-            width="66px"
-            height="66px"
-            layout="fixed"
-            alt="{{ school.name }} Home"
-            src="/assets/images/logo-{{ site.key }}-white.png"
-            class="w-100"
-          ></amp-img>
-          <!-- htmllint preset="$previous" -->
-          <span class="sr-only">{{ school.name }} Logo</span>
-        </a>
-        <!-- End Logo -->
-        <!-- Responsive Toggle Button -->
-        <button
-          class="btn btn-link text-white d-flex justify-content-end d-lg-none"
-          on="tap:sidebar.open"
-          tabindex="0"
-          role="button"
-        >
-          <i class="fas fa-bars fa-2x" aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
-        </button>
-        <!-- End Responsive Toggle Button -->
+      <nav class="navbar navbar-expand-lg u-header__navbar u-header__navbar--no-space flex-row flex-wrap container">
+        <div class="flex-grow-1 d-flex justify-content-between">
+          <div class="flex-grow-1">
+            <!-- Logo -->
+            <a class="navbar-logo flex-grow-1" href="/" aria-label="Logo">
+              <!-- htmllint preset="none" -->
+              <amp-img layout="{% if site.key == 'circlecoding' %}responsive{% else %}fixed{% endif %}" alt="{{ school.name }} Home" src="{{ school.logo }}" height="90"></amp-img>
+              <!-- htmllint preset="$previous" -->
+              <span class="sr-only">{{ school.name }} Logo</span>
+            </a>
+            <!-- End Logo -->
+          </div>
+
+          <!-- Responsive Toggle Button -->
+          <div class="d-flex flex-grow-0 align-items-center">
+            <button class="btn btn-link d-flex text-white bg-brand-primary-dark justify-content-end d-lg-none"
+              on="tap:sidebar.open" tabindex="0" role="button">
+              <i class="fas fa-bars fa-2x" aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
+            </button>
+          </div>
+
+          <!-- End Responsive Toggle Button -->
+        </div>
 
         <!-- Navigation -->
         <div id="nav-bar"
@@ -137,7 +141,7 @@
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
             {% for item in navigation %}
               <li class="nav-item u-header__nav-item ml-5 pb-2">
-              {% if item.links %}
+              {% if item.links.size > 0 %}
                 <span class="text-white hover-white">
                   {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
                 </span>
@@ -210,7 +214,9 @@
     </div>
   </div>
 </header>
-{% if page.banner.message.size > 0 %}
-  {% include banner.html %}
+{% if school.announcement.size > 0 %}
+  <div class="text-center py-1 bg-primary-light">
+    <span class="text-white">{{ school.announcement | liquify }}</span>
+  </div>
 {% endif %}
 <!-- ========== END HEADER ========== -->

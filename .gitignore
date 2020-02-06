@@ -18,3 +18,5 @@ _data/events.yml
 _data/tutors.yml
 *.map
 *.webp
+_configs
+tmp

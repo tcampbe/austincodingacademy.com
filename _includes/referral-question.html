@@ -18,17 +18,21 @@
 <!-- Input -->
 <div class="form-group">
   <!-- htmllint preset="none" -->
-  <label class="form-label" for="how_did_you_hear_about_us">
+  <label class="form-label" for="how_did_you_hear_about_us_text">
   <!-- htmllint preset="$previous" -->
     How did you hear about us? <span class="text-red-a">*</span>
   </label>
 
   <!-- htmllint preset="none" -->
-  <select id="how_did_you_hear_about_us" name="how_did_you_hear_about_us" class="form-control">
+  <select id="how_did_you_hear_about_us_text" name="how_did_you_hear_about_us_text" class="form-control" required>
   <!-- htmllint preset="$previous" -->
 
     <option value="" disabled selected>
       Select your answer
+    </option>
+
+    <option value="Google">
+      Google
     </option>
 
     <option value="Facebook">
@@ -37,6 +41,10 @@
 
     <option value="Instagram">
       Instagram
+    </option>
+
+    <option value="Snapchat">
+      Snapchat
     </option>
 
     <option value="Twitter">
@@ -59,16 +67,16 @@
       Search engine
     </option>
 
-    <option value="{{ school.name }} event">
-      {{ school.name }} event
+    <option value="Event">
+      Event
     </option>
 
-    <option value="{{ school.name }} faculty / staff">
-      {{ school.name }} faculty / staff
+    <option value="Faculty / Staff">
+      Faculty / Staff
     </option>
 
-    <option value="{{ school.name }} student / alumni">
-      {{ school.name }} student / alumni
+    <option value="Student / Alumni">
+      Student / Alumni
     </option>
 
     <option value="News (TV, article)">

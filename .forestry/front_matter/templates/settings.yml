@@ -11,6 +11,26 @@ fields:
 - type: number
   name: hubspot_portal_id
   label: hubspot_portal_id
+- name: google_tag_manager
+  type: text
+  config:
+    required: false
+  label: google_tag_manager
+- name: google_tag_manager_amp
+  type: text
+  config:
+    required: false
+  label: google_tag_manager_amp
+- name: facebook_pixel
+  type: text
+  config:
+    required: false
+  label: facebook_pixel
+- name: linkedin_pixel
+  type: text
+  config:
+    required: false
+  label: linkedin_pixel
 - type: text
   name: acuity_scheduling_src
   label: acuity_scheduling_src
@@ -35,9 +55,12 @@ fields:
 - type: text
   name: assignment_form_guid
   label: assignment_form_guid
-- type: text
-  name: head_title
-  label: head_title
+- name: pdf_viewer_url
+  type: text
+  config:
+    required: false
+  label: pdf_viewer_url
+  hidden: true
 - type: textarea
   name: description
   label: description
@@ -52,6 +75,16 @@ fields:
     - type: text
       name: title
       label: title
+    - name: url
+      type: text
+      config:
+        required: false
+      label: url
+    - name: class
+      type: text
+      config:
+        required: false
+      label: class
   - type: field_group_list
     name: footer
     label: footer
@@ -101,21 +134,12 @@ fields:
   - type: text
     name: key
     label: key
+  - type: boolean
+    name: active
+    label: active
   - type: text
     name: name
     label: name
-  - type: text
-    name: primary_light_color
-    label: primary_light_color
-  - type: text
-    name: primary_dark_color
-    label: primary_dark_color
-  - type: text
-    name: secondary_light_color
-    label: secondary_light_color
-  - type: text
-    name: secondary_dark_color
-    label: secondary_dark_color
   - type: field_group
     name: navigation
     label: navigation
@@ -127,30 +151,80 @@ fields:
       - type: text
         name: title
         label: title
+      - name: url
+        type: text
+        config:
+          required: false
+        label: url
+      - name: class
+        type: text
+        config:
+          required: false
+        label: class
+    - name: footer
+      type: field_group_list
+      fields:
+      - name: title
+        type: text
+        config:
+          required: false
+        label: title
+      - name: url
+        type: text
+        config:
+          required: false
+        label: url
+      config:
+        min: 
+        max: 
+        labelField: 
+      label: footer
   - type: list
     name: tracks
     label: tracks
   - type: text
     name: url
     label: url
+  - name: logo
+    type: file
+    config:
+      maxSize: 250
+    label: logo
+  - name: seal
+    type: file
+    config:
+      maxSize: 250
+    label: seal
   - type: number
     name: phone
     label: phone
+    config:
+      min: '10000000000'
+      max: ''
+      step: 
   - type: number
     name: callrail_company_id
     label: callrail_company_id
   - type: text
-    name: google_tag_manager
-    label: google_tag_manager
+    name: google_analytics
+    label: google_analytics
   - type: text
-    name: google_tag_manager_amp
-    label: google_tag_manager_amp
+    name: reddit_pixel
+    label: reddit_pixel
+  - type: text
+    name: eventbrite_id
+    label: eventbrite_id
   - type: text
     name: contact_form_guid
     label: contact_form_guid
   - type: text
     name: cta_form_guid
     label: cta_form_guid
+  - name: preapplication_form_guid
+    type: text
+    config:
+      required: false
+    label: preapplication_form_guid
   - type: text
     name: course_guide_form_guid
     label: course_guide_form_guid
@@ -163,6 +237,16 @@ fields:
   - type: text
     name: eventbrite
     label: eventbrite
+  - name: acuity_scheduling_src
+    type: text
+    config:
+      required: false
+    label: acuity_scheduling_src
+  - name: linkedin
+    type: text
+    config:
+      required: false
+    label: linkedin
   - type: text
     name: facebook
     label: facebook
@@ -172,6 +256,11 @@ fields:
   - type: file
     name: course_guide
     label: course_guide
+  - name: course_guide_img
+    type: file
+    config:
+      maxSize: 250
+    label: course_guide_img
   - type: field_group_list
     name: locations
     label: locations
@@ -194,6 +283,153 @@ fields:
     - type: text
       name: url
       label: url
+  - name: announcement
+    type: text
+    config:
+      required: false
+    label: announcement
+  - name: start_dates
+    type: field_group_list
+    fields:
+    - name: location
+      type: text
+      config:
+        required: false
+      label: location
+    - name: course
+      type: text
+      config:
+        required: false
+      label: course
+    - name: date
+      type: text
+      config:
+        required: false
+      label: date
+    - name: days
+      type: text
+      config:
+        required: false
+      label: days
+    - name: time
+      type: text
+      config:
+        required: false
+      label: time
+    config:
+      min: 
+      max: 
+      labelField: date
+    label: start_dates
+  - name: primary_light_color
+    type: color
+    label: primary_light_color
+    config:
+      required: false
+      color_format: RGB
+  - name: primary_dark_color
+    type: color
+    label: primary_dark_color
+    config:
+      required: false
+      color_format: RGB
+  - name: secondary_light_color
+    type: color
+    label: secondary_light_color
+    config:
+      required: false
+      color_format: RGB
+  - name: secondary_dark_color
+    type: color
+    label: secondary_dark_color
+    config:
+      required: false
+      color_format: RGB
+  - name: hero_overlay_color
+    type: color
+    label: hero_overlay_color
+    config:
+      required: false
+      color_format: RGB
+  - type: field_group_list
+    name: instructors
+    label: instructors
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: gravatar_email
+      label: gravatar_email
+    - type: text
+      name: linkedin
+      label: linkedin
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: campus
+      label: campus
+    - type: textarea
+      name: bio
+      label: bio
+  - type: field_group_list
+    name: team
+    label: team
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: email
+      label: email
+    - type: textarea
+      name: bio
+      label: bio
+    - type: field_group_list
+      name: links
+      label: links
+      fields:
+      - type: text
+        name: link
+        label: link
+      - type: text
+        name: icon
+        label: icon
+      - type: text
+        name: hex
+        label: hex
+  - type: field_group_list
+    name: tutors
+    label: tutors
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: id
+      label: id
+    - type: list
+      name: skills
+      label: skills
+    - type: text
+      name: email
+      label: email
+    - type: list
+      name: location
+      label: location
+    - type: text
+      name: calendar
+      label: calendar
+    - type: text
+      name: virtual
+      label: virtual
+    - type: text
+      name: rocketchat
+      label: rocketchat
 - type: field_group_list
   name: logos
   label: logos

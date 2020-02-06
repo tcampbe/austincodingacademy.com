@@ -19,8 +19,7 @@
 <meta property="og:title" content="{{ page.head_title | default: settings.head_title | liquify | liquify }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ school.url }}{{ page.url }}">
-{% assign default_image = '/assets/images/logo-' | append: site.key | append: '.png' %}
-{% assign image = page.img | default: default_image %}
+{% assign image = page.img | default: school.logo %}
 <meta property="og:image" content="{{ school.url | append: image }}">
 <meta property="og:description" content="{{ page.description | default: settings.description | liquify }}">
 <meta property="og:site_name" content="{{ school.name }}" />

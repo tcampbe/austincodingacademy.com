@@ -50,7 +50,7 @@
               {% for item in socials %}
                 <!-- htmllint preset="none" -->
                 {% if school[item] %}
-                <a href="{{ school[item] | liquify }}">
+                <a href="{{ school[item] | liquify }}" target="_blank" rel="noopener">
                   <span class="text-white hover-white display-7 fab fa-{{ item | liquify }} mr-4" aria-hidden="true">
                     <span class="sr-only">Link to our {{ item | liquify }}</span>
                   </span>
@@ -87,7 +87,7 @@
     </div>
     <div class="text-center border-top bg-primary-dark py-3 w-100">
       <p class="small text-white-70 mb-0">
-        © {{ school.name }} 2019. All rights reserved.<br/>
+        Copyright © {{ site.time | date: '%Y' }}
         <a class="text-white" href="https://austincodingacademy.com/forum/tos">Terms of Service</a> | <a class="text-white" href="https://austincodingacademy.com/forum/privacy">Privacy Policy</a>
       </p>
     </div>
@@ -101,10 +101,10 @@
     "name": "{{ school.name }}",
     "url": "{{ school.url }}",
     "priceRange": "$2990",
-    "logo": "{{ school.url }}/assets/images/logo-{{ site.key }}.png",
+    "logo": "{{ school.url | append: school.logo }}",
     "image": {
       "@type": "ImageObject",
-      "url": "{{ school.url }}/assets/images/header-index.jpg"
+      "url": "{{ school.url }}/assets/uploads/header-index.jpg"
     },
     "telephone": "{{ school.phone | phone_number }}",
     "address": [

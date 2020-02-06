@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation, austincodingacademy ] # don't touch
+categories: [ hire, austincodingacademy ] # don't touch
 
 fullname: Aaron Jacob Gonzalez
 jobtitle: Full Stack Web Developer

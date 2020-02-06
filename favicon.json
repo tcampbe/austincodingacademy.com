@@ -18,7 +18,7 @@
   {% endfor %}
 {% endif %}
 {
-  "masterPicture": "assets/images/logo-{{site.key}}-favicon.png",
+  "masterPicture": "{{ school.seal | replace_first: "/", "" }}",
   "iconsPath": "/assets/favicons/",
   "design": {
     "ios": {

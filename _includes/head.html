@@ -18,7 +18,7 @@
 <!-- htmllint preset="$previous" -->
 <meta charset="utf-8" />
 <title>
-  {{ page.head_title | default: settings.head_title | liquify }}
+  {{ page.head_title | default: page.title | liquify }}
 </title>
 
 <meta
@@ -46,8 +46,10 @@
     --primary-dark: {{ school.primary_dark_color | replace: 'rgb(', '' | replace: ')', '' }};
     --secondary-light: {{ school.secondary_light_color | replace: 'rgb(', '' | replace: ')', '' }};
     --secondary-dark: {{ school.secondary_dark_color | replace: 'rgb(', '' | replace: ')', '' }};
+    --hero-overlay: {{ school.hero_overlay_color | replace: 'rgb(', '' | replace: ')', '' }};
   }
-  {% include css.html %}
+  {% capture css %}{% file_exists _includes/css.html %}{% endcapture %}
+  {% if css == "true" %}{% include css.html %}{% endif %}
 </style>
 <!-- htmllint preset="$previous" -->
 
