@@ -112,11 +112,11 @@
       <!-- Nav -->
       <nav class="navbar navbar-expand-lg u-header__navbar u-header__navbar--no-space flex-row flex-wrap container">
         <div class="flex-grow-1 d-flex justify-content-between">
-          <div style="max-width: 350px; max-height: 90px;" class="flex-grow-1">
+          <div class="flex-grow-1">
             <!-- Logo -->
             <a class="navbar-logo flex-grow-1" href="/" aria-label="Logo">
               <!-- htmllint preset="none" -->
-              <amp-img layout="fixed" alt="{{ school.name }} Home" src="{{ school.logo }}" height="90"></amp-img>
+              <amp-img layout="{% if site.key == 'circlecoding' %}responsive{% else %}fixed{% endif %}" alt="{{ school.name }} Home" src="{{ school.logo }}" height="90"></amp-img>
               <!-- htmllint preset="$previous" -->
               <span class="sr-only">{{ school.name }} Logo</span>
             </a>

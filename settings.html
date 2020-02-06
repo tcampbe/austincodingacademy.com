@@ -24,19 +24,15 @@ navigation:
   - title: Courses
     url: ''
     class: ''
-    links: []
   - title: Tuition
     url: "/tuition/"
     class: ''
-    links: []
   - title: For Companies
     url: "/enterprise-training/"
     class: ''
-    links: []
   - title: Events
     url: "/events/"
     class: ''
-    links: []
   - title: About Us
     links:
     - title: FAQ
@@ -54,11 +50,9 @@ navigation:
   - title: Student Portal
     url: https://campus.{{ site.key }}.com
     class: ''
-    links: []
   - title: Apply
     url: "/apply/"
     class: btn btn-round text-white cta-gradient py-1 px-6
-    links: []
   footer:
   - title: Hack Overflow
     url: https://austincodingacademy.com/forum
@@ -177,19 +171,14 @@ schools:
     - title: Courses
       url: ''
       class: ''
-      links: []
     - title: Tuition
       url: "/tuition/"
       class: ''
-      links: []
     - title: Events
       url: "/events/"
       class: ''
-      links: []
     - title: About Us
       links:
-      - title: FAQ
-        url: "/faq/"
       - title: Contact Us
         url: "/contact/"
       url: ''
@@ -197,15 +186,14 @@ schools:
     - title: Apply
       url: "/apply/"
       class: btn btn-round text-white cta-gradient py-1 px-6
-      links: []
     footer:
-    - title: FAQ
-      url: "/faq/"
     - title: Becoming an Instructor
       url: "/instructor-apply/"
     - title: Upcoming Events
       url: "/events/"
-  active: false
+    - title: Student Referral
+      url: "/new-student-referral/"
+  active: true
   tracks:
   - Full Stack Web Development
   url: https://circlecoding.com
@@ -214,7 +202,7 @@ schools:
   eventbrite_id: "28751871049"
   google_analytics: UA-68821515-9
   reddit_pixel: t2_5cddgwie
-  contact_form_guid: 499a5d5c-d37e-4f14-a948-6094365bdb1f
+  contact_form_guid: aeb56290-0aaf-4010-a67b-08c29aa51e8f
   cta_form_guid: ''
   preapplication_form_guid: a197ed88-4805-4fb4-9c19-0d12c0dfe5a1
   course_guide_form_guid: 91791c9a-37d2-4d8f-b880-730ceada0335
@@ -224,7 +212,7 @@ schools:
   linkedin: ''
   facebook: https://www.facebook.com/CircleCodingAcademy/
   instagram: https://www.instagram.com/circlecodingacademy/
-  course_guide: ''
+  course_guide: "/assets/uploads/CCA_CourseGuide_2020-1.pdf"
   locations:
   - name: CENTRL Office Downtown Dallas
     street: '750 North St. Paul Street Suite #200'
@@ -246,6 +234,22 @@ schools:
   hero_overlay_color: rgb(0, 0, 0)
   instructors: []
   team:
+  - name: Chris Lofton
+    title: CEO
+    email: clofton@circleeducation.com
+    bio: Chris Lofton graduated from Texas State University with a B.S. in Psychology
+      and began teaching middle school math in San Antonio, TX with Teach For America
+      and KIPP. Through these educational institutions, Chris experienced the power
+      of project-based learning and began to see a path towards improving our education
+      system. While working for the University of Texas, Chris studied with Austin
+      Coding Academy (Now Circle Coding Academy). After his class, he was hired as
+      the Director of Academics, managing all curriculum and instructors, and became
+      the CEO in April of 2017. Chris lives in Austin with his wife and 2-year-old
+      daughter.
+    links:
+    - link: https://www.linkedin.com/in/chris-lofton-83997431/
+      icon: ''
+      hex: ''
   - name: Dan Cumming
     title: Director of Partnerships
     email: dan@circlecoding.com
@@ -262,7 +266,7 @@ schools:
   tutors: []
   logo: "/assets/uploads/CCA_Logo_White@3x.png"
   seal: "/assets/uploads/cca_seal.png"
-  course_guide_img: ''
+  course_guide_img: "/assets/uploads/CCA Course Guide preview.png"
   acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=12870386
 - key: austincodingacademy
   active: true
@@ -280,15 +284,12 @@ schools:
     - title: Courses
       url: ''
       class: ''
-      links: []
     - title: Tuition
       url: "/tuition/"
       class: ''
-      links: []
     - title: Events
       url: "/events/"
       class: ''
-      links: []
     - title: About Us
       links:
       - title: For Companies
@@ -308,11 +309,9 @@ schools:
     - title: Student Portal
       url: https://campus.{{ site.key }}.com
       class: ''
-      links: []
     - title: Apply
       url: "/apply/"
       class: btn btn-round text-white cta-gradient py-1 px-6
-      links: []
     footer: []
   tracks:
   - Full Stack Web Development
@@ -905,6 +904,16 @@ schools:
       Computer Science department at TTU.
     gravatar_email: ''
   tutors:
+  - name: Ari Cohen
+    id: "12986490"
+    skills:
+    - Mentor
+    email: 'scohe001@ucr.edu '
+    location:
+    - southPlains
+    calendar: https://acaappointment.as.me/?appointmentType=12986490
+    virtual: https://meet.google.com/hno-vbsf-qqs
+    rocketchat: "@Ari-Cohen"
   - name: Amy Troutman
     id: "12815678"
     skills:
@@ -1058,19 +1067,15 @@ schools:
     - title: Courses
       url: ''
       class: ''
-      links: []
     - title: Events
       url: "/events/"
       class: ''
-      links: []
     - title: Contact Us
       url: "/contact/"
       class: ''
-      links: []
     - title: Apply
       url: "/apply/"
       class: btn btn-round text-white cta-gradient py-1 px-6
-      links: []
     footer: []
   tracks:
   - Full Stack Web Development
@@ -1097,7 +1102,12 @@ schools:
   course_guide: "/assets/uploads/texastechuniversitycodingacademy-Course-Guide-Master-Table-Content.png"
   course_guide_img: "/assets/uploads/texastechcodingacademy-Course-Guide-Master-Table-Content.png"
   announcement: ''
-  start_dates: []
+  start_dates:
+  - location: Texas Tech University - Highland Lakes
+    course: Full Stack Web Development
+    days: Monday/Wednesday
+    date: June 1st
+    time: 6:30 - 9:00pm
   linkedin: ''
   preapplication_form_guid: '084862f2-c78d-4530-a519-959d5801138c'
   instructors: []
