@@ -8,7 +8,7 @@ description: Zollege Public Benefit Corporation has announced the acquisition of
 created_at: 2020-02-07 09:52:59 -0600
 updated_at: 2020-02-07 10:00:00 -0600
 categories:
-- Press Release
+- press-release
 excerpt: 'Austin, TX – January 2020 –  Zollege Public Benefit Corporation has announced
   the acquisition of Austin Coding Academy, one of the largest coding bootcamps in
   the state of Texas and a leader in technology education. '
