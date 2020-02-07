@@ -14,8 +14,8 @@ excerpt: 'Austin, TX – January 2020 –  Zollege Public Benefit Corporation ha
   the state of Texas and a leader in technology education. '
 redirect_from: []
 permalink: "/blog/zollege-pbc-acquires-austin-coding-academy"
-author_name: ''
-author_email: ''
+author_name: Austin Coding Academy
+author_email: info@austincodingacademy.com
 school_keys:
 - lubbockcodingacademy
 - circlecoding
