@@ -430,6 +430,11 @@ fields:
     - type: text
       name: rocketchat
       label: rocketchat
+    - name: gravatar_email
+      type: text
+      config:
+        required: false
+      label: gravatar_email
 - type: field_group_list
   name: logos
   label: logos
