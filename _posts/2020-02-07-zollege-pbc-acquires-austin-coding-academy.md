@@ -17,9 +17,9 @@ permalink: "/blog/press-release/zollege-pbc-acquires-austin-coding-academy/"
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
-- lubbockcodingacademy
-- circlecoding
 - austincodingacademy
+- circlecoding
+- lubbockcodingacademy
 img: "/assets/uploads/0220_Zollege_YouTubeArt.jpg"
 
 ---
