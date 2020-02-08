@@ -6,12 +6,13 @@ hubspot_portal_id: 4009818
 google_tag_manager: GTM-TBH7GK
 google_tag_manager_amp: GTM-KZ9XHND
 facebook_pixel: "656599271106549"
+stripe_key: "pk_live_jAVWqwlb5iFbTQwoZvRAhZAn"
 instructor_form_guid: 83193d74-f3de-4679-91db-18ba46864fef
 corporate_trainings_form_guid: a000aab9-9870-4578-a496-2649ea46fb7e
 corporate_form_guid: b8fb52b4-28de-4133-920b-7f587724bb3d
 assignment_form_guid: 60651a89-8f76-427f-aaf6-13263bfd9c6b
 acuity_scheduling_src: ''
-preapplication_form_guid: 
+preapplication_form_guid:
 application_form_guid: ''
 diversity_form_guid: ''
 linkedin_pixel: "1650922"
@@ -159,10 +160,10 @@ courses:
 tracks:
 - name: Full Stack Web Development
   category: Programs
-  url: "/courses/web-development"
+  url: "/courses/web-development/"
 - name: WordPress Fundamentals
   category: Individual Courses
-  url: "/courses/wordpress-fundamentals"
+  url: "/courses/wordpress-fundamentals/"
 schools:
 - key: circlecoding
   name: Circle Coding Academy
@@ -197,7 +198,8 @@ schools:
       url: "/new-student-referral/"
   active: true
   tracks:
-  - Full Stack Web Development
+  - name: Full Stack Web Development
+    stripe_product_sku: sku_Gh15pSUXsadQ2f
   url: https://circlecoding.com
   phone: 12142471477
   callrail_company_id: 946317831
@@ -316,8 +318,10 @@ schools:
       class: btn btn-round text-white cta-gradient py-1 px-6
     footer: []
   tracks:
-  - Full Stack Web Development
-  - WordPress Fundamentals
+  - name: Full Stack Web Development
+    stripe_product_sku:
+  - name: WordPress Fundamentals
+    stripe_product_sku: sku_GehsFmoR7syM1v
   url: https://austincodingacademy.com
   phone: 15128278498
   callrail_company_id: 915131377
@@ -598,7 +602,7 @@ schools:
     - Web 101
     - C# 221
     - ".Net 321"
-    limitation: 
+    limitation:
     gravatar_email: eddiecrochet1994@gmail.com
     location:
     - any
@@ -684,7 +688,7 @@ schools:
     - JS 211
     - JS 311
     - JS 411
-    limitation: 
+    limitation:
     gravatar_email: sean.philippi@gmail.com
     location:
     - austinNorth
@@ -740,7 +744,7 @@ schools:
     skills:
     - C# Students &amp; Grads
     - JS Grads Only
-    limitation: 
+    limitation:
     gravatar_email: angomablaise@gmail.com
     location:
     - any
@@ -755,7 +759,7 @@ schools:
     skills:
     - C# Students &amp; Grads
     - JS Grads Only
-    limitation: 
+    limitation:
     gravatar_email: olamshin@gmail.com
     location:
     - any
@@ -799,7 +803,7 @@ schools:
     - Web 101
     - JS 211
     - JS 311
-    limitation: 
+    limitation:
     gravatar_email: eric@austincodingacademy.com
     location:
     - any
@@ -823,7 +827,8 @@ schools:
   secondary_dark_color: rgb(130, 202, 156)
   hero_overlay_color: rgb(45, 47, 119)
   tracks:
-  - Full Stack Web Development
+  - name: Full Stack Web Development
+    stripe_product_sku:
   url: https://lubbockcodingacademy.com
   phone: 18069055021
   callrail_company_id: 740142126
@@ -1083,7 +1088,8 @@ schools:
       class: btn btn-round text-white cta-gradient py-1 px-6
     footer: []
   tracks:
-  - Full Stack Web Development
+  - name: Full Stack Web Development
+    stripe_product_sku: sku_GfZX8vJVCrti2k
   url: https://texastechcodingacademy.com
   phone: 18302567665
   callrail_company_id: 457867625
