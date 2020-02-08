@@ -31,6 +31,11 @@ fields:
   config:
     required: false
   label: linkedin_pixel
+- name: stripe_key
+  type: text
+  config:
+    required: false
+  label: stripe_key
 - type: text
   name: acuity_scheduling_src
   label: acuity_scheduling_src
@@ -179,9 +184,6 @@ fields:
         max: 
         labelField: 
       label: footer
-  - type: list
-    name: tracks
-    label: tracks
   - type: text
     name: url
     label: url
@@ -351,6 +353,24 @@ fields:
     config:
       required: false
       color_format: RGB
+  - name: tracks
+    type: field_group_list
+    fields:
+    - name: name
+      type: text
+      config:
+        required: false
+      label: name
+    - name: stripe_product_sku
+      type: text
+      config:
+        required: false
+      label: stripe_product_sku
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: tracks
   - type: field_group_list
     name: instructors
     label: instructors
