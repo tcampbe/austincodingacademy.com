@@ -8,8 +8,8 @@ updated_at: 2020-02-10T17:00:00.000+00:00
 categories:
 - student-highlight
 excerpt: We had the opportunity to sit down with Austin Coding Academy alumnus, Seth,
-  and talk about his coding journey.  He shared some insider tips and tricks for prospective
-  and current students.
+  and talk about his coding journey.  He is a User Experience Developer at Indeed!
+  He shared some insider tips and tricks for prospective and current students.
 redirect_from: []
 permalink: "/blog/student-highlight/seth-davis/"
 author_name: Austin Coding Academy
@@ -19,7 +19,7 @@ school_keys:
 img: "/assets/uploads/student highligt (1).png"
 
 ---
-We had the opportunity to sit down with Austin Coding Academy alumnus, Seth, and talk about his coding journey.  He shared some insider tips and tricks for prospective and current students.
+We had the opportunity to sit down with Austin Coding Academy alumnus, Seth, and talk about his coding journey.  He is a User Experience Developer at Indeed! He shared some insider tips and tricks for prospective and current students.
 
 1. Where are you from?
 
@@ -42,3 +42,6 @@ We had the opportunity to sit down with Austin Coding Academy alumnus, Seth, and
 7. What is the best perk?
 
    **I feel like I am finally getting paid my worth.**
+8. What advice do you have to prospective and/or current ACA students?
+
+   **Don't give up! I didn't get a job immediately after graduation, so I spent that time sharpening my skills and networking. Make friends in the field - networking is so important!**
