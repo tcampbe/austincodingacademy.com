@@ -438,7 +438,7 @@ schools:
               {% if feature.square %}
                 <div
                   style="max-width: 112px; max-height: 112px;"
-                  class="col-3 mr-sm-4 mb-sm-3 d-flex align-items-center justify-content-center"
+                  class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
                 >
                   <amp-img
                     width="80px"
@@ -452,7 +452,7 @@ schools:
               {% else %}
                 <div
                   style="max-width: 112px; max-height: 84px;"
-                  class="col-3 mr-sm-4 mb-sm-3 d-flex align-items-center justify-content-center"
+                  class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
                 >
                   <amp-img
                     width="80px"
@@ -465,7 +465,7 @@ schools:
                 </div>
               {% endif %}
               <!-- Text -->
-              <div class="col-9">
+              <div class="col-sm-11 col-md-9">
                 <h3 class="font-weight-bold text-left">
                   <b>{{ feature.heading | liquify }}</b>
                 </h3>
