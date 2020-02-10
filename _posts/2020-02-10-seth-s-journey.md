@@ -11,7 +11,7 @@ excerpt: We had the opportunity to sit down with Austin Coding Academy alumnus, 
   and talk about his coding journey.  He shared some insider tips and tricks for prospective
   and current students.
 redirect_from: []
-permalink: "/blog/student-highlight/seth-davis"
+permalink: "/blog/student-highlight/seth-davis/"
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
