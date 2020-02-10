@@ -15,7 +15,7 @@ permalink: "/blog/student-highlight/seth-davis"
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
-- austincodingacademy.com
+- austincodingacademy
 img: "/assets/uploads/seth.jpeg"
 
 ---
