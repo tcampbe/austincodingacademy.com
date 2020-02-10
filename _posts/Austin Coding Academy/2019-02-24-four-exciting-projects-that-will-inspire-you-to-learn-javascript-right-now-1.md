@@ -4,8 +4,8 @@ layout: post
 title: Four Exciting Projects That Will Inspire You to Learn JavaScript Right Now
 description: JS is the most popular coding language in the world for a variety of
   reasons. Here are some cool projects that will inspire you to learn JavaScript now!
-created_at: 2018-09-19 00:00:00 -0500
-updated_at: 2019-02-24 00:00:00 -0600
+created_at: 2018-09-19T05:00:00.000+00:00
+updated_at: 2019-02-24T06:00:00.000+00:00
 categories:
 - javascript
 excerpt: 'JavaScript (JS) is the most commonly-used coding language for developers
@@ -16,9 +16,10 @@ excerpt: 'JavaScript (JS) is the most commonly-used coding language for develope
 img: "/assets/uploads/learn-javascript-four-projects.png"
 redirect_from: []
 permalink: "/blog/javascript/four-exciting-projects-that-will-inspire-you-to-learn-javascript/"
-date: 2019-02-24 14:14:48 -0600
+date: '2019-02-24T20:14:48.000+00:00'
 school_keys:
 - austincodingacademy
+
 ---
 JavaScript (JS) is the [most commonly-used coding language](https://stackify.com/popular-programming-languages-2018/) for developers in 2019. JS earned its popularity because it’s easy to learn, dynamically typed, fast to run, and works across most platforms, including all modern web browsers. Coders [from all different specialties](https://austincodingacademy.com/blog/which-aca-track-is-right-for-you) will need a basic understanding of JavaScript to complete most designs—especially front-end designs.
 
@@ -56,7 +57,7 @@ Website design skills are growing in demand. Companies spend a lot of time and m
 
 JavaScript is the perfect tool for building [stunning websites.](http://webdesignerwall.com/trends/30-truly-interactive-websites-built-css-javascript) The code is fast, and object manipulation makes it possible to create amazing interactive designs.
 
-Learning JavaScript will prepare you for a [lucrative career](https://austincodingacademy.com/blog/what-will-you-make-as-a-full-time-developer), but you don’t have to wait until after graduation to get started. Working on side projects is a great way to hone your skills and build up your [developer’s portfolio](https://austincodingacademy.com/blog/what-are-hiring-managers-looking-for-in-a-developers-portfolio).
+Learning JavaScript will prepare you for a [lucrative career](https://austincodingacademy.com/blog/web-development/what-will-you-make-as-a-full-time-web-developer/), but you don’t have to wait until after graduation to get started. Working on side projects is a great way to hone your skills and build up your [developer’s portfolio](https://austincodingacademy.com/blog/what-are-hiring-managers-looking-for-in-a-developers-portfolio).
 
 Here are some amazing websites to inspire your next web-design project:
 
