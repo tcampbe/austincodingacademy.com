@@ -3,8 +3,8 @@ tags: []
 layout: post
 title: Seth's Journey
 description: Student Highlight - Seth Davis
-created_at: 2020-02-10 10:00:00 -0600
-updated_at: 2020-02-10 11:00:00 -0600
+created_at: 2020-02-10T16:00:00.000+00:00
+updated_at: 2020-02-10T17:00:00.000+00:00
 categories:
 - student-highlight
 excerpt: We had the opportunity to sit down with Austin Coding Academy alumnus, Seth,
@@ -16,7 +16,7 @@ author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
 - austincodingacademy
-img: "/assets/uploads/seth.jpeg"
+img: "/assets/uploads/student highligt (1).png"
 
 ---
 We had the opportunity to sit down with Austin Coding Academy alumnus, Seth, and talk about his coding journey.  He shared some insider tips and tricks for prospective and current students.
