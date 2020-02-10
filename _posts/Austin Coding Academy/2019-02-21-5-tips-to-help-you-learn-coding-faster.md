@@ -22,7 +22,7 @@ Mastering a new skill can take years of focus and practice. But what if you want
 
 ### 1. Practice every day on real projects
 
-As with any other job, having hands-on experience is a must. Whether it’s for your own personal website, or a project for a close friend or family member, try to find actual assignments to give yourself for practice. When you get to flex your coding muscles on things that will actually live on the internet, you put yourself into an [immersive environment](https://austincodingacademy.com/blog/how-the-principles-of-language-learning-can-help-you-code-better), giving you a better chance to become fluent quickly.
+As with any other job, having hands-on experience is a must. Whether it’s for your own personal website, or a project for a close friend or family member, try to find actual assignments to give yourself for practice. When you get to flex your coding muscles on things that will actually live on the internet, you put yourself into an immersive environment, giving you a better chance to become fluent quickly.
 
 ### 2. Use free coding websites for tutorials and projects
 

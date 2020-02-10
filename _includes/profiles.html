@@ -22,7 +22,12 @@
   <div class="row my-5 mx-auto d-flex justify-content-start">
     <div class="col-12 col-lg">
       <div class="row">
-        {% for profile in school.team %}
+        {% if page.title == 'Team' %}
+          {% assign profiles = school.team %}
+        {% elsif page.title == 'Instructors' %}
+          {% assign profiles = school.instructors %}
+        {% endif %}
+        {% for profile in profiles %}
           <div class="col-4 p-1">
             <!-- htmllint preset="none" -->
             <amp-img

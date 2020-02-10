@@ -4,8 +4,8 @@ layout: post
 title: What to Do When You Want to Change Careers
 description: Not enjoying your current job? Making a career change is a scary but
   worthwhile decision. Here are some tips on how to responsibly switch careers.
-created_at: 2018-04-18 00:00:00 -0500
-updated_at: 2019-02-21 00:00:00 -0600
+created_at: 2018-04-18T05:00:00.000+00:00
+updated_at: 2019-02-21T06:00:00.000+00:00
 categories:
 - career-development
 excerpt: The thought of changing careers is exciting to many people at one time or
@@ -15,11 +15,13 @@ excerpt: The thought of changing careers is exciting to many people at one time 
   complicated. Here are some strategies that can help you make a transition while
   minimizing risk.
 img: "/assets/uploads/what-to-do-when-you-want-to-change-careers.png"
-date: 2019-02-21 15:32:48 -0600
+date: '2019-02-21T21:32:48.000+00:00'
 school_keys:
 - austincodingacademy
+permalink: "/blog/career-development/what-to-do-when-you-want-to-change-careers"
+
 ---
-The thought of changing careers is exciting to many people at one time or another. With your goals and ambitions no longer constrained by your old career path, [a career change](https://austincodingacademy.com/blog/5-signs-you-need-to-change-careers) may open up your potential and let you surprise yourself. Pursuing a career you’re excited about can also provide a stronger sense of purpose and passion for life.
+The thought of changing careers is exciting to many people at one time or another. With your goals and ambitions no longer constrained by your old career path, [a career change](https://austincodingacademy.com/blog/career-development/5-signs-you-need-to-make-a-career-change/) may open up your potential and let you surprise yourself. Pursuing a career you’re excited about can also provide a stronger sense of purpose and passion for life.
 
 But that excitement can vanish if you’re afraid changing careers is too risky or complicated. The truth is, you don’t have to take irresponsible risks when exploring new career options. You can even prepare for a career change while [keeping your current job](https://austincodingacademy.com/courses/).
 
@@ -59,7 +61,7 @@ Many of our students love coding because it’s a career that offers the flexibi
 
 ## Reach out to people in your desired field
 
-An underrated strategy for [exploring new work](https://austincodingacademy.com/blog/5-ways-to-get-a-job-as-a-web-developer-in-austins-tech-industry) is connecting with mentors. Talking to friends and family is great if they’re in your exact field of interest. For most of us, that won’t be the case.
+An underrated strategy for [exploring new work](https://austincodingacademy.com/blog/web-development/how-to-get-a-job-as-a-web-developer-in-austin-tech-industry/) is connecting with mentors. Talking to friends and family is great if they’re in your exact field of interest. For most of us, that won’t be the case.
 
 Instead, you’ll want to reach out to people who’ve already accomplished what you want to do. If you’re looking to become a developer, you can always connect with [ACA’s alumni network](https://angel.co/austin-coding-academy-1). Another way to network with professionals in your desired field is to reach out to them:
 
@@ -87,7 +89,7 @@ Get started with the following resources:
 * Take an introduction class (here's some [great local events](https://www.eventbrite.com/o/austin-coding-academy-10937668459))
 * Take freelance work on job sites like [upwork](https://www.upwork.com/)
 * Ask the people you emailed for internship opportunities
-* If you’re ready, [get an entry-level job](https://austincodingacademy.com/blog/blog/2017/05/26/20-tips-for-landing-your-first-job-in-web-development)
+* If you’re ready, [get an entry-level job](https://austincodingacademy.com/blog/web-development/20-tips-for-landing-your-first-job-in-web-development/)
 
 ## Commit to change
 

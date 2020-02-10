@@ -5,7 +5,11 @@ head_title: "Become an Instructor | Instructor Application - {{ school.name }}"
 description: "Become a web development instructor with {{ school.name }} | Teach
   coding to the next generation of web developers."
 redirect_from: []
+<<<<<<< HEAD
 redirect_url: "{{ school.url }}/thank-you"
+=======
+amp_components:
+- amp-recaptcha-input
 title: Instructor Application
 form_fields:
 - name: firstname
@@ -216,6 +220,9 @@ form_fields:
           <button class="btn btn-round text-white hover-white bg-primary-dark" type="Submit">
             Submit
           </button>
+        </div>
+        <div class="col-12">
+          {% include data-agreement.html %}
         </div>
       </div>
     </form>
