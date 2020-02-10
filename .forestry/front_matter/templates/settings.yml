@@ -318,16 +318,6 @@ fields:
       config:
         required: false
       label: time
-    - name: length
-      type: text
-      config:
-        required: false
-      label: length
-    - name: price
-      type: text
-      config:
-        required: false
-      label: price
     config:
       min: 
       max: 
