@@ -45,3 +45,7 @@ We had the opportunity to sit down with Austin Coding Academy alumnus, Seth, and
 8. What advice do you have to prospective and/or current ACA students?
 
    **Don't give up! I didn't get a job immediately after graduation, so I spent that time sharpening my skills and networking. Make friends in the field - networking is so important!**
+
+Want to learn more about coding?
+
+Download our course guide or attend one of our Learn to Code events for more information!
