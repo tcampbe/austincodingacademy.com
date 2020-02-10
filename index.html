@@ -391,7 +391,7 @@ schools:
               <div class="display-6 pb-4 text-center">
                 {{ start_date.date }}
               </div>
-              <div class="shadow border text-center py-4">
+              <div class="shadow border text-center py-5">
                 <div class="display-7 text-center mb-3 px-2">
                   {{ start_date.course }}
                 </div>
@@ -401,7 +401,15 @@ schools:
                 <div class="mb-3">
                   {{ start_date.time }}
                 </div>
-                {% include btn-apply.html %}
+                <div class="mb-3">
+                  {{ start_date.length }}
+                </div>
+                <div class="mb-3">
+                  {{ start_date.price }}
+                </div>
+                <div class="my-4">
+                 {% include btn-apply.html %}
+                </div>
               </div>
             </div>
           </div>
