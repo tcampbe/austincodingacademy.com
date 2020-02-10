@@ -21,7 +21,7 @@ school_keys:
 - austincodingacademy
 
 ---
-JavaScript (JS) is the [most commonly-used coding language](https://stackify.com/popular-programming-languages-2018/) for developers in 2019. JS earned its popularity because it’s easy to learn, dynamically typed, fast to run, and works across most platforms, including all modern web browsers. Coders [from all different specialties](https://austincodingacademy.com/blog/which-aca-track-is-right-for-you) will need a basic understanding of JavaScript to complete most designs—especially front-end designs.
+JavaScript (JS) is the [most commonly-used coding language](https://stackify.com/popular-programming-languages-2018/) for developers in 2019. JS earned its popularity because it’s easy to learn, dynamically typed, fast to run, and works across most platforms, including all modern web browsers. Coders from all different specialties will need a basic understanding of JavaScript to complete most designs—especially front-end designs.
 
 Let’s look at some impressive projects that might inspire you to want to start learning JavaScript now:
 
@@ -57,7 +57,7 @@ Website design skills are growing in demand. Companies spend a lot of time and m
 
 JavaScript is the perfect tool for building [stunning websites.](http://webdesignerwall.com/trends/30-truly-interactive-websites-built-css-javascript) The code is fast, and object manipulation makes it possible to create amazing interactive designs.
 
-Learning JavaScript will prepare you for a [lucrative career](https://austincodingacademy.com/blog/web-development/what-will-you-make-as-a-full-time-web-developer/), but you don’t have to wait until after graduation to get started. Working on side projects is a great way to hone your skills and build up your [developer’s portfolio](https://austincodingacademy.com/blog/what-are-hiring-managers-looking-for-in-a-developers-portfolio).
+Learning JavaScript will prepare you for a [lucrative career](https://austincodingacademy.com/blog/web-development/what-will-you-make-as-a-full-time-web-developer/), but you don’t have to wait until after graduation to get started. Working on side projects is a great way to hone your skills and build up your [developer’s portfolio](https://austincodingacademy.com/blog/web-development/what-are-companies-looking-for-in-a-web-developers-portfolio/).
 
 Here are some amazing websites to inspire your next web-design project:
 
@@ -66,14 +66,14 @@ Here are some amazing websites to inspire your next web-design project:
 * [Air View](https://airview.blueair.com/): Air View is an innovative way to visualize abstract air quality data to make it feel “real.”
 * [Key Ideas](http://www.keyideas.net/): Key Ideas is a film-production agency that uses their website to showcase their unique skills and services.
 
-Here are some ACA students who made projects with JavaScript to improve their portfolio and [land their first developer job](https://austincodingacademy.com/blog/5-ways-to-get-a-job-as-a-web-developer-in-austins-tech-industry):
+<!-- Here are some ACA students who made projects with JavaScript to improve their portfolio and [land their first developer job](https://austincodingacademy.com/blog/web-development/how-to-get-a-job-as-a-web-developer-in-austin-tech-industry/):
 
 * [Jon Gucciardi](https://austincodingacademy.com/blog/student-project-highlight-jon-gucciardi) built his own messaging app, and landed a job as a software developer for Verizon Wireless.
-* [Greg Devany](https://austincodingacademy.com/blog/student-project-highlight-greg-devany) designed a website and app for helping users find coupons for restaurants. He’s used it as the cornerstone of his resume.
+* [Greg Devany](https://austincodingacademy.com/blog/student-project-highlight-greg-devany) designed a website and app for helping users find coupons for restaurants. He’s used it as the cornerstone of his resume. -->
 
 ## Start learning JavaScript today
 
-These projects highlight why JavaScript is such a desirable skill to have. JavaScript developers get to work on fun tasks while earning [a great salary](https://austincodingacademy.com/blog/what-will-you-make-as-a-full-time-developer).
+These projects highlight why JavaScript is such a desirable skill to have. JavaScript developers get to work on fun tasks while earning [a great salary](https://austincodingacademy.com/blog/web-development/what-will-you-make-as-a-full-time-web-developer/).
 
 ACA offers you the fast track to a coding career. You’ll learn the most in-demand skills from teachers who also work full-time as developers. After graduation, you’ll get access to our job placement network to connect you with the position of your dreams.
 

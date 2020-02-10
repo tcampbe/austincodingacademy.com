@@ -66,7 +66,7 @@ Many programmers use project management systems like [Scrum](http://www.agilelea
 
 ## Bonus: Get enough sleep
 
-Many people try to burn the midnight oil to be more productive. But de-prioritizing sleep does more harm than good. [Adequate sleep](https://austincodingacademy.com/blog/these-sleep-habits-can-make-you-better-at-your-job) helps to improve attention, working memory, and overall happiness.
+Many people try to burn the midnight oil to be more productive. But de-prioritizing sleep does more harm than good. Adequate sleep helps to improve attention, working memory, and overall happiness.
 
 Programmers are exposed to blue light from computers and phone screens all day. Blue light activates a photoreactive cell in your eyes which tells your hippocampus to block the release of sleep hormones like melatonin. Without these sleep hormones, it’s much more difficult fall asleep at night.
 

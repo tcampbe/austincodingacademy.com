@@ -87,7 +87,7 @@ If you followed the previous tip, you just expanded your skillset and now have e
 
 ### 13. Contribute and Collaborate on Github Projects
 
-Web developers need to work well in a [collaborative environment and know how to contribute to projects meaningfully.](https://austincodingacademy.com/blog/why-our-coding-bootcamp-teaches-you-more-than-just-code) Every recruiter and hiring manager you communicate with will most likely review your Github profile and repos to see how much experience you have with these teamwork-based skills. It’s also a great way to grow your skillsets and projects featured on your portfolio.
+Web developers need to work well in a [collaborative environment and know how to contribute to projects meaningfully.](https://austincodingacademy.com/blog/web-development/choose-a-coding-bootcamp-that-teaches-you-more-than-just-code/) Every recruiter and hiring manager you communicate with will most likely review your Github profile and repos to see how much experience you have with these teamwork-based skills. It’s also a great way to grow your skillsets and projects featured on your portfolio.
 
 ### 14. Spend As Much Time As Possible Per Day Job Searching
 

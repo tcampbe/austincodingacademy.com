@@ -81,7 +81,7 @@ GitHub has a great resource of [front-end developer interview questions](http://
 Here are two resources to get you started:
 
 * [A video](https://www.youtube.com/watch?v=iI6jiwoqxg4) about how to prepare for a job interview
-* [What hiring managers want to see in a portfolio](https://austincodingacademy.com/blog/what-are-hiring-managers-looking-for-in-a-developers-portfolio)
+* [What hiring managers want to see in a portfolio](https://austincodingacademy.com/blog/web-development/what-are-companies-looking-for-in-a-web-developers-portfolio/)
 
 ## Bonus: Paid Internships
 
