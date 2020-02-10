@@ -4,8 +4,8 @@ layout: post
 title: What to Do When You Want to Change Careers
 description: Not enjoying your current job? Making a career change is a scary but
   worthwhile decision. Here are some tips on how to responsibly switch careers.
-created_at: 2018-04-18 00:00:00 -0500
-updated_at: 2019-02-21 00:00:00 -0600
+created_at: 2018-04-18T05:00:00.000+00:00
+updated_at: 2019-02-21T06:00:00.000+00:00
 categories:
 - career-development
 excerpt: The thought of changing careers is exciting to many people at one time or
@@ -15,9 +15,11 @@ excerpt: The thought of changing careers is exciting to many people at one time 
   complicated. Here are some strategies that can help you make a transition while
   minimizing risk.
 img: "/assets/uploads/what-to-do-when-you-want-to-change-careers.png"
-date: 2019-02-21 15:32:48 -0600
+date: '2019-02-21T21:32:48.000+00:00'
 school_keys:
 - austincodingacademy
+permalink: "/blog/career-development/what-to-do-when-you-want-to-change-careers"
+
 ---
 The thought of changing careers is exciting to many people at one time or another. With your goals and ambitions no longer constrained by your old career path, [a career change](https://austincodingacademy.com/blog/5-signs-you-need-to-change-careers) may open up your potential and let you surprise yourself. Pursuing a career you’re excited about can also provide a stronger sense of purpose and passion for life.
 
