@@ -2,10 +2,10 @@
 layout: default
 permalink: "/learn-to-code/"
 amp_components:
-- amp-vimeo
-- amp-accordian
-- amp-sidebar
-- amp-iframe
+- amp-vimeo 
+- amp-iframe 
+- amp-accordian 
+- amp-sidebar 
 head_title: "Learn To Code"
 description: "Our self guided lessons to familiarize yourself with coding."
 redirect_from: []
@@ -23,7 +23,7 @@ learn_to_code:
     - Then Code
     - Getting Started
 ---
-{% comment %} {% for _page in site.pages %}
+{% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
     {% for _school in settings.schools %}
@@ -39,7 +39,7 @@ learn_to_code:
       {% assign school = school | hash_concat: _school %}
     {% endif %}
   {% endfor %}
-{% endif %} {% endcomment %}
+{% endif %}
 
 <div>
     <h2 class="font-family-alt text-indigo font-weight-light text-center display-5 my-5"><small>What is Coding</small></h2>
@@ -78,7 +78,7 @@ learn_to_code:
             <p>Previous: <span>Intro to Coding</span></p>
         </div>
         <div class="col ml-1">
-            <amp-iframe
+            <amp-iframe 
                 layout="responsive"
                 height="292"
                 width="520"
@@ -95,5 +95,4 @@ learn_to_code:
     </div>
     <div class="text-wrap text-wrap text-center mx-auto w-75 my-5">While both the terms are synonymous with each other and are often used interchangeably, they are quite different from each other. Coding simply means writing codes from one language to another such as from English to Java. It’s less intimidating and less intensive. Programming, on the other hand, means to program a machine with a set of instructions to run.</div>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-    <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
 </div>
