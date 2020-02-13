@@ -156,19 +156,18 @@ schools:
         {{ page.subheading | liquify }}
       </p>
       <div class="d-flex justify-content-start">
-        <div class="d-md-none mr-2">
+        <div class="mr-2">
           {% include btn-apply.html %}
          </div>
-        <button
-          class="btn btn-outline-light btn-round mr-2 px-2 d-md-none"
-          on="tap:call-us"
+        <a
+          class="btn btn-outline-light btn-round mr-2 px-2"
           role="button"
           tabindex="0"
-          href="#"
+          href="/course-guide"
         >
-          Get More Info
-        </button>
-        <amp-lightbox
+          Course Guide
+        </a>
+        <!-- <amp-lightbox
           id="call-us"
           class="lightbox"
           layout="nodisplay"
@@ -194,7 +193,7 @@ schools:
               Wordpress Fundamentals
             </a>
           </div>
-        </amp-lightbox>
+        </amp-lightbox> 
         <a
           class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
           href="/courses/web-development"
@@ -203,7 +202,7 @@ schools:
         >
           Learn More
         </a>
-       
+       -->
       </div>
     </div>
   </div>
@@ -241,7 +240,7 @@ schools:
 
 <main>
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
-    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+    <h2 class="font-family-alt font-weight-bold text-center {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
       We Are Committed To Your Success
     </h2>
     <p class="mw-600 mx-auto text-center">
@@ -288,7 +287,7 @@ schools:
                   {{ start_date.length }}
                 </div>
                 <div class="font-weight-bold">
-                  Full Tuition:
+                  Tuition:
                 </div>
                 <div class="mb-3">
                   {{ start_date.price }}
@@ -312,10 +311,10 @@ schools:
 
   <section class="mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
     <div class="mx-auto mw-850">
-      <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+      <h2 class="font-family-alt font-weight-bold text-center {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
         Why Choose Us?
       </h2>
-      <p class="px-1 mw-600 mx-auto text-center text-white">
+      <p class="px-1 mw-600 mx-auto text-center text-white d-none d-md-block">
         As fun as it is to learn how to code, we know you didn't just come to us
         for the kicks. You need to launch a new career and we're here to help you
         do it.
@@ -363,7 +362,7 @@ schools:
                 <h3 class="font-weight-bold text-left">
                   <b>{{ feature.heading | liquify }}</b>
                 </h3>
-                <div class="mb-3">
+                <div class="mb-3 d-none d-md-block">
                   {{ feature.description | liquify }}
                 </div>
               </div>
@@ -382,7 +381,7 @@ schools:
 
   {% if site.key == 'austincodingacademy' %}
     <section class="py-8 bg-textured">
-      <h2 class="font-family-alt font-weight-bold text-center text-white display-5 mb-5">
+      <h2 class="font-family-alt font-weight-bold text-center text-white {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
         Student Success Stories
       </h2>
       <!-- begin student-stories -->
@@ -424,7 +423,7 @@ schools:
   {% if site.data.events[site.key].size > 0 %}
     <section class="py-8 bg-textured text-white">
       <div class="container d-flex justify-content-center flex-column">
-        <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+        <h2 class="font-family-alt font-weight-bold text-center {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
           Come Meet Us at Our Next Event
         </h2>
         {% include events.html limit=3 %}
