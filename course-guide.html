@@ -25,26 +25,6 @@ title: Course Guide
 {% endif %}
 <div class="container mt-90 space-2">
   <div class="card-deck d-flex justify-content-center">
-    <!-- Card -->
-    <div class="card text-center mb-4 mb-md-0">
-      <div class="card-body space-3 px-5">
-        <div class="mb-4">
-          <h1>Thank You</h1>
-          <p>
-            <a
-              href="/web/viewer.html?file={{ school.course_guide | liquify }}"
-              target="_blank"
-              rel="noopener"
-            >
-              Click here for your course guide!
-            </a>
-          </p>
-        </div>
-        <a class="text-white btn btn-purple btn-round transition-3d-hover" href="/" role="button">
-          Finish
-        </a>
-      </div>
-    </div>
-    <!-- End Card -->
+    {% include course-guide-form.html %}
   </div>
 </div>
