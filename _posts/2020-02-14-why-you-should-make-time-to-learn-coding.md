@@ -44,20 +44,32 @@ In this day an age, virtually every business and individual contractor needs a w
 
 ## Circle Coding Academy Web Development Program
 
-The web development courses at Circle Coding Academy fit into virtually every schedule, as these courses take place at night. They also offer courses for beginners, intermediate learners and those looking to begin web development careers.
+Circle Coding Academy's Full Stack Web Development Program is designed to take students from no experience to job-ready web developers in just 36 weeks of part-time, evening classes.
 
-Web 101: The Web 101 Course at Circle Coding Academy is ideal for beginners. This course focuses on HTML, CSS and Javascript. Students will graduate with the ability to begin freelancing as a web designer.
+**Web 101: Intro to Web (8 Weeks)**
 
-211: JavaScript Full Stack: This intermediate course aims to further develop HTML and CSS skills and advances into building applications. This class is two nights a week.
+In the first course of Circle Coding Academy's Full Stack Web Development Program, students will learn the basics of web development, building websites using HTML & CSS and learning how to deploy them to the web using Git and GitHub.
 
-311 JavaScript Full Stack: The Circle Coding Academy advanced course takes intermediate students and develops their skills in advanced programs such as Node.js and React.js. Graduates of this program will be able to develop full-fledged web applications.
+**JavaScript 211: Language Basics (8 Weeks)**
 
-## So What Do Students Say?
+In JavaScript 211, students will begin to learn the basics of programming languages. They'll learn syntax, functions, and other key JavaScript concepts that will give them the foundations for further learning.
 
-Currently, on [SwitchUp](http://switchup.org/), Circle Coding Academy has a **5 out of 5 star rating** based on 21 verified student reviews. Students find this program balanced, fair, exciting, useful and thorough. Students graduate and land great jobs all over the country. See a sample:
+**JavaScript 311: Back-End JavaScript (8 Weeks)**
 
-Student Review: [**"Balanced, Fair and Caring"**](https://www.switchup.org/bootcamps/austin-coding-academy?review_id=11842)
+In JS 311 students will focus on "Back-End" JavaScript, using the Node.js framework to build back-ends. Students will also learn how to build a database and call APIs.
 
-_At Circle Coding Academy every teacher, admin and TA cares about its students future. They don't want your money if you are not learning so they are constantly working to keep their curriculum up-to-date and challenging. I've seen this in practice as both a student and as a TA, they are always improving. Their teachers are working professionals with real-world experience and stories to share in class. And they always care about how the students do in class and in the future. The curriculum is solid and will give you a confident knowledge base web development._
+**JavaScript 411: Front-End JavaScript (8 Weeks)**
 
-Are you convinced? If you would like to read more student reviews visit the Circle Coding Academy school page on [SwitchUp](https://www.switchup.org/bootcamps/austin-coding-academy?review_id=11842). To get started on your application, [click here](https://austincodingacademy.com/apply/) and get one step closer to the web development job you’ve been dreaming about!
+In the final coding-focused course, students will learn how to build responsive front-ends for their applications and also complete their final project – a Full Stack Web Application that they'll be able to use in their portfolio as they begin their job search.
+
+**Job Placement 501 (4 Weeks)**
+
+Finally, students will spend 4 weeks in Circle Coding Academy's Job Placement Course. In this course, students will hone their resumes, develop their LinkedIn, practice whiteboarding, participate in mock interviews, and more.
+
+## Ready to Take the Next Step?
+
+Over the past 6 years, Austin Coding Academy has been serving students in the Austin area with cutting-edge curriculum and job placement services. Currently, on [SwitchUp](http://switchup.org/), Austin Coding Academy has a **5 out of 5 star rating** based on verified student reviews. Students find this program balanced, fair, exciting, useful and thorough. Students graduate and land great jobs all over the country. 
+
+**Circle Coding Academy** is looking to bring the successful approach that has made Austin Coding Academy the largest coding school in Central Texas, to Dallas.
+
+Want to get started? Circle Coding Academy's first cohort is launching April 13th. [Apply today](https://circlecoding.com/apply/) and get on the path to a new career with Circle Coding Academy!
