@@ -16,7 +16,6 @@ date: '2019-02-21T19:34:55.000+00:00'
 redirect_from: []
 permalink: "/blog/web-development/why-you-should-make-time-to-learn-to-code/"
 school_keys:
-- circlecoding
 - austincodingacademy
 
 ---
