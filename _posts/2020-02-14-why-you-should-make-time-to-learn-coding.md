@@ -26,9 +26,9 @@ According to the [Bureau of Labor Statistics](https://www.bls.gov/ooh/computer-a
 
 ## Opportunities After Bootcamp
 
-Web Development is an all encompassing term that focuses on the development of websites and web applications. Jobs may include web-based internet applications, social networking platforms, and electronic business platforms. Individuals trained in this field may work in web content development, web engineering, cyber security, or design. This training could also lead to the development of CRM systems, still considered a new branch of web development.
+Web Development is an all-encompassing term that focuses on the development of websites and web applications. Jobs may include web-based internet applications, social networking platforms, and electronic business platforms. Individuals trained in this field may work in web content development, web engineering, cybersecurity, or design. This training could also lead to the development of CRM systems, still considered a new branch of web development.
 
-In this day an age, virtually every business and individual contractor needs a website and payment platform to operate. This means more jobs for individuals like you.
+In this day and age, virtually every business and individual contractor needs a website and payment platform to operate. This means more jobs for individuals like you.
 
 **Market Growth**: “The [Bureau of Labor Statistics](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm) projects about 13 percent employment growth for web developers by 2026. During that period, about **21,300 new jobs** will need to be filled in an industry that already **has roughly 162,900 positions**.”
 
