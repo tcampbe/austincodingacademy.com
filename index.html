@@ -159,14 +159,14 @@ schools:
         <div class="d-md-none mr-2">
           {% include btn-apply.html %}
          </div>
-        <button
-          class="btn btn-outline-light btn-round mr-2 px-2 d-md-none"
+        {% if school.key == 'austincodingacademy' %}
+        <button class="btn btn-outline-light btn-round mr-2 px-2 d-md-none"
           on="tap:call-us"
           role="button"
-          tabindex="0"
           href="#"
+          tabindex="0"
         >
-          Get More Info
+         Get More Info
         </button>
         <amp-lightbox
           id="call-us"
@@ -195,6 +195,15 @@ schools:
             </a>
           </div>
         </amp-lightbox>
+        {% else %}
+          <a class="btn btn-outline-light btn-round mr-2 px-2 d-md-none"
+            href="/courses/web-development"
+            rel="noopener"
+            href="#"
+          >
+            Get More Info
+          </a>
+        {% endif %}
         <a
           class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
           href="/courses/web-development"
