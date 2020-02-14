@@ -4,19 +4,21 @@ layout: post
 title: Why You Should Make Time to Learn to Code
 description: Web Developers make an average salary of $67,990/year. That's just one
   of our many reasons why you should make time to learn to code.
-created_at: 2018-06-06 05:00:00 +0000
-updated_at: 2019-02-21 06:00:00 +0000
+created_at: 2018-06-06T05:00:00.000+00:00
+updated_at: 2019-02-21T06:00:00.000+00:00
 categories:
 - web-development
 excerpt: 'Web Developers across the United States make an average of $67,990 annually.
   This increasingly popular career path currently has over 162,000 jobs ranging from
   entry to senior level. Find out how you can fit learning to code into your day:'
 img: "/assets/uploads/make-time-for-web-development-training.jpg"
-date: 2019-02-21 19:34:55 +0000
+date: '2019-02-21T19:34:55.000+00:00'
 redirect_from: []
 permalink: "/blog/web-development/why-you-should-make-time-to-learn-to-code/"
 school_keys:
+- circlecoding
 - austincodingacademy
+
 ---
 _This piece was written by Erica Freedman, Content Specialist at SwitchUp._
 
