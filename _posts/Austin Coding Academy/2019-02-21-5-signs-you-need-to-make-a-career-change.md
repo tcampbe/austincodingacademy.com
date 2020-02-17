@@ -43,4 +43,4 @@ A career should be about so much more than just paying the bills. It should fill
 
 ## Get started now
 
-If you feel stuck, uninspired, and undervalued in your job, the thought of making a big transition into a new career might fill you with a mixture of excitement and fear. [Accomplishing ambitious goals](https://austincodingacademy.com/blog/how-to-achieve-big-goals-this-year) isn’t easy, but the effort involved in building a career that makes you feel challenged, appreciated, and engaged is worth it.
+If you feel stuck, uninspired, and undervalued in your job, the thought of making a big transition into a new career might fill you with a mixture of excitement and fear. Accomplishing ambitious goals isn’t easy, but the effort involved in building a career that makes you feel challenged, appreciated, and engaged is worth it.

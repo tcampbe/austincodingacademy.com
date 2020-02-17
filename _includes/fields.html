@@ -1,6 +1,6 @@
 <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
 <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
-<input name="redirect_url" type="hidden" value="{{ include.redirect_url }}">
+<input name="redirect_url" type="hidden" value="{{ include.redirect_url | liquify }}">
 <!-- htmllint preset="none" -->
 {% for field in include.fields %}
   {% if field.type == "hidden" %}
@@ -30,7 +30,7 @@
         <div class="form-group">
           <label for="{{ field.name | liquify }}" class="form-label">
             {{ field.label | liquify }}
-            <span class="text-red-a">*</span>
+            {% if field.required %}<span class="text-red-a">*</span>{% endif %}
           </label>
           <small>{{ field.description | liquify }}</small>
           <textarea
@@ -40,6 +40,7 @@
             rows="4"
             placeholder="{{ field.placeholder | liquify }}"
             aria-label="{{ field.label | liquify }}"
+            {% if field.required %}required{% endif %}
           ></textarea>
         </div>
       </div>

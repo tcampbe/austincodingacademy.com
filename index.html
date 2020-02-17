@@ -146,25 +146,35 @@ schools:
 {% endif %}
 
 <div class="position-relative d-flex justify-content-center flex-column overflow-hidden">
-  <div class="pl-3 pl-sm-6 ml-sm-4 py-7 pb-md-11 position-absolute z-20 d-flex justify-content-center">
-    <div class="col-8 col-md-10 col-lg-10 pl-0">
-      <div class="my-11"></div>
-      <h1 class="text-white font-family-alt font-weight-bold display-responsive w-75">
+  <div class="pl-3 pl-sm-2 ml-sm-4 py-7 pb-md-11 position-absolute z-20 d-sm-block d-md-flex justify-content-center">
+    <div class="col-sm-11 col-md-10 col-lg-10 pl-0">
+      <div class="my-md-11"></div>
+      <h1 class="text-white font-family-alt font-weight-bold display-responsive col-sm-12 col-md-9 pl-0">
         {{ page.heading | liquify }}
       </h1>
       <p class="text-white mt-4 mb-3 line-typewriter anim-typewriter">
         {{ page.subheading | liquify }}
       </p>
       <div class="d-flex justify-content-start">
-        <button
-          class="btn btn-outline-light btn-round mr-2 px-2 d-md-none"
-          on="tap:call-us"
+        <div class="mr-2">
+          {% include btn-apply.html %}
+         </div>
+        <a
+          class="btn btn-outline-light btn-round mr-2 px-2"
           role="button"
           tabindex="0"
+<<<<<<< HEAD
         >
           Get More Info
       </button>
         <amp-lightbox
+=======
+          href="/course-guide"
+        >
+          Course Guide
+        </a>
+        <!-- <amp-lightbox
+>>>>>>> preview
           id="call-us"
           class="lightbox"
           layout="nodisplay"
@@ -174,23 +184,23 @@ schools:
           role="dialog"
         >
           <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center">
-            <a class="my-5 btn btn-light btn-round mr-2 d-md-none"
-              href="{{ school.schedule_href }}"
-              target="_blank"
+            <a class="my-5 btn btn-light btn-round mr-2 d-md-none w-75"
+              href="/courses/web-development"
               rel="noopener"
             >
-              Schedule a Q&amp;A
+              Full Stack Web Development
             </a>
             <h4 class="text-white display-7 border-top border-bottom">
               OR
             </h4>
-            <a class="my-5 btn btn-light btn-round mr-2 d-md-none"
-              href="tel:{{ school.phone | liquify }}"
+            <a class="my-5 btn btn-light btn-round mr-2 d-md-none w-75"
+              href="/courses/wordpress-fundamentals"
+              rel="noopener"
             >
-              Call Us Now!
+              Wordpress Fundamentals
             </a>
           </div>
-        </amp-lightbox>
+        </amp-lightbox> 
         <a
           class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
           href="/courses/web-development"
@@ -199,130 +209,7 @@ schools:
         >
           Learn More
         </a>
-        {% if school.lightbox_youtube %}
-          <a
-            class="btn cta-gradient text-white hover-white btn-round mr-2 d-block d-md-none"
-            on="tap:testimonial-lightbox"
-            tabindex="0"
-            rel="noopener"
-          >
-            <span class="hover-white text-white">
-              Testimonial
-            </span>
-          </a>
-          <!-- Lightbox Testimonial Video -->
-          {% assign testimonial = school.lightbox_youtube %}
-          <amp-lightbox
-            id="testimonial-lightbox"
-            class="lightbox"
-            layout="nodisplay"
-            on="tap:testimonial-lightbox.close"
-            tabindex="0"
-            role="dialog"
-          >
-            <div
-              class="w-75 w-sm-50 mx-auto mt-100"
-              on="tap:testimonial-lightbox.open"
-              tabindex="0"
-              role="button"
-            >
-              <amp-youtube
-                data-videoid="{{ testimonial.src_id }}"
-                width="480"
-                height="270"
-                tabindex="0"
-                role="presentation"
-                layout="responsive"
-                title="{{ testimonial.title | liquify }}"
-                autoplay
-              >
-              </amp-youtube>
-              <!-- CTA Form -->
-              <form
-                action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.cta_form_guid }}"
-                target="_top"
-                method="POST"
-                tabindex="-1"
-                role="form"
-                class="mt-2 w-100"
-              >
-                <input name="school" type="hidden" value="{{ school.name }}">
-                <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
-                <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
-
-                <div class="form-container d-flex flex-column align-items-center">
-                  <div class="d-flex justify-content-between w-100">
-                    <div class="w-50 mr-2">
-                      <label class="text-white" for="first-name">First Name:</label>
-                      <input
-                        id="first-name"
-                        class="form-control"
-                        name="firstname"
-                        type="text"
-                        placeholder="First Name"
-                        required data-msg="Please enter your first name."
-                        data-error-class="u-has-error"
-                        data-success-class="u-has-success"
-                      >
-                    </div>
-                    <div class="w-50 ml-2">
-                      <label class="text-white" for="email">Last Name:</label>
-                      <input
-                        id="last-name"
-                        class="form-control"
-                        name="lastname"
-                        type="text"
-                        placeholder="Last Name"
-                        required data-msg="Please enter your last name."
-                        data-error-class="u-has-error"
-                        data-success-class="u-has-success"
-                      >
-                    </div>
-                  </div>
-                  <div class="mt-2 d-flex justify-content-between w-100">
-                    <div class="w-50 mr-2">
-                      <label class="text-white" for="email">Email Address:</label>
-                      <input
-                        id="email"
-                        class="form-control"
-                        name="email"
-                        type="email"
-                        placeholder="Email"
-                        required data-msg="Please enter a valid email address."
-                        data-error-class="u-has-error"
-                        data-success-class="u-has-success"
-                      >
-                    </div>
-                    <div class="w-50 ml-2">
-                      <label class="text-white" for="phone">Phone Number:</label>
-                      <input
-                        id="phone"
-                        class="form-control"
-                        name="phone"
-                        type="phone"
-                        placeholder="Phone Number"
-                        required data-msg="Please enter a valid phone number."
-                        data-error-class="u-has-error"
-                        data-success-class="u-has-success"
-                      >
-                    </div>
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white mt-4"
-                  >
-                    Get in Touch
-                  </button>
-                  <div class="col-12">
-                    {% include data-agreement.html %}
-                  </div>
-                </div>
-              </form>
-            </div>
-          </amp-lightbox>
-        {% else %}
-          {% include btn-apply.html %}
-        {% endif %}
+       -->
       </div>
     </div>
   </div>
@@ -360,7 +247,7 @@ schools:
 
 <main>
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
-    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+    <h2 class="font-family-alt font-weight-bold text-center {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
       We Are Committed To Your Success
     </h2>
     <p class="mw-600 mx-auto text-center">
@@ -390,8 +277,8 @@ schools:
               <div class="display-6 pb-4 text-center">
                 {{ start_date.date }}
               </div>
-              <div class="shadow border text-center py-4">
-                <div class="display-7 text-center mb-3 px-2">
+              <div class="shadow border text-center py-5">
+                <div class="display-7 text-center mb-5 px-2">
                   {{ start_date.course }}
                 </div>
                 <div>
@@ -400,7 +287,21 @@ schools:
                 <div class="mb-3">
                   {{ start_date.time }}
                 </div>
-                {% include btn-apply.html %}
+                <div class="font-weight-bold">
+                  Length:
+                </div>
+                <div class="mb-3">
+                  {{ start_date.length }}
+                </div>
+                <div class="font-weight-bold">
+                  Tuition:
+                </div>
+                <div class="mb-3">
+                  {{ start_date.price }}
+                </div>
+                <div class="mt-6">
+                 {% include btn-apply.html %}
+                </div>
               </div>
             </div>
           </div>
@@ -417,10 +318,10 @@ schools:
 
   <section class="mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
     <div class="mx-auto mw-850">
-      <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+      <h2 class="font-family-alt font-weight-bold text-center {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
         Why Choose Us?
       </h2>
-      <p class="px-1 mw-600 mx-auto text-center text-white">
+      <p class="px-1 mw-600 mx-auto text-center text-white d-none d-md-block">
         As fun as it is to learn how to code, we know you didn't just come to us
         for the kicks. You need to launch a new career and we're here to help you
         do it.
@@ -437,7 +338,7 @@ schools:
               {% if feature.square %}
                 <div
                   style="max-width: 112px; max-height: 112px;"
-                  class="col-3 mr-sm-4 mb-sm-3 d-flex align-items-center justify-content-center"
+                  class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
                 >
                   <amp-img
                     width="80px"
@@ -451,7 +352,7 @@ schools:
               {% else %}
                 <div
                   style="max-width: 112px; max-height: 84px;"
-                  class="col-3 mr-sm-4 mb-sm-3 d-flex align-items-center justify-content-center"
+                  class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
                 >
                   <amp-img
                     width="80px"
@@ -464,11 +365,11 @@ schools:
                 </div>
               {% endif %}
               <!-- Text -->
-              <div class="col-9">
+              <div class="col-sm-11 col-md-9">
                 <h3 class="font-weight-bold text-left">
                   <b>{{ feature.heading | liquify }}</b>
                 </h3>
-                <div class="mb-3">
+                <div class="mb-3 d-none d-md-block">
                   {{ feature.description | liquify }}
                 </div>
               </div>
@@ -487,7 +388,7 @@ schools:
 
   {% if site.key == 'austincodingacademy' %}
     <section class="py-8 bg-textured">
-      <h2 class="font-family-alt font-weight-bold text-center text-white display-5 mb-5">
+      <h2 class="font-family-alt font-weight-bold text-center text-white {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
         Student Success Stories
       </h2>
       <!-- begin student-stories -->
@@ -525,18 +426,19 @@ schools:
     {% include company-carousel.html %}
     <!-- end company carousel -->
   {% endif %}
+  <!-- Events -->
   {% if site.data.events[site.key].size > 0 %}
-  <section class="py-8 bg-textured text-white">
-    <div class="container d-flex justify-content-center flex-column">
-      <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-        Come Meet Us at Our Next Event
-      </h2>
-      {% include events.html limit=3 %}
-      <div class="mx-auto mt-4 text-center">
-        <a class="hover-white" href="/events/">Visit our events page to see more upcoming events!</a>
+    <section class="py-8 bg-textured text-white">
+      <div class="container d-flex justify-content-center flex-column">
+        <h2 class="font-family-alt font-weight-bold text-center {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
+          Come Meet Us at Our Next Event
+        </h2>
+        {% include events.html limit=3 %}
+        <div class="mx-auto mt-4 text-center">
+          <a class="hover-white" href="/events/">Visit our events page to see more upcoming events!</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   {% endif %}
   <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5">
     <div class="container mw-600">

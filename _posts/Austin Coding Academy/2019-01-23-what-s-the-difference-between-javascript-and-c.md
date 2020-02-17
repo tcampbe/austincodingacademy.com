@@ -120,7 +120,7 @@ Taking in all this information can feel like drinking water from a firehose. A g
 
 Here are some resources to connect you with working programmers:
 
-* Hear from former students: [Stephanie](https://austincodingacademy.com/blog/get-to-know-aca-graduate-stephanie-singler), [Lillian](https://austincodingacademy.com/blog/student-highlight-12/19), [Jon](https://austincodingacademy.com/blog/student-project-highlight-jon-gorman).
+* Hear from former students: [Greg](https://austincodingacademy.com/blog/student-highlight/greg-swan/) and [Lillian](https://austincodingacademy.com/blog/student-highlight/lillian-situ/).
 * [Go to local coding events](https://www.eventbrite.com/o/austin-coding-academy-10937668459) to pick the brains of other developers and/or to get some hands-on experience.
 * Subscribe to the ACA blog to learn about the industry and see student stories.
 

@@ -48,114 +48,13 @@
     <div class="form-container mw-850 px-5 px-lg-0">
       <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
       <input name="hs_lead_status" type="hidden" value="NEW">
-      <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
+      <!-- <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}"> -->
       <input name="redirect_url" type="hidden" value="https://acaappointment.as.me/schedule.php?calendarID=3049624">
-      <input name="school" type="hidden" value="{{ school.name }}">
-      <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
+      <!-- <input name="school" type="hidden" value="{{ school.name }}"> -->
+      <!-- <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" /> -->
 
       <div class="row center-form">
-        <!-- Input -->
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label for="first-name-interest" class="form-label">
-              First Name <span class="text-red">*</span>
-            </label>
-
-            <input id="first-name-interest" type="text" class="form-control" name="firstname" placeholder="First name" aria-label="First name"
-              required data-msg="Please enter your first name." data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label for="last-name" class="form-label">
-              Last Name <span class="text-red">*</span>
-            </label>
-
-            <input id="last-name" type="text" class="form-control" name="lastname" placeholder="Last name" aria-label="Last name"
-              required data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label for="company" class="form-label">
-              Company <span class="text-red">*</span>
-            </label>
-
-            <input id="company" type="text" class="form-control" name="company" placeholder="Company" aria-label="Company"
-              required data-msg="Please enter the name of your company." data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label for="phone" class="form-label">
-              Phone <span class="text-red">*</span>
-            </label>
-
-            <input id="phone" type="phone" class="form-control" name="phone" placeholder="Phone" aria-label="Phone"
-              required data-msg="Please enter a valid phone number." data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label for="email" class="form-label">
-              Email <span class="text-red">*</span>
-            </label>
-
-            <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="Your email address"
-              required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="col-sm-6 d-flex flex-column justify-content-end form-group">
-          <label class="form-label" for="best-describes">What training are you interested in? <span class="text-red">*</span></label>
-          <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
-            <option disabled selected value="">Select your answer</option>
-            <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
-            <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck</option>
-            <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
-            <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
-            <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
-            <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
-          </select>
-        </div>
-        <!-- End Input -->
-
-        <!-- Input -->
-        <div class="js-form-message mb-4 col-sm-12">
-        <label for="message" class="form-label">
-          Message
-        </label>
-
-        <div class="input-group">
-          <textarea
-            id="message"
-            class="form-control"
-            rows="4"
-            name="message"
-            placeholder="Enter your questions or comments here"
-            aria-label="Enter your questions or comments here"
-            data-msg="Please enter a message."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          ></textarea>
-        </div>
-      </div>
-      <!-- End Input -->
-
+        {% include fields.html fields=page.corporate_form_fields redirect_url="https://acaappointment.as.me/schedule.php?calendarID=3049624" %}
         <!-- Input -->
         <div class="col-12 d-flex align-items-end justify-content-center form-group">
           <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">

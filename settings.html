@@ -6,6 +6,7 @@ hubspot_portal_id: 4009818
 google_tag_manager: GTM-TBH7GK
 google_tag_manager_amp: GTM-KZ9XHND
 facebook_pixel: "656599271106549"
+stripe_key: pk_live_jAVWqwlb5iFbTQwoZvRAhZAn
 instructor_form_guid: 83193d74-f3de-4679-91db-18ba46864fef
 corporate_trainings_form_guid: a000aab9-9870-4578-a496-2649ea46fb7e
 corporate_form_guid: b8fb52b4-28de-4133-920b-7f587724bb3d
@@ -159,10 +160,10 @@ courses:
 tracks:
 - name: Full Stack Web Development
   category: Programs
-  url: "/courses/web-development"
+  url: "/courses/web-development/"
 - name: WordPress Fundamentals
   category: Individual Courses
-  url: "/courses/wordpress-fundamentals"
+  url: "/courses/wordpress-fundamentals/"
 schools:
 - key: circlecoding
   name: Circle Coding Academy
@@ -181,6 +182,8 @@ schools:
       links:
       - title: Contact Us
         url: "/contact/"
+      - title: Blog
+        url: "/blog/"
       url: ''
       class: ''
     - title: Apply
@@ -195,7 +198,8 @@ schools:
       url: "/new-student-referral/"
   active: true
   tracks:
-  - Full Stack Web Development
+  - name: Full Stack Web Development
+    stripe_product_sku: sku_Gh15pSUXsadQ2f
   url: https://circlecoding.com
   phone: 12142471477
   callrail_company_id: 946317831
@@ -227,6 +231,8 @@ schools:
     date: April 13
     days: Monday/Wednesday
     time: 6:30 - 9:00pm
+    length: 36 weeks
+    price: "$1,000 deposit + $250 / 2 weeks"
   primary_light_color: rgb(78, 188, 231)
   primary_dark_color: rgb(0, 0, 0)
   secondary_light_color: rgb(207, 222, 98)
@@ -314,8 +320,10 @@ schools:
       class: btn btn-round text-white cta-gradient py-1 px-6
     footer: []
   tracks:
-  - Full Stack Web Development
-  - WordPress Fundamentals
+  - name: Full Stack Web Development
+    stripe_product_sku: ''
+  - name: WordPress Fundamentals
+    stripe_product_sku: sku_GehsFmoR7syM1v
   url: https://austincodingacademy.com
   phone: 15128278498
   callrail_company_id: 915131377
@@ -345,19 +353,14 @@ schools:
     postal: 78752
     url: https://goo.gl/maps/NssXRytdtdezgKft7
   start_dates:
-  - location: Highland Campus
-    course: Wordpress Fundamentals
-    date: February 10th
-    days: Monday/Wednesday
-    time: 6:30 - 9:00pm
   - location: Capital Factory Campus
     course: Full Stack Web Development
-    date: February 17th
+    date: March 30th
     days: Monday/Wednesday
     time: 6:30 - 9:00pm
-  announcement: Call us at <a class='promo-link' href='tel:{{ school.phone | phone_number
-    }}'>{{ school.phone | phone_number }}</a> to learn more about our upcoming WordPress
-    Fundamentals Course!
+    length: 36 weeks
+    price: "$$1,000 deposit + $250 / 2 weeks"
+  announcement: ''
   linkedin: ''
   instructors:
   - name: Dinh Huynh
@@ -572,24 +575,23 @@ schools:
     - link: https://github.com/seanphilippi
       icon: fab fa-github
       hex: "#303133"
-  - name: Georgina Elizondo Griffin
-    title: Admissions Representative
-    email: georgina@austincodingacademy.com
-    bio: I moved to the States from Mexico when I was 3 years old, and have grown
-      up in Texas ever since. I grew up with a lot of travel and adventure and was
-      taught by my father how to ski and scuba dive. I graduated from UT Austin in
-      2015, married a software engineer and now am a mom of a needy dog and an ambivalent
-      cat. I&#8217;m fascinated by the tech scene in Austin and love the opportunity
-      to collaborate with innovative people and teams. I&#8217;m happy to be working
-      with ACA and contributing to this amazing and supportive community!
-    links:
-    - link: mailto:georgina@austincodingacademy.com
-      icon: fas fa-at
-      hex: "#303133"
-    - link: https://www.linkedin.com/in/georgina-elizondo/
-      icon: fab fa-linkedin
-      hex: "#0077b5"
   tutors:
+  - name: Jacob Schaefer
+    id: "3637848"
+    skills:
+    - Web 101
+    - JS 211
+    - JS 311
+    - JS 411
+    email: jacobs0408@yahoo.com
+    location:
+    - austinDowntown
+    - austinNorth
+    - any
+    calendar: https://acaappointment.as.me/?calendarID=3637848
+    virtual: https://meet.google.com/obf-munm-boo
+    rocketchat: https://chat.austincodingacademy.com/direct/jacobschaefer-1281
+    gravatar_email: jacobs0408@yahoo.com
   - name: Eddie Crochet
     id: "8858762"
     skills:
@@ -605,7 +607,7 @@ schools:
     calendar: https://acaappointment.as.me/schedule.php?calendarID=2705640
     virtual: https://meet.google.com/ixh-phuz-tre
     rocketchat: https://chat.austincodingacademy.com/direct/eddiecrochet-939
-    email: ''
+    email: eddiecrochet1994@gmail.com
   - name: Gabe Flores
     id: "9935070"
     skills:
@@ -619,7 +621,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=2932736
     virtual: https://meet.google.com/cyb-qjve-zsv
     rocketchat: https://chat.austincodingacademy.com/direct/gabeflores-958
-    email: ''
+    email: jflores353@gmail.com
   - name: Wes Garbee
     id: "10004148"
     skills:
@@ -632,7 +634,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=2946352
     virtual: https://meet.google.com/nrm-efsq-vra
     rocketchat: https://chat.austincodingacademy.com/direct/wes.g.garbee
-    email: ''
+    email: wgarbee@gmail.com
   - name: Joseph Hauger
     id: "11633790"
     skills:
@@ -646,7 +648,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=3313110
     virtual: https://meet.google.com/yge-onis-dqq
     rocketchat: https://chat.austincodingacademy.com/direct/josephhauger-1208
-    email: ''
+    email: joseph.hauger@gmail.com
   - name: Grant Kee
     id: "11906329"
     skills:
@@ -662,7 +664,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=3374637
     virtual: https://meet.google.com/izk-uxfh-fhx
     rocketchat: https://chat.austincodingacademy.com/direct/grantkee-1322
-    email: ''
+    email: grant.d.kee@gmail.com
   - name: Sky Mendes
     id: "11156726"
     skills:
@@ -675,7 +677,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=3192771
     virtual: https://meet.google.com/iom-amef-qjc
     rocketchat: https://chat.austincodingacademy.com/direct/skymendes-1123
-    email: ''
+    email: skymendesross@gmail.com
   - name: Sean Philippi
     id: "8858776"
     skills:
@@ -689,7 +691,7 @@ schools:
     calendar: https://acaappointment.as.me/schedule.php?calendarID=2705627
     virtual: https://meet.google.com/gee-rmgn-ocm
     rocketchat: https://chat.austincodingacademy.com/direct/sean.philippi
-    email: ''
+    email: sean.philippi@gmail.com
   - name: Darwin Risser
     id: "9916197"
     skills:
@@ -704,50 +706,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=2928936
     virtual: https://meet.google.com/znv-fowt-rcm
     rocketchat: https://chat.austincodingacademy.com/direct/risser.darwin
-    email: ''
-  - name: Emilio Sanchez
-    id: "11141953"
-    skills:
-    - Web 101
-    - JS 211
-    - JS 311
-    - JS 411
-    gravatar_email: sanchez.emilio483@gmail.com
-    location:
-    - austinNorth
-    calendar: https://acaappointment.as.me/?calendarID=3188939
-    virtual: https://meet.google.com/yxu-czvr-bsv
-    rocketchat: https://chat.austincodingacademy.com/direct/emiliosanchez-1176
-    email: ''
-  - name: Landon Taylor
-    id: "11905941"
-    skills:
-    - Web 101
-    - JS 211
-    - JS 311
-    - JS 411
-    gravatar_email: landon.autumn.taylor@gmail.com
-    location:
-    - austinNorth
-    calendar: https://acaappointment.as.me/?calendarID=3374524
-    virtual: https://meet.google.com/hei-swxg-kwk
-    rocketchat: https://chat.austincodingacademy.com/direct/LandonTaylor
-    email: ''
-  - name: Blaise Angoma
-    id: "9259748"
-    skills:
-    - C# Students &amp; Grads
-    - JS Grads Only
-    limitation: 
-    gravatar_email: angomablaise@gmail.com
-    location:
-    - any
-    - austinNorth
-    - austinDowntown
-    calendar: https://acaappointment.as.me/schedule.php?calendarID=2795465
-    virtual: https://meet.google.com/gmk-eciw-rpc
-    rocketchat: https://chat.austincodingacademy.com/direct/blaiseangoma-1285
-    email: ''
+    email: risser.darwin@gmail.com
   - name: Olamide Kolawole
     id: "9299635"
     skills:
@@ -762,51 +721,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=2803756
     virtual: https://meet.google.com/ogc-dsza-fkr
     rocketchat: https://chat.austincodingacademy.com/direct/olamidekolawole-1293
-    email: ''
-  - name: Matt Cameron
-    id: "8181476"
-    skills:
-    - Full-stack mentor
-    limitation: Graduates Only
-    gravatar_email: cameron.matt@gmail.com
-    location:
-    - any
-    - austinNorth
-    - austinDowntown
-    calendar: https://acaappointment.as.me/?calendarID=2550362
-    virtual: https://meet.google.com/asu-mond-ypy
-    rocketchat: https://chat.austincodingacademy.com/direct/matthewcameron-917
-    email: ''
-  - name: Greg Swan
-    id: "9299558"
-    skills:
-    - JS full-stack
-    limitation: Graduates Only
-    gravatar_email: greg.c.swan@gmail.com
-    location:
-    - any
-    - austinNorth
-    - austinDowntown
-    calendar: https://acaappointment.as.me/?calendarID=2803741
-    virtual: https://meet.google.com/cyf-cqkg-fzj
-    rocketchat: https://chat.austincodingacademy.com/direct/greg.swan
-    email: ''
-  - name: Eric Barrs
-    id: "8069545"
-    skills:
-    - Web 101
-    - JS 211
-    - JS 311
-    limitation: 
-    gravatar_email: eric@austincodingacademy.com
-    location:
-    - any
-    - austinNorth
-    - austinDowntown
-    calendar: https://acaappointment.as.me/?calendarID=2522414
-    virtual: https://meet.google.com/dvg-kciy-jty
-    rocketchat: https://chat.austincodingacademy.com/direct/ericbarrs-913
-    email: ''
+    email: olamshin@gmail.com
   logo: "/assets/uploads/logo-austincodingacademy-white.png"
   seal: "/assets/uploads/logo-austincodingacademy-favicon.png"
 - key: lubbockcodingacademy
@@ -821,7 +736,8 @@ schools:
   secondary_dark_color: rgb(130, 202, 156)
   hero_overlay_color: rgb(45, 47, 119)
   tracks:
-  - Full Stack Web Development
+  - name: Full Stack Web Development
+    stripe_product_sku: ''
   url: https://lubbockcodingacademy.com
   phone: 18069055021
   callrail_company_id: 740142126
@@ -848,7 +764,14 @@ schools:
     header: []
     footer: []
   announcement: ''
-  start_dates: []
+  start_dates:
+  - course: Full Stack Web Development
+    date: April 7th
+    time: 6:30-9:00pm
+    length: 36 weeks
+    price: "$460 deposit + $225 / 2 weeks"
+    location: South Plains College
+    days: Tuesday/Thursday
   linkedin: ''
   instructors:
   - name: Denise Bostwick
@@ -907,24 +830,27 @@ schools:
   - name: Ari Cohen
     id: "12986490"
     skills:
+    - For advanced students only
     - Mentor
-    email: 'scohe001@ucr.edu '
+    gravatar_email: 'scohe001@ucr.edu '
     location:
     - southPlains
     calendar: https://acaappointment.as.me/?appointmentType=12986490
     virtual: https://meet.google.com/hno-vbsf-qqs
-    rocketchat: "@Ari-Cohen"
+    rocketchat: https://chat.austincodingacademy.com/direct/Ari-Cohen
+    email: 'scohe001@ucr.edu '
   - name: Amy Troutman
     id: "12815678"
     skills:
     - Web 101
     - C# 221
-    email: amyrtroutman@gmail.com
+    gravatar_email: amyRtroutman@gmail.com
     location:
     - southPlains
     calendar: https://acaappointment.as.me/?calendarID=3579323
     virtual: https://meet.google.com/xkt-gjzv-skc
     rocketchat: https://chat.austincodingacademy.com/direct/amytroutman-1479
+    email: amyRtroutman@gmail.com
   - name: Anthony Perez
     id: "12508495"
     skills:
@@ -938,7 +864,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=3510262
     virtual: https://meet.google.com/xmd-whtm-veg
     rocketchat: https://chat.austincodingacademy.com/direct/anthonyperez-1373
-    email: ''
+    email: antrp93@gmail.com
   - name: Steven Schoor
     id: "11929350"
     skills:
@@ -952,7 +878,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=3380476
     virtual: https://meet.google.com/ihn-awgr-ahf
     rocketchat: https://chat.austincodingacademy.com/direct/stevenschoor-1214
-    email: ''
+    email: steven_schoor@yahoo.com
   - name: Lindsay Wilson
     id: "11324082"
     skills:
@@ -965,7 +891,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=3237866
     virtual: https://meet.google.com/ium-axum-djx
     rocketchat: https://chat.austincodingacademy.com/direct/lindsaywilson-1324
-    email: ''
+    email: lindsay.89@outlook.com
   - name: Johnny Reina
     id: "10233633"
     skills:
@@ -978,7 +904,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=2992556
     virtual: https://meet.google.com/swm-maog-rak
     rocketchat: https://chat.austincodingacademy.com/direct/johnny.reina
-    email: ''
+    email: johnny.r.reina@gmail.com
   team:
   - name: Chris Lofton
     title: CEO
@@ -1078,7 +1004,8 @@ schools:
       class: btn btn-round text-white cta-gradient py-1 px-6
     footer: []
   tracks:
-  - Full Stack Web Development
+  - name: Full Stack Web Development
+    stripe_product_sku: sku_GfZX8vJVCrti2k
   url: https://texastechcodingacademy.com
   phone: 18302567665
   callrail_company_id: 457867625
@@ -1108,8 +1035,10 @@ schools:
     days: Monday/Wednesday
     date: June 1st
     time: 6:30 - 9:00pm
+    length: 36 weeks
+    price: "$1,000 deposit + $250 / 2 weeks"
   linkedin: ''
-  preapplication_form_guid: '084862f2-c78d-4530-a519-959d5801138c'
+  preapplication_form_guid: a733ed21-e7d7-4037-9aa0-b3105da0a846
   instructors: []
   team:
   - name: Chris Lofton
@@ -1189,7 +1118,7 @@ schools:
   tutors: []
   logo: "/assets/uploads/logo-texastechcodingacademy.png"
   seal: "/assets/uploads/logo-texastechcodingacademy-favicon.png"
-  acuity_scheduling_src: ''
+  acuity_scheduling_src: https://acaappointment.as.me/schedule.php?appointmentType=13019139
 logos:
 - name: Indeed
   width: 721px

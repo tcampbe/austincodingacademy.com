@@ -1,4 +1,8 @@
 <style>
+  .matrix-container {
+    animation: disappear 15s ease-in-out;
+    animation-fill-mode: forwards;
+  }
   .typewriter-container {
     background: #000;
     padding-top: 5em;
@@ -72,6 +76,18 @@
     }
     100% {
       opacity: 0;
+    }
+  }
+
+  @keyframes disappear {
+    0% {
+      z-index: 10;
+    }
+    99% {
+      z-index: 10;
+    }
+    100% {
+      z-index: -1;
     }
   }
 
@@ -220,7 +236,7 @@
     }
   }
 </style>
-<div class="position-absolute matrix-container" style="z-index: 30">
+<div class="position-absolute matrix-container">
 
   <div class="matrix">
     <div class="d1 c1 de" style="left:6%;">circl<span>e</span>codingaca<span>d</span>emy</div>
