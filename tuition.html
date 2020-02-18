@@ -160,6 +160,25 @@ schools:
     options: []
 - key: texastechcodingacademy
   sections:
+  - title: Full Stack Web Development Track
+    description: There are four courses ($1,990/course) in our Full Stack Web Development
+      Track, as well as a job placement class (free to all graduates). Find out how
+      we make tuition affordable with our different payment options below.
+    options:
+    - title: Pay Up Front
+      description: Alternatively, if you are committed to going through the entire
+        program, you can cover the entire cost of tuition for the program upfront
+        if you are able to do so.
+      price_header: Total Price
+      price: "$9,960"
+      price2: ''
+    - title: "{{ school.name }} Payment Plan (Budget Option)"
+      description: "With our new payment plan, you can get started with {{ school.name }} for just $460 up-front. After you begin classes you’ll make bi-weekly
+        payments of $225 for 18-months, for a total program cost of $10,360. No interest
+        and no penalty for prepayment!"
+      price_header: Details
+      price: "$460"
+      price2: "$225" 
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Texas Tech University Coding
       Academy’s Full Stack Web Development Track and discuss tuition with a follow-up
@@ -168,7 +187,7 @@ schools:
     url: "/apply"
     style: text-white btn btn-round bg-primary-dark hover-white center mt-4
     options: []
-
+  
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
