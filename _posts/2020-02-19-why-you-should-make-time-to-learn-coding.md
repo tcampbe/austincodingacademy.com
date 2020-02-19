@@ -23,7 +23,7 @@ author_name: Texas Tech Coding Academy
 author_email: info@texastechcodingacademy.com
 school_keys:
 - texastechcodingacademy
-img: "/assets/uploads/make-time-for-web-development-training.webp"
+img: "/assets/uploads/make-time-for-web-development-training.jpg"
 
 ---
 _This piece was written by Erica Freedman, Content Specialist at SwitchUp._
