@@ -200,95 +200,35 @@ schools:
   {% endfor %}
 {% endif %}
 
-<main class="mt-90 pt-1 pb-5">
-  <div class="my-10 container">
-    <h1 class="text-center font-family-alt font-weight-bold display-5">
-      Tuition
-    </h1>
-    <p class="text-center display-6">
-      We keep it simple.
-    </p>
+<main class="pb-5">
+  <div class="container-fluid bg-light text-center py-3 my-5">
+    <h2>Tuition Options</h2>
   </div>
   {% for section in school.sections %}
-    <section class="mt-5 mb-10">
-      {% if section.button %}
-        <div class="container-fluid text-center py-3 my-5">
-          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-            {{ section.title | liquify }}
-          </h2>
-          <p class="m-0 mx-auto mw-600">
-            {{ section.description | liquify }}
-          </p>
-          <!-- Apply button -->
-          <!-- htmllint preset="none" -->
-          <a class="{{ section.style | liquify }} hover-white" href="{{ section.url }}">
-          <!-- htmllint preset="$previous" -->
-            <span class="text-white hover-white">
-              {{ section.button | liquify }}
-            </span>
-          </a>
-        </div>
-      {% else %}
-        <div class="container-fluid bg-light text-center py-3 my-5">
-          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-            {{ section.title | liquify }}
-          </h2>
-          <p class="m-0 mx-auto mw-600">
-            {{ section.description | liquify }}
-          </p>
-        </div>
-        <div class="container">
-          {% for option in section.options %}
-            <div class="row my-5">
-              <div class="col-md-8">
-                <h3 class="display-7 border-bottom">
-                  {{ option.title | liquify }}
-                </h3>
-                <p>
-                  {{ option.description | liquify }}
-                </p>
-              </div>
-              <div class="col-md-4 px-5">
-                {% if option.price_header == 'Details' %}
-                  <div class="text-center">
-                    <h5>
-                      {{ option.price_header | liquify }}
-                    </h5>
-                    <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
-                      <div class="display-6">
-                        {{ option.price | liquify }} <span style="font-size: 1rem;">to start</span>
-                      </div>
-                      <div class="display-8">
-                        +<br>
-                        {{ option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
-                      </div>
-                    </div>
-                  </div>
-                {% elsif option.price.size > 0 %}
-                  <div class="text-center">
-                    <h5>
-                      {{ option.price_header | liquify }}
-                    </h5>
-                    <p
-                      class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6"
-                      style="min-width: 155px;"
-                    >
-                      {{ option.price | liquify }}
-                    </p>
-                  </div>
-                {% elsif option.cta %}
-                  <div class="text-center">
-                    <h5>
-                      Learn More
-                    </h5>
-                    {{ option.cta | liquify }}
-                  </div>
-                {% endif %}
-              </div>
+    <div class="row p-5 border justify-content-around">
+      {% for option in section.options %}
+        <div class="col-sm-6 col-md-3 border p-2">
+          <div class="shadow py-3 bg-light">
+            <div class="bg-dark" style="height: 100px">
+
             </div>
-          {% endfor %}
+            <div class="bg-primary-light p-2 my-2 d-flex justify-content-center">
+              {{ option.title }}
+            </div>
+            <div class="d-flex justify-content-center">
+              {% if option.price_header == "Total Price" %}
+                <h2>{{ option.price }}</h2>
+              {% elsif option.price_header == "Details" %}
+                <h2>{{ option.price2 }} bi-weekly payments</h2>
+              {% endif %}
+            </div>
+            <div class="d-flex justify-content-center">
+              <p>{{ option.description }}</p>
+            </div>
+          </div>
         </div>
-      {% endif %}
-    </section>
+      {% endfor %}
+    </div>
   {% endfor %}
+
 </main>
