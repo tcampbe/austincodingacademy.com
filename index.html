@@ -156,7 +156,7 @@ schools:
         {{ page.subheading | liquify }}
       </p>
       <div class="d-flex justify-content-start">
-        <div class="d-md-none mr-2">
+        <div class="mr-2">
           {% include btn-apply.html %}
          </div>
         {% if school.key == 'austincodingacademy' %}
@@ -206,11 +206,11 @@ schools:
         {% endif %}
         <a
           class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
-          href="/courses/web-development"
+          href="/course-guide/"
           rel="noopener"
           href="#"
         >
-          Learn More
+          Course Guide
         </a>
        
       </div>
@@ -243,9 +243,6 @@ schools:
       <p>This browser does not support the video element.</p>
     </div>
   </amp-video>
-  {% if site.key == 'circlecoding' and site.baseurl != '/amp'%}
-    {% include matrix.html %}
-  {% endif %}
 </div>
 
 <main>
