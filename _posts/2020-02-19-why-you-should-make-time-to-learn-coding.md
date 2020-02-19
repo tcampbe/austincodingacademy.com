@@ -8,8 +8,8 @@ description: 'Web Development is an all-encompassing term that focuses on the de
   social networking platforms, and electronic business platforms. Individuals trained
   in this field may work in web content development, web engineering, cybersecurity,
   or design. '
-created_at: 2020-02-19 10:00:00 -0600
-updated_at: 2020-02-19 11:00:00 -0600
+created_at: 2020-02-19T16:00:00.000+00:00
+updated_at: 2020-02-19T17:00:00.000+00:00
 categories: []
 excerpt: According to the Bureau of Labor Statistics, Web Developers across the United
   States make an average of $67,990 annually. This increasingly popular career path
@@ -48,9 +48,9 @@ In this day and age, virtually every business and individual contractor needs a 
 
 [**Some articles**](https://www.forbes.com/sites/quora/2017/04/10/five-reasons-why-web-development-is-a-better-career-path-than-machine-learning/#378689f53ddf) have even claimed that learning Web Development is more valuable than learning Machine Learning for a few reasons: There are countless jobs, it is a simple and straightforward working process, it is creative and fun, and is also extremely lucrative. This linear career path makes room for learning new working systems and trends, while also leaving space for creative liberty and thought.
 
-## Circle Coding Academy Web Development Program
+## Texas Tech Coding Academy Web Development Program
 
-Circle Coding Academy's Full Stack Web Development Program is designed to take students from no experience to job-ready web developers in just 36 weeks of part-time, evening classes.
+Texas Tech Coding Academy's Full Stack Web Development Program is designed to take students from no experience to job-ready web developers in just 36 weeks of part-time, evening classes.
 
 **Web 101: Intro to Web (8 Weeks)**
 
