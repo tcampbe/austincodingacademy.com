@@ -2,17 +2,9 @@
   <h2 class="font-family-alt font-weight-bold text-center display-6">
     Our Graduates Are Working At
   </h2>
-  <div id="logo-section" class="d-flex w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row justify-content-center align-items-center">
-    <amp-carousel
-      width="600px"
-      height="300px"
-      type="slides"
-      autoplay
-      controls="false"
-      delay="1500"
-    >
+  <div id="logo-section" class="d-flex w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row h-75 border">
       {% for logo in settings.logos %}
-        <div class="d-flex align-items-center justify-content-center">
+        <div class="h-100 w-25 p-3 border">
           <amp-img
             width="{{ logo.width }}"
             height="{{ logo.height }}"
@@ -20,9 +12,9 @@
             class="w-100 h-auto mw-14r"
             src="{{ logo.src | liquify }}"
             alt="{{ logo.name | liquify }}"
+            
           ></amp-img>
         </div>
       {% endfor %}
-    </amp-carousel>
   </div>
 </section>
