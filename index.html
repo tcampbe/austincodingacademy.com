@@ -160,7 +160,7 @@ schools:
           {% include btn-apply.html %}
          </div>
         {% if school.key == 'austincodingacademy' %}
-        <button class="btn btn-outline-light btn-round mr-2 px-2 d-md-none"
+        <button class="btn btn-outline-light {% if school.inverted == false %}btn-round{% endif %} mr-2 px-2 d-md-none"
           on="tap:call-us"
           role="button"
           href="#"
@@ -178,7 +178,7 @@ schools:
           role="dialog"
         >
           <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center">
-            <a class="my-5 btn btn-light btn-round mr-2 d-md-none w-75"
+            <a class="my-5 btn btn-light {% if school.inverted == false %}btn-round{% endif %} mr-2 d-md-none w-75"
               href="/courses/web-development"
               rel="noopener"
             >
@@ -187,7 +187,7 @@ schools:
             <h4 class="text-white display-7 border-top border-bottom">
               OR
             </h4>
-            <a class="my-5 btn btn-light btn-round mr-2 d-md-none w-75"
+            <a class="my-5 btn btn-light {% if school.inverted == false %}btn-round{% endif %} mr-2 d-md-none w-75"
               href="/courses/wordpress-fundamentals"
               rel="noopener"
             >
@@ -196,7 +196,7 @@ schools:
           </div>
         </amp-lightbox>
         {% else %}
-          <a class="btn btn-outline-light btn-round mr-2 px-2 d-md-none"
+          <a class="btn btn-outline-light {% if school.inverted == false %}btn-round{% endif %} mr-2 px-2 d-md-none"
             href="/courses/web-development"
             rel="noopener"
             href="#"
@@ -205,7 +205,7 @@ schools:
           </a>
         {% endif %}
         <a
-          class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
+          class="btn btn-outline-light {% if school.inverted == false %}btn-round{% endif %} mr-2 d-none d-md-block"
           href="/course-guide/"
           rel="noopener"
           href="#"

@@ -176,7 +176,7 @@ a {
   border-color: #2d2f77;
 }
 
-.btn-round {
+.{% if school.inverted == false %}btn-round{% endif %} {
   border-radius: 2rem;
 }
 

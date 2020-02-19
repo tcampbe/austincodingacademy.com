@@ -32,7 +32,7 @@ schools:
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
     options: []
   - title: Individual Classes &amp; Electives
     description: Have previous experience as a developer or just trying to learn a
@@ -71,7 +71,7 @@ schools:
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
     options: []
   - title: WordPress Fundamentals
     description: We offer two options to cover the cost of tuition for our 8-week
@@ -137,7 +137,7 @@ schools:
         simply make your $490 deposit and begin monthly payments towards tuition over
         the course of the loan. Learn more on Texas Tech Credit Union’s website.
       cta: <a href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan"
-        rel="noopener" class="btn btn-round bg-primary-dark text-white hover-white
+        rel="noopener" class="btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark text-white hover-white
         mt-2" target="_blank"><span class="text-white hover-white">Financing Options</span>
         <span class="text-white hover-white fas fa-arrow-right small"></span></a>
       price_header: ''
@@ -149,7 +149,7 @@ schools:
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
     options: []
 - key: texastechcodingacademy
   sections:
@@ -178,7 +178,7 @@ schools:
       call with your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
     options: []
   
 ---
