@@ -54,7 +54,7 @@ Texas Tech Coding Academy's Full Stack Web Development Program is designed to ta
 
 **Web 101: Intro to Web (8 Weeks)**
 
-In the first course of Circle Coding Academy's Full Stack Web Development Program, students will learn the basics of web development, building websites using HTML & CSS and learning how to deploy them to the web using Git and GitHub.
+In the first course of Texas Tech Coding Academy's Full Stack Web Development Program, students will learn the basics of web development, building websites using HTML & CSS and learning how to deploy them to the web using Git and GitHub.
 
 **JavaScript 211: Language Basics (8 Weeks)**
 
