@@ -179,7 +179,7 @@ schools:
     <div class="ml-2">
       <!-- htmllint preset="none" -->
       <a
-        class="btn {% if school.inverted == false %}btn-round{% endif %} btn-outline-light {{ include.class | liquify }}"
+        class="btn {% if school.inverted != true %}btn-round{% endif %} btn-outline-light {{ include.class | liquify }}"
         on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
@@ -443,7 +443,7 @@ schools:
     <!-- LEARN MORE -->
     <div class="container-fluid d-flex flex-row justify-content-center pb-4 mb-6">
       <a
-        class="btn cta-gradient hover-white {% if school.inverted == false %}btn-round{% endif %} mr-2 mr-sm-4 text-white d-flex justify-content-center"
+        class="btn cta-gradient hover-white {% if school.inverted != true %}btn-round{% endif %} mr-2 mr-sm-4 text-white d-flex justify-content-center"
         href="{{ role.learn_more_url }}"
       >
         <span class="text-white hover-white">

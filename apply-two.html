@@ -352,7 +352,7 @@ schools:
         {% include fields.html fields=edu_work_fields %}
 
         <div class="col-12 mb-4 d-flex justify-content-center">
-          <button class="btn {% if school.inverted == false %}btn-round{% endif %}text-white bg-primary-dark" type="Submit">
+          <button class="btn {% if school.inverted != true %}btn-round{% endif %}text-white bg-primary-dark" type="Submit">
             Submit
           </button>
         </div>

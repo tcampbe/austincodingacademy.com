@@ -17,7 +17,7 @@
 {% endif %}
 {% if page.contact_lightbox %}
 <a href="#"
-  class="btn {% if school.inverted == false %}btn-round{% endif %} text-white bg-primary-dark hover-white mx-auto"
+  class="btn {% if school.inverted != true %}btn-round{% endif %} text-white bg-primary-dark hover-white mx-auto"
   on="tap:contact-lightbox"
   role="button"
   tabindex="0"
@@ -71,7 +71,7 @@
           <div class="text-center col-sm-12 mb-4">
             <button
               type="submit"
-              class="text-white btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark hover-white"
+              class="text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white"
             >
               Send
             </button>

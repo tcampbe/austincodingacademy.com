@@ -214,7 +214,7 @@ schools:
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
 - key: circlecoding
   courses:
   - code: Web 101
@@ -326,7 +326,7 @@ schools:
       make your $490 deposit and begin monthly payments towards tuition over the course
       of the loan. Learn more on Texas Tech Credit Union’s website.
     cta: <a href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan"
-      rel="noopener" class="btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark text-white hover-white mt-2"
+      rel="noopener" class="btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark text-white hover-white mt-2"
       target="_blank"><span class="text-white hover-white">Financing Options</span>
       <span class="text-white hover-white fas fa-arrow-right small"></span></a>
 - key: texastechuniversitycodingacademy
@@ -368,7 +368,7 @@ schools:
     <div class="mr-2">
       <!-- htmllint preset="none" -->
       <a
-        class="btn {% if school.inverted == false %}btn-round{% endif %} btn-outline-light {{ include.class | liquify }}"
+        class="btn {% if school.inverted != true %}btn-round{% endif %} btn-outline-light {{ include.class | liquify }}"
         on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
@@ -636,7 +636,7 @@ schools:
                 @ {{ success.company }}
               </div>
               <a
-                class="btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark text-white text-center hover-white mt-2 mb-3"
+                class="btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark text-white text-center hover-white mt-2 mb-3"
                 style="width: 42px;"
                 href="{{ success.learn_url }}"
                 rel="noopener"

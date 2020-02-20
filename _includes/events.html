@@ -22,7 +22,7 @@
             {{ event.start_date }} | {{ event.start_time }}
           </p>
         </div>
-        <a class="btn {% if school.inverted == false %}btn-round{% endif %} bg-primary-dark text-white"
+        <a class="btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark text-white"
           href="{{ event.url }}"
           rel="noopener"
           target="_blank"

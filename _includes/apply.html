@@ -48,7 +48,7 @@
 
           <div class="mb-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
-            <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted == false %}btn-round{% endif %} {{ include.class | liquify }}" >
+            <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
             <!-- htmllint preset="$previous" -->
               Continue Application
             </button>

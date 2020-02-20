@@ -407,7 +407,7 @@ form_fields:
         <b>Set up a time to discuss your training needs.</b>
       </h5>
       <a
-        class="btn bg-primary-dark hover-white my-4 {% if school.inverted == false %}btn-round{% endif %} text-white"
+        class="btn bg-primary-dark hover-white my-4 {% if school.inverted != true %}btn-round{% endif %} text-white"
         href="https://acaappointment.as.me/schedule.php?calendarID=3049624"
         rel="noopener"
         target="_blank"
@@ -477,7 +477,7 @@ form_fields:
 
           <!-- Input -->
           <div class="col-12 d-flex align-items-end justify-content-center form-group">
-            <button type="submit" class="btn {% if school.inverted == false %}btn-round{% endif %} btn-sm-block text-white bg-primary-dark hover-white">
+            <button type="submit" class="btn {% if school.inverted != true %}btn-round{% endif %} btn-sm-block text-white bg-primary-dark hover-white">
               Submit
             </button>
           </div>
