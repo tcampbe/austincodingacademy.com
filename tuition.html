@@ -3,6 +3,8 @@ layout: default
 permalink: "/tuition/"
 head_title: Affordable Tuition | Software Engineering Classes at {{ school.name }}
 title: Tuition
+amp_components:
+- amp-youtube
 schools:
 - key: circlecoding
   sections:
@@ -34,19 +36,6 @@ schools:
     url: "/apply"
     style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
     options: []
-  - title: Individual Classes &amp; Electives
-    description: Have previous experience as a developer or just trying to learn a
-      bit of coding? You’re welcome to take any of the individual courses from the
-      Full Stack Web Development Track or one of our Elective seminars (coming soon).
-      While individual courses won’t prepare you to land a job as a developer, you
-      can still learn useful skills.
-    options:
-    - title: Individual Courses
-      description: The cost of an Individual 8-week course with Circle Coding Academy
-        is $2,990. While our Full Stack Web Development Track is designed to prepare students to become developers and help them find a job, individual courses may be appropriate for students who already have a coding background or aren’t looking for a career as a web developer.
-      price_header: Course Price
-      price: "$2,990"
-      price2: ''
 - key: austincodingacademy
   sections:
   - title: Full Stack Web Development Track
@@ -200,14 +189,14 @@ schools:
   {% endfor %}
 {% endif %}
 
-<main class="pb-5">
-  <div class="container-fluid bg-light text-center py-3 my-5">
+<main>
+  <div class="container-fluid bg-light text-center py-5">
     <h2>Tuition Options</h2>
   </div>
   {% for section in school.sections %}
-    <div class="row p-5 border justify-content-around">
+    <div class="row p-5 justify-content-center">
       {% for option in section.options %}
-        <div class="col-sm-6 col-md-3 border p-2">
+        <div class="col-sm-6 col-md-3 border p-2 mx-4 my-4">
           <div class="shadow py-3 bg-light">
             <div class="bg-dark" style="height: 100px">
 
@@ -230,5 +219,35 @@ schools:
       {% endfor %}
     </div>
   {% endfor %}
-
+  <div class="bg-light py-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-4 p-4">
+        <amp-youtube
+          data-videoid="AVMkl06b5IE"
+          width="266.656px"
+          height="150px"
+          tabindex="0"
+          role="presentation"
+          layout="responsive"
+          title="Lilian Situ video review of Austin Coding Academy"
+        >
+        </amp-youtube>
+      </div>
+      <div class="mt-3 d-flex justify-content-center align-items-center col-12 col-md-4">
+        <blockquote class="blockquote w-75">
+          <p>I've always been interested in programming and being able to create something so being able to take what I learned at ACA and get a job with it ... was one of the best decisions I've made.
+          </p>
+          <footer class="blockquote-footer text-dark display-9 text-right mt-1">Lillian Situ, <cite title="Title">Software Engineer, data.world</cite></footer>
+        </blockquote>
+      </div>
+      <!-- <div class="d-flex column col-4">
+        <div>
+          <h2 class="display-5">Lillian Situ</h2>
+        </div>
+        <div>
+          <p>I've always been interested in programming and being able to create something so being able to take what I learned at ACA and get a job with it ... was one of the best decisions I've made.</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
 </main>
