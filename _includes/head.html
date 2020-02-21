@@ -56,7 +56,14 @@
 {% include google-tag-manager-head.html %}
 
 {% if site.baseurl == '/amp' %}
-  <link rel="canonical" href="{{ school.url }}{{ page.url }}">
+  {% if page.canonical_link != nil %}
+    <link rel="canonical"  href="{{ page.canonical_link }}">
+  {% else %}
+    <link rel="canonical" href="{{ school.url }}{{ page.url }}">
+  {% endif %}
 {% else %}
   <link rel="amphtml" href="{{ school.url }}/amp{{ page.url }}">
+  {% if page.canonical_link != nil %}
+    <link rel="canonical"  href="{{ page.canonical_link }}">
+  {% endif %}
 {% endif %}
