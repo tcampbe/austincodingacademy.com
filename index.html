@@ -156,63 +156,18 @@ schools:
         {{ page.subheading | liquify }}
       </p>
       <div class="d-flex justify-content-start">
-        <div class="mr-2">
-          {% include btn-apply.html %}
-         </div>
-        {% if school.key == 'austincodingacademy' %}
-        <button class="btn btn-outline-light {% if school.inverted != true %}btn-round{% endif %} mr-2 px-2 d-md-none"
-          on="tap:call-us"
-          role="button"
-          href="#"
-          tabindex="0"
-        >
-         Get More Info
-        </button>
-        <amp-lightbox
-          id="call-us"
-          class="lightbox"
-          layout="nodisplay"
-          scrollable
-          on="tap:call-us.close"
-          tabindex="0"
-          role="dialog"
-        >
-          <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center">
-            <a class="my-5 btn btn-light {% if school.inverted != true %}btn-round{% endif %} mr-2 d-md-none w-75"
-              href="/courses/web-development"
-              rel="noopener"
-            >
-              Full Stack Web Development
-            </a>
-            <h4 class="text-white display-7 border-top border-bottom">
-              OR
-            </h4>
-            <a class="my-5 btn btn-light {% if school.inverted != true %}btn-round{% endif %} mr-2 d-md-none w-75"
-              href="/courses/wordpress-fundamentals"
-              rel="noopener"
-            >
-              Wordpress Fundamentals
-            </a>
-          </div>
-        </amp-lightbox>
-        {% else %}
-          <a class="btn btn-outline-light {% if school.inverted != true %}btn-round{% endif %} mr-2 px-2 d-md-none"
-            href="/courses/web-development"
-            rel="noopener"
-            href="#"
-          >
-            Get More Info
-          </a>
-        {% endif %}
         <a
-          class="btn {% if school.inverted != true %}btn-outline-light btn-round{% else %}btn-outline-dark{% endif %} mr-2 d-none d-md-block"
-          href="/course-guide/"
-          rel="noopener"
-          href="#"
-        >
-          Course Guide
-        </a>
-       
+        class="btn {% if school.inverted != true %}btn-outline-light btn-round{% else %}btn-outline-dark{% endif %} mr-2 d-block"
+        href="/course-guide/"
+        rel="noopener"
+        href="#"
+      >
+        Course Guide
+      </a>
+     
+        <!-- <div class="mr-2"> -->
+          {% include btn-apply.html %}
+         <!-- </div> -->
       </div>
     </div>
   </div>
