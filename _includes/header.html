@@ -125,7 +125,7 @@
 
           <!-- Responsive Toggle Button -->
           <div class="d-flex flex-grow-0 align-items-center">
-            <button class="btn btn-link d-flex text-white bg-brand-primary-dark justify-content-end d-lg-none"
+            <button class="btn btn-link d-flex {% if school.inverted == true %}text-dark{% else %}text-white{% endif %} bg-brand-primary-dark justify-content-end d-lg-none"
               on="tap:sidebar.open" tabindex="0" role="button">
               <i class="fas fa-bars fa-2x" aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
             </button>
