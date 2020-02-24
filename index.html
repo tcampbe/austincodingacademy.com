@@ -157,7 +157,7 @@ schools:
       </p>
       <div class="d-flex justify-content-start">
         <a
-        class="btn {% if school.inverted != true %}btn-outline-light btn-round{% else %}btn-outline-dark{% endif %} mr-2 d-block"
+        class="btn {% if school.inverted != true %}btn-outline-light btn-round{% else %}col-5 btn-outline-dark{% endif %} mr-2 d-block"
         href="/course-guide/"
         rel="noopener"
         href="#"
@@ -165,9 +165,9 @@ schools:
         Course Guide
       </a>
      
-        <!-- <div class="mr-2"> -->
+        <div class="{% if school.inverted == true %}col-5 p-0{% endif %}">
           {% include btn-apply.html %}
-         <!-- </div> -->
+         </div>
       </div>
     </div>
   </div>
@@ -177,8 +177,10 @@ schools:
   <!-- Cover Video -->
   {% assign video = page.cover_video %}
   <div class="col-12 d-flex justify-content-between p-0 bg-white">
+    {% if school.inverted %}
     <div class="col-3 bg-white m-0"></div>
-    <div class="col-9 m-0">
+    {% endif %}
+    <div class="{% if school.inverted != true %}col-12 p-0{% else %}col-9{% endif %} m-0">
     <amp-video
       id="my-video"
       width="640"
@@ -278,12 +280,12 @@ schools:
                   {{ start_date.length }}
                 </div>
                 <div class="font-weight-bold">
-                  Full Tuition:
+                  Tuition:
                 </div>
                 <div class="mb-3">
                   {{ start_date.price }}
                 </div>
-                <div class="mt-6">
+                <div class="mt-6 {%if school.inverted %}px-6{% endif %}">
                  {% include btn-apply.html %}
                 </div>
               </div>
