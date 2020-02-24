@@ -9,18 +9,21 @@ description: For an entire generation, MySpace was a gateway to the addictive so
 created_at: 2020-02-24 15:00:00 -0600
 updated_at: 2020-02-24 16:00:00 -0600
 categories:
-- myspace
-excerpt: ''
+- article
+excerpt: For an entire generation, MySpace was a gateway to the addictive social networking
+  platforms that are now a ubiquitous feature of our lives. And for many members of
+  that same generation, MySpace was a gateway to another inescapable part of modern
+  life—writing code.
 redirect_from: []
-permalink: "/blog/myspace-and-the-coding-legacy-it-left-behind/"
+permalink: "/blog/article/myspace-and-the-coding-legacy-it-left-behind/"
 canonical_link: ''
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
-- texastechcodingacademy.com
-- lubbockcodingacademy.com
-- circlecoding.com
-- austincodingacademy.com
+- texastechcodingacademy
+- lubbockcodingacademy
+- circlecoding
+- austincodingacademy
 img: "/assets/uploads/spongebob-myspace-layout.jpg"
 
 ---
