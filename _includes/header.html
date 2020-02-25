@@ -50,7 +50,7 @@
         <span class="h5 text-white bg-dark py-1 mb-2" tabindex="0">
           {{ item.title | liquify }}
         </span>
-        <ul class="list-unstyled text-left pl-3">
+        <ul class="list-unstyled text-left pl-3 h-100">
           {% for _track in school.tracks %}
             {% for __track in settings.tracks %}
               {% if _track.name == __track.name %}
@@ -106,7 +106,7 @@
       </a>
     </div>
   </div>
-  <div class="u-header__section bg-textured py-2">
+  <div class="u-header__section bg-{% if school.inverted %}white{% else %}textured{% endif %} py-2">
   <!-- htmllint preset="$previous" -->
     <div class="container-fluid px-md-0 px-lg-1">
       <!-- Nav -->
@@ -125,7 +125,7 @@
 
           <!-- Responsive Toggle Button -->
           <div class="d-flex flex-grow-0 align-items-center">
-            <button class="btn btn-link d-flex text-white bg-brand-primary-dark justify-content-end d-lg-none"
+            <button class="btn d-flex {% if school.inverted == true %}text-dark{% else %}btn-link text-white{% endif %} bg-brand-primary-dark justify-content-end d-lg-none"
               on="tap:sidebar.open" tabindex="0" role="button">
               <i class="fas fa-bars fa-2x" aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
             </button>
@@ -142,7 +142,7 @@
             {% for item in navigation %}
               <li class="nav-item u-header__nav-item ml-5 pb-2">
               {% if item.links.size > 0 %}
-                <span class="text-white hover-white">
+                <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
                   {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
                 </span>
                 <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
@@ -151,7 +151,7 @@
                       <!-- htmllint preset="none" -->
                       <a class="p-0" href="{{ link.url | liquify }}">
                         <!-- htmllint preset="$previous" -->
-                        <span class="text-white hover-white">
+                        <span class="text-white hover-white ">
                           {{ link.title | liquify }}
                         </span>
                       </a>
@@ -159,7 +159,7 @@
                   {% endfor %}
                 </ul>
                 {% elsif item.title == 'Courses' %}
-                  <span class="text-white hover-white">
+                  <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
                     {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
                   </span>
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
@@ -189,7 +189,7 @@
                           <!-- htmllint preset="none" -->
                           <a class="p-0" href="{{ track.url }}">
                             <!-- htmllint preset="$previous" -->
-                            <span class="text-white hover-white">
+                            <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
                               {{ track.name | liquify }}
                             </span>
                           </a>
@@ -201,7 +201,7 @@
                   <!-- htmllint preset="none" -->
                   <a class="{{ item.class | liquify }} hover-white {% if page.hide_apply and item.title == 'Apply' %} {{ page.hide_apply }}{% endif%}" href="{{ item.url | liquify }}">
                   <!-- htmllint preset="$previous" -->
-                    <span class="text-white hover-white">{{ item.title | liquify }}</span>
+                    <span class="{% if school.inverted != true %}text-white hover-white{% else %}text-primary-dark{% endif %}">{{ item.title | liquify }}</span>
                   </a>
               {% endif %}
               </li>

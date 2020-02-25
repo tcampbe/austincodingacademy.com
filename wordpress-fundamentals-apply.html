@@ -250,7 +250,7 @@ form_fields3:
 
 <div class="container mt-90 pt-1 pb-5">
   <div class="my-10 px-4 p-lg-0 border mx-auto">
-    <h2 class="font-family-alt my-10 display-5 display-55 text-center">
+    <h2 class="font-family-alt my-10 display-5 text-center">
       WordPress Fundamentals Course Application
     </h2>
     <!-- Proccess Application -->
@@ -312,7 +312,7 @@ form_fields3:
           {% include fields.html fields=page.form_fields3 %}
 
           <div class="col-12 mb-4 d-flex justify-content-center">
-            <button class="btn btn-round text-white bg-purple" type="Submit">
+            <button class="btn {% if school.inverted != true %}btn-round{% endif %} text-white bg-purple" type="Submit">
               Finish Your Application
             </button>
           </div>

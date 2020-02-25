@@ -204,18 +204,18 @@ form_fields:
       <input name="lifecyclestage" type="hidden" value="opportunity">
       <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
       <!-- htmllint preset="$previous" -->
-      <input name="school" type="hidden" value="{{ school.name }}">
+      <input name="zollege_school_new_" type="hidden" value="{{ school.name }}">
       <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 
       <div class="mw-850 row">
 
         {% include fields.html fields=page.form_fields redirect_url=page.redirect_url %}
-    
+
         <div class="col-sm-6 mb-4">
           {% include referral-question.html %}
         </div>
         <div class="col-12 mb-4 d-flex justify-content-center">
-          <button class="btn btn-round text-white hover-white bg-primary-dark" type="Submit">
+          <button class="btn {% if school.inverted != true %}btn-round{% endif %} text-white hover-white bg-primary-dark" type="Submit">
             Submit
           </button>
         </div>

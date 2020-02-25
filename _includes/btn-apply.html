@@ -1,6 +1,6 @@
 <!-- htmllint preset="none" -->
 <a
-  class="btn cta-gradient text-white hover-white btn-round {{ include.class | liquify }}"
+  class="btn bg-primary-light text-white hover-white {% if school.inverted != true %}btn-round{% else %}w-100{% endif %} {{ include.class | liquify }}"
   href="{{ include.href | default: "/apply" | liquify }}"
 >
 <!-- htmllint preset="$previous" -->

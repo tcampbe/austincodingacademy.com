@@ -214,7 +214,44 @@ schools:
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
+- key: circlecoding
+  courses:
+  - code: Web 101
+    sections:
+    - start: ''
+      end: ''
+      weekdays: ''
+      time: 6:30pm - 9:00pm
+      location: ''
+  - code: JS 211
+    sections:
+    - start: ''
+      end: ''
+      weekdays: ''
+      time: 6:30pm - 9:00pm
+      location: ''
+  - code: JS 311
+    sections:
+    - start: ''
+      end: ''
+      weekdays: ''
+      time: 6:30pm - 9:00pm
+      location: ''
+  - code: JS 411
+    sections:
+    - start: ''
+      end: ''
+      weekdays: ''
+      time: 6:30pm - 9:00pm
+      location: ''
+  - code: Job 501
+    sections:
+    - start: ''
+      end: ''
+      weekdays: ''
+      time: 6:30pm - 9:00pm
+      location: ''
 - key: lubbockcodingacademy
   next_start_date: Tuesday, April 7th 2020
   backend: C#/.Net
@@ -289,7 +326,7 @@ schools:
       make your $490 deposit and begin monthly payments towards tuition over the course
       of the loan. Learn more on Texas Tech Credit Union’s website.
     cta: <a href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan"
-      rel="noopener" class="btn btn-round bg-primary-dark text-white hover-white mt-2"
+      rel="noopener" class="btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark text-white hover-white mt-2"
       target="_blank"><span class="text-white hover-white">Financing Options</span>
       <span class="text-white hover-white fas fa-arrow-right small"></span></a>
 - key: texastechuniversitycodingacademy
@@ -320,7 +357,7 @@ schools:
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
-  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-55 display-sm-4 text-center">
+  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-sm-4 text-center">
     {{ page.hero_heading | liquify }}
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
@@ -331,7 +368,7 @@ schools:
     <div class="mr-2">
       <!-- htmllint preset="none" -->
       <a
-        class="btn btn-round btn-outline-light {{ include.class | liquify }}"
+        class="btn {% if school.inverted != true %}btn-round{% endif %} btn-outline-light {{ include.class | liquify }}"
         on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
@@ -361,7 +398,7 @@ schools:
   <section id="curriculum" class="pt-8 container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-8 p-0 pl-sm-5 d-flex flex-column align-items-center text-center">
-        <h2 class="font-family-alt display-5">
+        <h2 class="font-family-alt">
           What is Web Development?
         </h2>
         <h4 class="mb-7">
@@ -599,7 +636,7 @@ schools:
                 @ {{ success.company }}
               </div>
               <a
-                class="btn btn-round bg-primary-dark text-white text-center hover-white mt-2 mb-3"
+                class="btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark text-white text-center hover-white mt-2 mb-3"
                 style="width: 42px;"
                 href="{{ success.learn_url }}"
                 rel="noopener"

@@ -3,6 +3,8 @@ layout: default
 permalink: "/tuition/"
 head_title: Affordable Tuition | Software Engineering Classes at {{ school.name }}
 title: Tuition
+amp_components:
+- amp-youtube
 schools:
 - key: circlecoding
   sections:
@@ -11,52 +13,24 @@ schools:
       This track includes four 8-week web development courses, ($2,990/course), and
       a job placement course that is free for all graduates.
     options:
-    - title: Circle Coding Academy Payment Plan (Budget Option)
-      description: With our new payment plan, you can get started with class by making
-        a $1,000 deposit. After you begin class you’ll make bi-weekly payments of
-        $250 for 22 months. No interest and no penalty for prepayment!
+    - title: Full Tuition
+      description: When you pay in full, you will pay the reduced total price of $10,960
       price_header: Total Price
-      price: "$12,750"
-      price2: "$250"
-    - title: Pay Up Front (Savings Option)
-      description: Save $1,000 on the cost of the Full Stack Web Development Track
-        when you choose to pay for the entire cost of the program up front. Instead
-        of paying for the individual price of 4 web development courses, ($11,960),
-        you’ll pay the reduced price of $10,960.
-      price_header: Total Price
+      price: "$1,000"
+      price2: "$490"
+    - title: Payment Plan
+      description: After your initial deposit of $1000, you will make bi-weekly payments of $250 for 22 months. Total price of $12,750
+      price_header: Details
       price: "$10,960"
-      price2: ''
-    - title: Pay-As-You-Go (Flexible Option)
-      description: To provide a more flexible tuition option, we also offer a “pay-as-you-go”
-        plan. Rather than paying for the entire cost of the program up front, you’re
-        able to pay for each course when you take it, ($2,990/course).
-      price_header: Total Price
-      price: "$11,960"
-      price2: ''
+      price2: '$250'
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Circle Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
     options: []
-  - title: Individual Classes &amp; Electives
-    description: Have previous experience as a developer or just trying to learn a
-      bit of coding? You’re welcome to take any of the individual courses from the
-      Full Stack Web Development Track or one of our Elective seminars (coming soon).
-      While individual courses won’t prepare you to land a job as a developer, you
-      can still learn useful skills.
-    options:
-    - title: Individual Courses
-      description: The cost of an Individual 8-week course with Circle Coding Academy
-        is $2,990. While our Full Stack Web Development Track is designed to prepare
-        students to become developers and help them find a job, individual courses
-        may be appropriate for students who already have a coding background or aren’t
-        looking for a career as a web developer.
-      price_header: Course Price
-      price: "$2,990"
-      price2: ''
 - key: austincodingacademy
   sections:
   - title: Full Stack Web Development Track
@@ -65,26 +39,15 @@ schools:
       a job placement course that is free for all graduates.
     options:
     - title: Austin Coding Academy Payment Plan (Budget Option)
-      description: With our new payment plan, you can get started with class by making
-        a $1,000 deposit. After you begin class you’ll make bi-weekly payments of
-        $250 for 24 months. No interest and no penalty for prepayment!
-      price_header: Total Price
-      price: "$12,750"
+      description: With our new payment plan, you can get started with class by making a $1,000 deposit. After you begin class you’ll make bi-weekly payments of $250 for 22 months, for a total program cost of $12,750. No interest and no penalty for prepayment!
+      price_header: Details
+      price: "$1,000"
       price2: "$250"
     - title: Pay Up Front (Savings Option)
-      description: Save $1,000 on the cost of the Full Stack Web Development Track
-        when you choose to pay for the entire cost of the program up front. Instead
-        of paying for the individual price of 4 web development courses, ($11,960),
+      description: Save $1,000 on the cost of the Full Stack Web Development Track when you choose to pay for the entire cost of the program up front. Instead of paying for the individual price of 4 web development courses, ($11,960),
         you’ll pay the reduced price of $10,960.
       price_header: Total Price
       price: "$10,960"
-      price2: ''
-    - title: Pay-As-You-Go (Flexible Option)
-      description: To provide a more flexible tuition option, we also offer a “pay-as-you-go”
-        plan. Rather than paying for the entire cost of the program up front, you’re
-        able to pay for each course when you take it, ($2,990/course).
-      price_header: Total Price
-      price: "$11,960"
       price2: ''
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Austin Coding Academy’s
@@ -92,7 +55,7 @@ schools:
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
     options: []
   - title: WordPress Fundamentals
     description: We offer two options to cover the cost of tuition for our 8-week
@@ -145,12 +108,6 @@ schools:
       price_header: Details
       price: "$460"
       price2: "$225"
-    - title: Pay-As-You-Go (Flexible Option)
-      description: You can pay one class at a time for $1,990. The tuition price covers
-        one 8 week session. The cost of the entire program is $7,960.
-      price_header: Total Price
-      price: "$7,960"
-      price2: ''
     - title: Pay Up Front
       description: Alternatively, if you are committed to going through the entire
         program, you can cover the entire cost of tuition for the program upfront
@@ -164,7 +121,7 @@ schools:
         simply make your $490 deposit and begin monthly payments towards tuition over
         the course of the loan. Learn more on Texas Tech Credit Union’s website.
       cta: <a href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan"
-        rel="noopener" class="btn btn-round bg-primary-dark text-white hover-white
+        rel="noopener" class="btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark text-white hover-white
         mt-2" target="_blank"><span class="text-white hover-white">Financing Options</span>
         <span class="text-white hover-white fas fa-arrow-right small"></span></a>
       price_header: ''
@@ -176,19 +133,38 @@ schools:
       your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
     options: []
 - key: texastechcodingacademy
   sections:
+  - title: Full Stack Web Development Track
+    description: There are four courses ($1,990/course) in our Full Stack Web Development
+      Track, as well as a job placement class (free to all graduates). Find out how
+      we make tuition affordable with our different payment options below.
+    options:
+    - title: Pay Up Front
+      description: Alternatively, if you are committed to going through the entire
+        program, you can cover the entire cost of tuition for the program upfront
+        if you are able to do so.
+      price_header: Total Price
+      price: "$9,960"
+      price2: ''
+    - title: "{{ school.name }} Payment Plan (Budget Option)"
+      description: "With our new payment plan, you can get started with {{ school.name }} for just $460 up-front. After you begin classes you’ll make bi-weekly
+        payments of $225 for 18-months, for a total program cost of $10,360. No interest
+        and no penalty for prepayment!"
+      price_header: Details
+      price: "$460"
+      price2: "$225" 
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Texas Tech University Coding
       Academy’s Full Stack Web Development Track and discuss tuition with a follow-up
       call with your admissions advisor.
     button: Apply
     url: "/apply"
-    style: text-white btn btn-round bg-primary-dark hover-white center mt-4
+    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white center mt-4
     options: []
-
+  
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -208,95 +184,65 @@ schools:
   {% endfor %}
 {% endif %}
 
-<main class="mt-90 pt-1 pb-5">
-  <div class="my-10 container">
-    <h1 class="text-center font-family-alt font-weight-bold display-5">
-      Tuition
-    </h1>
-    <p class="text-center display-6">
-      We keep it simple.
-    </p>
+<main>
+  <div class="container-fluid bg-light text-center py-5">
+    <h2>Tuition Options</h2>
   </div>
   {% for section in school.sections %}
-    <section class="mt-5 mb-10">
-      {% if section.button %}
-        <div class="container-fluid text-center py-3 my-5">
-          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-            {{ section.title | liquify }}
-          </h2>
-          <p class="m-0 mx-auto mw-600">
-            {{ section.description | liquify }}
-          </p>
-          <!-- Apply button -->
-          <!-- htmllint preset="none" -->
-          <a class="{{ section.style | liquify }} hover-white" href="{{ section.url }}">
-          <!-- htmllint preset="$previous" -->
-            <span class="text-white hover-white">
-              {{ section.button | liquify }}
-            </span>
-          </a>
-        </div>
-      {% else %}
-        <div class="container-fluid bg-light text-center py-3 my-5">
-          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-            {{ section.title | liquify }}
-          </h2>
-          <p class="m-0 mx-auto mw-600">
-            {{ section.description | liquify }}
-          </p>
-        </div>
-        <div class="container">
-          {% for option in section.options %}
-            <div class="row my-5">
-              <div class="col-md-8">
-                <h3 class="display-7 border-bottom">
-                  {{ option.title | liquify }}
-                </h3>
-                <p>
-                  {{ option.description | liquify }}
-                </p>
-              </div>
-              <div class="col-md-4 px-5">
-                {% if option.price_header == 'Details' %}
-                  <div class="text-center">
-                    <h5>
-                      {{ option.price_header | liquify }}
-                    </h5>
-                    <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
-                      <div class="display-6">
-                        {{ option.price | liquify }} <span style="font-size: 1rem;">to start</span>
-                      </div>
-                      <div class="display-8">
-                        +<br>
-                        {{ option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
-                      </div>
-                    </div>
-                  </div>
-                {% elsif option.price.size > 0 %}
-                  <div class="text-center">
-                    <h5>
-                      {{ option.price_header | liquify }}
-                    </h5>
-                    <p
-                      class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6"
-                      style="min-width: 155px;"
-                    >
-                      {{ option.price | liquify }}
-                    </p>
-                  </div>
-                {% elsif option.cta %}
-                  <div class="text-center">
-                    <h5>
-                      Learn More
-                    </h5>
-                    {{ option.cta | liquify }}
-                  </div>
-                {% endif %}
-              </div>
+    <div class="row p-5 justify-content-center">
+      {% for option in section.options %}
+        <div class="col-sm-6 col-md-3 border p-2 mx-4 my-4">
+          <div class="shadow py-3 bg-light">
+            <div class="bg-dark" style="height: 100px">
+
             </div>
-          {% endfor %}
+            <div class="bg-primary-light p-2 my-2 d-flex justify-content-center">
+              {{ option.title }}
+            </div>
+            <div class="d-flex justify-content-center">
+              {% if option.price_header == "Total Price" %}
+                <h4 class="font-weight-bold">{{ option.price2 }} deposit</h4>
+              {% elsif option.price_header == "Details" %}
+                <h4 class="font-weight-bold">{{ option.price2 }} bi-weekly payments</h4>
+              {% endif %}
+            </div>
+            <div class="d-flex justify-content-center">
+              <p>{{ option.description }}</p>
+            </div>
+          </div>
         </div>
-      {% endif %}
-    </section>
+      {% endfor %}
+    </div>
   {% endfor %}
+  <div class="bg-light py-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-4 p-4">
+        <amp-youtube
+          data-videoid="AVMkl06b5IE"
+          width="266.656px"
+          height="150px"
+          tabindex="0"
+          role="presentation"
+          layout="responsive"
+          title="Lilian Situ video review of Austin Coding Academy"
+        >
+        </amp-youtube>
+      </div>
+      <div class="mt-3 d-flex justify-content-center align-items-center col-12 col-md-4">
+        <blockquote class="blockquote w-75">
+          <p>I've always been interested in programming and being able to create something so being able to take what I learned at ACA and get a job with it ... was one of the best decisions I've made.
+          </p>
+          <footer class="blockquote-footer text-dark display-9 text-right mt-1">Lillian Situ, <cite title="Title">Software Engineer, data.world</cite></footer>
+        </blockquote>
+      </div>
+      <!-- <div class="d-flex column col-4">
+        <div>
+          <h2 class="display-5">Lillian Situ</h2>
+        </div>
+        <div>
+          <p>I've always been interested in programming and being able to create something so being able to take what I learned at ACA and get a job with it ... was one of the best decisions I've made.</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
 </main>

@@ -17,7 +17,7 @@
 {% endif %}
 <!-- htmllint preset="none" -->
 <a
-  class="btn btn-round mt-2 btn-outline-light {{ include.class | liquify }}"
+  class="btn {% if school.inverted != true %}btn-round{% endif %} mt-2 btn-outline-light {{ include.class | liquify }}"
   on="tap:event-lightbox"
   role="button"
   tabindex="-1"
@@ -50,14 +50,14 @@
       <input name="hs_lead_status" type="hidden" value="NEW">
       <!-- <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}"> -->
       <input name="redirect_url" type="hidden" value="https://acaappointment.as.me/schedule.php?calendarID=3049624">
-      <!-- <input name="school" type="hidden" value="{{ school.name }}"> -->
+      <!-- <input name="zollege_school_new_" type="hidden" value="{{ school.name }}"> -->
       <!-- <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" /> -->
 
       <div class="row center-form">
         {% include fields.html fields=page.corporate_form_fields redirect_url="https://acaappointment.as.me/schedule.php?calendarID=3049624" %}
         <!-- Input -->
         <div class="col-12 d-flex align-items-end justify-content-center form-group">
-          <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
+          <button type="submit" class="btn {% if school.inverted != true %}btn-round{% endif %} btn-sm-block text-white bg-primary-dark hover-white">
             Submit
           </button>
         </div>

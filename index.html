@@ -146,108 +146,94 @@ schools:
 {% endif %}
 
 <div class="position-relative d-flex justify-content-center flex-column overflow-hidden">
-  <div class="pl-3 pl-sm-2 ml-sm-4 py-7 pb-md-11 position-absolute z-20 d-sm-block d-md-flex justify-content-center">
+  <div class="pl-3 pl-sm-2 ml-6 py-7 pb-md-11 position-absolute z-20 d-sm-block d-md-flex justify-content-center {% if school.inverted %}bg-white mw-600 rounded shadow{% endif %}">
     <div class="col-sm-11 col-md-10 col-lg-10 pl-0">
       <div class="my-md-11"></div>
-      <h1 class="text-white font-family-alt font-weight-bold display-responsive col-sm-12 col-md-9 pl-0">
+      <h1 class="{% if school.inverted != true %}text-white{% endif %} font-family-alt font-weight-bold display-responsive col-sm-12 col-md-9 pl-0">
         {{ page.heading | liquify }}
       </h1>
-      <p class="text-white mt-4 mb-3 line-typewriter anim-typewriter">
+      <p class="{% if school.inverted != true %}text-white{% endif %} mt-4 mb-3 line-typewriter anim-typewriter">
         {{ page.subheading | liquify }}
       </p>
       <div class="d-flex justify-content-start">
-        <div class="mr-2">
+        <a
+        class="btn {% if school.inverted != true %}btn-outline-light btn-round{% else %}col-5 btn-outline-dark{% endif %} mr-2 d-block"
+        href="/course-guide/"
+        rel="noopener"
+        href="#"
+      >
+        Course Guide
+      </a>
+     
+        <div class="{% if school.inverted == true %}col-5 p-0{% endif %}">
           {% include btn-apply.html %}
          </div>
-        <a
-          class="btn btn-outline-light btn-round mr-2 px-2"
-          role="button"
-          tabindex="0"
-<<<<<<< HEAD
-        >
-          Get More Info
-      </button>
-        <amp-lightbox
-=======
-          href="/course-guide"
-        >
-          Course Guide
-        </a>
-        <!-- <amp-lightbox
->>>>>>> preview
-          id="call-us"
-          class="lightbox"
-          layout="nodisplay"
-          scrollable
-          on="tap:call-us.close"
-          tabindex="0"
-          role="dialog"
-        >
-          <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center">
-            <a class="my-5 btn btn-light btn-round mr-2 d-md-none w-75"
-              href="/courses/web-development"
-              rel="noopener"
-            >
-              Full Stack Web Development
-            </a>
-            <h4 class="text-white display-7 border-top border-bottom">
-              OR
-            </h4>
-            <a class="my-5 btn btn-light btn-round mr-2 d-md-none w-75"
-              href="/courses/wordpress-fundamentals"
-              rel="noopener"
-            >
-              Wordpress Fundamentals
-            </a>
-          </div>
-        </amp-lightbox> 
-        <a
-          class="btn btn-outline-light btn-round mr-2 d-none d-md-block"
-          href="/courses/web-development"
-          rel="noopener"
-          href="#"
-        >
-          Learn More
-        </a>
-       -->
       </div>
     </div>
   </div>
   <!-- htmllint preset="none" -->
-  <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero z-10 h-100"></div>
+  <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero {% if school.inverted != true %}z-10{% else %}z-90 w-50{% endif %} h-100"></div>
   <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}
-  <amp-video
-    width="640"
-    height="360"
-    layout="responsive"
-    poster="{{ video.poster | liquify }}"
-    autoplay
-    class="d-none d-md-block"
-    loop
-    title="{{ video.title | liquify }}"
-  >
-    <source
-      src="{{ video.src | liquify }}"
-      type="video/webm"
-    />
-    <source
-      src="{{ video.src_mp4 | liquify }}"
-      type="video/mp4"
-    />
-    <div fallback>
-      <p>This browser does not support the video element.</p>
-    </div>
-  </amp-video>
-  {% if site.key == 'circlecoding' and site.baseurl != '/amp'%}
-    {% include matrix.html %}
-  {% endif %}
+  <div class="col-12 d-flex justify-content-between p-0 bg-white">
+    {% if school.inverted %}
+    <div class="col-3 bg-white m-0"></div>
+    {% endif %}
+    <div class="{% if school.inverted != true %}col-12 p-0{% else %}col-9{% endif %} m-0">
+    <amp-video
+      id="my-video"
+      width="640"
+      height="360"
+      layout="responsive"
+      poster="{{ video.poster | liquify }}"
+      {% if school.inverted != true %}
+        autoplay
+      {% endif %}
+      class="d-none d-md-block"
+      loop
+      title="{{ video.title | liquify }}"
+    >
+      <source
+        src="{{ video.src | liquify }}"
+        type="video/webm"
+      />
+      <source
+        src="{{ video.src_mp4 | liquify }}"
+        type="video/mp4"
+      />
+      <div fallback>
+        <p>This browser does not support the video element.</p>
+      </div>
+    </amp-video>
+    {% if school.inverted %}
+      <div id="my-overlay" class="click-to-play-overlay">
+
+        <div class="play-icon" role="button" tabindex="0" on="tap:my-overlay.hide, my-video.play" style="position: absolute;
+        z-index: 2;
+        width: 100px;
+        height: 100px;
+        background-image: url(https://amp.dev/static/samples/img/play-icon.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        /* Align to the middle */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        opacity: 0.8;"></div>
+        <amp-img class="poster-image img-fluid rounded shadow" layout="fill"
+          src="/assets/uploads/coding-tutoring-session.jpg">
+        </amp-img>
+      </div>
+    {% endif %}
+  </div>
+  </div>
 </div>
 
 <main>
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
-    <h2 class="font-family-alt font-weight-bold text-center {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
+    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
       We Are Committed To Your Success
     </h2>
     <p class="mw-600 mx-auto text-center">
@@ -299,7 +285,7 @@ schools:
                 <div class="mb-3">
                   {{ start_date.price }}
                 </div>
-                <div class="mt-6">
+                <div class="mt-6 {%if school.inverted %}px-6{% endif %}">
                  {% include btn-apply.html %}
                 </div>
               </div>
@@ -318,10 +304,10 @@ schools:
 
   <section class="mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
     <div class="mx-auto mw-850">
-      <h2 class="font-family-alt font-weight-bold text-center {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
+      <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Why Choose Us?
       </h2>
-      <p class="px-1 mw-600 mx-auto text-center text-white d-none d-md-block">
+      <p class="px-1 mw-600 mx-auto text-center text-white">
         As fun as it is to learn how to code, we know you didn't just come to us
         for the kicks. You need to launch a new career and we're here to help you
         do it.
@@ -369,7 +355,7 @@ schools:
                 <h3 class="font-weight-bold text-left">
                   <b>{{ feature.heading | liquify }}</b>
                 </h3>
-                <div class="mb-3 d-none d-md-block">
+                <div class="mb-3">
                   {{ feature.description | liquify }}
                 </div>
               </div>
@@ -388,7 +374,7 @@ schools:
 
   {% if site.key == 'austincodingacademy' %}
     <section class="py-8 bg-textured">
-      <h2 class="font-family-alt font-weight-bold text-center text-white {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
+      <h2 class="font-family-alt font-weight-bold text-center text-white display-5 mb-5">
         Student Success Stories
       </h2>
       <!-- begin student-stories -->
@@ -430,7 +416,7 @@ schools:
   {% if site.data.events[site.key].size > 0 %}
     <section class="py-8 bg-textured text-white">
       <div class="container d-flex justify-content-center flex-column">
-        <h2 class="font-family-alt font-weight-bold text-center {% if window.innerWidth >= 750 %} display-5 {% else %} display-3 {% endif %} mb-5">
+        <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
           Come Meet Us at Our Next Event
         </h2>
         {% include events.html limit=3 %}

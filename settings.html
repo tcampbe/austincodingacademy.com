@@ -53,7 +53,7 @@ navigation:
     class: ''
   - title: Apply
     url: "/apply/"
-    class: btn btn-round text-white cta-gradient py-1 px-6
+    class: btn {% if school.inverted != true %}btn-round{% endif %} text-white cta-gradient py-1 px-6
   footer:
   - title: Hack Overflow
     url: https://austincodingacademy.com/forum
@@ -188,7 +188,7 @@ schools:
       class: ''
     - title: Apply
       url: "/apply/"
-      class: btn btn-round text-white cta-gradient py-1 px-6
+      class: btn text-white cta-gradient py-1 px-6 h-100
     footer:
     - title: Becoming an Instructor
       url: "/instructor-apply/"
@@ -197,6 +197,7 @@ schools:
     - title: Student Referral
       url: "/new-student-referral/"
   active: true
+  inverted: true
   tracks:
   - name: Full Stack Web Development
     stripe_product_sku: sku_Gh15pSUXsadQ2f
@@ -235,7 +236,7 @@ schools:
     price: "$1,000 deposit + $250 / 2 weeks"
   primary_light_color: rgb(78, 188, 231)
   primary_dark_color: rgb(0, 0, 0)
-  secondary_light_color: rgb(207, 222, 98)
+  secondary_light_color: rgb(78, 188, 231)
   secondary_dark_color: rgb(78, 188, 231)
   hero_overlay_color: rgb(0, 0, 0)
   instructors: []
@@ -270,7 +271,7 @@ schools:
       icon: ''
       hex: ''
   tutors: []
-  logo: "/assets/uploads/CCA_Logo_White@3x.png"
+  logo: "/assets/uploads/CCA_Logo@3x.png"
   seal: "/assets/uploads/cca_seal.png"
   course_guide_img: "/assets/uploads/CCA Course Guide preview.png"
   acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=12870386
@@ -355,7 +356,7 @@ schools:
   start_dates:
   - location: Capital Factory Campus
     course: Full Stack Web Development
-    date: March 30th
+    date: March 23rd
     days: Monday/Wednesday
     time: 6:30 - 9:00pm
     length: 36 weeks
@@ -827,6 +828,28 @@ schools:
       Computer Science department at TTU.
     gravatar_email: ''
   tutors:
+  - name: Trey Caliva
+    id: "13175588"
+    skills:
+    - Mentor
+    email: trey.caliva@directorschoice.com
+    location: []
+    calendar: https://acaappointment.as.me/?appointmentType=13175588
+    virtual: https://meet.google.com/hri-pufp-sni
+    rocketchat: https://chat.austincodingacademy.com/direct/treycaliva
+    gravatar_email: trey.caliva@directorschoice.com
+  - name: Marlyssa Boucher
+    id: "13175214"
+    skills:
+    - C# 221
+    - ".Net 321"
+    email: marlyssa.boucher@gmail.com
+    location:
+    - southPlains
+    calendar: https://acaappointment.as.me/?appointmentType=13175214
+    virtual: https://meet.google.com/guz-fhfo-scz
+    rocketchat: https://chat.austincodingacademy.com/direct/marlyssaboucher-1298
+    gravatar_email: marlyssa.boucher@gmail.com
   - name: Ari Cohen
     id: "12986490"
     skills:
@@ -993,8 +1016,14 @@ schools:
     - title: Courses
       url: ''
       class: ''
+    - title: Tuition
+      url: '/tuition/'
+      class: ''
     - title: Events
       url: "/events/"
+      class: ''
+    - title: Blog
+      url: "/blog/"
       class: ''
     - title: Contact Us
       url: "/contact/"

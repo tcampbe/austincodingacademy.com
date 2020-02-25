@@ -38,25 +38,7 @@
       {% endif %}
     </h2>
     <!-- htmllint preset="none" -->
-    <p
-      {% if include.fade == true %}
-        amp-fx="fade-in"
-        data-duration="600ms"
-        data-margin-start="1%"
-        data-margin-end="20%"
-      {% endif %}
-      class="mw-600 mx-auto {{ include.text_class | liquify  }} text-center mb-6"
-    >
-    <!-- htmllint preset="$previous" -->
-    {% if page.permalink == "/courses/wordpress-fundamentals/" %}
-      Curious about how this course works? Download the WordPress Fundamentals
-      syllabus to see our week-by-week curriculum, tuition options, and more.
-    {% else %}
-      Curious about what our classes entail? Download our course guide to get the rundown on how
-      this whole process works, from how our programs are structured to how we can help you get
-      a job in coding after you graduate.
-    {% endif %}
-    </p>
+
     <div
       class="row"
       {% if include.lightbox %}
@@ -97,7 +79,7 @@
             <input name="hs_lead_status" type="hidden" value="NEW">
             <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
             <input name="redirect_url" type="hidden" value="{{ settings.pdf_viewer_url | liquify }}{{ include.course_guide_href | default: school.course_guide }}">
-            <input name="school" type="hidden" value="{{ school.name }}">
+            <input name="zollege_school_new_" type="hidden" value="{{ school.name }}">
             <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
 
             <div class="row center-form">
@@ -271,7 +253,7 @@
                 {% endif %}
               >
               <!-- htmllint preset="$previous" -->
-                <button type="submit" class="btn btn-round btn-sm-block text-white bg-primary-dark hover-white">
+                <button type="submit" class="btn {% if school.inverted != true %}btn-round{% endif %} btn-sm-block text-white bg-primary-dark hover-white">
                   View Guide
                 </button>
               </div>

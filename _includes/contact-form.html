@@ -17,7 +17,7 @@
 {% endif %}
 {% if page.contact_lightbox %}
 <a href="#"
-  class="btn btn-round text-white bg-primary-dark hover-white mx-auto"
+  class="btn {% if school.inverted != true %}btn-round{% endif %} text-white bg-primary-dark hover-white mx-auto"
   on="tap:contact-lightbox"
   role="button"
   tabindex="0"
@@ -53,7 +53,7 @@
         <input name="hs_lead_status" type="hidden" value="NEW">
         <!-- <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}"> -->
         <!-- <input name="redirect_url" type="hidden" value="{{ school.url }}/thank-you/"> -->
-        <input name="school" type="hidden" value="{{ school.name }}">
+        <input name="zollege_school_new_" type="hidden" value="{{ school.name }}">
         <!-- <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" /> -->
         <div class="row center-form">
 
@@ -71,7 +71,7 @@
           <div class="text-center col-sm-12 mb-4">
             <button
               type="submit"
-              class="text-white btn btn-round bg-primary-dark hover-white"
+              class="text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark hover-white"
             >
               Send
             </button>
