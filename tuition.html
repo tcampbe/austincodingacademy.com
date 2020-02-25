@@ -18,11 +18,13 @@ schools:
       price_header: Total Price
       price: "$1,000"
       price2: "$490"
+      picture: ''
     - title: Payment Plan
       description: After your initial deposit of $1000, you will make bi-weekly payments of $250 for 22 months. Total price of $12,750
       price_header: Details
       price: "$10,960"
       price2: '$250'
+      picture: ''
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Circle Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
@@ -43,12 +45,14 @@ schools:
       price_header: Details
       price: "$1,000"
       price2: "$250"
+      picture: ''
     - title: Pay Up Front (Savings Option)
       description: Save $1,000 on the cost of the Full Stack Web Development Track when you choose to pay for the entire cost of the program up front. Instead of paying for the individual price of 4 web development courses, ($11,960),
         you’ll pay the reduced price of $10,960.
       price_header: Total Price
       price: "$10,960"
       price2: ''
+      picture: ''
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Austin Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
@@ -68,6 +72,7 @@ schools:
       price_header: Total Price
       price: "$1,990"
       price2: ''
+      picture: ''
     - title: Payment Plan
       description: Take advantage of our payment plan option to make tuition more
         manageable. Make your $490 deposit before the start of class and make weekly
@@ -77,6 +82,7 @@ schools:
       price_header: Total Price
       price: "$2,050"
       price2: ''
+      picture: ''
   - title: Individual Classes &amp; Electives
     description: Have previous experience as a developer or just trying to learn a
       bit of coding? You’re welcome to take any of the individual courses from the
@@ -93,6 +99,7 @@ schools:
       price_header: Course Price
       price: "$2,990"
       price2: ''
+      picture: ''
 - key: lubbockcodingacademy
   sections:
   - title: Full Stack Web Development Track
@@ -108,6 +115,7 @@ schools:
       price_header: Details
       price: "$460"
       price2: "$225"
+      picture: ''
     - title: Pay Up Front
       description: Alternatively, if you are committed to going through the entire
         program, you can cover the entire cost of tuition for the program upfront
@@ -115,6 +123,7 @@ schools:
       price_header: Total Price
       price: "$7,960"
       price2: ''
+      picture: ''
     - title: Financing (via Texas Tech Credit Union)
       description: Finance your tuition through Texas Tech Credit Union’s “Lubbock
         Coding Academy Loan”. Apply with Texas Tech Credit Union, and once accepted
@@ -127,6 +136,7 @@ schools:
       price_header: ''
       price: ''
       price2: ''
+      picture: ''
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Lubbock Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
@@ -149,6 +159,7 @@ schools:
       price_header: Total Price
       price: "$9,960"
       price2: ''
+      picture: ''
     - title: "{{ school.name }} Payment Plan (Budget Option)"
       description: "With our new payment plan, you can get started with {{ school.name }} for just $460 up-front. After you begin classes you’ll make bi-weekly
         payments of $225 for 18-months, for a total program cost of $10,360. No interest
@@ -156,6 +167,7 @@ schools:
       price_header: Details
       price: "$460"
       price2: "$225" 
+      picture: ''
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Texas Tech University Coding
       Academy’s Full Stack Web Development Track and discuss tuition with a follow-up
@@ -193,9 +205,11 @@ schools:
       {% for option in section.options %}
         <div class="col-sm-6 col-md-3 border p-2 mx-4 my-4">
           <div class="shadow py-3 bg-light">
-            <div class="bg-dark" style="height: 100px">
-
-            </div>
+            {% if option.picture != '' %}
+              <img src="{{ option.picture }}" alt="Tuition Picture">
+            {% else %}
+              <div class="bg-textured" style="height: 100px"></div>
+            {% endif %}
             <div class="bg-primary-light p-2 my-2 d-flex justify-content-center">
               {{ option.title }}
             </div>
