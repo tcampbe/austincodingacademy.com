@@ -20,6 +20,8 @@ permalink: "/blog/web-development/4-ways-a-coding-bootcamp-is-worth-it/"
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
+- lubbockcodingacademy
+- texastechcodingacademy
 - circlecoding
 - austincodingacademy
 
