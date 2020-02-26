@@ -24,6 +24,7 @@ author_email: info@texastechcodingacademy.com
 school_keys:
 - texastechcodingacademy
 img: "/assets/uploads/make-time-for-web-development-training.jpg"
+canonical_link: ''
 
 ---
 _This piece was written by Erica Freedman, Content Specialist at SwitchUp._
