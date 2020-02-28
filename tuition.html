@@ -18,13 +18,13 @@ schools:
       price_header: Total Price
       price-full: "$1,000"
       payment_deposit: "$490"
-      picture: ''
+      picture: '/assets/uploads/ccawebsite_tuitionpage_paymentplan.png'
     - title: Payment Plan
       description: After your initial deposit of $1000, you will make bi-weekly payments of $250 for 22 months. Total price of $12,750
       price_header: Details
       price-full: "$10,960"
       payment_deposit: '$250'
-      picture: ''
+      picture: '/assets/uploads/ccawebsite_tuitionpage_fulltuition.png'
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Circle Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
@@ -206,7 +206,7 @@ schools:
         <div class="col-sm-6 col-md-3 border p-2 mx-4 my-4">
           <div class="shadow py-3 bg-light">
             {% if option.picture != '' %}
-              <img src="{{ option.picture }}" alt="Tuition Picture">
+              <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
             {% else %}
               <div class="bg-textured" style="height: 100px"></div>
             {% endif %}
