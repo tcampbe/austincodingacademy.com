@@ -181,7 +181,8 @@ schools:
     <div class="col-3 bg-white m-0"></div>
     {% endif %}
     <div class="{% if school.inverted != true %}col-12 p-0{% else %}col-9{% endif %} m-0">
-    <amp-video
+    {% if school.inverted != true %}
+      <amp-video
       id="my-video"
       width="640"
       height="360"
@@ -206,13 +207,14 @@ schools:
         <p>This browser does not support the video element.</p>
       </div>
     </amp-video>
+    {% endif %}
     {% if school.inverted %}
-      <div id="my-overlay" class="click-to-play-overlay">
+      <div id="my-overlay" class="click-to-play-overlay d-none d-md-block" style="height: 85vh;">
 
-        <div class="play-icon" role="button" tabindex="0" on="tap:my-overlay.hide, my-video.play" style="position: absolute;
-        z-index: 2;
-        width: 100px;
+        <div class="play-icon" role="button" tabindex="0" on="tap:call-us" style="position: absolute;
         height: 100px;
+        width: 100px;
+        z-index: 2;
         background-image: url(https://amp.dev/static/samples/img/play-icon.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -226,6 +228,30 @@ schools:
           src="/assets/uploads/coding-tutoring-session.jpg">
         </amp-img>
       </div>
+      <amp-lightbox
+          id="call-us"
+          class="lightbox"
+          layout="nodisplay"
+          scrollable
+          on="tap:call-us.close"
+          tabindex="0"
+          role="dialog"
+        >
+          <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center" style="height:100%;">
+            <amp-youtube
+            class="h-100"
+            data-videoid="pcCcjiMOeyg"
+            width="266.656px"
+            height="150px"
+            style="height:500px; width: 888.853333333px;"
+            tabindex="0"
+            role="presentation"
+            layout="responsive"
+            title="Lilian Situ video review of Austin Coding Academy"
+            >
+            </amp-youtube>
+          </div>
+        </amp-lightbox>      
     {% endif %}
   </div>
   </div>
