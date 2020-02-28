@@ -159,8 +159,8 @@
                   {% endfor %}
                 </ul>
                 {% elsif item.title == 'Courses' %}
-                  <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
-                    {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
+                  <span class="{% if school.inverted != true %}text-white hover-white{% endif %}"> 
+                    {% if school.tracks.size == 1 %}Course{% else %}{{ item.title | liquify }}{% endif %} <i class="fas fa-caret-down"></i>
                   </span>
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
                     {% for _track in school.tracks %}
