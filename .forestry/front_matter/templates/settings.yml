@@ -90,6 +90,11 @@ fields:
       config:
         required: false
       label: class
+    - name: target
+      type: text
+      config:
+        required: false
+      label: target
   - type: field_group_list
     name: footer
     label: footer
@@ -166,6 +171,11 @@ fields:
         config:
           required: false
         label: class
+      - name: target
+        type: text
+        config:
+          required: false
+        label: target
     - name: footer
       type: field_group_list
       fields:
