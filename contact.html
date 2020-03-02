@@ -116,13 +116,15 @@ title: Contact
           </ul>
         </a>
       {% endfor %}
-      <!-- <amp-iframe width="600"
+      <amp-iframe width="600"
         height="400"
         title="Google map pin on school location"
         layout="responsive"
         sandbox="allow-scripts allow-same-origin allow-popups"
         frameborder="0"
-        src="https://www.google.com/maps/embed/v1/place?q=place_id:{{ school.place_id }}&key={{ process.env.GOOGLE_API_KEY }}"> -->
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:{{ school.place_id }}&key={{ settings.google_maps_key }}
+
+        ">
       </amp-iframe>
     </div>
     <div class="col-xs-12 col-sm-6">
