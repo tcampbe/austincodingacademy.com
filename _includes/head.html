@@ -51,6 +51,24 @@
   {% capture css %}{% file_exists _includes/css.html %}{% endcapture %}
   {% if css == "true" %}{% include css.html %}{% endif %}
 </style>
+<style amp-keyframes>
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 28rem;
+    }
+  }
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+</style>
 <!-- htmllint preset="$previous" -->
 
 {% include google-tag-manager-head.html %}

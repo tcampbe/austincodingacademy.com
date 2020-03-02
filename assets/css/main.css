@@ -749,22 +749,7 @@ ul.share-buttons img {
     animation: typewriter 5s steps(60) 1s 1 normal both,
       blinkTextCursor 1400ms steps(44) infinite normal;
   }
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 28rem;
-    }
-  }
-  @keyframes blinkTextCursor {
-    from {
-      border-right-color: rgba(255, 255, 255, 0.75);
-    }
-    to {
-      border-right-color: transparent;
-    }
-  }
+  
 }
 
 /* Event Page Card Hover */
