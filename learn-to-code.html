@@ -44,26 +44,9 @@ learn_to_code:
     - Elements
     - The DOM
 ---
-{% for _page in site.pages %}
-  {% if _page.settings %}
-    {% assign settings = _page %}
-    {% for _school in settings.schools %}
-      {% if _school.key == site.key %}
-        {% assign school = _school %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
-{% if page.schools %}
-  {% for _school in page.schools %}
-    {% if _school.key == site.key %}
-      {% assign school = school | hash_concat: _school %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
 
-<div>
-    <h2 class="font-family-alt text-indigo font-weight-light text-center display-5 my-5"><small>What is Coding</small></h2>
+<div style="font-family: Montserrat, Open Sans">
+    <h2 class="font-family-alt text-indigo text-center display-5 my-5"><small>What is Coding</small></h2>
     <p class="text-center text-gray-dark mb-0">In this lesson, you will learn what coding is, what programming is, and the difference between the two.</p>
     <i class="fas fa-bars fa-2x ml-5 mb-5" on="tap:lessons.toggle"></i>
     <amp-sidebar 
@@ -91,7 +74,7 @@ learn_to_code:
     </amp-sidebar>
     <div class="container-fluid m-0 p-0">
       <div class="row no-gutters align-items-center">
-        <div class="float-left">
+        <div class="float-left px-2">
           <i class="fas fa-angle-left fa-3x"></i>
         </div>
         <div class="col mr-1">
@@ -102,7 +85,7 @@ learn_to_code:
                 width="520"
             >
             </amp-vimeo>
-            <p>Previous: <span>Intro to Coding</span></p>
+            <p class="text-left font-weight-bolder">Previous: <span class="text-indigo">Intro to Coding</span></p>
         </div>
         <div class="col ml-1">
             <amp-iframe 
@@ -110,16 +93,16 @@ learn_to_code:
                 height="292"
                 width="520"
                 sandbox="allow-scripts allow-same-origin"
-                src="https://codepen.io/keithakritselis/embed/preview/xxxmVgx?theme-id=dark&default-tab=html,result"
+                src="https://codepen.io/keithakritselis/embed/xxxmVgx?theme-id=dark&default-tab=html,result"
             >
             <div placeholder></div>
             </amp-iframe>
-            <p class="text-right">Next: <span>Coding Languages</span></p>
+            <p class="text-right font-weight-bolder">Next: <span class="text-indigo">Coding Languages</span></p>
         </div>
-        <div class="float-right">
+        <div class="float-right px-2">
           <i class="fas fa-angle-right fa-3x"></i>
         </div>
       </div>
     </div>
-    <div class="text-wrap text-wrap text-center mx-auto w-75 my-5">While both the terms are synonymous with each other and are often used interchangeably, they are quite different from each other. Coding simply means writing codes from one language to another such as from English to Java. It’s less intimidating and less intensive. Programming, on the other hand, means to program a machine with a set of instructions to run.</div>
+    <p class="text-wrap text-wrap text-center mx-auto w-75 my-5 font-weight-lighter">While both the terms are synonymous with each other and are often used interchangeably, they are quite different from each other. Coding simply means writing codes from one language to another such as from English to Java. It’s less intimidating and less intensive. Programming, on the other hand, means to program a machine with a set of instructions to run.</p>
 </div>
