@@ -10,13 +10,16 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
   yarn images
   yarn configs
   node _javascripts/github.js
-  KEY=austincodingacademy.com yarn jekyll-build-amp
-  yarn optimize
-  yarn css
+  # KEY=austincodingacademy.com yarn jekyll-build-amp
+  # yarn optimize
+  # yarn css
   ITER=0
   for file in ./_configs/*; do
     if [[ -f $file ]] && [[ $(($ITER % $CIRCLE_NODE_TOTAL)) == $CIRCLE_NODE_INDEX ]]; then
       export KEY=$(echo $file | sed "s/^.\/_configs\/\(.*\).yml$/\1/")
+      yarn jekyll-build-amp
+      yarn optimize
+      yarn css
       yarn jekyll-build
       yarn favicon
       if [ "${CIRCLE_BRANCH}" == "master" ]; then yarn sitemap; fi
