@@ -6,6 +6,15 @@ amp_components:
 head_title: "Contact {{ school.name }} | Programming Classes Near You"
 description: "Questions, comments or concerns? From classes to financing to your next steps, we’ll help you find the answers. Contact us today!"
 redirect_from: []
+schools:
+- key: 'austincodingacademy'
+  place_id: ChIJR4ekQae1RIYRnXanK3TPfDw
+- key: 'circlecoding'
+  place_id: ChIJtZXKfHOZToYR1EaIWfwwXDs
+- key: 'lubbockcodingacademy'
+  place_id: ChIJg0UIORht_oYRyCt_R6Oi2os
+- key: 'texastechcodingacademy'
+  place_id: ChIJJU45e44cW4YR_c09yCtv4F4  
 form_fields:
 - name: firstname
   label: First Name
@@ -107,6 +116,14 @@ title: Contact
           </ul>
         </a>
       {% endfor %}
+      <!-- <amp-iframe width="600"
+        height="400"
+        title="Google map pin on school location"
+        layout="responsive"
+        sandbox="allow-scripts allow-same-origin allow-popups"
+        frameborder="0"
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:{{ school.place_id }}&key={{ process.env.GOOGLE_API_KEY }}"> -->
+      </amp-iframe>
     </div>
     <div class="col-xs-12 col-sm-6">
       {% include contact-form.html %}
