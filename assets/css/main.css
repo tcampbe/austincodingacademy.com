@@ -814,6 +814,10 @@ ul.share-buttons img {
   z-index: auto;
 }
 
+.container-lg{
+  max-width: 1600px;
+}
+
 @each $color in primary-light, primary-dark, secondary-light,
   secondary-dark
 {
