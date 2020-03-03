@@ -45,16 +45,36 @@ learn_to_code:
     - The DOM
 ---
 
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 <div style="font-family: Montserrat, Open Sans">
     <h2 class="font-family-alt text-indigo text-center display-5 my-5"><small>What is Coding</small></h2>
     <p class="text-center text-gray-dark mb-0">In this lesson, you will learn what coding is, what programming is, and the difference between the two.</p>
-    <i class="fas fa-bars fa-2x ml-5 mb-5" on="tap:lessons.toggle"></i>
+    <i class="fas fa-bars fa-2x ml-5 mb-5" on="tap:lessons.open"></i>
     <amp-sidebar 
-      id="lessons"
-      layout="nodisplay"
-      width="345"
+      id="lessons" 
+      class="bg-white w-25"
+      layout="nodisplay" 
+      side="left"
     >
-      <nav>
+      <i class="fas fa-times fa-2x p-1" on="tap:lessons.close"></i>
+      <nav class="pl-5">
         <amp-accordian>
             <section>
                 <h6><a>What is Coding?</a></h6>
