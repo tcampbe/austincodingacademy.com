@@ -3,6 +3,7 @@ layout: default
 permalink: "/"
 head_title: "{{ school.name }} | Learn to Code, Change Your Life"
 hero: index
+circle_hero: circle
 title: Homepage
 description: At {{ school.name }}, we fit learning to code into your life with a flexible
   &amp; affordable array of options, all taught by current industry professionals.
@@ -146,7 +147,7 @@ schools:
 {% endif %}
 
 <div class="position-relative d-flex justify-content-center flex-column overflow-hidden container-lg p-0">
-  <div class="pl-3 pl-sm-2 ml-6 py-7 pb-md-11 position-absolute z-20 d-sm-block d-md-flex justify-content-center {% if school.inverted %}bg-white mw-600 rounded shadow-lg {% endif %}">
+  <div class="pl-3 pl-sm-2 m-md-6 m-sm-1 py-7 pb-md-11 position-absolute z-20 d-sm-block d-md-flex justify-content-center {% if school.inverted %}bg-white mw-600 rounded shadow-lg {% endif %}">
     <div class="col-sm-11 col-md-10 col-lg-10 pl-0">
       <div class="my-md-11"></div>
       <h1 class="{% if school.inverted != true %}text-white{% endif %} font-family-alt font-weight-bold display-responsive col-sm-12 col-md-9 pl-0">
@@ -172,7 +173,7 @@ schools:
     </div>
   </div>
   <!-- htmllint preset="none" -->
-  <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero {% if school.inverted != true %}z-10{% else %}z-90 w-50{% endif %} h-100"></div>
+  <div id="hero-{% if school.inverted != true %}{{ page.hero | liquify }}{% else %}{{ page.circle_hero | liquify }}{% endif %}" class="bg-gradient hero {% if school.inverted != true %}z-10{% else %}z-90 w-50{% endif %} h-100"></div>
   <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}

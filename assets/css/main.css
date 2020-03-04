@@ -361,6 +361,11 @@ a {
     url('/assets/uploads/hero-index.jpg');
   background-position: -820px 0px;
 }
+#hero-circle {
+  background-image: url('/assets/uploads/coding-tutoring-session.jpg');  
+  background-position: -820px 0px;
+  /* background-size: contain; */
+}
 
 @media (max-width: 768px) and (orientation: landscape) {
   #hero-index {
@@ -373,6 +378,12 @@ a {
 
 @media (min-width: 768px) {
   #hero-index {
+    background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7));
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+  }
+  #hero-circle {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7));
     opacity: 0.8;
     position: absolute;
