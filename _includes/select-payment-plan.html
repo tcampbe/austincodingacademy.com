@@ -20,9 +20,15 @@
   <option value="" disabled selected>
     Please Select
   </option>
-    {% for option in tuition.sections[0].options %}
-      <option value=",{{ option.deposit_hubspot_product_id | append: ',' | append: option.payment_plan_hubspot_product_id | append: ',' | append: option.payment_plan_paycove_template }}">
-        {{ option.price | liquify }} - {{ option.title | liquify }}
-      </option>
+    {% for section in tuition.sections %}
+      {% if section.tuition_options %}
+        <optgroup label="{{ section.title }}">
+          {% for option in section.options %}
+            <option value=",{{ option.deposit_hubspot_product_id | append: ',' | append: option.payment_plan_hubspot_product_id | append: ',' | append: option.payment_plan_paycove_template }}">
+              {{ option.price | liquify }} - {{ option.title | liquify }}
+            </option>
+          {% endfor %}
+        </optgroup>
+      {% endif %}
     {% endfor %}
 </select>
