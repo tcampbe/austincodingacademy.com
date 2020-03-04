@@ -17,13 +17,13 @@ schools:
       description: When you pay in full, you will pay the reduced total price of $10,960
       price_header: Total Price
       price-full: "$1,000"
-      payment_deposit: "$490"
+      payment_deposit: "$490 deposit"
       picture: '/assets/uploads/ccawebsite_tuitionpage_fulltuition.png'
     - title: Payment Plan
       description: After your initial deposit of $1000, you will make bi-weekly payments of $250 for 22 months. Total price of $12,750
       price_header: Details
       price-full: "$10,960"
-      payment_deposit: '$250'
+      payment_deposit: '$250 bi-weekly payments'
       picture: '/assets/uploads/ccawebsite_tuitionpage_paymentplan.png'
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Circle Coding Academy’s
@@ -47,13 +47,13 @@ schools:
         you’ll pay the reduced price of $10,960.
       price_header: Total Price
       price-full: "$10,960"
-      payment_deposit: '$490'
+      payment_deposit: '$10,960'
       picture: '/assets/uploads/ccawebsite_tuitionpage_fulltuition.png'
     - title: Austin Coding Academy Payment Plan (Budget Option)
       description: With our new payment plan, you can get started with class by making a $1,000 deposit. After you begin class you’ll make bi-weekly payments of $250 for 22 months, for a total program cost of $12,750. No interest and no penalty for prepayment!
       price_header: Details
       price-full: "$1,000"
-      payment_deposit: "$250"
+      payment_deposit: "$250 bi-weekly payments"
       picture: '/assets/uploads/ccawebsite_tuitionpage_paymentplan.png'
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Austin Coding Academy’s
@@ -70,36 +70,18 @@ schools:
       Track, as well as a job placement class (free to all graduates). Find out how
       we make tuition affordable with our different payment options below.
     options:
-    - title: Lubbock Coding Academy Payment Plan (Budget Option)
-      description: With our new payment plan, you can get started with Lubbock Coding
-        Academy for just $460 up-front. After you begin classes you’ll make bi-weekly
-        payments of $225 for 18-months, for a total program cost of $8,560. No interest
-        and no penalty for prepayment!
-      price_header: Details
-      price-full: "$460"
-      payment_deposit: "$225"
-      picture: ''
-    - title: Pay Up Front
-      description: Alternatively, if you are committed to going through the entire
-        program, you can cover the entire cost of tuition for the program upfront
-        if you are able to do so.
+    - title: Full Tuition
+      description: When you pay in full, you will pay the reduced total price of $7,960
       price_header: Total Price
-      price-full: "$7,960"
-      payment_deposit: ''
-      picture: ''
-    - title: Financing (via Texas Tech Credit Union)
-      description: Finance your tuition through Texas Tech Credit Union’s “Lubbock
-        Coding Academy Loan”. Apply with Texas Tech Credit Union, and once accepted
-        simply make your $490 deposit and begin monthly payments towards tuition over
-        the course of the loan. Learn more on Texas Tech Credit Union’s website.
-      cta: <a href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan"
-        rel="noopener" class="btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark text-white hover-white
-        mt-2" target="_blank"><span class="text-white hover-white">Financing Options</span>
-        <span class="text-white hover-white fas fa-arrow-right small"></span></a>
-      price_header: ''
-      price-full: ''
-      payment_deposit: ''
-      picture: ''
+      price-full: "$1,000"
+      payment_deposit: "$7,960"
+      picture: '/assets/uploads/ccawebsite_tuitionpage_fulltuition.png'
+    - title: Payment Plan
+      description: After your initial deposit of $460, you will make bi-weekly payments of $225 for 18 months. Total price of $8,560
+      price_header: Details
+      price-full: "$10,960"
+      payment_deposit: '$225 bi-weekly payments'
+      picture: '/assets/uploads/ccawebsite_tuitionpage_paymentplan.png'
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Lubbock Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
@@ -121,17 +103,17 @@ schools:
         if you are able to do so.
       price_header: Total Price
       price-full: "$9,960"
-      payment_deposit: ''
-      picture: ''
+      payment_deposit: '$9,960'
+      picture: '/assets/uploads/ccawebsite_tuitionpage_fulltuition.png'
     - title: "{{ school.name }} Payment Plan (Budget Option)"
-      description: With our new payment plan, you can get started with {{ school.name
-        }} for just $460 up-front. After you begin classes you’ll make bi-weekly payments
-        of $225 for 18-months, for a total program cost of $10,360. No interest and
+      description: With our new payment plan, you can get started with Texas Tech Coding 
+        Academy for just $1,000 up-front. After you begin classes you’ll make bi-weekly payments
+        of $250 for 22-months, for a total program cost of $12,750. No interest and
         no penalty for prepayment!
       price_header: Details
-      price-full: "$460"
-      payment_deposit: "$225" 
-      picture: ''
+      price-full: "$1,000"
+      payment_deposit: "$250 bi-weekly payments" 
+      picture: '/assets/uploads/ccawebsite_tuitionpage_paymentplan.png'
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Texas Tech University Coding
       Academy’s Full Stack Web Development Track and discuss tuition with a follow-up
@@ -175,11 +157,7 @@ schools:
               <div class="bg-textured" style="height: 100px"></div>
             {% endif %}
             <div class="d-flex justify-content-center">
-              {% if option.price_header == "Total Price" %}
-                <h4 class="font-weight-bold">{{ option.payment_deposit }} deposit</h4>
-              {% elsif option.price_header == "Details" %}
-                <h4 class="font-weight-bold">{{ option.payment_deposit }} bi-weekly payments</h4>
-              {% endif %}
+              <h4 class="font-weight-bold">{{ option.payment_deposit }}</h4>
             </div>
             <div class="d-flex justify-content-center">
               <p>{{ option.description }}</p>
