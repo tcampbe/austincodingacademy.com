@@ -1,0 +1,34 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if _page.tuition %}
+    {% for _page_school in _page.schools %}
+      {% if _page_school.key == site.key %}
+        {% assign tuition = _page_school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+<label class="form-label" for="payment-plan">How would you like to reserve your seat?<span class="text-red-a">*</span></label>
+<select class="form-control" id="payment-plan" name="payment_plan">
+  <option value="" disabled selected>
+    Please Select
+  </option>
+    {% for section in tuition.sections %}
+      {% if section.tuition_options %}
+        <optgroup label="{{ section.title }}">
+          {% for option in section.options %}
+            <option value=",{{ option.deposit_hubspot_product_id | append: ',' | append: option.payment_plan_hubspot_product_id | append: ',' | append: option.payment_plan_paycove_template }}">
+              {{ option.price | liquify }} - {{ option.title | liquify }}
+            </option>
+          {% endfor %}
+        </optgroup>
+      {% endif %}
+    {% endfor %}
+</select>

@@ -164,7 +164,7 @@ layout: default
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ school.url }}{{ site.baseurl }}{{ page.url }}"
+        "@id": "{% include school-url.html %}{{ site.baseurl }}{{ page.url }}"
       },
       "headline": "{{ page.head_title | liquify }}",
       "image": [

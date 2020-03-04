@@ -99,12 +99,12 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "{{ school.name }}",
-    "url": "{{ school.url }}",
+    "url": "{% include school-url.html %}",
     "priceRange": "$2990",
     "logo": "{{ school.url | append: school.logo }}",
     "image": {
       "@type": "ImageObject",
-      "url": "{{ school.url }}/assets/uploads/header-index.jpg"
+      "url": "{% include school-url.html %}/assets/uploads/header-index.jpg"
     },
     "telephone": "{{ school.phone | phone_number }}",
     "address": [

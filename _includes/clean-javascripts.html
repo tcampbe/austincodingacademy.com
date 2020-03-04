@@ -1,18 +1,6 @@
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    const decodeURLParams = search => {
-      const hashes = search.slice(search.indexOf("?") + 1).split("&");
-      return hashes.reduce((params, hash) => {
-        const split = hash.indexOf("=");
-        if (split < 0) return Object.assign(params, { [hash]: null });
-        const key = hash.slice(0, split);
-        const val = hash.slice(split + 1);
-        return Object.assign(params, { [key]: decodeURIComponent(val) });
-      }, {});
-    };
-    const search = window.location.search;
-    const hashesObj = decodeURLParams(search);
-    const email = hashesObj['email'];
+    const email = decodeURLParams(window.location.search)['email'];
     document.querySelectorAll("input[name='email'][type='hidden']").forEach(el => {
       el.value = email
     });
