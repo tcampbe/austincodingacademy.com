@@ -2,6 +2,7 @@
 settings: true
 title: Settings
 form_url: https://4runw89p71.execute-api.us-west-1.amazonaws.com/latest/hubspot
+amp_proxy: https://4runw89p71.execute-api.us-west-1.amazonaws.com/latest
 hubspot_portal_id: 4009818
 google_tag_manager: GTM-TBH7GK
 google_tag_manager_amp: GTM-KZ9XHND
@@ -12,12 +13,12 @@ corporate_trainings_form_guid: a000aab9-9870-4578-a496-2649ea46fb7e
 corporate_form_guid: b8fb52b4-28de-4133-920b-7f587724bb3d
 assignment_form_guid: 60651a89-8f76-427f-aaf6-13263bfd9c6b
 acuity_scheduling_src: ''
-preapplication_form_guid: 
+preapplication_form_guid:
 application_form_guid: ''
 diversity_form_guid: ''
 linkedin_pixel: "1650922"
 google_maps_key: AIzaSyDWahn7DAGt1PZfTUP-y7DtLFVTtLB1TL4
-pdf_viewer_url: "{{ school.url }}/web/viewer.html?file=.."
+pdf_viewer_url: "{% include school-url.html %}/web/viewer.html?file=.."
 description: At {{ school.name }}, we fit learning to code into your life with a flexible
   &amp; affordable array of options, all taught by current industry professionals.
   Don't wait - embark on a new career today!
@@ -234,6 +235,7 @@ schools:
     time: 6:30 - 9:00pm
     length: 36 weeks
     price: "$11,960"
+    hubspot_ticket_id: 88908498
   primary_light_color: rgb(78, 188, 231)
   primary_dark_color: rgb(0, 0, 0)
   secondary_light_color: rgb(78, 188, 231)
@@ -281,6 +283,7 @@ schools:
   preapplication_form_guid: 8fb40a43-8ebf-4f5e-8a4a-6e72ecec56ab
   application_form_guid: 9d476e09-2737-4394-b7db-f0395a2d26d5
   acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=3203565
+  getaccept_entity_id: 8nk6xxvp
   primary_light_color: rgb(0, 179, 209)
   primary_dark_color: rgb(45, 47, 119)
   secondary_light_color: rgb(130, 202, 156)
@@ -361,6 +364,8 @@ schools:
     time: 6:30 - 9:00pm
     length: 36 weeks
     price: "$11,960"
+    hubspot_ticket_id: 99458244
+    getaccept_template_id: 6jmmkudg68z
   announcement: ''
   linkedin: ''
   instructors:
@@ -610,7 +615,7 @@ schools:
     - Web 101
     - C# 221
     - ".Net 321"
-    limitation: 
+    limitation:
     gravatar_email: eddiecrochet1994@gmail.com
     location:
     - any
@@ -682,7 +687,7 @@ schools:
     - JS 211
     - JS 311
     - JS 411
-    limitation: 
+    limitation:
     gravatar_email: sean.philippi@gmail.com
     location:
     - austinNorth
@@ -755,6 +760,7 @@ schools:
     price: "$7,960"
     location: South Plains College
     days: Tuesday/Thursday
+    hubspot_ticket_id: 89048700
   linkedin: ''
   instructors:
   - name: Brad Hunt
@@ -1057,6 +1063,7 @@ schools:
     time: 6:30 - 9:00pm
     length: 36 weeks
     price: "$11,960"
+    hubspot_ticket_id: 88909635
   linkedin: ''
   preapplication_form_guid: a733ed21-e7d7-4037-9aa0-b3105da0a846
   instructors: []

@@ -23,7 +23,7 @@
     "optimize": "yarn html && find _site/amp -name \"*.html\" | while read fname; do npx amp optimize \"$fname\" > \"$fname-temp\" && mv \"$fname-temp\" \"$fname\"; done",
     "pa11y": "pa11y-ci",
     "sitemap": "./node_modules/.bin/sitemap-generator https://$(echo $KEY) -v",
-    "start": "JEKYLL_ENV='preview.' concurrently \"http-server _site -p 8080 -a 0.0.0.0 -s\" \"npm-watch\"",
+    "start": "JEKYLL_ENV='development' concurrently \"http-server _site -p 8080 -a 0.0.0.0 -s\" \"npm-watch\"",
     "test": "yarn lint"
   },
   "devDependencies": {

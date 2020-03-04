@@ -55,8 +55,8 @@ permalink: "/courses/web-development/deposit/"
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: '{{ school.url }}/thank-you/',
-      cancelUrl: '{{ school.url }}',
+      successUrl: '{% include school-url.html %}/thank-you/',
+      cancelUrl: '{% include school-url.html %}',
     })
     .then(function (result) {
       if (result.error) {

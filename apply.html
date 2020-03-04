@@ -120,20 +120,6 @@ schools:
     small_width: 12
     medium_width: 6
     options: []
-  - name: circle_program_interest_cp
-    label: To which program are you applying?
-    description: ''
-    type: select
-    value: ''
-    options:
-    - value: Full Stack JavaScript Track
-      label: Full-Stack Web Development Track
-    - value: WordPress Fundamentals
-      label: WordPress Fundamentals
-    placeholder: Select your answer
-    required: true
-    small_width: 12
-    medium_width: 12
 - key: lubbockcodingacademy
   form_fields:
   - name: firstname
@@ -228,6 +214,7 @@ schools:
     type: hidden
     value: 'Full Stack Web Development'
     required: true
+redirect_url: "{% include school-url.html %}/apply-two"
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -246,5 +233,4 @@ schools:
     {% endif %}
   {% endfor %}
 {% endif %}
-{% assign redirect_url = school.url | append: "/apply-two" %}
-{% include apply.html redirect_url=redirect_url %}
+{% include apply.html redirect_url=page.redirect_url %}

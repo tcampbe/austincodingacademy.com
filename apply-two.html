@@ -20,11 +20,21 @@ form_fields:
   small_width: ''
   medium_width: ''
   options: []
+- name: redirect_url
+  label: ''
+  description: ''
+  type: hidden
+  value: "{% include school-url.html %}/deposit"
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
 - name: application_submission_url
   label: ''
   description: ''
   type: hidden
-  value: "{{ school.url }}{{ site.baseurl }}{{ page.permalink }}"
+  value: "{% include school-url.html %}{{ site.baseurl }}{{ page.permalink }}"
   placeholder: ''
   required: ''
   small_width: ''
@@ -182,36 +192,16 @@ form_fields:
   small_width: "12"
   medium_width: "6"
   options: []
-- name: date_of_birth1
+- name: dob
   label: Date of Birth
   description: ''
   type: date
-  value: ''
+  value: 'You must be 18 years old by the time class starts. Contact us for more info.'
   placeholder:
   required: true
   small_width: "12"
   medium_width: "6"
   options: []
-- name: when_would_you_like_to_begin_class
-  label: When would you like to begin class?
-  description: ''
-  type: select
-  value: ''
-  placeholder: Select your answer
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options:
-  - value: 'As Soon as Possible'
-    label: 'As Soon as Possible'
-  - value: '2 - 4 Weeks'
-    label: '2 - 4 Weeks'
-  - value: '1 - 3 Months'
-    label: '1 - 3 Months'
-  - value: '3 - 6 Months'
-    label: '3 - 6 Months'
-  - value: '> 6 Months'
-    label: '> 6 Months'
 - name: do_you_own_a_laptop
   label: Do you own a laptop?
   description: ''
@@ -226,24 +216,6 @@ form_fields:
     label: 'Yes'
   - value: false
     label: 'No'
-- name: how_do_you_intend_to_pay_for_the_course_
-  label: How do you intend to pay for the course?
-  description: ''
-  type: select
-  value: ''
-  options:
-  - value: I'll be paying on my own.
-    label: Paying on my own
-  - value: Planning to finance
-    label: I'm planning to finance tuition.
-  - value: Employer will be paying / reimbursing
-    label: My employer will be paying/reimbursing me.
-  - value: Other
-    label: Other
-  placeholder: Select your answer
-  required: true
-  small_width: "12"
-  medium_width: "6"
 edu_work_fields:
 - name: highest_level_of_education_completed
   label: Highest level of education completed?
@@ -340,8 +312,10 @@ schools:
     >
       <div class="row p-5">
         {% assign about_fields = page.form_fields %}
-        {% assign redirect_url = school.url | append: "/apply/scheduling" %}
-        {% include fields.html fields=about_fields redirect_url=redirect_url %}
+        {% include fields.html fields=about_fields %}
+        <div class="col-12 mb-4">
+          {% include select-payment-plan.html %}
+        </div>
         <div class="col-12 my-5">
           <h2 class="text-center font-weight-bold mb-5">
             Education &amp; Work Experience

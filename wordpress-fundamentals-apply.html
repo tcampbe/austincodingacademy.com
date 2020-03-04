@@ -3,7 +3,7 @@ layout: default
 permalink: "/courses/wordpress-fundamentals/apply/"
 title: "Courses - Wordpress Fundamentals - Apply"
 redirect_from:
-redirect_url: "{{ school.url }}/apply/scheduling"
+redirect_url: "{% include school-url.html %}/apply/scheduling"
 head_title: "Start Your Application | Apply Now at {{ school.name }}"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 hide_apply: 'd-none'
@@ -52,7 +52,7 @@ form_fields1:
   required: true
   small_width: 12
   medium_width: 6
-  options: [] 
+  options: []
 - name: email
   label: Email
   description: ''
@@ -89,7 +89,7 @@ form_fields2:
   description: ''
   type: select
   value: ''
-  options: 
+  options:
   - value: High School Diploma/GED
     label: High School Diploma/GED
   - value: Some College, No Degree
@@ -142,7 +142,7 @@ form_fields3:
   description: ''
   type: select
   value: ''
-  options: 
+  options:
   - value: 'Yes (a Chromebook)'
     label: 'Yes (a Chromebook)'
   - value: 'Yes (a Mac or Windows machine Pre-2012)'
@@ -162,7 +162,7 @@ form_fields3:
   description: ''
   type: select
   value: ''
-  options: 
+  options:
   - value: Facebook
     label: Facebook
   - value: Instagram
@@ -196,7 +196,7 @@ form_fields3:
   description: ''
   type: select
   value: ''
-  options: 
+  options:
   - value: I'll be paying on my own.
     label: I'll be paying on my own.
   - value: I'm planning to finance tuition.
@@ -210,11 +210,11 @@ form_fields3:
   small_width: 12
   medium_width: 6
 - name: when_would_you_like_to_begin_class
-  label: When Would You Like to Begin Class? 
+  label: When Would You Like to Begin Class?
   description: ''
   type: select
   value: ''
-  options: 
+  options:
   - value: As Soon as Possible
     label: As Soon as Possible
   - value: 2 – 4 Weeks
@@ -296,7 +296,7 @@ form_fields3:
           About You
         </h2>
         <div class="mw-850 row">
-          
+
           {% include fields.html fields=page.form_fields1 %}
 
           <h2 class="display-6 mb-4 col-12">
