@@ -2,10 +2,10 @@
 tags: []
 layout: post
 title: 4 Ways a Coding Bootcamp is Worth It
-description: With the increasing popularity of the coding bootcamp, it's fair to
-  ask – are they worth it? Let's take a look at the benefits of coding boot camps.
-created_at: 2019-07-18 00:00:00 -0500
-updated_at: 2019-07-18 00:00:00 -0500
+description: With the increasing popularity of the coding bootcamp, it's fair to ask
+  – are they worth it? Let's take a look at the benefits of coding boot camps.
+created_at: 2019-07-18T05:00:00.000+00:00
+updated_at: 2019-07-18T05:00:00.000+00:00
 categories:
 - Web Development
 - Coding Bootcamp
@@ -20,7 +20,11 @@ permalink: "/blog/web-development/4-ways-a-coding-bootcamp-is-worth-it/"
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
+- lubbockcodingacademy
+- texastechcodingacademy
+- circlecoding
 - austincodingacademy
+
 ---
 ### What’s After Graduation? 4 Ways a Coding Boot Camp Is Worth It
 

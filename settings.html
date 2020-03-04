@@ -16,6 +16,7 @@ preapplication_form_guid:
 application_form_guid: ''
 diversity_form_guid: ''
 linkedin_pixel: "1650922"
+google_maps_key: AIzaSyDWahn7DAGt1PZfTUP-y7DtLFVTtLB1TL4
 pdf_viewer_url: "{{ school.url }}/web/viewer.html?file=.."
 description: At {{ school.name }}, we fit learning to code into your life with a flexible
   &amp; affordable array of options, all taught by current industry professionals.
@@ -372,7 +373,14 @@ schools:
     days: Monday/Wednesday
     time: 6:30 - 9:00pm
     length: 36 weeks
-    price: "$$1,000 deposit + $250 / 2 weeks"
+    price: "$11,960"
+  - location: Highland Campus
+    course: WordPress Fundamentals
+    date: May 4th
+    days: Monday/Wednesday
+    time: 6:30 - 9:00pm
+    length: 10 weeks
+    price: ''
   announcement: ''
   linkedin: ''
   instructors:
@@ -589,6 +597,17 @@ schools:
       icon: fab fa-github
       hex: "#303133"
   tutors:
+  - name: Rob Watkins
+    id: "13391800"
+    skills:
+    - Web 101
+    email: robpwatkins@gmail.com
+    location:
+    - austinNorth
+    calendar: https://acaappointment.as.me/?appointmentType=13391800
+    virtual: https://meet.google.com/tqy-ekmf-rto?authuser=3
+    rocketchat: https://chat.austincodingacademy.com/direct/robpwatkins
+    gravatar_email: robpwatkins@gmail.com
   - name: Jacob Schaefer
     id: "3637848"
     skills:
@@ -621,20 +640,6 @@ schools:
     virtual: https://meet.google.com/ixh-phuz-tre
     rocketchat: https://chat.austincodingacademy.com/direct/eddiecrochet-939
     email: eddiecrochet1994@gmail.com
-  - name: Gabe Flores
-    id: "9935070"
-    skills:
-    - Web 101
-    - JS 211
-    - JS 311
-    - JS 411
-    gravatar_email: jflores353@gmail.com
-    location:
-    - austinNorth
-    calendar: https://acaappointment.as.me/?calendarID=2932736
-    virtual: https://meet.google.com/cyb-qjve-zsv
-    rocketchat: https://chat.austincodingacademy.com/direct/gabeflores-958
-    email: jflores353@gmail.com
   - name: Wes Garbee
     id: "10004148"
     skills:
@@ -720,21 +725,6 @@ schools:
     virtual: https://meet.google.com/znv-fowt-rcm
     rocketchat: https://chat.austincodingacademy.com/direct/risser.darwin
     email: risser.darwin@gmail.com
-  - name: Olamide Kolawole
-    id: "9299635"
-    skills:
-    - C# Students &amp; Grads
-    - JS Grads Only
-    limitation: 
-    gravatar_email: olamshin@gmail.com
-    location:
-    - any
-    - austinNorth
-    - austinDowntown
-    calendar: https://acaappointment.as.me/?calendarID=2803756
-    virtual: https://meet.google.com/ogc-dsza-fkr
-    rocketchat: https://chat.austincodingacademy.com/direct/olamidekolawole-1293
-    email: olamshin@gmail.com
   logo: "/assets/uploads/logo-austincodingacademy-white.png"
   seal: "/assets/uploads/logo-austincodingacademy-favicon.png"
 - key: lubbockcodingacademy
@@ -787,6 +777,15 @@ schools:
     days: Tuesday/Thursday
   linkedin: ''
   instructors:
+  - name: Brad Hunt
+    gravatar_email: brad.hunt@lubbockcodingacademy.com
+    linkedin: ''
+    title: Instructor
+    campus: ''
+    bio: For the last 20 years, Brad Hunt has been helping clients create web based
+      applications. Brad has served as a corporate trainer, VP of Technology, VP of
+      Client Services, and now President of Smooth Fusion. Smooth Fusion works with
+      clients to create functional, usable, secure and elegant software.
   - name: Denise Bostwick
     email: denise@lubbockcodingacademy.com
     linkedin: https://www.linkedin.com/in/denise-bostwick-80b29714/
@@ -939,7 +938,7 @@ schools:
     calendar: https://acaappointment.as.me/?calendarID=2992556
     virtual: https://meet.google.com/swm-maog-rak
     rocketchat: https://chat.austincodingacademy.com/direct/johnny.reina
-    email: johnny.r.reina@gmail.com
+    email: johnny@austincodingacademy.com
   team:
   - name: Chris Lofton
     title: CEO
@@ -1029,7 +1028,7 @@ schools:
       url: ''
       class: ''
     - title: Tuition
-      url: '/tuition/'
+      url: "/tuition/"
       class: ''
     - title: Events
       url: "/events/"
