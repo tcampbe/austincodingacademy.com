@@ -13,7 +13,7 @@ corporate_trainings_form_guid: a000aab9-9870-4578-a496-2649ea46fb7e
 corporate_form_guid: b8fb52b4-28de-4133-920b-7f587724bb3d
 assignment_form_guid: 60651a89-8f76-427f-aaf6-13263bfd9c6b
 acuity_scheduling_src: ''
-preapplication_form_guid:
+preapplication_form_guid: 
 application_form_guid: ''
 diversity_form_guid: ''
 linkedin_pixel: "1650922"
@@ -55,7 +55,8 @@ navigation:
     class: ''
   - title: Apply
     url: "/apply/"
-    class: btn {% if school.inverted != true %}btn-round{% endif %} text-white cta-gradient py-1 px-6
+    class: btn {% if school.inverted != true %}btn-round{% endif %} text-white cta-gradient
+      py-1 px-6
   footer:
   - title: Hack Overflow
     url: https://austincodingacademy.com/forum
@@ -185,12 +186,13 @@ schools:
       - title: Dallas
         url: "/contact/"
       - title: Austin
-        url: "https://www.austincodingacademy.com"
+        url: https://www.austincodingacademy.com
         target: true
       - title: Lubbock
-        url: "https://www.lubbockcodingacademy.com"
+        url: https://www.lubbockcodingacademy.com
         target: true
       url: ''
+      class: ''
     - title: About Us
       links:
       - title: Contact Us
@@ -248,7 +250,8 @@ schools:
     time: 6:30 - 9:00pm
     length: 36 weeks
     price: "$11,960"
-    hubspot_ticket_id: 88908498
+    hubspot_ticket_id: "88908498"
+    getaccept_template_id: 94jj7ayjkm2
   primary_light_color: rgb(78, 188, 231)
   primary_dark_color: rgb(0, 0, 0)
   secondary_light_color: rgb(78, 188, 231)
@@ -290,6 +293,7 @@ schools:
   seal: "/assets/uploads/cca_seal.png"
   course_guide_img: "/assets/uploads/CCA Course Guide preview.png"
   acuity_scheduling_src: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=12870386
+  tuition_hubspot_product_id: ''
 - key: austincodingacademy
   active: true
   name: Austin Coding Academy
@@ -378,7 +382,7 @@ schools:
     time: 6:30 - 9:00pm
     length: 36 weeks
     price: "$10,960"
-    hubspot_ticket_id: 99458244
+    hubspot_ticket_id: "99458244"
     getaccept_template_id: 6jmmkudg68z
   - location: Highland Campus
     course: WordPress Fundamentals
@@ -386,8 +390,8 @@ schools:
     days: Monday/Wednesday
     time: 6:30 - 9:00pm
     length: 10 weeks
-    price: '$1,990'
-    hubspot_ticket_id: 99662108
+    price: "$1,990"
+    hubspot_ticket_id: "99662108"
     getaccept_template_id: vd223c6qvx9
   announcement: ''
   linkedin: ''
@@ -638,7 +642,7 @@ schools:
     - Web 101
     - C# 221
     - ".Net 321"
-    limitation:
+    limitation: 
     gravatar_email: eddiecrochet1994@gmail.com
     location:
     - any
@@ -710,7 +714,7 @@ schools:
     - JS 211
     - JS 311
     - JS 411
-    limitation:
+    limitation: 
     gravatar_email: sean.philippi@gmail.com
     location:
     - austinNorth
@@ -735,6 +739,7 @@ schools:
     email: risser.darwin@gmail.com
   logo: "/assets/uploads/logo-austincodingacademy-white.png"
   seal: "/assets/uploads/logo-austincodingacademy-favicon.png"
+  tuition_hubspot_product_id: ''
 - key: lubbockcodingacademy
   active: true
   name: Lubbock Coding Academy
@@ -783,7 +788,8 @@ schools:
     price: "$460 deposit + $225 / 2 weeks"
     location: South Plains College
     days: Tuesday/Thursday
-    hubspot_ticket_id: 89048700
+    hubspot_ticket_id: "89048700"
+    getaccept_template_id: ''
   linkedin: ''
   instructors:
   - name: Brad Hunt
@@ -1022,6 +1028,8 @@ schools:
       hex: "#303133"
   logo: "/assets/uploads/logo-lubbockcodingacademy-white.png"
   seal: "/assets/uploads/logo-austincodingacademy-favicon.png"
+  getaccept_entity_id: ''
+  tuition_hubspot_product_id: ''
 - key: texastechcodingacademy
   active: true
   name: Texas Tech Coding Academy
@@ -1086,7 +1094,8 @@ schools:
     time: 6:30 - 9:00pm
     length: 36 weeks
     price: "$11,960"
-    hubspot_ticket_id: 88909635
+    hubspot_ticket_id: "88909635"
+    getaccept_template_id: ''
   linkedin: ''
   preapplication_form_guid: a733ed21-e7d7-4037-9aa0-b3105da0a846
   instructors: []
@@ -1169,6 +1178,8 @@ schools:
   logo: "/assets/uploads/logo-texastechcodingacademy.png"
   seal: "/assets/uploads/logo-texastechcodingacademy-favicon.png"
   acuity_scheduling_src: https://acaappointment.as.me/schedule.php?appointmentType=13019139
+  getaccept_entity_id: ''
+  tuition_hubspot_product_id: ''
 logos:
 - name: Indeed
   width: 721px
