@@ -1,6 +1,8 @@
 <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
 <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
-<input name="redirect_url" type="hidden" value="{{ include.redirect_url | liquify }}">
+{% if redirect_url != nil %}
+  <input name="redirect_url" type="hidden" value="{{ include.redirect_url | liquify }}">
+{% endif %}
 <!-- htmllint preset="none" -->
 {% for field in include.fields %}
   {% if field.type == "hidden" %}
