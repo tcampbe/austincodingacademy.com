@@ -64,7 +64,9 @@
           {% endfor %}
           {% assign all_fields = contact.form_fields %}
           {% include fields.html fields=all_fields %}
-
+          <div class="col-12 mb-4">
+            {% include select-start-date.html %}
+          </div>
           <div class="col-12 mb-4">
             {% include referral-question.html %}
           </div>
