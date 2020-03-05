@@ -233,6 +233,16 @@ fields:
   - type: text
     name: application_form_guid
     label: application_form_guid
+  - name: getaccept_entity_id
+    type: text
+    config:
+      required: false
+    label: getaccept_entity_id
+  - name: tuition_hubspot_product_id
+    type: text
+    config:
+      required: false
+    label: tuition_hubspot_product_id
   - type: text
     name: twitter
     label: twitter
@@ -328,6 +338,16 @@ fields:
       config:
         required: false
       label: price
+    - name: hubspot_ticket_id
+      type: text
+      config:
+        required: false
+      label: hubspot_ticket_id
+    - name: getaccept_template_id
+      type: text
+      config:
+        required: false
+      label: getaccept_template_id
     config:
       min: 
       max: 
