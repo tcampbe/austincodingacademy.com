@@ -71,3 +71,5 @@ fields:
       - type: file
         name: picture
         label: picture
+pages:
+- tuition.html
