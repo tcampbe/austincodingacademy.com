@@ -29,6 +29,11 @@ process:
   time:
   img_width: 70
   img_height: 70
+challenge_descript1: "Take a look at the picture below showing HTML, CSS, and JavaScript.  In the space provided,
+  please describe in 1-2 paragraphs what the code displayed in the picture is creating."
+challenge_descript2: "This is not a test of your coding knowledge. You are encouraged to use online resources to find answers that you don't know —
+  as a developer that will be an important part of your job! Here are some resources we recommend using:"
+img_src: /assets/uploads/coding-assignment.png
 form_fields:
 - name: firstname
   label: First Name
@@ -69,16 +74,6 @@ form_fields:
   required: true
   small_width: 12
   medium_width: 6
-  options: []
-- name: how_did_you_hear_about_us_text
-  label: How did you hear about us?
-  description: ''
-  type: text
-  value: ''
-  placeholder: How did you hear about us?
-  required: true
-  small_width: "12"
-  medium_width: "6"
   options: []
 - name: city
   label:  Current City
@@ -292,6 +287,7 @@ form_fields:
   required: true
   small_width: 12
   medium_width: 12
+  rows: "10"
   options: []
 - name: how_do_you_intend_to_use_your_coding_skills_after_you_graduate_answer_in_less_than_400_words_
   label: How would learning coding change your life? (1-3 paragraphs)
@@ -302,34 +298,25 @@ form_fields:
   required: true
   small_width: 12
   medium_width: 12
-  options: []
-- name: coding_assignment_answer
-  label: Assignment anser (1-3 paragraphs)
-  description: ''
-  type: 'textarea'
-  value: ''
-  placeholder: Assignment Answer
-  required: true
-  small_width: 12
-  medium_width: 12
+  rows: "10"
   options: []
 timeline:
-- title: "Submit Your Application (Deadline: December 11th)"
-  text: The Diversity Scholarship application is 2 pages long and consists of a
+- title: "Submit Your Application (Deadline: March 31)"
+  text: The Diversity Scholarship application consists of a
     couple of short answer questions and a short “open-book” coding assignment.
     After you finish the application, you will be asked to schedule a phone
     interview with one of our admissions representatives.
-- title: "15-Minute Phone Interview (Deadline: December 12th)"
-  text: During your scheduled phone interview an Austin Coding Academy admissions
+- title: "15-Minute Phone Interview (Deadline: March 31)"
+  text: During your scheduled phone interview an Circle Coding Academy admissions
     representative will review your application, answer any questions you may
     have about the program or scholarship process, give you information about
     our program, and get to know your goals with learning to code.
-- title: "In-Person Interview with Finalists (December 17th)"
+- title: "In-Person Interview with Finalists (April 2nd)"
   text: 3 Finalists for the Diversity Scholarship will be announced on Friday,
     December 13th. Finalists will be required to be available to attend an
-    in-person interview on the evening on Tuesday, December 17th. An independent
+    in-person interview on the evening on Thursday, April 2nd. An independent
     panel will select the finalist who will receive the Diversity Scholarship, to be
-    applied to Austin Coding Academy’s Full Stack Web Development Program.
+    applied to Circle Coding Academy’s Full Stack Web Development Program.
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -356,7 +343,7 @@ timeline:
     <div class="px-6 py-4 col-12 col-sm-10 d-flex flex-column align-items-start">
       <p class="text-center mx-auto mb-0 mb-sm-6">
         Start your Diversity Scholarship Application by filling out our 2-page application form. To be considered
-        for the Austin Coding Academy Diversity Scholarship, please be aware of the following timeline:
+        for the Circle Coding Academy Diversity Scholarship, please be aware of the following timeline:
       </p>
       {% assign timeline = page.timeline%}
       {% for item in timeline %}
@@ -376,10 +363,21 @@ timeline:
           {% assign all_fields = page.form_fields %}
           {% assign redirect_url = page.redirect_url %}
           {% include fields.html fields=all_fields redirect_url=redirect_url %}
-          <div class="col-12 mb-4">
-            {% include referral-question.html %}
+          {% include challenge.html %}
+          <div class="input-group">
+            <textarea
+              id="code-challenge"
+              class="form-control"
+              rows="10"
+              name="coding_assignment_answer"
+              placeholder="1-2 paragraphs"
+              aria-label="Coding Challenge Question"
+              required
+              data-msg="Please enter a response."
+              data-error-class="u-has-error"
+              data-success-class="u-has-success"
+            ></textarea>
           </div>
-
           <div class="mb-4 d-flex flex-column align-items-center">
               <button class="btn {% if school.inverted != true %}btn-round{% endif %}text-white hover-white bg-primary-dark m-2" type="Submit">
                 Submit
