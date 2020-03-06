@@ -1,0 +1,75 @@
+---
+label: Tuition
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: head_title
+  label: head_title
+- type: text
+  name: title
+  label: title
+- type: list
+  name: amp_components
+  label: amp_components
+- type: boolean
+  name: tuition
+  label: tuition
+- type: field_group_list
+  name: schools
+  label: schools
+  fields:
+  - type: text
+    name: key
+    label: key
+  - type: field_group_list
+    name: sections
+    label: sections
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: boolean
+      name: tuition_options
+      label: tuition_options
+    - type: textarea
+      name: description
+      label: description
+    - type: field_group_list
+      name: options
+      label: options
+      fields:
+      - type: text
+        name: title
+        label: title
+      - type: text
+        name: description
+        label: description
+      - type: text
+        name: price_header
+        label: price_header
+      - type: text
+        name: price
+        label: price
+      - type: text
+        name: payment_deposit
+        label: payment_deposit
+      - type: text
+        name: payment_plan_paycove_template
+        label: payment_plan_paycove_template
+      - type: number
+        name: deposit_hubspot_product_id
+        label: deposit_hubspot_product_id
+      - type: text
+        name: payment_plan_hubspot_product_id
+        label: payment_plan_hubspot_product_id
+      - type: file
+        name: picture
+        label: picture
+pages:
+- tuition.html
