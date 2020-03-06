@@ -69,22 +69,22 @@ overview:
 - title: Tech’s Diversity Problem
   text: The current makeup of the tech industry fails to represent the cultural makeup and trends of Dallas, 
     Texas and the United States as a whole. Our world is becoming more diverse by the day, and as tech plays an increasingly important role in shaping it, the tech workforce should represent this shift. Circle Coding Academy is committed to a diverse and representative tech workforce for the future.
-  img_src: "/assets/uploads/div-school-tech-diversity-problem.jpg"
+  img_src: "/assets/uploads/alumninov2019-12.jpg"
   odd: true
 - title: Implications for the Future
   text: The tech industry is instrumental in driving changes in our everyday life – from social networking, to 
     smart homes and cars, to creating solutions to the biggest challenges we face in society. A tech workforce that truly represents how diverse we are, makes sure that all perspectives are considered in the solutions that we create.
-  img_src: "/assets/uploads/div-school-future-implications.jpg"
+  img_src: "/assets/uploads/dan-ltc.jpg"
 - title: What We’re Doing to Help
   text: Since being founded in 2014, Circle Coding Academy has maintained a commitment
     to accessibility and affordability. Our Diversity Scholarship is another effort
     to make sure that we are promoting accessibility and diversity in tech, by making
     our transformative education available to even more well-qualified candidates.
-  img_src: "/assets/uploads/div-school-what-were-doing-to-help.jpg"
+  img_src: "/assets/uploads/learntocodemay169.jpg"
   odd: true
 scholarship:
   heading: About this Scholarship
-  img_src: "/assets/uploads/div-school-about-this-scholarship.jpg"
+  img_src: "/assets/uploads/zech-and-raf.jpg"
   subheading: Now Accepting Applications
   p1: November 19th - December 11th, we will be accepting applications to our
     Annual Diversity Scholarship from candidates who are ready to take control
@@ -123,7 +123,13 @@ scholarship:
   {% endfor %}
 {% endif %}
 <!-- htmllint preset="none" -->
-<div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
+<div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11" style="
+background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
+url('/assets/uploads/zech-and-raf.jpg');
+background-position: right;
+background-repeat: no-repeat;
+background-size: cover;
+">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-2 mb-md-2 text-white font-family-alt font-weight-bold display-55 display-sm-4 text-center">
     {{ page.hero_heading1 | liquify }}
@@ -229,21 +235,23 @@ scholarship:
   </section> -->
   <!-- PROCESS -->
   <!-- <section class="container d-flex flex-column justify-content-center"> --> 
-    {% assign process = page.app_process %}
-    <div class="display-5 font-family-alt py-8 text-center">
-      {{ process.heading }}
-    </div>
-    {% assign sections = process.sections %}
-    {% for item in sections %}
-      <div class="py-5">
-        <div class="display-7 font-family-alt mb-5 text-center text-sm-left">
-          {{ item.subheading | liquify }}
-        </div>
-        <p class="text-center text-md-left text-white">
-          {{ item.text | liquify }}
-        </p>
+    <div class="container">
+      {% assign process = page.app_process %}
+      <div class="display-5 font-family-alt py-8 text-center">
+        {{ process.heading }}
       </div>
-    {% endfor %}
+      {% assign sections = process.sections %}
+      {% for item in sections %}
+        <div class="py-5">
+          <div class="display-7 font-family-alt mb-5 text-center text-sm-left">
+            {{ item.subheading | liquify }}
+          </div>
+          <p class="text-center text-md-left text-white">
+            {{ item.text | liquify }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
   </section>
 
   <!-- Timeline -->
