@@ -76,16 +76,6 @@ schools:
       deposit_hubspot_product_id: 87062522
       payment_plan_hubspot_product_id: "87065220"
       picture: "/assets/uploads/ccawebsite_tuitionpage_paymentplan.png"
-  - title: Apply to Join the Full Stack Web Development Track
-    description: Submit your short 5-minute application to Austin Coding Academy’s
-      Full Stack Web Development Track and discuss tuition with a follow-up call with
-      your admissions advisor.
-    button: Apply
-    url: "/apply"
-    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark
-      hover-white center mt-4
-    options: []
-    tuition_options: false
   - title: WordPress Fundamentals
     tuition_options: true
     description: We offer two options to cover the cost of tuition for our 8-week
@@ -102,10 +92,9 @@ schools:
       picture: ''
     - title: Payment Plan
       description: Take advantage of our payment plan option to make tuition more
-        manageable. Make your $490 deposit before the start of class and make weekly
-        payments of $156 for 10 weeks to cover the cost of tuition. There is a $60
-        payment plan fee included in the cost of tuition. No interest or penalty for
-        prepayment.
+        manageable. Make weekly payments of $156 for 10 weeks to cover the cost of 
+        tuition. There is a $60 payment plan fee included in the cost of tuition. 
+        No interest or penalty for prepayment.
       price_header: Total Price
       price: "$490"
       payment_deposit: "$156 weekly"
@@ -221,8 +210,16 @@ schools:
   </div>
   {% for section in school.sections %}
     <div class="row p-5 justify-content-center">
+      <div class="row p-5 mt-3 justify-content-center"></div>
+        <h2 class="font-family-alt mt-2">
+          {{ section.title }}
+        </h2>
+      </div>
+      <div class="row px-5 py-2 justify-content-center">
+
       {% for option in section.options %}
-        <div class="col-sm-6 col-md-3 border p-2 mx-4 my-4">
+
+        <div class="col-sm-6 col-md-3 border p-2 mx-4">
           <div class="shadow py-3 bg-light">
             {% if option.picture != '' %}
               <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
@@ -239,7 +236,9 @@ schools:
         </div>
       {% endfor %}
     </div>
+
   {% endfor %}
+
   <div class="bg-light py-4">
     <div class="row justify-content-center">
       <div class="col-12 col-md-4 p-4">
