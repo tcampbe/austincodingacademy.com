@@ -39,7 +39,7 @@
             id="{{ field.name | liquify }}"
             class="form-control"
             name="{{ field.name | liquify }}"
-            rows="4"
+            rows="{{ field.rows | default: '4' }}"
             placeholder="{{ field.placeholder | liquify }}"
             aria-label="{{ field.label | liquify }}"
             {% if field.required %}required{% endif %}
