@@ -452,9 +452,16 @@ a {
   background-size: cover;
 }
 
-#hero-events {
+#hero-events-capitol {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
     url('/assets/uploads/hero-landing.jpg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#hero-events-other {
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
+    url('/assets/uploads/laura-class.jpg');
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
