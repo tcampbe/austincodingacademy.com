@@ -34,16 +34,6 @@ schools:
       deposit_hubspot_product_id: 87062522
       payment_plan_hubspot_product_id: "87065220"
       picture: "/assets/uploads/ccawebsite_tuitionpage_paymentplan.png"
-  - title: Apply to Join the Full Stack Web Development Track
-    description: Submit your short 5-minute application to Circle Coding Academy’s
-      Full Stack Web Development Track and discuss tuition with a follow-up call with
-      your admissions advisor.
-    button: Apply
-    url: "/apply"
-    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark
-      hover-white center mt-4
-    options: []
-    tuition_options: false
 - key: austincodingacademy
   sections:
   - title: Full Stack Web Development Track
@@ -233,6 +223,11 @@ schools:
           </div>
         </div>
       {% endfor %}
+    </div>
+    <div class="mt-6 {%if school.inverted %}px-6{% endif %} d-flex justify-content-center pb-5">
+      <div class="col-2">
+        {% include btn-apply.html %}
+      </div>
     </div>
   {% endfor %}
   <div class="bg-light py-4">
