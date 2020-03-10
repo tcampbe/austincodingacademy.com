@@ -430,7 +430,7 @@ a {
 
 #hero-blog {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/hero-blog.jpg');
+    url('/assets/uploads/dan-blog.jpg');
   background-position: -330px 0px;
   background-size: cover;
 }
@@ -438,7 +438,7 @@ a {
 @media (min-width: 768px) {
   #hero-blog {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/uploads/hero-blog.jpg');
+      url('/assets/uploads/dan-blog.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
