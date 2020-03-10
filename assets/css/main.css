@@ -699,10 +699,10 @@ div:not(.form-columns-1) .hs-form-field:not(:first-child) {
 
 /* TUTORS */
 
-.card-deck .card {
+/* .card-deck .card {
   min-width: 260px;
   max-width: 345px;
-}
+} */
 
 .dropdown-filter-button {
   color: #fff;
