@@ -145,7 +145,7 @@
                 <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
                   {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
                 </span>
-                <ul class="nav-dropdown position-absolute list-unstyled rounded px-3 my-0">
+                <ul class="nav-dropdown position-absolute list-unstyled rounded px-3 my-0" {% if school.inverted != true %}style="top:4rem;"{% endif %}>
                   {% for link in item.links %}
                     <li class="position-relative p-0 my-2">
                       <!-- htmllint preset="none" -->
@@ -162,7 +162,7 @@
                   <span class="{% if school.inverted != true %}text-white hover-white{% endif %}"> 
                     {% if school.tracks.size == 1 %}Course{% else %}{{ item.title | liquify }}{% endif %} <i class="fas fa-caret-down"></i>
                   </span>
-                  <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
+                  <ul class="nav-dropdown position-absolute list-unstyled rounded px-3" {% if school.inverted != true %}style="top:4rem;"{% endif %}>
                     {% for _track in school.tracks %}
                       {% for __track in settings.tracks %}
                         {% if _track.name == __track.name %}
