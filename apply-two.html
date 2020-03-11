@@ -325,9 +325,13 @@ schools:
         {% assign edu_work_fields = page.edu_work_fields %}
         {% include fields.html fields=edu_work_fields %}
 
+        
         <div class="col-12 mb-4 d-flex justify-content-center">
+          <button class="btn {% if school.inverted != true %}btn-round{% endif %}text-white bg-primary-dark" type="Submit" formaction="/apply/scheduling">
+            schedule
+          </button>
           <button class="btn {% if school.inverted != true %}btn-round{% endif %}text-white bg-primary-dark" type="Submit">
-            Submit
+            Pay Now
           </button>
         </div>
         <div class="col-12 d-flex flex-column align-items-center">
