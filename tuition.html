@@ -34,16 +34,6 @@ schools:
       deposit_hubspot_product_id: 87062522
       payment_plan_hubspot_product_id: "87065220"
       picture: "/assets/uploads/ccawebsite_tuitionpage_paymentplan.png"
-  - title: Apply to Join the Full Stack Web Development Track
-    description: Submit your short 5-minute application to Circle Coding Academy’s
-      Full Stack Web Development Track and discuss tuition with a follow-up call with
-      your admissions advisor.
-    button: Apply
-    url: "/apply"
-    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark
-      hover-white center mt-4
-    options: []
-    tuition_options: false
 - key: austincodingacademy
   sections:
   - title: Full Stack Web Development Track
@@ -63,7 +53,7 @@ schools:
       payment_plan_paycove_template: ''
       deposit_hubspot_product_id: 87065216
       payment_plan_hubspot_product_id: ''
-      picture: "/assets/uploads/ccawebsite_tuitionpage_fulltuition.png"
+      picture: "/assets/uploads/acawebsite_tuitionpage_fulltuition.png"
     - title: Austin Coding Academy Payment Plan (Budget Option)
       description: With our new payment plan, you can get started with class by making
         a $1,000 deposit. After you begin class you’ll make bi-weekly payments of
@@ -75,17 +65,7 @@ schools:
       payment_plan_paycove_template: 47 Bi-week Payment Plan
       deposit_hubspot_product_id: 87062522
       payment_plan_hubspot_product_id: "87065220"
-      picture: "/assets/uploads/ccawebsite_tuitionpage_paymentplan.png"
-  - title: Apply to Join the Full Stack Web Development Track
-    description: Submit your short 5-minute application to Austin Coding Academy’s
-      Full Stack Web Development Track and discuss tuition with a follow-up call with
-      your admissions advisor.
-    button: Apply
-    url: "/apply"
-    style: text-white btn {% if school.inverted != true %}btn-round{% endif %} bg-primary-dark
-      hover-white center mt-4
-    options: []
-    tuition_options: false
+      picture: "/assets/uploads/acawebsite_tuitionpage_paymentplan.png"
   - title: WordPress Fundamentals
     tuition_options: true
     description: We offer two options to cover the cost of tuition for our 8-week
@@ -99,20 +79,19 @@ schools:
       payment_plan_paycove_template: ''
       deposit_hubspot_product_id: 87065226
       payment_plan_hubspot_product_id: ''
-      picture: ''
+      picture: "/assets/uploads/acawebsite_tuitionpage_wordpressfulltuition_.png"
     - title: Payment Plan
       description: Take advantage of our payment plan option to make tuition more
-        manageable. Make your $490 deposit before the start of class and make weekly
-        payments of $156 for 10 weeks to cover the cost of tuition. There is a $60
-        payment plan fee included in the cost of tuition. No interest or penalty for
-        prepayment.
+        manageable. Make weekly payments of $156 for 10 weeks to cover the cost of 
+        tuition. There is a $60 payment plan fee included in the cost of tuition. 
+        No interest or penalty for prepayment.
       price_header: Total Price
       price: "$490"
       payment_deposit: "$156 weekly"
       payment_plan_paycove_template: 10 Week Payment Plan
       deposit_hubspot_product_id: 87065227
       payment_plan_hubspot_product_id: "87065230"
-      picture: ''
+      picture: "/assets/uploads/acawebsite_tuitionpage_wordpresspaymentplan_copy.png"
 - key: lubbockcodingacademy
   sections:
   - title: Full Stack Web Development Track
@@ -132,7 +111,7 @@ schools:
       payment_plan_paycove_template: 36 Bi-week Payment Plan
       deposit_hubspot_product_id: 87065231
       payment_plan_hubspot_product_id: "87065232"
-      picture: ''
+      picture: "/assets/uploads/lcawebsite_tuitionpage_paymentplan.png"
     - title: Pay Up Front
       description: Alternatively, if you are committed to going through the entire
         program, you can cover the entire cost of tuition for the program upfront
@@ -143,7 +122,7 @@ schools:
       payment_plan_paycove_template: ''
       deposit_hubspot_product_id: 87065233
       payment_plan_hubspot_product_id: ''
-      picture: "/assets/uploads/ccawebsite_tuitionpage_paymentplan.png"
+      picture: "/assets/uploads/lcawebsite_tuitionpage_fulltuition.png"
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Lubbock Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
@@ -172,7 +151,7 @@ schools:
       payment_plan_paycove_template: ''
       deposit_hubspot_product_id: 87065234
       payment_plan_hubspot_product_id: ''
-      picture: "/assets/uploads/ccawebsite_tuitionpage_fulltuition.png"
+      picture: "/assets/uploads/ttcawebsite_tuitionpage_fulltuition.png"
     - title: "{{ school.name }} Payment Plan (Budget Option)"
       description: With our new payment plan, you can get started with Texas Tech
         Coding Academy for just $460 up-front. After you begin classes you’ll make
@@ -184,7 +163,7 @@ schools:
       payment_plan_paycove_template: 44 Bi-week Payment Plan
       deposit_hubspot_product_id: 87065231
       payment_plan_hubspot_product_id: "87065236"
-      picture: "/assets/uploads/ccawebsite_tuitionpage_paymentplan.png"
+      picture: "/assets/uploads/ttcawebsite_tuitionpage_paymentplan.png"
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Texas Tech University Coding
       Academy’s Full Stack Web Development Track and discuss tuition with a follow-up
@@ -221,8 +200,14 @@ schools:
   </div>
   {% for section in school.sections %}
     <div class="row p-5 justify-content-center">
+      <div class="row p-5 mt-3 justify-content-center"></div>
+        <h2 class="font-family-alt mt-2">
+          {{ section.title }}
+        </h2>
+      </div>
+      <div class="row px-5 py-2 justify-content-center">
       {% for option in section.options %}
-        <div class="col-sm-6 col-md-3 border p-2 mx-4 my-4">
+        <div class="col-sm-6 col-md-3 border p-2 mx-4">
           <div class="shadow py-3 bg-light">
             {% if option.picture != '' %}
               <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
@@ -238,6 +223,11 @@ schools:
           </div>
         </div>
       {% endfor %}
+    </div>
+    <div class="mt-6 {%if school.inverted %}px-6{% endif %} d-flex justify-content-center pb-5">
+      <div class="col-2 d-flex justify-content-center">
+        {% include btn-apply.html %}
+      </div>
     </div>
   {% endfor %}
   <div class="bg-light py-4">
@@ -261,14 +251,6 @@ schools:
           <footer class="blockquote-footer text-dark display-9 text-right mt-1">Lillian Situ, <cite title="Title">Software Engineer, data.world</cite></footer>
         </blockquote>
       </div>
-      <!-- <div class="d-flex column col-4">
-        <div>
-          <h2 class="display-5">Lillian Situ</h2>
-        </div>
-        <div>
-          <p>I've always been interested in programming and being able to create something so being able to take what I learned at ACA and get a job with it ... was one of the best decisions I've made.</p>
-        </div>
-      </div> -->
     </div>
   </div>
 </main>
