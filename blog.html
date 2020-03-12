@@ -37,7 +37,6 @@ popular_posts:
 
 <!-- <div
   class="hero py-5 bg-gradient" id="hero-{{ page.hero | liquify }}">
-
   <h1 class="mt-10 mb-5 mb-md-10 px-1 p-md-0 text-white font-family-alt font-weight-bold display-4 text-center">
     {{ school.name }}
   </h1>
@@ -86,14 +85,12 @@ popular_posts:
     </div>
   </div>
 
-</main>
 
 
-<main id="content" role="main">
   
     <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Most Popular
-      </h2>
+    </h2>
   
   <div class="container my-10">
     <div class="row justify-content-center">
@@ -131,7 +128,35 @@ popular_posts:
     </div>
   </div>
 
+  <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+    More Blog Posts
+  </h2>
+  
+  <div class="container my-10">
+    <div class="row justify-content-center">
+      {% for post in site.posts limit: 4 %}
+          <div class="col-12 col-md-6 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
+            <article class="card border-0">
+              <div class="card-body p-0 row">
+                <a href="{{ post.url }}">
+                  <!-- <div class="mb-5"> -->
+                    <img height="172" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></img>
+                  <!-- </div> -->
+                </a>
+                <a href="{{ post.url }}">
+                  <h2 class="h5">
+                    {{ post.title | liquify }}
+                  </h2>
+                  <p class="text-white mx-auto">
+                    {{ item.text | liquify }}
+                  </p>
+                </a>
+              </div>
+            </article>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+ 
 </main>
-
-
-
