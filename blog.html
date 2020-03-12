@@ -8,10 +8,11 @@ hero: blog
 redirect_from: []
 amp_components: []
 title: Blog
+header_post: 'Zollege PBC Acquires Austin Coding Academy'
 popular_posts: 
-- title: 'MySpace and the Coding Legacy it Left Behind'
-- title: 'Why You Should Make Time to Learn Coding'
-- title: '5 Tips to Help You Learn Coding Faster'
+- 'Zollege PBC Acquires Austin Coding Academy'
+- 'Why You Should Make Time to Learn Coding'
+- '5 Tips to Help You Learn Coding Faster'
 
 ---
 {% for _page in site.pages %}
@@ -92,8 +93,8 @@ popular_posts:
   
   <div class="container my-10">
     <div class="row justify-content-center">
-      {% for post in site.posts limit: 4 %}
-        {% if post.school_keys contains school.key %}
+      {% for post in site.posts %}
+        {% if page.popular_posts contains post.title %}
           <div class="col-12 col-md-4 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
             <article class="card border-0">
               <div class="card-body p-0">
@@ -113,9 +114,14 @@ popular_posts:
                 <p>
                   {{ post.excerpt | liquify }}
                 </p>
+                <p>
+                  {{ post.author_name | liquify }}
+                </p>
               </div>
             </article>
+          
           </div>
+   
         {% endif %}
       {% endfor %}
     </div>
