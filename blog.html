@@ -65,17 +65,18 @@ popular_posts:
                   </div>
                 </a>
                 <small class="d-block text-secondary mb-1">
-                  {{ blog.date }}
+                  {{ post.updated_at | date: "%B %d, %Y" | liquify }}
                 </small>
                 <a href="{{ post.url }}">
                   <h2 class="h5">
                     {{ post.title | liquify }}
                   </h2>
-                <p>
-                  {{ post.excerpt | liquify }}
-                </p>
-                <p>
-                  {{ post.author_name | liquify }}
+                </a>
+                  <p>
+                    {{ post.excerpt | liquify }}
+                  </p>
+                  <p>
+                    {{ post.author_name | liquify }}
                 </p>
               </div>
             </article>
@@ -107,7 +108,7 @@ popular_posts:
                   </div>
                 </a>
                 <small class="d-block text-secondary mb-1">
-                  {{ blog.date }}
+                  {{ post.updated_at | date: "%B %d, %Y" | liquify }}
                 </small>
                 <a href="{{ post.url }}">
                   <h2 class="h5">
