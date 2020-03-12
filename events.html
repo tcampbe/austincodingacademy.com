@@ -12,6 +12,15 @@ subheading: Come join {{ school.name }} at one of our next events! Whether you'd
   one of our monthly happy hours, or anything else – check out our upcoming events
   for opportunities to meet and join our growing community.
 title: Events
+schools:
+- key: austincodingacademy
+  hero: "capitol"
+- key: circlecoding
+  hero: "other"
+- key: lubbockcodingacademy
+  hero: "other"
+- key: texastechcodingacademy
+  hero: "other"
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -31,7 +40,7 @@ title: Events
   {% endfor %}
 {% endif %}
 <!-- htmllint preset="none" -->
-<div id="hero-events" class="bg-gradient py-5 py-md-11">
+<div id="hero-events-{{ school.hero }}" class="bg-gradient py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
     {{ page.heading | liquify }}
