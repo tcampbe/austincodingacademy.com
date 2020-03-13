@@ -8,6 +8,7 @@ amp_components:
 tuition: true
 schools:
 - key: circlecoding
+  testimonial_video: 'pcCcjiMOeyg'
   sections:
   - title: Full Stack Web Development Track
     tuition_options: true
@@ -35,6 +36,7 @@ schools:
       payment_plan_hubspot_product_id: "87065220"
       picture: "/assets/uploads/ccawebsite_tuitionpage_paymentplan.png"
 - key: austincodingacademy
+  testimonial_video: 'AVMkl06b5IE'
   sections:
   - title: Full Stack Web Development Track
     tuition_options: true
@@ -93,6 +95,7 @@ schools:
       payment_plan_hubspot_product_id: "87065230"
       picture: "/assets/uploads/acawebsite_tuitionpage_wordpresspaymentplan_copy.png"
 - key: lubbockcodingacademy
+  testimonial_video: RAvlz19nriM
   sections:
   - title: Full Stack Web Development Track
     tuition_options: true
@@ -124,6 +127,7 @@ schools:
       payment_plan_hubspot_product_id: ''
       picture: "/assets/uploads/lcawebsite_tuitionpage_fulltuition.png"
 - key: texastechcodingacademy
+  testimonial_video: ''
   sections:
   - title: Full Stack Web Development Track
     tuition_options: true
@@ -213,7 +217,7 @@ schools:
     <div class="row justify-content-center">
       <div class="col-12 col-md-4 p-4">
         <amp-youtube
-          data-videoid="AVMkl06b5IE"
+          data-videoid="{{ school.testimonial_video | default: 'AVMkl06b5IE' }}"
           width="266.656px"
           height="150px"
           tabindex="0"
