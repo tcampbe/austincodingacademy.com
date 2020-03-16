@@ -76,6 +76,7 @@ popular_posts:
                   </p>
                   <p>
                     {{ post.author_name | liquify }}
+                    <i class="fas fa-share-square"></i>
                 </p>
               </div>
             </article>
@@ -115,9 +116,19 @@ popular_posts:
                 <p>
                   {{ post.excerpt | liquify }}
                 </p>
-                <p>
-                  {{ post.author_name | liquify }}
-                </p>
+
+                
+                <div class="d-flex flex-row">
+                  <div class="p">{{ post.author_name | liquify }}</div>
+                </div>
+                <div class="d-flex flex-row">
+                  <div class="p">{{ post.author_name | liquify }}</div>
+                </div>
+                <div class="d-flex flex-row-reverse">
+                  <div class="p">5 Minute Read</div>
+                  <div class="p"><i class="fas fa-share-square"></i></div>
+                </div>
+                
               </div>
             </article>
           
