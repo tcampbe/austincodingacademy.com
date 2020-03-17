@@ -146,7 +146,7 @@ schools:
   {% endfor %}
 {% endif %}
 
-<div class="position-relative d-flex justify-content-center flex-column overflow-hidden container-lg p-0">
+<div class="position-relative d-flex justify-content-center flex-column overflow-hidden p-0 {% if school.inverted %}container-lg{% endif %}">
   <div class="pl-3 pl-sm-2 m-md-6 m-sm-1 py-7 pb-md-11 position-absolute z-20 d-sm-block d-md-flex justify-content-center {% if school.inverted %}bg-white mw-600 rounded shadow-lg {% endif %}">
     <div class="col-sm-11 col-md-10 col-lg-10 pl-0">
       <div class="my-md-11"></div>

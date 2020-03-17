@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: "/apply-two/"
+permalink: "/apply-two/ctl/"
 amp_components:
 - amp-recaptcha-input
 redirect_from:
@@ -24,7 +24,7 @@ form_fields:
   label: ''
   description: ''
   type: hidden
-  value: "{% include school-url.html %}/apply/scheduling"
+  value: "{% include school-url.html %}/deposit"
   placeholder: ''
   required: ''
   small_width: ''
@@ -314,7 +314,7 @@ schools:
         {% assign about_fields = page.form_fields %}
         {% include fields.html fields=about_fields %}
         <div class="col-12 mb-4">
-          {% include select-payment-plan.html %}
+          {% include select-payment-plan.html ltc=true %}
         </div>
         <div class="col-12 my-5">
           <h2 class="text-center font-weight-bold mb-5">
@@ -325,7 +325,6 @@ schools:
         {% assign edu_work_fields = page.edu_work_fields %}
         {% include fields.html fields=edu_work_fields %}
 
-        
         <div class="col-12 mb-4 d-flex justify-content-center">
           <button class="btn {% if school.inverted != true %}btn-round{% endif %}text-white bg-primary-dark" type="Submit">
             Submit

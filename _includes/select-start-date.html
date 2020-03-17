@@ -14,7 +14,11 @@
   <option value="" disabled selected>
     Please Select
   </option>
-  {% for start_date in school.start_dates %}
+  {% assign start_dates = school.start_dates %}
+  {% if include.ltc != nil %}
+    {% assign start_dates = school.start_dates | slice: 0 %}
+  {% endif %}
+  {% for start_date in start_dates %}
     <optgroup label="{{ start_date.location }}">
         <option
           value="{{ start_date.salesforce_id | append: ',' | append: start_date.hubspot_ticket_id | append: ',' | append: school.getaccept_entity_id | append: ',' | append: start_date.getaccept_template_id }}"
