@@ -73,6 +73,7 @@ popular_posts:
                   <div class="mb-5">
                     <amp-img height="172" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
                   </div>
+                
                 </a>
                 <small class="d-block text-secondary mb-1">
                   {{ post.updated_at | date: "%B %d, %Y" | liquify }}
@@ -85,10 +86,18 @@ popular_posts:
                   <p>
                     {{ post.excerpt | liquify }}
                   </p>
-                  <p>
-                    {{ post.author_name | liquify }}
-                    <i class="fas fa-share-square"></i>
-                </p>
+                 
+                  
+                  <div class="d-flex flex-column">
+                    <div class="p-2">{{ post.author_name | liquify }}</div>
+                  </div>
+         
+                  <div class="d-flex justify-content-between">
+                    <div class="p-2">5 Minute Read</div>
+                    <div class="p-2"><i class="fas fa-share-square"></i></div>
+                  </div>
+                  
+                  
               </div>
             </article>
           </div>
@@ -127,18 +136,16 @@ popular_posts:
                 <p>
                   {{ post.excerpt | liquify }}
                 </p>
-
                 
-                <div class="d-flex flex-row">
-                  <div class="p">{{ post.author_name | liquify }}</div>
+                <div class="d-flex flex-column">
+                  <div class="p-2">{{ post.author_name | liquify }}</div>
                 </div>
-                <div class="d-flex flex-row">
-                  <div class="p">{{ post.author_name | liquify }}</div>
+       
+                <div class="d-flex justify-content-between">
+                  <div class="p-2">5 Minute Read</div>
+                  <div class="p-2"><i class="fas fa-share-square"></i></div>
                 </div>
-                <div class="d-flex flex-row-reverse">
-                  <div class="p">5 Minute Read</div>
-                  <div class="p"><i class="fas fa-share-square"></i></div>
-                </div>
+                
                 
               </div>
             </article>
@@ -182,24 +189,3 @@ popular_posts:
   
  
 </main>
-
-{% for post in site.posts %}
-<div>
-  <!-- {{ post.title | liquify }}
-  {{ header_post | liquify }} -->
-</div>
-  {% assign posttitle = post.title | liquify %}
-  {% assign headtitle = header_post | liquify %}
-  {% if post.title == page.header_post %}
-    {% assign head = post%}
-  {% endif %}
-{% endfor %}
-<div class="d-flex flex-row   ">
-  <div class="mb-5 d-flex flex-row" style="height: 300px; width: 300px;">
-    <img layout="responsive"  src="{{ head.img | liquify }}" width="400px" height="400px"/>
-  </div>
-  <div class="  .flex-column align-items-center  ">
-    <h2>{{ head.title }}</h2>
-    <p>{{ head.excerpt }}</p>
-  </div>
-</div>
