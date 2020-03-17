@@ -46,16 +46,16 @@ popular_posts:
     {% assign head = post%}
   {% endif %}
 {% endfor %}
-<!-- <div class="d-flex flex-row   ">
-  <div class="mb-5 d-flex flex-row" style="height: 300px; width: 300px;">
-    <img layout="responsive"  src="{{ head.img | liquify }}" width="400px" height="400px"/>
+<div class="d-flex flex-row  ">
+  <div class="mb-5 d-flex flex-row p-4" style="height: 800px; width: 800px;">
+    <img layout="responsive"  src="{{ head.img | liquify }}" height="600px" width="600px"/>
   </div>
   <div class="  .flex-column align-items-center  ">
     <h2>{{ head.title }}</h2>
     <p>{{ head.excerpt }}</p>
   </div>
 </div>
--->
+
 <main id="content" role="main">
   
     <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
@@ -170,24 +170,3 @@ popular_posts:
   
  
 </main>
-
-{% for post in site.posts %}
-<div>
-  <!-- {{ post.title | liquify }}
-  {{ header_post | liquify }} -->
-</div>
-  {% assign posttitle = post.title | liquify %}
-  {% assign headtitle = header_post | liquify %}
-  {% if post.title == page.header_post %}
-    {% assign head = post%}
-  {% endif %}
-{% endfor %}
-<div class="d-flex flex-row   ">
-  <div class="mb-5 d-flex flex-row" style="height: 300px; width: 300px;">
-    <img layout="responsive"  src="{{ head.img | liquify }}" width="400px" height="400px"/>
-  </div>
-  <div class="  .flex-column align-items-center  ">
-    <h2>{{ head.title }}</h2>
-    <p>{{ head.excerpt }}</p>
-  </div>
-</div>
