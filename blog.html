@@ -46,11 +46,11 @@ popular_posts:
     {% assign head = post%}
   {% endif %}
 {% endfor %}
-<div class="d-flex flex-row  ">
-  <div class="mb-5 d-flex flex-row p-4" style="height: 800px; width: 800px;">
-    <img layout="responsive"  src="{{ head.img | liquify }}" height="600px" width="600px"/>
+<div class="d-flex flex-row">
+  <div class="mb-5 d-flex flex-row p-4 h-100" style="height: 800px; width: 800px;">
+    <amp-img layout="fixed" src="{{ head.img | liquify }}" height="600px" width="600px"></amp-img>
   </div>
-  <div class="  .flex-column align-items-center  ">
+  <div class="flex-column align-items-center justify-content center">
     <h2>{{ head.title }}</h2>
     <p>{{ head.excerpt }}</p>
   </div>
@@ -171,9 +171,7 @@ popular_posts:
             <article class="card border-0 h-100">
               <div class="card-body p-0 d-flex flex-column justify-content-between">
                 <a href="{{ post.url }}">
-                  <div class="mb-5">
                   <amp-img height="172" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
-                  <!-- </div> -->
                 </a>
                 <a href="{{ post.url }}">
                   <h2 class="h5">
