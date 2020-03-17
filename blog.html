@@ -168,11 +168,11 @@ popular_posts:
     <div class="row justify-content-center">
       {% for post in site.posts limit: 4 %}
           <div class="col-12 col-md-6 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
-            <article class="card border-0">
-              <div class="card-body p-0 row">
+            <article class="card border-0 h-100">
+              <div class="card-body p-0 d-flex flex-column justify-content-between">
                 <a href="{{ post.url }}">
-                  <!-- <div class="mb-5"> -->
-                    <img height="172" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></img>
+                  <div class="mb-5">
+                  <amp-img height="172" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
                   <!-- </div> -->
                 </a>
                 <a href="{{ post.url }}">
