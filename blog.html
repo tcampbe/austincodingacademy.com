@@ -46,9 +46,9 @@ popular_posts:
     {% assign head = post%}
   {% endif %}
 {% endfor %}
-<div class="d-flex flex-row   ">
-  <div class="mb-5 d-flex flex-row" style="height: 300px; width: 300px;">
-    <img layout="responsive"  src="{{ head.img | liquify }}" width="400px" height="400px"/>
+<div class="d-flex flex-row  ">
+  <div class="mb-5 d-flex flex-row p-4" style="height: 800px; width: 800px;">
+    <img layout="responsive"  src="{{ head.img | liquify }}" height="600px" width="600px"/>
   </div>
   <div class="  .flex-column align-items-center  ">
     <h2>{{ head.title }}</h2>
