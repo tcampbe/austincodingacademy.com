@@ -172,14 +172,14 @@ schools:
   name: Circle Coding Academy
   navigation:
     header:
-    - title: Courses
-      url: ''
+    - title: In-person Course
+      url: '/courses/web-development'
+      class: ''
+    - title: Online Course
+      url: "/courses/web-development-online"
       class: ''
     - title: Tuition
       url: "/tuition/"
-      class: ''
-    - title: Diversity Scholarship
-      url: "/diversity-scholarship"
       class: ''
     - title: Events
       url: "/events/"
@@ -244,7 +244,7 @@ schools:
     state: TX
     postal: 75201
     url: https://centrloffice.com/
-  announcement: ''
+  announcement: <a href="{{ school.url }}/diversity-scholarship">Click here to apply for our Diversity Scholarship!</a>
   start_dates:
   - location: CENTRL Office Campus
     course: Full Stack Web Development
