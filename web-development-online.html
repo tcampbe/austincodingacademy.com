@@ -12,10 +12,22 @@ redirect_from:
 - "/csharp/"
 hero: js
 hero_heading: Online Web Development Course
+hero_subheading: "Full-time: 18 weeks and Part Time: 36 weeks"
 hero_text: Learn the most popular languages for making websites, web apps, games,
   animations, and mobile applications. In this track you'll learn front-end and back-end
   web development, some of today's most versatile and sought-after skills that you can take 
   with you wherever you go.
+course_types:
+- name: Full Time
+  course: Full Stack Web Development
+  days: Monday-Thursday
+  times: 8:00am - 5:00pm
+  length: 16 weeks
+- name: Part Time
+  course: Full Stack Web Development
+  days: Monday/Wednesday
+  times: 6:30pm - 9:00pm
+  length: 36 weeks
 overview:
 - title: Remote Learning
   text: The same proven curriculum as our in-class Full Stack Web Development course 
@@ -28,7 +40,7 @@ overview:
   text: "Through this course, you will develop many employable skills including time management, collaboration, and self-confidence that will shape your mind and grow your creative talent for you to be a valuable employee!
     To prepare yourself for full-time learning you’ll follow the easy steps laid out in the Pre-Course Lessons of your online textbook which include becoming familiar with platforms like Google Meet, RocketChat, and software like VS Code and Live-Share. Completing these steps will help you make the most of your virtual learning time! 
     To join the class you’ll need the minimum computer requirements which include either Linux, Windows, or Mac Operating Systems; 8GB+ RAM, 2.8+ GHz Processor, 256GB+ Storage, Webcam & Microphone (Headphones optional) and an internet connection of 5 Mbps or more.
-    Everyone here at Circle Coding Academy will be here to support you the whole way so give us a call if you have any questions!"
+    Everyone here at {{ school.name }} will be here to support you the whole way so give us a call if you have any questions!"
   img_src: "/assets/uploads/dsc00021_code.jpg"
 - title: Job Readiness
   text: "{{ school.name }}’s Full Stack Web Development Track is designed to take students 
@@ -300,9 +312,10 @@ schools:
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero | liquify }}" class="bg-gradient hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
-  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-sm-4 text-center">
+  <h1 class="mt-10 mb-5 text-white font-family-alt font-weight-bold display-sm-4 text-center">
     {{ page.hero_heading | liquify }}
   </h1>
+  <h4 class="mb-5 mb-md-10 text-white font-family-alt font-weight-bold text-center">{{ page.hero_subheading }}</h4>
   <p class="text-white text-center mx-auto px-2 mw-600">
     {{ page.hero_text | liquify }}
   </p>
@@ -338,6 +351,49 @@ schools:
 </div>
 
 <main>
+  
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
+    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+      Course Types
+    </h2>
+    <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
+      {% for type in page.course_types %}
+      <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
+        <div class="display-7 mb-4 text-center">
+          {{ type.name }}
+        </div>
+        <div class="card shadow-black mx-auto p-2">
+          <div class="card-body">
+            <!-- <div class="display-6 pb-4 text-center">
+              {{ start_date.date }}
+            </div> -->
+            <div class="shadow border text-center py-5">
+              <div class="display-7 text-center mb-5 px-2">
+                {{ type.course }}
+              </div>
+              <div>
+                {{ type.days }}
+              </div>
+              <div class="mb-3">
+                {{ type.times }}
+              </div>
+              <div class="font-weight-bold">
+                Length:
+              </div>
+              <div class="mb-3">
+                {{ type.length }}
+              </div>
+              <div class="mt-6 {%if school.inverted %}px-6{% endif %}">
+               {% include btn-apply.html %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  
   <section id="curriculum" class="pt-8 container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-8 p-0 pl-sm-5 d-flex flex-column align-items-center text-center">
