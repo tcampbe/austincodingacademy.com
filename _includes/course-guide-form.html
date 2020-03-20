@@ -214,7 +214,21 @@
                 {% endif %}
               >
               <!-- htmllint preset="$previous" -->
+                {% include select-start-date.html %}
+
+              </div>
+              <div
+                class="col-12 d-flex flex-column justify-content-end mt-3"
+                {% if include.fade == true %}
+                  amp-fx="fade-in"
+                  data-duration="600ms"
+                  data-margin-start="1%"
+                  data-margin-end="20%"
+                {% endif %}
+              >
+              <!-- htmllint preset="$previous" -->
                 {% include referral-question.html %}
+
               </div>
               <!-- Input -->
               <!-- htmllint preset="none" -->

@@ -20,25 +20,15 @@
   <option value="" disabled selected>
     Please Select
   </option>
-    {% if include.ltc != nil%}
-      <optgroup label="Learn To Code Special!">
-        <option value=",87065234,,">
-          $9,960 - Pay Up Front (Savings Option)
-        </option>
-        <option value=",87065227,87065220,47 Bi-week Payment Plan">
-          $490 - Austin Coding Academy Payment Plan (Budget Option)
-        </option>
+  {% for section in tuition.sections %}
+    {% if section.tuition_options %}
+      <optgroup label="{{ section.title }}">
+        {% for option in section.options %}
+          <option value=",{{ option.deposit_hubspot_product_id | append: ',' | append: option.payment_plan_hubspot_product_id | append: ',' | append: option.payment_plan_paycove_template }}">
+            {{ option.price | liquify }} - {{ option.title | liquify }}
+          </option>
+        {% endfor %}
       </optgroup>
     {% endif %}
-    {% for section in tuition.sections %}
-      {% if section.tuition_options %}
-        <optgroup label="{{ section.title }}">
-          {% for option in section.options %}
-            <option value=",{{ option.deposit_hubspot_product_id | append: ',' | append: option.payment_plan_hubspot_product_id | append: ',' | append: option.payment_plan_paycove_template }}">
-              {{ option.price | liquify }} - {{ option.title | liquify }}
-            </option>
-          {% endfor %}
-        </optgroup>
-      {% endif %}
-    {% endfor %}
+  {% endfor %}
 </select>
