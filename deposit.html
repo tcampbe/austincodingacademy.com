@@ -74,5 +74,6 @@ amp: false
     document.querySelector('#iframe-container').insertAdjacentHTML('beforeend', `<h2>You should be redirected or</h2><a href="${depositUrl}" class="btn btn-lg">click here to make your deposit!</a>`);
     window.location = depositUrl;
   }
+  setTimeout(() => getDepositUrl(), 10000)
   getDepositUrl()
 </script>
