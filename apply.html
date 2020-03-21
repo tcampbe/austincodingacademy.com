@@ -293,6 +293,17 @@ edu_work_fields:
   small_width: "12"
   medium_width: "6"
   options: []
+coupon_input:
+- name: coupon_code
+  label: Coupon Code
+  description: ''
+  type: text
+  value: ''
+  placeholder: Coupon Code
+  required: false
+  small_width: "12"
+  medium_width: "6"
+  options: []
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -331,13 +342,14 @@ edu_work_fields:
           </div>
 
           {% include fields.html fields=page.edu_work_fields %}
-          <div class="col-12 mb-4">
+          <div class="col-12 col-md-6 mb-4">
             {% include select-start-date.html %}
           </div>
-          <div class="col-12 mb-4">
+          <div class="col-12 col-md-6 mb-4">
             {% include select-payment-plan.html %}
           </div>
-          <div class="col-12 mb-4">
+          {% include fields.html fields=page.coupon_input %}
+          <div class="col-12 col-md-6 mb-4">
             {% include referral-question.html %}
           </div>
 
