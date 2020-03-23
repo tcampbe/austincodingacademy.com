@@ -269,9 +269,9 @@ fields:
     name: course_guide
     label: course_guide
   - name: course_guide_online
-    type: text
+    type: file
     config:
-      required: false
+      maxSize: 250
     label: course_guide_online
   - name: course_guide_img
     type: file
