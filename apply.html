@@ -10,6 +10,20 @@ redirect_from:
 - "/application/"
 - "/application/1/"
 title: Application
+admission_heading: How to Apply
+admission_description: "Ready to begin this exciting adventure to your new career or just looking 
+to learn more? The first step to take is to begin your application and be accepted into our program! 
+Here is what to expect:"
+admission_list: 
+- <a href=#start-application>Fill out the application.</a> It takes less than 5 minutes!
+- Then you will be prompted to schedule an interview with one of our Admissions Advisors 
+  to talk about your goals and any questions you have. You will also have an opportunity to 
+  conditionally save your spot with a refundable deposit.
+- We will reach out to you to help you with next steps and determine your acceptance based 
+  on our student requirements and expectations. Let’s get to know each other!
+- Once you've been accepted and you’ve paid your deposit, you’ll be registered and given 
+  access to your textbook. Within it, there is a pre-work section to complete prior to 
+  your first class so you can start classes the right way!
 head_title: "Start Your Application | Apply Now at {{ school.name }}"
 description: "Apply now to learn to code with {{ school.name }} | Fill out your short application to get on the path to a career in web development."
 heading: "Start Your Application"
@@ -316,8 +330,23 @@ coupon_input:
   {% endif %}
 {% endfor %}
 <div class="container mt-4 pt-1 pb-5">
+  <div>
+    <h2 class="font-family-alt mt-5 mt-sm-10 mb-md-4 mb-sm-10 display-5 text-center col-12 col-sm-10">
+      {{ page.admission_heading }}
+    </h2>
+    <p>{{ page.admission_description }}</p>
+    <div>
+      {% for item in page.admission_list %}
+        <ul amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">
+          <li>
+            {{ item | liquify }}
+          </li>
+        </ul>
+      {% endfor %}
+    </div>
+  </div>
   <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
-      <h2 class="font-family-alt mt-5 mt-sm-10 mb-md-4 mb-sm-10 display-5 text-center col-12 col-sm-10">
+      <h2 id="start-application" class="font-family-alt mt-5 mt-sm-10 mb-md-4 mb-sm-10 display-5 text-center col-12 col-sm-10">
         {{ page.heading }}
       </h2>
       <!-- Proccess Application -->

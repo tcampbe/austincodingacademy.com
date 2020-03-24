@@ -1,0 +1,28 @@
+---
+layout: default
+permalink: "/apply-submit/"
+title: Application Submission
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+<div class="container d-flex flex-column align-items-center justify-content-center col-5 my-5 py-5">
+  <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+    <h4>Secure Your Spot with a deposit (optional).</h4>
+    <p>Classes fill up fast, so get to the front of the line and guarantee yourself a place in class with a refundable deposit. Acceptance conditional on your Admissions Interview.</p>
+    <a class="btn {% if school.inverted != true %}btn-round{%endif%} bg-primary-light" href="{{ school.url }}/deposit">Pay Here</a>
+  </div>
+  <div class="my-4">or</div>
+  <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+    <h4>Schedule an Appointment</h4>
+    <p>Book a time with one of our Admissions Advisors to get all your questions answered and see if you’re a great fit for our program. After this call, you may be given a short coding assignment to complete for your acceptance. Don’t worry! We’ll help you with it if you need it.</p>
+    <a class="btn {% if school.inverted != true %}btn-round{%endif%} bg-primary-light" href="{{ school.url }}/apply/scheduling">Schedule</a>
+  </div>
+</div>
