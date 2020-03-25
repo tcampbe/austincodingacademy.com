@@ -184,9 +184,17 @@ schools:
     - Expand your knowledge of Git
     - Deep-Dive into HTTPS protocol
   tuition_options:
+  - title: Online Course Payment Plan (Online-Only Option)
+    description: With our new payment plan for our online course, you can get started with class by making
+      a $490 deposit. After that you'll make weekly payments of
+      $95 for 30 months. No interest and no
+      penalty for prepayment!
+    price_header: Total Price
+    price: "$12,840"
+    price2: "$95"
   - title: Austin Coding Academy Payment Plan (Budget Option)
     description: With our new payment plan, you can get started with class by making
-      a $1,000 deposit. After you begin class you’ll make bi-weekly payments of $250
+      a $1,000 deposit. After that you'll make bi-weekly payments of $250
       for 22 months. No interest and no penalty for prepayment!
     price_header: Total Price
     price: "$12,750"
@@ -198,12 +206,6 @@ schools:
       the reduced price of $10,960.
     price_header: Total Price
     price: "$10,960"
-  - title: Pay-As-You-Go (Flexible Option)
-    description: To provide a more flexible tuition option, we also offer a "pay-as-you-go"
-      plan. Rather than paying for the entire cost of the program up front, you’re
-      able to pay for each course when you take it, ($2,990/course).
-    price_header: Total Price
-    price: "$11,960"
   - title: Apply to Join the Full Stack Web Development Track
     description: Submit your short 5-minute application to Austin Coding Academy’s
       Full Stack Web Development Track and discuss tuition with a follow-up call with
@@ -264,11 +266,6 @@ schools:
   backend: C#/.Net
   courses: []
   tuition_options:
-  - title: Pay-As-You-Go (Flexible Option)
-    description: You can pay one class at a time for $1,990. The tuition price covers
-      one 8 week session. The cost of the entire program is $7,960.
-    price_header: Total Price
-    price: "$7,960"
   - title: Pay Up Front
     description: Alternatively, if you are committed to going through the entire program,
       you can cover the entire cost of tuition for the program upfront if you are
@@ -320,7 +317,7 @@ schools:
     {{ page.hero_text | liquify }}
   </p>
   <div class="d-flex mt-4 align-items-center justify-content-center">
-    {% if school.course_guide != '' %}
+    {% if school.course_guide_online != '' %}
     <div class="mr-2">
       <!-- htmllint preset="none" -->
       <a
@@ -343,7 +340,8 @@ schools:
         tabindex="-1"
         role="dialog"
       >
-        {% include course-guide-form.html lightbox=true text_class="text-white" %}
+      {% assign course_guide_online = school.course_guide_online %}
+        {% include course-guide-form.html course_guide_href=course_guide_online lightbox=true text_class="text-white" %}
       </amp-lightbox>
     {% endif %}
     <div class="ml-2">{% include btn-apply.html %}</div>
@@ -542,13 +540,13 @@ schools:
       <!-- course cards end -->
     </div>
   </section>
-  {% if school.course_guide != '' %}
+  {% if school.course_guide_online != '' %}
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid {{ page.hero | liquify }}-gradient text-white py-8">
   <!-- htmllint preset="$previous" -->
     <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html fade=true %}
+        {% include course-guide-form.html course_guide_href=school.course_guide_online fade=true %}
       </div>
     </div>
   </section>
