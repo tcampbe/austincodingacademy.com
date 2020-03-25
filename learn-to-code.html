@@ -165,67 +165,68 @@ learn_to_code:
 {% endif %}
 
 <div style="font-family: Montserrat, Open Sans, light;">
-    <h2 class="font-family-alt text-indigo text-center display-5 my-5"><small>What is Coding</small></h2>
-    <p class="text-center text-gray-dark mb-0">In this lesson, you will learn what coding is, what programming is, and the difference between the two.</p>
-    <i class="fas fa-bars fa-2x ml-5 mb-5" on="tap:lessons.open"></i>
-    <amp-sidebar 
-      id="lessons" 
-      class="bg-white w-25"
-      layout="nodisplay" 
-      side="left"
-    >
-      <i class="fas fa-times fa-2x p-1" on="tap:lessons.close"></i>
-      <nav class="pl-5">
-        <amp-accordion disable-session-states>
-        <!--- Loop section names to build section/topic nav -->
-        {% for lesson in page.learn_to_code %}
-            <section class="m-3">
-                <h6 class="text-indigo bg-transparent border-0 font-weight-light">{{ lesson.section }}
-                  <span class="float-right pr-2">
-                  <i class="fas fa-angle-right fa-1x text-indigo">
-                  </span>
-                </h6>
-                <div class="pl-2">
-                  {% for topic in lesson.topics %}
-                    <p class="m-1 h6 font-weight-light small">{{ topic }}</p>
-                  {% endfor %}
-                </div>
-            </section>
-        {% endfor %}
-        </amp-accordion>
-      </nav>
-    </amp-sidebar>
-    <div class="container-fluid m-0 p-0">
-      <div class="row no-gutters align-items-center">
-        <div class="float-left px-2">
-          <i class="fas fa-angle-left fa-3x"></i>
-        </div>
-        <div class="col mr-1">
-            <amp-vimeo
-                data-videoid="272841691"
-                layout="responsive"
-                height="292"
-                width="520"
-            >
-            </amp-vimeo>
-            <p class="text-left font-weight-bolder">Previous: <span class="text-indigo">Intro to Coding</span></p>
-        </div>
-        <div class="col ml-1">
-            <amp-iframe 
-                layout="responsive"
-                height="292"
-                width="520"
-                sandbox="allow-scripts allow-same-origin"
-                src="https://codepen.io/keithakritselis/embed/xxxmVgx?theme-id=dark&default-tab=html,result"
-            >
-            <div placeholder></div>
-            </amp-iframe>
-            <p class="text-right font-weight-bolder">Next: <span class="text-indigo">Coding Languages</span></p>
-        </div>
-        <div class="float-right px-2">
-          <i class="fas fa-angle-right fa-3x"></i>
-        </div>
+  <amp-sidebar 
+    id="lessons" 
+    class="bg-white w-25"
+    layout="nodisplay" 
+    side="left"
+    style="position: relative !important;"
+  >
+    <i class="fas fa-times fa-2x p-1" on="tap:lessons.close"></i>
+    <nav class="pl-5">
+      <amp-accordion disable-session-states>
+      <!--- Loop section names to build section/topic nav -->
+      {% for lesson in page.learn_to_code %}
+          <section class="m-3">
+              <h6 class="text-indigo bg-transparent border-0 font-weight-light">{{ lesson.section }}
+                <span class="float-right pr-2">
+                <i class="fas fa-angle-right fa-1x text-indigo">
+                </span>
+              </h6>
+              <div class="pl-2">
+                {% for topic in lesson.topics %}
+                  <p class="m-1 h6 font-weight-light small">{{ topic }}</p>
+                {% endfor %}
+              </div>
+          </section>
+      {% endfor %}
+      </amp-accordion>
+    </nav>
+  </amp-sidebar>
+  <h2 class="font-family-alt text-indigo text-center display-5 my-5"><small>What is Coding</small></h2>
+  <p class="text-center text-gray-dark mb-0">In this lesson, you will learn what coding is, what programming is, and the difference between the two.</p>
+  <i class="fas fa-bars fa-2x ml-5 mb-5" on="tap:lessons.open"></i>
+  <div class="container-fluid m-0 p-0">
+    <div class="row no-gutters align-items-center">
+      <div class="float-left px-2">
+        <i class="fas fa-angle-left fa-3x"></i>
+      </div>
+      <div class="col mr-1">
+          <amp-vimeo
+              data-videoid="272841691"
+              layout="responsive"
+              height="292"
+              width="520"
+          >
+          </amp-vimeo>
+          <p class="text-left font-weight-bolder">Previous: <span class="text-indigo">Intro to Coding</span></p>
+      </div>
+      <div class="col ml-1">
+          <amp-iframe 
+              layout="responsive"
+              height="292"
+              width="520"
+              sandbox="allow-scripts allow-same-origin"
+              src="https://codepen.io/keithakritselis/embed/xxxmVgx?theme-id=dark&default-tab=html,result"
+          >
+          <div placeholder></div>
+          </amp-iframe>
+          <p class="text-right font-weight-bolder">Next: <span class="text-indigo">Coding Languages</span></p>
+      </div>
+      <div class="float-right px-2">
+        <i class="fas fa-angle-right fa-3x"></i>
       </div>
     </div>
-    <p class="text-wrap text-wrap text-center mx-auto w-75 my-5 font-weight-lighter">While both the terms are synonymous with each other and are often used interchangeably, they are quite different from each other. Coding simply means writing codes from one language to another such as from English to Java. It’s less intimidating and less intensive. Programming, on the other hand, means to program a machine with a set of instructions to run.</p>
+  </div>
+  <p class="text-wrap text-wrap text-center mx-auto w-75 my-5 font-weight-lighter">While both the terms are synonymous with each other and are often used interchangeably, they are quite different from each other. Coding simply means writing codes from one language to another such as from English to Java. It’s less intimidating and less intensive. Programming, on the other hand, means to program a machine with a set of instructions to run.</p>
 </div>
