@@ -50,6 +50,11 @@ fields:
   description: "/blog/title-here-with-dashes-nothing-special"
   config:
     required: true
+- name: canonical_link
+  type: text
+  config:
+    required: false
+  label: canonical_link
 - type: text
   name: author_name
   label: Author Name
@@ -74,5 +79,6 @@ pages:
 - _posts/2020-02-14-four-exciting-projects-that-will-inspire-you-to-learn-javascript-right-now.md
 - _posts/2020-02-14-why-you-should-make-time-to-learn-coding.md
 - _posts/2020-02-19-why-you-should-make-time-to-learn-coding.md
+- _posts/2020-02-24-myspace-and-the-coding-legacy-it-left-behind.md
 - _posts/Lubbock Coding Academy/2020-01-27-lubbock-coding-academy-helps-locals-chart-new-path.md
 - _posts/circle-coding-academy-who-we-are.md

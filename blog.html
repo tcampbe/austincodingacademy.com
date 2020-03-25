@@ -8,6 +8,12 @@ hero: blog
 redirect_from: []
 amp_components: []
 title: Blog
+header_post: 'MySpace and the Coding Legacy it Left Behind'
+popular_posts: 
+- 'Zollege PBC Acquires Austin Coding Academy'
+- 'Why You Should Make Time to Learn Coding'
+- '5 Tips to Help You Learn Coding Faster'
+
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -26,43 +32,73 @@ title: Blog
     {% endif %}
   {% endfor %}
 {% endif %}
-<!-- htmllint preset="none" -->
-<div
-  class="hero py-5 bg-gradient" id="hero-{{ page.hero | liquify }}">
-  <!-- htmllint preset="$previous" -->
-  <h1 class="mt-10 mb-5 mb-md-10 px-1 p-md-0 text-white font-family-alt font-weight-bold display-4 text-center">
-    {{ school.name }}
-  </h1>
-  <p class="text-white text-center mx-auto px-4 px-md-0 mw-600">
-    Welcome to the {{ school.name }} Blog. Read the latest news from the {{ school.name }} team on web development, tech, what’s happening in the community, and more.
-  </p>
+
+
+
+{% for post in site.posts %}
+<div>
+  <!-- {{ post.title | liquify }}
+  {{ header_post | liquify }} -->
+</div>
+  {% assign posttitle = post.title | liquify %}
+  {% assign headtitle = header_post | liquify %}
+  {% if post.title == page.header_post %}
+    {% assign head = post%}
+  {% endif %}
+{% endfor %}
+<div class="d-flex flex-row">
+  <div class="mb-5 d-flex flex-row p-4 h-100" style="height: 800px; width: 800px;">
+    <amp-img layout="fixed" src="{{ head.img | liquify }}" height="600px" width="600px"></amp-img>
+  </div>
+  <div class="flex-column align-items-center justify-content center">
+    <h2>{{ head.title }}</h2>
+    <p>{{ head.excerpt }}</p>
+  </div>
 </div>
 
 <main id="content" role="main">
-  <!-- Blog Classic Section -->
+  
+    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+        Latest
+      </h2>
+  
   <div class="container my-10">
-    <div class="row">
-      {% for post in site.posts %}
+    <div class="row justify-content-center">
+      {% for post in site.posts limit: 4 %}
         {% if post.school_keys contains school.key %}
-          <div class="col-12 col-md-6 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
-            <article class="card border-0">
-              <div class="card-body p-0">
-                <a href="{{ post.url }}">
-                  <div class="mb-5">
-                    <amp-img height="172" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
+          <div class="col-12 col-md-4 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
+            <article class="card border-0 h-100">
+              <div class="card-body p-0 d-flex flex-column justify-content-between">
+                <div>
+                  <a href="{{ post.url }}">
+                    <div class="mb-5">
+                      <amp-img height="172" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
+                    </div>
+                  
+                  </a>
+                  <small class="d-block text-secondary mb-1">
+                    {{ post.updated_at | date: "%B %d, %Y" | liquify }}
+                  </small>
+                  <a href="{{ post.url }}">
+                    <h2 class="h5">
+                      {{ post.title | liquify }}
+                    </h2>
+                  </a>
+                  <p>
+                    {{ post.excerpt | liquify }}
+                  </p>
+                </div>
+                <div>
+                  <div class="d-flex flex-column">
+                    <div class="p-2">{{ post.author_name | liquify }}</div>
                   </div>
-                </a>
-                <small class="d-block text-secondary mb-1">
-                  {{ blog.date }}
-                </small>
-                <a href="{{ post.url }}">
-                  <h2 class="h5">
-                    {{ post.title | liquify }}
-                  </h2>
-                </a>
-                <p>
-                  {{ post.excerpt | liquify }}
-                </p>
+         
+                  <div class="d-flex justify-content-between">
+                    <div class="p-2">5 Minute Read</div>
+                    <div class="p-2"><i class="fas fa-share-square"></i></div>
+                  </div>
+                </div>
+                  
               </div>
             </article>
           </div>
@@ -70,5 +106,87 @@ title: Blog
       {% endfor %}
     </div>
   </div>
-  <!-- Blog Classic Section -->
+
+
+
+  
+    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+        Most Popular
+    </h2>
+  
+  <div class="container my-10">
+    <div class="row justify-content-center">
+      {% for post in site.posts %}
+        {% if page.popular_posts contains post.title %}
+          <div class="col-12 col-md-4 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
+            <article class="card border-0 h-100">
+              <div class="card-body p-0 d-flex flex-column justify-content-between">
+                <div>
+                  <a href="{{ post.url }}">
+                    <div class="mb-5">
+                      <amp-img height="172" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
+                    </div>
+                  </a>
+                  <small class="d-block text-secondary mb-1">
+                    {{ post.updated_at | date: "%B %d, %Y" | liquify }}
+                  </small>
+                  <a href="{{ post.url }}">
+                    <h2 class="h5">
+                      {{ post.title | liquify }}
+                    </h2>
+                  </a>
+                  <p>
+                    {{ post.excerpt | liquify }}
+                  </p>
+                </div>
+                <div>
+                  <div class="d-flex flex-column">
+                    <div class="p-2">{{ post.author_name | liquify }}</div>
+                  </div>
+        
+                  <div class="d-flex justify-content-between">
+                    <div class="p-2">5 Minute Read</div>
+                    <div class="p-2"><i class="fas fa-share-square"></i></div>
+                  </div>
+                </div>
+                
+              </div>
+            </article>
+          
+          </div>
+   
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+    More Blog Posts
+  </h2>
+  
+  <div class="container my-10">
+    <div class="row justify-content-center">
+      {% for post in site.posts limit: 4 %}
+          <div class="col-12 col-md-6 card-deck d-flex align-items-center align-items-sm-start justify-content-center mb-sm-7">
+            <article class="card border-0 h-100">
+              <div class="card-body p-0 d-flex flex-column justify-content-between">
+                <a href="{{ post.url }}">
+                  <amp-img height="172" layout="responsive" class="img-fluid mw-100 rounded" src="{{ post.img | liquify }}" alt="{{ blog.alt | liquify }}"></amp-img>
+                </a>
+                <a href="{{ post.url }}">
+                  <h2 class="h5">
+                    {{ post.title | liquify }}
+                  </h2>
+                  <p class="text-white mx-auto">
+                    {{ item.text | liquify }}
+                  </p>
+                </a>
+              </div>
+            </article>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+ 
 </main>

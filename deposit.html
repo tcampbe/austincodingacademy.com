@@ -1,0 +1,79 @@
+---
+layout: default
+permalink: '/deposit/'
+amp: false
+---
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+<style>
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #2666ef;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #2666ef transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
+<div class="d-flex flex-grow-1 justify-content-center align-items-center w-100 flex-column">
+  <div id="lds-ring-container" class="d-flex flex-grow-1 justify-content-center align-items-center w-100 flex-column">
+    <h2>Generating Deposit Portal</h2>
+    <h3>This may take a minute</h3>
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+  <div id="iframe-container" class="d-flex flex-grow-1 justify-content-center align-items-center w-100 flex-column"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous"></script>
+<script>
+  const getDepositUrl = async () => {
+    const email = decodeURLParams(window.location.search)['email'];
+    let depositUrl = null;
+    while (!depositUrl)  {
+      depositUrl = await (await fetch(`{{ settings.amp_proxy }}/deposit-url?email=${encodeURIComponent(email)}`)).json();
+    }
+    document.querySelector('#lds-ring-container').classList = 'd-none';
+    // document.querySelector('#iframe-container').insertAdjacentHTML('beforeend',`
+    //   <iframe id="deposit-iframe" src="${depositUrl}" style="width: 100%; border: 0"></iframe>
+    // `)
+    // iFrameResize({ checkOrigin: false }, '#deposit-iframe')
+    document.querySelector('#iframe-container').insertAdjacentHTML('beforeend', `<h2>You should be redirected or</h2><a href="${depositUrl}" class="btn btn-lg">click here to make your deposit!</a>`);
+    window.location = depositUrl;
+  }
+  setTimeout(() => getDepositUrl(), 10000)
+  getDepositUrl()
+</script>

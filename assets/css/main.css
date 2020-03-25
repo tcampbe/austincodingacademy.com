@@ -361,7 +361,16 @@ a {
     url('/assets/uploads/hero-index.jpg');
   background-position: -820px 0px;
 }
-
+#hero-circle {
+  /* background-image: url('/assets/uploads/coding-tutoring-session.jpg');   */
+  background-position: -820px 0px;
+  /* background-size: contain; */
+}
+@media (max-width: 768px) {
+  #hero-circle {
+    background-position: top;
+  }
+}
 @media (max-width: 768px) and (orientation: landscape) {
   #hero-index {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
@@ -374,6 +383,11 @@ a {
 @media (min-width: 768px) {
   #hero-index {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7));
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+  }
+  #hero-circle {
     opacity: 0.8;
     position: absolute;
     width: 100%;
@@ -416,7 +430,7 @@ a {
 
 #hero-blog {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/hero-blog.jpg');
+    url('/assets/uploads/dan-blog.jpg');
   background-position: -330px 0px;
   background-size: cover;
 }
@@ -424,7 +438,7 @@ a {
 @media (min-width: 768px) {
   #hero-blog {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/uploads/hero-blog.jpg');
+      url('/assets/uploads/dan-blog.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -438,9 +452,16 @@ a {
   background-size: cover;
 }
 
-#hero-events {
+#hero-events-capitol {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
     url('/assets/uploads/hero-landing.jpg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#hero-events-other {
+  background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
+    url('/assets/uploads/laura-class.jpg');
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -685,10 +706,10 @@ div:not(.form-columns-1) .hs-form-field:not(:first-child) {
 
 /* TUTORS */
 
-.card-deck .card {
+/* .card-deck .card {
   min-width: 260px;
   max-width: 345px;
-}
+} */
 
 .dropdown-filter-button {
   color: #fff;
@@ -749,22 +770,7 @@ ul.share-buttons img {
     animation: typewriter 5s steps(60) 1s 1 normal both,
       blinkTextCursor 1400ms steps(44) infinite normal;
   }
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 28rem;
-    }
-  }
-  @keyframes blinkTextCursor {
-    from {
-      border-right-color: rgba(255, 255, 255, 0.75);
-    }
-    to {
-      border-right-color: transparent;
-    }
-  }
+  
 }
 
 /* Event Page Card Hover */
@@ -812,6 +818,10 @@ ul.share-buttons img {
 }
 .z-auto {
   z-index: auto;
+}
+
+.container-lg{
+  max-width: 1600px;
 }
 
 @each $color in primary-light, primary-dark, secondary-light,

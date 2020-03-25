@@ -51,12 +51,37 @@
   {% capture css %}{% file_exists _includes/css.html %}{% endcapture %}
   {% if css == "true" %}{% include css.html %}{% endif %}
 </style>
+<style amp-keyframes>
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 28rem;
+    }
+  }
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+</style>
 <!-- htmllint preset="$previous" -->
 
 {% include google-tag-manager-head.html %}
 
 {% if site.baseurl == '/amp' %}
-  <link rel="canonical" href="{{ school.url }}{{ page.url }}">
+  {% if page.canonical_link != nil %}
+    <link rel="canonical"  href="{{ page.canonical_link }}">
+  {% else %}
+    <link rel="canonical" href="{% include school-url.html %}{{ page.url }}">
+  {% endif %}
 {% else %}
-  <link rel="amphtml" href="{{ school.url }}/amp{{ page.url }}">
+  <link rel="amphtml" href="{% include school-url.html %}/amp{{ page.url }}">
+  {% if page.canonical_link != nil %}
+    <link rel="canonical"  href="{{ page.canonical_link }}">
+  {% endif %}
 {% endif %}

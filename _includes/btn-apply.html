@@ -4,5 +4,5 @@
   href="{{ include.href | default: "/apply" | liquify }}"
 >
 <!-- htmllint preset="$previous" -->
-  <span class="hover-white text-white">Apply Now</span>
+  <span class="{% if school.inverted != true %}hover-white text-white{% else %}text-primary-dark{% endif %}">Apply Now</span>
 </a>

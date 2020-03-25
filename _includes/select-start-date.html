@@ -1,0 +1,26 @@
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+<label class="form-label" for="location">Preferred Location and Start Date? <span class="text-red-a">*</span></label>
+<select class="form-control" id="location" name="start_date" required>
+  <option value="" disabled selected>
+    Please Select
+  </option>
+  {% for start_date in school.start_dates %}
+    <optgroup label="{{ start_date.location }}">
+        <option
+          value="{{ start_date.salesforce_id | append: ',' | append: start_date.hubspot_ticket_id | append: ',' | append: school.getaccept_entity_id | append: ',' | append: start_date.getaccept_template_id }}"
+        >
+        {{ start_date.course }} - {{ start_date.date }} ({{ start_date.days }} {{ start_date.time }})
+        </option>
+    </optgroup>
+  {% endfor %}
+</select>

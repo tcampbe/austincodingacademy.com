@@ -1,0 +1,1 @@
+{% if jekyll.environment == 'preview.' %}{{ school.url | replace: 'https://', '' | prepend: jekyll.environment | prepend: 'https://'}}{% elsif jekyll.environment == 'development' %}{{ school.url }}{% else %}{{ school.url }}{% endif %}

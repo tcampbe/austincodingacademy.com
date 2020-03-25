@@ -2,9 +2,17 @@
   <h2 class="font-family-alt font-weight-bold text-center display-6">
     Our Graduates Are Working At
   </h2>
-  <div id="logo-section" class="d-flex w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row h-75 border container">
+  <div id="logo-section" class="d-flex d-md-none w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row justify-content-center align-items-center">
+    <amp-carousel
+      width="600px"
+      height="300px"
+      type="slides"
+      autoplay
+      controls="false"
+      delay="1500"
+    >
       {% for logo in settings.logos %}
-        <div class="h-100 w-25 p-3 border">
+        <div class="d-flex align-items-center justify-content-center">
           <amp-img
             width="{{ logo.width }}"
             height="{{ logo.height }}"
@@ -12,9 +20,19 @@
             class="w-100 h-auto mw-14r"
             src="{{ logo.src | liquify }}"
             alt="{{ logo.name | liquify }}"
-            
           ></amp-img>
         </div>
       {% endfor %}
+    </amp-carousel>
+  </div>
+  <div id="logo-img" class="d-none d-md-flex w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row justify-content-center align-items-center">
+    <!-- <div style="height: 300px; width: 600px;"> -->
+      <img
+        layout="responsive"
+        class="w-100 h-auto img-fluid"
+        src="/assets/uploads/aca_student_companies_3x.png"
+        alt="company"
+      ></img>
+    <!-- </div> -->
   </div>
 </section>
