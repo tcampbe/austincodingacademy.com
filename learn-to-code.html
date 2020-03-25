@@ -164,7 +164,7 @@ learn_to_code:
   {% endfor %}
 {% endif %}
 
-<div style="font-family: Montserrat, Open Sans">
+<div style="font-family: Montserrat, Open Sans, light;">
     <h2 class="font-family-alt text-indigo text-center display-5 my-5"><small>What is Coding</small></h2>
     <p class="text-center text-gray-dark mb-0">In this lesson, you will learn what coding is, what programming is, and the difference between the two.</p>
     <i class="fas fa-bars fa-2x ml-5 mb-5" on="tap:lessons.open"></i>
@@ -179,15 +179,15 @@ learn_to_code:
         <amp-accordion disable-session-states>
         <!--- Loop section names to build section/topic nav -->
         {% for lesson in page.learn_to_code %}
-            <section>
-                <h6>{{ lesson.section }}
-                  <span class="float-right pr-4">
+            <section class="m-3">
+                <h6 class="text-indigo bg-transparent border-0 font-weight-light">{{ lesson.section }}
+                  <span class="float-right pr-2">
                   <i class="fas fa-angle-right fa-1x text-indigo">
                   </span>
                 </h6>
-                <div>
+                <div class="pl-2">
                   {% for topic in lesson.topics %}
-                    <p>{{ topic }}</p>
+                    <p class="m-1 h6 font-weight-light small">{{ topic }}</p>
                   {% endfor %}
                 </div>
             </section>
