@@ -43,6 +43,107 @@ learn_to_code:
     - Static vs Dynamic
     - Elements
     - The DOM
+- id: 4
+  section: Welcome to JavaScript
+  sub_header: "In this lesson, .... welcome to JavaScript"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah welcome to javascript"
+  video_id: 290913789
+  topics:
+    - Manipulate Data
+    - History of JavaScript
+    - JavaScript and the webpage
+- id: 5
+  section: Defining "Full Stack"
+  sub_header: "In this lesson, .... defining full stack"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah defining fullstack"
+  video_id: 290913789
+  topics:
+    - Client vs Server
+    - Manipulating Data
+- id: 6
+  section: Front-End vs Back-End
+  sub_header: "In this lesson, .... front-end vs back-end"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah front-end vs back-end"
+  video_id: 290913789
+  topics:
+    - What is the front-end
+    - What is the back-end
+    - Moving data
+- id: 7
+  section: Intro to Web Design
+  sub_header: "In this lesson, .... intro to web design"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah intro to web design"
+  video_id: 290913789
+  topics:
+    - What is UI? 
+    - What is UX?
+    - Human-Centered Design
+- id: 8
+  section: A Developer's Toolbox
+  sub_header: "In this lesson, .... a developer's toolbox"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah a developer's toolbox"
+  video_id: 290913789
+  topics:
+    - Why Chrome?
+    - Text Editors
+    - Git/gitBash + GitHub
+- id: 9
+  section: Building Your App
+  sub_header: "In this lesson, .... building your app"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah building your app"
+  video_id: 290913789
+  topics:
+    - Why?
+    - What?
+    - How?
+- id: 10
+  section: Coding vs. Wix/WordPress
+  sub_header: "In this lesson, .... coding vs wix/wordpress"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah coding vs wix/wordpress"
+  video_id: 290913789
+  topics:
+    - Why Wix? 
+    - Limitations
+    - Coding Skills
+- id: 11
+  section: Growth Mindset
+  sub_header: "In this lesson, .... growth mindest"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah growth mindset"
+  video_id: 290913789
+  topics:
+    - Why do we care?
+    - What is items
+    - How to do it
+- id: 12
+  section: Being a Developer
+  sub_header: "In this lesson, .... being a developer"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah being a developer"
+  video_id: 290913789
+  topics:
+    - Where did you come from?
+    - What will you build?
+    - What are you doing now? 
+    - Katie, Mikaela, Lisa, Greg S, Jon G, Matt H
+    - Selena Cynthia Dane, Mike Donnell @Fathom5
+- id: 13
+  section: What's Next
+  sub_header: "In this lesson, .... what's next"
+  codepen: "https://codepen.io/keithakritselis/pen/mddaWrN"
+  description: "Lorem Ipsum blah blah what's next"
+  video_id: 290913789
+  topics:
+    - The Admissions Process
+    - Take the test!
+    - Apply
 ---
 
 {% for _page in site.pages %}
@@ -75,21 +176,23 @@ learn_to_code:
     >
       <i class="fas fa-times fa-2x p-1" on="tap:lessons.close"></i>
       <nav class="pl-5">
-        <amp-accordian>
+        <amp-accordion disable-session-states>
+        <!--- Loop section names to build section/topic nav -->
+        {% for lesson in page.learn_to_code %}
             <section>
-                <h6><a>What is Coding?</a></h6>
-                <p>First Program</p>
-                <p>Then Code</p>
-                <p>Getting Started</p>
+                <h6>{{ lesson.section }}
+                  <span class="float-right pr-4">
+                  <i class="fas fa-angle-right fa-1x text-indigo">
+                  </span>
+                </h6>
+                <div>
+                  {% for topic in lesson.topics %}
+                    <p>{{ topic }}</p>
+                  {% endfor %}
+                </div>
             </section>
-            <section>
-                <h6><a>Coding Languages</a></h6>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-                <p>Other Languages<p/>
-            </section>
-        </amp-accordian>
+        {% endfor %}
+        </amp-accordion>
       </nav>
     </amp-sidebar>
     <div class="container-fluid m-0 p-0">
