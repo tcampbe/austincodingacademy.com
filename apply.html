@@ -52,7 +52,7 @@ form_fields:
   label: ''
   description: ''
   type: hidden
-  value: "{% include school-url.html %}/apply-submit"
+  value: "{% include school-url.html %}/apply/scheduling"
   placeholder: ''
   required: ''
   small_width: ''
@@ -330,21 +330,6 @@ coupon_input:
   {% endif %}
 {% endfor %}
 <div class="container mt-4 pt-1 pb-5">
-  <div>
-    <h2 class="font-family-alt mt-5 mt-sm-10 mb-md-4 mb-sm-10 display-5 text-center col-12 col-sm-10">
-      {{ page.admission_heading }}
-    </h2>
-    <p>{{ page.admission_description }}</p>
-    <div>
-      {% for item in page.admission_list %}
-        <ul amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">
-          <li>
-            {{ item | liquify }}
-          </li>
-        </ul>
-      {% endfor %}
-    </div>
-  </div>
   <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
       <h2 id="start-application" class="font-family-alt mt-5 mt-sm-10 mb-md-4 mb-sm-10 display-5 text-center col-12 col-sm-10">
         {{ page.heading }}
