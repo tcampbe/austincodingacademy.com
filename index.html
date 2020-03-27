@@ -390,7 +390,14 @@ schools:
   {% if school.course_guide != '' %}
   <!-- Course Guide Form -->
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
-    {% include course-guide-form.html %}
+    {{ school.course_guide_online }}
+  {% if school.course_guide_online != '' %}
+    {% assign href = school.course_guide_online %}
+  {% else %}
+    {% assign href = school.course_guide %}
+  {% endif %}
+  {{ href }}
+    {% include course-guide-form.html course_guide_href=href %}
   </section>
   {% endif %}
 

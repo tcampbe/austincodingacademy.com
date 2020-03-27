@@ -25,6 +25,11 @@ title: Course Guide
 {% endif %}
 <div class="container mt-90 space-2">
   <div class="card-deck d-flex justify-content-center">
-    {% include course-guide-form.html %}
+  {% if school.course_guide_online != '' %}
+    {% assign href = school.course_guide_online %}
+  {% else %}
+    {% assign href = school.course_guide %}
+  {% endif %}
+    {% include course-guide-form.html course_guide_href=href %}
   </div>
 </div>
