@@ -177,9 +177,9 @@ fields:
           required: false
         label: url
       config:
-        min:
-        max:
-        labelField:
+        min: 
+        max: 
+        labelField: 
       label: footer
   - type: text
     name: url
@@ -200,7 +200,7 @@ fields:
     config:
       min: '10000000000'
       max: ''
-      step:
+      step: 
   - type: number
     name: callrail_company_id
     label: callrail_company_id
@@ -346,8 +346,8 @@ fields:
         required: false
       label: getaccept_template_id
     config:
-      min:
-      max:
+      min: 
+      max: 
       labelField: date
     label: start_dates
   - name: primary_light_color
@@ -394,9 +394,9 @@ fields:
         required: false
       label: stripe_product_sku
     config:
-      min:
-      max:
-      labelField:
+      min: 
+      max: 
+      labelField: 
     label: tracks
   - type: field_group_list
     name: instructors
