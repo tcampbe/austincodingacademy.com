@@ -17,7 +17,7 @@
   {% for start_date in school.start_dates %}
     <optgroup label="{{ start_date.location }}">
         <option
-          value="{{ start_date.salesforce_id | append: ',' | append: start_date.hubspot_ticket_id | append: ',' | append: school.getaccept_entity_id | append: ',' | append: start_date.getaccept_template_id }}"
+          value="{{ start_date.salesforce_id | append: ',' | append: start_date.hubspot_ticket_id | append: ',' | append: school.getaccept_entity_id | append: ',' | append: start_date.getaccept_template_id | append: ',' | append: start_date.hubspot_override_company_id }}"
         >
         {{ start_date.course }} - {{ start_date.date }} ({{ start_date.days }} {{ start_date.time }})
         </option>
