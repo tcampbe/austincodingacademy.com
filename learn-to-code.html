@@ -167,20 +167,32 @@ learn_to_code:
 <div style="font-family: Montserrat, Open Sans, light;">
   <amp-sidebar 
     id="lessons" 
-    class="bg-white w-25"
+    class="bg-white w-25 float-left d-inline"
     layout="nodisplay" 
     side="left"
-    style="position: relative !important;"
+    style="position: relative !important; min-width: 330px !important;"
   >
     <i class="fas fa-times fa-2x p-1" on="tap:lessons.close"></i>
     <nav class="pl-5">
       <amp-accordion disable-session-states>
+      <!--- Variable for which lesson to display -->
+      {% assign bookmark = 1 %}
       <!--- Loop section names to build section/topic nav -->
       {% for lesson in page.learn_to_code %}
-          <section class="m-3">
-              <h6 class="text-indigo bg-transparent border-0 font-weight-light">{{ lesson.section }}
+        {% if lesson.id != bookmark%}
+          <section class="m-3" style="cursor: default; pointer-events: none;">
+              <h6 class="text-indigo bg-transparent border-0 font-weight-light pr-0">{{ lesson.section }}
                 <span class="float-right pr-2">
                 <i class="fas fa-angle-right fa-1x text-indigo">
+                </span>
+              </h6>
+              <div class="pl-2"></div>
+          </section>
+        {% else %}
+          <section class="m-3" style="cursor: default; pointer-events: none;" expanded>
+              <h6 class="text-indigo bg-transparent border-0 font-weight-light pr-0">{{ lesson.section }}
+                <span class="float-right pr-2">
+                <i class="fas fa-angle-down fa-1x text-indigo">
                 </span>
               </h6>
               <div class="pl-2">
@@ -189,6 +201,7 @@ learn_to_code:
                 {% endfor %}
               </div>
           </section>
+        {% endif %}
       {% endfor %}
       </amp-accordion>
     </nav>
