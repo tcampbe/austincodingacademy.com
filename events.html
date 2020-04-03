@@ -84,8 +84,8 @@ schools:
                   <h5 class="link-underlined">{{ name[1] | default: name }}</h5>
                   <div class="display-9">
                     <p>
-                      <strong>{{ event.venue_name }}</strong>, {{ event.venue_city }}, {{ event.venue_state }}
-                      <br>
+                      <strong>{{ event.venue_name }}</strong>{% if event.venue_city %}, {{ event.venue_city }}{% endif %}{% if event.venue_state %}, {{ event.venue_state }}
+                      <br> {% endif %}
                       {{ event.start_date }} | {{ event.start_date_time | date: "%I:%M%p" }} - {{ event.end_date_time | date: "%I:%M%p" | liquify }}
                     </p>
                     <p>
