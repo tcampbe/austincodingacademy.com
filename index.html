@@ -314,6 +314,12 @@ schools:
             </div>
           </div>
         </div>
+        {% assign size_even = start_dates.size | modulo: 2 %}
+        {% assign for_index = forloop.index | modulo: 2 %}
+        {% if size_even == 0 and for_index  == 0 and forloop.index != start_dates.size %}
+          </div>
+          <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
+        {% endif %}
       {% endfor %}
       </div>
     {% else %}
