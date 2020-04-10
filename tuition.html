@@ -47,6 +47,16 @@ schools:
       deposit_hubspot_product_id: 87065227
       payment_plan_hubspot_product_id: "92747533"
       picture: "/assets/uploads/ccawebsite_tuitionpage_paymentplan2.png"
+    - title: Single Course (Web 101)
+      description: With our new payment plan for our online course, you can get started with class by making
+        a $490 deposit. After the total will be $2990 for Web 101 paid before class starts.
+      price_header: Total Price
+      price: "$490"
+      payment_deposit: "$2990"
+      payment_plan_paycove_template: ''
+      deposit_hubspot_product_id: 87065227
+      payment_plan_hubspot_product_id: ''
+      picture: ""
 - key: austincodingacademy
   testimonial_video: 'AVMkl06b5IE'
   sections:
@@ -92,6 +102,16 @@ schools:
       deposit_hubspot_product_id: 87065227
       payment_plan_hubspot_product_id: "92747533"
       picture: "/assets/uploads/acawebsite_tuitionpage_paymentplan2.png"
+    - title: Single Course (Web 101)
+      description: With our new payment plan for our online course, you can get started with class by making
+        a $490 deposit. After the total will be $2990 for Web 101 paid before class starts.
+      price_header: Total Price
+      price: "$490"
+      payment_deposit: "$2990"
+      payment_plan_paycove_template: ''
+      deposit_hubspot_product_id: 87065227
+      payment_plan_hubspot_product_id: ''
+      picture: ""
   - title: WordPress Fundamentals
     tuition_options: true
     description: We offer two options to cover the cost of tuition for our 8-week
@@ -150,6 +170,16 @@ schools:
       deposit_hubspot_product_id: 87065233
       payment_plan_hubspot_product_id: ''
       picture: "/assets/uploads/lcawebsite_tuitionpage_fulltuition.png"
+    - title: Single Course (Web 101)
+      description: With our new payment plan for our online course, you can get started with class by making
+        a $490 deposit. After the total will be $1990 for Web 101 paid before class starts.
+      price_header: Total Price
+      price: "$490"
+      payment_deposit: "$1990"
+      payment_plan_paycove_template: ''
+      deposit_hubspot_product_id: 87065227
+      payment_plan_hubspot_product_id: ''
+      picture: ""
 - key: texastechcodingacademy
   testimonial_video: ''
   sections:
@@ -182,6 +212,16 @@ schools:
       deposit_hubspot_product_id: 87065231
       payment_plan_hubspot_product_id: "87065236"
       picture: "/assets/uploads/ttcawebsite_tuitionpage_paymentplan.png"
+    - title: Single Course (Web 101)
+      description: With our new payment plan for our online course, you can get started with class by making
+        a $490 deposit. After the total will be $2490 for Web 101 paid before class starts.
+      price_header: Total Price
+      price: "$490"
+      payment_deposit: "$2490"
+      payment_plan_paycove_template: ''
+      deposit_hubspot_product_id: 87065227
+      payment_plan_hubspot_product_id: ''
+      picture: ""
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -214,21 +254,23 @@ schools:
       </div>
       <div class="row px-5 py-2 justify-content-center">
       {% for option in section.options %}
-        <div class="col-sm-6 col-md-3 border p-2 mx-4">
-          <div class="shadow py-3 bg-light">
-            {% if option.picture != '' %}
-              <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
-            {% else %}
-              <div class="bg-textured" style="height: 100px"></div>
-            {% endif %}
-            <div class="d-flex justify-content-center">
-              <h4 class="font-weight-bold text-center">{{ option.payment_deposit }}</h4>
-            </div>
-            <div class="d-flex justify-content-center">
-              <p>{{ option.description }}</p>
+        {% unless option.title contains 'Single Course' %}
+          <div class="col-sm-6 col-md-3 border p-2 mx-4">
+            <div class="shadow py-3 bg-light">
+              {% if option.picture != '' %}
+                <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
+              {% else %}
+                <div class="bg-textured" style="height: 100px"></div>
+              {% endif %}
+              <div class="d-flex justify-content-center">
+                <h4 class="font-weight-bold text-center">{{ option.payment_deposit }}</h4>
+              </div>
+              <div class="d-flex justify-content-center">
+                <p>{{ option.description }}</p>
+              </div>
             </div>
           </div>
-        </div>
+        {% endunless %}
       {% endfor %}
     </div>
     <div class="mt-6 {%if school.inverted %}px-6{% endif %} d-flex justify-content-center pb-5">

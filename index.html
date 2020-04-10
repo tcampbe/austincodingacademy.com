@@ -260,10 +260,13 @@ schools:
 </div>
 
 <main>
-  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 d-flex flex-column align-items-center">
     <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
       We Are Committed To Your Success
     </h2>
+    <h3 class="font-family-alt font-weight-bold text-center w-50 mb-5">
+      Learn from anywhere with our Online Web Development Course
+    </h3>
     <p class="mw-600 mx-auto text-center">
       From learning to code, to landing your job, our team has your back. At {{ school.name }}
       you can learn coding in a classroom setting that works with your busy schedule, and be a part of
@@ -314,6 +317,12 @@ schools:
             </div>
           </div>
         </div>
+        {% assign size_even = start_dates.size | modulo: 2 %}
+        {% assign for_index = forloop.index | modulo: 2 %}
+        {% if size_even == 0 and for_index  == 0 and forloop.index != start_dates.size %}
+          </div>
+          <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
+        {% endif %}
       {% endfor %}
       </div>
     {% else %}
@@ -390,7 +399,12 @@ schools:
   {% if school.course_guide != '' %}
   <!-- Course Guide Form -->
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
-    {% include course-guide-form.html %}
+  {% if school.course_guide_online != '' %}
+    {% assign href = school.course_guide_online %}
+  {% else %}
+    {% assign href = school.course_guide %}
+  {% endif %}
+    {% include course-guide-form.html course_guide_href=href %}
   </section>
   {% endif %}
 

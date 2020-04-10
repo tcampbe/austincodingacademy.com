@@ -5,6 +5,8 @@ head_title: "Course Guide | {{ school.name }}"
 description: ""
 redirect_from: []
 title: Course Guide
+amp_components:
+- amp-recaptcha-input
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -25,6 +27,11 @@ title: Course Guide
 {% endif %}
 <div class="container mt-90 space-2">
   <div class="card-deck d-flex justify-content-center">
-    {% include course-guide-form.html %}
+  {% if school.course_guide_online != '' %}
+    {% assign href = school.course_guide_online %}
+  {% else %}
+    {% assign href = school.course_guide %}
+  {% endif %}
+    {% include course-guide-form.html course_guide_href=href %}
   </div>
 </div>
