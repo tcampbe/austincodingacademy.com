@@ -24,7 +24,7 @@ skills:
   - "Git/GitHub"
   - "WebPack"
   - "REST APIs"
-  -"PHP"
+  - "PHP"
 
 github: "https://github.com/LindsayW89"
 linkedin: "https://www.linkedin.com/in/Lindsay-Wilson89"
