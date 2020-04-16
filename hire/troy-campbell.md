@@ -28,7 +28,7 @@ skills:
 github: "https://github.com/tcampbe"
 linkedin: "https://www.linkedin.com/in/troyscampbell"
 
-email: "tcamp@icloud.com"
+email: "tcampb@icloud.com"
 phone: "806 543 8237"
 
 # Make sure to put your most relevant work, if you've had any technical roles or relevant skills like management, etc. Don't worry about putting every job you've had!
@@ -43,19 +43,18 @@ workexperience:
     title: "Physical Operations Manger & Sowtware Coordinator"
     location: "Lubbock, TX"
 
-  - company: ""
-    dates: " - May 2014"
-    title: "Delivery Driver"
-    location: "Lubbock, TX"
-
-education:
+  education:
   - name: "Lubbock Coding Acaademy"
     dates: "April 2019 - May 2020"
     degree: "Web Development"
+    
+  - name: "American Military University"
+    dates: "April 2018 - May 2022"
+    degree: "Information Systems/Cybersecurity"
 
 projects:
-  - name: "" # project title
-    desc: "" # short description of what project does
-    url: "" # link to your deployed project
+  - name: "Home School Quick Start" # project title
+    desc: "An App to assist first time Home School parents quickly create a class schedule." # short description of what project does
+    url: "https://capstone20200323093431.azurewebsites.net/" # link to your deployed project
 
 ---
